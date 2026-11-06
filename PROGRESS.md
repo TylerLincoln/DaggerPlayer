@@ -66,6 +66,7 @@
     - secure password change on
   - App: sign up, sign in (password, magic link, Google, Discord), email verification, password reset, sign out. Account page: change email, change password, export data as JSON, delete account. Legal/attribution page; attribution footer on every page.
   - docs/SETUP.md: project setup, env vars, OAuth providers, run, deploy.
+  - Owner tested 2026-11-06: magic-link sign-in works end to end on the Codespaces URL.
   - **Still needs the owner:** Google and Discord OAuth apps (keys go in the dashboard). Until then those two buttons return an error.
 - Stage 3: compendium (and domain icons, D12).
 - Deferred from stage 1:
@@ -85,11 +86,12 @@
 - D9. RLS tests: **skipped** by owner decision (2026-11-06). The brief's "test that one user can't read another's data" is not automated; policies are still written and reviewed.
 - D10. A print stylesheet is enough for PDF export.
 - D11. Use Supabase's built-in email for now. It's rate-limited; revisit before launch.
+- General rule (2026-11-06): when any non-SRD source (character sheet, owner notes) conflicts with SRD 2.0, follow the SRD.
 - D12. Extract domain icons from the SRD PDF (deferred to stage 3, see above).
 
 ## Open rules questions
-1. ~~Advancement slots per tier~~ Resolved 2026-11-06: the owner supplied the counts. They're in `content/srd/supplied/advancement-slots.json` and appear in the data as `progression.advancements[].slotsByTier`. Two differences between the sheet and the SRD text need a ruling before the level-up wizard (stage 4/5):
-   - **Domain card limit.** The sheet's domain-card option reads "(up to level 4)" in tier 3 as well as tier 2. SRD p. 54 says "at or below your level". The tier-3 note looks like a copy error on the sheet. Plan: follow the SRD unless told otherwise.
-   - **Multiclass cross-out.** The sheet says multiclassing crosses out "an unused 'Take an upgraded subclass card'" (any tier). SRD p. 54 says "cross out the 'upgraded subclass' advancement option in this tier". Plan: follow the SRD unless told otherwise.
+1. ~~Advancement slots per tier~~ Resolved 2026-11-06: the owner supplied the counts. They're in `content/srd/supplied/advancement-slots.json` and appear in the data as `progression.advancements[].slotsByTier`. Where the sheet and the SRD disagree, **the SRD wins** (owner ruling, 2026-11-06). So:
+   - Domain cards are "at or below your level" in every tier (the sheet's tier-3 "(up to level 4)" is ignored).
+   - Multiclassing crosses out the upgraded-subclass option in the current tier only.
 2. **Octopus, "Thresholds: 3/None" (p. 105).** Deferred to the Phase 2 GM tools.
 3. ~~Witherwild license conflict~~ Resolved: include it. The owner describes DaggerPlayer as a private/internal tool (2026-11-06), so the frames pack ships with a per-character toggle (D3).
