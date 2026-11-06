@@ -68,7 +68,20 @@
   - docs/SETUP.md: project setup, env vars, OAuth providers, run, deploy.
   - Owner tested 2026-11-06: magic-link sign-in works end to end on the Codespaces URL.
   - **Still needs the owner:** Google and Discord OAuth apps (keys go in the dashboard). Until then those two buttons return an error.
-- Stage 3: compendium (and domain icons, D12).
+- **Stage 3: compendium.** Done.
+  - **Search** (`/compendium`): full-text across enabled packs with MiniSearch (prefix and typo tolerant). Filters: type, tier, domain, class, source. Query and filters live in the URL, so searches can be shared and bookmarked.
+  - **Entry pages:** every entry has its own URL (`/compendium/<pack>/<type>/<slug>`). Each type has a view (class, subclass, domain with card list, domain card, ancestry, community, transformation, beastform, weapon, armor, item, consumable, adversary and environment stat blocks, condition, glossary term, leveling with slot table) and shows its source page.
+  - **Cross-links:** domain card ↔ domain ↔ classes, class ↔ subclasses, glossary term → rules section.
+  - **Rules reader** (`/rules`, `/rules/<pack>/<slug>`): table of contents (sticky sidebar on wide screens), breadcrumbs, subsections, previous/next in book order.
+  - **Rules terms:** dotted-underline links with a tooltip on hover or keyboard focus (Escape closes). On touch, the first tap shows the tooltip and the second opens the entry.
+  - **Pack toggle:** the frames pack can be switched on and off. The choice is saved in `user_settings.default_packs` when signed in, otherwise in localStorage.
+  - **Domain icons (D12):** extracted from SRD p. 7 by `npm run content:icons` (needs poppler-utils, now in the devcontainer's postCreateCommand). They're stored as alpha masks and tinted with the text colour, so they work in light and dark mode.
+  - **Tests (35):** every entry and all 185 rules pages render through the real components with no unresolved tags; search, filters and markdown parsing are covered.
+  - Not yet:
+    - Homebrew entries in the compendium: the registry supports them; they arrive with the homebrew importer.
+    - Route-level code splitting: the main bundle is 598 KB (174 KB gzipped).
+    - A manual browser pass by the owner.
+- Next: stage 4, the character builder.
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.

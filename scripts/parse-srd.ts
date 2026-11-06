@@ -52,6 +52,12 @@ function main() {
 
   // ---- entries ----
   const domains = parseDomains(lines);
+  // domain icons extracted by scripts/extract-icons.ts (Public Game Content, DPCGL 2.0 §1.6)
+  for (const d of domains) {
+    const icon = `icons/${d.id.split("/").pop()}.png`;
+    if (fs.existsSync(path.join("content/srd", icon))) d.icon = icon;
+    else console.warn(`no icon for ${d.name} (run npm run content:icons)`);
+  }
   const { classes, subclasses } = parseClasses(lines);
   const heritage = parseHeritage(lines);
   const { beastforms } = parseBeastforms(lines);

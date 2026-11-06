@@ -12,10 +12,12 @@
     "content:parse": "tsx scripts/parse-srd.ts",
     "content:validate": "tsx scripts/validate-packs.ts",
     "content:jsonschema": "tsx scripts/export-jsonschema.ts",
-    "content": "npm run content:parse && npm run content:validate && npm run content:jsonschema"
+    "content": "npm run content:parse && npm run content:validate && npm run content:jsonschema",
+    "content:icons": "tsx scripts/extract-icons.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
+    "minisearch": "^7.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^7.18.5",

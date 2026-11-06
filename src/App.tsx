@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { createBrowserRouter, Link, NavLink, Outlet, RouterProvider } from "react-router";
+import { createBrowserRouter, Link, NavLink, Outlet, RouterProvider, ScrollRestoration } from "react-router";
 import { bundledPacks, loadEntries } from "./content/packs.ts";
 import { supabaseConfigured } from "./data/supabase.ts";
+import { ContentProvider } from "./content/ContentProvider.tsx";
 import { AccountPage } from "./features/account/AccountPage.tsx";
+import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features/compendium/pages.tsx";
 import { AuthProvider, RequireAuth, useAuth } from "./features/auth/AuthProvider.tsx";
 import { AuthCallbackPage, CheckEmailPage, ForgotPasswordPage, ResetPasswordPage, SignInPage, SignUpPage } from "./features/auth/pages.tsx";
 import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
@@ -19,7 +21,8 @@ function Layout() {
           DaggerPlayer
         </Link>
         <nav aria-label="Main">
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/compendium">Compendium</NavLink>
+          <NavLink to="/rules">Rules</NavLink>
           {user ? <NavLink to="/account">Account</NavLink> : <NavLink to="/auth/sign-in">Sign in</NavLink>}
         </nav>
       </header>
@@ -31,6 +34,7 @@ function Layout() {
       <main id="main" tabIndex={-1}>
         <Outlet />
       </main>
+      <ScrollRestoration />
       <footer className="site-footer">
         <ShortAttribution />
       </footer>
@@ -52,7 +56,10 @@ function HomePage() {
   return (
     <>
       <h1>DaggerPlayer</h1>
-      <p>A Daggerheart™ Compatible character companion. The compendium, builder and sheet arrive in the next stages.</p>
+      <p>A Daggerheart™ Compatible character companion. The builder and sheet arrive in the next stages.</p>
+      <p>
+        <Link to="/compendium">Search the compendium</Link> · <Link to="/rules">Read the rules</Link>
+      </p>
       <h2>Bundled content</h2>
       {bundledPacks.map((p) => (
         <section key={p.id}>
@@ -92,6 +99,10 @@ const router = createBrowserRouter([
       { path: "/auth/forgot", element: <ForgotPasswordPage /> },
       { path: "/auth/reset", element: <ResetPasswordPage /> },
       { path: "/auth/callback", element: <AuthCallbackPage /> },
+      { path: "/compendium", element: <CompendiumPage /> },
+      { path: "/compendium/:pack/:type/:slug", element: <EntryPage /> },
+      { path: "/rules", element: <RulesIndexPage /> },
+      { path: "/rules/:pack/:slug", element: <RulesPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },
       { path: "/legal", element: <LegalPage /> },
       { path: "*", element: <NotFound /> },
@@ -102,7 +113,9 @@ const router = createBrowserRouter([
 export function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ContentProvider>
+        <RouterProvider router={router} />
+      </ContentProvider>
     </AuthProvider>
   );
 }
