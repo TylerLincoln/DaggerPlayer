@@ -52,7 +52,16 @@
   - **Placeholder page** (`npm run dev -- --host`): lists the bundled packs, to show they load. `npm run build` passes.
 
 ## Next
-- Stage 2: auth and database schema (Supabase migrations + RLS), in progress.
+- **Stage 2: auth and database schema** (code done; migration not yet pushed to the hosted project).
+  - `supabase/migrations/…_init.sql`:
+    - tables: profiles, user_settings, homebrew_packs, characters, character_versions, roll_log
+    - RLS on every table; `anon` has no table access
+    - `save_character` RPC: rev-based conflict detection, version snapshots per D8, versions capped at 20, rolls at 500
+    - `delete_my_account` RPC
+  - Migration logic was smoke-tested in PGlite (scratch only, not committed). RLS isn't tested (D9).
+  - App: sign up, sign in (password, magic link, Google, Discord), email verification, password reset, sign out. Account page: change email, change password, export data as JSON, delete account. Legal/attribution page; attribution footer on every page.
+  - docs/SETUP.md: project setup, env vars, OAuth providers, run, deploy.
+  - **Needs the owner:** approve `supabase db push` to the hosted project; create Google/Discord OAuth apps; set Site URL and Redirect URLs in the dashboard.
 - Waiting on the owner for advancement slot counts per tier (rules question 1).
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
