@@ -1,16 +1,11 @@
 import { type ChangeEvent, useEffect, useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router";
-import { useContent } from "../../content/ContentProvider.tsx";
-import { adoptServer, createLocal, removeRecord, useAutosave, useCharacterRecord, useRecords } from "../../data/characters.ts";
+import { Link, useNavigate } from "react-router";
+import { adoptServer, createLocal, removeRecord, useRecords } from "../../data/characters.ts";
 import { type CharacterRow, listCharacters } from "../../data/repo.ts";
 import { supabase } from "../../data/supabase.ts";
 import { CharacterDoc } from "../../rules/character.ts";
-import { derive } from "../../rules/derive.ts";
-import { MAX_LEVEL, undoLastLevelUp } from "../../rules/levelup.ts";
-import { formatMod } from "../../rules/traits.ts";
 import { FormMessage, errorText } from "../../ui/forms.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
-import { SaveIndicator } from "../builder/BuilderPage.tsx";
 
 function download(name: string, data: unknown) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }));
@@ -105,42 +100,6 @@ export function CharactersPage() {
         </ul>
       )}
       {user && server.length > mine.length && <p className="hint">Some saved characters couldn't be read on this device.</p>}
-    </>
-  );
-}
-
-/** Stage 4 placeholder for the sheet: a summary of the finished character. The full sheet is stage 5. */
-export function CharacterPage() {
-  const { id } = useParams();
-  const { registry } = useContent();
-  const { user } = useAuth();
-  const [rec, update] = useCharacterRecord(id);
-  const { status, error } = useAutosave(id, user?.id ?? null);
-  if (!rec) return <><h1>Character not found</h1><Link to="/characters">Your characters</Link></>;
-  if (!rec.doc.finishedAt) return <Navigate to={`/build/${rec.doc.id}/review`} replace />;
-  if (!registry) return <p role="status">Loading content…</p>;
-  const c = rec.doc;
-  const d = derive(c, registry);
-  const name = (x: string | null) => (x ? registry.byId.get(x)?.name ?? x : "—");
-  return (
-    <>
-      <h1>{c.identity.name}</h1>
-      <SaveIndicator status={status} error={error} />
-      <p>Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)}</p>
-      <dl className="stats">
-        {[["Evasion", d.evasion.total], ["Hit Points", d.hpMax.total], ["Stress", d.stressMax.total], ["Hope", `${c.state.hope} / ${d.hopeMax}`], ["Armor Score", d.armorScore.total], ["Thresholds", `${d.thresholds.major.total} / ${d.thresholds.severe.total}`], ["Proficiency", d.proficiency.total]].map(([k, v]) => (
-          <div key={k as string}><dt>{k}</dt><dd>{v}</dd></div>
-        ))}
-        {Object.entries(d.traits).map(([t, s]) => <div key={t}><dt>{t.charAt(0).toUpperCase() + t.slice(1)}</dt><dd>{formatMod(s.total)}</dd></div>)}
-      </dl>
-      <p className="hint">The full play sheet (trackers, dice, loadout) comes in stage 5.</p>
-      <p>
-        {d.level < MAX_LEVEL && <Link className="button primary" to={`/characters/${c.id}/level-up`}>Level up</Link>}{" "}
-        {c.levelUps.length > 0 && (
-          <button type="button" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && update((x) => undoLastLevelUp(x))}>Undo last level-up</button>
-        )}
-      </p>
-      <p><Link to={`/build/${c.id}/review`}>Edit build</Link> · <Link to="/characters">All characters</Link></p>
     </>
   );
 }

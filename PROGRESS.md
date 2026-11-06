@@ -112,7 +112,28 @@
     - Only the primary subclass can take upgraded cards. SRD p. 54 says "the next card for your subclass".
     - Resolving a conflict with "keep this device's" overwrites the server copy without snapshotting it first. Stage 7 adds that.
     - A browser pass by the owner.
-- Next: stage 5, the character sheet.
+- **Import kit** (`docs/import/`, `npm run import-kit`): character JSON Schema, a valid template character, every content id, and a prompt for converting an existing sheet with Claude.
+- **Stage 5: character sheet** (`/characters/:id`). Done.
+  - **Rules** (`src/rules/sheet.ts`, `dice.ts`):
+    - Stress overflow → 1 HP; last Stress → Vulnerable; last HP → death-move prompt
+    - Hope cap (6 − scars); Armor Slots ≤ Armor Score (none when unarmored)
+    - loadout/vault with Recall Cost (free while resting) and swap-out when full
+    - weapon swaps (free in calm, 1 Stress otherwise; burden rules; tier limit)
+    - gold carry (10/10, max 1 chest); consumables max 5
+    - short/long rests with downtime moves (1d4 + tier; long rests clear everything), three short rests force a long one, rest-limited effects expire
+  - **UI:** tabs Play / Cards / Gear / Features / Story, with sections and URL state.
+    - Stat boxes with a tap-to-open breakdown.
+    - Threshold bands (Minor / Major / Severe).
+    - Traits; Spellcast trait.
+    - Read-only box trackers.
+    - Experiences with totals.
+    - Weapons with computed damage dice (Proficiency × die + bonus).
+    - Conditions (Vulnerable shown automatically when Stress is full) and temporary effects with expiry.
+    - Inventory counters, gold, a rest dialog, undo level-up.
+    - Rules terms on the sheet are links with tooltips. Rule refusals and their reasons are shown as messages.
+  - **Tests (90 total):** sheet rules, and every sheet tab rendered for the import template character.
+  - **Not yet (stage 6):** tap-to-mark trackers, damage input against thresholds with the Armor Slot offer, the duality dice roller, rolling from traits/weapons/Experiences, roll history.
+- Next: stage 6, dice and trackers.
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
@@ -138,6 +159,6 @@
    - Domain cards are "at or below your level" in every tier (the sheet's tier-3 "(up to level 4)" is ignored).
    - Multiclassing crosses out the upgraded-subclass option in the current tier only.
 2. **Octopus, "Thresholds: 3/None" (p. 105).** Deferred to the Phase 2 GM tools.
-4. **Unarmored thresholds with bonuses (p. 72).** Unarmored, Major = level and Severe = 2 × level. The SRD doesn't say whether permanent threshold bonuses (Stalwart's Unwavering, Earthkin's Stoneskin) still apply. The app adds them. Correct?
-5. **Starting gear (p. 5).** "A two-handed primary weapon or a one-handed primary weapon and a one-handed secondary weapon." The app requires a secondary only as a suggestion (warning, not error), and allows no weapon at all (for the Brawler's "I Am the Weapon"). Correct?
-3. ~~Witherwild license conflict~~ Resolved: include it. The owner describes DaggerPlayer as a private/internal tool (2026-11-06), so the frames pack ships with a per-character toggle (D3).
+4. ~~Unarmored thresholds with bonuses (p. 72)~~ Owner confirmed 2026-11-06: permanent threshold bonuses still apply when unarmored.
+5. ~~Starting gear (p. 5)~~ Owner confirmed 2026-11-06: a secondary weapon is optional (warning only), and no weapon is allowed (Brawler).
+6. **Recall Cost with partly marked Stress (pp. 8, 50).** Recalling a card costs Stress equal to its Recall Cost. SRD p. 50 says you can't use a move that requires marking Stress when *all* your Stress is marked, and if you must mark Stress but can't, you mark 1 HP instead. The app allows a recall when at least one Stress is free, and marks 1 HP for any shortfall. Example: Recall Cost 2 with 1 free Stress marks the last Stress plus 1 HP. Should it instead require enough free Stress for the full cost?

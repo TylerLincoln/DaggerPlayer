@@ -83,8 +83,11 @@ export const SheetState = z.object({
   gold: z.object({ handfuls: z.number().int().min(0).max(9), bags: z.number().int().min(0).max(9), chests: z.number().int().min(0).max(1) }),
   resources: z.record(z.string(), z.number().int()),
   conditions: z.array(z.string()),
-  effects: z.array(z.object({ id: z.string(), label: z.string(), on: z.boolean() })),
+  /** temporary effects; `until` makes them expire at the next rest or long rest */
+  effects: z.array(z.object({ id: z.string(), label: z.string(), on: z.boolean(), until: z.enum(["rest", "long-rest"]).nullable().default(null) })),
   beastformId: z.string().nullable(),
+  /** short rests taken in a row; three force a long rest (SRD p. 52) */
+  rests: z.object({ shortInARow: z.number().int().min(0) }).default({ shortInARow: 0 }),
 });
 export type SheetState = z.infer<typeof SheetState>;
 
@@ -152,6 +155,7 @@ export function newCharacter(packs: string[] = ["srd"]): CharacterDoc {
       conditions: [],
       effects: [],
       beastformId: null,
+      rests: { shortInARow: 0 },
     },
     notes: { session: "", background: "", connections: "" },
   };
