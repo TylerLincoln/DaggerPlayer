@@ -1,5 +1,5 @@
 {
-  "name": "daggerplayer",
+  "name": "daggerheart-companion",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   "features": {
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
@@ -12,5 +12,6 @@
   "portsAttributes": {
     "5173": { "label": "App preview", "onAutoForward": "openPreview" }
   },
-  "postCreateCommand": "[ -f package.json ] && npm install || true"
+  "postCreateCommand": "[ -f package.json ] && npm install || true",
+  "postStartCommand": "sudo chown -R node:node /home/node/.claude"
 }
