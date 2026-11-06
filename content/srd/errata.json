@@ -1,0 +1,14 @@
+[
+  {
+    "page": 18,
+    "find": "_Strength Melee d12+10 phy_",
+    "replace": "_Melee Strength d12+10 phy_",
+    "note": "Mythic Hybrid attack line lists trait before range; every other Beastform lists range first."
+  },
+  {
+    "page": 220,
+    "find": "--**FOREST SPRITES**",
+    "replace": "**FOREST SPRITES**",
+    "note": "Stray \"--\" before the card title."
+  }
+]

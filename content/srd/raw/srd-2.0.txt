@@ -610,7 +610,7 @@ dead
 DOMAINS – Blade & Midnight
 STARTING EVASION – 12
 STARTING HIT POINTS – 5
-CLASS ITEMS – A list of names with several marked offor
+CLASS ITEMS – A list of names with several marked off or
 a rusted blade inscribed with an insignia
 ASSASSIN’S HOPE FEATURE
 Deadly Determination: Spend 3 Hope to clear 2 Stress.
@@ -834,7 +834,7 @@ as any blade. You have a primary weapon called Brawler’s
 Strike equipped while you have no other Active Weapons.
 It uses a trait of your choice, has Melee range, and deals
 d8+d6 physical damage using your Proficiency (both the
-d8 and d6 scale offyour Proficiency). While this weapon is
+d8 and d6 scale off your Proficiency). While this weapon is
 active, you gain a +1 bonus to your Evasion.
 Combo Strike: After rolling damage on a successful attack
 with a Melee weapon, you can mark a Stress to start a
@@ -2264,7 +2264,7 @@ enemies to fuel your own power.
 FOUNDATION FEATURES
 Courage: When you fail a roll with Fear, you gain a Hope.
 Battle Ritual: Once per long rest, before you attempt
-something incredibly dangerous or face offagainst a foe
+something incredibly dangerous or face off against a foe
 who clearly outmatches you, describe what ritual you
 perform or preparations you make. When you do, clear 2
 Stress and gain 2 Hope.
@@ -2786,7 +2786,7 @@ Fireproof: You are immune to damage from magical or
 mundane flame.
 Ignition: Mark a Stress to wreathe your primary weapon in
 flame until the end of the scene. While the weapon is ablaze,
-it gives offa bright light, and you gain a 1d6 bonus to damage
+it gives off a bright light, and you gain a 1d6 bonus to damage
 rolls with that weapon.
 SKYKIN
 Skykin are humanoids whose bodies are made of flesh and
@@ -3428,7 +3428,7 @@ unique technologies and equipment to move both people
 and products across difficult terrain. As such, ridgeborne
 grow up scrambling and climbing, making them sturdy
 and strong-willed. Ridgeborne localities appear in a variety
-of forms—some cities carve out entire clifffaces, others
+of forms—some cities carve out entire cliff faces, others
 construct castles of stone, and still more live in small homes
 on windblown peaks. Outside forces often struggle to attack
 ridgeborne groups, as the small militias and large military
@@ -4458,7 +4458,7 @@ If you do, use the following guidelines for play:
 •	Close: 6 squares
 •	Far: 12 squares
 •	Very Far: 13+ squares
-•	Out of Range: Offthe battlemap
+•	Out of Range: Off the battlemap
 MOVEMENT UNDER PRESSURE
 When you’re under pressure or in danger and make an action
 roll, you can move to a location within Close range as part of
@@ -5315,7 +5315,7 @@ temporarily Restrained.
 Name	Trait	Range	Damage	Burden	Feature
 Gunblade	Agility	Far	d6+6 mag	One-Handed	Versatile: This weapon can also be used with these
 statistics—Agility, Melee, d8+6 phy.
-Staffof Augma	Instinct	Far	d6+7 mag	One-Handed	Catalytic: On a successful attack, you can mark a
+Staff of Augma	Instinct	Far	d6+7 mag	One-Handed	Catalytic: On a successful attack, you can mark a
 Stress to give an ally within Close range a +3 bonus
 to their next attack roll.
 TIER 4 (LEVELS 8–10)
@@ -5833,7 +5833,7 @@ encounter when your character uses their wheelchair:
 gravel on the ground.”
 “I hit a patch of ice awkwardly and am sent skidding out
 past my target.”
-“I go to push offin pursuit, but one of my front caster
+“I go to push off in pursuit, but one of my front caster
 wheels snags on a crack in the pavement, stalling me for a
 moment.”
 GMs should avoid breaking a character's wheelchair or
@@ -6285,7 +6285,7 @@ Fear, anyone watching knows the dice are loaded.
 hour.
 17	Mandragorian
 Torch
-This torch gives offlight only the bearer can see.
+This torch gives off light only the bearer can see.
 18	Boots of Supple
 Mystique
 While wearing these boots, you don’t leave tracks or footprints.
@@ -6834,7 +6834,7 @@ next 24 hours.
 alchemical liquid over a mundane
 item to instantly transmute it into a
 handful of gold.
-33	Staffof Reversal	You can break this staffagainst
+33	Staff of Reversal	You can break this staff against
 the ground to reverse one magical
 transformation or effect within Far
 range.
@@ -6946,7 +6946,7 @@ Pomelo
 You can eat this citrus fruit to clear all
 Hit Points and Stress.
 51	Snakeskin Spirit	You can drink this potion to slough
-offyour outer layer of skin and heal
+off your outer layer of skin and heal
 a scar.
 83
 Daggerheart SRD
@@ -7560,7 +7560,7 @@ value. When a countdown advances, it’s reduced by 1. The
 countdown’s effect is triggered when the countdown reaches
 0.
 Note: You can track countdowns by “spinning down” dice or
-ticking offboxes.
+ticking off boxes.
 Standard countdowns advance every time a player makes an
 action roll. If an adversary or environment ability refers to a
 “Countdown [n],” then it means a standard countdown with a
@@ -8288,7 +8288,7 @@ Daggerheart SRD
 CAVE OGRE
 Tier 1 Solo
 A massive humanoid who sees all sapient life as food.
-Motives & Tactics: Bite offheads, feast, rip limbs, stomp,
+Motives & Tactics: Bite off heads, feast, rip limbs, stomp,
 throw enemies
 Difficulty: 13 | Thresholds: 8/15 | HP: 8 | Stress: 3
 ATK: +1 | Club: Very Close | 1d10+2 phy
@@ -9997,7 +9997,7 @@ Tier 2 Ranged
 A half-human, half-horse guardian who patrols the borders of idyllic
 lands uncorrupted by the touch of civilization.
 Motives & Tactics: Live in harmony with nature, protect the
-wilderness, use mobility and distance to drive offintruders
+wilderness, use mobility and distance to drive off intruders
 Difficulty: 14 | Thresholds: 10/19 | HP: 5 | Stress: 3
 ATK: +2 | Recurved Bow: Far | 2d8+4 phy
 Experience: Nature +2, Philosophy +2
@@ -10026,7 +10026,7 @@ Motives & Tactics: Cackle, consume magic, serve creator
 Difficulty: 15 | Thresholds: 8/16 | HP: 5 | Stress: 4
 ATK: +2 | Energy Blast: Close | 2d8+3 mag
 FEATURES
-Levitation - Passive: The Skull levitates several feet offthe ground
+Levitation - Passive: The Skull levitates several feet off the ground
 and can’t be Restrained.
 Wards - Passive: The Skull is resistant to magic damage.
 Magic Burst - Action: Mark a Stress to make an attack against all
@@ -10114,7 +10114,7 @@ FEATURES
 Shadow’s Embrace - Passive: The Fang can climb and walk on
 vertical surfaces. Mark a Stress to move from one shadow to
 another within Far range.
-Pick Offthe Straggler - Action: Mark a Stress to cause a target
+Pick Off the Straggler - Action: Mark a Stress to cause a target
 within Melee range to make an Instinct Reaction Roll. On a
 failure, the target must mark 2 Stress and is teleported with the
 Fang to a shadow within Far range, making them temporarily
@@ -10668,7 +10668,7 @@ damage or wakes up with a successful Presence Roll (16).
 Restrained until they mark 2 Stress.
 6.	Sear. The target takes 2d8 direct magic damage.
 7.	Scare. The target is Scared. While Scared, the target can’t take
-actions other than fleeing the battle or trying to shake offtheir
+actions other than fleeing the battle or trying to shake off their
 terror. Additionally, the target must mark a Stress whenever you
 spend a Fear. The target can clear the condition with a successful
 Presence Roll (16).
@@ -10986,7 +10986,7 @@ Thief steals one item or consumable from the target’s inventory.
 Escape Plan - Action: Mark a Stress to reveal a snare trap set
 anywhere on the battlefield by the Thief. All targets within Very
 Close range of the trap must succeed on an Agility Reaction Roll
-(13) or be pulled offtheir feet and suspended upside down. A
+(13) or be pulled off their feet and suspended upside down. A
 target is Restrained and Vulnerable until they break free, ending
 both conditions, with a successful Finesse or Strength Roll (13).
 MERCHANT BARON
@@ -11098,7 +11098,7 @@ RUST EATER
 Tier 2 Standard
 A pony-sized cockroach coated in a corrosive chitin that turns metal
 into rust.
-Motives & Tactics: Avoid detection, eat rust, sniffout metal
+Motives & Tactics: Avoid detection, eat rust, sniff out metal
 Difficulty: 12 | Thresholds: 10/18 | HP: 5 | Stress: 2
 ATK: +1 | Bite: Melee | 2d6+4 phy
 Experience: Snuffle +3
@@ -14220,7 +14220,7 @@ Restrained by barbed vines. Restrained lasts until they’re freed
 with a successful Finesse or Strength roll or by dealing at least 6
 damage to the vines.
 How many vines are there? Where do they grab you? Do they pull you
-down or lift you offthe ground?
+down or lift you off the ground?
 You Are Not Welcome Here - Action: A Young Dryad, two Sylvan
 Soldiers, and a number of Minor Treants equal to the number of
 PCs appear to confront the party for their intrusion.
@@ -14380,7 +14380,7 @@ hideout.
 What drove this person to pickpocketing? Where is the thief’s hideout
 and how has it avoided notice?
 Crowd Closes In - Reaction: When one of the PCs splits from the
-group, the crowds shift and cut them offfrom the party.
+group, the crowds shift and cut them off from the party.
 Where does the crowd’s movement carry them? How do they feel
 about being alone but surrounded?
 161
@@ -14432,7 +14432,7 @@ darkness? What other glimpses of surprising beauty do the PCs
 encounter here?
 CLIFFSIDE ASCENT
 Tier 1 Traversal
-A steep, rocky cliffside tall enough to make traversal dangerous.
+A steep, rocky cliff side tall enough to make traversal dangerous.
 Impulses: Cast the unready down to a rocky doom, draw people in
 with promise of what lies at the top
 Difficulty: 12
@@ -14491,7 +14491,7 @@ Hallowed Ground - Passive: At the center of the graveyard is
 a seemingly undisturbed chapel. On a successful Instinct
 Roll, a PC can discover this structure is sanctified against the
 cemetery’s denizens. While inside the chapel, the PCs have
-advantage on action rolls to fight or drive offspirits and undead.
+advantage on action rolls to fight or drive off spirits and undead.
 Who sanctified this place and what happened to them? What holy
 relics can be found here?
 Misty Miasma - Action: Spend a Fear to fill an area within Far
@@ -14527,7 +14527,7 @@ with other revelers.
 What is everyone celebrating? Where’s the party? Who’s footing the
 bill?
 The Evening’s Entertainment - Action: The host of the feast kicks
-offthe entertainment portion of the evening. Each PC can make
+off the entertainment portion of the evening. Each PC can make
 an action roll to initiate a performance, competition, or other
 lighthearted diversion. A PC who succeeds becomes an Honored
 Guest. Until the feast ends, an Honored Guest can claim a gift
@@ -14558,7 +14558,7 @@ Daggerheart SRD
 @@PDFPAGE 164@@
 HOLD THE LINE
 Tier 1 Event
-The party must fend offmultiple waves of enemies long enough for
+The party must fend off multiple waves of enemies long enough for
 an ally to complete an important objective.
 Impulses: Crash waves of enemies upon the party’s shores, never
 let them breathe, target their charge
@@ -14589,7 +14589,7 @@ Swarming Multitudes - Passive: All adversaries gain the
 “Relentless (2)” feature: They can be spotlighted up to two times
 per GM turn. Spend Fear as usual to spotlight them.
 Where does these foes’ newfound power come from? Is there any way
-to cut them offfrom it?
+to cut them off from it?
 Waves upon Waves - Reaction: When there are no adversaries in
 the scene, summon a wave of adversaries at Far range from the
 Charge. Each wave comprises two Tier 1 Minions for each PC in
@@ -14634,7 +14634,7 @@ exchange for their aid?
 “Let the Games Begin!” - Action: One of the festival’s signature
 events is a sporting competition or series of games. If one
 or more PCs throw their hat into the ring, introduce rival
-competitors for them to face offagainst. To claim victory, the
+competitors for them to face off against. To claim victory, the
 PCs must complete a Progress Countdown (5) to win events
 or score points before their rivals complete a Consequence
 Countdown (5).
@@ -14702,7 +14702,7 @@ OUTPOST TOWN
 Tier 1 Social
 A small town on the outskirts of a nation or region, close to a
 dungeon, tombs, or other adventuring destinations.
-Impulses: Drive the desperate to certain doom, profit offof
+Impulses: Drive the desperate to certain doom, profit off of
 ragged hope
 Difficulty: 12
 Potential Adversaries: Jagged Knife Bandits (Hexer,
@@ -14876,7 +14876,7 @@ desecration can be removed with a Progress Countdown (6).
 How do the PCs first notice that something is wrong about this place?
 What fears resurface while hope is kept at bay?
 Blasphemous Might - Action: A portion of the ritual’s power is
-diverted into a cult member to fight offinterlopers. Choose one
+diverted into a cult member to fight off interlopers. Choose one
 adversary to become Imbued with terrible magic until the scene
 ends or they’re defeated. An Imbued adversary immediately
 takes the spotlight and gains one of the following benefits, or all
@@ -15227,7 +15227,7 @@ What parts of the PC’s bodies go numb first? How do they try to keep
 warm as they press forward?
 OCEAN VOYAGE
 Tier 2 Traversal
-The PCs gain passage to a far-offdestination by offering their labor
+The PCs gain passage to a far-off destination by offering their labor
 in exchange.
 Impulses: Reveal what lurks beneath the waves, send them in the
 wrong direction, sink the ship, use up their resources
@@ -15270,7 +15270,7 @@ Here There Be Monsters - Reaction: When the Open Water
 Countdown ticks down to an even number, roll a d6. On a result
 of 4 or higher, summon 1d4 Deep Sea Denizens.
 What attracts these creatures to the ship? Is there any way to drive
-them offwithout combat?
+them off without combat?
 171
 Daggerheart SRD
 @@PDFPAGE 172@@
@@ -15777,7 +15777,7 @@ Gamblers (Courtesan, Merchant Baron, Petty Noble, Spy)
 FEATURES
 Glitz & Glamor - Passive: The overwhelming spectacle of this place
 can entrance even the most jaded patron. While here, all PCs
-have disadvantage on reaction rolls caused by a staffmember or
+have disadvantage on reaction rolls caused by a staff member or
 regular patron of the casino.
 What’s so wondrous about the casino’s trappings? Are they truly
 magical in nature or merely mundane wonders taken to an impossible
@@ -15866,7 +15866,7 @@ VOLCANIC ERUPTION
 Tier 3 Event
 An explosion of heat and molten rock that leaves behind only charred
 desolation.
-Impulses: Create panic all around, cut offthe exits, isolate, make
+Impulses: Create panic all around, cut off the exits, isolate, make
 them scramble for safety, split the party
 Difficulty: 16
 Potential Adversaries: Elemental Spark, Lava Elemental
@@ -16432,7 +16432,7 @@ following information before character creation.
 Fanewick is a wild and untamed land, long avoided by outside
 forces. The woods are dark and twisting, filled with Faint
 Divinities who perform small miracles and services for its
-inhabitants, but are just as likely to lure travelers offnarrow
+inhabitants, but are just as likely to lure travelers off narrow
 paths to their ruin. Seemingly harmless expanses of field hide
 bogs that engulf entire armies, consuming heavy artillery as
 quickly as it can cross the border. This wilderness fosters
@@ -16685,7 +16685,7 @@ EMBRACE VULNERABILITY
 Find your character’s humanity and showcase it whenever you
 can. They should be as vulnerable during quiet moments as
 they are vicious during violent ones, opening up to their allies
-even if they close themself offto everyone else.
+even if they close themself off to everyone else.
 GM PRINCIPLES
 Keep the following guidance in mind while you GM this
 campaign.
@@ -17685,7 +17685,7 @@ USING TRAITS FOR FLIGHT
 A PC can use any appropriate trait (not just Agility) to move
 while flying. The following are some examples of how each
 trait might be used:
-Agility: Swift acrobatics, speed-boosting offan adversary’s
+Agility: Swift acrobatics, speed-boosting off an adversary’s
 wake, maintaining an aerodynamic posture, or angling past a
 winged threat
 Finesse: Focused, subtle, and well-timed adjustments,
@@ -18577,7 +18577,7 @@ Daggerheart SRD
 BOOST
 Level 4 Bone Ability
 Recall Cost: 1
-Mark a Stress to boost offa willing ally within Close range,
+Mark a Stress to boost off a willing ally within Close range,
 fling yourself into the air, and perform an aerial attack against
 a target within Far range. You have advantage on the attack,
 add a d10 to the damage roll, and end your move within Melee
@@ -18833,8 +18833,8 @@ Spellcast Roll (16):
 ◦	If you’ve visited the place infrequently, gain no modifier.
 ◦	If you’ve only been there once, gain a −2 penalty.
 On a success, you appear where you were intending to go.
-On a failure, you appear offcourse, with the range of failure
-determining how far offcourse.
+On a failure, you appear off course, with the range of failure
+determining how far off course.
 BANISH
 Level 6 Codex Spell
 Recall Cost: 0

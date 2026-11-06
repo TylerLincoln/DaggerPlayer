@@ -27,7 +27,7 @@ export const lineText = (l: RawLine) => l[3].map((c) => stripStyle(c[1])).join("
 /** The text layer splits ligatures ("benefi ts", "Diffi    culty"). Rejoin them. */
 export function fixLigatures(t: string): string {
   return t
-    .replace(/(ffi|ffl|fi|fl|ff)[ ]+(?=[a-z])/g, "$1")
+    .replace(/(ffi|ffl|fi|fl)[ ]+(?=[a-z])/g, "$1")
     .replace(/\b(eff|diff|aff|unaff|suff|Eff|Diff|Aff|Suff)[ ]+(?=[a-z])/g, "$1")
     .replace(/\b(puff|quaff|bluff)[ ]+(?=s\b)/g, "$1");
 }
