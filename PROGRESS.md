@@ -52,17 +52,22 @@
   - **Placeholder page** (`npm run dev -- --host`): lists the bundled packs, to show they load. `npm run build` passes.
 
 ## Next
-- **Stage 2: auth and database schema** (code done; migration not yet pushed to the hosted project).
-  - `supabase/migrations/…_init.sql`:
+- **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
+  - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:
     - tables: profiles, user_settings, homebrew_packs, characters, character_versions, roll_log
-    - RLS on every table; `anon` has no table access
+    - RLS on every table; `anon` has no table or function access (checked against the live API: 401)
     - `save_character` RPC: rev-based conflict detection, version snapshots per D8, versions capped at 20, rolls at 500
     - `delete_my_account` RPC
   - Migration logic was smoke-tested in PGlite (scratch only, not committed). RLS isn't tested (D9).
+  - Hosted auth config, set through the Management API:
+    - Site URL: the Codespaces URL
+    - redirect URLs: the Codespaces URL plus localhost:5173
+    - minimum password length 8
+    - secure password change on
   - App: sign up, sign in (password, magic link, Google, Discord), email verification, password reset, sign out. Account page: change email, change password, export data as JSON, delete account. Legal/attribution page; attribution footer on every page.
   - docs/SETUP.md: project setup, env vars, OAuth providers, run, deploy.
-  - **Needs the owner:** approve `supabase db push` to the hosted project; create Google/Discord OAuth apps; set Site URL and Redirect URLs in the dashboard.
-- Waiting on the owner for advancement slot counts per tier (rules question 1).
+  - **Still needs the owner:** Google and Discord OAuth apps (keys go in the dashboard). Until then those two buttons return an error.
+- Stage 3: compendium (and domain icons, D12).
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
@@ -83,6 +88,8 @@
 - D12. Extract domain icons from the SRD PDF (deferred to stage 3, see above).
 
 ## Open rules questions
-1. **Advancement slots per tier (SRD p. 54).** The owner will supply the counts. They'll live in `content/srd/supplied/advancement-slots.json`, marked as owner-supplied rather than SRD text. Until then the wizard can't limit repeat picks.
+1. ~~Advancement slots per tier~~ Resolved 2026-11-06: the owner supplied the counts. They're in `content/srd/supplied/advancement-slots.json` and appear in the data as `progression.advancements[].slotsByTier`. Two differences between the sheet and the SRD text need a ruling before the level-up wizard (stage 4/5):
+   - **Domain card limit.** The sheet's domain-card option reads "(up to level 4)" in tier 3 as well as tier 2. SRD p. 54 says "at or below your level". The tier-3 note looks like a copy error on the sheet. Plan: follow the SRD unless told otherwise.
+   - **Multiclass cross-out.** The sheet says multiclassing crosses out "an unused 'Take an upgraded subclass card'" (any tier). SRD p. 54 says "cross out the 'upgraded subclass' advancement option in this tier". Plan: follow the SRD unless told otherwise.
 2. **Octopus, "Thresholds: 3/None" (p. 105).** Deferred to the Phase 2 GM tools.
 3. ~~Witherwild license conflict~~ Resolved: include it. The owner describes DaggerPlayer as a private/internal tool (2026-11-06), so the frames pack ships with a per-character toggle (D3).

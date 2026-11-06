@@ -57,5 +57,5 @@ Every entry has `source.page` (and `pageEnd` if it spans pages).
 - **`weapon.trait`** can be `"spellcast"` (arcane-frame wheelchairs use the subclass Spellcast trait).
 - **`beastform` stats** are `null` for upgrade forms (Legendary/Mythic Beast), whose stats come from the base form.
 - **`feature.kind`** adds `"evolution"` (Hope & Fear adversaries).
-- **`progression.advancements[].slots`** is `null`: SRD 2.0 doesn't state slots per tier (see PROGRESS.md).
+- **`progression.advancements[].slotsByTier`:** SRD 2.0 doesn't state slots per tier. The owner supplied them in `content/srd/supplied/advancement-slots.json`. `cost` is 2 for Proficiency and multiclass, so one pick marks two slots.
 - **Classes have no `suggested` traits or gear:** SRD 2.0 doesn't include them.

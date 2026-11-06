@@ -1235,17 +1235,21 @@
                     "text": {
                       "type": "string"
                     },
-                    "slots": {
-                      "anyOf": [
-                        {
-                          "type": "integer",
-                          "exclusiveMinimum": 0,
-                          "maximum": 9007199254740991
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
+                    "slotsByTier": {
+                      "type": "object",
+                      "propertyNames": {
+                        "type": "string",
+                        "enum": [
+                          "2",
+                          "3",
+                          "4"
+                        ]
+                      },
+                      "additionalProperties": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0,
+                        "maximum": 9007199254740991
+                      }
                     },
                     "cost": {
                       "anyOf": [
@@ -1268,10 +1272,13 @@
                   "required": [
                     "id",
                     "text",
-                    "slots",
+                    "slotsByTier",
                     "cost"
                   ]
                 }
+              },
+              "slotsSource": {
+                "type": "string"
               },
               "companionOptions": {
                 "type": "array",
@@ -1291,6 +1298,7 @@
               "type",
               "tiers",
               "advancements",
+              "slotsSource",
               "companionOptions",
               "text"
             ]

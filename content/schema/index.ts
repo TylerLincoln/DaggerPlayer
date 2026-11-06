@@ -243,9 +243,13 @@ export const Environment = z.object({
 export const AdvancementOption = z.object({
   id: z.string(),
   text: z.string(),
-  /** slots per tier; null where SRD 2.0 doesn't state it (printed on class sheets, see PROGRESS.md) */
-  slots: z.number().int().positive().nullable(),
-  cost: z.union([z.literal(1), z.literal(2)]), // two-slot options ("black box")
+  /**
+   * Slots per tier, keyed "2" | "3" | "4"; a missing tier means the option isn't offered there.
+   * Not in SRD 2.0: owner-supplied (content/srd/supplied/advancement-slots.json).
+   */
+  slotsByTier: z.partialRecord(z.enum(["2", "3", "4"]), z.number().int().positive()),
+  /** slots marked per pick: 2 for the "black box" options (Proficiency, multiclass) */
+  cost: z.union([z.literal(1), z.literal(2)]),
   minLevel: z.number().int().optional(), // multiclass from level 5
 });
 
@@ -254,6 +258,8 @@ export const Progression = z.object({
   type: z.literal("progression"),
   tiers: z.array(z.object({ tier: Tier, levels: z.array(Level), achievements: RichText.nullable() })),
   advancements: z.array(AdvancementOption),
+  /** where the slot counts came from */
+  slotsSource: z.string(),
   companionOptions: z.array(Feature),
   text: RichText,
 });

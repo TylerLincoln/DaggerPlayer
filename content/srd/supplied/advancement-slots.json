@@ -1,0 +1,14 @@
+{
+  "note": "Level-up advancement slots per tier. Not in SRD 2.0 (p. 54 describes the options but not the slot counts). Supplied by the project owner from the class character sheet on 2026-11-06. Numbers only; no sheet text is copied. A tier missing from an option means the option isn't offered in that tier. Proficiency and multiclass have 2 slots and cost 2, i.e. one pick per tier.",
+  "slotsByTier": {
+    "traits":      { "2": 3, "3": 3, "4": 3 },
+    "hp":          { "2": 2, "3": 2, "4": 2 },
+    "stress":      { "2": 2, "3": 2, "4": 2 },
+    "experiences": { "2": 1, "3": 1, "4": 1 },
+    "domain-card": { "2": 1, "3": 1, "4": 1 },
+    "evasion":     { "2": 1, "3": 1, "4": 1 },
+    "subclass":    { "3": 1, "4": 1 },
+    "proficiency": { "3": 2, "4": 2 },
+    "multiclass":  { "3": 2, "4": 2 }
+  }
+}

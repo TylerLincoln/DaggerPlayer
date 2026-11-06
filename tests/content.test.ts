@@ -115,6 +115,15 @@ describe("spot checks against the PDF", () => {
     expect(byName("beastform", "Mythic Hybrid").attack).toMatchObject({ range: "melee", trait: "strength" });
   });
 
+  it("advancement slots per tier (owner-supplied)", () => {
+    const p = of("progression")[0];
+    const by = Object.fromEntries(p.advancements.map((a) => [a.id, a]));
+    expect(by.traits.slotsByTier).toEqual({ 2: 3, 3: 3, 4: 3 });
+    expect(by.subclass.slotsByTier).toEqual({ 3: 1, 4: 1 });
+    expect(by.proficiency).toMatchObject({ cost: 2, slotsByTier: { 3: 2, 4: 2 } });
+    expect(by.multiclass).toMatchObject({ cost: 2, minLevel: 5, slotsByTier: { 3: 2, 4: 2 } });
+  });
+
   it("Ancestry features keep top/bottom order for mixed ancestry", () => {
     expect(byName("ancestry", "Goblin").features.map((f) => f.name)).toEqual(["Surefooted", "Danger Sense"]);
   });

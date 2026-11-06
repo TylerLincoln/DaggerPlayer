@@ -2,6 +2,11 @@
 import type { EntryOf, Feature } from "../../content/schema/index.ts";
 import { type Block, type Line, blocks, features, md, pages, plain, slug, titleCase } from "./lines.ts";
 import { src, PACK } from "./common.ts";
+import fs from "node:fs";
+
+const SUPPLIED: { slotsByTier: Record<string, Record<"2" | "3" | "4", number>> } = JSON.parse(
+  fs.readFileSync("content/srd/supplied/advancement-slots.json", "utf8"),
+);
 
 type Para = Extract<Block, { kind: "para" }>;
 type Heading = Extract<Block, { kind: "heading" }>;
@@ -169,9 +174,11 @@ export function parseProgression(lines: Line[], companion: Feature[]): EntryOf<"
     const t = plain(p.text);
     const hit = ADVANCEMENT_IDS.find(([re]) => re.test(t.split(":")[0]));
     if (!hit) throw new Error(`unknown advancement: ${t.slice(0, 60)}`);
-    // Slot counts per tier are printed on the class character sheets, not in SRD 2.0 (p. 54).
-    // Left null until the owner decides (see PROGRESS.md rules questions).
-    return { id: hit[1], text: p.text, slots: null, cost: hit[2], ...(hit[3] ? { minLevel: hit[3] } : {}) };
+    // Slot counts per tier are not in SRD 2.0 (p. 54); the owner supplied them from the class sheet.
+    const slotsByTier = SUPPLIED.slotsByTier[hit[1]];
+    if (!slotsByTier) throw new Error(`no supplied slot counts for advancement "${hit[1]}"`);
+    for (const [tier, n] of Object.entries(slotsByTier)) if (n % hit[2] !== 0) throw new Error(`${hit[1]} tier ${tier}: ${n} slots isn't a multiple of cost ${hit[2]}`);
+    return { id: hit[1], text: p.text, slotsByTier, cost: hit[2], ...(hit[3] ? { minLevel: hit[3] } : {}) };
   });
   if (advancements.length !== ADVANCEMENT_IDS.length) throw new Error(`expected ${ADVANCEMENT_IDS.length} advancements, got ${advancements.length}`);
   const intro = bs.findIndex((b) => b.kind === "heading" && b.text === "LEVELING UP");
@@ -188,6 +195,7 @@ export function parseProgression(lines: Line[], companion: Feature[]): EntryOf<"
       { tier: 4, levels: [8, 9, 10], achievements: tierAch(8) },
     ],
     advancements,
+    slotsSource: "Slot counts are not in SRD 2.0; supplied by the project owner from the class character sheet (2026-11-06).",
     companionOptions: companion,
     text: md(paras(intro)),
   };

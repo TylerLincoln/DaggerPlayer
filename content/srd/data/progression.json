@@ -50,59 +50,93 @@
       {
         "id": "traits",
         "text": "_When you choose to_ **_increase two unmarked character_** **_traits_** _and mark them:_ Choose two unmarked character traits and gain a permanent +1 bonus to them. You can’t increase these stats again until the next {{term:tier|tier}} (when your {{term:tier|tier}} achievement allows you to clear those marks).",
-        "slots": null,
+        "slotsByTier": {
+          "2": 3,
+          "3": 3,
+          "4": 3
+        },
         "cost": 1
       },
       {
         "id": "hp",
         "text": "_When you choose to_ **_permanently add 1 or more {{term:hit-points|Hit Point}}_** **_slots_**_:_ Darken the outline of the next rectangle in the {{term:hit-points|Hit Point}} section of your character sheet in pen or permanent marker.",
-        "slots": null,
+        "slotsByTier": {
+          "2": 2,
+          "3": 2,
+          "4": 2
+        },
         "cost": 1
       },
       {
         "id": "stress",
         "text": "_When you choose to_ **_permanently add 1 or more {{term:stress|Stress}}_** **_slots_**_:_ Darken the outline of the next rectangle in the {{term:stress|Stress}} section of your character sheet in pen or permanent marker.",
-        "slots": null,
+        "slotsByTier": {
+          "2": 2,
+          "3": 2,
+          "4": 2
+        },
         "cost": 1
       },
       {
         "id": "experiences",
         "text": "_When you choose to_ **_increase your {{term:experience|Experience}}_**_:_ Choose two {{term:experience|Experiences}} on your character sheet and gain a permanent +1 bonus to both.",
-        "slots": null,
+        "slotsByTier": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
         "cost": 1
       },
       {
         "id": "domain-card",
         "text": "_When you_ **_take an additional {{term:domain-card|domain card}}_**_:_ You can choose an additional {{term:domain-card|domain card}} at or below your level or from your class’s domains. If you’ve {{term:multiclass|multiclassed}}, you can instead select a card at or below half your level from your chosen {{term:multiclass|multiclass}} domain.",
-        "slots": null,
+        "slotsByTier": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
         "cost": 1
       },
       {
         "id": "evasion",
         "text": "_When you choose to_ **_increase your {{term:evasion|Evasion}}_**_:_ Gain a permanent +1 bonus to your {{term:evasion|Evasion}}.",
-        "slots": null,
+        "slotsByTier": {
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
         "cost": 1
       },
       {
         "id": "subclass",
         "text": "_When you choose to_ **_take an upgraded subclass card_**_:_ Take the next card for your subclass. If you have only the foundation card, take a specialization; if you have a specialization already, take a mastery. Then cross out this {{term:tier|tier}}’s {{term:multiclass|multiclass}} option.",
-        "slots": null,
+        "slotsByTier": {
+          "3": 1,
+          "4": 1
+        },
         "cost": 1
       },
       {
         "id": "proficiency",
         "text": "_When you choose to_ **_increase your {{term:proficiency|Proficiency}}_**_:_ Fill in one of the open circles in the “{{term:proficiency|Proficiency}}” section of your character sheet, then increase your weapon’s number of damage dice by 1. _The black box around this advancement’s_ _slots indicates you must spend two advancements and mark_ _both level-up slots in order to take it as an option._",
-        "slots": null,
+        "slotsByTier": {
+          "3": 2,
+          "4": 2
+        },
         "cost": 2
       },
       {
         "id": "multiclass",
         "text": "_When you choose to_ **_{{term:multiclass|multiclass}}_**_:_ Choose an additional class, select one of its domains, and gain its class feature. Add the appropriate **{{term:multiclass|multiclass}} module** to your character sheet and take the foundation card from one of its subclasses. Then cross out the “upgraded subclass” advancement option in this {{term:tier|tier}} and all other “{{term:multiclass|multiclass}}” advancement options on your character sheet. _The black box around_ _this advancement’s slots indicates you must spend two_ _advancements and mark both level-up slots in order to take_ _it as an option._",
-        "slots": null,
+        "slotsByTier": {
+          "3": 2,
+          "4": 2
+        },
         "cost": 2,
         "minLevel": 5
       }
     ],
+    "slotsSource": "Slot counts are not in SRD 2.0; supplied by the project owner from the class character sheet (2026-11-06).",
     "companionOptions": [
       {
         "name": "Intelligent",
