@@ -52,14 +52,15 @@
   - **Placeholder page** (`npm run dev -- --host`): lists the bundled packs, to show they load. `npm run build` passes.
 
 ## Next
-- Stage 2: auth and database schema (Supabase migrations + RLS). **Blocked in part by D9:** the RLS tests need Docker or a second Supabase project.
+- Stage 2: auth and database schema (Supabase migrations + RLS), in progress.
+- Waiting on the owner for advancement slot counts per tier (rules question 1).
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
   - **Starting equipment** (SRD p. 5, step 5) is rules text only. The builder stage will need it as data.
 
 ## Decisions (2026-11-06)
-- D1. Public web app: approved by the owner. Keep any written approval from DRP on file.
+- D1. Approved by the owner. Clarified 2026-11-06: DaggerPlayer is a private/internal tool. Under DPCGL §1.8, private non-commercial play within a gaming group isn't "Sharing". If it ever opens to the public, revisit docs/LICENSE-NOTES.md.
 - D2. Bundle SRD 2.0.
 - D3. The Witherwild Campaign Frame and supplemental mechanics ship as the `srd-frames` pack, off by default, with a per-character toggle.
 - D4. Free, non-commercial. §4.1 attribution only. No ads, paywalls, or donations tied to access.
@@ -67,17 +68,12 @@
 - D6. Homebrew can be shown to other users. This replaces brief rule 5's "private to that user" for Phase 2 sharing. Phase 1 has no sharing UI.
 - D7. Fix SRD typos. Each fix is logged in `content/srd/errata.json` and noted in the attribution modification statement.
 - D8. Version snapshots: always on level-up, builder finish, import, and restore. Otherwise at most one per 10 minutes. Keep 20.
-- D9. RLS test environment: **on hold**.
+- D9. RLS tests: **skipped** by owner decision (2026-11-06). The brief's "test that one user can't read another's data" is not automated; policies are still written and reviewed.
 - D10. A print stylesheet is enough for PDF export.
 - D11. Use Supabase's built-in email for now. It's rate-limited; revisit before launch.
 - D12. Extract domain icons from the SRD PDF (deferred to stage 3, see above).
 
 ## Open rules questions
-1. **Advancement slots per tier (SRD p. 54).**
-   - What the SRD says: "choose any two advancements with at least one unmarked slot from your tier or below", and Proficiency and Multiclass cost two slots.
-   - What's missing: how many slots each option has per tier. Those counts are printed on the class character sheets, which aren't in SRD 2.0.
-   - How should the level-up wizard limit repeat picks? Options:
-     - (a) You supply the counts.
-     - (b) Enforce only what the SRD states (two picks per level, two-slot options, subclass/multiclass cross-outs, trait marks cleared at tiers 3 and 4) and leave repeat limits to the player.
-2. **Octopus, "Thresholds: 3/None" (p. 105).** How should damage resolve when there's no Severe threshold? Treat Major as the highest severity (2 HP)? This only matters for the Phase 2 GM tools.
-3. **Witherwild license conflict (pp. 1, 184).** SRD p. 1 calls the frame Public Game Content, but DPCGL §1.9.3 limits Campaign Frames to actual-play media. You chose a toggle (D3), so it ships, off by default. Flagging in case you'd rather leave it out until DRP clarifies.
+1. **Advancement slots per tier (SRD p. 54).** The owner will supply the counts. They'll live in `content/srd/supplied/advancement-slots.json`, marked as owner-supplied rather than SRD text. Until then the wizard can't limit repeat picks.
+2. **Octopus, "Thresholds: 3/None" (p. 105).** Deferred to the Phase 2 GM tools.
+3. ~~Witherwild license conflict~~ Resolved: include it. The owner describes DaggerPlayer as a private/internal tool (2026-11-06), so the frames pack ships with a per-character toggle (D3).
