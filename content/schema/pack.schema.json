@@ -143,6 +143,12 @@
                 "items": {
                   "$ref": "#/$defs/__schema7"
                 }
+              },
+              "modifiers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/__schema8"
+                }
               }
             },
             "required": [
@@ -211,7 +217,7 @@
                 "minItems": 1,
                 "type": "array",
                 "items": {
-                  "$ref": "#/$defs/__schema8"
+                  "$ref": "#/$defs/__schema9"
                 }
               },
               "hopeFeature": {
@@ -315,7 +321,7 @@
               "spellcastTrait": {
                 "anyOf": [
                   {
-                    "$ref": "#/$defs/__schema9"
+                    "$ref": "#/$defs/__schema10"
                   },
                   {
                     "type": "null"
@@ -527,7 +533,7 @@
                 "const": "beastform"
               },
               "tier": {
-                "$ref": "#/$defs/__schema10"
+                "$ref": "#/$defs/__schema11"
               },
               "examples": {
                 "type": "string"
@@ -538,7 +544,7 @@
                     "type": "object",
                     "properties": {
                       "trait": {
-                        "$ref": "#/$defs/__schema9"
+                        "$ref": "#/$defs/__schema10"
                       },
                       "value": {
                         "type": "integer",
@@ -574,16 +580,16 @@
                     "type": "object",
                     "properties": {
                       "range": {
-                        "$ref": "#/$defs/__schema11"
+                        "$ref": "#/$defs/__schema12"
                       },
                       "trait": {
-                        "$ref": "#/$defs/__schema9"
+                        "$ref": "#/$defs/__schema10"
                       },
                       "damage": {
                         "type": "string"
                       },
                       "damageType": {
-                        "$ref": "#/$defs/__schema12"
+                        "$ref": "#/$defs/__schema13"
                       }
                     },
                     "required": [
@@ -650,7 +656,7 @@
                 "const": "weapon"
               },
               "tier": {
-                "$ref": "#/$defs/__schema10"
+                "$ref": "#/$defs/__schema11"
               },
               "category": {
                 "type": "string",
@@ -670,7 +676,7 @@
               "trait": {
                 "anyOf": [
                   {
-                    "$ref": "#/$defs/__schema9"
+                    "$ref": "#/$defs/__schema10"
                   },
                   {
                     "type": "string",
@@ -679,7 +685,7 @@
                 ]
               },
               "range": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "damage": {
                 "type": "object",
@@ -694,7 +700,7 @@
                     "maximum": 9007199254740991
                   },
                   "type": {
-                    "$ref": "#/$defs/__schema12"
+                    "$ref": "#/$defs/__schema13"
                   }
                 },
                 "required": [
@@ -765,7 +771,7 @@
                 "const": "armor"
               },
               "tier": {
-                "$ref": "#/$defs/__schema10"
+                "$ref": "#/$defs/__schema11"
               },
               "baseThresholds": {
                 "type": "object",
@@ -833,10 +839,10 @@
                 "$ref": "#/$defs/__schema4"
               },
               "roll": {
-                "$ref": "#/$defs/__schema13"
+                "$ref": "#/$defs/__schema14"
               },
               "table": {
-                "$ref": "#/$defs/__schema14"
+                "$ref": "#/$defs/__schema15"
               },
               "text": {
                 "$ref": "#/$defs/__schema5"
@@ -876,10 +882,10 @@
                 "$ref": "#/$defs/__schema4"
               },
               "roll": {
-                "$ref": "#/$defs/__schema13"
+                "$ref": "#/$defs/__schema14"
               },
               "table": {
-                "$ref": "#/$defs/__schema14"
+                "$ref": "#/$defs/__schema15"
               },
               "text": {
                 "$ref": "#/$defs/__schema5"
@@ -923,7 +929,7 @@
                 "const": "adversary"
               },
               "tier": {
-                "$ref": "#/$defs/__schema10"
+                "$ref": "#/$defs/__schema11"
               },
               "role": {
                 "type": "string",
@@ -1031,7 +1037,7 @@
                     "type": "string"
                   },
                   "range": {
-                    "$ref": "#/$defs/__schema11"
+                    "$ref": "#/$defs/__schema12"
                   },
                   "damage": {
                     "type": "string"
@@ -1113,7 +1119,7 @@
                 "const": "environment"
               },
               "tier": {
-                "$ref": "#/$defs/__schema10"
+                "$ref": "#/$defs/__schema11"
               },
               "envType": {
                 "type": "string",
@@ -1198,7 +1204,7 @@
                   "type": "object",
                   "properties": {
                     "tier": {
-                      "$ref": "#/$defs/__schema10"
+                      "$ref": "#/$defs/__schema11"
                     },
                     "levels": {
                       "type": "array",
@@ -1521,50 +1527,7 @@
         "modifiers": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "target": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "enum": [
-                      "evasion",
-                      "hp",
-                      "stress",
-                      "hope",
-                      "armorScore",
-                      "majorThreshold",
-                      "severeThreshold",
-                      "proficiency",
-                      "attack",
-                      "damage"
-                    ]
-                  },
-                  {
-                    "type": "string",
-                    "pattern": "^trait:(agility|strength|finesse|instinct|presence|knowledge)$"
-                  }
-                ]
-              },
-              "value": {
-                "type": "integer",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
-              },
-              "when": {
-                "default": "always",
-                "type": "string",
-                "enum": [
-                  "always",
-                  "equipped",
-                  "beastform"
-                ]
-              }
-            },
-            "required": [
-              "target",
-              "value"
-            ]
+            "$ref": "#/$defs/__schema8"
           }
         },
         "resources": {
@@ -1691,9 +1654,56 @@
       ]
     },
     "__schema8": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "target": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "evasion",
+                "hp",
+                "stress",
+                "hope",
+                "armorScore",
+                "majorThreshold",
+                "severeThreshold",
+                "proficiency",
+                "attack",
+                "damage"
+              ]
+            },
+            {
+              "type": "string",
+              "pattern": "^trait:(agility|strength|finesse|instinct|presence|knowledge)$"
+            }
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "when": {
+          "default": "always",
+          "type": "string",
+          "enum": [
+            "always",
+            "equipped",
+            "beastform",
+            "armored"
+          ]
+        }
+      },
+      "required": [
+        "target",
+        "value"
+      ]
     },
     "__schema9": {
+      "type": "string"
+    },
+    "__schema10": {
       "type": "string",
       "enum": [
         "agility",
@@ -1704,12 +1714,12 @@
         "knowledge"
       ]
     },
-    "__schema10": {
+    "__schema11": {
       "type": "integer",
       "minimum": 1,
       "maximum": 4
     },
-    "__schema11": {
+    "__schema12": {
       "type": "string",
       "enum": [
         "melee",
@@ -1719,7 +1729,7 @@
         "very-far"
       ]
     },
-    "__schema12": {
+    "__schema13": {
       "type": "string",
       "enum": [
         "phy",
@@ -1727,12 +1737,12 @@
         "phy/mag"
       ]
     },
-    "__schema13": {
+    "__schema14": {
       "type": "integer",
       "exclusiveMinimum": 0,
       "maximum": 9007199254740991
     },
-    "__schema14": {
+    "__schema15": {
       "type": "string"
     }
   }

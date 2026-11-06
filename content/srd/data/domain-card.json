@@ -477,7 +477,19 @@
     "level": 4,
     "cardType": "ability",
     "recallCost": 0,
-    "text": "While you are wearing armor, gain a +2 bonus to your {{term:damage-thresholds|damage thresholds}}."
+    "text": "While you are wearing armor, gain a +2 bonus to your {{term:damage-thresholds|damage thresholds}}.",
+    "modifiers": [
+      {
+        "target": "majorThreshold",
+        "value": 2,
+        "when": "armored"
+      },
+      {
+        "target": "severeThreshold",
+        "value": 2,
+        "when": "armored"
+      }
+    ]
   },
   {
     "id": "srd/domain-card/champions-edge",
@@ -3339,7 +3351,14 @@
     "level": 5,
     "cardType": "ability",
     "recallCost": 1,
-    "text": "While you’re wearing armor, gain a +1 bonus to your {{term:armor-score|Armor Score}}.\n\nDuring a rest, when you choose to repair your armor as a {{term:downtime|downtime move}}, your allies also clear an {{term:armor-slot|Armor Slot}}."
+    "text": "While you’re wearing armor, gain a +1 bonus to your {{term:armor-score|Armor Score}}.\n\nDuring a rest, when you choose to repair your armor as a {{term:downtime|downtime move}}, your allies also clear an {{term:armor-slot|Armor Slot}}.",
+    "modifiers": [
+      {
+        "target": "armorScore",
+        "value": 1,
+        "when": "armored"
+      }
+    ]
   },
   {
     "id": "srd/domain-card/rousing-strike",

@@ -38,7 +38,14 @@
     "baseScore": 3,
     "feature": {
       "name": "Flexible",
-      "text": "+1 to {{term:evasion|Evasion}}"
+      "text": "+1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -98,7 +105,14 @@
     "baseScore": 3,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -119,7 +133,14 @@
     "baseScore": 4,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -140,7 +161,14 @@
     "baseScore": 4,
     "feature": {
       "name": "Bulky",
-      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -161,7 +189,19 @@
     "baseScore": 4,
     "feature": {
       "name": "Very Heavy",
-      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -2,
+          "when": "equipped"
+        },
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -203,7 +243,14 @@
     "baseScore": 4,
     "feature": {
       "name": "Flexible",
-      "text": "+1 to {{term:evasion|Evasion}}"
+      "text": "+1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -263,7 +310,14 @@
     "baseScore": 4,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -284,7 +338,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -305,7 +366,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Bulky",
-      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -326,7 +394,19 @@
     "baseScore": 5,
     "feature": {
       "name": "Very Heavy",
-      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -2,
+          "when": "equipped"
+        },
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -641,7 +721,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Flexible",
-      "text": "+1 to {{term:evasion|Evasion}}"
+      "text": "+1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -701,7 +788,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -722,7 +816,14 @@
     "baseScore": 6,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -743,7 +844,14 @@
     "baseScore": 6,
     "feature": {
       "name": "Bulky",
-      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -764,7 +872,19 @@
     "baseScore": 6,
     "feature": {
       "name": "Very Heavy",
-      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -2,
+          "when": "equipped"
+        },
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -848,7 +968,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Gilded",
-      "text": "+1 to {{term:presence|Presence}}"
+      "text": "+1 to {{term:presence|Presence}}",
+      "modifiers": [
+        {
+          "target": "trait:presence",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -911,7 +1038,14 @@
     "baseScore": 5,
     "feature": {
       "name": "Vigilant",
-      "text": "+2 to {{term:evasion|Evasion}}"
+      "text": "+2 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 2,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1058,7 +1192,14 @@
     "baseScore": 6,
     "feature": {
       "name": "Flexible",
-      "text": "+1 to {{term:evasion|Evasion}}"
+      "text": "+1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1118,7 +1259,14 @@
     "baseScore": 6,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1139,7 +1287,14 @@
     "baseScore": 7,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1160,7 +1315,14 @@
     "baseScore": 7,
     "feature": {
       "name": "Bulky",
-      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1181,7 +1343,19 @@
     "baseScore": 7,
     "feature": {
       "name": "Very Heavy",
-      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -2,
+          "when": "equipped"
+        },
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {

@@ -5,6 +5,8 @@ import { supabaseConfigured } from "./data/supabase.ts";
 import { ContentProvider } from "./content/ContentProvider.tsx";
 import { AccountPage } from "./features/account/AccountPage.tsx";
 import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features/compendium/pages.tsx";
+import { BuilderPage, NewCharacterPage } from "./features/builder/BuilderPage.tsx";
+import { CharacterPage, CharactersPage } from "./features/characters/pages.tsx";
 import { AuthProvider, RequireAuth, useAuth } from "./features/auth/AuthProvider.tsx";
 import { AuthCallbackPage, CheckEmailPage, ForgotPasswordPage, ResetPasswordPage, SignInPage, SignUpPage } from "./features/auth/pages.tsx";
 import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
@@ -21,6 +23,7 @@ function Layout() {
           DaggerPlayer
         </Link>
         <nav aria-label="Main">
+          <NavLink to="/characters">Characters</NavLink>
           <NavLink to="/compendium">Compendium</NavLink>
           <NavLink to="/rules">Rules</NavLink>
           {user ? <NavLink to="/account">Account</NavLink> : <NavLink to="/auth/sign-in">Sign in</NavLink>}
@@ -56,9 +59,9 @@ function HomePage() {
   return (
     <>
       <h1>DaggerPlayer</h1>
-      <p>A Daggerheart™ Compatible character companion. The builder and sheet arrive in the next stages.</p>
+      <p>A Daggerheart™ Compatible character companion.</p>
       <p>
-        <Link to="/compendium">Search the compendium</Link> · <Link to="/rules">Read the rules</Link>
+        <Link className="button primary" to="/build/new">Build a character</Link> <Link to="/characters">Your characters</Link> · <Link to="/compendium">Compendium</Link> · <Link to="/rules">Rules</Link>
       </p>
       <h2>Bundled content</h2>
       {bundledPacks.map((p) => (
@@ -103,6 +106,10 @@ const router = createBrowserRouter([
       { path: "/compendium/:pack/:type/:slug", element: <EntryPage /> },
       { path: "/rules", element: <RulesIndexPage /> },
       { path: "/rules/:pack/:slug", element: <RulesPage /> },
+      { path: "/characters", element: <CharactersPage /> },
+      { path: "/characters/:id", element: <CharacterPage /> },
+      { path: "/build/new", element: <NewCharacterPage /> },
+      { path: "/build/:id/:step", element: <BuilderPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },
       { path: "/legal", element: <LegalPage /> },
       { path: "*", element: <NotFound /> },

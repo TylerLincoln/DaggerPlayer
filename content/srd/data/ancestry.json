@@ -35,7 +35,17 @@
     "features": [
       {
         "name": "Purposeful Design",
-        "text": "Decide who made you and for what purpose. At character creation, choose one of your {{term:experience|Experiences}} that best aligns with this purpose and gain a permanent +1 bonus to it."
+        "text": "Decide who made you and for what purpose. At character creation, choose one of your {{term:experience|Experiences}} that best aligns with this purpose and gain a permanent +1 bonus to it.",
+        "choices": [
+          {
+            "id": "clank-purpose",
+            "prompt": "Choose the Experience that best aligns with your purpose (+1 permanent bonus).",
+            "count": 1,
+            "options": {
+              "type": "experience"
+            }
+          }
+        ]
       },
       {
         "name": "Efficient",
@@ -102,7 +112,24 @@
     "features": [
       {
         "name": "Stoneskin",
-        "text": "Gain a permanent +1 bonus to your {{term:armor-score|Armor Score}} and {{term:damage-thresholds|damage thresholds}} at character creation."
+        "text": "Gain a permanent +1 bonus to your {{term:armor-score|Armor Score}} and {{term:damage-thresholds|damage thresholds}} at character creation.",
+        "modifiers": [
+          {
+            "target": "armorScore",
+            "value": 1,
+            "when": "always"
+          },
+          {
+            "target": "majorThreshold",
+            "value": 1,
+            "when": "always"
+          },
+          {
+            "target": "severeThreshold",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Immovable",
@@ -336,7 +363,14 @@
     "features": [
       {
         "name": "Endurance",
-        "text": "Gain an additional {{term:hit-points|Hit Point}} slot at character creation."
+        "text": "Gain an additional {{term:hit-points|Hit Point}} slot at character creation.",
+        "modifiers": [
+          {
+            "target": "hp",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Reach",
@@ -424,7 +458,14 @@
     "features": [
       {
         "name": "High Stamina",
-        "text": "Gain an additional {{term:stress|Stress}} slot at character creation."
+        "text": "Gain an additional {{term:stress|Stress}} slot at character creation.",
+        "modifiers": [
+          {
+            "target": "stress",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Adaptability",
@@ -538,7 +579,14 @@
       },
       {
         "name": "Nimble",
-        "text": "Gain a permanent +1 bonus to your {{term:evasion|Evasion}} at character creation."
+        "text": "Gain a permanent +1 bonus to your {{term:evasion|Evasion}} at character creation.",
+        "modifiers": [
+          {
+            "target": "evasion",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       }
     ]
   }

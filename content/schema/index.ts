@@ -40,7 +40,8 @@ export const Modifier = z.object({
     z.templateLiteral(["trait:", Trait]),
   ]),
   value: z.number().int(),
-  when: z.enum(["always", "equipped", "beastform"]).default("always"),
+  /** always | while this item is equipped | while in Beastform | while wearing any armor */
+  when: z.enum(["always", "equipped", "beastform", "armored"]).default("always"),
 });
 export type Modifier = z.infer<typeof Modifier>;
 
@@ -100,6 +101,8 @@ export const DomainCard = z.object({
   recallCost: z.number().int().min(0),
   text: RichText,
   features: z.array(Feature).optional(), // grimoires list several named spells
+  /** permanent stat changes while the card is in the loadout */
+  modifiers: z.array(Modifier).optional(),
 });
 
 export const Class = z.object({

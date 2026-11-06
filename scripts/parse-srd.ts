@@ -15,6 +15,7 @@ import { parseLoot } from "./parse/loot.ts";
 import { parseAdversaries, parseEnvironments } from "./parse/gm.ts";
 import { RulesBuilder, type Segment, bodyMd, parseCompanionOptions, parseConditions, parseProgression, segmentSections } from "./parse/rules.ts";
 import { buildGlossary, autotag } from "./parse/glossary.ts";
+import { applyModifiers } from "./parse/modifiers.ts";
 import { FRAMES_PACK, PACK } from "./parse/common.ts";
 import { loadErrata } from "./parse/errata.ts";
 
@@ -89,6 +90,7 @@ function main() {
     ...beastforms, ...cards, ...weapons, ...armor, ...items, ...consumables, ...adversaries, ...environments,
     progression, ...conditions, ...glossary, ...rules.entries,
   ];
+  const modCount = applyModifiers(srdEntries);
   const tagStats = autotag([...srdEntries, ...frames.entries], glossary);
 
   // ---- write ----
@@ -114,7 +116,8 @@ function main() {
   for (const e of srdEntries) count[e.type] = (count[e.type] ?? 0) + 1;
   console.log("srd:", count);
   console.log("srd-frames:", frames.entries.length, "rules sections");
-  console.log("term tags:", tagStats);
+  console.log("entries with modifiers:", modCount);
+  console.log("term tags:", Object.values(tagStats).reduce((a, b) => a + b, 0));
 }
 
 function writePack(dir: string, meta: PackMeta, entries: Entry[]) {

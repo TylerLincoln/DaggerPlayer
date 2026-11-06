@@ -167,7 +167,14 @@
     "foundation": [
       {
         "name": "Rugged",
-        "text": "Gain a permanent +3 bonus to your {{term:damage-thresholds|Severe damage}} threshold."
+        "text": "Gain a permanent +3 bonus to your {{term:damage-thresholds|Severe damage}} threshold.",
+        "modifiers": [
+          {
+            "target": "severeThreshold",
+            "value": 3,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Overwhelm",
@@ -323,7 +330,19 @@
     "foundation": [
       {
         "name": "Unwavering",
-        "text": "Gain a permanent +1 bonus to your {{term:damage-thresholds|damage thresholds}}."
+        "text": "Gain a permanent +1 bonus to your {{term:damage-thresholds|damage thresholds}}.",
+        "modifiers": [
+          {
+            "target": "majorThreshold",
+            "value": 1,
+            "when": "always"
+          },
+          {
+            "target": "severeThreshold",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Iron Will",
@@ -333,7 +352,19 @@
     "specialization": [
       {
         "name": "Unrelenting",
-        "text": "Gain a permanent +2 bonus to your {{term:damage-thresholds|damage thresholds}}."
+        "text": "Gain a permanent +2 bonus to your {{term:damage-thresholds|damage thresholds}}.",
+        "modifiers": [
+          {
+            "target": "majorThreshold",
+            "value": 2,
+            "when": "always"
+          },
+          {
+            "target": "severeThreshold",
+            "value": 2,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Partners-in-Arms",
@@ -343,7 +374,19 @@
     "mastery": [
       {
         "name": "Undaunted",
-        "text": "Gain a permanent +3 bonus to your {{term:damage-thresholds|damage thresholds}}."
+        "text": "Gain a permanent +3 bonus to your {{term:damage-thresholds|damage thresholds}}.",
+        "modifiers": [
+          {
+            "target": "majorThreshold",
+            "value": 3,
+            "when": "always"
+          },
+          {
+            "target": "severeThreshold",
+            "value": 3,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Loyal Protector",
@@ -367,7 +410,14 @@
     "foundation": [
       {
         "name": "At Ease",
-        "text": "Gain an additional {{term:stress|Stress}} slot."
+        "text": "Gain an additional {{term:stress|Stress}} slot.",
+        "modifiers": [
+          {
+            "target": "stress",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Revenge",
@@ -495,7 +545,14 @@
     "mastery": [
       {
         "name": "Fleeting Shadow",
-        "text": "Gain a permanent +1 bonus to your {{term:evasion|Evasion}}. You can use your “Shadow Stepper” feature to move within {{term:very-far|Very Far range}}."
+        "text": "Gain a permanent +1 bonus to your {{term:evasion|Evasion}}. You can use your “Shadow Stepper” feature to move within {{term:very-far|Very Far range}}.",
+        "modifiers": [
+          {
+            "target": "evasion",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Vanishing Act",
@@ -599,7 +656,14 @@
     "mastery": [
       {
         "name": "Ascendant",
-        "text": "Gain a permanent +4 bonus to your {{term:damage-thresholds|Severe damage}} threshold."
+        "text": "Gain a permanent +4 bonus to your {{term:damage-thresholds|Severe damage}} threshold.",
+        "modifiers": [
+          {
+            "target": "severeThreshold",
+            "value": 4,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Power of the Gods",
@@ -963,7 +1027,14 @@
     "foundation": [
       {
         "name": "Battlemage",
-        "text": "You’ve focused your studies on becoming an unconquerable force on the battlefield. Gain an additional {{term:hit-points|Hit Point}} slot."
+        "text": "You’ve focused your studies on becoming an unconquerable force on the battlefield. Gain an additional {{term:hit-points|Hit Point}} slot.",
+        "modifiers": [
+          {
+            "target": "hp",
+            "value": 1,
+            "when": "always"
+          }
+        ]
       },
       {
         "name": "Face Your Fear",

@@ -143,7 +143,14 @@
     "burden": 2,
     "feature": {
       "name": "Massive",
-      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -192,7 +199,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -362,7 +376,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -506,7 +527,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1045,7 +1073,14 @@
     "burden": 2,
     "feature": {
       "name": "Massive",
-      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1094,7 +1129,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1264,7 +1306,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1408,7 +1457,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -1720,7 +1776,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -2268,7 +2331,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+1 to your {{term:armor-score|Armor Score}}"
+      "text": "+1 to your {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -2724,7 +2794,14 @@
     "burden": 2,
     "feature": {
       "name": "Massive",
-      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -2773,7 +2850,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -2943,7 +3027,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -3087,7 +3178,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -3165,7 +3263,19 @@
     "burden": 2,
     "feature": {
       "name": "Brave",
-      "text": "−1 to {{term:evasion|Evasion}}; +3 to {{term:damage-thresholds|Severe damage}} threshold"
+      "text": "−1 to {{term:evasion|Evasion}}; +3 to {{term:damage-thresholds|Severe damage}} threshold",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 3,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -3217,7 +3327,14 @@
     "burden": 2,
     "feature": {
       "name": "Protective",
-      "text": "+1 to {{term:armor-score|Armor Score}}"
+      "text": "+1 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4198,7 +4315,14 @@
     "burden": 2,
     "feature": {
       "name": "Massive",
-      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4247,7 +4371,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4417,7 +4548,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4561,7 +4699,14 @@
     "burden": 2,
     "feature": {
       "name": "Cumbersome",
-      "text": "−1 to {{term:finesse|Finesse}}"
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4639,7 +4784,14 @@
     "burden": 2,
     "feature": {
       "name": "Destructive",
-      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4691,7 +4843,14 @@
     "burden": 1,
     "feature": {
       "name": "Destructive",
-      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}."
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}.",
+      "modifiers": [
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -4821,7 +4980,14 @@
     "burden": 2,
     "feature": {
       "name": "Incendiary",
-      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all creatures within {{term:very-close|Very Close range}} of the target must mark a {{term:hit-points|Hit Point}}."
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all creatures within {{term:very-close|Very Close range}} of the target must mark a {{term:hit-points|Hit Point}}.",
+      "modifiers": [
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -5837,7 +6003,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+1 to {{term:armor-score|Armor Score}}"
+      "text": "+1 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -5863,7 +6036,19 @@
     "burden": 1,
     "feature": {
       "name": "Barrier",
-      "text": "+2 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+      "text": "+2 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 2,
+          "when": "equipped"
+        },
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -5941,7 +6126,19 @@
     "burden": 1,
     "feature": {
       "name": "Padded",
-      "text": "+2 to {{term:damage-thresholds|damage thresholds}}"
+      "text": "+2 to {{term:damage-thresholds|damage thresholds}}",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 2,
+          "when": "equipped"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 2,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -5967,7 +6164,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+1 to {{term:armor-score|Armor Score}}"
+      "text": "+1 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6172,7 +6376,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+2 to {{term:armor-score|Armor Score}}"
+      "text": "+2 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 2,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6198,7 +6409,19 @@
     "burden": 1,
     "feature": {
       "name": "Barrier",
-      "text": "+3 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+      "text": "+3 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 3,
+          "when": "equipped"
+        },
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6276,7 +6499,19 @@
     "burden": 1,
     "feature": {
       "name": "Padded",
-      "text": "+3 to {{term:damage-thresholds|damage thresholds}}"
+      "text": "+3 to {{term:damage-thresholds|damage thresholds}}",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 3,
+          "when": "equipped"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 3,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6302,7 +6537,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+2 to {{term:armor-score|Armor Score}}"
+      "text": "+2 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 2,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6455,7 +6697,14 @@
     "burden": 1,
     "feature": {
       "name": "Double Duty",
-      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}"
+      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6533,7 +6782,14 @@
     "burden": 1,
     "feature": {
       "name": "Double Duty",
-      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}"
+      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6689,7 +6945,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+3 to {{term:armor-score|Armor Score}}"
+      "text": "+3 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 3,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6715,7 +6978,19 @@
     "burden": 1,
     "feature": {
       "name": "Barrier",
-      "text": "+4 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+      "text": "+4 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 4,
+          "when": "equipped"
+        },
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6793,7 +7068,19 @@
     "burden": 1,
     "feature": {
       "name": "Padded",
-      "text": "+4 to {{term:damage-thresholds|damage thresholds}}"
+      "text": "+4 to {{term:damage-thresholds|damage thresholds}}",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 4,
+          "when": "equipped"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 4,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -6819,7 +7106,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+3 to {{term:armor-score|Armor Score}}"
+      "text": "+3 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 3,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -7206,7 +7500,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+4 to {{term:armor-score|Armor Score}}"
+      "text": "+4 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 4,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -7232,7 +7533,19 @@
     "burden": 1,
     "feature": {
       "name": "Barrier",
-      "text": "+5 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}."
+      "text": "+5 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}.",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 5,
+          "when": "equipped"
+        },
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -7310,7 +7623,19 @@
     "burden": 1,
     "feature": {
       "name": "Padded",
-      "text": "+5 to {{term:damage-thresholds|damage thresholds}}"
+      "text": "+5 to {{term:damage-thresholds|damage thresholds}}",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 5,
+          "when": "equipped"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 5,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -7336,7 +7661,14 @@
     "burden": 1,
     "feature": {
       "name": "Protective",
-      "text": "+4 to {{term:armor-score|Armor Score}}"
+      "text": "+4 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 4,
+          "when": "equipped"
+        }
+      ]
     }
   },
   {
@@ -7761,7 +8093,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     },
     "tags": [
       "heavy-frame-models"
@@ -7790,7 +8129,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     },
     "tags": [
       "heavy-frame-models"
@@ -7819,7 +8165,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     },
     "tags": [
       "heavy-frame-models"
@@ -7848,7 +8201,14 @@
     "burden": 2,
     "feature": {
       "name": "Heavy",
-      "text": "−1 to {{term:evasion|Evasion}}"
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
     },
     "tags": [
       "heavy-frame-models"
