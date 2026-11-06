@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "00000000-0000-4000-8000-000000000001",
+  "packs": [
+    "srd"
+  ],
+  "identity": {
+    "name": "Wren Ashdown",
+    "pronouns": "she/her",
+    "description": "Tall, weathered, carries a bone-handled knife."
+  },
+  "build": {
+    "classId": "srd/class/ranger",
+    "subclassId": "srd/subclass/wayfinder",
+    "ancestry": {
+      "kind": "single",
+      "id": "srd/ancestry/elf"
+    },
+    "communityId": "srd/community/wildborne",
+    "transformationId": null,
+    "traits": {
+      "agility": 2,
+      "strength": 1,
+      "finesse": 1,
+      "instinct": 0,
+      "presence": 0,
+      "knowledge": -1
+    },
+    "gear": {
+      "primaryId": "srd/weapon/shortbow",
+      "secondaryId": null,
+      "armorId": "srd/armor/leather-armor",
+      "potion": "health",
+      "classItem": "A trophy from your first kill",
+      "spellItem": "",
+      "extraItems": "Whetstone"
+    },
+    "experiences": [
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "name": "Tracker",
+        "bonus": 2
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000003",
+        "name": "Survivalist",
+        "bonus": 2
+      }
+    ],
+    "background": [
+      {
+        "question": "A terrible creature hurt your community, and you’ve vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?",
+        "answer": "My first kill was the beast that took my brother."
+      },
+      {
+        "question": "Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?",
+        "answer": ""
+      },
+      {
+        "question": "You’ve traveled many dangerous lands, but what is the one place you refuse to go?",
+        "answer": ""
+      }
+    ],
+    "connections": [
+      {
+        "question": "What friendly competition do we have?",
+        "answer": ""
+      },
+      {
+        "question": "Why do you act differently when we’re alone than when others are around?",
+        "answer": ""
+      },
+      {
+        "question": "What threat have you asked me to watch for, and why are you worried about it?",
+        "answer": ""
+      }
+    ],
+    "domainCardIds": [
+      "srd/domain-card/gifted-tracker",
+      "srd/domain-card/vicious-entangle"
+    ],
+    "featureChoices": {},
+    "classNotes": ""
+  },
+  "finishedAt": "2026-11-06T12:00:00.000Z",
+  "levelUps": [
+    {
+      "level": 2,
+      "newExperience": {
+        "id": "00000000-0000-4000-8000-000000000010",
+        "name": "Mountain Guide",
+        "bonus": 2
+      },
+      "advancements": [
+        {
+          "optionId": "hp"
+        },
+        {
+          "optionId": "traits",
+          "traits": [
+            "agility",
+            "instinct"
+          ]
+        }
+      ],
+      "domainCardId": "srd/domain-card/natures-tongue",
+      "exchange": null
+    }
+  ],
+  "state": {
+    "hpMarked": 2,
+    "stressMarked": 1,
+    "hope": 3,
+    "armorMarked": 0,
+    "scars": 0,
+    "loadout": [
+      "srd/domain-card/gifted-tracker",
+      "srd/domain-card/vicious-entangle",
+      "srd/domain-card/natures-tongue"
+    ],
+    "vault": [],
+    "activePrimaryId": "srd/weapon/shortbow",
+    "activeSecondaryId": null,
+    "inventoryWeaponIds": [],
+    "armorId": "srd/armor/leather-armor",
+    "inventory": [
+      {
+        "id": "00000000-0000-4000-8000-000000000004",
+        "name": "Torch",
+        "qty": 1,
+        "notes": ""
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000005",
+        "name": "50 feet of rope",
+        "qty": 1,
+        "notes": ""
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000006",
+        "name": "Basic supplies",
+        "qty": 1,
+        "notes": ""
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000007",
+        "name": "Minor Health Potion",
+        "qty": 1,
+        "notes": "",
+        "entryId": "srd/consumable/minor-health-potion"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000008",
+        "name": "A trophy from your first kill",
+        "qty": 1,
+        "notes": ""
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000009",
+        "name": "Whetstone",
+        "qty": 1,
+        "notes": ""
+      }
+    ],
+    "gold": {
+      "handfuls": 1,
+      "bags": 0,
+      "chests": 0
+    },
+    "resources": {},
+    "conditions": [],
+    "effects": [],
+    "beastformId": null
+  },
+  "notes": {
+    "session": "Owe Kaz a favor.",
+    "background": "",
+    "connections": ""
+  }
+}

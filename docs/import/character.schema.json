@@ -1,0 +1,628 @@
+{
+  "title": "DaggerPlayer character",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+    },
+    "packs": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/__schema0"
+      }
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "pronouns": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "name",
+        "pronouns",
+        "description"
+      ]
+    },
+    "build": {
+      "type": "object",
+      "properties": {
+        "classId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subclassId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ancestry": {
+          "anyOf": [
+            {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "const": "single"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "const": "mixed"
+                    },
+                    "topFrom": {
+                      "type": "string"
+                    },
+                    "bottomFrom": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "default": "",
+                      "type": "string",
+                      "maxLength": 80
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "topFrom",
+                    "bottomFrom"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "communityId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transformationId": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "traits": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/__schema1"
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "required": [
+            "agility",
+            "strength",
+            "finesse",
+            "instinct",
+            "presence",
+            "knowledge"
+          ]
+        },
+        "gear": {
+          "type": "object",
+          "properties": {
+            "primaryId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "secondaryId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "armorId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "potion": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "health",
+                    "stamina"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "classItem": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "spellItem": {
+              "default": "",
+              "type": "string",
+              "maxLength": 200
+            },
+            "extraItems": {
+              "default": "",
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "primaryId",
+            "secondaryId",
+            "armorId",
+            "potion",
+            "classItem"
+          ]
+        },
+        "experiences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema2"
+          }
+        },
+        "background": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema3"
+          }
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema3"
+          }
+        },
+        "domainCardIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "featureChoices": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "classNotes": {
+          "default": "",
+          "type": "string",
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "classId",
+        "subclassId",
+        "ancestry",
+        "communityId",
+        "traits",
+        "gear",
+        "experiences",
+        "background",
+        "connections",
+        "domainCardIds",
+        "featureChoices"
+      ]
+    },
+    "finishedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "levelUps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 10
+          },
+          "advancements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "optionId": {
+                  "type": "string"
+                },
+                "traits": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/__schema1"
+                  }
+                },
+                "experienceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cardId": {
+                  "type": "string"
+                },
+                "subclassId": {
+                  "type": "string"
+                },
+                "classId": {
+                  "type": "string"
+                },
+                "domainId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "optionId"
+              ]
+            }
+          },
+          "newExperience": {
+            "$ref": "#/$defs/__schema2"
+          },
+          "domainCardId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "exchange": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "fromId": {
+                    "type": "string"
+                  },
+                  "toId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "fromId",
+                  "toId"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "level",
+          "advancements",
+          "domainCardId"
+        ]
+      }
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "hpMarked": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "stressMarked": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "hope": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "armorMarked": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "scars": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "loadout": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vault": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "activePrimaryId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "activeSecondaryId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inventoryWeaponIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "armorId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inventory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "entryId": {
+                "type": "string"
+              },
+              "qty": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "notes": {
+                "default": "",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "qty"
+            ]
+          }
+        },
+        "gold": {
+          "type": "object",
+          "properties": {
+            "handfuls": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9
+            },
+            "bags": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9
+            },
+            "chests": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "handfuls",
+            "bags",
+            "chests"
+          ]
+        },
+        "resources": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "on": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "on"
+            ]
+          }
+        },
+        "beastformId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "hpMarked",
+        "stressMarked",
+        "hope",
+        "armorMarked",
+        "scars",
+        "loadout",
+        "vault",
+        "activePrimaryId",
+        "activeSecondaryId",
+        "inventoryWeaponIds",
+        "armorId",
+        "inventory",
+        "gold",
+        "resources",
+        "conditions",
+        "effects",
+        "beastformId"
+      ]
+    },
+    "notes": {
+      "type": "object",
+      "properties": {
+        "session": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "connections": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "session",
+        "background",
+        "connections"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "packs",
+    "identity",
+    "build",
+    "finishedAt",
+    "levelUps",
+    "state",
+    "notes"
+  ],
+  "$defs": {
+    "__schema0": {
+      "type": "string"
+    },
+    "__schema1": {
+      "type": "string",
+      "enum": [
+        "agility",
+        "strength",
+        "finesse",
+        "instinct",
+        "presence",
+        "knowledge"
+      ]
+    },
+    "__schema2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "bonus": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "bonus"
+      ]
+    },
+    "__schema3": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string",
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "question",
+        "answer"
+      ]
+    }
+  }
+}

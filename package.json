@@ -13,7 +13,8 @@
     "content:validate": "tsx scripts/validate-packs.ts",
     "content:jsonschema": "tsx scripts/export-jsonschema.ts",
     "content": "npm run content:parse && npm run content:validate && npm run content:jsonschema",
-    "content:icons": "tsx scripts/extract-icons.ts"
+    "content:icons": "tsx scripts/extract-icons.ts",
+    "import-kit": "tsx scripts/export-import-kit.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
