@@ -6,6 +6,7 @@ import { type CharacterRow, listCharacters } from "../../data/repo.ts";
 import { supabase } from "../../data/supabase.ts";
 import { CharacterDoc } from "../../rules/character.ts";
 import { derive } from "../../rules/derive.ts";
+import { MAX_LEVEL, undoLastLevelUp } from "../../rules/levelup.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { FormMessage, errorText } from "../../ui/forms.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
@@ -113,7 +114,7 @@ export function CharacterPage() {
   const { id } = useParams();
   const { registry } = useContent();
   const { user } = useAuth();
-  const [rec] = useCharacterRecord(id);
+  const [rec, update] = useCharacterRecord(id);
   const { status, error } = useAutosave(id, user?.id ?? null);
   if (!rec) return <><h1>Character not found</h1><Link to="/characters">Your characters</Link></>;
   if (!rec.doc.finishedAt) return <Navigate to={`/build/${rec.doc.id}/review`} replace />;
@@ -133,6 +134,12 @@ export function CharacterPage() {
         {Object.entries(d.traits).map(([t, s]) => <div key={t}><dt>{t.charAt(0).toUpperCase() + t.slice(1)}</dt><dd>{formatMod(s.total)}</dd></div>)}
       </dl>
       <p className="hint">The full play sheet (trackers, dice, loadout) comes in stage 5.</p>
+      <p>
+        {d.level < MAX_LEVEL && <Link className="button primary" to={`/characters/${c.id}/level-up`}>Level up</Link>}{" "}
+        {c.levelUps.length > 0 && (
+          <button type="button" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && update((x) => undoLastLevelUp(x))}>Undo last level-up</button>
+        )}
+      </p>
       <p><Link to={`/build/${c.id}/review`}>Edit build</Link> · <Link to="/characters">All characters</Link></p>
     </>
   );

@@ -8,6 +8,8 @@ import { Registry } from "../src/content/registry.ts";
 import { SearchIndex } from "../src/content/search.ts";
 import { createLocal } from "../src/data/characters.ts";
 import { BuilderPage } from "../src/features/builder/BuilderPage.tsx";
+import { LevelUpPage } from "../src/features/levelup/LevelUpPage.tsx";
+import { finishBuild } from "../src/rules/builder.ts";
 import { BUILDER_STEPS } from "../src/rules/builder.ts";
 import { newCharacter } from "../src/rules/character.ts";
 
@@ -65,5 +67,22 @@ describe("builder pages", () => {
   it("marks completed steps in the progress bar", () => {
     const f = page(full.id, "class");
     expect(f).toContain('aria-valuenow="7"');
+  });
+
+  it("renders the level-up wizard for a finished character", () => {
+    const done = finishBuild(structuredClone(full), registry);
+    done.id = crypto.randomUUID();
+    createLocal(done, null);
+    const html = renderToString(
+      <ContentContext.Provider value={{ registry, search, enabledPacks: ["srd"], setPackEnabled: () => {} }}>
+        <MemoryRouter initialEntries={[`/characters/${done.id}/level-up`]}>
+          <Routes><Route path="/characters/:id/level-up" element={<LevelUpPage />} /></Routes>
+        </MemoryRouter>
+      </ContentContext.Provider>,
+    ).replace(/<!-- -->/g, "");
+    expect(html).toContain("Level up Wren to level 2");
+    expect(html).toContain("You gain a new Experience at +2");
+    expect(html).toMatch(/No unmarked slots left in your tier or below/);
+    expect(html).toMatch(/<button[^>]*disabled=""[^>]*>Level up to 2/);
   });
 });

@@ -81,7 +81,38 @@
     - Homebrew entries in the compendium: the registry supports them; they arrive with the homebrew importer.
     - Route-level code splitting: the main bundle is 598 KB (174 KB gzipped).
     - A manual browser pass by the owner.
-- Next: stage 4, the character builder.
+- **Stage 4: character builder and level-up wizard.** Done.
+  - **Rules engine** (`src/rules/`, pure TS):
+    - character document schema
+    - `derive()`: every sheet number with a breakdown of its sources, plus the SRD caps (HP/Stress 12, Hope 6, Armor Score 12)
+    - trait spread
+    - builder validation by step
+    - starting sheet (SRD pp. 4–5)
+    - level-up rules: slot ledger per tier, crossed-out options, trait marks, card level limits, multiclass, exchange, undo
+  - **Feature modifiers.** Curated permanent effects (ancestry, subclass, cards) are in `content/srd/modifiers.json`. Equipment modifiers are parsed from feature text (e.g. "−1 to Evasion"). Clank's Purposeful Design is modelled as a choice.
+  - **Builder** (`/build/:id/:step`):
+    - eight steps, with a progress bar and free jumping between steps
+    - a details drawer with the full SRD text and a Choose button
+    - "+1 Evasion"-style previews on every option
+    - traits by tap-to-assign or drag-and-drop (keyboard works through the tap buttons)
+    - mixed ancestry
+    - an optional transformation (GM approval)
+    - a review step listing everything still missing, linked to its step
+  - **Level-up wizard** (`/characters/:id/level-up`): the four SRD steps, slot counts, reasons for blocked options, inline picks, a preview, and undo of the last level-up.
+  - **Characters page:** local drafts (guests can build without an account), autosave to the account when signed in (`save_character`, snapshot on finish and level-up), a conflict banner, and single-character JSON export/import (imports get a new id).
+  - **Tests (72):**
+    - trait math, thresholds (armored and unarmored), modifiers, caps, mixed ancestry
+    - builder validation rules
+    - level-up limits: slots, crossing out, trait marks, card limits, exchange, loadout→vault, undo, HP cap
+    - server-rendered builder and level-up pages
+  - **Not yet:**
+    - The play sheet (stage 5): `/characters/:id` shows a summary for now.
+    - Domain cards with a choice (e.g. Vitality: "two of the following") have no machine-readable effect yet; the sheet stage needs them.
+    - Class-feature selections (warlock patron, ranger companion, …) are a free-text note.
+    - Only the primary subclass can take upgraded cards. SRD p. 54 says "the next card for your subclass".
+    - Resolving a conflict with "keep this device's" overwrites the server copy without snapshotting it first. Stage 7 adds that.
+    - A browser pass by the owner.
+- Next: stage 5, the character sheet.
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
@@ -107,4 +138,6 @@
    - Domain cards are "at or below your level" in every tier (the sheet's tier-3 "(up to level 4)" is ignored).
    - Multiclassing crosses out the upgraded-subclass option in the current tier only.
 2. **Octopus, "Thresholds: 3/None" (p. 105).** Deferred to the Phase 2 GM tools.
+4. **Unarmored thresholds with bonuses (p. 72).** Unarmored, Major = level and Severe = 2 × level. The SRD doesn't say whether permanent threshold bonuses (Stalwart's Unwavering, Earthkin's Stoneskin) still apply. The app adds them. Correct?
+5. **Starting gear (p. 5).** "A two-handed primary weapon or a one-handed primary weapon and a one-handed secondary weapon." The app requires a secondary only as a suggestion (warning, not error), and allows no weapon at all (for the Brawler's "I Am the Weapon"). Correct?
 3. ~~Witherwild license conflict~~ Resolved: include it. The owner describes DaggerPlayer as a private/internal tool (2026-11-06), so the frames pack ships with a per-character toggle (D3).

@@ -7,6 +7,7 @@ import { AccountPage } from "./features/account/AccountPage.tsx";
 import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features/compendium/pages.tsx";
 import { BuilderPage, NewCharacterPage } from "./features/builder/BuilderPage.tsx";
 import { CharacterPage, CharactersPage } from "./features/characters/pages.tsx";
+import { LevelUpPage } from "./features/levelup/LevelUpPage.tsx";
 import { AuthProvider, RequireAuth, useAuth } from "./features/auth/AuthProvider.tsx";
 import { AuthCallbackPage, CheckEmailPage, ForgotPasswordPage, ResetPasswordPage, SignInPage, SignUpPage } from "./features/auth/pages.tsx";
 import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
@@ -108,6 +109,7 @@ const router = createBrowserRouter([
       { path: "/rules/:pack/:slug", element: <RulesPage /> },
       { path: "/characters", element: <CharactersPage /> },
       { path: "/characters/:id", element: <CharacterPage /> },
+      { path: "/characters/:id/level-up", element: <LevelUpPage /> },
       { path: "/build/new", element: <NewCharacterPage /> },
       { path: "/build/:id/:step", element: <BuilderPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },

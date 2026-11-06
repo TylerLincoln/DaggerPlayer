@@ -249,3 +249,8 @@ label.radio { display: flex; gap: 8px; align-items: center; min-height: 36px; }
 .drawer-head h2 { margin: 0; font-size: 1.2rem; }
 .drawer-body { flex: 1; overflow: auto; padding: 0 16px 16px; }
 .drawer-foot { padding: 12px 16px; border-top: 1px solid var(--border); display: grid; gap: 8px; }
+.advancements { list-style: none; padding: 0; display: grid; gap: 8px; }
+.advancements > li { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+.advancements > li.selected { border: 2px solid var(--accent); }
+.advancements .pick { grid-column: 1 / -1; border-top: 1px dashed var(--border); padding-top: 8px; }
+.levelup section { margin: 20px 0; }
