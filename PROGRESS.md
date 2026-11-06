@@ -1,25 +1,83 @@
 # Progress
 
 ## Done
-- Step 1: read the brief, DPCGL 2.0, and SRD 2.0 (Aug 25, 2026). Notes are in docs/LICENSE-NOTES.md.
+- Step 1: license review. Notes in docs/LICENSE-NOTES.md.
 - Step 2: proposal in docs/PROPOSAL.md, approved 2026-11-06.
+- **Stage 1: data layer and validator** (details in docs/CONTENT.md).
+  - **Extractor** (`scripts/extract-srd.ts`, pdfjs-dist). Keeps:
+    - table cells
+    - bold/italic
+    - heading font
+    - the digits the PDF sets in a symbol font (adversary tiers, horde sizes)
+  - **Parser** (`scripts/parse-srd.ts` + `scripts/parse/*`). The `srd` pack has 1,446 entries:
+
+    | Type | Count |
+    |---|---|
+    | Classes | 13 |
+    | Subclasses | 26 |
+    | Domains | 10 |
+    | Domain cards | 210 |
+    | Ancestries | 24 |
+    | Communities | 15 |
+    | Transformations | 6 |
+    | Beastforms | 24 |
+    | Weapons | 315 |
+    | Armor | 69 |
+    | Items | 120 |
+    | Consumables | 120 |
+    | Adversaries | 258 |
+    | Environments | 47 |
+    | Conditions | 3 |
+    | Progression | 1 |
+    | Glossary terms | 55 |
+    | Rules sections | 130 |
+
+    The optional `srd-frames` pack has 55 rules sections.
+  - **Rules terms** are tagged in all text: 6,456 `{{term:…}}` links to 55 glossary terms in the `srd` pack. Each term's tooltip is a verbatim SRD sentence.
+  - **Validator** (`content/validate.ts`, CLI `npm run content:validate`) checks:
+    - schema
+    - ids
+    - duplicates
+    - cross-links
+    - term/ref tags
+    - pack dependencies
+
+    It's written so the homebrew importer can reuse it.
+  - **JSON Schema** for homebrew authors: `content/schema/pack.schema.json`.
+  - **Errata**: 2 so far, listed in `content/srd/errata.json`.
+  - **Tests**: 23 (`npm test`):
+    - completeness counts
+    - spot checks against the PDF
+    - the validator rejecting broken homebrew
+  - **Placeholder page** (`npm run dev -- --host`): lists the bundled packs, to show they load. `npm run build` passes.
 
 ## Next
-- Stage 1: data layer and validator (in progress).
+- Stage 2: auth and database schema (Supabase migrations + RLS). **Blocked in part by D9:** the RLS tests need Docker or a second Supabase project.
+- Deferred from stage 1:
+  - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
+  - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
+  - **Starting equipment** (SRD p. 5, step 5) is rules text only. The builder stage will need it as data.
 
 ## Decisions (2026-11-06)
 - D1. Public web app: approved by the owner. Keep any written approval from DRP on file.
 - D2. Bundle SRD 2.0.
-- D3. The Witherwild Campaign Frame and supplemental campaign mechanics ship as a separate pack (`srd-frames`), off by default, with a per-character toggle.
+- D3. The Witherwild Campaign Frame and supplemental mechanics ship as the `srd-frames` pack, off by default, with a per-character toggle.
 - D4. Free, non-commercial. §4.1 attribution only. No ads, paywalls, or donations tied to access.
 - D5. Name: DaggerPlayer.
-- D6. Homebrew can be shown to other users. This replaces brief rule 5's "private to that user" for Phase 2 sharing. Phase 1 still has no sharing UI.
-- D7. Fix SRD typos. Log every fix in `content/srd/errata.json` and say so in the attribution modification statement.
-- D8. Version snapshots: always on level-up, builder finish, import, and restore. Otherwise at most one per 10 minutes. Keep the last 20.
-- D9. RLS test environment: **on hold**. Needed before stage 2 is done.
+- D6. Homebrew can be shown to other users. This replaces brief rule 5's "private to that user" for Phase 2 sharing. Phase 1 has no sharing UI.
+- D7. Fix SRD typos. Each fix is logged in `content/srd/errata.json` and noted in the attribution modification statement.
+- D8. Version snapshots: always on level-up, builder finish, import, and restore. Otherwise at most one per 10 minutes. Keep 20.
+- D9. RLS test environment: **on hold**.
 - D10. A print stylesheet is enough for PDF export.
 - D11. Use Supabase's built-in email for now. It's rate-limited; revisit before launch.
-- D12. Extract domain icons from the SRD PDF.
+- D12. Extract domain icons from the SRD PDF (deferred to stage 3, see above).
 
 ## Open rules questions
-- (none yet)
+1. **Advancement slots per tier (SRD p. 54).**
+   - What the SRD says: "choose any two advancements with at least one unmarked slot from your tier or below", and Proficiency and Multiclass cost two slots.
+   - What's missing: how many slots each option has per tier. Those counts are printed on the class character sheets, which aren't in SRD 2.0.
+   - How should the level-up wizard limit repeat picks? Options:
+     - (a) You supply the counts.
+     - (b) Enforce only what the SRD states (two picks per level, two-slot options, subclass/multiclass cross-outs, trait marks cleared at tiers 3 and 4) and leave repeat limits to the player.
+2. **Octopus, "Thresholds: 3/None" (p. 105).** How should damage resolve when there's no Severe threshold? Treat Major as the highest severity (2 HP)? This only matters for the Phase 2 GM tools.
+3. **Witherwild license conflict (pp. 1, 184).** SRD p. 1 calls the frame Public Game Content, but DPCGL §1.9.3 limits Campaign Frames to actual-play media. You chose a toggle (D3), so it ships, off by default. Flagging in case you'd rather leave it out until DRP clarifies.
