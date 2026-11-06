@@ -1,0 +1,1439 @@
+[
+  {
+    "id": "srd/armor/mage-robes",
+    "type": "armor",
+    "name": "Mage Robes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 4,
+      "severe": 10
+    },
+    "baseScore": 2,
+    "feature": {
+      "name": "Enchanted",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your {{term:spellcast-trait|Spellcast trait}}."
+    }
+  },
+  {
+    "id": "srd/armor/gambeson-armor",
+    "type": "armor",
+    "name": "Gambeson Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 5,
+      "severe": 11
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Flexible",
+      "text": "+1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/brigandine-armor",
+    "type": "armor",
+    "name": "Brigandine Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 6,
+      "severe": 12
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Lined",
+      "text": "Mark a {{term:stress|Stress}} to negate {{term:damage-thresholds|Minor damage}}."
+    }
+  },
+  {
+    "id": "srd/armor/leather-armor",
+    "type": "armor",
+    "name": "Leather Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 6,
+      "severe": 13
+    },
+    "baseScore": 3,
+    "feature": null
+  },
+  {
+    "id": "srd/armor/scale-mail-armor",
+    "type": "armor",
+    "name": "Scale Mail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 7,
+      "severe": 14
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/armor/chainmail-armor",
+    "type": "armor",
+    "name": "Chainmail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 7,
+      "severe": 15
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/banded-armor",
+    "type": "armor",
+    "name": "Banded Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 8,
+      "severe": 16
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Bulky",
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/full-plate-armor",
+    "type": "armor",
+    "name": "Full Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 1,
+    "baseThresholds": {
+      "major": 8,
+      "severe": 17
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Very Heavy",
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+    }
+  },
+  {
+    "id": "srd/armor/improved-mage-robes",
+    "type": "armor",
+    "name": "Improved Mage Robes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 6,
+      "severe": 15
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Enchanted",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your {{term:spellcast-trait|Spellcast trait}}."
+    }
+  },
+  {
+    "id": "srd/armor/improved-gambeson-armor",
+    "type": "armor",
+    "name": "Improved Gambeson Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 7,
+      "severe": 16
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Flexible",
+      "text": "+1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/improved-brigandine-armor",
+    "type": "armor",
+    "name": "Improved Brigandine Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 19
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Lined",
+      "text": "Mark a {{term:stress|Stress}} to negate {{term:damage-thresholds|Minor damage}}."
+    }
+  },
+  {
+    "id": "srd/armor/improved-leather-armor",
+    "type": "armor",
+    "name": "Improved Leather Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": null
+  },
+  {
+    "id": "srd/armor/improved-scale-mail-armor",
+    "type": "armor",
+    "name": "Improved Scale Mail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 23
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/armor/improved-chainmail-armor",
+    "type": "armor",
+    "name": "Improved Chainmail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 24
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/improved-banded-armor",
+    "type": "armor",
+    "name": "Improved Banded Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Bulky",
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/improved-full-plate-armor",
+    "type": "armor",
+    "name": "Improved Full Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 28
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Very Heavy",
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+    }
+  },
+  {
+    "id": "srd/armor/enchanters-robes",
+    "type": "armor",
+    "name": "Enchanter’s Robes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Mnemonic",
+      "text": "Once per scene, you can recall a {{term:domain-card|domain card}} from your {{term:vault|vault}} without paying its {{term:recall-cost|Recall Cost}}."
+    }
+  },
+  {
+    "id": "srd/armor/hawkguards-mantle",
+    "type": "armor",
+    "name": "Hawkguard’s Mantle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Gliding",
+      "text": "You can glide up to {{term:far|Far range}} and are {{term:immunity|immune}} to damage from falling."
+    }
+  },
+  {
+    "id": "srd/armor/spidersilk-tunic",
+    "type": "armor",
+    "name": "Spidersilk Tunic",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Wall-Crawling",
+      "text": "+1 {{term:evasion|Evasion}}; you can walk on walls as easily as on the ground."
+    }
+  },
+  {
+    "id": "srd/armor/stormthread-habit",
+    "type": "armor",
+    "name": "Stormthread Habit",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Absorbing",
+      "text": "Once per scene when you take magic damage, you can clear an {{term:armor-slot|Armor Slot}}."
+    }
+  },
+  {
+    "id": "srd/armor/elundrian-chain-armor",
+    "type": "armor",
+    "name": "Elundrian Chain Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 21
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Warded",
+      "text": "You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+    }
+  },
+  {
+    "id": "srd/armor/harrowbone-armor",
+    "type": "armor",
+    "name": "Harrowbone Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 21
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Resilient",
+      "text": "Before you mark your last {{term:armor-slot|Armor Slot}}, roll a d6. On a result of 6, reduce the severity by one threshold without marking an {{term:armor-slot|Armor Slot}}."
+    }
+  },
+  {
+    "id": "srd/armor/irontree-breastplate-armor",
+    "type": "armor",
+    "name": "Irontree Breastplate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Reinforced",
+      "text": "When you mark your last {{term:armor-slot|Armor Slot}}, increase your {{term:damage-thresholds|damage thresholds}} by +2 until you clear at least 1 {{term:armor-slot|Armor Slot}}."
+    }
+  },
+  {
+    "id": "srd/armor/runetan-floating-armor",
+    "type": "armor",
+    "name": "Runetan Floating Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 20
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Shifting",
+      "text": "When you are targeted for an attack, you can mark an {{term:armor-slot|Armor Slot}} to give the attack roll against you {{term:disadvantage|disadvantage}}."
+    }
+  },
+  {
+    "id": "srd/armor/tyris-soft-armor",
+    "type": "armor",
+    "name": "Tyris Soft Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 8,
+      "severe": 18
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Quiet",
+      "text": "You gain a +2 bonus to rolls you make to move silently."
+    }
+  },
+  {
+    "id": "srd/armor/wyrdwood-splint-armor",
+    "type": "armor",
+    "name": "Wyrdwood Splint Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 10,
+      "severe": 21
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Quick-Striding",
+      "text": "You can’t be _{{term:restrained|Restrained}}_ and can move up to {{term:far|Far range}} as part of an {{term:action-roll|action roll}}."
+    }
+  },
+  {
+    "id": "srd/armor/rosewild-armor",
+    "type": "armor",
+    "name": "Rosewild Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 23
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Hopeful",
+      "text": "When you would spend a {{term:hope|Hope}}, you can mark an {{term:armor-slot|Armor Slot}} instead."
+    }
+  },
+  {
+    "id": "srd/armor/trollhide-cuirass",
+    "type": "armor",
+    "name": "Trollhide Cuirass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 23
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Self-Healing",
+      "text": "When you take a rest, clear an {{term:armor-slot|Armor Slot}}."
+    }
+  },
+  {
+    "id": "srd/armor/gilded-sunplate",
+    "type": "armor",
+    "name": "Gilded Sunplate",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "tier": 2,
+    "baseThresholds": {
+      "major": 12,
+      "severe": 26
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Resplendent",
+      "text": "Once per scene when you spend {{term:hope|Hope}}, you can clear an {{term:armor-slot|Armor Slot}}."
+    }
+  },
+  {
+    "id": "srd/armor/advanced-mage-robes",
+    "type": "armor",
+    "name": "Advanced Mage Robes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 8,
+      "severe": 22
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Enchanted",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your {{term:spellcast-trait|Spellcast trait}}."
+    }
+  },
+  {
+    "id": "srd/armor/advanced-gambeson-armor",
+    "type": "armor",
+    "name": "Advanced Gambeson Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 9,
+      "severe": 23
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Flexible",
+      "text": "+1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/advanced-brigandine-armor",
+    "type": "armor",
+    "name": "Advanced Brigandine Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 26
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Lined",
+      "text": "Mark a {{term:stress|Stress}} to negate {{term:damage-thresholds|Minor damage}}."
+    }
+  },
+  {
+    "id": "srd/armor/advanced-leather-armor",
+    "type": "armor",
+    "name": "Advanced Leather Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": null
+  },
+  {
+    "id": "srd/armor/advanced-scale-mail-armor",
+    "type": "armor",
+    "name": "Advanced Scale Mail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 30
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/armor/advanced-chainmail-armor",
+    "type": "armor",
+    "name": "Advanced Chainmail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 31
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/advanced-banded-armor",
+    "type": "armor",
+    "name": "Advanced Banded Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 34
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Bulky",
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/advanced-full-plate-armor",
+    "type": "armor",
+    "name": "Advanced Full Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 35
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Very Heavy",
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+    }
+  },
+  {
+    "id": "srd/armor/granminsters-finery",
+    "type": "armor",
+    "name": "Granminster’s Finery",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 2,
+    "feature": {
+      "name": "Magnificent",
+      "text": "Gain a bonus to your {{term:armor-score|Armor Score}} equal to your {{term:presence|Presence}}."
+    }
+  },
+  {
+    "id": "srd/armor/spiked-plate-armor",
+    "type": "armor",
+    "name": "Spiked Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 10,
+      "severe": 25
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Sharp",
+      "text": "On a successful attack against a target within {{term:melee|Melee range}}, add a d4 to the damage roll."
+    }
+  },
+  {
+    "id": "srd/armor/astral-raiment",
+    "type": "armor",
+    "name": "Astral Raiment",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Stellar",
+      "text": "Mark a {{term:stress|Stress}} to gain {{term:advantage|advantage}} on a Spellcast roll."
+    }
+  },
+  {
+    "id": "srd/armor/bellamoi-fine-armor",
+    "type": "armor",
+    "name": "Bellamoi Fine Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Gilded",
+      "text": "+1 to {{term:presence|Presence}}"
+    }
+  },
+  {
+    "id": "srd/armor/cloverweave-cloak",
+    "type": "armor",
+    "name": "Cloverweave Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Fortune-Favored",
+      "text": "Once per scene, you can change a failure with {{term:hope|Hope}} into a success with {{term:fear|Fear}}."
+    }
+  },
+  {
+    "id": "srd/armor/dragonscale-armor",
+    "type": "armor",
+    "name": "Dragonscale Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Impenetrable",
+      "text": "Once per {{term:short-rest|short rest}}, when you would mark your last {{term:hit-points|Hit Point}}, you can instead mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/skywardens-lamellar",
+    "type": "armor",
+    "name": "Skywarden’s Lamellar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 27
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Vigilant",
+      "text": "+2 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/bloodstone-plate-armor",
+    "type": "armor",
+    "name": "Bloodstone Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 35
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Bloodthirsty",
+      "text": "When you critically succeed on a weapon attack within {{term:melee|Melee range}}, clear a {{term:hit-points|Hit Point}}."
+    }
+  },
+  {
+    "id": "srd/armor/deep-forged-coral-armor",
+    "type": "armor",
+    "name": "Deep-Forged Coral Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 35
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Aquatic",
+      "text": "You can breathe underwater and gain {{term:advantage|advantage}} on {{term:agility|Agility}} Rolls while submerged."
+    }
+  },
+  {
+    "id": "srd/armor/bladefare-armor",
+    "type": "armor",
+    "name": "Bladefare Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 16,
+      "severe": 39
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Physical",
+      "text": "You can’t mark an {{term:armor-slot|Armor Slot}} to reduce magic damage."
+    }
+  },
+  {
+    "id": "srd/armor/monetts-cloak",
+    "type": "armor",
+    "name": "Monett’s Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 16,
+      "severe": 39
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Magic",
+      "text": "You can’t mark an {{term:armor-slot|Armor Slot}} to reduce physical damage."
+    }
+  },
+  {
+    "id": "srd/armor/runes-of-fortification",
+    "type": "armor",
+    "name": "Runes of Fortification",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 73
+    },
+    "tier": 3,
+    "baseThresholds": {
+      "major": 17,
+      "severe": 43
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Painful",
+      "text": "Each time you mark an {{term:armor-slot|Armor Slot}}, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/legendary-mage-robes",
+    "type": "armor",
+    "name": "Legendary Mage Robes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 10,
+      "severe": 31
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Enchanted",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your {{term:spellcast-trait|Spellcast trait}}."
+    }
+  },
+  {
+    "id": "srd/armor/legendary-gambeson-armor",
+    "type": "armor",
+    "name": "Legendary Gambeson Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 11,
+      "severe": 32
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Flexible",
+      "text": "+1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/legendary-brigandine-armor",
+    "type": "armor",
+    "name": "Legendary Brigandine Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 35
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Lined",
+      "text": "Mark a {{term:stress|Stress}} to negate {{term:damage-thresholds|Minor damage}}."
+    }
+  },
+  {
+    "id": "srd/armor/legendary-leather-armor",
+    "type": "armor",
+    "name": "Legendary Leather Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 6,
+    "feature": null
+  },
+  {
+    "id": "srd/armor/legendary-scale-mail-armor",
+    "type": "armor",
+    "name": "Legendary Scale Mail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 39
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/armor/legendary-chainmail-armor",
+    "type": "armor",
+    "name": "Legendary Chainmail Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 40
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/armor/legendary-banded-armor",
+    "type": "armor",
+    "name": "Legendary Banded Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 17,
+      "severe": 43
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Bulky",
+      "text": "−1 to {{term:evasion|Evasion}}; when you take {{term:damage-thresholds|Severe damage}}, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/legendary-full-plate-armor",
+    "type": "armor",
+    "name": "Legendary Full Plate Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 17,
+      "severe": 44
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Very Heavy",
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}"
+    }
+  },
+  {
+    "id": "srd/armor/full-fortified-armor",
+    "type": "armor",
+    "name": "Full Fortified Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 40
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Fortified",
+      "text": "When you mark an {{term:armor-slot|Armor Slot}}, you reduce the severity of an attack by two thresholds instead of one."
+    }
+  },
+  {
+    "id": "srd/armor/channeling-armor",
+    "type": "armor",
+    "name": "Channeling Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Channeling",
+      "text": "+1 to {{term:spellcast-roll|Spellcast Rolls}}"
+    }
+  },
+  {
+    "id": "srd/armor/darkweave-shroud",
+    "type": "armor",
+    "name": "Darkweave Shroud",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Ghostwalker",
+      "text": "Once per rest, mark a {{term:stress|Stress}} to move up to {{term:close|Close range}} through solid objects."
+    }
+  },
+  {
+    "id": "srd/armor/emberwoven-armor",
+    "type": "armor",
+    "name": "Emberwoven Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Burning",
+      "text": "When an adversary attacks you within {{term:melee|Melee range}}, they mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/godbound-laminar",
+    "type": "armor",
+    "name": "Godbound Laminar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Divine",
+      "text": "When you mark an {{term:armor-slot|Armor Slot}}, gain a {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd/armor/veritas-opal-armor",
+    "type": "armor",
+    "name": "Veritas Opal Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Truthseeking",
+      "text": "This armor glows when another creature within {{term:close|Close range}} tells a lie."
+    }
+  },
+  {
+    "id": "srd/armor/circle-forged-dreadplate",
+    "type": "armor",
+    "name": "Circle-Forged Dreadplate",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 14,
+      "severe": 38
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Accursed",
+      "text": "When you mark any number of {{term:hit-points|Hit Points}} from an attack, roll a d4. On a result of 4, the attacker must mark an equal number of {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/armor/rune-forged-exosuit",
+    "type": "armor",
+    "name": "Rune-Forged Exosuit",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 12,
+      "severe": 39
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Attuned",
+      "text": "The maximum number of {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} is reduced by one, but you gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your {{term:tier|tier}}."
+    }
+  },
+  {
+    "id": "srd/armor/dunamis-silkchain",
+    "type": "armor",
+    "name": "Dunamis Silkchain",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 36
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Timeslowing",
+      "text": "Mark an {{term:armor-slot|Armor Slot}} to roll a d4 and add its result as a bonus to your {{term:evasion|Evasion}} against an incoming attack."
+    }
+  },
+  {
+    "id": "srd/armor/hallowed-heroplate",
+    "type": "armor",
+    "name": "Hallowed Heroplate",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 13,
+      "severe": 35
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Blessed",
+      "text": "Once per {{term:long-rest|long rest}}, you can spend any number of {{term:hope|Hope}} before you make the Risk It All {{term:death-move|death move}}. You gain a bonus to the result of your {{term:duality-dice|Hope Die}} equal to the number of {{term:hope|Hope}} spent."
+    }
+  },
+  {
+    "id": "srd/armor/resonant-harness",
+    "type": "armor",
+    "name": "Resonant Harness",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 15,
+      "severe": 40
+    },
+    "baseScore": 7,
+    "feature": {
+      "name": "Vitreous",
+      "text": "When you would take Severe or greater damage, you can mark 2 {{term:armor-slot|Armor Slots}} to negate that damage. If you do, you gain a −5 penalty to your {{term:damage-thresholds|damage thresholds}} until you choose to repair your armor as a {{term:downtime|downtime move}}."
+    }
+  },
+  {
+    "id": "srd/armor/savior-chainmail",
+    "type": "armor",
+    "name": "Savior Chainmail",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 74
+    },
+    "tier": 4,
+    "baseThresholds": {
+      "major": 18,
+      "severe": 48
+    },
+    "baseScore": 8,
+    "feature": {
+      "name": "Difficult",
+      "text": "−1 to all character traits and {{term:evasion|Evasion}}"
+    }
+  }
+]

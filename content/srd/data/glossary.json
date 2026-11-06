@@ -1,0 +1,926 @@
+[
+  {
+    "id": "srd/glossary/hope",
+    "type": "glossary",
+    "name": "Hope",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "aliases": [
+      "Hope"
+    ],
+    "summary": "Every PC starts with 2 Hope at character creation and gains more throughout play.",
+    "sectionId": "srd/rules/hope-and-fear"
+  },
+  {
+    "id": "srd/glossary/fear",
+    "type": "glossary",
+    "name": "Fear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "aliases": [
+      "Fear"
+    ],
+    "summary": "The GM gains Fear whenever a player rolls with Fear and can spend Fear at any time to make or enhance a GM move or to use a Fear Feature.",
+    "sectionId": "srd/rules/hope-and-fear"
+  },
+  {
+    "id": "srd/glossary/duality-dice",
+    "type": "glossary",
+    "name": "Duality Dice",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "aliases": [
+      "Duality Dice",
+      "Hope Die",
+      "Fear Die"
+    ],
+    "summary": "All action rolls require a pair of d12s called **Duality Dice.**",
+    "sectionId": "srd/rules/overview"
+  },
+  {
+    "id": "srd/glossary/action-roll",
+    "type": "glossary",
+    "name": "Action Roll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "aliases": [
+      "Action Rolls",
+      "Action Roll",
+      "action rolls",
+      "action roll"
+    ],
+    "summary": "Any move where success would be trivial or failure would be boring automatically succeeds, but any move that’s difficult to accomplish or risky to attempt triggers an **action roll.**",
+    "sectionId": "srd/rules/action-rolls"
+  },
+  {
+    "id": "srd/glossary/reaction-roll",
+    "type": "glossary",
+    "name": "Reaction Roll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "aliases": [
+      "Reaction Rolls",
+      "Reaction Roll",
+      "reaction rolls",
+      "reaction roll"
+    ],
+    "summary": "A **reaction roll** is made in response to an attack or a hazard, representing a character’s attempt to avoid or withstand an imminent effect.",
+    "sectionId": "srd/rules/special-rolls"
+  },
+  {
+    "id": "srd/glossary/spellcast-roll",
+    "type": "glossary",
+    "name": "Spellcast Roll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "aliases": [
+      "Spellcast Rolls",
+      "Spellcast Roll"
+    ],
+    "summary": "**Spellcast Rolls** are trait rolls that require you to use your Spellcast trait.",
+    "sectionId": "srd/rules/special-rolls"
+  },
+  {
+    "id": "srd/glossary/group-action-roll",
+    "type": "glossary",
+    "name": "Group Action Roll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "aliases": [
+      "Group Action Rolls",
+      "Group Action Roll",
+      "Group Action"
+    ],
+    "summary": "When multiple PCs take action together, the party chooses one PC to **lead the action.**",
+    "sectionId": "srd/rules/special-rolls"
+  },
+  {
+    "id": "srd/glossary/tag-team-roll",
+    "type": "glossary",
+    "name": "Tag Team Roll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "aliases": [
+      "Tag Team Rolls",
+      "Tag Team Roll"
+    ],
+    "summary": "Each player can, once per session, initiate a **Tag Team Roll** between their character and another PC by spending 3 Hope.",
+    "sectionId": "srd/rules/special-rolls"
+  },
+  {
+    "id": "srd/glossary/advantage",
+    "type": "glossary",
+    "name": "Advantage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "aliases": [
+      "advantage",
+      "Advantage"
+    ],
+    "summary": "**Advantage** represents an opportunity that you seize to increase your chances of success.",
+    "sectionId": "srd/rules/advantage-and-disadvantage"
+  },
+  {
+    "id": "srd/glossary/disadvantage",
+    "type": "glossary",
+    "name": "Disadvantage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "aliases": [
+      "disadvantage",
+      "Disadvantage"
+    ],
+    "summary": "**Disadvantage** represents an additional difficulty, hardship, or challenge you face when attempting an action.",
+    "sectionId": "srd/rules/advantage-and-disadvantage"
+  },
+  {
+    "id": "srd/glossary/critical-success",
+    "type": "glossary",
+    "name": "Critical Success",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "aliases": [
+      "Critical Success",
+      "critical success",
+      "critically succeeds"
+    ],
+    "summary": "**Critical Success:** If the Duality Dice show matching results, you rolled a “Critical Success” (“Crit”).",
+    "sectionId": "srd/rules/overview"
+  },
+  {
+    "id": "srd/glossary/difficulty",
+    "type": "glossary",
+    "name": "Difficulty",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "aliases": [
+      "Difficulty"
+    ],
+    "summary": "To make an action roll, you roll the Duality Dice, sum the results, apply any relevant modifiers, and compare the total to a Difficulty number to determine the outcome:",
+    "sectionId": "srd/rules/overview"
+  },
+  {
+    "id": "srd/glossary/help-an-ally",
+    "type": "glossary",
+    "name": "Help an Ally",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "aliases": [
+      "Help an Ally"
+    ],
+    "summary": "When a player uses Help an Ally, they roll their own advantage die and apply it to an ally’s action roll.",
+    "sectionId": "srd/rules/advantage-and-disadvantage"
+  },
+  {
+    "id": "srd/glossary/evasion",
+    "type": "glossary",
+    "name": "Evasion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "Evasion"
+    ],
+    "summary": "**Evasion** represents a character’s ability to avoid attacks and other unwanted effects.",
+    "sectionId": "srd/rules/evasion"
+  },
+  {
+    "id": "srd/glossary/hit-points",
+    "type": "glossary",
+    "name": "Hit Points",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "Hit Points",
+      "Hit Point",
+      "HP"
+    ],
+    "summary": "**Hit Points (HP)** represent a character’s ability to withstand physical injury.",
+    "sectionId": "srd/rules/hit-points-and-damage-thresholds"
+  },
+  {
+    "id": "srd/glossary/damage-thresholds",
+    "type": "glossary",
+    "name": "Damage Thresholds",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "damage thresholds",
+      "damage threshold",
+      "Damage Thresholds",
+      "Major threshold",
+      "Severe threshold",
+      "Major damage",
+      "Severe damage",
+      "Minor damage",
+      "Massive damage"
+    ],
+    "summary": "When a character takes damage, they mark 1 to 3 HP, based on their **damage thresholds:**",
+    "sectionId": "srd/rules/hit-points-and-damage-thresholds"
+  },
+  {
+    "id": "srd/glossary/stress",
+    "type": "glossary",
+    "name": "Stress",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "Stress"
+    ],
+    "summary": "**Stress** represents how much mental, physical, and emotional strain a character can endure.",
+    "sectionId": "srd/rules/stress"
+  },
+  {
+    "id": "srd/glossary/armor-score",
+    "type": "glossary",
+    "name": "Armor Score",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "aliases": [
+      "Armor Score"
+    ],
+    "summary": "**base armor score** indicates how many Armor Slots it provides its wearer before additional bonuses are added to calculate their total Armor Score.",
+    "sectionId": "srd/rules/armor"
+  },
+  {
+    "id": "srd/glossary/armor-slot",
+    "type": "glossary",
+    "name": "Armor Slot",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "aliases": [
+      "Armor Slots",
+      "Armor Slot"
+    ],
+    "summary": "When you take damage, you can mark one Armor Slot to reduce the severity of the damage by one threshold (Severe to Major, Major to Minor, Minor to nothing).",
+    "sectionId": "srd/rules/armor"
+  },
+  {
+    "id": "srd/glossary/proficiency",
+    "type": "glossary",
+    "name": "Proficiency",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "Proficiency"
+    ],
+    "summary": "number of damage dice you roll is equal to your **Proficiency.**",
+    "sectionId": "srd/rules/attacking"
+  },
+  {
+    "id": "srd/glossary/experience",
+    "type": "glossary",
+    "name": "Experience",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 5
+    },
+    "aliases": [
+      "Experiences",
+      "Experience"
+    ],
+    "summary": "An Experience is a word or phrase used to encapsulate a specific set of skills, personality traits, or aptitudes your character has acquired over the course of their life.",
+    "sectionId": "srd/rules/step-7"
+  },
+  {
+    "id": "srd/glossary/agility",
+    "type": "glossary",
+    "name": "Agility",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Agility"
+    ],
+    "summary": "**Agility** (Use it to Sprint, Leap, Maneuver,etc.) A high Agility means you’re fast on your feet, nimble on difficult terrain, and quick to react to danger.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/strength",
+    "type": "glossary",
+    "name": "Strength",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Strength"
+    ],
+    "summary": "**Strength** (Use it to Lift, Smash, Grapple, etc.) A high Strength means you’re better at feats that test your physical prowess and stamina.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/finesse",
+    "type": "glossary",
+    "name": "Finesse",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Finesse"
+    ],
+    "summary": "**Finesse** (Use it to Control, Hide, Tinker, etc.) A high Finesse means you’re skilled at tasks that require accuracy, stealth, or the utmost control.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/instinct",
+    "type": "glossary",
+    "name": "Instinct",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Instinct"
+    ],
+    "summary": "**Instinct** (Use it to Perceive, Sense, Navigate, etc.) A high Instinct means you have a keen sense of your surroundings and a natural intuition.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/presence",
+    "type": "glossary",
+    "name": "Presence",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Presence"
+    ],
+    "summary": "**Presence** (Use it to Charm, Perform, Deceive, etc.) A high Presence means you have a strong force of personality and a facility for social situations.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/knowledge",
+    "type": "glossary",
+    "name": "Knowledge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "aliases": [
+      "Knowledge"
+    ],
+    "summary": "**Knowledge** (Use it to Recall, Analyze, Comprehend, etc.) A high Knowledge means you know information others don’t and understand how to apply your mind through deduction and inference.",
+    "sectionId": "srd/rules/step-3"
+  },
+  {
+    "id": "srd/glossary/spellcast-trait",
+    "type": "glossary",
+    "name": "Spellcast Trait",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 9
+    },
+    "aliases": [
+      "Spellcast trait",
+      "Spellcast Trait"
+    ],
+    "summary": "Spellcast Trait: This is the trait used on all Spellcast rolls.",
+    "sectionId": "srd/rules/subclasses"
+  },
+  {
+    "id": "srd/glossary/domain-card",
+    "type": "glossary",
+    "name": "Domain Card",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "aliases": [
+      "domain cards",
+      "domain card"
+    ],
+    "summary": "Each domain card provides one or more features your PC can utilize during their adventures.",
+    "sectionId": "srd/rules/domain-cards"
+  },
+  {
+    "id": "srd/glossary/loadout",
+    "type": "glossary",
+    "name": "Loadout",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "aliases": [
+      "loadout"
+    ],
+    "summary": "Your **loadout** is the set of acquired cards whose effects your PC can use during play.",
+    "sectionId": "srd/rules/domain-cards"
+  },
+  {
+    "id": "srd/glossary/vault",
+    "type": "glossary",
+    "name": "Vault",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "aliases": [
+      "vault"
+    ],
+    "summary": "Vault cards are inactive and do not influence play",
+    "sectionId": "srd/rules/domain-cards"
+  },
+  {
+    "id": "srd/glossary/recall-cost",
+    "type": "glossary",
+    "name": "Recall Cost",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "aliases": [
+      "Recall Cost"
+    ],
+    "summary": "**Recall Cost** The number and lightning bolt in the top right of the card shows its Recall Cost.",
+    "sectionId": "srd/rules/domain-cards"
+  },
+  {
+    "id": "srd/glossary/melee",
+    "type": "glossary",
+    "name": "Melee",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "aliases": [
+      "Melee range"
+    ],
+    "summary": "Close enough to touch, up to a few feet away.",
+    "sectionId": "srd/rules/maps-range-and-movement"
+  },
+  {
+    "id": "srd/glossary/very-close",
+    "type": "glossary",
+    "name": "Very Close",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "aliases": [
+      "Very Close range"
+    ],
+    "summary": "Close enough to see fine details, about 5–10 feet away.",
+    "sectionId": "srd/rules/maps-range-and-movement"
+  },
+  {
+    "id": "srd/glossary/close",
+    "type": "glossary",
+    "name": "Close",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "aliases": [
+      "Close range"
+    ],
+    "summary": "Close enough to see prominent details, about 10–30 feet away.",
+    "sectionId": "srd/rules/maps-range-and-movement"
+  },
+  {
+    "id": "srd/glossary/far",
+    "type": "glossary",
+    "name": "Far",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "aliases": [
+      "Far range"
+    ],
+    "summary": "Close enough to see very little detail, about 30–100 feet away.",
+    "sectionId": "srd/rules/maps-range-and-movement"
+  },
+  {
+    "id": "srd/glossary/very-far",
+    "type": "glossary",
+    "name": "Very Far",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "aliases": [
+      "Very Far range"
+    ],
+    "summary": "Too far to make out any details, about 100–300 feet away.",
+    "sectionId": "srd/rules/maps-range-and-movement"
+  },
+  {
+    "id": "srd/glossary/temporary",
+    "type": "glossary",
+    "name": "Temporary",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "temporarily",
+      "temporary"
+    ],
+    "summary": "The **temporary** tag denotes a condition or effect that the affected creature can clear by making a move against it.",
+    "sectionId": "srd/rules/temporary-tags-and-special-conditions"
+  },
+  {
+    "id": "srd/glossary/short-rest",
+    "type": "glossary",
+    "name": "Short Rest",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "short rests",
+      "short rest"
+    ],
+    "summary": "lasts enough time for the party to catch its breath, about an hour in-world.",
+    "sectionId": "srd/rules/downtime"
+  },
+  {
+    "id": "srd/glossary/long-rest",
+    "type": "glossary",
+    "name": "Long Rest",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "long rests",
+      "long rest"
+    ],
+    "summary": "make camp and relax or sleep for several in-game hours.",
+    "sectionId": "srd/rules/downtime"
+  },
+  {
+    "id": "srd/glossary/downtime",
+    "type": "glossary",
+    "name": "Downtime",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "downtime moves",
+      "downtime move",
+      "downtime"
+    ],
+    "summary": "During a rest, each PC can make up to two downtime moves.",
+    "sectionId": "srd/rules/downtime"
+  },
+  {
+    "id": "srd/glossary/countdown",
+    "type": "glossary",
+    "name": "Countdown",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "aliases": [
+      "countdowns",
+      "countdown"
+    ],
+    "summary": "A countdown begins at a starting value.",
+    "sectionId": "srd/rules/countdowns"
+  },
+  {
+    "id": "srd/glossary/spotlight",
+    "type": "glossary",
+    "name": "Spotlight",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "aliases": [
+      "spotlight"
+    ],
+    "summary": "The **spotlight** is a symbol that represents the table’s attention—and therefore the immediate focus of both the narrative and the game mechanics.",
+    "sectionId": "srd/rules/the-spotlight"
+  },
+  {
+    "id": "srd/glossary/tier",
+    "type": "glossary",
+    "name": "Tier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "aliases": [
+      "tier"
+    ],
+    "summary": "Your tier affects your damage thresholds, tier achievements, and access to advancements.",
+    "sectionId": "srd/rules/leveling-up"
+  },
+  {
+    "id": "srd/glossary/multiclass",
+    "type": "glossary",
+    "name": "Multiclass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 54
+    },
+    "aliases": [
+      "multiclassing",
+      "multiclassed",
+      "multiclass"
+    ],
+    "summary": "Starting at level 5, you can choose multiclassing as an option when leveling up.",
+    "sectionId": "srd/rules/multiclassing"
+  },
+  {
+    "id": "srd/glossary/direct-damage",
+    "type": "glossary",
+    "name": "Direct Damage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "direct damage",
+      "Direct damage"
+    ],
+    "summary": "**Direct damage** is damage that can’t be reduced by marking Armor Slots.",
+    "sectionId": "srd/rules/attacking"
+  },
+  {
+    "id": "srd/glossary/resistance",
+    "type": "glossary",
+    "name": "Resistance",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "resistance"
+    ],
+    "summary": "If a target has **resistance** to a damage type, then they reduce incoming damage of that type by half before comparing it to their Hit Point Thresholds.",
+    "sectionId": "srd/rules/attacking"
+  },
+  {
+    "id": "srd/glossary/immunity",
+    "type": "glossary",
+    "name": "Immunity",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "aliases": [
+      "immune",
+      "immunity"
+    ],
+    "summary": "If a target has **immunity** to a damage type, they ignore incoming damage of that type.",
+    "sectionId": "srd/rules/attacking"
+  },
+  {
+    "id": "srd/glossary/death-move",
+    "type": "glossary",
+    "name": "Death Move",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "aliases": [
+      "death moves",
+      "death move"
+    ],
+    "summary": "When a PC marks their last Hit Point, they must make a **death** **move** by choosing one of the following options:",
+    "sectionId": "srd/rules/death"
+  },
+  {
+    "id": "srd/glossary/scar",
+    "type": "glossary",
+    "name": "Scar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "aliases": [
+      "scars",
+      "scar"
+    ],
+    "summary": "If its value is equal to or less than your character’s level, they gain a scar: permanently cross out a Hope slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored.",
+    "sectionId": "srd/rules/death"
+  },
+  {
+    "id": "srd/glossary/burden",
+    "type": "glossary",
+    "name": "Burden",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 55
+    },
+    "aliases": [
+      "burden"
+    ],
+    "summary": "All weapons have a tier, trait, range, damage die, damage type, and burden.",
+    "sectionId": "srd/rules/weapons"
+  },
+  {
+    "id": "srd/glossary/incoming-damage",
+    "type": "glossary",
+    "name": "Incoming Damage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "aliases": [
+      "incoming damage",
+      "Incoming damage"
+    ],
+    "summary": "Incoming damage means the total damage from a single attack or source, before Armor Slots are marked.",
+    "sectionId": "srd/rules/additional-rules"
+  },
+  {
+    "id": "srd/glossary/hidden",
+    "type": "glossary",
+    "name": "Hidden",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "Hidden"
+    ],
+    "summary": "While you’re out of sight from all enemies and they don’t otherwise know your location, you gain the _Hidden_ condition.",
+    "sectionId": "srd/condition/hidden"
+  },
+  {
+    "id": "srd/glossary/restrained",
+    "type": "glossary",
+    "name": "Restrained",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "Restrained",
+      "Restrain"
+    ],
+    "summary": "_Restrained_ characters can’t move, but you can still take actions from their current position.",
+    "sectionId": "srd/condition/restrained"
+  },
+  {
+    "id": "srd/glossary/vulnerable",
+    "type": "glossary",
+    "name": "Vulnerable",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "aliases": [
+      "Vulnerable"
+    ],
+    "summary": "When a creature is _Vulnerable,_ all rolls targeting them have advantage.",
+    "sectionId": "srd/condition/vulnerable"
+  }
+]

@@ -1,6 +1,6 @@
 // Domain cards (SRD appendix, pp. 206–224).
 import type { EntryOf } from "../../content/schema/index.ts";
-import { type Block, type Line, blocks, features, md, pages, plain, slug, titleCase } from "./lines.ts";
+import { type Block, type Line, blocks, dropLines, features, md, pages, plain, slug, titleCase } from "./lines.ts";
 import { src, PACK } from "./common.ts";
 
 type Para = Extract<Block, { kind: "para" }>;
@@ -27,8 +27,7 @@ export function parseDomainCards(lines: Line[]): EntryOf<"domain-card">[] {
     const rm = headLines[1]?.match(/^Recall Cost: (\d+)$/);
     if (!lm || !rm) throw new Error(`card ${name}: bad header ${headLines.slice(0, 2).join(" / ")}`);
     if (lm[2].toUpperCase() !== domain) throw new Error(`card ${name}: domain ${lm[2]} under ${domain}`);
-    let n = 0;
-    const body = paras.filter((p) => (n += p.lines.length) > 2);
+    const body = dropLines(paras, 2);
     const cardType = lm[3].toLowerCase() as "ability" | "spell" | "grimoire";
     const domainId = `${PACK}/domain/${slug(domain)}`;
     out.push({

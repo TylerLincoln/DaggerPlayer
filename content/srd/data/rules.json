@@ -1,0 +1,1831 @@
+[
+  {
+    "id": "srd/rules/introduction",
+    "type": "rules",
+    "name": "Introduction",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": null,
+    "order": 0,
+    "text": "**Welcome to DAGGERHEART,** _a collaborative fantasy tabletop roleplaying game of incredible_ _magic and heroic, heartfelt adventure._"
+  },
+  {
+    "id": "srd/rules/what-is-this",
+    "type": "rules",
+    "name": "What Is This?",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": "srd/rules/introduction",
+    "order": 1,
+    "text": "This is the Daggerheart SRD (System Reference Document). It is a repository of the mechanical elements of the Daggerheart system, edited and organized for clarity, conciseness, and quick reference.\n\nYou can use this SRD in several ways:\n\n- To quickly look up Daggerheart’s rules-as-written during gameplay sessions.\n- To ensure any homebrew content you create or publish conforms with Daggerheart’s core ruleset.\n- To provide copy text made available by Darrington Press for your own publications under their Community Gaming License (www.darringtonpress.com/license).\n- To better understand the mechanics of Daggerheart, absent the flavor and setting information, so you can bend or break them in the process of making your own content.\n\nThe Daggerheart SRD is not a replacement for the core rulebook, which contains setting information, additional examples of various gameplay elements, and tons of great advice for playing Daggerheart—not to mention gorgeous artwork and layout.\n\nIn short, it is Daggerheart, the system, boiled down to the bones—a lean and clean offering without all the flavor, style, and supporting material that makes the core rulebook such an evocative and enjoyable read. We hope this document proves useful to your table. Happy adventuring!"
+  },
+  {
+    "id": "srd/rules/the-basics",
+    "type": "rules",
+    "name": "The Basics",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": "srd/rules/introduction",
+    "order": 2,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/what-is-daggerheart",
+    "type": "rules",
+    "name": "What Is Daggerheart?",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": "srd/rules/the-basics",
+    "order": 3,
+    "text": "Daggerheart is a tabletop roleplaying game for one Game Master (“GM”) and 2–5 players. Each game session lasts about 2–4 hours, and Daggerheart can be played as a one-shot or a multi-session campaign of any length.\n\nDuring a session of Daggerheart the GM describes situations, narrates events, and controls any adversaries or obstacles that the Player Characters (“PCs”) encounter. The players, in turn, roleplay their PCs’ reactions to the scenario presented by the GM. If the outcome of a player’s action depends on fate or fortune, the GM calls for an {{term:action-roll|action roll}}.\n\nWhen a player makes an {{term:action-roll|action roll}}, they utilize {{term:duality-dice|Duality Dice}}—two differently colored 12-sided dice (“d12s”) representing {{term:hope|Hope}} and {{term:fear|Fear}}. The {{term:duality-dice|Duality Dice}} are rolled, relevant modifiers are added to the results, and the total is compared to a {{term:difficulty|Difficulty}} set by the GM. If the total meets or beats the {{term:difficulty|Difficulty}}, the player succeeds. If it’s lower, they fail. In addition, the situation changes based on which Duality Die rolls higher, either giving the player helpful {{term:hope|Hope}} tokens or generating terrifying {{term:fear|Fear}} tokens for the GM."
+  },
+  {
+    "id": "srd/rules/the-golden-rule",
+    "type": "rules",
+    "name": "The Golden Rule",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": "srd/rules/the-basics",
+    "order": 4,
+    "text": "The most important rule of Daggerheart is to make the game your own. The rules included in this SRD are designed to help you enjoy the experience at the table, but everyone has a different approach to interpreting rules and telling stories. The rules should never get in the way of the story you want to tell, the characters you want to play, or the adventures you want to have. As long as your group agrees, everything can be adjusted to fit your play style. If there’s a rule you’d rather ignore or modify, feel free to implement any change with your table’s consent."
+  },
+  {
+    "id": "srd/rules/rulings-over-rules",
+    "type": "rules",
+    "name": "Rulings Over Rules",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 3
+    },
+    "parentId": "srd/rules/the-basics",
+    "order": 5,
+    "text": "While playing Daggerheart, the GM and players should always prioritize rulings over rules. This SRD offers answers for many questions your table may have about the game, but it won’t answer all of them. When you’re in doubt about how a rule applies, the GM should make a ruling that aligns with the narrative.\n\nFor example, Daggerheart has a weapon called a grappler that lets you pull a target close to you. If you try to use it to pull an entire castle, the weapon text doesn’t forbid you from doing that—but it doesn’t make sense within the narrative. Instead, the GM might rule that you pull a few bricks out, or pull yourself toward the wall instead.\n\nSimilarly, if your character does something that would logically result in immediate death—such as diving into an active volcano without protection—you might not get to make one of Daggerheart’s {{term:death-move|death moves}}, which normally give you control of your character’s fate in their final moments. This kind of consequence should be made clear before the action is completed, and it should always follow the logic of the world.\n\nAs a narrative-focused game, Daggerheart is not a place where technical, out-of-context interpretations of the rules are encouraged. Everything should flow back to the fiction, and the GM has the authority and responsibility to make rulings about how rules are applied to underscore that fiction."
+  },
+  {
+    "id": "srd/rules/character-creation",
+    "type": "rules",
+    "name": "Character Creation",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "parentId": null,
+    "order": 6,
+    "text": "Unless their table chooses to use pre-generated characters, each player creates their own PC by making a series of guided choices. Some of these decisions are purely narrative, meaning they only appear in or affect the game through roleplaying, but others are mechanical choices that affect the things their PC is able to do and which actions they’re more (or less) likely to succeed at when making moves and taking action.\n\n**_Note:_** _You can fill in your character’s name, pronouns, and_ _Character Description details at any point of the character_ _creation process._"
+  },
+  {
+    "id": "srd/rules/step-1",
+    "type": "rules",
+    "name": "Step 1",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 7,
+    "text": "**Choose a Class and Subclass.** **Classes** are role-based archetypes that determine which class features and **{{term:domain-card|domain cards}}** a PC gains access to throughout the campaign. There are 13 classes in this SRD: Assassin, Bard, Brawler, Druid, Guardian, Ranger, Rogue, Seraph, Sorcerer, Warlock, Warrior, Witch, and Wizard.\n\n- Select a class and take its corresponding **character sheet** and **character guide** printouts. These sheets are for recording your PC’s details; you’ll update and reference them throughout the campaign.\n- Every class begins with one or more unique **class** **feature(s),** described at the bottom left of each class’s character sheet. If your class feature prompts you to make a selection, do so now.\n- **Choose a Subclass** **Subclasses** further refine a class archetype and reinforce its expression by granting access to unique **subclass** **features.** Each class comprises two subclasses. Select one of your class’s subclasses and take its **Foundation** card."
+  },
+  {
+    "id": "srd/rules/step-2",
+    "type": "rules",
+    "name": "Step 2",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 8,
+    "text": "**Choose Your Heritage.** Your character’s **heritage** combines two elements: **ancestry** and **community.**\n\n- A character’s **ancestry** reflects their lineage, impacting their physicality and granting them two unique **ancestry** **features.** Take the card for one of the following ancestries, then write its name in the Heritage field of your character sheet: Aetheris, Clank, Drakona, Dwarf, Earthkin, Elf, Emberkin, Faerie, Faun, Firbolg, Fungril, Galapa, Giant, Gnome, Goblin, Halfling, Human, Infernis, Katari, Orc, Ribbet, Simiah, Skykin, Tidekin. To create a Mixed Ancestry, take the top (first-listed) ancestry feature from one ancestry and the bottom (second-listed) ancestry feature from another.\n- Your character’s **community** represents their culture or environment of origin and grants them a **community** **feature.** Take the card for one of the following communities, then write its name in the Heritage field of your character sheet: Duneborne, Freeborne, Frostborne, Hearthborne, Highborne, Loreborne, Orderborne, Reborne, Ridgeborne, Seaborne, Slyborne, Underborne, Warborne, Wanderborne, Wildborne."
+  },
+  {
+    "id": "srd/rules/step-3",
+    "type": "rules",
+    "name": "Step 3",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 9,
+    "text": "**Assign Character Traits.** Your character has six traits that represent their physical, mental, and social aptitude:\n\n- **{{term:agility|Agility}}** (Use it to Sprint, Leap, Maneuver,etc.) A high {{term:agility|Agility}} means you’re fast on your feet, nimble on difficult terrain, and quick to react to danger. You’ll make an {{term:agility|Agility}} Roll to scurry up a rope, sprint to cover, or bound from rooftop to rooftop.\n- **{{term:strength|Strength}}** (Use it to Lift, Smash, Grapple, etc.) A high {{term:strength|Strength}} means you’re better at feats that test your physical prowess and stamina. You’ll make a {{term:strength|Strength}} Roll to break through a door, lift heavy objects, or hold your ground against a charging foe.\n- **{{term:finesse|Finesse}}** (Use it to Control, Hide, Tinker, etc.) A high {{term:finesse|Finesse}} means you’re skilled at tasks that require accuracy, stealth, or the utmost control. You’ll make a {{term:finesse|Finesse}} Roll to use fine tools, escape notice, or strike with precision.\n- **{{term:instinct|Instinct}}** (Use it to Perceive, Sense, Navigate, etc.) A high {{term:instinct|Instinct}} means you have a keen sense of your surroundings and a natural intuition. You’ll make an {{term:instinct|Instinct}} Roll to sense danger, notice details in the world around you, or track an elusive foe.\n- **{{term:presence|Presence}}** (Use it to Charm, Perform, Deceive, etc.) A high {{term:presence|Presence}} means you have a strong force of personality and a facility for social situations. You’ll make a {{term:presence|Presence}} Roll to plead your case, intimidate a foe, or capture the attention of a crowd.\n- **{{term:knowledge|Knowledge}}** (Use it to Recall, Analyze, Comprehend, etc.) A high {{term:knowledge|Knowledge}} means you know information others don’t and understand how to apply your mind through deduction and inference. You’ll make a {{term:knowledge|Knowledge}} Roll to interpret facts, see the patterns clearly, or remember important information.\n\nWhen you “roll with a trait,” that trait’s modifier is added to the roll’s total. Assign the modifiers +2, +1, +1, +0, +0, −1 to your character’s traits in any order you wish."
+  },
+  {
+    "id": "srd/rules/step-4",
+    "type": "rules",
+    "name": "Step 4",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 4,
+      "pageEnd": 5
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 10,
+    "text": "**Record Additional Character Information.**\n\n- Characters start a new campaign at **level 1.** Record your level in the designated space at the top of your character sheet.\n- **{{term:evasion|Evasion}}** represents your character’s ability to avoid damage. Your character’s starting {{term:evasion|Evasion}} is determined by their class and appears directly beneath the {{term:evasion|Evasion}} field on your character sheet; copy this number into the {{term:evasion|Evasion}} field.\n- **{{term:hit-points|Hit Points}} ({{term:hit-points|HP}})** are an abstract measure of your physical health. Your starting {{term:hit-points|HP}} is determined by your class and is recorded on your character sheet.\n- **{{term:stress|Stress}}** reflects your ability to withstand the mental and emotional strain of dangerous situations and physical exertion. Every PC starts with 6 {{term:stress|Stress}} slots.\n- **{{term:hope|Hope}}** is a metacurrency that fuels special moves and certain abilities or features. Each PC starts with 2 {{term:hope|Hope}}; mark these in the {{term:hope|Hope}} field of your character sheet."
+  },
+  {
+    "id": "srd/rules/step-5",
+    "type": "rules",
+    "name": "Step 5",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 5
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 11,
+    "text": "**Choose Your Starting Equipment.**\n\nChoose your **weapon(s):**\n\n- Select from the Tier 1 Weapon Tables either a **two-handed** **primary weapon** or a **one-handed primary weapon and a** **one-handed secondary weapon.**Then equip your selection by recording it in the Active Weapon field of your character sheet.\n- At level 1, your **{{term:proficiency|Proficiency}}** is 1; write this number in the {{term:proficiency|Proficiency}} field on your character sheet, then calculate and record your **damage roll** by combining your {{term:proficiency|Proficiency}} value with your equipped weapon(s) **damage dice.** _Example: If your {{term:proficiency|Proficiency}} is 1 and your weapon’s damage_ _dice is d6+1, your damage roll is 1d6+1. {{term:proficiency|Proficiency}} only_ _determines how many damage dice you roll, and does not_ _affect any flat damage modifiers._\n\nChoose and equip one set of **armor** from the Tier 1 Armor Table, then record its details in the **Active Armor** field of your character sheet.\n\n- Add your character’s level to your equipped armor’s **Base** **Thresholds** and record the total for both numbers in the corresponding fields. At character creation, your level is 1.\n- Record your **{{term:armor-score|Armor Score}}** in the field at the top left of your character sheet. Your {{term:armor-score|Armor Score}} is equal to your equipped armor’s **Base Score** plus any permanent bonuses your character has to their {{term:armor-score|Armor Score}} from other abilities, features, or effects.\n\nAdd the following items to the **Inventory** fields on your character sheet:\n\n- A torch, 50 feet of rope, basic supplies, and a handful of gold (mark one box in the left-hand column of your character sheet titled “Gold > Handfuls”)\n- EITHER a Minor Health Potion (clear 1d4 {{term:hit-points|Hit Points}}) OR a Minor Stamina Potion (clear 1d4 {{term:stress|Stress}})\n- One of the class-specific items listed on your character guide\n- If applicable, whichever class-specific item you selected to carry your spells\n- Any other GM-approved items you’d like to have at the start of the game"
+  },
+  {
+    "id": "srd/rules/step-6",
+    "type": "rules",
+    "name": "Step 6",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 5
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 12,
+    "text": "**Create Your Background.** Develop your character’s **background** by answering the **background questions** in your character guide, modifying or replacing them if they don’t fit the character you want to play.\n\n_Note: Your background has no explicit mechanical effect,_ _but it greatly affects the character you’ll play and the prep_ _the GM will do. Throughout character creation, you can_ _adjust choices you made in earlier steps to better reflect this_ _background as your character takes shape. If you wish, you_ _can leave your character’s past more ambiguous for the time_ _being and discover their backstory through play._"
+  },
+  {
+    "id": "srd/rules/step-7",
+    "type": "rules",
+    "name": "Step 7",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 5
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 13,
+    "text": "**Create Your {{term:experience|Experiences}}.** An {{term:experience|Experience}} is a word or phrase used to encapsulate a specific set of skills, personality traits, or aptitudes your character has acquired over the course of their life. When your PC makes a move, they can spend a {{term:hope|Hope}} to add a relevant {{term:experience|Experience}}’s modifier to an action or {{term:reaction-roll|reaction roll}}.\n\n- Your PC gets two {{term:experience|Experiences}} at character creation, each with a +2 modifier.\n- There’s no set list of {{term:experience|Experiences}} to choose from, but an {{term:experience|Experience}} can’t be too broadly applicable and it can’t grant your character specific mechanical benefits, such as magic spells or special abilities. _For example, “Lucky” and_ _“Highly Skilled” are too broad, because they could be applied_ _to virtually any roll. Likewise, “Supersonic Flight” and_ _“Invulnerable” imply game-breaking special abilities._\n\nEXAMPLE EXPERIENCES\n\n**Backgrounds:** _Assassin, Blacksmith, Bodyguard, Bounty_ _Hunter, Chef to the Royal Family, Circus Performer,_ _Con Artist, Fallen Monarch, Field Medic, High Priestess,_ _Merchant, Noble, Pirate, Politician, Runaway, Scholar,_ _Sellsword, Soldier, Storyteller, Thief, World Traveler_\n\n**Characteristics:** _Affable, Battle-Hardened, Bookworm,_ _Charming, Cowardly, Friend to All, Helpful, Intimidating_ _{{term:presence|Presence}}, Leader, Lone Wolf, Loyal, Observant, Prankster,_ _Silver Tongue, Sticky Fingers, Stubborn to a Fault, Survivor,_ _Young and Naive_\n\n**Specialties:** _Acrobat, Gambler, Healer, Inventor, Magical_ _Historian, Mapmaker, Master of Disguise, Navigator,_ _Sharpshooter, Survivalist, Swashbuckler, Tactician_\n\n**Skills:** _Animal Whisperer, Barter, Deadly Aim, Fast_ _Learner, Incredible {{term:strength|Strength}}, Liar, Light Feet, Negotiator,_ _Photographic Memory, Quick Hands, Repair, Scavenger,_ _Tracker_\n\n**Phrases:** _Catch Me If You Can, Fake It Till You Make It, First_ _Time’s the Charm, Hold the Line, I Won’t Let You Down,_ _I’ll Catch You, I’ve Got Your Back, {{term:knowledge|Knowledge}} Is Power,_ _Nature’s Friend, Never Again, No One Left Behind, Pick on_ _Someone Your Own Size, The Show Must Go On, This Is Not_ _a Negotiation, Wolf in Sheep’s Clothing_"
+  },
+  {
+    "id": "srd/rules/step-8",
+    "type": "rules",
+    "name": "Step 8",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 6
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 14,
+    "text": "**Choose Domain Cards.** Your class has access to two of the ten domains. Choose two level one cards from your class’s domains, which are listed in the upper left of your character sheet. You can take one card from each domain or two from a single domain, whichever you prefer."
+  },
+  {
+    "id": "srd/rules/step-9",
+    "type": "rules",
+    "name": "Step 9",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 6
+    },
+    "parentId": "srd/rules/character-creation",
+    "order": 15,
+    "text": "**Create Your Connections.** Connections are the relationships between the PCs. To create connections, follow these steps:\n\n- Go around the table and have each player describe their characters to one another—at a minimum, their name, pronouns, character description, experiences, and the answers to their background questions.\n- Discuss potential connections between the PCs using the questions included in the “Connections” section of your character guide as inspiration.\n- Suggest at least one connection between your character and each other player’s PC. Accept any suggested connections you want to explore, reject any you don’t.\n\n**_Note:_** _A player can reject a suggested connection for any_ _reason, and it’s okay if there isn’t an established connection_ _between every pair of PCs—you can always discover and_ _develop those relationships through play._"
+  },
+  {
+    "id": "srd/rules/core-materials",
+    "type": "rules",
+    "name": "Core Materials",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 7
+    },
+    "parentId": null,
+    "order": 16,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/domains",
+    "type": "rules",
+    "name": "Domains",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 7
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 17,
+    "text": "There are ten Domains, each comprising a collection of cards granting features or special abilities expressing a particular theme. Please note the Daggerheart Core Set includes only the following nine domains: Arcana, Blade, Bone, Codex, Grace, Midnight, Sage, Splendor, and Valor."
+  },
+  {
+    "id": "srd/rules/class-domains",
+    "type": "rules",
+    "name": "Class Domains",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 18,
+    "text": "Each class grants access to two domains:\n\n- **Assassion:** Blade & Midnight\n- **Bard:** Codex & Grace\n- **Brawler:** Valor & Bone\n- **Druid:** Arcana & Sage\n- **Guardian:** Blade & Valor\n- **Ranger:** Bone & Sage\n- **Rogue:** Grace & Midnight\n- **Seraph:** Splendor & Valor\n- **Sorcerer:** Arcana & Midnight\n- **Warlock:** Dread & Grace\n- **Warrior:** Blade & Bone\n- **Witch:** Dread & Sage\n- **Wizard:** Codex & Splendor\n\nPCs acquire two 1st-level {{term:domain-card|domain cards}} at character creation and an additional {{term:domain-card|domain card}} at or below their level each time they level up."
+  },
+  {
+    "id": "srd/rules/domain-cards",
+    "type": "rules",
+    "name": "Domain Cards",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "parentId": "srd/rules/class-domains",
+    "order": 19,
+    "text": "Each {{term:domain-card|domain card}} provides one or more features your PC can utilize during their adventures. Some {{term:domain-card|domain cards}} provide moves you can make, such as a unique attack or a spell. Others offer passive effects, new {{term:downtime|downtime}} or social encounter abilities, or one-time benefits.\n\n### Domain Card Anatomy\n\nEach {{term:domain-card|domain card}} includes six elements:\n\n**Level** The number in the top left of the card indicates the card’s level. You cannot acquire a {{term:domain-card|domain card}} with a level higher than your PC’s.\n\n**Domain** Beneath the card’s level there is a symbol indicating its domain. You can only choose cards from your class’s two domains.\n\n**{{term:recall-cost|Recall Cost}}** The number and lightning bolt in the top right of the card shows its {{term:recall-cost|Recall Cost}}. This is the amount of {{term:stress|Stress}} a player must mark to swap this card from their **{{term:vault|vault}}** with a card from their **{{term:loadout|loadout}}.**\n\n**_Note:_** _A player can swap {{term:domain-card|domain cards}} during {{term:downtime|downtime}}_ _without paying the {{term:domain-card|domain card}}’s {{term:recall-cost|Recall Cost}}._\n\n**Title** The name of the card.\n\n**Type** The card’s **type** is listed in the center above the title. There are three types of {{term:domain-card|domain cards}}: **abilities, spells,** and **grimoires.** Abilities are typically non-magical in nature, while spells are magical. Grimoires are unique to the Codex domain and grant access to a collection of less potent spells. Some game mechanics only apply to certain types of cards.\n\n**Feature** The text on the bottom half of the card describes its feature(s), including any special rules you need to follow when you use that card.\n\n### Loadout & Vault\n\nYour **{{term:loadout|loadout}}** is the set of acquired cards whose effects your PC can use during play. You can have up to five {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} at one time. Once you’ve acquired six or more {{term:domain-card|domain cards}}, you must choose five to keep in your {{term:loadout|loadout}}; the rest are considered to be in your **{{term:vault|vault}}.** Vault cards are inactive and do not influence play\n\n**_Note:_** _Your subclass, ancestry, and community cards don’t_ _contribute to your {{term:loadout|loadout}} maximum and are always active_ _and available._\n\nAt the start of a rest, before using {{term:downtime|downtime moves}}, you can freely move cards between your {{term:loadout|loadout}} and your {{term:vault|vault}}, so long as your {{term:loadout|loadout}} doesn’t exceed its five-card maximum.\n\nTo move a card from your {{term:vault|vault}} to your {{term:loadout|loadout}} at any other time, you must mark a number of {{term:stress|Stress}} equal to the vaulted card’s **{{term:recall-cost|Recall Cost}}** (located in the top right of the card next to the lightning bolt symbol). If your {{term:loadout|loadout}} is already full, you must also move a card from your {{term:loadout|loadout}} to your {{term:vault|vault}} to make space, though you can do this at no cost.\n\nWhen you gain a new {{term:domain-card|domain card}} at level-up, you can immediately move it into your {{term:loadout|loadout}} for free. If your {{term:loadout|loadout}} is already full, you must also move a card from your {{term:loadout|loadout}} to your {{term:vault|vault}} to make space.\n\n### Usage Limits\n\nIf a {{term:domain-card|domain card}} restricts how often it can be used, you can track such limits with whatever method you prefer, such as turning the card sideways, flipping it facedown, or using tokens.\n\n**_Note:_** _if an effect or ability gives you a number of uses equal_ _to a trait with a modifier of +0 or less, it grants you 0 uses._"
+  },
+  {
+    "id": "srd/rules/classes",
+    "type": "rules",
+    "name": "Classes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 8
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 20,
+    "text": "A **class** is a role-based archetype that determines a PC’s:\n\n- **Access to Domains:** Each class grants access to two domains; players choose cards from these domains during character creation and when leveling up.\n- **Starting {{term:evasion|Evasion}} and {{term:hit-points|Hit Points}} ({{term:hit-points|HP}})**\n- **Starting Items**\n- **Class Feature(s)**\n- **Class {{term:hope|Hope}} Feature,** a class feature that costs 3 {{term:hope|Hope}} to activate.\n\nPlease note that the Daggerheart Core Set includes only the following nine classes: Bard, Druid, Guardian, Ranger, Rogue, Seraph, Sorcerer, Warrior, and Wizard."
+  },
+  {
+    "id": "srd/rules/subclasses",
+    "type": "rules",
+    "name": "Subclasses",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 9
+    },
+    "parentId": "srd/rules/classes",
+    "order": 21,
+    "text": "Each class is divided into two **subclasses,** each of which further defines and highlights one aspect of its class archetype. Your chosen subclass can grant the following:\n\n- {{term:spellcast-trait|Spellcast Trait}}: This is the trait used on all Spellcast rolls.\n- Foundation Feature: This is a unique starting feature that establishes the identity and strengths of the subclass. You gain your chosen subclass's Foundation at character creation.\n- Specialization Feature: This is an advanced feature that can be gained on level up. For some subclasses, the specialization feature grants a new ability; for others, it expands or enhances a feature you already acquired through a class or subclass.\n- Mastery Feature: The mastery feature is a subclass’s most powerful feature, which can be gained at higher levels. For some subclasses, the mastery feature unlocks an extraordinary new ability; for others, it’s the impressive culmination of their subclass’s core feature.\n\nWhen you acquire a Foundation, Specialization, or Mastery, take its card for use as a reference during play."
+  },
+  {
+    "id": "srd/rules/martial-stances",
+    "type": "rules",
+    "name": "Martial Stances",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 13
+    },
+    "parentId": "srd/rules/classes",
+    "order": 22,
+    "text": "When you choose the Martial Artist subclass, take the Martial Stances sheet to track which stances your character knows. You can also track which stance you have active and your current Focus.\n\n### Stances\n\nStances are special body positionings that enable Martial Artists to attack, react, or defend in combat. Each stance grants your character a different ability, bonus, or feature while active.\n\nYou choose two stances from Tier 1 when you first take the Martial Artist’s subclass foundation card. Mark the circle next to each to indicate that your character knows and has access to them. Mark a new stance from your {{term:tier|tier}} or below each time you gain a level.\n\n### Focus\n\nFocus represents your character’s poise, clarity, and control. Once per rest during a moment of calm, you can clear your mind and refocus your martial instincts. Clear your Focus track, then roll a number of **d6s** equal to your {{term:instinct|Instinct}} and gain Focus equal to the highest result rolled. You can hold a maximum of 6 Focus.\n\n### Shifting Into Stances\n\nYou can **spend a Focus** to shift into a martial stance and gain its effects. You can shift only into stances you’ve marked as known. When you shift into a stance, it’s considered your active stance until you drop out of it.\n\nYou can’t shift into or have more than one active stance at a time. Until you shift into a stance, you are not considered to be in a stance or to have an active stance.\n\n### Dropping Out of Stances\n\nIf you are already in a stance when you shift into a different stance, you automatically drop out of the previously active stance. You also drop out of your active stance when you take {{term:damage-thresholds|Severe damage}} or mark your last {{term:hit-points|Hit Point}}. Otherwise, you drop out of your active stance at the end of the scene. When you drop out of a stance, you lose any ongoing benefits it provides.\n\n### Stance Features\n\nThe following section lists all martial stances by {{term:tier|tier}}.\n\nTIER 1\n\n**_Favored:_** Gain a bonus to damage rolls equal to a trait of your choice.\n\n**_Invigorating:_** On a successful attack, roll a **d4**. On a result of 4, gain a Focus.\n\n**_Quick:_** When you make an attack, you can **spend a Focus** or **mark a {{term:stress|Stress}}** to target another creature within range with that attack.\n\n**_Reliable:_** Gain a +1 bonus to your attack rolls.\n\nTIER 2\n\n**_Aggressive:_** Gain a −1 penalty to your {{term:evasion|Evasion}}. On a successful attack, roll an additional damage die and discard the lowest result.\n\n**_Anchored:_** Gain a +2 bonus to your {{term:damage-thresholds|damage thresholds}}. While in this stance, you can’t be moved against your will.\n\n**_Defensive:_** Attack rolls targeting you from within {{term:melee|Melee range}} have {{term:disadvantage|disadvantage}} unless the attacker marks a {{term:stress|Stress}} to negate the {{term:disadvantage|disadvantage}}.\n\n**_Otherworldly:_** On a successful attack, you can deal physical or magic damage.\n\nTIER 3\n\n**_Grappling:_** On a successful attack within {{term:melee|Melee range}}, you can **spend a Focus** or **mark a {{term:stress|Stress}}** to {{term:temporary|temporarily}} _{{term:restrained|Restrain}}_ the target or throw the target up to {{term:close|Close range}}.\n\n**_Scary:_** On a successful attack, the target must mark a {{term:stress|Stress}}.\n\n**_Stable:_** You can **spend a Focus** instead of an {{term:armor-slot|Armor Slot}} to reduce damage.\n\n**_Vigilant:_** When you are targeted by an attack, you can **mark** **a {{term:stress|Stress}}** to gain a **d6** bonus to your {{term:evasion|Evasion}} against the attack.\n\nTIER 4\n\n**_Crushing:_** When you deal {{term:damage-thresholds|Severe damage}}, you can **spend a** **{{term:hope|Hope}}** to force the target to mark an additional {{term:hit-points|Hit Point}}.\n\n**_Exacting:_** When you roll a 1 on a damage die, you can treat it as the highest value on the die instead.\n\n**_Honed:_** **Spend a Focus** before you make an attack roll to gain a +1 bonus to your {{term:proficiency|Proficiency}} for that attack.\n\n**_Isolating:_** Gain {{term:advantage|advantage}} on attack rolls when there are no other creatures within {{term:very-close|Very Close range}} of you or your target."
+  },
+  {
+    "id": "srd/rules/beastform-options",
+    "type": "rules",
+    "name": "Beastform Options",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 15
+    },
+    "parentId": "srd/rules/classes",
+    "order": 23,
+    "text": "When you use your “Beastform” feature, choose a creature category of your {{term:tier|tier}} or lower. At the GM’s discretion, you can describe yourself transforming into any animal that reasonably fits into that category.\n\nBeastform categories are divided by {{term:tier|tier}}. Each entry includes the following details:\n\n- **Creature Category:** Each category’s name describes the common role or behavior of creatures in that category (such as Agile Scout). This name is followed by a few examples of animals that fit in that category (in this example, fox, mouse, and weasel).\n- **Character Trait:** While transformed, you gain a bonus to the listed trait. For example, while transformed into an Agile Scout, you gain a +1 bonus to your {{term:agility|Agility}}. When this form drops, you lose this bonus.\n- **Attack Rolls:** When you make an attack while transformed, you use the creature’s listed range, trait, and damage dice, but you use your {{term:proficiency|Proficiency}}. For example, as an Agile Scout, you can attack a target within {{term:melee|Melee range}} using your {{term:agility|Agility}}. On a success, you deal d4 physical damage using your {{term:proficiency|Proficiency}}.\n- **{{term:evasion|Evasion}}:** While transformed, you add the creature’s {{term:evasion|Evasion}} bonus to your normal {{term:evasion|Evasion}}. For example, if your {{term:evasion|Evasion}} is usually 8 and your Beastform says “{{term:evasion|Evasion}} +2,” your {{term:evasion|Evasion}} becomes 10 while you’re in that form.\n- **Advantages:** Your form makes you especially suited to certain actions. When you make an action or {{term:reaction-roll|reaction roll}} related to one of the verbs listed for that creature category, you gain {{term:advantage|advantage}} on that roll. For example, an Agile Scout gains {{term:advantage|advantage}} on rolls made to sneak around, search for objects or creatures, and related activities.\n- **Features:** Each form includes unique features. For example, an Agile Scout excels at silent, dexterous movement—but they’re also fragile, making you more likely to drop out of Beastform."
+  },
+  {
+    "id": "srd/rules/ranger-companion",
+    "type": "rules",
+    "name": "Ranger Companion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 21
+    },
+    "parentId": "srd/rules/classes",
+    "order": 24,
+    "text": "When you choose the Beastbound Ranger subclass, take a companion sheet. This sheet is for tracking important information about your character’s companion and can be tucked beneath the right side of your character sheet for ease of viewing.\n\nSTEP 1: NAME YOUR COMPANION Work with the GM to decide what kind of animal you have as your companion. Give them a name and add a picture of them to the companion sheet.\n\nSTEP 2: WRITE THEIR EVASION Fill in their {{term:evasion|Evasion}}, which starts at 10.\n\nSTEP 3: CHOOSE THEIR COMPANION EXPERIENCE Create two {{term:experience|Experiences}} for your companion based on their training and the history you have together.\n\nStart with +2 in both {{term:experience|Experiences}}. Whenever you gain a new {{term:experience|Experience}}, your companion also gains one. All new {{term:experience|Experiences}} start at +2.\n\n**Example Companion {{term:experience|Experiences}}**\n\n_Bold Distraction, Expert Climber, Fetch, Friendly, Guardian_ _of the Forest, Horrifying, Intimidating, Loyal Until the_ _End, Navigation, Nimble, Nobody Left Behind, On High_ _Alert, Protective, Royal Companion, Scout, Service Animal,_ _Trusted Mount, Vigilant, We Always Find Them, You Can’t_ _Hit What You Can’t Find_\n\nSTEP 4: CHOOSE THEIR ATTACK AND RECORD DAMAGE DIE Finally, describe your companion’s method of dealing damage (their standard attack) and record it in the “Attack & Damage” section. At level 1, your companion’s damage die is a d6 and their range is Melee. Choose whether they deal physical or magic damage."
+  },
+  {
+    "id": "srd/rules/working-with-your-companion",
+    "type": "rules",
+    "name": "Working with Your Companion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 21,
+      "pageEnd": 22
+    },
+    "parentId": "srd/rules/classes",
+    "order": 25,
+    "text": "The following sections will run you through the basics of working with your companion.\n\nUSING SPELLCAST ROLLS, HOPE, AND EXPERIENCES Make a {{term:spellcast-roll|Spellcast Roll}} to connect with your companion and command them to take action. Spend a {{term:hope|Hope}} to add an applicable Companion {{term:experience|Experience}} to the roll. On a success with {{term:hope|Hope}}, if your next action builds on their success, you gain {{term:advantage|advantage}} on the roll.\n\nATTACKING WITH YOUR COMPANION When you command your companion to attack, they gain any benefits that would normally only apply to you (such as the effects of “Ranger’s Focus”). On a success, their damage roll uses your {{term:proficiency|Proficiency}} and their damage die.\n\nTAKING DAMAGE AS STRESS\n\n- When your companion would take any amount of damage, they mark a {{term:stress|Stress}}. When they mark their last {{term:stress|Stress}}, they drop out of the scene (by hiding, fleeing, or a similar action). They remain unavailable until the start of your next {{term:long-rest|long rest}}, where they return with 1 {{term:stress|Stress}} cleared.\n- When you choose a {{term:downtime|downtime move}} that clears {{term:stress|Stress}} on yourself, your companion clears an equal number of {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/rules/leveling-up-your-companion",
+    "type": "rules",
+    "name": "Leveling Up Your Companion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 22
+    },
+    "parentId": "srd/rules/classes",
+    "order": 26,
+    "text": "When your character levels up, choose one available option for your companion from the following list and mark it on your sheet:\n\n- **_Intelligent:_** Your companion gains a permanent +1 bonus to a Companion {{term:experience|Experience}} of your choice.\n- **_Light in the Dark:_** Use this as an additional {{term:hope|Hope}} slot your character can mark.\n- **_Creature Comfort:_** Once per rest, when you take time during a quiet moment to give your companion love and attention, you can gain a {{term:hope|Hope}} or you can both clear a {{term:stress|Stress}}.\n- **_Armored:_** When your companion takes damage, you can **mark one of your {{term:armor-slot|Armor Slots}}** instead of marking one of their {{term:stress|Stress}}.\n- **_Vicious:_** Increase your companion’s damage dice or range by one step (d6 to d8, Close to Far, etc.).\n- **_Resilient:_** Your companion gains an additional {{term:stress|Stress}} slot.\n- **_Bonded:_** When you mark your last {{term:hit-points|Hit Point}}, your companion rushes to your side to comfort you. Roll a number of **d6s** equal to the unmarked {{term:stress|Stress}} slots they have and mark them. If any roll a 6, your companion helps you up. Clear your last {{term:hit-points|Hit Point}} and return to the scene.\n- **_Aware:_** Your companion gains a permanent +2 bonus to their {{term:evasion|Evasion}}."
+  },
+  {
+    "id": "srd/rules/ancestries",
+    "type": "rules",
+    "name": "Ancestries",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 32
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 27,
+    "text": "**Ancestries** represent your character’s lineage, which affects their physical appearance and access to certain special abilities. The following section describes each ancestry in Daggerheart and the characteristics generally shared by members of that ancestry, however, each player decides how much their character aligns with the “standard” or “average” expression of their ancestry.\n\nIn Daggerheart, the term “people” is used to refer to all ancestries, as individuals from all lineages possess unique characteristics and cultures, as well as personhood.\n\nSome ancestries are described using the term “humanoid.” This does not imply any genetic relation to “humans,” which is a distinct ancestry within Daggerheart. Instead, it refers to the set of physical characteristics humans will recognize from their own anatomy, such as bipedal movement, upright posture, facial layout, and more. These traits vary by ancestry and individual, though “humanoid” should still provide a useful frame of reference.\n\nThe Daggerheart Core Set includes only the following ancestries: Clank, Drakona, Dwarf, Elf, Faerie, Faun, Firbolg, Fungril, Galapa, Giant, Goblin, Halfling, Human, Infernis, Katari, Orc, Ribbet, Simiah, and Mixed Ancestry."
+  },
+  {
+    "id": "srd/rules/ancestry-features",
+    "type": "rules",
+    "name": "Ancestry Features",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 32
+    },
+    "parentId": "srd/rules/ancestries",
+    "order": 28,
+    "text": "Each ancestry grants two **ancestry features.** While some features (such as the ability to fly) are implicitly tied to an ancestry’s anatomy, players determine their characters’ physical form. Work with the GM to re-flavor any implied traits that don’t align with your character concept.\n\nIf you’d like to make a character who combines more than one ancestry, see “Mixed Ancestry.”"
+  },
+  {
+    "id": "srd/rules/elemental-kin",
+    "type": "rules",
+    "name": "Elemental Kin",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 33
+    },
+    "parentId": "srd/rules/ancestries",
+    "order": 29,
+    "text": "Elemental kin are humanoid mortals descended from powerful supernatural entities known as elementals—embodiments of the fundamental forces that shape the Mortal Realm (such as earth, air, fire, and water). These “kin” manifest forces differently, with some appearing more or less humanoid than others, but they all have a lineage that grants them unique ways to harness and influence their elemental heritage.\n\nAt birth, elemental kin closely resemble the element they embody, then become increasingly humanoid as they mature through early childhood. As they grow, their appearance manifests unique characteristics that identify them as elemental kin, such as crystal formations across a stonekin’s shoulders or a skykin’s ever-present breeze tousling their hair. While adult elemental kin are predominantly flesh and blood, small portions of their bodies momentarily shift into an elemental state in times of great emotion. Elemental kin with limb differences, or who lost a limb at some point in their life, can also manipulate a small amount of their element to help them accomplish a variety of tasks.\n\nSome elemental kins’ physical characteristics are passed down through families, such as one family of earthkin bearing shifting skin with the texture of sand, while another bears marble patterns. Additionally, families often develop their own unique communication styles that use their elemental influence. For example, emberkin might express excitement with flares of fire from their eyes, while tidekin might use currents of color over their bodies to communicate subtle messages.\n\nThough their lifespans vary, all elemental kin return to their element upon their death."
+  },
+  {
+    "id": "srd/rules/mixed-ancestry",
+    "type": "rules",
+    "name": "Mixed Ancestry",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 38
+    },
+    "parentId": "srd/rules/ancestries",
+    "order": 30,
+    "text": "Families within the world of Daggerheart are as unique as the peoples and cultures that inhabit it. Anyone’s appearance and abilities can be shaped by blood, magic, proximity, or a variety of other factors.\n\nIf you decide that your character is a descendant of multiple ancestries and you want to mechanically represent that in the game, use the steps below:\n\n1. **Determine Ancestry Combination** When you choose an ancestry at character creation, write down how your character identifies themself in the Heritage section of your character sheet. For example, if your character is descended from both goblins and orcs, you could use a hybridized term, such as “goblin-orc,” to describe your ancestry, list only the ancestry you more closely identify with (e.g., just “goblin” or just “orc”), or invent a new term, such as “toothling.”\n2. **Choose Ancestry Features** Work with your GM to choose two features from the ancestries in your character’s lineage. You must choose the first feature from one ancestry and the second from another. Write both down on a notecard you can keep with your other cards or next to your character sheet.\n\n_For example, if you are making a goblin-orc, you might take_ _the “Surefooted” and “Tusks” features or the “Sturdy” and_ _“Danger Sense” features. You can’t take both the “Surefooted”_ _and “Sturdy” features, because these are both the first_ _features listed on their respective ancestry cards._\n\nYour character's heritage might include more than two ancestries, but you still only choose features from two. You can represent additional ancestries through their appearance or backstory."
+  },
+  {
+    "id": "srd/rules/communities",
+    "type": "rules",
+    "name": "Communities",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 38
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 31,
+    "text": "Communities represent a key aspect of the **culture, class,** or **environment of origin** that has had the most influence over your character’s upbringing.\n\nYour character’s community grants them a **community** **feature.** Each community card also lists six adjectives you can use as inspiration to create your character’s personality, their relationship to their peers, their attitude toward their upbringing, or the demeanor with which they interact with the rest of the party. Please note the Daggerheart Core Set includes only the following communities: Highborne, Loreborne, Orderborne, Ridgeborne, Seaborne, Slyborne, Underborne, Wanderborne, Wildborne."
+  },
+  {
+    "id": "srd/rules/transformations",
+    "type": "rules",
+    "name": "Transformations",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 42
+    },
+    "parentId": "srd/rules/core-materials",
+    "order": 32,
+    "text": "Transformations represent a fundamental shift in your character and how they interact with the world. These are optional aspects of a character’s identity that the GM can give out during a campaign as part of the narrative or, at their discretion, present as an option during character creation.\n\nTransformations provide both a mechanical benefit and a drawback. Taking a transformation card requires you to buy into the concept of the exchange, taking on the {{term:burden|burden}} to reap the benefit. Because of this, we recommend that players remind GMs of their transformations' negative effects whenever they’re relevant to help fulfill and reinforce the fiction of the transformation.\n\nTransformation cards do not count toward your {{term:loadout|loadout}} maximum. When your character gains a transformation, add the card to your {{term:loadout|loadout}} as if it were part of your character’s heritage. Consider how this transformation changes your character physically and psychologically—if you need inspiration, each transformation includes questions to help you.\n\nIf there are details you’d like to incorporate into your character that go beyond the features on a transformation card, work with your GM to explore how they might manifest in your campaign’s narrative.\n\nA PC can't have more than one transformation."
+  },
+  {
+    "id": "srd/rules/granting-transformations",
+    "type": "rules",
+    "name": "Granting Transformations",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 42
+    },
+    "parentId": "srd/rules/transformations",
+    "order": 33,
+    "text": "GMs should discuss transformations with their players before incorporating them into their campaigns. A transformation can deeply impact a PC’s narrative journey, so it’s best to ensure this aspect of the game supports the story your players want to tell and is something they’ll enjoy.\n\nSome of the transformations presented here are easy to introduce during a campaign as a narrative development. For example, the vampire or werewolf transformation could be gained when the campaign’s major villain targets a PC with a significant attack. A PC who gains the reanimated or ghost transformation might have died in a place of great magic or made a story-altering bargain in exchange for their resurrection. These transformations can also be part of character creation. Maybe a PC was born a werewolf and seeks to control this aspect of their lineage, or a PC is a long-dead ghost who haunts the party to protect the living.\n\nSome transformations are more likely to be taken at character creation, such as the shapeshifter or demigod. However, they can still be introduced as a character twist during a campaign. It’s ultimately up to you which transformations are available at character creation and how they become available throughout play—decide what works best for you, your players, and the story you’re telling together."
+  },
+  {
+    "id": "srd/rules/core-mechanics",
+    "type": "rules",
+    "name": "Core Mechanics",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": null,
+    "order": 34,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/flow-of-the-game",
+    "type": "rules",
+    "name": "Flow of the Game",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 35,
+    "text": "Daggerheart is a conversation. The GM describes fictional scenarios involving the PCs, and the players take turns describing how their characters react. The goal of every person at the table is to build upon everyone else’s ideas and collaboratively tell a satisfying story. The system facilitates this collaborative process by providing structure to the conversation and mechanics for resolving moments of tension where fate or fortune determine the outcome of events."
+  },
+  {
+    "id": "srd/rules/player-principles-and-best-practices",
+    "type": "rules",
+    "name": "Player Principles & Best Practices",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/flow-of-the-game",
+    "order": 36,
+    "text": "To get the most out of Daggerheart, we recommend players keep the following principles and practices in mind throughout each session:"
+  },
+  {
+    "id": "srd/rules/principles",
+    "type": "rules",
+    "name": "Principles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/flow-of-the-game",
+    "order": 37,
+    "text": "- Be a fan of your character and their journey.\n- Spotlight your friends.\n- Address the characters and address the players.\n- Build the world together.\n- Play to find out what happens.\n- Hold on gently."
+  },
+  {
+    "id": "srd/rules/best-practices",
+    "type": "rules",
+    "name": "Best Practices",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/flow-of-the-game",
+    "order": 38,
+    "text": "- Embrace danger.\n- Use your resources.\n- Tell the story.\n- Discover your character.\n\n_For more information, see the Daggerheart Core Rulebook,_ _pages 9 and 108._"
+  },
+  {
+    "id": "srd/rules/core-gameplay-loop",
+    "type": "rules",
+    "name": "Core Gameplay Loop",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 39,
+    "text": "The **core gameplay loop** is the procedure that drives every scene, both in and out of combat:"
+  },
+  {
+    "id": "srd/rules/step-1-set-the-scene",
+    "type": "rules",
+    "name": "Step 1 Set the Scene",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-gameplay-loop",
+    "order": 40,
+    "text": "The GM describes a scenario, establishing the PCs’ surroundings and any dangers, NPCs, or other important details the characters would notice."
+  },
+  {
+    "id": "srd/rules/step-2-ask-and-answer-questions",
+    "type": "rules",
+    "name": "Step 2 Ask and Answer Questions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-gameplay-loop",
+    "order": 41,
+    "text": "The players ask clarifying questions to explore the scene more deeply and gather information that could inform their characters’ actions. The GM responds to these questions by giving the players information their characters could easily obtain, or by asking questions of their own to the players. The players also respond to any questions the GM poses to them. In this way, the table builds out the fiction collaboratively."
+  },
+  {
+    "id": "srd/rules/step-3-build-on-the-fiction",
+    "type": "rules",
+    "name": "Step 3 Build on the Fiction",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-gameplay-loop",
+    "order": 42,
+    "text": "As the scene develops, the players find opportunities to take action—problems to solve, obstacles to overcome, mysteries to investigate, and so on. The players describe how their characters proceed; if their proposed actions carry no chance of failure (or if failure would be boring), they automatically succeed. But if the outcome of their action is unknown, the GM calls for an {{term:action-roll|action roll}}. Either way, the table works the outcome into the story and moves the fiction forward, narrating how the PC’s actions have changed things."
+  },
+  {
+    "id": "srd/rules/step-4-go-back-to-step-1",
+    "type": "rules",
+    "name": "Step 4 Go Back to Step 1",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-gameplay-loop",
+    "order": 43,
+    "text": "The process repeats from the beginning, with the GM relaying any updated details or material changes to the players. This process continues until the end of the scene is triggered by a mechanic or arrives organically."
+  },
+  {
+    "id": "srd/rules/the-spotlight",
+    "type": "rules",
+    "name": "The Spotlight",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 46
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 44,
+    "text": "The **{{term:spotlight|spotlight}}** is a symbol that represents the table’s attention—and therefore the immediate focus of both the narrative and the game mechanics. Any time a character or player becomes the focus of a scene, they “are in the {{term:spotlight|spotlight}}” or “have the {{term:spotlight|spotlight}}.”\n\nThe {{term:spotlight|spotlight}} moves around the table organically as scenes unfold unless a mechanical trigger determines where the {{term:spotlight|spotlight}} goes next. For example, when a player fails an {{term:action-roll|action roll}} or rolls with {{term:fear|Fear}}, the mechanics prompt the GM to seize the {{term:spotlight|spotlight}} and make a GM move."
+  },
+  {
+    "id": "srd/rules/turn-order-and-action-economy",
+    "type": "rules",
+    "name": "Turn Order & Action Economy",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 45,
+    "text": "Daggerheart’s turns don’t follow a traditional, rigid format: there is no explicit initiative mechanic and characters don’t have a set number of actions they can take or things they can do before the {{term:spotlight|spotlight}} passes to someone else. A player with the {{term:spotlight|spotlight}} describes what their character does, and the {{term:spotlight|spotlight}} swings to one of the following:\n\n- Whomever or whatever a triggered mechanic puts it on\n- Whomever or whatever the fiction would naturally focus on next\n- A character who hasn't had the focus in a while\n\n**Optional: Spotlight Tracker Tool**\n\nIf your group prefers a more traditional action economy, you can use tokens to track how many times a player has had the {{term:spotlight|spotlight}}: At the start of a session or scene, each player adds a certain number of tokens (we recommend 3) to their character sheet and removes a token each time they take an action. If the {{term:spotlight|spotlight}} would swing to someone without any tokens, it swings to someone else instead. Once every player has used all their available tokens, players refill their character sheet with the same number of tokens as before, then continue playing."
+  },
+  {
+    "id": "srd/rules/making-moves-and-taking-action",
+    "type": "rules",
+    "name": "Making Moves & Taking Action",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 46,
+    "text": "Any time a character does something to advance the story, such as speaking with another character, interacting with the environment, making an attack, casting a spell, or using a class feature, they are making a move."
+  },
+  {
+    "id": "srd/rules/action-rolls",
+    "type": "rules",
+    "name": "Action Rolls",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 47,
+    "text": "Any move where success would be trivial or failure would be boring automatically succeeds, but any move that’s difficult to accomplish or risky to attempt triggers an **{{term:action-roll|action roll}}.**"
+  },
+  {
+    "id": "srd/rules/overview",
+    "type": "rules",
+    "name": "Overview",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 48,
+    "text": "All {{term:action-roll|action rolls}} require a pair of d12s called **{{term:duality-dice|Duality Dice}}.** These are two visually distinct twelve-sided dice, with one die representing {{term:hope|Hope}} and the other representing {{term:fear|Fear}}.\n\nTo make an {{term:action-roll|action roll}}, you roll the {{term:duality-dice|Duality Dice}}, sum the results, apply any relevant modifiers, and compare the total to a {{term:difficulty|Difficulty}} number to determine the outcome:\n\n- **Success with {{term:hope|Hope}}:** If your total meets or beats the {{term:difficulty|Difficulty}} AND your {{term:duality-dice|Hope Die}} shows a higher result than your {{term:duality-dice|Fear Die}}, you rolled a “Success with {{term:hope|Hope}}.” You succeed and gain a {{term:hope|Hope}}, and the {{term:spotlight|spotlight}} stays with the players.\n- **Success with {{term:fear|Fear}}:** If your total meets or beats the {{term:difficulty|Difficulty}} AND your {{term:duality-dice|Fear Die}} shows a higher result than your {{term:duality-dice|Hope Die}}, you rolled a “Success with {{term:fear|Fear}}.” You succeed with a cost or complication, but the GM gains a {{term:fear|Fear}}, then takes the {{term:spotlight|spotlight}}.\n- **Failure with {{term:hope|Hope}}:** If your total is less than the {{term:difficulty|Difficulty}} AND your {{term:duality-dice|Hope Die}} shows a higher result than your {{term:duality-dice|Fear Die}}, you rolled a “Failure with {{term:hope|Hope}}.” You fail with a minor consequence and gain a {{term:hope|Hope}}, then the {{term:spotlight|spotlight}} swings to the GM.\n- **Failure with {{term:fear|Fear}}:** If your total is less than the {{term:difficulty|Difficulty}} AND your {{term:duality-dice|Fear Die}} shows a higher result than your {{term:duality-dice|Hope Die}}, you rolled a “Failure with {{term:fear|Fear}}.” You fail with a major consequence and the GM gains a {{term:fear|Fear}}, then the {{term:spotlight|spotlight}} swings to the GM.\n- **{{term:critical-success|Critical Success}}:** If the {{term:duality-dice|Duality Dice}} show matching results, you rolled a “{{term:critical-success|Critical Success}}” (“Crit”). You automatically succeed with a bonus, gain a {{term:hope|Hope}}, and clear a {{term:stress|Stress}}. If this was an attack roll, you deal critical damage.\n\n**_Note:_** _A {{term:critical-success|Critical Success}} counts as a roll “with {{term:hope|Hope}}.”_\n\nAfter resolving the {{term:action-roll|action roll}}, the table works together to weave the outcome into the narrative and play continues.\n\n### Failing Forward\n\nIn Daggerheart, every time you roll the dice, the scene changes in some way. There is no such thing as a roll where “nothing happens,” because the fiction constantly evolves based on the successes and failures of the characters."
+  },
+  {
+    "id": "srd/rules/procedure",
+    "type": "rules",
+    "name": "Procedure",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 47,
+      "pageEnd": 48
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 49,
+    "text": "The following steps describe in more detail the procedure that all {{term:action-roll|action rolls}} utilize:\n\n**STEP 1:** PICK AN APPROPRIATE TRAIT\n\nSome actions and effects specify in their description which trait applies to the roll; otherwise, the GM tells the acting player which character trait best applies to the action being attempted. If more than one trait could apply to the roll, the GM chooses or lets the acting player decide.\n\n**STEP 2:** DETERMINE THE DIFFICULTY\n\nSome actions and features say in their description what the {{term:difficulty|Difficulty}} is. Otherwise, the GM determines the {{term:difficulty|Difficulty}} based on the scenario. The GM can choose whether to share the {{term:difficulty|Difficulty}} with the table. In either case, the GM should communicate the potential consequences of failure to the acting player.\n\n**STEP 3:** APPLY EXTRA DICE AND MODIFIERS\n\nThe acting player decides whether to Utilize an {{term:experience|Experience}} or activate other effects, then, if applicable, adds the appropriate tokens and dice (such as {{term:advantage|advantage}} or Rally dice) to their dice pool.\n\n**_Note:_** _Unless an action, ability, or feature specifically allows_ _for it, a player must declare the use of any {{term:experience|Experiences}}, extra_ _dice, or other modifiers before they roll._\n\n**STEP 4:** ROLL THE DICE\n\nThe acting player rolls their entire dice pool and announces the results in the format of “[total result] with [{{term:hope|Hope}}/{{term:fear|Fear}}]”—or “{{term:critical-success|Critical Success}}!” in the case of matching {{term:duality-dice|Duality Dice}}.\n\n_Example: A player is making an {{term:action-roll|action roll}} with a +1 in the_ _relevant trait and no other modifiers; they roll the Duality_ _Dice and get a result of 5 on their {{term:duality-dice|Hope Die}} and 7 on their_ _{{term:duality-dice|Fear Die}}, then announce “I rolled a 13 with {{term:fear|Fear}}!”_\n\n**STEP 5:** RESOLVE THE OUTCOME\n\nThe active player and the GM work together, along with the suggestions and support of the rest of the table, to resolve the outcome of the action."
+  },
+  {
+    "id": "srd/rules/gm-moves-and-adversary-actions",
+    "type": "rules",
+    "name": "GM Moves and Adversary Actions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 50,
+    "text": "GMs also make moves. They should consider making a move when a player does one of the following things:\n\n- Rolls with {{term:fear|Fear}} on an {{term:action-roll|action roll}}.\n- Fails an {{term:action-roll|action roll}}.\n- Does something that would have consequences.\n- Gives them a golden opportunity.\n- Looks to them for what happens next.\n\nAfter the GM turn is done, the {{term:spotlight|spotlight}} goes back to the PCs.\n\nMany adversaries and environments have **{{term:fear|Fear}} Features**, especially powerful or consequential moves that the GM must spend {{term:fear|Fear}} to activate.\n\n**_Note:_** _This {{term:fear|Fear}} is in addition to any {{term:fear|Fear}} the GM has_ _previously spent to seize the {{term:spotlight|spotlight}} or activate another_ _action or ability._"
+  },
+  {
+    "id": "srd/rules/adversary-actions",
+    "type": "rules",
+    "name": "Adversary Actions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 51,
+    "text": "When play passes to the GM, the GM can make a GM move to {{term:spotlight|spotlight}} an adversary. When an adversary takes the {{term:spotlight|spotlight}}, they do one of the following:\n\n- Move within {{term:close|Close range}} and make a standard attack\n- Move within {{term:close|Close range}} and use an adversary action\n- Clear a {{term:temporary|temporary}} condition\n- Sprint within Far or {{term:very-far|Very Far range}} on the battlefield\n- Anything else the fiction demands or the GM deems appropriate\n\nThe GM can spend additional {{term:fear|Fear}} to {{term:spotlight|spotlight}} additional adversaries. Once the GM has finished, the {{term:spotlight|spotlight}} swings back to the PCs."
+  },
+  {
+    "id": "srd/rules/special-rolls",
+    "type": "rules",
+    "name": "Special Rolls",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 48,
+      "pageEnd": 49
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 52,
+    "text": "Some rolls have unique specifications or otherwise modify the {{term:action-roll|action roll}} procedure: trait rolls, {{term:spellcast-roll|Spellcast Rolls}}, attack rolls, and damage rolls. Unless otherwise noted, you can apply any bonus, modifier, or effect to a special roll as if it were a standard {{term:action-roll|action roll}}.\n\n### Trait Rolls\n\nAn {{term:action-roll|action roll}} that specifies which character trait applies to it is called a **trait roll.** In the text of a feature or effect, a trait roll is referenced with the format “[Trait] Roll ({{term:difficulty|Difficulty}})” (e.g., “{{term:agility|Agility}} Roll (12)”). If the text of an effect doesn’t specify a trait roll’s {{term:difficulty|Difficulty}}, the GM sets the {{term:difficulty|Difficulty}} based on the circumstances.\n\nFeatures and effects that affect a trait roll also affect any {{term:action-roll|action roll}} that uses the same trait, including attack rolls, {{term:spellcast-roll|Spellcast Rolls}}, and standard {{term:action-roll|action rolls}}.\n\n**Example:** The katari’s ancestry feature “Feline Instincts,” which allows the katari to reroll an {{term:agility|Agility}} Roll, can be used on a standard {{term:action-roll|action roll}} using {{term:agility|Agility}} to traverse dangerous terrain or on an attack roll made with a weapon that uses {{term:agility|Agility}}.\n\n### Spellcast Rolls\n\n**{{term:spellcast-roll|Spellcast Rolls}}** are trait rolls that require you to use your {{term:spellcast-trait|Spellcast trait}}. Your {{term:spellcast-trait|Spellcast trait}}, if you have one, is determined by your subclass.\n\n{{term:spellcast-roll|Spellcast Rolls}} are only made when a character uses a feature that requires one. A successful {{term:spellcast-roll|Spellcast Roll}} activates the effect as described by the feature.\n\n**_Notes:_**\n\n_A {{term:spellcast-roll|Spellcast Roll}} that can damage a target is also considered_ _an attack roll._\n\n_When you cast a spell, the text tells you when the effect ends._ _The GM can spend a {{term:fear|Fear}} to end a {{term:temporary|temporary}} effect. If your_ _spell doesn’t specify when it ends, it ends when you choose or_ _at a natural moment of the story. You can choose to end your_ _spell early._\n\n_You can cast and maintain the effects of more than one spell_ _at the same time._\n\n### Reaction Rolls\n\nA **{{term:reaction-roll|reaction roll}}** is made in response to an attack or a hazard, representing a character’s attempt to avoid or withstand an imminent effect.\n\nReaction rolls work like {{term:action-roll|action rolls}}, except they don’t generate {{term:hope|Hope}} or {{term:fear|Fear}}, don’t trigger additional GM moves, and other characters can’t aid you with {{term:help-an-ally|Help an Ally}}.\n\nIf you critically succeed on a {{term:reaction-roll|reaction roll}}, you don’t clear a {{term:stress|Stress}} or gain a {{term:hope|Hope}}, but you do ignore any effects that would have impacted you on a success, such as taking damage or marking {{term:stress|Stress}}.\n\n### Group Action Rolls\n\nWhen multiple PCs take action together, the party chooses one PC to **lead the action.** Each other player then describes how their character collaborates on the task. The leader makes an {{term:action-roll|action roll}} as usual, while the other players make {{term:reaction-roll|reaction rolls}} using whichever traits they and the GM decide fit best.\n\nThe lead character gains a +1 bonus to their lead {{term:action-roll|action roll}} for each of these {{term:reaction-roll|reaction rolls}} that succeeded and a −1 penalty for each these {{term:reaction-roll|reaction rolls}} that failed.\n\n### Tag Team Rolls\n\nEach player can, once per session, initiate a **{{term:tag-team-roll|Tag Team Roll}}** between their character and another PC by spending 3 {{term:hope|Hope}}. The players work with one another to describe how they combine their actions in a unique and exciting way. Both players make separate {{term:action-roll|action rolls}}; before resolving the roll’s outcome, choose one of the rolls to apply to both actions. On a roll with {{term:hope|Hope}}, all PCs involved gain a {{term:hope|Hope}}. On a roll with {{term:fear|Fear}}, the GM gains a {{term:fear|Fear}} token for each PC involved.\n\nOn a successful Tag Team attack roll, both players roll damage and add the totals together to determine the damage dealt, which is then treated as if it came from a single source. If the attacks deal different types of damage, the players choose which type to deal.\n\n**_Notes:_**\n\n_A {{term:tag-team-roll|Tag Team Roll}} counts as a single {{term:action-roll|action roll}} for the_ _purposes of any {{term:countdown|countdowns}} or features that track action_ _rolls._\n\n_Though each player may only initiate one {{term:tag-team-roll|Tag Team Roll}} per_ _session, one PC can be involved in multiple {{term:tag-team-roll|Tag Team Rolls}}._"
+  },
+  {
+    "id": "srd/rules/advantage-and-disadvantage",
+    "type": "rules",
+    "name": "Advantage & Disadvantage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 53,
+    "text": "Some features and effects let you roll with {{term:advantage|advantage}} or {{term:disadvantage|disadvantage}} on an action or {{term:reaction-roll|reaction roll}}:\n\n- **{{term:advantage|Advantage}}** represents an opportunity that you seize to increase your chances of success. When you roll with {{term:advantage|advantage}}, you roll a d6 {{term:advantage|advantage}} die and add its result to your total.\n- **{{term:disadvantage|Disadvantage}}** represents an additional difficulty, hardship, or challenge you face when attempting an action. When you roll with {{term:disadvantage|disadvantage}}, you roll a d6 {{term:disadvantage|disadvantage}} die and subtract its result from your total.\n\n{{term:advantage|Advantage}} or {{term:disadvantage|disadvantage}} can be granted or imposed by mechanical triggers or at the GM’s discretion.\n\nRegardless of how many sources grant them {{term:advantage|advantage}} or {{term:disadvantage|disadvantage}}, a player never rolls more than one {{term:advantage|advantage}} or {{term:disadvantage|disadvantage}} die on the same roll.\n\nLikewise, advantages and disadvantages cancel one another, one for one, when they would apply to the same roll. Therefore, a player never makes a roll with both an {{term:advantage|advantage}} die and a {{term:disadvantage|disadvantage}} die.\n\n**_For example:_** _If a player would gain {{term:advantage|advantage}} on an action_ _from three different sources and {{term:disadvantage|disadvantage}} from one, they_ _would still only gain one {{term:advantage|advantage}} die on the roll._\n\nThere is one exception to this general rule. When a player uses {{term:help-an-ally|Help an Ally}}, they roll their own {{term:advantage|advantage}} die and apply it to an ally’s {{term:action-roll|action roll}}. Any number of players can {{term:help-an-ally|Help an Ally}} on the same {{term:action-roll|action roll}}. If multiple {{term:advantage|advantage}} dice apply to the same {{term:action-roll|action roll}} due to one or more players using {{term:help-an-ally|Help an Ally}}, the player making the {{term:action-roll|action roll}} adds only the highest result of all {{term:advantage|advantage}} dice rolled (including their own) and ignores the rest.\n\n**_For example:_** _Anne makes an {{term:agility|Agility}} Roll with {{term:advantage|advantage}},_ _and her allies Bo and Cameron both spend a {{term:hope|Hope}} to Help_ _an Ally. All three players roll their own d6 {{term:advantage|advantage}} die, but_ _Anne only adds the highest result to her total. So if Anne has_ _+1 in {{term:agility|Agility}} and rolls a 13 with {{term:hope|Hope}} on her {{term:duality-dice|Duality Dice}},_ _plus a 2 on her {{term:advantage|advantage}} die, but Bo and Cameron rolled a 3_ _and 4 on their {{term:advantage|advantage}} dice, then Anne’s total result would_ _be an 18 with {{term:hope|Hope}} (13 + 1 + 4)._"
+  },
+  {
+    "id": "srd/rules/hope-and-fear",
+    "type": "rules",
+    "name": "Hope & Fear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 49
+    },
+    "parentId": "srd/rules/making-moves-and-taking-action",
+    "order": 54,
+    "text": "**{{term:hope|Hope}}** and **{{term:fear|Fear}}** are metacurrencies representing the cosmic forces that shape the events of your table’s story. {{term:hope|Hope}} powers PC abilities and features, while {{term:fear|Fear}} powers the abilities of the GM and the adversaries and environments they control.\n\n### Hope\n\nEvery PC starts with 2 {{term:hope|Hope}} at character creation and gains more throughout play. A PC can have a maximum of 6 {{term:hope|Hope}} at one time, and {{term:hope|Hope}} carries over between sessions.\n\nPlayers can spend {{term:hope|Hope}} to:\n\n- **{{term:help-an-ally|Help an Ally}}** When you {{term:help-an-ally|Help an Ally}} who is making an {{term:action-roll|action roll}}, describe how you do so and roll an {{term:advantage|advantage}} die. Multiple players can spend {{term:hope|Hope}} to help the same acting player, but that player only adds the highest result to their final total.\n- **Utilize an {{term:experience|Experience}}** When you Utilize an {{term:experience|Experience}} on a relevant roll, add its modifier to the result. You can spend multiple {{term:hope|Hope}} to utilize multiple {{term:experience|Experiences}}.\n- **Initiate a {{term:tag-team-roll|Tag Team Roll}}** Spend 3 {{term:hope|Hope}} to initiate a Tag Team roll, combining the actions of two PCs into one impressive act of synergy. When you make a Tag Team roll, both players roll their {{term:action-roll|action rolls}} and then choose which set of results to apply to the outcome.\n- **Activate a {{term:hope|Hope}} Feature** A {{term:hope|Hope}} Feature is any effect that allows (or requires) you to spend a specified amount of {{term:hope|Hope}} to activate it. **Class** **{{term:hope|Hope}} features** are class-specific features, detailed on your character sheet, that cost 3 {{term:hope|Hope}} to activate.\n\n**_Note:_** _When using a {{term:hope|Hope}} Feature, if you rolled with {{term:hope|Hope}}_ _for that action, the {{term:hope|Hope}} you gain from that roll can be spent_ _on that feature (or toward it, if it requires spending multiple_ _{{term:hope|Hope}})._\n\n### Fear\n\nThe GM gains {{term:fear|Fear}} whenever a player rolls with {{term:fear|Fear}} and can spend {{term:fear|Fear}} at any time to make or enhance a GM move or to use a {{term:fear|Fear}} Feature. The GM can have up to 12 {{term:fear|Fear}} at one time. {{term:fear|Fear}} carries over between sessions."
+  },
+  {
+    "id": "srd/rules/combat",
+    "type": "rules",
+    "name": "Combat",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 55,
+    "text": "Though Daggerheart relies on the same flow of collaborative storytelling in and out of combat, physical conflicts rely more heavily on several key mechanics related to attacking, maneuvering, and taking damage."
+  },
+  {
+    "id": "srd/rules/evasion",
+    "type": "rules",
+    "name": "Evasion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "parentId": "srd/rules/combat",
+    "order": 56,
+    "text": "**{{term:evasion|Evasion}}** represents a character’s ability to avoid attacks and other unwanted effects. Any roll made against a PC has a {{term:difficulty|Difficulty}} equal to the target’s {{term:evasion|Evasion}}. A PC’s base {{term:evasion|Evasion}} is determined by their class, but can be modified by {{term:domain-card|domain cards}}, equipment, conditions, and other effects.\n\n**_Note:_** _attacks rolled against adversaries use the target’s_ _{{term:difficulty|Difficulty}} instead of {{term:evasion|Evasion}}._"
+  },
+  {
+    "id": "srd/rules/hit-points-and-damage-thresholds",
+    "type": "rules",
+    "name": "Hit Points & Damage Thresholds",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "parentId": "srd/rules/combat",
+    "order": 57,
+    "text": "**{{term:hit-points|Hit Points}} ({{term:hit-points|HP}})** represent a character’s ability to withstand physical injury. When a character takes damage, they mark 1 to 3 {{term:hit-points|HP}}, based on their **{{term:damage-thresholds|damage thresholds}}:**\n\n- If the final damage is at or above the character’s {{term:damage-thresholds|Severe damage}} threshold, they mark 3 {{term:hit-points|HP}}.\n- If the final damage is at or above the character’s {{term:damage-thresholds|Major damage}} threshold but below their {{term:damage-thresholds|Severe damage}} threshold, they mark 2 {{term:hit-points|HP}}.\n- If the final damage is below the character’s {{term:damage-thresholds|Major damage}} threshold, they mark 1 {{term:hit-points|HP}}.\n- If {{term:incoming-damage|incoming damage}} is ever reduced to 0 or less, no {{term:hit-points|HP}} is marked.\n\nYou can increase the number of {{term:hit-points|Hit Point}} slots you have available as you level up, to a maximum of 12.\n\nA PC’s {{term:damage-thresholds|damage thresholds}} are calculated by adding their level to the listed {{term:damage-thresholds|damage thresholds}} of their equipped armor. A PC’s starting {{term:hit-points|HP}} is based on their class, but they can gain additional {{term:hit-points|Hit Points}} through advancements, features, and other effects.\n\nAn adversary’s {{term:damage-thresholds|Damage Thresholds}} and {{term:hit-points|HP}} are listed in their stat blocks.\n\nWhen a character marks their last {{term:hit-points|Hit Point}}, they fall. If a PC falls, they make a {{term:death-move|death move}}.\n\nCharacters can clear {{term:hit-points|Hit Points}} by taking {{term:downtime|downtime moves}} (see: Downtime) or by activating relevant special abilities or effects.\n\n**_Optional Rule: Massive Damage_**\n\nIf a character ever takes damage equal to twice their {{term:damage-thresholds|Severe threshold}}, they mark 4 {{term:hit-points|HP}} instead of 3."
+  },
+  {
+    "id": "srd/rules/stress",
+    "type": "rules",
+    "name": "Stress",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 58,
+    "text": "**{{term:stress|Stress}}** represents how much mental, physical, and emotional strain a character can endure. All classes start with 6 {{term:stress|Stress}} slots. You can increase the number of {{term:stress|Stress}} slots you have available as you level up, to a maximum of 12. Some special abilities or effects require the character activating them to mark {{term:stress|Stress}}, and the GM can require a PC to mark {{term:stress|Stress}} as a GM move or to represent the cost, complication, or consequence of an {{term:action-roll|action roll}}.\n\nWhen a character marks their last {{term:stress|Stress}}, they become _{{term:vulnerable|Vulnerable}}_ (see: Conditions) until they clear at least 1 {{term:stress|Stress}}.\n\nWhen a character must mark 1 or more {{term:stress|Stress}} but can’t, they mark 1 {{term:hit-points|HP}} instead. A character can’t use a move that requires them to mark {{term:stress|Stress}} if all of their {{term:stress|Stress}} is marked.\n\nPCs can clear {{term:stress|Stress}} by making {{term:downtime|downtime moves}} (see: Downtime). A PC’s maximum {{term:stress|Stress}} is determined by their class, but they can increase it through advancements, abilities, and other effects."
+  },
+  {
+    "id": "srd/rules/attacking",
+    "type": "rules",
+    "name": "Attacking",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 50,
+      "pageEnd": 51
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 59,
+    "text": "### Attack Rolls\n\nAn **attack roll** is an {{term:action-roll|action roll}} intended to inflict harm. The trait that applies to an attack roll is specified by the weapon or spell being used. Unarmed attack rolls use either {{term:strength|Strength}} or {{term:finesse|Finesse}} (GM’s choice). An attack roll’s {{term:difficulty|Difficulty}}, unless otherwise noted, is equal to the {{term:difficulty|Difficulty}} score of its target.\n\n### Damage Rolls\n\nOn a successful attack, roll damage. Damage is calculated from the **damage roll** listed in the attack’s description with the format “xdy+[modifier]” _(e.g., for a spell that inflicts “1d8+2”_ _damage, you roll an eight-sided and add 2 to the result; the_ _damage dealt is equal to the total)._\n\nAny time an effect says to deal damage using your {{term:spellcast-trait|Spellcast trait}}, you roll a number of dice equal to your {{term:spellcast-trait|Spellcast trait}}.\n\n**_Note:_** _If your {{term:spellcast-trait|Spellcast trait}} is +0 or lower, you don’t roll_ _anything._\n\nFor weapons, the number of damage dice you roll is equal to your **{{term:proficiency|Proficiency}}.** _Note that your {{term:proficiency|Proficiency}} multiplies the_ _number of dice you roll, but doesn’t affect the modifier. For_ _example, a PC with {{term:proficiency|Proficiency}} 2 and wielding a weapon with a_ _damage rating of “d8+2” deals damage equal to “2d8+2” on a_ _successful attack._\n\nSuccessful unarmed attacks inflict [{{term:proficiency|Proficiency}}]d4 damage.\n\n### Critical Damage\n\nWhen you get a {{term:critical-success|critical success}} (i.e., you roll matching values on your {{term:duality-dice|Duality Dice}}) on an attack roll, you deal extra damage. Make the damage roll as usual, but add the maximum possible result of the damage dice to the final total. For instance, if an attack would normally deal 2d8+1 damage, a {{term:critical-success|critical success}} would deal 2d8+1+16.\n\n### Damage Types\n\nThere are two damage types: **physical damage (phy)** and **magic damage (mag)**. Unless stated otherwise, mundane weapons and unarmed attacks deal physical damage, and spells deal magic damage.\n\n### Resistance, Immunity, and Direct Damage\n\nIf a target has **{{term:resistance|resistance}}** to a damage type, then they reduce {{term:incoming-damage|incoming damage}} of that type by half before comparing it to their {{term:hit-points|Hit Point}} Thresholds. If the target has additional ways of reducing {{term:incoming-damage|incoming damage}}, such as marking {{term:armor-slot|Armor Slots}}, they apply the {{term:resistance|resistance}} effect first. The effects of multiple resistances to the same damage type do not stack.\n\nIf a target has **{{term:immunity|immunity}}** to a damage type, they ignore {{term:incoming-damage|incoming damage}} of that type.\n\nIf an attack deals both physical and magic damage, a character can only benefit from {{term:resistance|resistance}} or {{term:immunity|immunity}} if they are resistant or {{term:immunity|immune}} to both damage types.\n\n**{{term:direct-damage|Direct damage}}** is damage that can’t be reduced by marking {{term:armor-slot|Armor Slots}}.\n\n### Multi-Target Attack Rolls\n\nIf a spell or ability allows you to target multiple adversaries, make one attack roll and one damage roll, then apply the results to each target individually.\n\n### Multiple Damage Sources\n\nDamage dealt simultaneously from multiple sources is always totaled before it’s compared to its target’s {{term:damage-thresholds|damage thresholds}}.\n\nFor example, if a PC with orc ancestry makes a successful attack against a target in {{term:melee|Melee range}} and decides to spend a {{term:hope|Hope}} to use their “Tusks” feature (which gives them an extra 1d6 damage on a damage roll), they would roll their normal weapon damage and add a d6 to the result, then deal that total damage to the adversary."
+  },
+  {
+    "id": "srd/rules/maps-range-and-movement",
+    "type": "rules",
+    "name": "Maps, Range, and Movement",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 51
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 60,
+    "text": "You can play Daggerheart using “theater of the mind” or maps and miniatures. The conversions below from abstract ranges to physical measurements assume 1 inch of map represents about 5 feet of fictional space.\n\nDaggerheart uses the following **ranges** to translate fictional positioning into relative distance for the purposes of targeting, movement, and other game mechanics:\n\n**Melee:** Close enough to touch, up to a few feet away.\n\n**Very Close:** Close enough to see fine details, about 5–10 feet away. While in danger, a character can move, as part of their action, from {{term:very-close|Very Close range}} into {{term:melee|Melee range}}. _On_ _a map: anything within the shortest length of a game card_ _(2-3 inches)._\n\n**Close:** Close enough to see prominent details, about 10–30 feet away. While in danger, a character can move, as part of their action, from {{term:close|Close range}} into {{term:melee|Melee range}}. _On a_ _map: anything within the length of a pencil (5-6 inches)._\n\n**Far:** Close enough to see very little detail, about 30–100 feet away. While in danger, a character must make an {{term:agility|Agility}} Roll to safely move from {{term:far|Far range}} into {{term:melee|Melee range}}. _On a map: anything within the length of the long edge of a_ _piece of copy paper (11–12 inches)._\n\n**Very Far:** Too far to make out any details, about 100–300 feet away. While in danger, a character must make an {{term:agility|Agility}} Roll to safely move from {{term:very-far|Very Far range}} into {{term:melee|Melee range}}. _On a map: anything beyond {{term:far|Far range}}, but still within_ _the bounds of the conflict or scene._\n\n**Out of Range:** Anything beyond a character’s {{term:very-far|Very Far range}} is Out of Range and usually can’t be targeted.\n\nRange is measured from the source of an effect, such as the attacker or spellcaster, to the target or object of an effect.\n\nA weapon, spell, ability, item, or other effect’s stated range is a maximum range; unless otherwise noted, it can be used at closer distances.\n\n**Optional Rule: Defined Ranges**\n\n_If your table would rather operate with more precise range_ _rules, you can use a 1-inch grid battle map during combat._ _If you do, use the following guidelines for play:_\n\n- **Melee:** 1 square\n- **Very Close:** 3 squares\n- **Close:** 6 squares\n- **Far:** 12 squares\n- **Very Far:** 13+ squares\n- **Out of Range:** Off the battlemap\n\n### Movement Under Pressure\n\nWhen you’re under pressure or in danger and make an {{term:action-roll|action roll}}, you can move to a location within {{term:close|Close range}} as part of that action. If you’re not already making an {{term:action-roll|action roll}}, or if you want to move farther than your {{term:close|Close range}}, you need to succeed on an {{term:agility|Agility}} Roll to safely reposition yourself.\n\nAn adversary can move within {{term:close|Close range}} for free as part of an action, or within {{term:very-far|Very Far range}} as a separate action.\n\n### Area of Effect\n\nUnless stated otherwise, all the targets of a group effect must be within {{term:very-close|Very Close range}} of a single origin point within your effect’s range.\n\n### Line of Sight & Cover\n\nUnless stated otherwise, a ranged attacker must have **line** **of sight** to their intended target to make an attack roll. If a partial obstruction lies between the attacker and target, the target has **cover.** Attacks made through cover are rolled with {{term:disadvantage|disadvantage}}. If the obstruction is total, there is no line of sight."
+  },
+  {
+    "id": "srd/rules/conditions",
+    "type": "rules",
+    "name": "Conditions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 61,
+    "text": "**Conditions** are effects that grant specific benefits or drawbacks to the target they are attached to."
+  },
+  {
+    "id": "srd/rules/standard-conditions",
+    "type": "rules",
+    "name": "Standard Conditions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "parentId": "srd/rules/conditions",
+    "order": 62,
+    "text": "Daggerheart has three standard conditions:\n\n### Hidden\n\nWhile you’re out of sight from all enemies and they don’t otherwise know your location, you gain the _{{term:hidden|Hidden}}_ condition. Any rolls against a _{{term:hidden|Hidden}}_ creature have {{term:disadvantage|disadvantage}}. After an adversary moves to where they would see you, you move into their line of sight, or you make an attack, you are no longer _{{term:hidden|Hidden}}_.\n\n### Restrained\n\n_{{term:restrained|Restrained}}_ characters can’t move, but you can still take actions from their current position.\n\n### Vulnerable\n\nWhen a creature is _{{term:vulnerable|Vulnerable}},_ all rolls targeting them have {{term:advantage|advantage}}.\n\nSome features can apply special or unique conditions, which work as described in the feature text.\n\nUnless otherwise noted, the same condition can’t be applied more than once to the same target."
+  },
+  {
+    "id": "srd/rules/temporary-tags-and-special-conditions",
+    "type": "rules",
+    "name": "Temporary Tags & Special Conditions",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "parentId": "srd/rules/conditions",
+    "order": 63,
+    "text": "The **{{term:temporary|temporary}}** tag denotes a condition or effect that the affected creature can clear by making a move against it. When an affected PC makes a move to clear a {{term:temporary|temporary}} condition or effect, it normally requires a successful {{term:action-roll|action roll}} using an appropriate trait. When an affected adversary makes a move to clear a {{term:temporary|temporary}} condition or effect, the GM puts the {{term:spotlight|spotlight}} on the adversary and describes how they do it; this doesn’t require a roll but it does use up that adversary’s {{term:spotlight|spotlight}}.\n\n**Special conditions** are only cleared when specific requirements are met, such as completing a certain action or using a particular item. The requirements for clearing these conditions are stated in the text of the effect that applies the condition."
+  },
+  {
+    "id": "srd/rules/downtime",
+    "type": "rules",
+    "name": "Downtime",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 64,
+    "text": "Between conflicts, the party can take a **rest** to recover expended resources and deepen their bonds. During a rest, each PC can make up to two {{term:downtime|downtime moves}}.\n\nWhen the party rests, they must choose between a {{term:short-rest|short rest}} and a {{term:long-rest|long rest}}. If a party takes three {{term:short-rest|short rests}} in a row, their next rest must be a {{term:long-rest|long rest}}.\n\nIf a **{{term:short-rest|short rest}}** is interrupted, such as by an adversary's attack, the characters don’t gain its benefits. If a {{term:long-rest|long rest}} is interrupted, the characters only gain the benefits of a {{term:short-rest|short rest}}.\n\nA **{{term:short-rest|short rest}}** lasts enough time for the party to catch its breath, about an hour in-world. Each player can move {{term:domain-card|domain cards}} between their {{term:loadout|loadout}} and {{term:vault|vault}} for free, then choose twice from the following list of {{term:downtime|downtime moves}} (players can choose the same move twice):\n\n- **Tend to Wounds:** Clear 1d4+Tier {{term:hit-points|Hit Points}} for yourself or an ally.\n- **Clear {{term:stress|Stress}}:** Clear 1d4+Tier {{term:stress|Stress}}.\n- **Repair Armor:** Clear 1d4+Tier {{term:armor-slot|Armor Slots}} from your or an ally’s armor.\n- **Prepare:** Describe how you prepare yourself for the path ahead, then gain a {{term:hope|Hope}}. If you choose to Prepare with one or more members of your party, you each gain 2 {{term:hope|Hope}}.\n\n**At the end of a {{term:short-rest|short rest}},** any features or effects with a limited number of uses per rest refresh and any features or effects that last until your next rest expire.\n\nA **{{term:long-rest|long rest}}** is when the characters make camp and relax or sleep for several in-game hours. Each player can move {{term:domain-card|domain cards}} between their {{term:loadout|loadout}} and {{term:vault|vault}} for free, then choose twice from the following list of {{term:downtime|downtime moves}} (players can choose the same move twice):\n\n- **Tend to All Wounds:** Clear all {{term:hit-points|Hit Points}} for yourself or an ally.\n- **Clear All {{term:stress|Stress}}:** Clear all {{term:stress|Stress}}.\n- **Repair All Armor:** Clear all {{term:armor-slot|Armor Slots}} from your or an ally’s armor\n- **Prepare:** Describe how you prepare for the next day’s adventure, then gain a {{term:hope|Hope}}. If you choose to Prepare with one or more members of your party, you each gain 2 {{term:hope|Hope}}.\n- **Work on a Project:** With GM approval, a PC may pursue a long-term project, such as deciphering an ancient text or crafting a new weapon. The first time they start a new project, assign it a {{term:countdown|countdown}}. Each time a PC makes the Work on a Project move, they either advance their project’s {{term:countdown|countdown}} automatically or make an {{term:action-roll|action roll}} to advance it (GM’s choice).\n\nAt the end of a {{term:long-rest|long rest}}, any features or effects with a limited number of uses per rest or per {{term:long-rest|long rest}} refresh and any features or effects that last until your next rest or until your next {{term:long-rest|long rest}} expire.\n\n### Downtime Consequences\n\nOn a {{term:short-rest|short rest}}, the GM gains 1d4 {{term:fear|Fear}}. On a {{term:long-rest|long rest}}, they gain {{term:fear|Fear}} equal to 1d4 + the number of PCs, and they can advance a **long-term {{term:countdown|countdown}}** of their choice."
+  },
+  {
+    "id": "srd/rules/death",
+    "type": "rules",
+    "name": "Death",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 65,
+    "text": "When a PC marks their last {{term:hit-points|Hit Point}}, they must make a **death** **move** by choosing one of the following options:\n\n- **Blaze of Glory:** Your character embraces death and goes out in a blaze of glory. Take one final action. It automatically {{term:critical-success|critically succeeds}} (with GM approval), and then you cross through the veil of death.\n- **Avoid Death:** Your character avoids death and faces the consequences. They {{term:temporary|temporarily}} drop unconscious, and then you work with the GM to describe how the situation worsens. While unconscious, your character can’t move or act, and they can’t be targeted by an attack. They return to consciousness when an ally clears 1 or more of their marked {{term:hit-points|Hit Points}} or when the party finishes a {{term:long-rest|long rest}}. After your character falls unconscious, roll your {{term:duality-dice|Hope Die}}. If its value is equal to or less than your character’s level, they gain a {{term:scar|scar}}: permanently cross out a {{term:hope|Hope}} slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored. If you ever cross out your last {{term:hope|Hope}} slot, your character’s journey ends.\n- **Risk It All:** Roll your {{term:duality-dice|Duality Dice}}. If the {{term:duality-dice|Hope Die}} is higher, your character stays on their feet and clears a number of {{term:hit-points|Hit Points}} or {{term:stress|Stress}} equal to the value of the {{term:duality-dice|Hope Die}} (you can divide the {{term:duality-dice|Hope Die}} value between {{term:hit-points|Hit Points}} and {{term:stress|Stress}} however you’d prefer). If the {{term:duality-dice|Fear Die}} is higher, your character crosses through the veil of death. If the {{term:duality-dice|Duality Dice}} show matching results, your character stays up and clears all {{term:hit-points|Hit Points}} and {{term:stress|Stress}}.\n\nIf your character dies, work with the GM before the next session to create a new character at the current level of the rest of the party."
+  },
+  {
+    "id": "srd/rules/additional-rules",
+    "type": "rules",
+    "name": "Additional Rules",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 66,
+    "text": "_The following rules apply to many aspects of the game._\n\n### Rounding Up\n\nThis game doesn’t use fractions; if you need to round to a whole number, round up unless otherwise specified. When in doubt, resolve any ambiguity in favor of the PCs.\n\n### Rerolling Dice\n\nWhen a feature allows you to reroll a die, you always take the new result unless the feature specifically says otherwise.\n\n### Incoming Damage\n\n{{term:incoming-damage|Incoming damage}} means the total damage from a single attack or source, before {{term:armor-slot|Armor Slots}} are marked.\n\n### Simultaneous Effects\n\nIf the resolution order of multiple effects is unclear, the person in control of the effects (player or GM) decides what order to resolve them in.\n\n### Stacking Effects\n\nUnless stated otherwise, all effects beside conditions and {{term:advantage|advantage}}/{{term:disadvantage|disadvantage}} can stack.\n\n### Ongoing Spell Effects\n\nIf an effect doesn’t have a listed mechanical expiration, it only ends when decided by the controlling player, the GM, or the demands of the fiction.\n\n### Spending Resources\n\nUnless an effect states otherwise, you can’t spend {{term:hope|Hope}} or mark {{term:stress|Stress}} multiple times on the same feature to increase or repeat its effects on the same roll.\n\n### Using Features After a Roll\n\nIf a feature allows you to affect a roll after the result has been totaled, you can use it after the GM declares whether the roll succeeds or fails, but not after the consequences unfold or another roll is made."
+  },
+  {
+    "id": "srd/rules/leveling-up",
+    "type": "rules",
+    "name": "Leveling Up",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 67,
+    "text": "Your party levels up whenever the GM decides you’ve reached a narrative milestone (usually about every 3 sessions). All party members level up at the same time.\n\nDaggerheart has 10 PC levels divided into 4 tiers:\n\n→ Tier 1 encompasses level 1 only.\n\n→ Tier 2 encompasses levels 2–4.\n\n→ Tier 3 encompasses levels 5–7.\n\n→ Tier 4 encompasses levels 8–10.\n\nYour {{term:tier|tier}} affects your {{term:damage-thresholds|damage thresholds}}, {{term:tier|tier}} achievements, and access to advancements."
+  },
+  {
+    "id": "srd/rules/step-one-tier-achievements",
+    "type": "rules",
+    "name": "Step One Tier Achievements",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 53
+    },
+    "parentId": "srd/rules/leveling-up",
+    "order": 68,
+    "text": "Take any applicable {{term:tier|tier}} **achievements**\n\n- At level 2, you gain a new {{term:experience|Experience}} at +2 and permanently increase your {{term:proficiency|Proficiency}} by 1.\n- At level 5, you gain a new {{term:experience|Experience}} at +2, permanently increase your {{term:proficiency|Proficiency}} by 1, and clear any marked traits.\n- At level 8, you gain a new {{term:experience|Experience}} at +2, permanently increase your {{term:proficiency|Proficiency}} by 1, and clear any marked traits."
+  },
+  {
+    "id": "srd/rules/step-two-advancements",
+    "type": "rules",
+    "name": "Step Two Advancements",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 54
+    },
+    "parentId": "srd/rules/leveling-up",
+    "order": 69,
+    "text": "Choose any two **advancements** with at least one unmarked slot from your {{term:tier|tier}} or below. Options with multiple slots can be chosen more than once. When you choose an advancement, mark one of its slots.\n\n- _When you choose to_ **_increase two unmarked character_** **_traits_** _and mark them:_ Choose two unmarked character traits and gain a permanent +1 bonus to them. You can’t increase these stats again until the next {{term:tier|tier}} (when your {{term:tier|tier}} achievement allows you to clear those marks).\n- _When you choose to_ **_permanently add 1 or more {{term:hit-points|Hit Point}}_** **_slots_**_:_ Darken the outline of the next rectangle in the {{term:hit-points|Hit Point}} section of your character sheet in pen or permanent marker.\n- _When you choose to_ **_permanently add 1 or more {{term:stress|Stress}}_** **_slots_**_:_ Darken the outline of the next rectangle in the {{term:stress|Stress}} section of your character sheet in pen or permanent marker.\n- _When you choose to_ **_increase your {{term:experience|Experience}}_**_:_ Choose two {{term:experience|Experiences}} on your character sheet and gain a permanent +1 bonus to both.\n- _When you_ **_take an additional {{term:domain-card|domain card}}_**_:_ You can choose an additional {{term:domain-card|domain card}} at or below your level or from your class’s domains. If you’ve {{term:multiclass|multiclassed}}, you can instead select a card at or below half your level from your chosen {{term:multiclass|multiclass}} domain.\n- _When you choose to_ **_increase your {{term:evasion|Evasion}}_**_:_ Gain a permanent +1 bonus to your {{term:evasion|Evasion}}.\n- _When you choose to_ **_take an upgraded subclass card_**_:_ Take the next card for your subclass. If you have only the foundation card, take a specialization; if you have a specialization already, take a mastery. Then cross out this {{term:tier|tier}}’s {{term:multiclass|multiclass}} option.\n- _When you choose to_ **_increase your {{term:proficiency|Proficiency}}_**_:_ Fill in one of the open circles in the “{{term:proficiency|Proficiency}}” section of your character sheet, then increase your weapon’s number of damage dice by 1. _The black box around this advancement’s_ _slots indicates you must spend two advancements and mark_ _both level-up slots in order to take it as an option._\n- _When you choose to_ **_{{term:multiclass|multiclass}}_**_:_ Choose an additional class, select one of its domains, and gain its class feature. Add the appropriate **{{term:multiclass|multiclass}} module** to your character sheet and take the foundation card from one of its subclasses. Then cross out the “upgraded subclass” advancement option in this {{term:tier|tier}} and all other “{{term:multiclass|multiclass}}” advancement options on your character sheet. _The black box around_ _this advancement’s slots indicates you must spend two_ _advancements and mark both level-up slots in order to take_ _it as an option._"
+  },
+  {
+    "id": "srd/rules/step-three-damage-thresholds",
+    "type": "rules",
+    "name": "Step Three Damage Thresholds",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 54
+    },
+    "parentId": "srd/rules/leveling-up",
+    "order": 70,
+    "text": "Increase all {{term:damage-thresholds|damage thresholds}} by 1."
+  },
+  {
+    "id": "srd/rules/step-four-domain-cards",
+    "type": "rules",
+    "name": "Step Four Domain Cards",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 54
+    },
+    "parentId": "srd/rules/leveling-up",
+    "order": 71,
+    "text": "Acquire a new {{term:domain-card|domain card}} at your level or lower from one of your class’s domains and add it to your {{term:loadout|loadout}} or {{term:vault|vault}}. If your {{term:loadout|loadout}} is already full, you can’t add the new card to it until you move another into your {{term:vault|vault}}. You can also exchange one {{term:domain-card|domain card}} you’ve previously acquired for a different {{term:domain-card|domain card}} of the same level or lower."
+  },
+  {
+    "id": "srd/rules/multiclassing",
+    "type": "rules",
+    "name": "Multiclassing",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 54
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 72,
+    "text": "Starting at level 5, you can choose {{term:multiclass|multiclassing}} as an option when leveling up. When you {{term:multiclass|multiclass}}, you choose an additional class, gain access to one of its domains, and acquire its class feature. Take the appropriate {{term:multiclass|multiclass}} module and add it to the right side of your character sheet, then choose a foundation card from one of its subclasses. If your foundation cards specify different Spellcast traits, you can choose which one to apply when making a Spellcast roll.\n\nWhenever you have the option to acquire a new {{term:domain-card|domain card}}, you can choose from cards at or below half your current level (rounded up) from the domain you chose when you selected the {{term:multiclass|multiclass}} advancement."
+  },
+  {
+    "id": "srd/rules/equipment",
+    "type": "rules",
+    "name": "Equipment",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 55
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 73,
+    "text": "Your **equipped** weapons and armor are the ones listed in the “Active Weapons” and “Active Armor” sections of your character sheet. Your character can only attack with weapons, benefit from armor, and gain features from items they have equipped. You can’t equip weapons or armor with a higher {{term:tier|tier}} than you.\n\nPCs can carry up to two additional weapons in the “Inventory Weapon” areas of the character sheet.\n\nYou can swap an Inventory Weapon with an Active Weapon at no cost during a rest or moment of calm; otherwise, you must mark a {{term:stress|Stress}} to do so.\n\nYour character can only have one Active Armor at a time. They can’t equip armor while in danger or under pressure; otherwise, they can equip or unequip armor without cost. Each armor has its own {{term:armor-slot|Armor Slots}}; if your character unequips their armor, track how many of its {{term:armor-slot|Armor Slots}} are marked. You can't carry armor in your inventory. When your character equips or unequips armor, recalculate your {{term:damage-thresholds|damage thresholds}}."
+  },
+  {
+    "id": "srd/rules/weapons",
+    "type": "rules",
+    "name": "Weapons",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 55
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 74,
+    "text": "All weapons have a {{term:tier|tier}}, trait, range, damage die, damage type, and {{term:burden|burden}}. Some weapons also have a feature.\n\n### Category\n\nA weapon’s **category** specifies whether it is a Primary or Secondary weapon. Your character can only equip up to one weapon of each category at a time.\n\n### Trait\n\nA weapon’s **trait** specifies which trait to use when making an attack roll with it.\n\n### Range\n\nA weapon’s **range** specifies the maximum distance between the attacker and their target when attacking with it.\n\n### Damage\n\nA weapon’s **damage** indicates the size of the damage dice you roll on a successful attack with it; you roll a number of dice equal to your {{term:proficiency|Proficiency}}. If the damage includes a flat modifier, this number is added to the total damage rolled, but is not altered or affected by {{term:proficiency|Proficiency}}.\n\n### Damage Type\n\nA weapon’s **damage type** indicates whether it deals physical or magic damage. Weapons that deal magic damage can only be wielded by characters with a {{term:spellcast-trait|Spellcast trait}}.\n\n### Burden\n\nA weapon’s **{{term:burden|burden}}** indicates how many **hands** it occupies when equipped. Your character’s maximum {{term:burden|burden}} is 2 hands.\n\n### Feature\n\nA weapon’s **feature** is a special rule that stays in effect while the weapon is equipped.\n\nYou can throw an equipped weapon at a target within {{term:very-close|Very Close range}}, making the attack roll with {{term:finesse|Finesse}}. On a success, deal damage as usual for that weapon. Once thrown, the weapon is no longer considered equipped. Until you retrieve and re-equip it, you can’t attack with it or benefit from its features."
+  },
+  {
+    "id": "srd/rules/combat-wheelchair",
+    "type": "rules",
+    "name": "Combat Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 75,
+    "text": "_By Mark Thompson_\n\nThe combat wheelchair is a ruleset designed to help you play a wheelchair user in Daggerheart. This section provides mechanics and narrative guidance for you to work from, but feel free to adapt the flavor text to best suit your character. Have fun with your character’s wheelchair design, and make it as unique or tailored to them as you please."
+  },
+  {
+    "id": "srd/rules/action-and-movement",
+    "type": "rules",
+    "name": "Action and Movement",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/combat-wheelchair",
+    "order": 76,
+    "text": "When describing how your character moves, you can use descriptions such as the following:\n\n- “I roll over to the door to see if it’s open.”\n- “I wheel myself over to the group to ask what’s going on.”\n- “I pull my brakes and skid to a halt, turning in my seat to level my bow at the intruder.”"
+  },
+  {
+    "id": "srd/rules/consequences",
+    "type": "rules",
+    "name": "Consequences",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/combat-wheelchair",
+    "order": 77,
+    "text": "Here are some ways you might describe complications you encounter when your character uses their wheelchair:\n\n“I pull my brakes, but I don’t think to account for the loose gravel on the ground.”\n\n“I hit a patch of ice awkwardly and am sent skidding out past my target.”\n\n“I go to push off in pursuit, but one of my front caster wheels snags on a crack in the pavement, stalling me for a moment.”\n\nGMs should avoid breaking a character's wheelchair or otherwise removing it from play as a consequence, unless everyone at the table, especially the wheelchair user’s player, gives their approval."
+  },
+  {
+    "id": "srd/rules/combat-wheelchair-evasion",
+    "type": "rules",
+    "name": "Evasion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/combat-wheelchair",
+    "order": 78,
+    "text": "Your character is assumed to be skilled in moving their wheelchair and navigating numerous situations in it. As a result, the only wheelchair that gives a penalty to a PC's {{term:evasion|Evasion}} is the Heavy Frame model."
+  },
+  {
+    "id": "srd/rules/burden",
+    "type": "rules",
+    "name": "Burden",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/combat-wheelchair",
+    "order": 79,
+    "text": "All wheelchairs can be maneuvered using one or two hands outside of combat. However, when being used as a weapon, the chair is restricted to requiring one or two hands to perform attacks, depending on the model you’ve chosen. If you’re playing a character who has limited to no mobility in their arms, their wheelchair can be attuned to them by magical means. For example, your character might use a psychic link to guide the chair around like a pseudo-electric wheelchair. All the rules presented here can be tailored and adapted to any character's needs."
+  },
+  {
+    "id": "srd/rules/choosing-your-model",
+    "type": "rules",
+    "name": "Choosing Your Model",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "parentId": "srd/rules/combat-wheelchair",
+    "order": 80,
+    "text": "All combat wheelchairs are equipped as Primary Weapons. There are three models of wheelchair available: light, heavy, and arcane. You’re encouraged to consider the type of character you’re playing and the class they belong to, then choose the model that best matches that character concept.\n\n**Light Frame Models**\n\nThough tough, these wheelchairs have light frames that allow the chair to move with your character in more acrobatic ways. These models are best suited to adventurers who rely on speed and flexibility."
+  },
+  {
+    "id": "srd/rules/armor",
+    "type": "rules",
+    "name": "Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 72
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 81,
+    "text": "Every armor has a name, base {{term:damage-thresholds|damage thresholds}}, and a base {{term:armor-score|Armor Score}}. Some armor also has a feature.\n\n- An armor’s **base armor score** indicates how many {{term:armor-slot|Armor Slots}} it provides its wearer before additional bonuses are added to calculate their total {{term:armor-score|Armor Score}}. A PC’s {{term:armor-score|Armor Score}} can’t exceed 12.\n- An armor’s **base thresholds** determine its wearer’s Major and {{term:damage-thresholds|Severe damage}} thresholds before adding bonuses to calculate their final {{term:damage-thresholds|damage thresholds}}. When recording your character’s {{term:damage-thresholds|damage thresholds}} in the “Damage & Health” section of your character sheet, you always add your character’s level to those values.\n- An armor’s **feature** is a special rule that stays in effect while the armor is equipped.\n\nWhile **unarmored,** your character’s base {{term:armor-score|Armor Score}} is 0, their {{term:damage-thresholds|Major threshold}} is equal to their level, and their {{term:damage-thresholds|Severe threshold}} is equal to twice their level.\n\n### Reducing Incoming Damage\n\nWhen you take damage, you can mark one {{term:armor-slot|Armor Slot}} to reduce the severity of the damage by one threshold (Severe to Major, Major to Minor, Minor to nothing). If your character has an {{term:armor-score|Armor Score}} of 0, you can’t mark {{term:armor-slot|Armor Slots}}. If an effect {{term:temporary|temporarily}} increases your {{term:armor-score|Armor Score}}, it increases your available {{term:armor-slot|Armor Slots}} by the same amount; when the effect ends, so does the availability of these {{term:armor-slot|Armor Slots}}."
+  },
+  {
+    "id": "srd/rules/loot",
+    "type": "rules",
+    "name": "Loot",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 75
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 82,
+    "text": "**Loot** comprises any consumables or reusable items the party acquires."
+  },
+  {
+    "id": "srd/rules/items",
+    "type": "rules",
+    "name": "Items",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 75
+    },
+    "parentId": "srd/rules/loot",
+    "order": 83,
+    "text": "**Items** can be used until sold, discarded, or lost.\n\nYou can use the tables below to generate items ahead of a game or during a session. Choose the desired rarity, roll the associated number of d12s, add their values together (if needed), and then reference the table for the item that matches that value.\n\n- **Common (1d12 or 2d12):** Common items might be found at an abandoned camp or readily available at a local shop.\n- **Uncommon (2d12 or 3d12):** Uncommon items might be found in limited supply in a shop, kept in a protected place in a camp, or offered as part of a reward for a job.\n- **Rare (3d12 or 4d12):** Rare items might be kept under lock and key in a shop, offered as the sole reward for a job, or discovered among a powerful NPC’s possessions.\n- **Legendary (4d12 or 5d12):** Legendary items might be the only item of their kind, a reward for an incredibly difficult or dangerous job, or a powerful adversary’s most precious and guarded treasure.\n\n**Core Set Items**\n\n_The following table includes the items from the Daggerheart Core Set._"
+  },
+  {
+    "id": "srd/rules/consumables",
+    "type": "rules",
+    "name": "Consumables",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 80
+    },
+    "parentId": "srd/rules/loot",
+    "order": 84,
+    "text": "Consumables are pieces of loot that can be used only once. You can hold up to five of each consumable at a time. Using a consumable doesn’t require a roll unless required by the GM or the demands of the fiction.\n\nYou can use the tables below to generate items ahead of a game or during a session. Choose the desired rarity, roll the associated number of d12s, add their values together (if needed), and then reference the table for the item that matches that value.\n\n- Common (1d12 or 2d12):** Common consumables might be found at an abandoned camp or readily available at a local store.\n- Uncommon (2d12 or 3d12):** Uncommon consumables might be found in limited supply in a shop, kept in a protected place in a camp, or offered as part of a reward for a job.\n- Rare (3d12 or 4d12):** Rare consumables might be kept under lock and key in a shop, offered as the sole reward for a job, or discovered in a powerful NPC’s possessions.\n- Legendary (4d12 or 5d12):** Legendary consumables might be the only item of their kind, a reward for an incredibly difficult or dangerous job, or a powerful adversary’s most precious and guarded treasure.\n\n**Core Set Consumables**\n\n_The following table includes the consumables from the Daggerheart Core Set._"
+  },
+  {
+    "id": "srd/rules/gold",
+    "type": "rules",
+    "name": "Gold",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 84
+    },
+    "parentId": "srd/rules/core-mechanics",
+    "order": 85,
+    "text": "Gold is an abstract measurement of how much wealth a character has, and is measured in **handfuls, bags,** and **chests,** with 10 handfuls to 1 bag, and 10 bags to 1 chest. When you have marked all of the slots in a category and you gain another gold reward in that category, mark a slot in the following category and clear all the slots in the current one.\n\nFor example, if you have 9 handfuls and gain another, you instead mark 1 bag and erase all handfuls. If you have 9 bags and gain another, you mark 1 chest and erase all bags.\n\nYou can’t have more than 1 chest, so if all your Gold slots are marked, you’ll need to spend some of your gold or store it somewhere else before you can acquire more.\n\n**Optional Rule: Gold Coins**\n\nIf your group wants to track gold with more granularity, you can add **coins** as your lowest denomination. Following the established pattern, 10 coins equal 1 handful."
+  },
+  {
+    "id": "srd/rules/running-an-adventure",
+    "type": "rules",
+    "name": "Running an Adventure",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 85
+    },
+    "parentId": null,
+    "order": 86,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/running-an-adventure-introduction",
+    "type": "rules",
+    "name": "Introduction",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 85
+    },
+    "parentId": "srd/rules/running-an-adventure",
+    "order": 87,
+    "text": "The GM is responsible for guiding the narrative and roleplaying the world the PCs inhabit. This section provides you with advice for running Daggerheart: using the core mechanics; creating memorable encounters; planning exciting sessions; selecting, creating, and using GM moves; crafting a full campaign; running dynamic NPCs; and more."
+  },
+  {
+    "id": "srd/rules/gm-guidance",
+    "type": "rules",
+    "name": "GM Guidance",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 85
+    },
+    "parentId": "srd/rules/running-an-adventure",
+    "order": 88,
+    "text": "These three sections provide a foundation to help you get the most out of this game. The “GM Principles” are your guiding star—when in doubt, return to these principles."
+  },
+  {
+    "id": "srd/rules/gm-principles",
+    "type": "rules",
+    "name": "GM Principles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 85
+    },
+    "parentId": "srd/rules/gm-guidance",
+    "order": 89,
+    "text": "### Begin and End with the Fiction\n\n_Use the fiction to drive mechanics, then connect the mechanics_ _back to the fiction._\n\n### Collaborate at All Times, Especially During Conflict\n\n_The PCs are the protagonists of the campaign; antagonism_ _between player and GM should exist only in the fiction._\n\n### Fill the World with Life, Wonder, and Danger\n\n_Showcase rich cultures, take the PCs to wondrous places, and_ _introduce them to dangerous creatures._\n\n### Ask Questions and Incorporate the Answers\n\n_Ensuring that the players’ ideas are included results in a_ _narrative that supports the whole group’s creativity._\n\n### Give Every Roll Impact\n\n_Only ask the players to roll during meaningful moments._\n\n### Play to Find Out What Happens\n\n_Be surprised by what the characters do, the choices they make,_ _and the people they become._\n\n### Hold on Gently\n\n_Don’t worry if you need to abandon or alter something that_ _came before._"
+  },
+  {
+    "id": "srd/rules/gm-practices",
+    "type": "rules",
+    "name": "GM Practices",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 85
+    },
+    "parentId": "srd/rules/gm-guidance",
+    "order": 90,
+    "text": "### Cultivate a Curious Table\n\n_Follow what catches the players’ interest to foster an_ _environment of creative inquiry._\n\n### Gain Your Players’ Trust\n\n_Act in good faith, follow through on your promises, admit your_ _mistakes._\n\n### Keep the Story Moving Forward\n\n_Advance the story through escalating action, new information,_ _or changing circumstances after every {{term:action-roll|action roll}}, whether it_ _succeeds or fails._\n\n### Cut to the Action\n\n_Skip past the boring bits. When a scene drags on, end it._\n\n### Help the Players Use the Game\n\n_Players have more fun when you help them understand the_ _system._\n\n### Create a Meta Conversation\n\n_Empower players to speak out of character, use safety tools, and_ _ask for clarification._\n\n### Tell Them What They Would Know\n\n_Don’t hide obvious details or important information from the_ _players._\n\n### Ground the World in Motive\n\n_An NPC’s actions flow from their goals and desires._\n\n### Bring the Game’s Mechanics to Life\n\n_Set a good example of how fiction and mechanics work together_ _to enhance the game experience._\n\n### Reframe Rather Than Reject\n\n_If a player’s contribution conflicts with the fiction, work with_ _them to reshape it._\n\n### Work in Moments and Montages\n\n_When framing a scene, decide which beats should be savored_ _and which shouldn’t linger._"
+  },
+  {
+    "id": "srd/rules/pitfalls-to-avoid",
+    "type": "rules",
+    "name": "Pitfalls to Avoid",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 86
+    },
+    "parentId": "srd/rules/gm-guidance",
+    "order": 91,
+    "text": "### Undermining the Heroes\n\nIf a roll doesn’t go well, show how it was impacted by an adversary’s prowess, environmental factors, or unexpected surprises, rather than the PC’s incompetence.\n\n### Always Telling the Players What to Roll\n\nLet the players decide how to handle a challenge.\n\n### Letting Scenes Drag\n\nShake it up or cut away when a scene has concluded, the table’s energy is flagging, or people are talking in circles.\n\n### Singular Solutions\n\nDon’t get hung up on one right answer to a problem. If the players have a clever idea, make it work.\n\nOverplanning\n\nSpend your prep time inventing situations instead of scripting scenes. If the players surprise you, take a break to think through your options.\n\n### Hoarding Fear\n\nSpend {{term:fear|Fear}} when you have the opportunity. The players will always generate more.\n\n_For more in-depth GM guidance, see pg. 140 of the_ _Daggerheart Core Rulebook._"
+  },
+  {
+    "id": "srd/rules/core-gm-mechanics",
+    "type": "rules",
+    "name": "Core GM Mechanics",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 86
+    },
+    "parentId": "srd/rules/running-an-adventure",
+    "order": 92,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/rolling-dice",
+    "type": "rules",
+    "name": "Rolling Dice",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 86
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 93,
+    "text": "The GM has no {{term:duality-dice|Duality Dice}}; instead, they roll a single d20 called the GM’s Die.\n\n### Adversary Attack Rolls\n\nWhen an adversary attacks a PC, roll your d20 and add the adversary’s attack bonus to the result. If the total meets or beats the target’s {{term:evasion|Evasion}}, the attack succeeds; otherwise, the attack fails. On a successful attack, roll the attack’s damage dice to determine how much it deals.\n\nIf you roll a natural 20 on an attack, your roll automatically succeeds and you deal extra damage. Roll damage normally, then add the highest number on the damage dice to the total. For example, an attack that deals 3d6+2 deals 18+3d6+2 on a {{term:critical-success|critical success}}; the {{term:critical-success|critical success}} does not affect the flat damage modifier.\n\n**_Note:_** _a {{term:critical-success|critical success}} on an adversary’s {{term:reaction-roll|reaction roll}}_ _automatically succeeds, but confers no additional benefit._\n\n### Guidance on Action Rolls\n\nAfter a player describes a move they want to make during the game, you might decide an {{term:action-roll|action roll}} is necessary to determine how the scene progresses. Use this guide to determine what to present the player, choosing whichever option best fits the situation:\n\n- Determine whether the roll is necessary, considering the PC’s {{term:experience|Experiences}} or backstory, the pressure they’re acting under, and the possible outcomes.\n- Establish the stakes of an {{term:action-roll|action roll}} before the player makes it.\n- Communicate any unavoidable consequences.\n- If desired, you can offer the player the opportunity to forgo an {{term:action-roll|action roll}} in exchange for agreeing to an interesting outcome, cost, or complication."
+  },
+  {
+    "id": "srd/rules/making-moves",
+    "type": "rules",
+    "name": "Making Moves",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 86,
+      "pageEnd": 87
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 94,
+    "text": "As the GM, you have **GM moves** that change the story in response to the players’ actions. GM moves aren’t bound by specific spells or effects—when you make a GM move, you can describe the action in whatever way the fiction demands.\n\nGM moves happen during **GM turns.** A GM turn begins when the {{term:spotlight|spotlight}} passes to them and ends when the {{term:spotlight|spotlight}} passes back to the players.\n\n### When to Make a Move\n\nThe GM can make a GM move whenever you want, but the frequency and severity depends on the type of story you’re telling, the actions your players take, and the tone of the session you’re running.\n\nMake a GM move when the players:\n\n- Roll with {{term:fear|Fear}}\n- Fail an {{term:action-roll|action roll}}\n- Do something that has unavoidable consequences\n- Give you a “golden opportunity” (an opening that demands an immediate response)\n- Look to you for what happens next\n\n### Choosing GM Moves\n\nThe result of a player’s {{term:action-roll|action roll}} determines your response:\n\nOn a **{{term:critical-success|Critical Success}},** you let the player describe their success, then give them an additional opportunity or {{term:advantage|advantage}}.\n\nOn a **Success with {{term:hope|Hope}},** you let the player describe their success, then you show how the world reacts to it.\n\nOn a **Success with {{term:fear|Fear}},** you work with the player to describe their success, then take a {{term:fear|Fear}} and make a GM move to introduce a minor consequence, complication, or cost:\n\n- An adversary attacks\n- The PC marks a {{term:stress|Stress}}\n- You introduce a new threat\n- You raise the stakes of the conflict\n\nOn a **Failure with {{term:hope|Hope}},** you describe how the PC fails to get what they want, then make a GM move to introduce a minor consequence, complication, or cost:\n\n- An adversary attacks\n- The PC marks a {{term:stress|Stress}}\n- You introduce a new threat\n- You raise the stakes of the conflict\n\n**On a Failure with {{term:fear|Fear}},** you describe how things go wrong, then make a GM move to introduce a major consequence, complication, or cost:\n\n- You put them in immediate danger\n- They become the focus of multiple adversaries\n- They are separated from their party\n- They lose an important opportunity for good.\n\n**QUICK REFERENCE:** RESOLVING ACTION ROLLS\n\n_If you’re unsure how to resolve a roll, think about these quick_ _phrases:_\n\n**Success with {{term:hope|Hope}}:** Yes, and… (You get what you want and gain a {{term:hope|Hope}}.)\n\n**Success with {{term:fear|Fear}}:** Yes, but… (You get what you want, but there’s a consequence, and the GM gains a {{term:fear|Fear}}.)\n\n**Failure with {{term:hope|Hope}}:** No, but… (Things don’t go as planned, but you gain a {{term:hope|Hope}}.)\n\n**Failure with {{term:fear|Fear}}:** No, and… (Things don’t go as planned and it gets worse. The GM gains a {{term:fear|Fear}}.)\n\nIf the move you should make is not obvious from the fiction, draw inspiration from the “Example GM Moves” list:\n\n- Introduce a new obstacle or enemy\n- Ask the player what happens\n- Have the PC mark a {{term:stress|Stress}}\n- Tell the players “everything is fine… for now.”\n\n### Soft and Hard Moves\n\n**Soft moves** go easier on the players—they give the party new information about the scene and offer them an opportunity to react to it. **Hard moves** are harsher, more impactful, or more direct—the PCs don’t get an opening to interrupt, alter, or anticipate the outcome.\n\nUse softer moves on rolls with {{term:hope|Hope}} and harder moves on rolls with {{term:fear|Fear}}.\n\n**Example GM Moves**\n\n- Show how the world reacts\n- Ask a question and build on the answer\n- Make an NPC act in accordance with their motive\n- Drive a PC to take action by dangling their goals in front of them\n- Signal an imminent off-screen threat\n- Reveal an unwelcome truth or unexpected danger\n- Force the group to split up\n- Make a PC mark {{term:stress|Stress}}\n- Make a move the characters don’t see\n- Show the collateral damage\n- Clear an adversary’s condition\n- Shift the environment\n- Spotlight an adversary\n- Capture someone or something important\n- Use a PC’s backstory against them\n- Take away an opportunity permanently."
+  },
+  {
+    "id": "srd/rules/using-fear",
+    "type": "rules",
+    "name": "Using Fear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 87,
+      "pageEnd": 88
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 95,
+    "text": "You start a campaign with 1 {{term:fear|Fear}} per PC in the party.\n\nYou gain {{term:fear|Fear}} whenever a PC rolls with {{term:fear|Fear}}, the PCs take a rest (see: Downtime), or when an ability or effect tells you to.\n\nYou can never have more than 12 {{term:fear|Fear}} at one time.\n\n{{term:fear|Fear}} carries over between sessions.\n\nSpend a {{term:fear|Fear}} to:\n\n- Interrupt the players to steal the {{term:spotlight|spotlight}} and make a move\n- Make an additional GM move\n- Use an adversary’s {{term:fear|Fear}} Feature\n- Use an environment’s {{term:fear|Fear}} Feature\n- Add an adversary’s {{term:experience|Experience}} to a roll\n\nThe dramatic tension of a scene correlates with the amount of {{term:fear|Fear}} you spend during it. For guidance on how much {{term:fear|Fear}} you should spend in a scene, consult the following table:\n\n**Incidental** A catch-up between PCs after an emotionally charged scene; gathering information; resupplying at a local market; resting during {{term:downtime|downtime}}.\n\n0–1 {{term:fear|Fear}}\n\n**Minor** A travel sequence; a minor skirmish that introduces new foes or signals future trouble.\n\n1–3 {{term:fear|Fear}}\n\n**Standard** A substantial battle with a notable objective; perilous travel that tests might and wit; a tense social encounter seeking crucial information or aid.\n\n2–4 {{term:fear|Fear}}\n\n**Major** A large battle with a Solo or Leader adversary; a character-defining scene with a significant change to a character’s personal story (such as revelation, growth, and betrayal).\n\n4–8 {{term:fear|Fear}}\n\n**Climactic** A major confrontation with the villain of a story arc; an epic set piece battle; a judicial duel to determine an important NPC’s fate.\n\n6–12 {{term:fear|Fear}}\n\nIf you find yourself with a **large amount of {{term:fear|Fear}},** consider:\n\n- **Spending Fast:** Spend {{term:fear|Fear}} before the players have a chance to react\n- **Spending Often:** Spend {{term:fear|Fear}} every time the {{term:spotlight|spotlight}} swings to you\n- **Spending Big:** Spend {{term:fear|Fear}} to make multiple moves in a row\n\nSpending {{term:fear|Fear}} to make a move communicates the increased impact of your action. {{term:fear|Fear}} moves often include one or more of these elements:\n\n- Introducing new adversaries to a scene when their appearance hasn’t been foreshadowed or lacks context.\n- An adversary activating a powerful spell or transformation to deal massive damage or boost their capabilities.\n- An environment exerting a strong negative effect on the party."
+  },
+  {
+    "id": "srd/rules/difficulty-benchmarks",
+    "type": "rules",
+    "name": "Difficulty Benchmarks",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 88
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 96,
+    "text": "The {{term:difficulty|Difficulty}} of an attack roll against an adversary is equal to the adversary’s {{term:difficulty|Difficulty}} score. The {{term:difficulty|Difficulty}} of any other {{term:action-roll|action rolls}} against an adversary is equal to the adversary’s {{term:difficulty|Difficulty}} score, plus (if applicable) the value of one of the adversary relevant {{term:experience|Experience}} modifiers.\n\nWhen a player makes an {{term:action-roll|action roll}} without a specified {{term:difficulty|Difficulty}}, the GM sets the {{term:difficulty|Difficulty}} according to the totality of the circumstances. Refer to the following benchmark table for more guidance:"
+  },
+  {
+    "id": "srd/rules/agility",
+    "type": "rules",
+    "name": "Agility",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 88
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 97,
+    "text": "| roll | sprint | leap | Maneuver |\n| --- | --- | --- | --- |\n| **5** | Sprint within {{term:close|Close range}} across an open field with an enemy present. | Make a running jump of half your height (about 3 feet for a human). | Walk slowly across a narrow beam. |\n| **10** | Sprint within {{term:far|Far range}} across an open field with an enemy present. | Make a running jump of your height (about 6 feet for a human). | Walk quickly across a narrow beam. |\n| **15** | Sprint within {{term:close|Close range}} across rough terrain with an enemy present. | Make a running jump of double your height (about 12 feet for a human). | Run across a narrow beam. |\n| **20** | Sprint within {{term:close|Close range}} through an active battle of multiple enemies. | Make a running jump of three times your height (about 18 feet for a human). | Run across a narrow beam in heavy wind. |\n| **25** | Sprint within {{term:far|Far range}} through a pitched battle in rough terrain. | Make a running jump of five times your height (about 30 feet for a human). | Run across a very narrow beam in an active rainstorm. |\n| **30** | Sprint across the heads of your enemies in a pitched battle. | Make a running jump of ten times your height (about 60 feet for a human). | Run across an inch-wide, oil-slicked beam in an active rainstorm. |"
+  },
+  {
+    "id": "srd/rules/strength",
+    "type": "rules",
+    "name": "Strength",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 89
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 98,
+    "text": "| roll | lift | smash | grapple |\n| --- | --- | --- | --- |\n| **5** | Lift a chair. | Destroy a glass cup. | Subdue a child. |\n| **10** | Lift a table or small chest. | Destroy a small wooden table. | Subdue a weak adult. |\n| **15** | Lift a grown person or large chest. | Break through a wooden door. | Subdue an average adult. |\n| **20** | Lift the side of a laden cart or carry a large chest up stairs. | Break through a stone wall. | Subdue a skilled wrestler. |\n| **25** | Lift a horse, an ox, or a large monster. | Break through a dragon’s teeth. | Subdue a large beast. |\n| **30** | Lift a falling portcullis gate. | Break a god’s grip. | Subdue a legendary beast. |"
+  },
+  {
+    "id": "srd/rules/finesse",
+    "type": "rules",
+    "name": "Finesse",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 89
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 99,
+    "text": "| roll | control | hide | tinker |\n| --- | --- | --- | --- |\n| **5** | Ride a horse through easy terrain. | Evade notice under full cover on a moonless night. | Open a sticky lock with the appropriate key. |\n| **10** | Drive an ox-pulled cart. | Evade notice in limited cover on a moonless night. | Open a simple puzzle box. |\n| **15** | Ride a horse through rough terrain. | Evade notice in limited cover on an average night. | Disable a standard trap. |\n| **20** | Drive a cart through rough terrain. | Evade notice in the shadows on an average night. | Disable a complicated trap. |\n| **25** | Ride a wild horse through dangerous terrain. | Evade notice with minimal cover in ample light. | Open a door secured by a sequence of elaborate locks. |\n| **30** | Ride an enraged beast through dangerous terrain. | Evade notice with no cover in full daylight. | Disable an incredibly sensitive and deadly trap. |"
+  },
+  {
+    "id": "srd/rules/instinct",
+    "type": "rules",
+    "name": "Instinct",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 89
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 100,
+    "text": "| roll | perceive | sense | navigate |\n| --- | --- | --- | --- |\n| **5** | Hear a loud noise twenty paces away. | Detect an obvious ambush or notice an obvious deception. | Follow a well-trod path in good lighting and weather. |\n| **10** | Hear a speaking voice fifty paces away. | Detect a looming threat or notice an average person’s lies. | Follow an average path in good lighting and weather. |\n| **15** | Hear someone walking in the woods fifty paces away. | Detect hostile intent from a foe or see through a merchant’s lies. | Follow a subtle path through rough conditions. |\n| **20** | Hear someone sneaking through the woods fifty paces away. | Detect a politician’s veiled hostility or detect a nearby assassin. | Follow a subtle path through harsh conditions. |\n| **25** | Hear a prowling animal fifty paces away. | Identify a spymaster’s plot or read a politican’s true intentions. | Find your way with no path through dangerous conditions. |\n| **30** | Hear a diving bird a hundred paces away. | Sense a shred of doubt within a god’s pronouncement. | Find your way through a trickery god’s maze. |"
+  },
+  {
+    "id": "srd/rules/presence",
+    "type": "rules",
+    "name": "Presence",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 90
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 101,
+    "text": "| roll | charm | perform | deceive |\n| --- | --- | --- | --- |\n| **5** | Win the trust of a friendly neighbor. | Earn a meal from a friendly crowd. | Trick a trusting acquaintance. |\n| **10** | Win the trust of a friendly stranger. | Earn room and board in a small town or impress a small crowd. | Trick an average stranger. |\n| **15** | Win the trust of a cautious stranger or talk your way into a noble’s party. | Earn room and board in a low-end tavern or impress a large crowd. | Trick an average merchant. |\n| **20** | Win the trust of a sympathetic foe or talk your way into an enemy’s party. | Earn lodging in a high-end tavern or impress a full theater. | Trick a trained courtier. |\n| **25** | Turn an enemy against their ruler or talk your way into a fae court. | Earn your keep in a royal court or impress a full colosseum. | Trick a spymaster. |\n| **30** | Talk a hostile god into granting you a boon. | Save yourself from execution after offending the queen. | Trick a god. |"
+  },
+  {
+    "id": "srd/rules/knowledge",
+    "type": "rules",
+    "name": "Knowledge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 90
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 102,
+    "text": "| roll | recall | analyze | comprehend |\n| --- | --- | --- | --- |\n| **5** | Recall uncommon facts about your community. | Unpack an obvious metaphor in a simple text. | Learn simple skills from an excellent teacher. |\n| **10** | Recall uncommon facts about a neighboring community. | Identify obvious subtext in a conversation. | Learn simple skills from an average teacher. |\n| **15** | Recall uncommon facts about a distant community. | Break an average cipher in a coded message. | Learn complicated skills from an excellent teacher. |\n| **20** | Recall specialized facts about a distant community. | Identify a weakness in a complicated battle plan. | Learn complicated skills under poor conditions. |\n| **25** | Recall specialized facts about a fallen kingdom. | Predict the downfall of a nation based on concealed misdeeds. | Learn complicated skills quickly under dangerous conditions. |\n| **30** | Recall secret information about an obscure historical group. | Identify the weakness in a divine champion’s fighting form. | Learn complicated skills quickly from incomplete information. |"
+  },
+  {
+    "id": "srd/rules/giving-advantage-and-disadvantage",
+    "type": "rules",
+    "name": "Giving Advantage and Disadvantage",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 90
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 103,
+    "text": "To viscerally convey how a PC’s actions or circumstances affect their ability to act, grant them {{term:advantage|advantage}} (or impose {{term:disadvantage|disadvantage}}) instead of adjusting the {{term:difficulty|Difficulty}} of an {{term:action-roll|action roll}}.\n\n### Adversary Action Rolls\n\nBy default, adversaries don’t normally make {{term:action-roll|action rolls}} except for attack rolls and any unique actions described in their stat blocks. Any other action an adversary attempts simply succeeds without an {{term:action-roll|action roll}}; if you want an adversary’s action to have a chance of failure, have any relevant PCs make {{term:reaction-roll|reaction rolls}} instead.\n\nHowever, for especially dramatic or difficult tasks that the PCs can’t influence, you can give an adversary an **{{term:action-roll|action roll}}** anyway. For an adversary’s {{term:action-roll|action roll}}, roll a d20. If the result is equal to or greater than the action’s {{term:difficulty|Difficulty}}, the action succeeds—otherwise it fails. You can spend a {{term:fear|Fear}} before rolling to add a relevant {{term:experience|Experience}} from the adversary’s stat block to the total. Use the same procedure when an adversary makes a **{{term:reaction-roll|reaction roll}}.**\n\n### Adversary Advantage & Disadvantage\n\nIf an adversary has {{term:advantage|advantage}} on an {{term:action-roll|action roll}}, the GM rolls an extra d20 and counts only the higher result. If an adversary has {{term:disadvantage|disadvantage}} on an {{term:action-roll|action roll}}, the GM rolls an extra d20 and counts only the lower result.\n\n### Adversary Attacks\n\nWhen an adversary attacks a PC, the GM rolls a d20 and adds the adversary’s Attack Modifier to the result. If the total meets or beats the target’s {{term:evasion|Evasion}}, the attack succeeds; otherwise, it fails. Before rolling, the GM can grant the attacking adversary {{term:advantage|advantage}}, impose {{term:disadvantage|disadvantage}}, or spend a {{term:fear|Fear}} to add a relevant {{term:experience|Experience}} from the adversary’s stat block to the total.\n\nOn a success, the adversary deals the damage listed in their stat block to the target.\n\nWhen an adversary’s action lets the GM make an **attack** **against multiple targets,** they make one attack roll and compare it to each target’s {{term:evasion|Evasion}} separately."
+  },
+  {
+    "id": "srd/rules/countdowns",
+    "type": "rules",
+    "name": "Countdowns",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 104,
+    "text": "**Countdowns** represent a period of time or series of events preceding a future effect. A {{term:countdown|countdown}} begins at a starting value. When a {{term:countdown|countdown}} **advances,** it’s reduced by 1. The {{term:countdown|countdown}}’s effect is triggered when the {{term:countdown|countdown}} reaches 0.\n\n**_Note:_** _You can track {{term:countdown|countdowns}} by “spinning down” dice or_ _ticking off boxes._\n\n**Standard {{term:countdown|countdowns}}** advance every time a player makes an {{term:action-roll|action roll}}. If an adversary or environment ability refers to a “Countdown [n],” then it means a standard {{term:countdown|countdown}} with a starting value of n.\n\n**Dynamic {{term:countdown|countdowns}}** advance by up to 3 depending on the outcomes of {{term:action-roll|action rolls}}. **Consequence {{term:countdown|countdowns}}** are dynamic {{term:countdown|countdowns}} to negative effects. **Progress** **{{term:countdown|countdowns}}** are dynamic {{term:countdown|countdowns}} to positive effects. Dynamic {{term:countdown|countdowns}} advance according to this chart:"
+  },
+  {
+    "id": "srd/rules/dynamic-countdown-advancement",
+    "type": "rules",
+    "name": "Dynamic Countdown Advancement",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 105,
+    "text": "**Roll Result** **Progress** **Advancement**\n\n**Consequence** **Advancement**\n\nFailure with {{term:fear|Fear}} No advancement Tick down 3\n\nFailure with {{term:hope|Hope}} No advancement Tick down 2\n\nSuccess with {{term:fear|Fear}} Tick down 1 Tick down 1\n\nSuccess with {{term:hope|Hope}}\n\nTick down 2 No advancement\n\n{{term:critical-success|Critical Success}} Tick down 3 No advancement"
+  },
+  {
+    "id": "srd/rules/advanced-countdown-features",
+    "type": "rules",
+    "name": "Advanced Countdown Features",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 106,
+    "text": "- Countdowns with **randomized starting values**\n- **Loop** {{term:countdown|countdowns}} that reset to their starting value after their {{term:countdown|countdown}} effect is triggered.\n- **Increasing** {{term:countdown|countdowns}} that increase their starting value by 1 every time they loop.\n- **Decreasing** {{term:countdown|countdowns}} that decrease their starting value by 1 every time they loop.\n- **Linked** progress and consequence {{term:countdown|countdowns}} that simultaneously advance according to the same {{term:action-roll|action roll}} outcomes.\n- **Long-term {{term:countdown|countdowns}}** that advance after **rests** instead of {{term:action-roll|action rolls}}."
+  },
+  {
+    "id": "srd/rules/giving-out-gold-equipment-and-loot",
+    "type": "rules",
+    "name": "Giving Out Gold, Equipment, and Loot",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 107,
+    "text": "It’s up to you and your players how much importance you want to place on gold, equipment, and loot in your campaign.\n\nAdjust the availability and utility of wealth and equipment to reflect the tone, themes, and setting of your campaign.\n\nIf you don’t wish to track gold, then when PCs go shopping for new items let them pick one or two from a short, preselected list that aligns with your campaign setting and the party’s current location.\n\nOtherwise, set the prices of goods and services by adjusting the entries in the Average Costs table to reflect your campaign setting:\n\nMeals for a party of adventurers per night\n\n1 Handful\n\nStandard inn room per night 1 Handful\n\nLuxury inn room per night 1 Bag\n\nCarriage ride 2 Handfuls\n\nMount (horse, mule, etc.) 3 Bags\n\nSpecialized tools 3 Handfuls\n\nFine clothing 3 Handfuls\n\nLuxury clothing 1 Bag\n\nTier 1 equipment (weapons, armor) 1–5 Handfuls\n\nTier 2 equipment (weapons, armor) 1–2 Bags\n\nTier 3 equipment (weapons, armor) 5–10 Bags\n\nTier 4 equipment (weapons, armor) 1–2 Chests"
+  },
+  {
+    "id": "srd/rules/running-gm-npcs",
+    "type": "rules",
+    "name": "Running GM NPCs",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 91
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 108,
+    "text": "When you run NPCs as the GM, you should always strive to follow your GM principles and use them to bring the world to life. Differentiate NPCs with unique manners of speech and action; let their individual goals and desires motivate their actions.\n\nThe only essential elements for a NPC are their **name,** **description,** and **motive.** If it’s likely that the PCs will roll actions against them, give them a **{{term:difficulty|Difficulty}}.** Adversaries can be invented or improvised by modifying the stat block of another adversary.\n\nIf an NPC becomes an ally in combat, they don’t need a stat block—just put the {{term:spotlight|spotlight}} on what they do and show how their involvement alters the fiction. If a PC capitalizes on their help during the scene, give the PC {{term:advantage|advantage}}. NPCs that don’t have {{term:hit-points|Hit Points}} or {{term:stress|Stress}} can still be injured or killed if the fiction demands it.\n\nIf you want an important NPC to mechanically interact with the system, you can give them one or more features with specific **triggers** and **effects.** An NPC might also have a choice that adjusts the parameters of their feature. For example:\n\nARCANE HOLD\n\n**_Choice:_** When the battle begins, choose a favored PC.\n\n**_Trigger:_** The first time during a battle the favored PC is within {{term:close|Close range}} and hit with an attack.\n\n**_Effect:_** Make an attack roll with a +6 modifier against the adversary. On a success, the target is {{term:temporary|temporarily}} {{term:restrained|Restrained}} by tendrils of powerful magic."
+  },
+  {
+    "id": "srd/rules/npc-feature-examples",
+    "type": "rules",
+    "name": "NPC Feature Examples",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 92
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 109,
+    "text": "VOLLEY OF ARROWS\n\n**_Trigger:_** A battle begins and this NPC is involved.\n\n**_Effect:_** Activate a {{term:countdown|countdown}} (Loop 3). It ticks down when a PC misses an attack. When it triggers, this NPC releases a volley of arrows at a target of the PCs’ choice, dealing **2d8+3** physical damage.\n\nMENTOR\n\n**_Choice:_** When the battle begins, choose a protégé PC.\n\n**_Trigger:_** Your protégé is within {{term:close|Close range}} and fails an attack roll.\n\n**_Effect:_** Move into {{term:melee|Melee range}} with the PC and give them advice or guidance. The next attack roll they make has {{term:advantage|advantage}}.\n\nREGROUP\n\n**_Choice:_** When a battle begins, choose a point within {{term:far|Far range}}.\n\n**_Trigger:_** All PCs have marked all of their {{term:armor-slot|Armor Slots}}.\n\n**_Effect:_** Teleport all PCs and this NPC to the chosen spot and clear an {{term:armor-slot|Armor Slot}} on each target.\n\nINTO THE NIGHT\n\n**_Trigger:_** The PCs start a {{term:long-rest|long rest}} with this NPC.\n\n**_Effect:_** Roll 1d4. On a 2 or less, this NPC steals 1 handful of gold from the party while they are sleeping, then disappears into the night."
+  },
+  {
+    "id": "srd/rules/optional-gm-mechanics",
+    "type": "rules",
+    "name": "Optional GM Mechanics",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 92
+    },
+    "parentId": "srd/rules/core-gm-mechanics",
+    "order": 110,
+    "text": "### Fate Rolls\n\nWhen the GM wants to leave an outcome entirely up to chance, they call for a fate roll. The GM establishes what’s at stake and how the roll will be interpreted. Then a player rolls one of their {{term:duality-dice|Duality Dice}} and interprets the result.\n\n**_Examples:_**\n\n_“Roll your {{term:duality-dice|Fear Die}}. On a 4 or lower, the fire spreads beyond_ _this house.”_\n\n_“I think it’s really up to chance whether reinforcements will_ _make it to you in time. Go ahead and roll your {{term:duality-dice|Fear Die}}—__that’ll determine the starting size of the {{term:countdown|countdown}}. When_ _that triggers, reinforcements will arrive in your {{term:far|Far range}}.”_\n\n_“Go ahead and roll your {{term:duality-dice|Hope Die}} to see how big the crowd_ _at the inn is tonight. The higher the roll, the bigger the_ _crowd.”_\n\n_“Make a roll using your {{term:duality-dice|Hope Die}} to determine the number_ _of Stamina Potions the shop has in stock.”_\n\n### Falling and Collision Damage\n\nIf a character falls to the ground, you can use the following as a guide to determine the damage they take:\n\n- A fall from {{term:very-close|Very Close range}} deals 1d10+3 physical damage.\n- A fall from {{term:close|Close range}} deals 1d20+5 physical damage.\n- A fall from Far or {{term:very-far|Very Far range}} deals 1d100+15 physical damage, or death at the GM’s discretion.\n\nIf a character collides with an object or another character at a dangerous speed, they take 1d20+5 direct physical damage.\n\n### Moving and Fighting Underwater\n\nBy default, attack rolls made while the attacker is underwater have {{term:disadvantage|disadvantage}}.\n\nFor creatures that can’t breathe underwater, use a standard {{term:countdown|countdown}} (3) to track how long they can hold their breath. Advance the {{term:countdown|countdown}} whenever the PC takes an action. In addition if they fail a roll or roll with {{term:fear|Fear}} while underwater, you can spend your GM move to advance it an additional time—or twice, if they rolled a failure with {{term:fear|Fear}}.\n\nOnce the {{term:countdown|countdown}} ends, the underwater PC must mark a {{term:stress|Stress}} whenever they take an action.\n\n### Conflict Between PCs\n\nSometimes a player might want their character to act against another PC in the scene. Before jumping to rolling dice, discuss the situation with both players to decide how to resolve the conflict. A roll might not be necessary to reach an outcome—but if rolling will be fun for everyone involved, come to a consensus on the terms of the roll, then facilitate the scene according to the results.\n\nOn an attack roll against a PC, the attacker rolls against the defender’s {{term:evasion|Evasion}}, just like an adversary. On any other kind of {{term:action-roll|action roll}}, the instigator makes an {{term:action-roll|action roll}} and the target makes a {{term:reaction-roll|reaction roll}}. To succeed, the instigator must beat a {{term:difficulty|Difficulty}} equal to the total value of the {{term:reaction-roll|reaction roll}}."
+  },
+  {
+    "id": "srd/rules/adversaries-and-environments",
+    "type": "rules",
+    "name": "Adversaries and Environments",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 93
+    },
+    "parentId": "srd/rules/running-an-adventure",
+    "order": 111,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/using-adversaries",
+    "type": "rules",
+    "name": "Using Adversaries",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 93
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 112,
+    "text": ""
+  },
+  {
+    "id": "srd/rules/adversary-stat-blocks",
+    "type": "rules",
+    "name": "Adversary Stat Blocks",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 93,
+      "pageEnd": 94
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 113,
+    "text": "All the information required to run an adversary is contained in their stat block. An adversary’s stat block includes their:\n\n### Name\n\nEach stat block has a unique **name.** Abilities that affect adversaries with a certain name include all adversaries who use that stat block, regardless of their in-story name.\n\n### Tier\n\nEach adversary is designed to oppose PCs of a certain **{{term:tier|tier}}.** If you confront the party with an adversary from another {{term:tier|tier}}, adjust their stats.\n\n### Type\n\nThe adversary’s type appears alongside their {{term:tier|tier}}. An adversary’s **type** represents the role they play in a conflict. The adversary types are:\n\n- **Bruisers:** tough; deliver powerful attacks.\n- **Hordes:** groups of identical creatures acting together as a single unit.\n\n**_Note:_** _The number of creatures represented by each Hit_ _Point in a horde's stat block is indicated by \"X/{{term:hit-points|HP}}.\" For_ _example, a 2/{{term:hit-points|HP}} horde with 3 {{term:hit-points|HP}} represents a group_ _of six._\n\n- **Leaders:** command and summon other adversaries.\n- **Minions:** easily dispatched but dangerous in numbers.\n- **Ranged:** fragile in close encounters but deal high damage at range.\n- **Skulks:** maneuver and exploit opportunities to ambush opponents.\n- **Socials:** present challenges around conversation instead of combat.\n- **Solos:** present a formidable challenge to a whole party, with or without support.\n- **Standards:** representative of their fictional group.\n- **Supports:** enhance their allies and disrupt their opponents.\n\n### Description\n\nA summary of the adversary's appearance and demeanor.\n\n### Motives & Tactics\n\nSuggusted impulses, actions and goals for the adversary.\n\n### Difficulty\n\nThe {{term:difficulty|Difficulty}} of any roll made against the adversary, unless otherwise noted.\n\n### Damage Thresholds, Hit Points, and Stress\n\nThese systems function the same way they do for PCs. The numbers listed after “Threshold” are the adversary’s Major and Severe Thresholds.\n\n### Attack Modifier\n\nWhen you attack with the adversary, apply this bonus or penalty to your attack roll.\n\n### Standard Attack\n\nA description of the adversary’s primary mode of inflicting harm on the PCs. It includes the attack’s **name,** its effective **range,** and the **damage** it deals on a success. Using an adversary’s **standard attack** is a GM move.\n\n### Experience (optional)\n\nThe GM can spend a {{term:fear|Fear}} to add an adversary’s relevant {{term:experience|Experience}} to raise their attack roll or increase the {{term:difficulty|Difficulty}} of a roll made against them.\n\n**EXAMPLE EXPERIENCES:**\n\nAcrobatics Hunt from Above Navigation\n\nAmbusher Intimidation Nobility\n\nBartering Intrusion Quick Reflexes\n\nBlademaster Keen Senses Socialite\n\nBodyguard Magical {{term:knowledge|Knowledge}}\n\nStealth\n\nCommander Nature’s Friend Tracker\n\n### Feature(s)\n\nThere are three kinds of adversary features: **actions,** **reactions,** and **passives.** Note: each adversaries stress is tracked individually. If a feature requires the GM to spend {{term:stress|Stress}} to activate it, the {{term:stress|Stress}} must come from the adversary whose feature is being activate. If a feature has a {{term:fear|Fear}} requirement, it must be spent in addition to any {{term:fear|Fear}} already spent—for instance, to interrupt the PCs and put the {{term:spotlight|spotlight}} on the adversary.\n\n- **Actions:** a special attack or other unique action that the adversary can perform when the {{term:spotlight|spotlight}} is on them.\n- **Reactions:** special effects that take effect when their trigger occurs, regardless of whether the {{term:spotlight|spotlight}} is on the adversary.\n- **Passives:** special abilities that remain in effect by default and require no resources or triggers to activate.\n\n### Fear Feature(s)\n\nHigh-impact effects that cost a {{term:fear|Fear}} to activate.\n\n**EXAMPLE ADVERSARY FEATURES:**\n\n### Actions\n\n**Haymaker - Action:** Make an attack against a target within {{term:very-close|Very Close range}}. On a success, deal X direct physical damage.\n\n**Shredding Strike - Action:** Make an attack against a target within {{term:very-close|Very Close range}}. On a success, deal X physical damage and the target must mark an {{term:armor-slot|Armor Slot}} without gaining its benefit (they can still use armor to reduce the damage).\n\n**More Where That Came From - Action:** Summon three Jagged Knife Lackeys, who appear at {{term:far|Far range}}.\n\n### Reactions\n\n**Heavy Hitter - Reaction:** When this adversary deals damage with a standard attack, you can spend a {{term:fear|Fear}} to gain a +X bonus to the damage roll.\n\n**Team-Up - Reaction:** When another adversary within {{term:very-close|Very Close range}} of this adversary deals X damage to a creature, you can mark a {{term:stress|Stress}} to make a standard attack against that same creature. On a success, combine the damage.\n\n**Momentum - Reaction:** When this adversary makes a successful attack against a PC, you gain a {{term:fear|Fear}}.\n\n### Passives\n\n**Horde (X) - Passive:** When the Horde has marked half or more of their {{term:hit-points|HP}}, their standard attack deals X damage instead.\n\n**Minion (X) - Passive:** This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional Minion within range the attack would succeed against.\n\n**Relentless (X) - Passive:** This adversary can be spotlighted up to X times per GM turn. Spend {{term:fear|Fear}} as usual to {{term:spotlight|spotlight}} them.\n\n**Slow - Passive:** When you {{term:spotlight|spotlight}} this adversary and they don’t have a token on their stat block, they can’t act yet. Place a token on their stat block and describe what they’re preparing to do. When you {{term:spotlight|spotlight}} this adversary and they have a token on their stat block, clear the token and they can act.\n\n**Arcane Form - Passive:** This adversary is resistant to magic damage.\n\n**Armored Carapace - Passive:** When this adversary takes physical damage, reduce it by X.\n\n### Fear Features\n\n**Explosion - Action:** Spend a {{term:fear|Fear}} to erupt in a fiery explosion. Make an attack against all targets within {{term:close|Close range}}. Targets the adversary succeeds against take X magic damage and are knocked back to {{term:far|Far range}}.\n\n### Pool\n\nA pool is a collection of tokens shared by multiple adversaries. Each pool has a unique name, which is typically the name shared by the adversaries it affects. Unlike standard adversary tokens, pool tokens are not placed on a stat block; instead, the GM collects them in a separate location. Pools are empty when the scene begins and cleared when the scene ends.\n\n### Evolution\n\nEvolutions are features that alter an adversary when certain trigger conditions are met. When triggered, an evolution feature usually clears {{term:hit-points|HP}} or {{term:stress|Stress}}, alters the stats of the adversary’s standard attack, and gives the adversary access to new features. An adversary’s evolution can’t be triggered more than once in a scene."
+  },
+  {
+    "id": "srd/rules/building-balanced-encounters",
+    "type": "rules",
+    "name": "Building Balanced Encounters",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 94,
+      "pageEnd": 95
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 114,
+    "text": "When planning a battle, start with **[(3 x the number of** **PCs in combat) + 2] Battle Points** and make the following adjustments:\n\n**−1** for an easier or shorter fight\n\n**−2** if you’re using 2 or more Solo adversaries\n\n**−2** if you add +1d4 (or a static +2) to all adversaries’ damage rolls\n\n**+1** if you choose an adversary from a lower {{term:tier|tier}}\n\n**+1** if you don’t include any Bruisers, Hordes, Leaders, or Solos\n\n**+2** for a harder or longer fight\n\nThen spend your Battle Points to add an adversary to the encounter:\n\n**Spend 1 point** for each group of Minions equal to the size of the party.\n\n**Spend 1 point** for each Social or Support adversary.\n\n**Spend 2 points** for each Horde, Ranged, Skulk, or Standard adversary.\n\n**Spend 3 points** for each Leader adversary.\n\n**Spend 4 points** for each Bruiser adversary.\n\n**Spend 5 points** for each Solo adversary.\n\n### Defeated Adversaries\n\nWhen an adversary marks their last {{term:hit-points|Hit Point}}, they are defeated: incapacitated, tied up, routed, killed, or anything else the table decides makes sense.\n\n### Adversary Stat Block Benchmarks\n\n| Adversary Statistic | Tier 1 | Tier 2 | Tier 3 | Tier 4 |\n| --- | --- | --- | --- | --- |\n| Attack Modifier | +1 | +2 | +3 | +4 |\n| Damage Dice | 1d6+2 to 1d12+4 | 2d6+3 to 2d12+4 | 3d8+3 to 3d12+5 | 4d8+10 to 4d12+15 |\n| {{term:difficulty|Difficulty}} | 11 | 14 | 17 | 20 |\n| {{term:damage-thresholds|Damage Thresholds}} | Major 7/Severe 12 | Major 10/Severe 20 | Major 20/Severe 32 | Major 25/Severe 45 |"
+  },
+  {
+    "id": "srd/rules/using-environments",
+    "type": "rules",
+    "name": "Using Environments",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 158
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 115,
+    "text": "_Environments represent everything in a scene beyond the PCs and adversaries, such as the physical space, background NPCs, and_ _natural forces._"
+  },
+  {
+    "id": "srd/rules/environment-stat-block",
+    "type": "rules",
+    "name": "Environment Stat Block",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 158
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 116,
+    "text": "Each environment’s **stat block** presents their necessary mechanical statistics:\n\n### Name\n\nThe unique name of the environment stat block.\n\n### Tier\n\nThe PC {{term:tier|tier}} the environment is designed to challenge.\n\n### Type\n\nThe type of scene it most easily supports:\n\n- **Explorations** — wondrous locations with mysteries and marvels to discover\n- **Socials** — locations that primarily present interpersonal challenges\n- **Traversals** — dangerous locations where movement through and around the space itself is a challenge\n- **Events** — special activities or occurrences (rather than physical spaces)\n\n### Description\n\nAn evocative one-line summary of the environment.\n\n### Impulses\n\nThe manner or mode with which the environment pushs and pulls the people within them.\n\n### Difficulty\n\nThe standard {{term:difficulty|Difficulty}} for {{term:action-roll|action rolls}} made to overcome, oppose, or resist the environment or its elements.\n\n### Potential Adversaries\n\nSuggested adversaries that might appear in scenes within the environment.\n\n### Features\n\nFeatures provide inspiration for GM moves you can use that represent the dynamic landscape or situation.\n\n### Feature Questions\n\nPrompts for plot hooks, narrative engines, and connections to other story elements."
+  },
+  {
+    "id": "srd/rules/adapting-environments",
+    "type": "rules",
+    "name": "Adapting Environments",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 159
+    },
+    "parentId": "srd/rules/adversaries-and-environments",
+    "order": 117,
+    "text": "Sometimes you want to use an environment but it’s at the wrong {{term:tier|tier}} for your party. Or you might want to replace a feature or two, then present it as an entirely different environment. Whether planning your session or even improvising an environment mid-session, you can adjust an existing environment’s stat block to fit the needs of your scene or improvise elements as needed. The environments framework is there to help organize ideas, not to stifle creativity.\n\nWhen you need to quickly adjust a stat block to a different {{term:tier|tier}}, you can simply replace its existing statistics with those listed on the Environment Statistics by Tier table, using the column that corresponds to your party’s {{term:tier|tier}}.\n\nBENCHMARK STATISTICS FOR ENVIRONMENTS BY TIER\n\n**Environment Statistic** **Tier 1** **Tier 2** **Tier 3** **Tier 4**\n\nDamage Dice 1d6+1 to 1d8+3 2d6+3 to 2d10+2 3d8+3 to 3d10+1 4d8+3 to 4d10+10\n\n{{term:difficulty|Difficulty}} 11 14 17 20"
+  },
+  {
+    "id": "srd/rules/additional-gm-guidance",
+    "type": "rules",
+    "name": "Additional GM Guidance",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/running-an-adventure",
+    "order": 118,
+    "text": "_This section provides additional guidance for preparing and_ _running a session of Daggerheart._"
+  },
+  {
+    "id": "srd/rules/story-beats",
+    "type": "rules",
+    "name": "Story Beats",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 119,
+    "text": "In storytelling, a beat is a moment that changes the trajectory of the narrative—a shift in the world, a significant action or reaction, an emotional revelation, or an important decision. Take turns with the players, narrating a beat and then letting them react and carry the scene forward with their own beats. When preparing for a session, plan in terms of the moments that give shape to each scene or sequence, rather than pre-scripting specific details or exchanges."
+  },
+  {
+    "id": "srd/rules/preparing-combat-encounters",
+    "type": "rules",
+    "name": "Preparing Combat Encounters",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 120,
+    "text": "Build the hurdles the PCs face around the question of “What helps tell the story?” Enemies, environments, and hazards are the tools for heightening tension and creating drama. Ensure that combat is being used to give players more information about the unfolding story, revealing the world, the plot, or the characters."
+  },
+  {
+    "id": "srd/rules/battles-and-narrative",
+    "type": "rules",
+    "name": "Battles and Narrative",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 121,
+    "text": "Dynamic battles create suspense by forcing players to choose between their various objectives, engaging their character’s motivations and weaknesses, and creating the crucible that the players use to forge their characters into legendary heroes. When preparing combat encounters:\n\n- Consider the narrative function of the battle\n- Base adversaries’ moves on their motives\n- Use dynamic environments to bring the battleground to life\n- Add enemies that can interact with the PCs’ features and special abilities"
+  },
+  {
+    "id": "srd/rules/session-rewards",
+    "type": "rules",
+    "name": "Session Rewards",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 122,
+    "text": "Reward players at the end of a session with:\n\n- Useful information\n- Story hooks\n- Loot\n- Gold\n- Access to new equipment or enhancements"
+  },
+  {
+    "id": "srd/rules/crafting-scenes",
+    "type": "rules",
+    "name": "Crafting Scenes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 123,
+    "text": "Whenever you start a session, arrive at a new place, or change the situation, tell the players what they need to know by thinking with all of your senses and sharing something unique or unexpected about the fiction."
+  },
+  {
+    "id": "srd/rules/engaging-your-players",
+    "type": "rules",
+    "name": "Engaging Your Players",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 124,
+    "text": "Keep your players engaged by:\n\n- Rotating the Focus between the PCs\n- Tying Together Story Elements\n- Engaging Quiet Players\n- Using Visual Aids\n- Encouraging Unguided Play\n- Confronting the PCs with internal and external conflicts\n- Raise the Stakes by Spending {{term:fear|Fear}}\n- Layering Goals Other than Attrition into Combat (see Table of Random Objectives on the next page)\n\n1d12 Objective\n\n1 Acquire (obtain or steal) an important item or items.\n\n2 Capture one or more of the opponents.\n\n3 Activate a magical device.\n\n4 Frame a character or tarnish their reputation.\n\n5 Drive the opponent into a corner or ambush point.\n\n6 Stop a magical ritual, legal ceremony, or time-sensitive spell.\n\n7 Hold the line—keep the enemy from reaching a specific area or group.\n\n8 Plant evidence or a tracking device on a target.\n\n9 Secure a specific location ahead of another group’s arrival.\n\n10 Harass the opponent to deplete their resources or keep them occupied.\n\n11 Destroy a piece of architecture, a statue, a shrine, or a weapon.\n\n12 Investigate a situation to confirm or deny existing information."
+  },
+  {
+    "id": "srd/rules/phased-battles",
+    "type": "rules",
+    "name": "Phased Battles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 125,
+    "text": "Make battles by shifting the nature of its enemies or environment mid-combat:\n\n- Change the Terms of Engagement\n- Alter the Environment\n- Evolve the Opposition"
+  },
+  {
+    "id": "srd/rules/using-downtime",
+    "type": "rules",
+    "name": "Using Downtime",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 183
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 126,
+    "text": "Use {{term:downtime|downtime}} scenes as a pressure release valve to vary the intensity of the story and give the PCs room to breathe.\n\nEmpower your players to frame their own {{term:downtime|downtime}} scenes. Ask the players what it looks like as they tend to their wounds or unwind together, encouraging them to take the reins and work with other players whose characters are involved"
+  },
+  {
+    "id": "srd/rules/projects-during-downtime",
+    "type": "rules",
+    "name": "Projects During Downtime",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 127,
+    "text": "The Work on a Project {{term:downtime|downtime move}} requires more GM input than other {{term:downtime|downtime moves}} and is best suited for long-term endeavors the PCs wish to undertake.\n\nThese projects are typically tracked using a Progress Countdown. When deciding the starting value of the {{term:countdown|countdown}}, consider the complexity of the project, the availability of relevant tools, and the impact of the project on the story.\n\nSimple projects advance their {{term:countdown|countdown}} each time a player uses the Work on a Project move, but complex projects require a roll."
+  },
+  {
+    "id": "srd/rules/extended-downtime",
+    "type": "rules",
+    "name": "Extended Downtime",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 128,
+    "text": "When you fast-forward the story across an extended period, use montages to illustrate the passage of time. You gain 1d6 {{term:fear|Fear}} per PC and advance any long-term {{term:countdown|countdowns}} as appropriate."
+  },
+  {
+    "id": "srd/rules/campaign-frames",
+    "type": "rules",
+    "name": "Campaign Frames",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd/rules/additional-gm-guidance",
+    "order": 129,
+    "text": "A campaign frame provides inspiration, tools, and mechanics to support a particular type of story at the table.\n\nEvery campaign frame has a complexity rating that indicates how much its mechanics deviate from or expand upon the Daggerheart core ruleset.\n\nEach campaign frame includes the following sections.\n\n- A **pitch** to present to players\n- Suggestions and guidance on **tone, feel, themes, and** **touchstones**\n- An overview of the campaign’s **background**\n- Guidance for fitting **communities, ancestries, and classes** into the setting\n- **Principles** for players and GMs to focus on during the campaign\n- Unique setting **distinctions**\n- An **inciting incident** to launch the campaign\n- **Special mechanics** to use during the campaign\n- **Questions to consider** during session zero\n\n_You can find each campaign frame map in the appendix of_ _the core rulebook or at www.daggerheart.com/downloads._"
+  }
+]

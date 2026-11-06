@@ -64,7 +64,8 @@ export const Choice = z.object({
 export const Feature = z.object({
   name: z.string(),
   text: RichText,
-  kind: z.enum(["passive", "action", "reaction"]).optional(),
+  /** "evolution": adversary features that transform the stat block (Hope & Fear adversaries) */
+  kind: z.enum(["passive", "action", "reaction", "evolution"]).optional(),
   modifiers: z.array(Modifier).optional(),
   resources: z.array(Resource).optional(),
   choices: z.array(Choice).optional(),
@@ -174,7 +175,8 @@ export const Weapon = z.object({
   tier: Tier,
   category: z.enum(["primary", "secondary"]),
   group: z.enum(["physical", "magic", "combat-wheelchair"]),
-  trait: Trait,
+  /** "spellcast": use the subclass Spellcast trait (arcane-frame wheelchairs) */
+  trait: z.union([Trait, z.literal("spellcast")]),
   range: Range,
   damage: z.object({ dice: z.string().regex(/^d(4|6|8|10|12|20)$/), bonus: z.number().int(), type: DamageType }),
   burden: z.union([z.literal(1), z.literal(2)]),
@@ -212,10 +214,13 @@ export const Adversary = z.object({
   text: RichText, // description
   motives: z.string(),
   difficulty: z.number().int(),
-  thresholds: z.object({ major: z.number().int(), severe: z.number().int() }).nullable(),
-  hp: z.number().int(),
-  stress: z.number().int(),
-  attack: z.object({ modifier: z.number().int(), name: z.string(), range: Range, damage: z.string() }),
+  /** null = "Thresholds: None" (minions). A single side can be null too (e.g. Octopus "3/None"). */
+  thresholds: z.object({ major: z.number().int().nullable(), severe: z.number().int().nullable() }).nullable(),
+  hp: z.number().int().nullable(),
+  /** null = "Stress: None" */
+  stress: z.number().int().nullable(),
+  /** modifier is a signed string: "+2", "-4", or a die such as "+2d4" (Outer Realms Abomination) */
+  attack: z.object({ modifier: z.string().regex(/^[+-](\d+|\d*d\d+)$/), name: z.string(), range: Range, damage: z.string() }),
   experiences: z.array(z.object({ name: z.string(), bonus: z.number().int() })),
   features: z.array(Feature),
 });
@@ -238,7 +243,8 @@ export const Environment = z.object({
 export const AdvancementOption = z.object({
   id: z.string(),
   text: z.string(),
-  slots: z.number().int().positive(), // per tier
+  /** slots per tier; null where SRD 2.0 doesn't state it (printed on class sheets, see PROGRESS.md) */
+  slots: z.number().int().positive().nullable(),
   cost: z.union([z.literal(1), z.literal(2)]), // two-slot options ("black box")
   minLevel: z.number().int().optional(), // multiclass from level 5
 });
@@ -247,7 +253,7 @@ export const Progression = z.object({
   ...base,
   type: z.literal("progression"),
   tiers: z.array(z.object({ tier: Tier, levels: z.array(Level), achievements: RichText.nullable() })),
-  advancements: z.array(z.object({ tier: Tier, options: z.array(AdvancementOption) })),
+  advancements: z.array(AdvancementOption),
   companionOptions: z.array(Feature),
   text: RichText,
 });
@@ -295,8 +301,11 @@ export const ENTRY_SCHEMAS = {
 export type EntryType = keyof typeof ENTRY_SCHEMAS;
 export const ENTRY_TYPES = Object.keys(ENTRY_SCHEMAS) as EntryType[];
 
-export const Entry = z.discriminatedUnion("type", Object.values(ENTRY_SCHEMAS) as unknown as [typeof Domain, ...(typeof Domain)[]]);
-export type Entry = { [K in EntryType]: z.infer<(typeof ENTRY_SCHEMAS)[K]> }[EntryType];
+export const Entry = z.discriminatedUnion("type", [
+  Domain, DomainCard, Class, Subclass, Ancestry, Community, Transformation, Beastform,
+  Weapon, Armor, Item, Consumable, Adversary, Environment, Progression, Condition, GlossaryTerm, RulesSection,
+]);
+export type Entry = z.infer<typeof Entry>;
 export type EntryOf<K extends EntryType> = z.infer<(typeof ENTRY_SCHEMAS)[K]>;
 
 export const PackMeta = z.object({

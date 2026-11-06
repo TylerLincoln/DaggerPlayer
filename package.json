@@ -10,7 +10,9 @@
     "test": "vitest run",
     "content:extract": "tsx scripts/extract-srd.ts",
     "content:parse": "tsx scripts/parse-srd.ts",
-    "content:validate": "tsx scripts/validate-packs.ts"
+    "content:validate": "tsx scripts/validate-packs.ts",
+    "content:jsonschema": "tsx scripts/export-jsonschema.ts",
+    "content": "npm run content:parse && npm run content:validate && npm run content:jsonschema"
   },
   "dependencies": {
     "react": "^19.3.1",

@@ -1,0 +1,1134 @@
+@@PDFPAGE 56@@
+PRIMARY WEAPON TABLES
+Players can choose one Tier 1 primary weapon during character creation. The GM can make
+other weapons available throughout the campaign as the PCs level up.
+TIER 1 (LEVEL 1)
+Physical Weapons
+Name	Trait	Range	Damage	Burden	Feature
+Broadsword	Agility	Melee	d8 phy	One-Handed	Reliable: +1 to attack rolls
+Katana	Agility	Melee	d10+3 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Longsword	Agility	Melee	d10+3 phy	Two-Handed	—
+Battleaxe	Strength	Melee	d10+3 phy	Two-Handed	—
+Brass Knuckles	Strength	Melee	d8+1 phy	One-Handed	—
+Greatsword	Strength	Melee	d10+3 phy	Two-Handed	Massive: −1 to Evasion; on a successful attack, roll an
+additional damage die and discard the lowest result.
+Mace	Strength	Melee	d8+1 phy	One-Handed	—
+Warhammer	Strength	Melee	d12+3 phy	Two-Handed	Heavy: −1 to Evasion
+Dagger	Finesse	Melee	d8+1 phy	One-Handed	—
+Quarterstaff	Instinct	Melee	d10+3 phy	Two-Handed	—
+Cutlass	Presence	Melee	d8+1 phy	One-Handed	—
+Rapier	Presence	Melee	d8 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Scimitar	Presence	Melee	d8+1 phy	One-Handed	—
+Twisted
+Dagger
+Knowledge	Melee	d8 phy	One-Handed	Piercing: Damage dealt with this weapon treats the
+target’s Major threshold as having a −2 penalty.
+Halberd	Strength	Very Close	d10+2 phy	Two-Handed	Cumbersome: −1 to Finesse
+Spear	Finesse	Very Close	d8+3 phy	Two-Handed	—
+Whipsword	Finesse	Very Close	d8 phy	One-Handed	Versatile: This weapon can also be used with these
+statistics—Finesse, Melee, d10.
+Rope Dart	Instinct	Close	d6+1 phy	Two-Handed	—
+Shortbow	Agility	Far	d6+3 phy	Two-Handed	—
+Crossbow	Finesse	Far	d6+1 phy	One-Handed	—
+Longbow	Agility	Very Far	d8+3 phy	Two-Handed	Cumbersome: −1 to Finesse
+TIER 1 (LEVEL 1)
+Magic Weapons
+All magic weapons require a Spellcast trait
+Name	Trait	Range	Damage	Burden	Feature
+Arcane
+Gauntlets
+Strength	Melee	d10+3 mag	Two-Handed	—
+Brightsword	Strength	Melee	d10+3 mag	Two-Handed	—
+Hallowed Axe	Strength	Melee	d8+1 mag	One-Handed	—
+Shadowblade	Presence	Melee	d8 phy/mag	One-Handed	Otherworldly: On a successful attack, you can deal
+physical or magic damage.
+Glowing Rings	Agility	Very Close	d10+2 mag	Two-Handed	—
+Hand Runes	Instinct	Very Close	d10 mag	One-Handed	—
+56	Daggerheart SRD
+@@PDFPAGE 57@@
+Name	Trait	Range	Damage	Burden	Feature
+Enchanted
+Chakram
+Finesse	Close	d6+1 mag	One-Handed	Ricochet: When you throw this weapon, it returns to
+your hand. When you make an attack, you can mark
+a Stress to target another creature within Very Close
+range of the first target with that attack.
+Returning
+Blade
+Finesse	Close	d8 mag	One-Handed	Returning: When this weapon is thrown within its
+range, it appears in your hand immediately after the
+attack.
+Casting Dagger	Instinct	Close	d6 mag	One-Handed	Versatile: This weapon can also be used with these
+statistics—Instinct, Melee, d8.
+Shortstaff	Instinct	Close	d8+1 mag	One-Handed	—
+Dualstaff	Instinct	Far	d6+3 mag	Two-Handed	—
+Scepter	Presence	Far	d6 mag	Two-Handed	Versatile: This weapon can also be used with these
+statistics—Presence, Melee, d8.
+Runelock Pistol	Knowledge	Far	d6+3 mag	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload this
+weapon before you can fire it again.
+Wand	Knowledge	Far	d6+1 mag	One-Handed	—
+Arcane Rifle	Agility	Very Far	d10+3 mag	Two-Handed	Aimed: Your attack has disadvantage if the target is
+within Very Close range of you or within Melee range
+of one of your allies. You can mark a Stress to ignore
+this penalty.
+Greatstaff	Knowledge	Very Far	d6 mag	Two-Handed	Powerful: On a successful attack, roll an additional
+damage die and discard the lowest result.
+TIER 2 (LEVELS 2–4)
+Physical Weapons
+Name	Trait	Range	Damage	Burden	Feature
+Improved
+Broadsword
+Agility	Melee	d8+3 phy	One-Handed	Reliable: +1 to attack rolls
+Improved
+Katana
+Agility	Melee	d10+6 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Improved
+Longsword
+Agility	Melee	d10+6 phy	Two-Handed	—
+Improved
+Battleaxe
+Strength	Melee	d10+6 phy	Two-Handed	—
+Improved Brass
+Knuckles
+Strength	Melee	d8+4 phy	One-Handed	—
+Improved
+Greatsword
+Strength	Melee	d10+6 phy	Two-Handed	Massive: −1 to Evasion; on a successful attack, roll
+an additional damage die and discard the lowest
+result.
+Improved Mace	Strength	Melee	d8+4 phy	One-Handed	—
+Improved
+Warhammer
+Strength	Melee	d12+6 phy	Two-Handed	Heavy: −1 to Evasion
+Improved
+Dagger
+Finesse	Melee	d8+4 phy	One-Handed	—
+Improved
+Quarterstaff
+Instinct	Melee	d10+6 phy	Two-Handed	—
+Improved
+Cutlass
+Presence	Melee	d8+4 phy	One-Handed	—
+Improved
+Rapier
+Presence	Melee	d8+3 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Improved
+Scimitar
+Presence	Melee	d8+4 phy	One-Handed	—
+57
+Daggerheart SRD
+@@PDFPAGE 58@@
+Name	Trait	Range	Damage	Burden	Feature
+Improved
+Twisted Dagger
+Knowledge	Melee	d8+3 phy	One-Handed	Piercing: Damage dealt with this weapon treats the
+target’s Major threshold as having a −2 penalty.
+Improved
+Halberd
+Strength	Very Close	d10+5 phy	Two-Handed	Cumbersome: −1 to Finesse
+Improved Spear	Finesse	Very Close	d8+6 phy	Two-Handed	—
+Improved
+Whipsword
+Finesse	Very Close	d8+3 phy	One-Handed	Versatile: This weapon can also be used with these
+statistics—Finesse, Melee, d10+3.
+Improved Rope
+Dart
+Instinct	Close	d6+4 phy	Two-Handed	—
+Improved
+Shortbow
+Agility	Far	d6+6 phy	Two-Handed	—
+Improved
+Crossbow
+Finesse	Far	d6+4 phy	One-Handed	—
+Improved
+Longbow
+Agility	Very Far	d8+6 phy	Two-Handed	Cumbersome: −1 to Finesse
+Gilded Falchion	Strength	Melee	d10+4 phy	One-Handed	Powerful: On a successful attack, roll an additional
+damage die and discard the lowest result.
+Knuckle Blades	Strength	Melee	d10+6 phy	Two-Handed	Brutal: When you roll the maximum value on a
+damage die, roll an additional damage die.
+War Pick	Strength	Melee	d8+3 phy	One-Handed	Deadly: When you deal Severe damage, the target
+must mark an additional HP.
+Cane Sword	Finesse	Melee	d8+4 phy	One-Handed	Retractable: The blade can be hidden in the cane to
+avoid detection.
+Urok
+Broadsword
+Finesse	Melee	d8+3 phy	One-Handed	Deadly: When you deal Severe damage, the target
+must mark an additional HP.
+Bladed Fan	Presence	Melee	d8+3 phy	One-Handed	Parry: When you are attacked, roll this weapon’s
+damage dice. If any of the attacker’s damage dice
+rolled the same value as your dice, the matching
+results are discarded from the attacker’s damage
+dice before the damage you take is totaled.
+Cyrurgien’s
+Scalpel
+Knowledge	Melee	d8+3 phy	One-Handed	Scary: On a successful attack, the target must mark
+a Stress.
+Bladed Whip	Agility	Very Close	d8+3 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Javelins	Agility	Very Close	d6+6 phy	One-Handed	Stockpiled: You can throw this weapon at a target
+within Far range by making an attack roll using
+Agility without having to retrieve it, as you always
+have another one on hand.
+Steelforged
+Halberd
+Strength	Very Close	d8+4 phy	Two-Handed	Scary: On a successful attack, the target must mark
+a Stress.
+War Scythe	Finesse	Very Close	d8+5 phy	Two-Handed	Reliable: +1 to attack rolls
+Lance	Instinct	Very Close	d10+5 phy	Two-Handed	Cumbersome: −1 to Finesse
+Blunderbuss	Finesse	Close	d8+6 phy	Two-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload this
+weapon before you can fire it again.
+Greatbow	Strength	Far	d6+6 phy	Two-Handed	Powerful: On a successful attack, roll an additional
+damage die and discard the lowest result.
+Finehair Bow	Agility	Very Far	d6+5 phy	Two-Handed	Reliable: +1 to attack rolls
+58	Daggerheart SRD
+@@PDFPAGE 59@@
+TIER 2 (LEVELS 2–4)
+Magic Weapons
+All magic weapons require a Spellcast trait
+Name	Trait	Range	Damage	Burden	Feature
+Improved Arcane
+Gauntlets
+Strength	Melee	d10+6 mag	Two-Handed	—
+Improved
+Brightsword
+Strength	Melee	d10+6 mag	Two-Handed	—
+Improved
+Hallowed Axe
+Strength	Melee	d8+4 mag	One-Handed	—
+Improved
+Shadowblade
+Presence	Melee	d8+3
+phy/mag
+One-Handed	Otherworldly: On a successful attack, you can
+deal physical or magic damage.
+Improved
+Glowing Rings
+Agility	Very Close	d10+5 mag	Two-Handed	—
+Improved Hand
+Runes
+Instinct	Very Close	d10+3 mag	One-Handed	—
+Improved
+Enchanted
+Chakram
+Finesse	Close	d6+4 mag	One-Handed	Ricochet: When you throw this weapon, it returns
+to your hand. When you make an attack, you can
+mark a Stress to target another creature within
+Very Close range of the first target with that
+attack.
+Improved
+Returning Blade
+Finesse	Close	d8+3 mag	One-Handed	Returning: When this weapon is thrown within its
+range, it appears in your hand immediately after
+the attack.
+Improved
+Casting Dagger
+Instinct	Close	d6+3 mag	One-Handed	Versatile: This weapon can also be used with
+these statistics—Instinct, Melee, d8+3.
+Improved
+Shortstaff
+Instinct	Close	d8+4 mag	One-Handed	—
+Improved
+Dualstaff
+Instinct	Far	d6+6 mag	Two-Handed	—
+Improved
+Scepter
+Presence	Far	d6+3 mag	Two-Handed	Versatile: This weapon can also be used with
+these statistics—Presence, Melee, d8+3.
+Improved
+Runelock Pistol
+Knowledge	Far	d6+6 mag	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload
+this weapon before you can fire it again.
+Improved Wand	Knowledge	Far	d6+4 mag	One-Handed	—
+Improved Arcane
+Rifle
+Agility	Very Far	d10+6 mag	Two-Handed	Aimed: Your attack has disadvantage if the target
+is within Very Close range of you or within Melee
+range of one of your allies. You can mark a Stress
+to ignore this penalty.
+Improved
+Greatstaff
+Knowledge	Very Far	d6+3 mag	Two-Handed	Powerful: On a successful attack, roll an
+additional damage die and discard the lowest
+result.
+Ego Blade	Agility	Melee	d12+4 mag	One-Handed	Pompous: You must have a Presence of 0 or lower
+to use this weapon.
+Casting Sword	Strength	Melee	d10+4 mag	Two-Handed	Versatile: This weapon can also be used with
+these statistics—Knowledge, Far, d6+3.
+Enchanted
+Shillelagh
+Strength	Melee	d8+3 mag	One-Handed	Protective: +1 to your Armor Score
+Devouring
+Dagger
+Finesse	Melee	d8+4 mag	One-Handed	Scary: On a successful attack, the target must
+mark a Stress.
+Displacement
+Razor
+Finesse	Melee	d8+3 mag	Two-Handed	Omnipresent: You can make attacks against
+targets within Very Far range, but must do so
+with disadvantage.
+59
+Daggerheart SRD
+@@PDFPAGE 60@@
+Name	Trait	Range	Damage	Burden	Feature
+Hammer of Exota	Instinct	Melee	d8+6 mag	Two-Handed	Eruptive: On a successful attack against a
+target within Melee range, all other adversaries
+within Very Close range must succeed on a
+reaction roll (14) or take half damage.
+Spellbound
+Bangles
+Knowledge	Melee	d10+6 mag	Two-Handed	—
+Fury Gem	Instinct	Close	d8+3 mag	One-Handed	Burning: When you roll the maximum result on a
+damage die, the target must mark a Stress.
+Enchanted Lute	Presence	Close	d8+3 mag	Two-Handed	Invigorating: On a successful attack, roll a d4. On
+a result of 4, clear a Stress.
+Splintershaft
+Bow
+Agility	Far	d6+6 mag	Two-Handed	Volleyed: Spend a Hope to target a group of
+creatures within range. Targets you succeed
+against take half damage.
+Yutari Bloodbow	Finesse	Far	d6+4 mag	Two-Handed	Brutal: When you roll the maximum value on a
+damage die, roll an additional damage die.
+Elder Bow	Instinct	Far	d6+4 mag	Two-Handed	Powerful: On a successful attack, roll an
+additional damage die and discard the lowest
+result.
+Scepter of Elias	Presence	Far	d6+3 mag	One-Handed	Invigorating: On a successful attack, roll a d4. On
+a result of 4, clear a Stress.
+Wand of
+Enthrallment
+Presence	Far	d6+4 mag	One-Handed	Persuasive: Before you make a Presence Roll,
+you can mark a Stress to gain a +2 bonus to the
+result.
+Keeper's Staff	Knowledge	Far	d6+4 mag	Two-Handed	Reliable: +1 to attack rolls
+TIER 3 (LEVELS 5–7)
+Physical Weapons
+Name	Trait	Range	Damage	Burden	Feature
+Advanced
+Broadsword
+Agility	Melee	d8+6 phy	One-Handed	Reliable: +1 to attack rolls
+Advanced
+Katana
+Agility	Melee	d10+9 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Advanced
+Longsword
+Agility	Melee	d10+9 phy	Two-Handed	—
+Advanced
+Battleaxe
+Strength	Melee	d10+9 phy	Two-Handed	—
+Advanced
+Brass Knuckles
+Strength	Melee	d8+7 phy	One-Handed	—
+Advanced
+Greatsword
+Strength	Melee	d10+9 phy	Two-Handed	Massive: −1 to Evasion; on a successful attack, roll
+an additional damage die and discard the lowest
+result.
+Advanced
+Mace
+Strength	Melee	d8+7 phy	One-Handed	—
+Advanced
+Warhammer
+Strength	Melee	d12+9 phy	Two-Handed	Heavy: −1 to Evasion
+Advanced
+Dagger
+Finesse	Melee	d8+7 phy	One-Handed	—
+Advanced
+Quarterstaff
+Instinct	Melee	d10+9 phy	Two-Handed	—
+Advanced
+Cutlass
+Presence	Melee	d8+7 phy	One-Handed	—
+Advanced
+Rapier
+Presence	Melee	d8+6 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+60	Daggerheart SRD
+@@PDFPAGE 61@@
+Name	Trait	Range	Damage	Burden	Feature
+Advanced
+Scimitar
+Presence	Melee	d8+7 phy	One-Handed	—
+Advanced
+Twisted
+Dagger
+Knowledge	Melee	d8+6 phy	One-Handed	Piercing: Damage dealt with this weapon treats the
+target’s Major threshold as having a −2 penalty.
+Advanced
+Halberd
+Strength	Very Close	d10+8 phy	Two-Handed	Cumbersome: −1 to Finesse
+Advanced
+Spear
+Finesse	Very Close	d8+9 phy	Two-Handed	—
+Advanced
+Whipsword
+Finesse	Very Close	d8+6 phy	One-Handed	Versatile: This weapon can also be used with these
+statistics—Finesse, Melee, d10+6.
+Advanced
+Rope Dart
+Instinct	Close	d6+7 phy	Two-Handed	—
+Advanced
+Shortbow
+Agility	Far	d6+9 phy	Two-Handed	—
+Advanced
+Crossbow
+Finesse	Far	d6+7 phy	One-Handed	—
+Advanced
+Longbow
+Agility	Very Far	d8+9 phy	Two-Handed	Cumbersome: −1 to Finesse
+Flickerfly Blade	Agility	Melee	d8+5 phy	One-Handed	Sharpwing: Gain a bonus to your damage rolls equal
+to your Agility.
+Blitz Hammer	Strength	Melee	d10+7 phy	Two-Handed	Accelerator: Once per scene, mark a Stress to move
+to Far range then make an attack. Gain a +1 bonus
+to your Proficiency on this attack.
+Bravesword	Strength	Melee	d12+7 phy	Two-Handed	Brave: −1 to Evasion; +3 to Severe damage
+threshold
+Hammer of
+Wrath
+Strength	Melee	d10+7 phy	Two-Handed	Devastating: Before you make an attack roll, you
+can mark a Stress to use a d20 as your damage die.
+Labrys Axe	Strength	Melee	d10+7 phy	Two-Handed	Protective: +1 to Armor Score
+Platinum Estoc	Finesse	Melee	d8+7 phy	One-Handed	Piercing: Damage dealt with this weapon treats the
+target’s Major threshold as having a −2 penalty.
+Meridian
+Cutlass
+Presence	Melee	d10+5 phy	One-Handed	Dueling: When there are no other creatures within
+Close range of the target, gain advantage on your
+attack roll against them.
+Retractable
+Saber
+Presence	Melee	d10+7 phy	One-Handed	Retractable: The blade can be hidden in the hilt to
+avoid detection.
+Double Flail	Agility	Very Close	d10+8 phy	Two-Handed	Powerful: On a successful attack, roll an additional
+damage die and discard the lowest result.
+Soldier’s Pike	Agility	Very Close	d10+5 phy	Two-Handed	Braced: When an adversary within this weapon’s
+range deals damage to you, you can mark 2 Stress
+to force them to mark a Hit Point.
+Chained
+Scythe
+Instinct	Very Close	d10+5 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Singing Sword	Presence	Very Close	d8+5 phy	One-Handed	Bolstering: When you critically succeed on an
+attack, all PCs within Close range gain a Hope.
+Talon Blades	Finesse	Close	d10+7 phy	Two-Handed	Brutal: When you roll the maximum value on a
+damage die, roll an additional damage die.
+Bladed Star	Knowledge	Close	d8+7 phy	One-Handed	Rebounding: When you throw this weapon, it
+returns to your hand. On a failed attack, you can
+reroll your attack with disadvantage.
+Black Powder
+Revolver
+Finesse	Far	d6+8 phy	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload this
+weapon before you can fire it again.
+Spiked Bow	Agility	Very Far	d6+7 phy	Two-Handed	Versatile: This weapon can also be used with these
+statistics—Agility, Melee, d10+5.
+61
+Daggerheart SRD
+@@PDFPAGE 62@@
+TIER 3 (LEVELS 5–7)
+Magic Weapons
+All magic weapons require a Spellcast trait
+Name	Trait	Range	Damage	Burden	Feature
+Advanced
+Arcane
+Gauntlets
+Strength	Melee	d10+9 mag	Two-Handed	—
+Advanced
+Brightsword
+Strength	Melee	d10+9 mag	Two-Handed	—
+Advanced
+Hallowed Axe
+Strength	Melee	d8+7 mag	One-Handed	—
+Advanced
+Shadowblade
+Presence	Melee	d8+6
+phy/mag
+One-Handed	Otherworldly: On a successful attack, you can deal
+physical or magic damage.
+Advanced
+Glowing Rings
+Agility	Very Close	d10+8 mag	Two-Handed	—
+Advanced
+Hand Runes
+Instinct	Very Close	d10+6 mag	One-Handed	—
+Advanced
+Enchanted
+Chakram
+Finesse	Close	d6+7 mag	One-Handed	Ricochet: When you throw this weapon, it returns
+to your hand. When you make an attack, you can
+mark a Stress to target another creature within Very
+Close range of the first target with that attack.
+Advanced
+Returning
+Blade
+Finesse	Close	d8+6 mag	One-Handed	Returning: When this weapon is thrown within its
+range, it appears in your hand immediately after the
+attack.
+Advanced
+Casting
+Dagger
+Instinct	Close	d6+6 mag	One-Handed	Versatile: This weapon can also be used with these
+statistics—Instinct, Melee, d8+6.
+Advanced
+Shortstaff
+Instinct	Close	d8+7 mag	One-Handed	—
+Advanced
+Dualstaff
+Instinct	Far	d6+9 mag	Two-Handed	—
+Advanced
+Scepter
+Presence	Far	d6+6 mag	Two-Handed	Versatile: This weapon can also be used with these
+statistics—Presence, Melee, d8+4.
+Advanced
+Runelock
+Pistol
+Knowledge	Far	d6+9 mag	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload this
+weapon before you can fire it again.
+Advanced
+Wand
+Knowledge	Far	d6+7 mag	One-Handed	—
+Advanced
+Arcane Rifle
+Agility	Very Far	d10+9 mag	Two-Handed	Aimed: Your attack has disadvantage if the target
+is within Very Close range of you or within Melee
+range of one of your allies. You can mark a Stress to
+ignore this penalty.
+Advanced
+Greatstaff
+Knowledge	Very Far	d6+6 mag	Two-Handed	Powerful: On a successful attack, roll an additional
+damage die and discard the lowest result.
+Rocket Maul	Strength	Melee	d10+7 mag	Two-Handed	Concussive: On a successful attack, you can spend a
+Hope to knock the target back to Far range.
+Crystal Spear	Finesse	Very Close	d10+6 mag	One-Handed	Piercing: Damage dealt with this weapon treats the
+target’s Major threshold as having a −2 penalty.
+Arc Wand	Presence	Close	d8+6 mag	One-Handed	Bouncing: Mark any number of Stress to target that
+many additional creatures in range of the attack.
+Rime Scepter	Knowledge	Close	d8+6 mag	One-Handed	Freezing: When an attack from this weapon causes
+a target to mark 2 or more HP, they become
+temporarily Restrained.
+62	Daggerheart SRD
+@@PDFPAGE 63@@
+Name	Trait	Range	Damage	Burden	Feature
+Gunblade	Agility	Far	d6+6 mag	One-Handed	Versatile: This weapon can also be used with these
+statistics—Agility, Melee, d8+6 phy.
+Staff of Augma	Instinct	Far	d6+7 mag	One-Handed	Catalytic: On a successful attack, you can mark a
+Stress to give an ally within Close range a +3 bonus
+to their next attack roll.
+TIER 4 (LEVELS 8–10)
+Physical Weapons
+Name	Trait	Range	Damage	Burden	Feature
+Legendary
+Broadsword
+Agility	Melee	d8+9 phy	One-Handed	Reliable: +1 to attack rolls
+Legendary Katana	Agility	Melee	d10+12 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Legendary
+Longsword
+Agility	Melee	d10+12 phy	Two-Handed	—
+Legendary Battleaxe	Strength	Melee	d10+12 phy	Two-Handed	—
+Legendary Brass
+Knuckles
+Strength	Melee	d8+10 phy	One-Handed	—
+Legendary
+Greatsword
+Strength	Melee	d10+12 phy	Two-Handed	Massive: −1 to Evasion; on a successful attack,
+roll an additional damage die and discard the
+lowest result.
+Legendary Mace	Strength	Melee	d8+10 phy	One-Handed	—
+Legendary
+Warhammer
+Strength	Melee	d12+12 phy	Two-Handed	Heavy: −1 to Evasion
+Legendary Dagger	Finesse	Melee	d8+10 phy	One-Handed	—
+Legendary
+Quarterstaff
+Instinct	Melee	d10+12 phy	Two-Handed	—
+Legendary Cutlass	Presence	Melee	d8+10 phy	One-Handed	—
+Legendary Rapier	Presence	Melee	d8+9 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Legendary Scimitar	Presence	Melee	d8+10 phy	One-Handed	—
+Legendary Twisted
+Dagger
+Knowledge	Melee	d8+9 phy	One-Handed	Piercing: Damage dealt with this weapon treats
+the target’s Major threshold as having a −2
+penalty.
+Legendary Halberd	Strength	Very Close	d10+11 phy	Two-Handed	Cumbersome: −1 to Finesse
+Legendary Spear	Finesse	Very Close	d8+12 phy	Two-Handed	—
+Legendary
+Whipsword
+Finesse	Very Close	d8+9 phy	One-Handed	Versatile: This weapon can also be used with
+these statistics—Finesse, Melee, d10+9.
+Legendary Rope Dart	Instinct	Close	d6+10 phy	Two-Handed	—
+Legendary Shortbow	Agility	Far	d6+12 phy	Two-Handed	—
+Legendary Crossbow	Finesse	Far	d6+10 phy	One-Handed	—
+Legendary Longbow	Agility	Very Far	d8+12 phy	Two-Handed	Cumbersome: −1 to Finesse
+Dual-Ended Sword	Agility	Melee	d10+9 phy	Two-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Impact Gauntlet	Strength	Melee	d10+11 phy	One-Handed	Concussive: On a successful attack, you can
+spend a Hope to knock the target back to Far
+range.
+Sledge Axe	Strength	Melee	d12+13 phy	Two-Handed	Destructive: −1 to Agility; on a successful attack,
+all adversaries within Very Close range must mark
+a Stress.
+63
+Daggerheart SRD
+@@PDFPAGE 64@@
+Name	Trait	Range	Damage	Burden	Feature
+Curved Dagger	Finesse	Melee	d8+9 phy	One-Handed	Serrated: When you roll a 1 on a damage die, it
+deals 8 damage instead.
+Severed Dragon Claw	Instinct	Melee	d10+11 phy	One-Handed	Destructive: −1 to Agility; on a successful attack,
+all adversaries within Very Close range must mark
+a Stress.
+Infinite Staff	Presence	Melee	d10+9 phy	Two-Handed	Extending: You can increase the range of this
+weapon up to Very Far. You gain a −1 penalty to
+attack rolls for each step you increase the range
+by (such as Melee to Very Close, Very Close to
+Close, or Close to Far).
+Bec de Corbin	Agility	Very Close	d10+9 phy	Two-Handed	Devastating: Before you make an attack roll, you
+can mark a Stress to use a d20 as your damage
+die.
+Extended Polearm	Finesse	Very Close	d8+10 phy	Two-Handed	Long: This weapon’s attack targets all adversaries
+in a line within range.
+Swinging Ropeblade	Presence	Close	d8+9 phy	Two-Handed	Grappling: On a successful attack, you can spend
+a Hope to Restrain the target or pull them into
+Melee range with you.
+Black Powder
+Serpentine
+Strength	Far	d8+12 phy	Two-Handed	Incendiary: −1 to Agility; on a successful attack,
+all creatures within Very Close range of the target
+must mark a Hit Point.
+Ricochet Axes	Agility	Far	d6+11 phy	Two-Handed	Bouncing: Mark 1 or more Stress to hit that many
+targets in range of the attack.
+Aantari Bow	Finesse	Far	d6+11 phy	Two-Handed	Reliable: +1 to attack rolls
+Clockwork Crossbow	Finesse	Far	d6+11 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Arquebus	Knowledge	Far	d8+10 phy	Two-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload
+this weapon before you can fire it again.
+Hand Cannon	Finesse	Very Far	d6+12 phy	One-Handed	Reloading: After you make an attack, roll a d6. On
+a 1, you must mark a Stress to reload this weapon
+before you can fire it again.
+TIER 4 (LEVELS 8–10)
+Magic Weapons
+All magic weapons require a Spellcast trait
+Name	Trait	Range	Damage	Burden	Feature
+Legendary
+Arcane Gauntlets
+Strength	Melee	d10+12 mag	Two-Handed	—
+Legendary
+Brightsword
+Strength	Melee	d10+12 mag	Two-Handed	—
+Legendary
+Hallowed Axe
+Strength	Melee	d8+10 mag	One-Handed	—
+Legendary
+Shadowblade
+Presence	Melee	d8+9
+phy/mag
+One-Handed	Otherworldly: On a successful attack, you can
+deal physical or magic damage.
+Legendary
+Glowing Rings
+Agility	Very Close	d10+11 mag	Two-Handed	—
+Legendary Hand
+Runes
+Instinct	Very Close	d10+9 mag	One-Handed	—
+64	Daggerheart SRD
+@@PDFPAGE 65@@
+Name	Trait	Range	Damage	Burden	Feature
+Legendary
+Enchanted
+Chakram
+Finesse	Close	d6+10 mag	One-Handed	Ricochet: When you throw this weapon, it returns
+to your hand. When you make an attack, you can
+mark a Stress to target another creature within
+Very Close range of the first target with that
+attack.
+Legendary
+Returning Blade
+Finesse	Close	d8+9 mag	One-Handed	Returning: When this weapon is thrown within its
+range, it appears in your hand immediately after
+the attack.
+Legendary
+Casting Dagger
+Instinct	Close	d6+9 mag	One-Handed	Versatile: This weapon can also be used with
+these statistics—Instinct, Melee, d8+9.
+Legendary
+Shortstaff
+Instinct	Close	d8+10 mag	One-Handed	—
+Legendary
+Dualstaff
+Instinct	Far	d8+12 mag	Two-Handed	—
+Legendary
+Scepter
+Presence	Far	d6+9 mag	Two-Handed	Versatile: This weapon can also be used with
+these statistics—Presence, Melee, d8+6.
+Legendary
+Runelock Pistol
+Knowledge	Far	d6+12 mag	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload
+this weapon before you can fire it again.
+Legendary Wand	Knowledge	Far	d6+10 mag	One-Handed	—
+Legendary
+Arcane Rifle
+Agility	Very Far	d10+12 mag	Two-Handed	Aimed: Your attack has disadvantage if the target
+is within Very Close range of you or within Melee
+range of one of your allies. You can mark a Stress
+to ignore this penalty.
+Legendary
+Greatstaff
+Knowledge	Very Far	d6+9 mag	Two-Handed	Powerful: On a successful attack, roll an
+additional damage die and discard the lowest
+result.
+Starmetal Blade	Agility	Melee	d8+10 mag	One-Handed	Serrated: When you roll a 1 on a damage die, it
+deals 8 damage instead.
+Sword of Light &
+Flame
+Strength	Melee	d10+11 mag	Two-Handed	Hot: This weapon cuts through solid material.
+Adder’s Fang	Finesse	Melee	d8+9 mag	One-Handed	Venomous: When you deal Major or greater
+damage with this weapon, the target becomes
+temporarily Vulnerable.
+Demon’s Edge	Presence	Melee	d8+10 mag	One-Handed	Disturbing: When you defeat a creature with this
+weapon, all adversaries within Close range must
+mark a Stress.
+Siphoning
+Gauntlets
+Presence	Melee	d10+9 mag	Two-Handed	Lifestealing: On a successful attack, roll a d6. On
+a result of 6, clear a Hit Point or clear a Stress.
+Midas Scythe	Knowledge	Melee	d10+9 mag	Two-Handed	Greedy: Spend a handful of gold to gain a +1
+bonus to your Proficiency on a damage roll.
+Storm God’s
+Greataxe
+Strength	Very Close	d10+9 mag	Two-Handed	Bouncing: Mark any number of Stress to target
+that many additional creatures in range of the
+attack.
+Ethereal
+Zweihänder
+Instinct	Very Close	d10+9 mag	Two-Handed	Ethereal: You must mark a Stress to conjure this
+weapon. It lasts until the end of the scene.
+Floating
+Bladeshards
+Instinct	Close	d8+9 mag	One-Handed	Powerful: On a successful attack, roll an
+additional damage die and discard the lowest
+result.
+Bloodstaff	Instinct	Far	d20+7 mag	Two-Handed	Painful: Each time you make a successful attack,
+you must mark a Stress.
+Thistlebow	Instinct	Far	d6+13 mag	Two-Handed	Reliable: +1 to attack rolls
+65
+Daggerheart SRD
+@@PDFPAGE 66@@
+Name	Trait	Range	Damage	Burden	Feature
+Gravity Arbalest	Knowledge	Far	d8+6 mag	Two-Handed	Magnetic: When you make an attack with this
+weapon, you can spend a Hope to force all
+adversaries within Very Close range of the target
+to make a Reaction Roll (16). Creatures who fail
+must mark a Stress and are pulled into Melee
+range of the target.
+Wand of Essek	Knowledge	Far	d8+13 mag	One-Handed	Timebending: You can choose the target of your
+attack after making your attack roll.
+Magus Revolver	Finesse	Very Far	d6+13 mag	One-Handed	Reloading: After you make an attack, roll a d6. On
+a result of 1, you must mark a Stress to reload
+this weapon before you can fire it again.
+Fusion Gloves	Knowledge	Very Far	d6+9 mag	Two-Handed	Bonded: Gain a bonus to your damage rolls equal
+to your level.
+SECONDARY WEAPON TABLES
+Players can choose one Tier 1 secondary weapon during character creation. The GM can make
+other weapons available throughout the campaign as the PCs level up.
+TIER 1 (LEVEL 1)
+Name	Trait	Range	Damage	Burden	Feature
+Hatchet	Agility	Melee	d8 phy	One-Handed	Follow-Up: On a successful attack with your primary
+weapon within Melee range, you can mark a Stress to gain
+a +1 bonus to your Proficiency for this attack.
+Shortsword	Agility	Melee	d8 phy	One-Handed	Paired: +2 to primary weapon damage to targets within
+Melee range
+Offhand Brass
+Knuckles
+Strength	Melee	d8 phy	One-Handed	Paired: +2 to primary weapon damage to targets within
+Melee range
+Round Shield	Strength	Melee	d4 phy	One-Handed	Protective: +1 to Armor Score
+Tower Shield	Strength	Melee	d6 phy	One-Handed	Barrier: +2 to Armor Score; −1 to Evasion
+Small Dagger	Finesse	Melee	d8 phy	One-Handed	Paired: +2 to primary weapon damage to targets within
+Melee range
+Throwing
+Knives
+Finesse	Melee	d8 phy	One-Handed	Stockpiled: You can throw this weapon within Close range
+by making an attack roll using Finesse. You don’t have to
+retrieve it, as you always have another on hand.
+Fighting Cloak	Presence	Melee	d4 phy	One-Handed	Padded: +2 to damage thresholds
+Rune Shield	Knowledge	Melee	d4 mag	One-Handed	Protective: +1 to Armor Score
+Focus Runes	Instinct	Very Close	d6 mag	One-Handed	Focused: +1 to primary weapon damage to targets within
+Very Close range
+Whip	Presence	Very Close	d6 phy	One-Handed	Startling: Mark a Stress to crack the whip and force all
+adversaries within Melee range back to Close range.
+Grappler	Finesse	Close	d6 phy	One-Handed	Hooked: On a successful attack, you can pull the target
+into Melee range.
+Hand
+Crossbow
+Finesse	Far	d6+1 phy	One-Handed	—
+66	Daggerheart SRD
+@@PDFPAGE 67@@
+TIER 2 (LEVELS 2–4)
+Name	Trait	Range	Damage	Burden	Feature
+Improved
+Hatchet
+Agility	Melee	d8+2 phy	One-Handed	Follow-Up: On a successful attack with your primary
+weapon within Melee range, you can mark a Stress to gain
+a +1 bonus to your Proficiency for this attack.
+Improved
+Shortsword
+Agility	Melee	d8+2 phy	One-Handed	Paired: +3 to primary weapon damage to targets within
+Melee range
+Improved
+Offhand Brass
+Knuckles
+Strength	Melee	d8+2 phy	One-Handed	Paired: +3 to primary weapon damage to targets within
+Melee range
+Improved
+Round Shield
+Strength	Melee	d4+2 phy	One-Handed	Protective: +2 to Armor Score
+Improved
+Tower Shield
+Strength	Melee	d6+2 phy	One-Handed	Barrier: +3 to Armor Score; −1 to Evasion
+Improved
+Small Dagger
+Finesse	Melee	d8+2 phy	One-Handed	Paired: +3 to primary weapon damage to targets within
+Melee range
+Improved
+Throwing
+Knives
+Finesse	Melee	d8+2 phy	One-Handed	Stockpiled: You can throw this weapon within Close range
+by making an attack roll using Finesse. You don’t have to
+retrieve it, as you always have another on hand.
+Improved
+Fighting Cloak
+Presence	Melee	d4+2 phy	One-Handed	Padded: +3 to damage thresholds
+Improved
+Rune Shield
+Knowledge	Melee	d4+2 mag	One-Handed	Protective: +2 to Armor Score
+Improved
+Focus Runes
+Instinct	Very Close	d6+2 mag	One-Handed	Focused: +1 to primary weapon damage to targets within
+Very Close range
+Improved
+Whip
+Presence	Very Close	d6+2 phy	One-Handed	Startling: Mark a Stress to crack the whip and force all
+adversaries within Melee range back to Close range.
+Improved
+Grappler
+Finesse	Close	d6+2 phy	One-Handed	Hooked: On a successful attack, you can pull the target
+into Melee range.
+Improved
+Hand
+Crossbow
+Finesse	Far	d6+3 phy	One-Handed	—
+Collapsible
+Baton
+Strength	Melee	d8 phy	One-Handed	Nonlethal: When a target would mark any number of Hit
+Points from an attack with this weapon, they mark an
+equal number of Stress instead.
+Spiked Shield	Strength	Melee	d6+2 phy	One-Handed	Double Duty: +1 to Armor Score; +1 to primary weapon
+damage within Melee range
+Parrying
+Dagger
+Finesse	Melee	d6+2 phy	One-Handed	Parry: When you are attacked, roll this weapon's damage
+dice. If any of the attacker's damage dice rolled the same
+value as your dice, the matching results are discarded
+from the attacker's damage dice before the damage you
+take is totaled.
+Eldritch
+Vambrace
+Instinct	Melee	d8 mag	One-Handed	Deflecting: When you are attacked, you can mark an
+Armor Slot to gain a bonus to your Evasion equal to your
+Armor Score against the attack.
+Segmented
+Staff
+Agility	Very Close	d6+4 phy	One-Handed	Double Duty: +1 to Armor Score; +1 to primary weapon
+damage within Melee range
+Razor Wire	Finesse	Very Close	d6+3 phy	One-Handed	Entangling: On a successful attack with your primary
+weapon against a target within Very Close range, you can
+spend a Hope to make the target temporarily Vulnerable.
+Returning Axe	Agility	Close	d6+4 phy	One-Handed	Returning: When this weapon is thrown within its range, it
+appears in your hand immediately after the attack.
+67
+Daggerheart SRD
+@@PDFPAGE 68@@
+TIER 3 (LEVELS 5–7)
+Name	Trait	Range	Damage	Burden	Feature
+Advanced
+Hatchet
+Agility	Melee	d8+4 phy	One-Handed	Follow-Up: On a successful attack with your primary
+weapon within Melee range, you can mark a Stress to gain
+a +1 bonus to your Proficiency for this attack.
+Advanced
+Shortsword
+Agility	Melee	d8+4 phy	One-Handed	Paired: +4 to primary weapon damage to targets within
+Melee range
+Advanced
+Offhand
+Brass
+Knuckles
+Strength	Melee	d8+4 phy	One-Handed	Paired: +4 to primary weapon damage to targets within
+Melee range
+Advanced
+Round Shield
+Strength	Melee	d4+4 phy	One-Handed	Protective: +3 to Armor Score
+Advanced
+Tower Shield
+Strength	Melee	d6+4 phy	One-Handed	Barrier: +4 to Armor Score; −1 to Evasion
+Advanced
+Small Dagger
+Finesse	Melee	d8+4 phy	One-Handed	Paired: +4 to primary weapon damage to targets within
+Melee range
+Advanced
+Throwing
+Knives
+Finesse	Melee	d8+4 phy	One-Handed	Stockpiled: You can throw this weapon within Close range
+by making an attack roll using Finesse. You don’t have to
+retrieve it, as you always have another on hand.
+Advanced
+Fighting
+Cloak
+Presence	Melee	d4+4 phy	One-Handed	Padded: +4 to damage thresholds
+Advanced
+Rune Shield
+Knowledge	Melee	d4+4 mag	One-Handed	Protective: +3 to Armor Score
+Advanced
+Focus Runes
+Instinct	Very Close	d6+4 mag	One-Handed	Focused: +1 to primary weapon damage to targets within
+Very Close range
+Advanced
+Whip
+Presence	Very Close	d6+4 phy	One-Handed	Startling: Mark a Stress to crack the whip and force all
+adversaries within Melee range back to Close range.
+Advanced
+Grappler
+Finesse	Close	d6+4 phy	One-Handed	Hooked: On a successful attack, you can pull the target
+into Melee range.
+Advanced
+Hand
+Crossbow
+Finesse	Far	d6+5 phy	One-Handed	—
+Buckler	Agility	Melee	d4+4 phy	One-Handed	Deflecting: When you are attacked, you can mark an
+Armor Slot to gain a bonus to your Evasion equal to your
+available Armor Score against the attack.
+Tinker’s
+Hammer
+Strength	Melee	d8+4 phy	One-Handed	Trusty: +1 to attack rolls made with your primary weapon
+Vorpal Shard	Knowledge	Melee	d4 mag	One-Handed	Targeted: When you fail a weapon attack, you can spend a
+Hope to succeed on your next weapon attack.
+Soul Chain	Presence	Very Close	d6+5 mag	One-Handed	Draining: On a successful attack, you can spend a Hope
+to force the target to mark a Stress. If they do, you clear
+a Stress.
+Powered
+Gauntlet
+Knowledge	Close	d6+4 phy	One-Handed	Charged: Mark a Stress to gain a +1 bonus to your
+Proficiency on a primary weapon attack.
+War Dart	Agility	Far	d6+5 phy	One-Handed	Versatile: This weapon can also be used with these
+statistics—Agility, Melee, d8+5.
+Hand Sling	Finesse	Very Far	d6+4 phy	One-Handed	Versatile: This weapon can also be used with these
+statistics—Finesse, Close, d8+4.
+68	Daggerheart SRD
+@@PDFPAGE 69@@
+TIER 4 (LEVELS 8–10)
+Name	Trait	Range	Damage	Burden	Feature
+Legendary
+Hatchet
+Agility	Melee	d8+6 phy	One-Handed	Follow-Up: On a successful attack with your primary
+weapon within Melee range, you can mark a Stress to gain
+a +1 bonus to your Proficiency for this attack.
+Legendary
+Shortsword
+Agility	Melee	d8+6 phy	One-Handed	Paired: +5 to primary weapon damage to targets within
+Melee range
+Legendary
+Offhand Brass
+Knuckles
+Strength	Melee	d8+6 phy	One-Handed	Paired: +5 to primary weapon damage to targets within
+Melee range
+Legendary
+Round Shield
+Strength	Melee	d4+6 phy	One-Handed	Protective: +4 to Armor Score
+Legendary
+Tower Shield
+Strength	Melee	d6+6 phy	One-Handed	Barrier: +5 to Armor Score; −1 to Evasion.
+Legendary
+Small Dagger
+Finesse	Melee	d8+6 phy	One-Handed	Paired: +5 to primary weapon damage to targets within
+Melee range
+Legendary
+Throwing
+Knives
+Finesse	Melee	d8+6 phy	One-Handed	Stockpiled: You can throw this weapon within Close range
+by making an attack roll using Finesse. You don’t have to
+retrieve it, as you always have another on hand.
+Legendary
+Fighting
+Cloak
+Presence	Melee	d4+6 phy	One-Handed	Padded: +5 to damage thresholds
+Legendary
+Rune Shield
+Knowledge	Melee	d4+6 mag	One-Handed	Protective: +4 to Armor Score
+Legendary
+Focus Runes
+Instinct	Very Close	d6+6 mag	One-Handed	Focused: +1 to primary weapon damage to targets within
+Very Close range
+Legendary
+Whip
+Presence	Very Close	d6+6 phy	One-Handed	Startling: Mark a Stress to crack the whip and force all
+adversaries within Melee range back to Close range.
+Legendary
+Grappler
+Finesse	Close	d6+6 phy	One-Handed	Hooked: On a successful attack, you can pull the target
+into Melee range.
+Legendary
+Hand
+Crossbow
+Finesse	Far	d6+7 phy	One-Handed	—
+Braveshield	Agility	Melee	d4+6 phy	One-Handed	Sheltering: When you mark an Armor Slot, it reduces
+damage for you and all allies within Melee range of you
+who took the same damage.
+Knuckle
+Claws
+Strength	Melee	d6+8 phy	One-Handed	Doubled Up: When you make an attack with your primary
+weapon, you can deal damage to another target within
+Melee range.
+Void Needle	Finesse	Melee	d4+6 phy	One-Handed	Inverted: When you roll a weapon attack with Fear, you
+gain a Hope.
+Echo Blade	Presence	Melee	d4+6 mag	One-Handed	Doubled Up: When you succeed on an attack with your
+primary weapon, you can deal damage to another target
+within Melee range.
+Möbius Orb	Knowledge	Melee	d8+6 mag	One-Handed	Recursive: When you roll the maximum value on a damage
+die, roll an additional damage die and add the result to the
+total damage. This feature can trigger repeatedly.
+Primer Shard	Instinct	Very Close	d4 phy	One-Handed	Locked On: On a successful attack, your next attack
+against the same target with your primary weapon
+automatically succeeds.
+Blackblood
+Tendril
+Instinct	Close	d6+8 mag	One-Handed	Poisonous: When a target marks any number of Hit Points
+from an attack you rolled with Fear, they mark an equal
+number of Stress.
+69
+Daggerheart SRD
+@@PDFPAGE 70@@
+Combat Wheelchair
+By Mark Thompson
+The combat wheelchair is a ruleset designed to help you play a wheelchair user in Daggerheart. This section provides mechanics
+and narrative guidance for you to work from, but feel free to adapt the flavor text to best suit your character. Have fun with your
+character’s wheelchair design, and make it as unique or tailored to them as you please.
+ACTION AND MOVEMENT
+When describing how your character moves, you can use
+descriptions such as the following:
+• “I roll over to the door to see if it’s open.”
+• “I wheel myself over to the group to ask what’s going on.”
+• “I pull my brakes and skid to a halt, turning in my seat to
+level my bow at the intruder.”
+CONSEQUENCES
+Here are some ways you might describe complications you
+encounter when your character uses their wheelchair:
+“I pull my brakes, but I don’t think to account for the loose
+gravel on the ground.”
+“I hit a patch of ice awkwardly and am sent skidding out
+past my target.”
+“I go to push off in pursuit, but one of my front caster
+wheels snags on a crack in the pavement, stalling me for a
+moment.”
+GMs should avoid breaking a character's wheelchair or
+otherwise removing it from play as a consequence, unless
+everyone at the table, especially the wheelchair user’s player,
+gives their approval.
+EVASION
+Your character is assumed to be skilled in moving their
+wheelchair and navigating numerous situations in it. As a
+result, the only wheelchair that gives a penalty to a PC's
+Evasion is the Heavy Frame model.
+BURDEN
+All wheelchairs can be maneuvered using one or two hands
+outside of combat. However, when being used as a weapon,
+the chair is restricted to requiring one or two hands to
+perform attacks, depending on the model you’ve chosen. If
+you’re playing a character who has limited to no mobility in
+their arms, their wheelchair can be attuned to them by magical
+means. For example, your character might use a psychic link
+to guide the chair around like a pseudo-electric wheelchair. All
+the rules presented here can be tailored and adapted to any
+character's needs.
+CHOOSING YOUR MODEL
+All combat wheelchairs are equipped as Primary Weapons.
+There are three models of wheelchair available: light, heavy,
+and arcane. You’re encouraged to consider the type of
+character you’re playing and the class they belong to, then
+choose the model that best matches that character concept.
+Light Frame Models
+Though tough, these wheelchairs have light frames that allow the chair to move with your character in more acrobatic ways.
+These models are best suited to adventurers who rely on speed and flexibility.
+Name	Tier	Trait	Range	Damage	Burden	Feature
+Light-Frame
+Wheelchair
+1	Agility	Melee	d8 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Improved
+Light-Frame
+Wheelchair
+2	Agility	Melee	d8+3 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Advanced
+Light-Frame
+Wheelchair
+3	Agility	Melee	d8+6 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+Legendary
+Light-Frame
+Wheelchair
+4	Agility	Melee	d8+9 phy	One-Handed	Quick: When you make an attack, you can mark a
+Stress to target another creature within range.
+70	Daggerheart SRD
+@@PDFPAGE 71@@
+Heavy Frame Models
+These wheelchairs have bulky and heavier frames, allowing the chair to lend its weight to your character’s attacks. It also makes
+them a bigger target.
+Name	Tier	Trait	Range	Damage	Burden	Feature
+Heavy-Frame
+Wheelchair
+1	Strength	Melee	d12+3 phy	Two-Handed	Heavy: −1 to Evasion
+Improved
+Heavy-Frame
+Wheelchair
+2	Strength	Melee	d12+6 phy	Two-Handed	Heavy: −1 to Evasion
+Advanced
+Heavy-Frame
+Wheelchair
+3	Strength	Melee	d12+9 phy	Two-Handed	Heavy: −1 to Evasion
+Legendary
+Heavy-Frame
+Wheelchair
+4	Strength	Melee	d12+12 phy	Two-Handed	Heavy: −1 to Evasion
+Arcane Frame Models
+These wheelchairs have frames that are attuned to your character and their magic, allowing them to channel their spells through
+the chair. Unlike other primary magic weapons, the arcane-frame model doesn’t specify a trait to use when making an attack
+with it. Instead, you use the Spellcast trait indicated by your subclass.
+Name	Tier	Trait	Range	Damage	Burden	Feature
+Arcane-Frame
+Wheelchair
+1	Spellcast	Far	d6 mag	One-Handed	Reliable: +1 to attack rolls
+Improved
+Arcane-Frame
+Wheelchair
+2	Spellcast	Far	d6+3 mag	One-Handed	Reliable: +1 to attack rolls
+Advanced
+Arcane-Frame
+Wheelchair
+3	Spellcast	Far	d6+6 mag	One-Handed	Reliable: +1 to attack rolls
+Legendary
+Arcane-Frame
+Wheelchair
+4	Spellcast	Far	d6+9 mag	One-Handed	Reliable: +1 to attack rolls
+71
+Daggerheart SRD

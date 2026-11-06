@@ -1,0 +1,14 @@
+{
+  "id": "srd",
+  "name": "Daggerheart SRD 2.0",
+  "version": "2.0.0",
+  "kind": "srd",
+  "defaultEnabled": true,
+  "requires": [],
+  "attribution": "This product includes materials from the Daggerheart System Reference Document 2.0, © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License. More information can be found at https://www.daggerheart.com. There are no previous modifications by others.",
+  "modifications": [
+    "Reformatted into structured data (JSON) by DaggerPlayer; rules terms are linked.",
+    "Corrected 2 typesetting issue(s); each is listed in errata.json.",
+    "Text is otherwise unchanged."
+  ]
+}

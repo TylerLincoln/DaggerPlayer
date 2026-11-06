@@ -1,0 +1,162 @@
+@@PDFPAGE 53@@
+DEATH
+When a PC marks their last Hit Point, they must make a death
+move by choosing one of the following options:
+•	Blaze of Glory: Your character embraces death and
+goes out in a blaze of glory. Take one final action. It
+automatically critically succeeds (with GM approval), and
+then you cross through the veil of death.
+•	Avoid Death: Your character avoids death and faces the
+consequences. They temporarily drop unconscious, and
+then you work with the GM to describe how the situation
+worsens. While unconscious, your character can’t move or
+act, and they can’t be targeted by an attack. They return
+to consciousness when an ally clears 1 or more of their
+marked Hit Points or when the party finishes a long rest.
+After your character falls unconscious, roll your Hope Die.
+If its value is equal to or less than your character’s level,
+they gain a scar: permanently cross out a Hope slot and
+work with the GM to determine its lasting narrative impact
+and how, if possible, it can be restored. If you ever cross
+out your last Hope slot, your character’s journey ends.
+•	Risk It All: Roll your Duality Dice. If the Hope Die is higher,
+your character stays on their feet and clears a number
+of Hit Points or Stress equal to the value of the Hope Die
+(you can divide the Hope Die value between Hit Points and
+Stress however you’d prefer). If the Fear Die is higher, your
+character crosses through the veil of death. If the Duality
+Dice show matching results, your character stays up and
+clears all Hit Points and Stress.
+If your character dies, work with the GM before the next
+session to create a new character at the current level of the
+rest of the party.
+ADDITIONAL RULES
+The following rules apply to many aspects of the game.
+ROUNDING UP
+This game doesn’t use fractions; if you need to round to a
+whole number, round up unless otherwise specified. When in
+doubt, resolve any ambiguity in favor of the PCs.
+REROLLING DICE
+When a feature allows you to reroll a die, you always take the
+new result unless the feature specifically says otherwise.
+INCOMING DAMAGE
+Incoming damage means the total damage from a single
+attack or source, before Armor Slots are marked.
+SIMULTANEOUS EFFECTS
+If the resolution order of multiple effects is unclear, the person
+in control of the effects (player or GM) decides what order to
+resolve them in.
+STACKING EFFECTS
+Unless stated otherwise, all effects beside conditions and
+advantage/disadvantage can stack.
+ONGOING SPELL EFFECTS
+If an effect doesn’t have a listed mechanical expiration, it only
+ends when decided by the controlling player, the GM, or the
+demands of the fiction.
+SPENDING RESOURCES
+Unless an effect states otherwise, you can’t spend Hope or
+mark Stress multiple times on the same feature to increase or
+repeat its effects on the same roll.
+USING FEATURES AFTER A ROLL
+If a feature allows you to affect a roll after the result has been
+totaled, you can use it after the GM declares whether the roll
+succeeds or fails, but not after the consequences unfold or
+another roll is made.
+LEVELING UP
+Your party levels up whenever the GM decides you’ve reached
+a narrative milestone (usually about every 3 sessions). All
+party members level up at the same time.
+Daggerheart has 10 PC levels divided into 4 tiers:
+→ Tier 1 encompasses level 1 only.
+→ Tier 2 encompasses levels 2–4.
+→ Tier 3 encompasses levels 5–7.
+→ Tier 4 encompasses levels 8–10.
+Your tier affects your damage thresholds, tier achievements,
+and access to advancements.
+STEP ONE
+TIER ACHIEVEMENTS
+Take any applicable tier achievements
+•	At level 2, you gain a new Experience at +2 and
+permanently increase your Proficiency by 1.
+•	At level 5, you gain a new Experience at +2, permanently
+increase your Proficiency by 1, and clear any marked traits.
+•	At level 8, you gain a new Experience at +2, permanently
+increase your Proficiency by 1, and clear any marked traits.
+53
+Daggerheart SRD
+@@PDFPAGE 54@@
+STEP TWO
+ADVANCEMENTS
+Choose any two advancements with at least one unmarked
+slot from your tier or below. Options with multiple slots can be
+chosen more than once. When you choose an advancement,
+mark one of its slots.
+•	When you choose to increase two unmarked character
+traits and mark them: Choose two unmarked character
+traits and gain a permanent +1 bonus to them. You can’t
+increase these stats again until the next tier (when your
+tier achievement allows you to clear those marks).
+•	When you choose to permanently add 1 or more Hit Point
+slots: Darken the outline of the next rectangle in the Hit
+Point section of your character sheet in pen or permanent
+marker.
+•	When you choose to permanently add 1 or more Stress
+slots: Darken the outline of the next rectangle in the Stress
+section of your character sheet in pen or permanent
+marker.
+•	When you choose to increase your Experience: Choose two
+Experiences on your character sheet and gain a permanent
++1 bonus to both.
+•	When you take an additional domain card: You can choose
+an additional domain card at or below your level or from
+your class’s domains. If you’ve multiclassed, you can
+instead select a card at or below half your level from your
+chosen multiclass domain.
+•	When you choose to increase your Evasion: Gain a
+permanent +1 bonus to your Evasion.
+•	When you choose to take an upgraded subclass card:
+Take the next card for your subclass. If you have only
+the foundation card, take a specialization; if you have a
+specialization already, take a mastery. Then cross out this
+tier’s multiclass option.
+•	When you choose to increase your Proficiency: Fill in one
+of the open circles in the “Proficiency” section of your
+character sheet, then increase your weapon’s number of
+damage dice by 1. The black box around this advancement’s
+slots indicates you must spend two advancements and mark
+both level-up slots in order to take it as an option.
+•	When you choose to multiclass: Choose an additional class,
+select one of its domains, and gain its class feature. Add
+the appropriate multiclass module to your character sheet
+and take the foundation card from one of its subclasses.
+Then cross out the “upgraded subclass” advancement
+option in this tier and all other “multiclass” advancement
+options on your character sheet. The black box around
+this advancement’s slots indicates you must spend two
+advancements and mark both level-up slots in order to take
+it as an option.
+STEP THREE
+DAMAGE THRESHOLDS
+Increase all damage thresholds by 1.
+STEP FOUR
+DOMAIN CARDS
+Acquire a new domain card at your level or lower from one of
+your class’s domains and add it to your loadout or vault. If your
+loadout is already full, you can’t add the new card to it until
+you move another into your vault. You can also exchange one
+domain card you’ve previously acquired for a different domain
+card of the same level or lower.
+MULTICLASSING
+Starting at level 5, you can choose multiclassing as an option
+when leveling up. When you multiclass, you choose an
+additional class, gain access to one of its domains, and acquire
+its class feature. Take the appropriate multiclass module and
+add it to the right side of your character sheet, then choose a
+foundation card from one of its subclasses. If your foundation
+cards specify different Spellcast traits, you can choose which
+one to apply when making a Spellcast roll.
+Whenever you have the option to acquire a new domain card,
+you can choose from cards at or below half your current level
+(rounded up) from the domain you chose when you selected
+the multiclass advancement.
+54	Daggerheart SRD

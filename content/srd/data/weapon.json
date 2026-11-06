@@ -1,0 +1,7973 @@
+[
+  {
+    "id": "srd/weapon/broadsword",
+    "type": "weapon",
+    "name": "Broadsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/katana",
+    "type": "weapon",
+    "name": "Katana",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/longsword",
+    "type": "weapon",
+    "name": "Longsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/battleaxe",
+    "type": "weapon",
+    "name": "Battleaxe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/brass-knuckles",
+    "type": "weapon",
+    "name": "Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/greatsword",
+    "type": "weapon",
+    "name": "Greatsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Massive",
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/mace",
+    "type": "weapon",
+    "name": "Mace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/warhammer",
+    "type": "weapon",
+    "name": "Warhammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/dagger",
+    "type": "weapon",
+    "name": "Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/quarterstaff",
+    "type": "weapon",
+    "name": "Quarterstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/cutlass",
+    "type": "weapon",
+    "name": "Cutlass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/rapier",
+    "type": "weapon",
+    "name": "Rapier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/scimitar",
+    "type": "weapon",
+    "name": "Scimitar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/twisted-dagger",
+    "type": "weapon",
+    "name": "Twisted Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/halberd",
+    "type": "weapon",
+    "name": "Halberd",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/spear",
+    "type": "weapon",
+    "name": "Spear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/whipsword",
+    "type": "weapon",
+    "name": "Whipsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:finesse|Finesse}}, Melee, d10."
+    }
+  },
+  {
+    "id": "srd/weapon/rope-dart",
+    "type": "weapon",
+    "name": "Rope Dart",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/shortbow",
+    "type": "weapon",
+    "name": "Shortbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/crossbow",
+    "type": "weapon",
+    "name": "Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/longbow",
+    "type": "weapon",
+    "name": "Longbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/arcane-gauntlets",
+    "type": "weapon",
+    "name": "Arcane Gauntlets",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/brightsword",
+    "type": "weapon",
+    "name": "Brightsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/hallowed-axe",
+    "type": "weapon",
+    "name": "Hallowed Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/shadowblade",
+    "type": "weapon",
+    "name": "Shadowblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy/mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Otherworldly",
+      "text": "On a successful attack, you can deal physical or magic damage."
+    }
+  },
+  {
+    "id": "srd/weapon/glowing-rings",
+    "type": "weapon",
+    "name": "Glowing Rings",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/hand-runes",
+    "type": "weapon",
+    "name": "Hand Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 56
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/enchanted-chakram",
+    "type": "weapon",
+    "name": "Enchanted Chakram",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Ricochet",
+      "text": "When you throw this weapon, it returns to your hand. When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within {{term:very-close|Very Close range}} of the first target with that attack."
+    }
+  },
+  {
+    "id": "srd/weapon/returning-blade",
+    "type": "weapon",
+    "name": "Returning Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Returning",
+      "text": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/casting-dagger",
+    "type": "weapon",
+    "name": "Casting Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:instinct|Instinct}}, Melee, d8."
+    }
+  },
+  {
+    "id": "srd/weapon/shortstaff",
+    "type": "weapon",
+    "name": "Shortstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/dualstaff",
+    "type": "weapon",
+    "name": "Dualstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/scepter",
+    "type": "weapon",
+    "name": "Scepter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d8."
+    }
+  },
+  {
+    "id": "srd/weapon/runelock-pistol",
+    "type": "weapon",
+    "name": "Runelock Pistol",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/wand",
+    "type": "weapon",
+    "name": "Wand",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/arcane-rifle",
+    "type": "weapon",
+    "name": "Arcane Rifle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Aimed",
+      "text": "Your attack has {{term:disadvantage|disadvantage}} if the target is within {{term:very-close|Very Close range}} of you or within {{term:melee|Melee range}} of one of your allies. You can mark a {{term:stress|Stress}} to ignore this penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/greatstaff",
+    "type": "weapon",
+    "name": "Greatstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-broadsword",
+    "type": "weapon",
+    "name": "Improved Broadsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-katana",
+    "type": "weapon",
+    "name": "Improved Katana",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-longsword",
+    "type": "weapon",
+    "name": "Improved Longsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-battleaxe",
+    "type": "weapon",
+    "name": "Improved Battleaxe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-brass-knuckles",
+    "type": "weapon",
+    "name": "Improved Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-greatsword",
+    "type": "weapon",
+    "name": "Improved Greatsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Massive",
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-mace",
+    "type": "weapon",
+    "name": "Improved Mace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-warhammer",
+    "type": "weapon",
+    "name": "Improved Warhammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-dagger",
+    "type": "weapon",
+    "name": "Improved Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-quarterstaff",
+    "type": "weapon",
+    "name": "Improved Quarterstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-cutlass",
+    "type": "weapon",
+    "name": "Improved Cutlass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-rapier",
+    "type": "weapon",
+    "name": "Improved Rapier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-scimitar",
+    "type": "weapon",
+    "name": "Improved Scimitar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 57
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-twisted-dagger",
+    "type": "weapon",
+    "name": "Improved Twisted Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-halberd",
+    "type": "weapon",
+    "name": "Improved Halberd",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-spear",
+    "type": "weapon",
+    "name": "Improved Spear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-whipsword",
+    "type": "weapon",
+    "name": "Improved Whipsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:finesse|Finesse}}, Melee, d10+3."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-rope-dart",
+    "type": "weapon",
+    "name": "Improved Rope Dart",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-shortbow",
+    "type": "weapon",
+    "name": "Improved Shortbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-crossbow",
+    "type": "weapon",
+    "name": "Improved Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-longbow",
+    "type": "weapon",
+    "name": "Improved Longbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/gilded-falchion",
+    "type": "weapon",
+    "name": "Gilded Falchion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/knuckle-blades",
+    "type": "weapon",
+    "name": "Knuckle Blades",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Brutal",
+      "text": "When you roll the maximum value on a damage die, roll an additional damage die."
+    }
+  },
+  {
+    "id": "srd/weapon/war-pick",
+    "type": "weapon",
+    "name": "War Pick",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Deadly",
+      "text": "When you deal {{term:damage-thresholds|Severe damage}}, the target must mark an additional {{term:hit-points|HP}}."
+    }
+  },
+  {
+    "id": "srd/weapon/cane-sword",
+    "type": "weapon",
+    "name": "Cane Sword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Retractable",
+      "text": "The blade can be hidden in the cane to avoid detection."
+    }
+  },
+  {
+    "id": "srd/weapon/urok-broadsword",
+    "type": "weapon",
+    "name": "Urok Broadsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Deadly",
+      "text": "When you deal {{term:damage-thresholds|Severe damage}}, the target must mark an additional {{term:hit-points|HP}}."
+    }
+  },
+  {
+    "id": "srd/weapon/bladed-fan",
+    "type": "weapon",
+    "name": "Bladed Fan",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Parry",
+      "text": "When you are attacked, roll this weapon’s damage dice. If any of the attacker’s damage dice rolled the same value as your dice, the matching results are discarded from the attacker’s damage dice before the damage you take is totaled."
+    }
+  },
+  {
+    "id": "srd/weapon/cyrurgiens-scalpel",
+    "type": "weapon",
+    "name": "Cyrurgien’s Scalpel",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Scary",
+      "text": "On a successful attack, the target must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/bladed-whip",
+    "type": "weapon",
+    "name": "Bladed Whip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/javelins",
+    "type": "weapon",
+    "name": "Javelins",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Stockpiled",
+      "text": "You can throw this weapon at a target within {{term:far|Far range}} by making an attack roll using {{term:agility|Agility}} without having to retrieve it, as you always have another one on hand."
+    }
+  },
+  {
+    "id": "srd/weapon/steelforged-halberd",
+    "type": "weapon",
+    "name": "Steelforged Halberd",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scary",
+      "text": "On a successful attack, the target must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/war-scythe",
+    "type": "weapon",
+    "name": "War Scythe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/lance",
+    "type": "weapon",
+    "name": "Lance",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/blunderbuss",
+    "type": "weapon",
+    "name": "Blunderbuss",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/greatbow",
+    "type": "weapon",
+    "name": "Greatbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/finehair-bow",
+    "type": "weapon",
+    "name": "Finehair Bow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 58
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-arcane-gauntlets",
+    "type": "weapon",
+    "name": "Improved Arcane Gauntlets",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-brightsword",
+    "type": "weapon",
+    "name": "Improved Brightsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-hallowed-axe",
+    "type": "weapon",
+    "name": "Improved Hallowed Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-shadowblade",
+    "type": "weapon",
+    "name": "Improved Shadowblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy/mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Otherworldly",
+      "text": "On a successful attack, you can deal physical or magic damage."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-glowing-rings",
+    "type": "weapon",
+    "name": "Improved Glowing Rings",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-hand-runes",
+    "type": "weapon",
+    "name": "Improved Hand Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-enchanted-chakram",
+    "type": "weapon",
+    "name": "Improved Enchanted Chakram",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Ricochet",
+      "text": "When you throw this weapon, it returns to your hand. When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within {{term:very-close|Very Close range}} of the first target with that attack."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-returning-blade",
+    "type": "weapon",
+    "name": "Improved Returning Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Returning",
+      "text": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-casting-dagger",
+    "type": "weapon",
+    "name": "Improved Casting Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:instinct|Instinct}}, Melee, d8+3."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-shortstaff",
+    "type": "weapon",
+    "name": "Improved Shortstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-dualstaff",
+    "type": "weapon",
+    "name": "Improved Dualstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-scepter",
+    "type": "weapon",
+    "name": "Improved Scepter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d8+3."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-runelock-pistol",
+    "type": "weapon",
+    "name": "Improved Runelock Pistol",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-wand",
+    "type": "weapon",
+    "name": "Improved Wand",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-arcane-rifle",
+    "type": "weapon",
+    "name": "Improved Arcane Rifle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Aimed",
+      "text": "Your attack has {{term:disadvantage|disadvantage}} if the target is within {{term:very-close|Very Close range}} of you or within {{term:melee|Melee range}} of one of your allies. You can mark a {{term:stress|Stress}} to ignore this penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-greatstaff",
+    "type": "weapon",
+    "name": "Improved Greatstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/ego-blade",
+    "type": "weapon",
+    "name": "Ego Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Pompous",
+      "text": "You must have a {{term:presence|Presence}} of 0 or lower to use this weapon."
+    }
+  },
+  {
+    "id": "srd/weapon/casting-sword",
+    "type": "weapon",
+    "name": "Casting Sword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:knowledge|Knowledge}}, Far, d6+3."
+    }
+  },
+  {
+    "id": "srd/weapon/enchanted-shillelagh",
+    "type": "weapon",
+    "name": "Enchanted Shillelagh",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+1 to your {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/devouring-dagger",
+    "type": "weapon",
+    "name": "Devouring Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Scary",
+      "text": "On a successful attack, the target must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/displacement-razor",
+    "type": "weapon",
+    "name": "Displacement Razor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 59
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Omnipresent",
+      "text": "You can make attacks against targets within {{term:very-far|Very Far range}}, but must do so with {{term:disadvantage|disadvantage}}."
+    }
+  },
+  {
+    "id": "srd/weapon/hammer-of-exota",
+    "type": "weapon",
+    "name": "Hammer of Exota",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Eruptive",
+      "text": "On a successful attack against a target within {{term:melee|Melee range}}, all other adversaries within {{term:very-close|Very Close range}} must succeed on a {{term:reaction-roll|reaction roll}} (14) or take half damage."
+    }
+  },
+  {
+    "id": "srd/weapon/spellbound-bangles",
+    "type": "weapon",
+    "name": "Spellbound Bangles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/fury-gem",
+    "type": "weapon",
+    "name": "Fury Gem",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Burning",
+      "text": "When you roll the maximum result on a damage die, the target must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/enchanted-lute",
+    "type": "weapon",
+    "name": "Enchanted Lute",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Invigorating",
+      "text": "On a successful attack, roll a d4. On a result of 4, clear a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/splintershaft-bow",
+    "type": "weapon",
+    "name": "Splintershaft Bow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Volleyed",
+      "text": "Spend a {{term:hope|Hope}} to target a group of creatures within range. Targets you succeed against take half damage."
+    }
+  },
+  {
+    "id": "srd/weapon/yutari-bloodbow",
+    "type": "weapon",
+    "name": "Yutari Bloodbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Brutal",
+      "text": "When you roll the maximum value on a damage die, roll an additional damage die."
+    }
+  },
+  {
+    "id": "srd/weapon/elder-bow",
+    "type": "weapon",
+    "name": "Elder Bow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/scepter-of-elias",
+    "type": "weapon",
+    "name": "Scepter of Elias",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Invigorating",
+      "text": "On a successful attack, roll a d4. On a result of 4, clear a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/wand-of-enthrallment",
+    "type": "weapon",
+    "name": "Wand of Enthrallment",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Persuasive",
+      "text": "Before you make a {{term:presence|Presence}} Roll, you can mark a {{term:stress|Stress}} to gain a +2 bonus to the result."
+    }
+  },
+  {
+    "id": "srd/weapon/keepers-staff",
+    "type": "weapon",
+    "name": "Keeper's Staff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-broadsword",
+    "type": "weapon",
+    "name": "Advanced Broadsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-katana",
+    "type": "weapon",
+    "name": "Advanced Katana",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-longsword",
+    "type": "weapon",
+    "name": "Advanced Longsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-battleaxe",
+    "type": "weapon",
+    "name": "Advanced Battleaxe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-brass-knuckles",
+    "type": "weapon",
+    "name": "Advanced Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-greatsword",
+    "type": "weapon",
+    "name": "Advanced Greatsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Massive",
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-mace",
+    "type": "weapon",
+    "name": "Advanced Mace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-warhammer",
+    "type": "weapon",
+    "name": "Advanced Warhammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-dagger",
+    "type": "weapon",
+    "name": "Advanced Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-quarterstaff",
+    "type": "weapon",
+    "name": "Advanced Quarterstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-cutlass",
+    "type": "weapon",
+    "name": "Advanced Cutlass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-rapier",
+    "type": "weapon",
+    "name": "Advanced Rapier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 60
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-scimitar",
+    "type": "weapon",
+    "name": "Advanced Scimitar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-twisted-dagger",
+    "type": "weapon",
+    "name": "Advanced Twisted Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-halberd",
+    "type": "weapon",
+    "name": "Advanced Halberd",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-spear",
+    "type": "weapon",
+    "name": "Advanced Spear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-whipsword",
+    "type": "weapon",
+    "name": "Advanced Whipsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:finesse|Finesse}}, Melee, d10+6."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-rope-dart",
+    "type": "weapon",
+    "name": "Advanced Rope Dart",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-shortbow",
+    "type": "weapon",
+    "name": "Advanced Shortbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-crossbow",
+    "type": "weapon",
+    "name": "Advanced Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-longbow",
+    "type": "weapon",
+    "name": "Advanced Longbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/flickerfly-blade",
+    "type": "weapon",
+    "name": "Flickerfly Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Sharpwing",
+      "text": "Gain a bonus to your damage rolls equal to your {{term:agility|Agility}}."
+    }
+  },
+  {
+    "id": "srd/weapon/blitz-hammer",
+    "type": "weapon",
+    "name": "Blitz Hammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Accelerator",
+      "text": "Once per scene, mark a {{term:stress|Stress}} to move to {{term:far|Far range}} then make an attack. Gain a +1 bonus to your {{term:proficiency|Proficiency}} on this attack."
+    }
+  },
+  {
+    "id": "srd/weapon/bravesword",
+    "type": "weapon",
+    "name": "Bravesword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Brave",
+      "text": "−1 to {{term:evasion|Evasion}}; +3 to {{term:damage-thresholds|Severe damage}} threshold"
+    }
+  },
+  {
+    "id": "srd/weapon/hammer-of-wrath",
+    "type": "weapon",
+    "name": "Hammer of Wrath",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Devastating",
+      "text": "Before you make an attack roll, you can mark a {{term:stress|Stress}} to use a d20 as your damage die."
+    }
+  },
+  {
+    "id": "srd/weapon/labrys-axe",
+    "type": "weapon",
+    "name": "Labrys Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Protective",
+      "text": "+1 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/platinum-estoc",
+    "type": "weapon",
+    "name": "Platinum Estoc",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/meridian-cutlass",
+    "type": "weapon",
+    "name": "Meridian Cutlass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Dueling",
+      "text": "When there are no other creatures within {{term:close|Close range}} of the target, gain {{term:advantage|advantage}} on your attack roll against them."
+    }
+  },
+  {
+    "id": "srd/weapon/retractable-saber",
+    "type": "weapon",
+    "name": "Retractable Saber",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Retractable",
+      "text": "The blade can be hidden in the hilt to avoid detection."
+    }
+  },
+  {
+    "id": "srd/weapon/double-flail",
+    "type": "weapon",
+    "name": "Double Flail",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/soldiers-pike",
+    "type": "weapon",
+    "name": "Soldier’s Pike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Braced",
+      "text": "When an adversary within this weapon’s range deals damage to you, you can mark 2 {{term:stress|Stress}} to force them to mark a {{term:hit-points|Hit Point}}."
+    }
+  },
+  {
+    "id": "srd/weapon/chained-scythe",
+    "type": "weapon",
+    "name": "Chained Scythe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/singing-sword",
+    "type": "weapon",
+    "name": "Singing Sword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Bolstering",
+      "text": "When you critically succeed on an attack, all PCs within {{term:close|Close range}} gain a {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd/weapon/talon-blades",
+    "type": "weapon",
+    "name": "Talon Blades",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Brutal",
+      "text": "When you roll the maximum value on a damage die, roll an additional damage die."
+    }
+  },
+  {
+    "id": "srd/weapon/bladed-star",
+    "type": "weapon",
+    "name": "Bladed Star",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Rebounding",
+      "text": "When you throw this weapon, it returns to your hand. On a failed attack, you can reroll your attack with {{term:disadvantage|disadvantage}}."
+    }
+  },
+  {
+    "id": "srd/weapon/black-powder-revolver",
+    "type": "weapon",
+    "name": "Black Powder Revolver",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/spiked-bow",
+    "type": "weapon",
+    "name": "Spiked Bow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 61
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:agility|Agility}}, Melee, d10+5."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-arcane-gauntlets",
+    "type": "weapon",
+    "name": "Advanced Arcane Gauntlets",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-brightsword",
+    "type": "weapon",
+    "name": "Advanced Brightsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-hallowed-axe",
+    "type": "weapon",
+    "name": "Advanced Hallowed Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-shadowblade",
+    "type": "weapon",
+    "name": "Advanced Shadowblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy/mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Otherworldly",
+      "text": "On a successful attack, you can deal physical or magic damage."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-glowing-rings",
+    "type": "weapon",
+    "name": "Advanced Glowing Rings",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 8,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-hand-runes",
+    "type": "weapon",
+    "name": "Advanced Hand Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-enchanted-chakram",
+    "type": "weapon",
+    "name": "Advanced Enchanted Chakram",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Ricochet",
+      "text": "When you throw this weapon, it returns to your hand. When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within {{term:very-close|Very Close range}} of the first target with that attack."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-returning-blade",
+    "type": "weapon",
+    "name": "Advanced Returning Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Returning",
+      "text": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-casting-dagger",
+    "type": "weapon",
+    "name": "Advanced Casting Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:instinct|Instinct}}, Melee, d8+6."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-shortstaff",
+    "type": "weapon",
+    "name": "Advanced Shortstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-dualstaff",
+    "type": "weapon",
+    "name": "Advanced Dualstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-scepter",
+    "type": "weapon",
+    "name": "Advanced Scepter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d8+4."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-runelock-pistol",
+    "type": "weapon",
+    "name": "Advanced Runelock Pistol",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-wand",
+    "type": "weapon",
+    "name": "Advanced Wand",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/advanced-arcane-rifle",
+    "type": "weapon",
+    "name": "Advanced Arcane Rifle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Aimed",
+      "text": "Your attack has {{term:disadvantage|disadvantage}} if the target is within {{term:very-close|Very Close range}} of you or within {{term:melee|Melee range}} of one of your allies. You can mark a {{term:stress|Stress}} to ignore this penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-greatstaff",
+    "type": "weapon",
+    "name": "Advanced Greatstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/rocket-maul",
+    "type": "weapon",
+    "name": "Rocket Maul",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Concussive",
+      "text": "On a successful attack, you can spend a {{term:hope|Hope}} to knock the target back to {{term:far|Far range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/crystal-spear",
+    "type": "weapon",
+    "name": "Crystal Spear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/arc-wand",
+    "type": "weapon",
+    "name": "Arc Wand",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Bouncing",
+      "text": "Mark any number of {{term:stress|Stress}} to target that many additional creatures in range of the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/rime-scepter",
+    "type": "weapon",
+    "name": "Rime Scepter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 62
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Freezing",
+      "text": "When an attack from this weapon causes a target to mark 2 or more {{term:hit-points|HP}}, they become {{term:temporary|temporarily}} _{{term:restrained|Restrained}}._"
+    }
+  },
+  {
+    "id": "srd/weapon/gunblade",
+    "type": "weapon",
+    "name": "Gunblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:agility|Agility}}, Melee, d8+6 phy."
+    }
+  },
+  {
+    "id": "srd/weapon/staff-of-augma",
+    "type": "weapon",
+    "name": "Staff of Augma",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Catalytic",
+      "text": "On a successful attack, you can mark a {{term:stress|Stress}} to give an ally within {{term:close|Close range}} a +3 bonus to their next attack roll."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-broadsword",
+    "type": "weapon",
+    "name": "Legendary Broadsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-katana",
+    "type": "weapon",
+    "name": "Legendary Katana",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-longsword",
+    "type": "weapon",
+    "name": "Legendary Longsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-battleaxe",
+    "type": "weapon",
+    "name": "Legendary Battleaxe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-brass-knuckles",
+    "type": "weapon",
+    "name": "Legendary Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-greatsword",
+    "type": "weapon",
+    "name": "Legendary Greatsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Massive",
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-mace",
+    "type": "weapon",
+    "name": "Legendary Mace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-warhammer",
+    "type": "weapon",
+    "name": "Legendary Warhammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-dagger",
+    "type": "weapon",
+    "name": "Legendary Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-quarterstaff",
+    "type": "weapon",
+    "name": "Legendary Quarterstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-cutlass",
+    "type": "weapon",
+    "name": "Legendary Cutlass",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-rapier",
+    "type": "weapon",
+    "name": "Legendary Rapier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-scimitar",
+    "type": "weapon",
+    "name": "Legendary Scimitar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-twisted-dagger",
+    "type": "weapon",
+    "name": "Legendary Twisted Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Piercing",
+      "text": "Damage dealt with this weapon treats the target’s {{term:damage-thresholds|Major threshold}} as having a −2 penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-halberd",
+    "type": "weapon",
+    "name": "Legendary Halberd",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-spear",
+    "type": "weapon",
+    "name": "Legendary Spear",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-whipsword",
+    "type": "weapon",
+    "name": "Legendary Whipsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:finesse|Finesse}}, Melee, d10+9."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-rope-dart",
+    "type": "weapon",
+    "name": "Legendary Rope Dart",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-shortbow",
+    "type": "weapon",
+    "name": "Legendary Shortbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-crossbow",
+    "type": "weapon",
+    "name": "Legendary Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-longbow",
+    "type": "weapon",
+    "name": "Legendary Longbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}"
+    }
+  },
+  {
+    "id": "srd/weapon/dual-ended-sword",
+    "type": "weapon",
+    "name": "Dual-Ended Sword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/impact-gauntlet",
+    "type": "weapon",
+    "name": "Impact Gauntlet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Concussive",
+      "text": "On a successful attack, you can spend a {{term:hope|Hope}} to knock the target back to {{term:far|Far range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/sledge-axe",
+    "type": "weapon",
+    "name": "Sledge Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 63
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 13,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Destructive",
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/curved-dagger",
+    "type": "weapon",
+    "name": "Curved Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Serrated",
+      "text": "When you roll a 1 on a damage die, it deals 8 damage instead."
+    }
+  },
+  {
+    "id": "srd/weapon/severed-dragon-claw",
+    "type": "weapon",
+    "name": "Severed Dragon Claw",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Destructive",
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all adversaries within {{term:very-close|Very Close range}} must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/infinite-staff",
+    "type": "weapon",
+    "name": "Infinite Staff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Extending",
+      "text": "You can increase the range of this weapon up to Very Far. You gain a −1 penalty to attack rolls for each step you increase the range by (such as Melee to Very Close, Very Close to Close, or Close to Far)."
+    }
+  },
+  {
+    "id": "srd/weapon/bec-de-corbin",
+    "type": "weapon",
+    "name": "Bec de Corbin",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Devastating",
+      "text": "Before you make an attack roll, you can mark a {{term:stress|Stress}} to use a d20 as your damage die."
+    }
+  },
+  {
+    "id": "srd/weapon/extended-polearm",
+    "type": "weapon",
+    "name": "Extended Polearm",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Long",
+      "text": "This weapon’s attack targets all adversaries in a line within range."
+    }
+  },
+  {
+    "id": "srd/weapon/swinging-ropeblade",
+    "type": "weapon",
+    "name": "Swinging Ropeblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Grappling",
+      "text": "On a successful attack, you can spend a {{term:hope|Hope}} to _{{term:restrained|Restrain}}_ the target or pull them into {{term:melee|Melee range}} with you."
+    }
+  },
+  {
+    "id": "srd/weapon/black-powder-serpentine",
+    "type": "weapon",
+    "name": "Black Powder Serpentine",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Incendiary",
+      "text": "−1 to {{term:agility|Agility}}; on a successful attack, all creatures within {{term:very-close|Very Close range}} of the target must mark a {{term:hit-points|Hit Point}}."
+    }
+  },
+  {
+    "id": "srd/weapon/ricochet-axes",
+    "type": "weapon",
+    "name": "Ricochet Axes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Bouncing",
+      "text": "Mark 1 or more {{term:stress|Stress}} to hit that many targets in range of the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/aantari-bow",
+    "type": "weapon",
+    "name": "Aantari Bow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/clockwork-crossbow",
+    "type": "weapon",
+    "name": "Clockwork Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd/weapon/arquebus",
+    "type": "weapon",
+    "name": "Arquebus",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/hand-cannon",
+    "type": "weapon",
+    "name": "Hand Cannon",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-arcane-gauntlets",
+    "type": "weapon",
+    "name": "Legendary Arcane Gauntlets",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-brightsword",
+    "type": "weapon",
+    "name": "Legendary Brightsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-hallowed-axe",
+    "type": "weapon",
+    "name": "Legendary Hallowed Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-shadowblade",
+    "type": "weapon",
+    "name": "Legendary Shadowblade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy/mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Otherworldly",
+      "text": "On a successful attack, you can deal physical or magic damage."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-glowing-rings",
+    "type": "weapon",
+    "name": "Legendary Glowing Rings",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 11,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-hand-runes",
+    "type": "weapon",
+    "name": "Legendary Hand Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 64
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-enchanted-chakram",
+    "type": "weapon",
+    "name": "Legendary Enchanted Chakram",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Ricochet",
+      "text": "When you throw this weapon, it returns to your hand. When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within {{term:very-close|Very Close range}} of the first target with that attack."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-returning-blade",
+    "type": "weapon",
+    "name": "Legendary Returning Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Returning",
+      "text": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-casting-dagger",
+    "type": "weapon",
+    "name": "Legendary Casting Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:instinct|Instinct}}, Melee, d8+9."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-shortstaff",
+    "type": "weapon",
+    "name": "Legendary Shortstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-dualstaff",
+    "type": "weapon",
+    "name": "Legendary Dualstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 12,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-scepter",
+    "type": "weapon",
+    "name": "Legendary Scepter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d8+6."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-runelock-pistol",
+    "type": "weapon",
+    "name": "Legendary Runelock Pistol",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 12,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-wand",
+    "type": "weapon",
+    "name": "Legendary Wand",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/legendary-arcane-rifle",
+    "type": "weapon",
+    "name": "Legendary Arcane Rifle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d10",
+      "bonus": 12,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Aimed",
+      "text": "Your attack has {{term:disadvantage|disadvantage}} if the target is within {{term:very-close|Very Close range}} of you or within {{term:melee|Melee range}} of one of your allies. You can mark a {{term:stress|Stress}} to ignore this penalty."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-greatstaff",
+    "type": "weapon",
+    "name": "Legendary Greatstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/starmetal-blade",
+    "type": "weapon",
+    "name": "Starmetal Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Serrated",
+      "text": "When you roll a 1 on a damage die, it deals 8 damage instead."
+    }
+  },
+  {
+    "id": "srd/weapon/sword-of-light-and-flame",
+    "type": "weapon",
+    "name": "Sword of Light & Flame",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 11,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Hot",
+      "text": "This weapon cuts through solid material."
+    }
+  },
+  {
+    "id": "srd/weapon/adders-fang",
+    "type": "weapon",
+    "name": "Adder’s Fang",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Venomous",
+      "text": "When you deal Major or greater damage with this weapon, the target becomes {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_."
+    }
+  },
+  {
+    "id": "srd/weapon/demons-edge",
+    "type": "weapon",
+    "name": "Demon’s Edge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Disturbing",
+      "text": "When you defeat a creature with this weapon, all adversaries within {{term:close|Close range}} must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/siphoning-gauntlets",
+    "type": "weapon",
+    "name": "Siphoning Gauntlets",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Lifestealing",
+      "text": "On a successful attack, roll a d6. On a result of 6, clear a {{term:hit-points|Hit Point}} or clear a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/midas-scythe",
+    "type": "weapon",
+    "name": "Midas Scythe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Greedy",
+      "text": "Spend a handful of gold to gain a +1 bonus to your {{term:proficiency|Proficiency}} on a damage roll."
+    }
+  },
+  {
+    "id": "srd/weapon/storm-gods-greataxe",
+    "type": "weapon",
+    "name": "Storm God’s Greataxe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Bouncing",
+      "text": "Mark any number of {{term:stress|Stress}} to target that many additional creatures in range of the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/ethereal-zweiha-nder",
+    "type": "weapon",
+    "name": "Ethereal Zweihänder",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Ethereal",
+      "text": "You must mark a {{term:stress|Stress}} to conjure this weapon. It lasts until the end of the scene."
+    }
+  },
+  {
+    "id": "srd/weapon/floating-bladeshards",
+    "type": "weapon",
+    "name": "Floating Bladeshards",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd/weapon/bloodstaff",
+    "type": "weapon",
+    "name": "Bloodstaff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d20",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Painful",
+      "text": "Each time you make a successful attack, you must mark a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/thistlebow",
+    "type": "weapon",
+    "name": "Thistlebow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 65
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 13,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd/weapon/gravity-arbalest",
+    "type": "weapon",
+    "name": "Gravity Arbalest",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Magnetic",
+      "text": "When you make an attack with this weapon, you can spend a {{term:hope|Hope}} to force all adversaries within {{term:very-close|Very Close range}} of the target to make a {{term:reaction-roll|Reaction Roll}} (16). Creatures who fail must mark a {{term:stress|Stress}} and are pulled into {{term:melee|Melee range}} of the target."
+    }
+  },
+  {
+    "id": "srd/weapon/wand-of-essek",
+    "type": "weapon",
+    "name": "Wand of Essek",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 13,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Timebending",
+      "text": "You can choose the target of your attack after making your attack roll."
+    }
+  },
+  {
+    "id": "srd/weapon/magus-revolver",
+    "type": "weapon",
+    "name": "Magus Revolver",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 13,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reloading",
+      "text": "After you make an attack, roll a d6. On a result of 1, you must mark a {{term:stress|Stress}} to reload this weapon before you can fire it again."
+    }
+  },
+  {
+    "id": "srd/weapon/fusion-gloves",
+    "type": "weapon",
+    "name": "Fusion Gloves",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Bonded",
+      "text": "Gain a bonus to your damage rolls equal to your level."
+    }
+  },
+  {
+    "id": "srd/weapon/hatchet",
+    "type": "weapon",
+    "name": "Hatchet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Follow-Up",
+      "text": "On a successful attack with your primary weapon within {{term:melee|Melee range}}, you can mark a {{term:stress|Stress}} to gain a +1 bonus to your {{term:proficiency|Proficiency}} for this attack."
+    }
+  },
+  {
+    "id": "srd/weapon/shortsword",
+    "type": "weapon",
+    "name": "Shortsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+2 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/offhand-brass-knuckles",
+    "type": "weapon",
+    "name": "Offhand Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+2 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/round-shield",
+    "type": "weapon",
+    "name": "Round Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+1 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/tower-shield",
+    "type": "weapon",
+    "name": "Tower Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Barrier",
+      "text": "+2 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/small-dagger",
+    "type": "weapon",
+    "name": "Small Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+2 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/throwing-knives",
+    "type": "weapon",
+    "name": "Throwing Knives",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Stockpiled",
+      "text": "You can throw this weapon within {{term:close|Close range}} by making an attack roll using {{term:finesse|Finesse}}. You don’t have to retrieve it, as you always have another on hand."
+    }
+  },
+  {
+    "id": "srd/weapon/fighting-cloak",
+    "type": "weapon",
+    "name": "Fighting Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Padded",
+      "text": "+2 to {{term:damage-thresholds|damage thresholds}}"
+    }
+  },
+  {
+    "id": "srd/weapon/rune-shield",
+    "type": "weapon",
+    "name": "Rune Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+1 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/focus-runes",
+    "type": "weapon",
+    "name": "Focus Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Focused",
+      "text": "+1 to primary weapon damage to targets within {{term:very-close|Very Close range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/whip",
+    "type": "weapon",
+    "name": "Whip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Startling",
+      "text": "Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/grappler",
+    "type": "weapon",
+    "name": "Grappler",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/hand-crossbow",
+    "type": "weapon",
+    "name": "Hand Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 66
+    },
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/improved-hatchet",
+    "type": "weapon",
+    "name": "Improved Hatchet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Follow-Up",
+      "text": "On a successful attack with your primary weapon within {{term:melee|Melee range}}, you can mark a {{term:stress|Stress}} to gain a +1 bonus to your {{term:proficiency|Proficiency}} for this attack."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-shortsword",
+    "type": "weapon",
+    "name": "Improved Shortsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+3 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-offhand-brass-knuckles",
+    "type": "weapon",
+    "name": "Improved Offhand Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+3 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-round-shield",
+    "type": "weapon",
+    "name": "Improved Round Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+2 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-tower-shield",
+    "type": "weapon",
+    "name": "Improved Tower Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Barrier",
+      "text": "+3 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-small-dagger",
+    "type": "weapon",
+    "name": "Improved Small Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+3 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-throwing-knives",
+    "type": "weapon",
+    "name": "Improved Throwing Knives",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Stockpiled",
+      "text": "You can throw this weapon within {{term:close|Close range}} by making an attack roll using {{term:finesse|Finesse}}. You don’t have to retrieve it, as you always have another on hand."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-fighting-cloak",
+    "type": "weapon",
+    "name": "Improved Fighting Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Padded",
+      "text": "+3 to {{term:damage-thresholds|damage thresholds}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-rune-shield",
+    "type": "weapon",
+    "name": "Improved Rune Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+2 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-focus-runes",
+    "type": "weapon",
+    "name": "Improved Focus Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Focused",
+      "text": "+1 to primary weapon damage to targets within {{term:very-close|Very Close range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/improved-whip",
+    "type": "weapon",
+    "name": "Improved Whip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Startling",
+      "text": "Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-grappler",
+    "type": "weapon",
+    "name": "Improved Grappler",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/improved-hand-crossbow",
+    "type": "weapon",
+    "name": "Improved Hand Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/collapsible-baton",
+    "type": "weapon",
+    "name": "Collapsible Baton",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Nonlethal",
+      "text": "When a target would mark any number of {{term:hit-points|Hit Points}} from an attack with this weapon, they mark an equal number of {{term:stress|Stress}} instead."
+    }
+  },
+  {
+    "id": "srd/weapon/spiked-shield",
+    "type": "weapon",
+    "name": "Spiked Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Double Duty",
+      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/parrying-dagger",
+    "type": "weapon",
+    "name": "Parrying Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Parry",
+      "text": "When you are attacked, roll this weapon's damage dice. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled."
+    }
+  },
+  {
+    "id": "srd/weapon/eldritch-vambrace",
+    "type": "weapon",
+    "name": "Eldritch Vambrace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Deflecting",
+      "text": "When you are attacked, you can mark an {{term:armor-slot|Armor Slot}} to gain a bonus to your {{term:evasion|Evasion}} equal to your {{term:armor-score|Armor Score}} against the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/segmented-staff",
+    "type": "weapon",
+    "name": "Segmented Staff",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Double Duty",
+      "text": "+1 to {{term:armor-score|Armor Score}}; +1 to primary weapon damage within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/razor-wire",
+    "type": "weapon",
+    "name": "Razor Wire",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Entangling",
+      "text": "On a successful attack with your primary weapon against a target within {{term:very-close|Very Close range}}, you can spend a {{term:hope|Hope}} to make the target {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_."
+    }
+  },
+  {
+    "id": "srd/weapon/returning-axe",
+    "type": "weapon",
+    "name": "Returning Axe",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 67
+    },
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Returning",
+      "text": "When this weapon is thrown within its range, it appears in your hand immediately after the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-hatchet",
+    "type": "weapon",
+    "name": "Advanced Hatchet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Follow-Up",
+      "text": "On a successful attack with your primary weapon within {{term:melee|Melee range}}, you can mark a {{term:stress|Stress}} to gain a +1 bonus to your {{term:proficiency|Proficiency}} for this attack."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-shortsword",
+    "type": "weapon",
+    "name": "Advanced Shortsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+4 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-offhand-brass-knuckles",
+    "type": "weapon",
+    "name": "Advanced Offhand Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+4 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-round-shield",
+    "type": "weapon",
+    "name": "Advanced Round Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+3 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-tower-shield",
+    "type": "weapon",
+    "name": "Advanced Tower Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Barrier",
+      "text": "+4 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-small-dagger",
+    "type": "weapon",
+    "name": "Advanced Small Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+4 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-throwing-knives",
+    "type": "weapon",
+    "name": "Advanced Throwing Knives",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Stockpiled",
+      "text": "You can throw this weapon within {{term:close|Close range}} by making an attack roll using {{term:finesse|Finesse}}. You don’t have to retrieve it, as you always have another on hand."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-fighting-cloak",
+    "type": "weapon",
+    "name": "Advanced Fighting Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Padded",
+      "text": "+4 to {{term:damage-thresholds|damage thresholds}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-rune-shield",
+    "type": "weapon",
+    "name": "Advanced Rune Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+3 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-focus-runes",
+    "type": "weapon",
+    "name": "Advanced Focus Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Focused",
+      "text": "+1 to primary weapon damage to targets within {{term:very-close|Very Close range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-whip",
+    "type": "weapon",
+    "name": "Advanced Whip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Startling",
+      "text": "Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-grappler",
+    "type": "weapon",
+    "name": "Advanced Grappler",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/advanced-hand-crossbow",
+    "type": "weapon",
+    "name": "Advanced Hand Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/buckler",
+    "type": "weapon",
+    "name": "Buckler",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Deflecting",
+      "text": "When you are attacked, you can mark an {{term:armor-slot|Armor Slot}} to gain a bonus to your {{term:evasion|Evasion}} equal to your available {{term:armor-score|Armor Score}} against the attack."
+    }
+  },
+  {
+    "id": "srd/weapon/tinkers-hammer",
+    "type": "weapon",
+    "name": "Tinker’s Hammer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Trusty",
+      "text": "+1 to attack rolls made with your primary weapon"
+    }
+  },
+  {
+    "id": "srd/weapon/vorpal-shard",
+    "type": "weapon",
+    "name": "Vorpal Shard",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Targeted",
+      "text": "When you fail a weapon attack, you can spend a {{term:hope|Hope}} to succeed on your next weapon attack."
+    }
+  },
+  {
+    "id": "srd/weapon/soul-chain",
+    "type": "weapon",
+    "name": "Soul Chain",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Draining",
+      "text": "On a successful attack, you can spend a {{term:hope|Hope}} to force the target to mark a {{term:stress|Stress}}. If they do, you clear a {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/powered-gauntlet",
+    "type": "weapon",
+    "name": "Powered Gauntlet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "knowledge",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Charged",
+      "text": "Mark a {{term:stress|Stress}} to gain a +1 bonus to your {{term:proficiency|Proficiency}} on a primary weapon attack."
+    }
+  },
+  {
+    "id": "srd/weapon/war-dart",
+    "type": "weapon",
+    "name": "War Dart",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:agility|Agility}}, Melee, d8+5."
+    }
+  },
+  {
+    "id": "srd/weapon/hand-sling",
+    "type": "weapon",
+    "name": "Hand Sling",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 68
+    },
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:finesse|Finesse}}, Close, d8+4."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-hatchet",
+    "type": "weapon",
+    "name": "Legendary Hatchet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Follow-Up",
+      "text": "On a successful attack with your primary weapon within {{term:melee|Melee range}}, you can mark a {{term:stress|Stress}} to gain a +1 bonus to your {{term:proficiency|Proficiency}} for this attack."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-shortsword",
+    "type": "weapon",
+    "name": "Legendary Shortsword",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+5 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-offhand-brass-knuckles",
+    "type": "weapon",
+    "name": "Legendary Offhand Brass Knuckles",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+5 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-round-shield",
+    "type": "weapon",
+    "name": "Legendary Round Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+4 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-tower-shield",
+    "type": "weapon",
+    "name": "Legendary Tower Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Barrier",
+      "text": "+5 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-small-dagger",
+    "type": "weapon",
+    "name": "Legendary Small Dagger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+5 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-throwing-knives",
+    "type": "weapon",
+    "name": "Legendary Throwing Knives",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Stockpiled",
+      "text": "You can throw this weapon within {{term:close|Close range}} by making an attack roll using {{term:finesse|Finesse}}. You don’t have to retrieve it, as you always have another on hand."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-fighting-cloak",
+    "type": "weapon",
+    "name": "Legendary Fighting Cloak",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Padded",
+      "text": "+5 to {{term:damage-thresholds|damage thresholds}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-rune-shield",
+    "type": "weapon",
+    "name": "Legendary Rune Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+4 to {{term:armor-score|Armor Score}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-focus-runes",
+    "type": "weapon",
+    "name": "Legendary Focus Runes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Focused",
+      "text": "+1 to primary weapon damage to targets within {{term:very-close|Very Close range}}"
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-whip",
+    "type": "weapon",
+    "name": "Legendary Whip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Startling",
+      "text": "Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-grappler",
+    "type": "weapon",
+    "name": "Legendary Grappler",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/legendary-hand-crossbow",
+    "type": "weapon",
+    "name": "Legendary Hand Crossbow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd/weapon/braveshield",
+    "type": "weapon",
+    "name": "Braveshield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Sheltering",
+      "text": "When you mark an {{term:armor-slot|Armor Slot}}, it reduces damage for you and all allies within {{term:melee|Melee range}} of you who took the same damage."
+    }
+  },
+  {
+    "id": "srd/weapon/knuckle-claws",
+    "type": "weapon",
+    "name": "Knuckle Claws",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Doubled Up",
+      "text": "When you make an attack with your primary weapon, you can deal damage to another target within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/void-needle",
+    "type": "weapon",
+    "name": "Void Needle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Inverted",
+      "text": "When you roll a weapon attack with {{term:fear|Fear}}, you gain a {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd/weapon/echo-blade",
+    "type": "weapon",
+    "name": "Echo Blade",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Doubled Up",
+      "text": "When you succeed on an attack with your primary weapon, you can deal damage to another target within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd/weapon/mo-bius-orb",
+    "type": "weapon",
+    "name": "Möbius Orb",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Recursive",
+      "text": "When you roll the maximum value on a damage die, roll an additional damage die and add the result to the total damage. This feature can trigger repeatedly."
+    }
+  },
+  {
+    "id": "srd/weapon/primer-shard",
+    "type": "weapon",
+    "name": "Primer Shard",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Locked On",
+      "text": "On a successful attack, your next attack against the same target with your primary weapon automatically succeeds."
+    }
+  },
+  {
+    "id": "srd/weapon/blackblood-tendril",
+    "type": "weapon",
+    "name": "Blackblood Tendril",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 69
+    },
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Poisonous",
+      "text": "When a target marks any number of {{term:hit-points|Hit Points}} from an attack you rolled with {{term:fear|Fear}}, they mark an equal number of {{term:stress|Stress}}."
+    }
+  },
+  {
+    "id": "srd/weapon/light-frame-wheelchair",
+    "type": "weapon",
+    "name": "Light-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    },
+    "tags": [
+      "light-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/improved-light-frame-wheelchair",
+    "type": "weapon",
+    "name": "Improved Light-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    },
+    "tags": [
+      "light-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/advanced-light-frame-wheelchair",
+    "type": "weapon",
+    "name": "Advanced Light-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    },
+    "tags": [
+      "light-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/legendary-light-frame-wheelchair",
+    "type": "weapon",
+    "name": "Legendary Light-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 70
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    },
+    "tags": [
+      "light-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/heavy-frame-wheelchair",
+    "type": "weapon",
+    "name": "Heavy-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    },
+    "tags": [
+      "heavy-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/improved-heavy-frame-wheelchair",
+    "type": "weapon",
+    "name": "Improved Heavy-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    },
+    "tags": [
+      "heavy-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/advanced-heavy-frame-wheelchair",
+    "type": "weapon",
+    "name": "Advanced Heavy-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    },
+    "tags": [
+      "heavy-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/legendary-heavy-frame-wheelchair",
+    "type": "weapon",
+    "name": "Legendary Heavy-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 12,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}"
+    },
+    "tags": [
+      "heavy-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/arcane-frame-wheelchair",
+    "type": "weapon",
+    "name": "Arcane-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 1,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "spellcast",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    },
+    "tags": [
+      "arcane-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/improved-arcane-frame-wheelchair",
+    "type": "weapon",
+    "name": "Improved Arcane-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 2,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "spellcast",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    },
+    "tags": [
+      "arcane-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/advanced-arcane-frame-wheelchair",
+    "type": "weapon",
+    "name": "Advanced Arcane-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 3,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "spellcast",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    },
+    "tags": [
+      "arcane-frame-models"
+    ]
+  },
+  {
+    "id": "srd/weapon/legendary-arcane-frame-wheelchair",
+    "type": "weapon",
+    "name": "Legendary Arcane-Frame Wheelchair",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 71
+    },
+    "tier": 4,
+    "category": "primary",
+    "group": "combat-wheelchair",
+    "trait": "spellcast",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    },
+    "tags": [
+      "arcane-frame-models"
+    ]
+  }
+]

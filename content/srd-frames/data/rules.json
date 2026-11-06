@@ -1,0 +1,781 @@
+[
+  {
+    "id": "srd-frames/rules/the-witherwild",
+    "type": "rules",
+    "name": "The Witherwild",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": null,
+    "order": 0,
+    "text": "_When an invading nation attacks an ancient_ _forest deity, a virulent overgrowth spreads_ _throughout the land._\n\n_Designed by Carlos Cisco, Rowan Hall, & Spenser Starke_\n\n**COMPLEXITY RATING:**\n\n- "
+  },
+  {
+    "id": "srd-frames/rules/the-pitch",
+    "type": "rules",
+    "name": "The Pitch",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 1,
+    "text": "_Read this section to your players to introduce them to the_ _campaign._\n\n_Fanewick was once a place of great abundance and_ _peace—dangerous to those unfamiliar with the land, but a_ _cornucopia to those who respected its ways. When Haven_ _invaded the wilds and forced the land into eternal spring, a_ _dangerous bloom known as the Witherwild took hold and_ _now threatens the lives of all who live there. In a Witherwild_ _campaign, you’ll play unlikely heroes from humble_ _beginnings who are reckoning with their newfound duty to_ _save Fanewick’s people from dangerous corruption._"
+  },
+  {
+    "id": "srd-frames/rules/tone-and-feel",
+    "type": "rules",
+    "name": "Tone & Feel",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 2,
+    "text": "Adventurous, Dynamic, Epic, Heroic, Thrilling, Uncanny, Whimsical"
+  },
+  {
+    "id": "srd-frames/rules/themes",
+    "type": "rules",
+    "name": "Themes",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 3,
+    "text": "Cultural Clash, Ends Justify Means, Grief, People vs. Nature, Transformation and Change, Survival"
+  },
+  {
+    "id": "srd-frames/rules/touchstones",
+    "type": "rules",
+    "name": "Touchstones",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 4,
+    "text": "_Princess Mononoke, The Legend of Zelda, The Dark Crystal,_ _Nausicaä of the Valley of the Wind_"
+  },
+  {
+    "id": "srd-frames/rules/overview",
+    "type": "rules",
+    "name": "Overview",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 184,
+      "pageEnd": 185
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 5,
+    "text": "_If your group decides to play this campaign, give your players the_ _following information before character creation._\n\n**Fanewick** is a wild and untamed land, long avoided by outside forces. The woods are dark and twisting, filled with Faint Divinities who perform small miracles and services for its inhabitants, but are just as likely to lure travelers off narrow paths to their ruin. Seemingly harmless expanses of field hide bogs that engulf entire armies, consuming heavy artillery as quickly as it can cross the border. This wilderness fosters hardy people who are bold enough to raise families where others have not and strictly follow the unique rules that keep them safe. These Wicklings remained insulated from their neighbors’ wars until plague forced the people of Haven to desperate acts.\n\n**Haven** was once the most powerful force in the region; for centuries, the high stone walls into the capital bore the phrase “The Godless Gate.” While the original meaning has been lost to common knowledge, some dusty tomes and ancient records state that the founders of Haven wished to be free of the influence of the Faint Divinities that dominated the surrounding regions. They hatched a plan to kill one of the mightiest of these deities, known as **Shun’Aush the Granite** **Ophid.** While their exact method of deicide is forgotten, their victory ensured Haven’s dominance in the region for centuries to come. They made their home behind his remains, which became the mighty walls that Haven is known for.\n\nBut Shun’Aush would have his revenge. As the Havenites carved through his stone body, the fine dust left behind settled into the surrounding earth. There was a time of prosperity over many centuries while the scales of the god remained undisturbed. But progress is its own pressure. The growing population demanded increased productivity, and as farmers tilled deeper soil and miners hacked into hidden stone, the ancient stone dust rose to the surface. The same walls that brought the city security became the crucible that incubated a virulent plague.\n\nOver the last two years, over half of Haven’s populace fell to a disease known as the **Serpent’s Sickness**. First, victims cough up dust. Soon after, their skin breaks out in a scaling rash. Finally, their body hardens—first the flesh, bones, and soft tissue, spreading until, finally, their organs ossify. Once within the organs, “the serpent” moves so quickly that sufferers petrify where they stand, filling Haven with statues of victims in their last moments of agony.\n\nThe High Magus of Haven, **Archmage Phylax,** discovered a rare red flower called the crimson lady’s veil that could cure the Serpent’s Sickness. These buds grow prolifically across Fanewick in the spring—but for every ten thousand of the common white-petaled blossoms, only one red flower blooms.\n\nDesperate to save their people from the plague, Haven invaded Fanewick to amass the scarce red buds. Their forces plunged into the deep wood and, under the guidance of Archmage Phylax, plucked out the **Reaping Eye** from the most powerful Faint Divinity that protected the land: **The Great** **Owl Nikta,** the Shepherd of the Seasons. The Shepherd kept Fanewick in balance by turning her eyes upon the land, first for ripening, then ruination. Thus Nikta maintained the cycle of seasons—of growth and decay, of death and rebirth. With her Reaping Eye removed, Nikta can only watch over Fanewick with the **Sowing Eye,** forcing the land into everlasting spring.\n\nIn the year since, Haven has conquered the bogs, turning them into fields to harvest red flowers. The endless growth that once seemed like a gift quickly evolved into a scourge known as the **Witherwild**—Fanewick’s flora and fauna flourished, unchecked and uncontrolled. Animals swell to massive size; trees warp, twist, and begin to hunt people; and vines creep along the forest floor, strangling all they touch. This explosive growth is unconquerable and unrelenting, with no force able to stop the burgeoning verdance for long.\n\nPrior to the Serpent’s Sickness and the Shepherd’s endless growth, your party lived a peaceful life in Fanewick or a life of toil and conquest in Haven. But when the danger demands a response, even the unprepared—and unwilling—must make a stand."
+  },
+  {
+    "id": "srd-frames/rules/communities",
+    "type": "rules",
+    "name": "Communities",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 185,
+      "pageEnd": 186
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 6,
+    "text": "_All communities are available, but some have unique aspects_ _within a Witherwild campaign. As needed, provide the following_ _information to your players and choose one or more of the_ _questions to ask them during your session zero._\n\n### Loreborne and Highborne\n\nIn Fanewick, knowledge is the most valuable commodity, and those who have expertise have the most power. This economy of information functions primarily through gifting and trading, and wisdom would be considered acceptable collateral for a weapon or warm meal. As such, loreborne community members are the wealthiest in Fanewick and might be smaller, distinct groups of hunters, historians, or artisans within larger villages.\n\n_What knowledge did your community teach you that you_ _must now protect or share?_\n\n_What are you able to accomplish because of your upbringing_ _that others outside your community do not understand?_\n\n_You once traded important knowledge for something terrible._ _What did you impart and what did you gain in return?_\n\nIn Haven, the wealthiest members are highborne, having inherited riches built in the walled city over generations. While the highborne of Haven were more insulated from the Serpent’s Sickness, none were {{term:immunity|immune}}.\n\n_Who have you lost to the Serpent’s Sickness? How did it_ _affect you?_\n\n_How did your family make their wealth? Have you rejected_ _or embraced their core set of ethics?_\n\n_You grew up in a world of abundance but were kept from_ _learning something about the world. What was this_ _knowledge and when did you discover it?_\n\n### Ridgeborne, Underborne, and Wildborne\n\nCharacters from these communities were likely raised in Fanewick’s deadly environs, which have only become more dangerous as the Witherwild grows. Each community has unique customs, some freely shared and others kept secret, that allow them safe passage through dangerous terrain and the Faint Divinities’ territories.\n\nIn exchange for protection from the Witherwild for themselves and their families, some Wicklings from these groups have been forced to take jobs as farmers in Haven’s flower fields. Though it is backbreaking work performed for a nation destroying their land, the farmers are offered safety by the Haven fires that burn back the ever-creeping Witherwild.\n\n_What Faint Divinities do you give tribute to, and how have_ _you been rewarded in kind?_\n\n_You displeased a god of Fanewick. What did you do, and_ _what misfortune befell you or a loved one?_\n\n_You fled the place of your birth. What circumstances drove_ _you to leave?_\n\n### Orderborne\n\nPlayers might choose to build orderborne characters if they want to play current or former members of the Haven Army that invaded Fanewick. Though the army brings violence into this land, they also carry overwhelming grief for a homeland succumbing to disease.\n\n_What regrets do you carry with you from your conquest of_ _foreign soil?_\n\n_What kindness did an enemy combatant bestow upon you_ _in an hour of need? How did this change your view of the_ _people of Fanewick?_\n\n_You were charged with planting a rumor in a Fanewick_ _community. What is the rumor, and do you plan to carry_ _out this mission?_\n\n### Slyborne\n\nAs the Haven Army is the current martial power in Fanewick, those who wish to play slyborne characters might come from Fanewick rebel groups seeking to expel the invading forces from their lands. Depending on the tactics their group employs, a character from a slyborne community might align with or go against their upbringing.\n\n_Who among the Haven Army do you wish to exact revenge_ _upon and why?_\n\n_You joined an insurgent group working to free this land_ _from Haven’s grasp. What has given you doubts about the_ _leadership’s methods?_\n\n_Someone you love is a member of the Haven Army. How_ _have you used your position in the rebellion to protect them?_\n\n### Seaborne\n\nBoth Fanewick and Haven have a coastal border. The majority of Fanewick’s seaborne communities live in small seaside groups and focus on local travel to neighboring regions, while Havenites tend to live in large ports that ship and receive goods from distant lands.\n\n_You recently traveled by sea over a vast distance. What_ _went terribly wrong on that passage, and how has it_ _changed you?_\n\n_Growing up on the sea taught you a skill few have. What did_ _you learn, and how did it save your life?_\n\n_You used to sail with a companion. Who were they, and_ _how do you remain connected?_\n\n### Wanderborne\n\nWanderborne communities can be found in both Fanewick and Haven, though safe travel has been severely restricted due to the military occupation and the expansion of the Witherwild. Whether a wanderborne character comes from Fanewick, Haven, or elsewhere, the player should determine their character’s personal views on the invasion of Fanewick, and how that aligns or departs from their community’s views.\n\n_What do you do to keep your small community safe,_ _independent, and hidden from Haven’s forces?_\n\n_Because of your community’s transience, you have loved_ _ones in both Fanewick and Haven. How has this affected_ _your relationship with the invasion?_\n\n_Your community travels to protect something. What is it,_ _and why does it keep you from settling down?_"
+  },
+  {
+    "id": "srd-frames/rules/ancestries",
+    "type": "rules",
+    "name": "Ancestries",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 186
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 7,
+    "text": "_All ancestries are available, but some have unique aspects_ _within a Witherwild campaign. As needed, provide the following_ _information to your players._\n\n### Clanks\n\nClanks from Haven are commonly made from iron and steel, while clanks from Fanewick are typically constructed from wood and stone.\n\n### Fungril\n\nSince the Witherwild spread throughout Fanewick, some fungril inhabiting the forests have grown noticeably larger than fungril from other regions.\n\n### Drakona, Fauns, Firbolgs, and Infernis\n\nAfter the Witherwild corrupted Fanewick, some drakona, fauns, firbolgs, and infernis have noticed their horns growing faster and longer.\n\n### Galapa and Ribbets\n\nMany families of galapa and ribbets who lived in the bogs of Fanewick were displaced when Haven’s army invaded.\n\nHavenites and the Serpent’s Sickness\n\nAnyone, but especially those from Haven, may carry the Serpent’s Sickness, which stiffens their movements and gives them limited time to survive without a cure."
+  },
+  {
+    "id": "srd-frames/rules/classes",
+    "type": "rules",
+    "name": "Classes",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 187
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 8,
+    "text": "_All classes are available, but some have unique aspects within_ _a Witherwild campaign. As needed, provide the following_ _information to your players._\n\nDruids, Rangers, and Sorcerers\n\nDruids, rangers, and sorcerers are commonly found throughout Fanewick. If players choose one of these classes, they should consider how their character’s connection to the natural world might be impacted by the Witherwild.\n\n### Warriors and Wizards\n\nWarriors and wizards are prevalent in Haven. A large wizarding school in Haven teaches fighters and healers, and the Haven Army is largely composed of warriors and School of War wizards. If a PC is either of these classes, consider their personal relationship to the Haven Army.\n\n### Vengeance Guardian\n\nMany Wicklings who seek revenge on Haven or to expel them from Fanewick become Vengeance guardians. If players choose this subclass, they should consider what ideals or institutions their character protects.\n\n### Syndicate Rogue\n\nThe Haven Army sends spies into Fanewick communities to gain information on planned attacks and manipulate public perception. When selecting the Syndicate rogue subclass, players should consider how their character might be connected to or impacted by these covert operatives."
+  },
+  {
+    "id": "srd-frames/rules/player-principles",
+    "type": "rules",
+    "name": "Player Principles",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 187
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 9,
+    "text": "_If your group decides to play this campaign, give your players the_ _following information before character creation._\n\n### Make the Invasion Personal\n\nConsider how Haven’s invasion of Fanewick deeply impacts your character. Let these details inform what they want and what they’re willing to do to get it. Everyone has lost a loved one to the Witherwild or the Serpent’s Sickness, and more are dying by the day. Consider how the growing conflict caused your character to act in ways they aren’t proud of, or transformed personal truths they once believed were unshakable.\n\n### Treat Death with Importance\n\nTaking a life should not be done without consideration, desperation, and consequences. As your character journeys, they should remember those they’ve lost and those they’ve slain, allowing each death to affect their choices in the future.\n\n### Embrace Vulnerability\n\nFind your character’s humanity and showcase it whenever you can. They should be as vulnerable during quiet moments as they are vicious during violent ones, opening up to their allies even if they close themself off to everyone else."
+  },
+  {
+    "id": "srd-frames/rules/gm-principles",
+    "type": "rules",
+    "name": "GM Principles",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 187
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 10,
+    "text": "_Keep the following guidance in mind while you GM this_ _campaign._\n\n### Paint the World in Contrast\n\nSubvert expectations by giving space for the nightmarish to charm and the beautiful to terrify. Give the PCs visions of the natural beauty of Fanewick that has run roughshod across the region, breaking the bounds of the bogs and forests and devastating homes and communities. Show the grim and ordered life behind Haven’s walls, but also show the culture, art, and progress that has come out of centuries of safety. Contrast the capricious nature of the Faint Divinities with the devotion of the Wicklings and Havenites fighting to save their home. In a place of long nights and days, dual seasons, and two nations in conflict, look for ways to highlight bold dualities.\n\n### Show Them True Danger\n\nThough it may be tragic, bodily harm is not the worst tragedy that can befall the characters. To illustrate what’s truly at stake, use the PCs’ origins in Fanewick or Haven to show them what they stand to lose, be it their homes, family, friends, communities, or even their core truths and beliefs. The events of this campaign may change, threaten, or destroy these aspects of their past—when your players create and are invested in their character’s backstory, they have something to fight for.\n\n### Offer Alternatives to Violence\n\nBy illuminating nonviolent approaches to problem-solving, the PCs can help break the brutal cycle that binds this world. For example, showing compassion—rather than swordpoint—to a corrupted beast can free them from the Witherwild. Similarly, the conflict between Haven and Fanewick shouldn’t only be solved with blood and blade. What threatens both could also unify them. Give the PCs opportunities to mend old wounds, right past wrongs, and heal the rift between Haven and Fanewick from within.\n\n### Create Multidimensional Allies and Adversaries\n\nNo adversary or ally is all good or all bad, and they each have multidimensional lives. Even the most congenial ally should be hiding darkness inside them, hoping their failings will go undiscovered. Those painted as evil should sometimes do the right thing, even if it’s for the wrong reason. Just because a PC or NPC is from Haven doesn’t make them a villain, and, conversely, not all the inhabitants of Fanewick are virtuous. Finding the nuance, complications, and deeper motivations of the people of Haven and Fanewick will lead to richer interactions, more complex moral choices, and a deeper sense of attachment to the world for the players."
+  },
+  {
+    "id": "srd-frames/rules/distinctions",
+    "type": "rules",
+    "name": "Distinctions",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 188,
+      "pageEnd": 189
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 11,
+    "text": "_Use this information to prepare your campaign. You can also_ _share it with your players as needed._\n\n### The Weeks of Day and Night\n\nThe day and night cycle occurs weekly, meaning the sun rises for an entire week before setting into a nighttime of the same length. This has an impact on everything from agriculture to trade, as many merchants refuse to travel through the night.\n\nBut this cycle doesn’t just affect Wicklings, it’s dictated how Fanewick’s wondrous ecology has evolved. Days and nights are accompanied by entirely different natural soundscapes as Fanewick’s nocturnal denizens sleep through the long days and stalk the woods in times of darkness while their diurnal counterparts sleep. The plants similarly live on this strange day-night loop, and many live out their entire life cycles in a week. Sun rose vines make a thorny ascent to the top of the tree canopy over the course of the week, only to wilt under the light of the moon. Conversely, night bloom, a bioluminescent flower that emits the smell of burnt sugar and decay, only blossoms when evening falls, illuminating patches of forest—a godsend to anyone forced to travel in the dark.\n\n### The Serpent’s Sickness\n\nThe plague sweeping across Haven spares no one. Since the initial outbreak, Haven officials have worked tirelessly to quarantine those in the early stages of the disease, but this effort has done little to stop its spread. Due to the rarity of crimson lady’s veil, many citizens began to carry or consume all manner of flowers and snake sheddings in an attempt to protect or cure themselves.\n\nIn the initial stages, victims are afflicted with a hacking cough laden with dust that resembles powdered bone. Then a scaled rash erupts across their skin, cracking their flesh in a unique and painful pattern that resembles a snake’s skin. Not long after, the victims’ bodies harden until their organs solidify and cease to function. The final stages of the Serpent’s Sickness is so quick that many transform into statues where they stand, leaving all of Haven a cenotaph to a once-great power.\n\n### Lady’s Veil\n\nThese small flowers grow in patches of sun throughout Fanewick. For every ten thousand blossoms of white-petaled flowers, one blooms a unique and vibrant red. These flowers have long been used in herbal teas across the region, with the crimson flowers holding a place in specific ceremonies. Even so, they were only foraged until the Havenites discovered crimson lady’s veil—the only known cure for Serpent’s Sickness.\n\nThus, the Haven Army invaded Fanewick and began cultivating the flowers on massive farms that have overtaken the region’s bogs. Though the theft of the Reaping Eye has created an indefinite growing season, the red flowers remain just as rare, and Fanewick is permeated by a sickly sweet smell as the Haven Army races to mass-produce a cure for the Serpent’s Sickness.\n\n### The Witherwild\n\nThis corruption, empowered by the endless spring, is spreading throughout Fanewick. Some believe the overgrowth began in the forest, while others claim it sprang from the bogs. But no matter its origins, this flourishing malignancy induces horrific changes and massive growth on anything it touches, transforming them into Withered beings. Plants spring to life with a desire to consume all around them. Animals grow to immense proportions, with onerous dispositions to match their exaggerated teeth, tusks, and claws. Even harmless creatures that were once hunted for food have become dangerous and formidable adversaries.\n\nWhen a person is corrupted by the Witherwild, either from a purposeful attack or accidental harm (see the upcoming “Corruption from the Witherwild” section), they are transformed. They become a nightmarish hybrid—their body warped and intertwined with plant or beast. The Witherwild slowly replaces the personality of its victims with the same drive to consume exhibited by the rest of the corrupted Fanewick. Though the Withered may retain a semblance of who they are for a time, they eventually face the final loss of their personhood. Some Wicklings believe the Withered are gifted this power by Nikta’s wrath to drive the forces of Haven from Fanewick and return the Shepherd’s Reaping Eye.\n\n### The Gods of Fanewick\n\nGods in this land aren’t ethereal concepts that exist in another realm; instead, they wander the land as incarnate beings, residing in both the natural world as well as within homes and small villages. As such, they’re generally present in Wicklings’ lives. Many communities, and some larger families, even have their own small god or tutelary spirit who watches over them.\n\nBelief and worship take on a different meaning in Fanewick—there is a constant push and pull between the goals of people and their deific neighbors. The gods must curry worship from mortals, often by performing small miracles, acts of service, or by testing their resolve with tricks and curses. Mortals rely on the small blessings from the gods to keep them safe when traveling and working in Fanewick. The most powerful and widely acknowledged Faint Divinity is the Shepherd of Seasons, Nikta, as the loss of her eye had the most recent and visible impact on everyone in Fanewick.\n\nFanewick’s various divinities each have their own opinion concerning the Witherwild corruption. While some enjoy nature’s newfound dominance, many of the lesser deities are wary of how out of balance Fanewick has become. While their behavior and motives may be inscrutable, these deities are more accessible than gods who watch from on high.\n\n**Fulg, Stacker of Stones:** A small god who favors tribute in the form of smooth, stacked river rocks. Under his power, bivalves and limpets grow abundantly on rocks where they can be easily harvested. He is largely uninformed about the problems Fanewick faces, and he prefers it that way.\n\n**Hyacynis, They Who Spread Small Blossoms:** A friend of bees and tiny flowers who has embraced the Witherwild after seeing their influence and domain swell (literally) to immense proportions. They’re enjoying this rampant growth and do not see a reason to end it.\n\n**Ikla, the Sky Painter:** Ikla’s artistic prowess and talent are unmatched, painting the skies of each weekly sunrise and sunset over Fanewick in a myriad of scintillating colors. They could not be lazier the rest of the week, and their demeanor is exceedingly unpleasant, offended that anyone would ask a favor of them during their time off.\n\n**Oove, the Watcher of the Night Bloom:** He is one of the few local gods who has never been seen, but he is often heard in the wilds at night, whispering directions to lost travelers, pointing them to the nearest source of night bloom. Locals claim he leads those who displease him or harm nocturnal creatures into dangerous terrain. It’s rumored that he watches over Fanewick nights from his home on the moon.\n\n**Qui’Gar, Whispered Sweetness for a Thorny End:** A quiet god who presides over the deaths of those who pass in thorny bushes and briar patches. Traditionally, she doesn’t receive many visitors, but the Witherwild’s corruptive growth has made her job harder and upended her quiet existence.\n\n**Rohkin, the Wandering Horn:** Rohkin watches over the many herds of horned creatures that reside in Fanewick. In happier times, he preserved the balance of nature and civilization, preventing overhunting. But since the corruption of the Witherwild has taken hold, he’s seen his herds change into unrecognizable, dangerous beasts.\n\nThese are but a small slice of the hundreds, if not thousands, of Faint Divinities lurking, relaxing, hunting, and playing throughout Fanewick.\n\n_What Faint Divinities do the PCs acknowledge and pay_ _tribute to, if any?_\n\n_How has the Witherwild changed the outlook, personality,_ _and dispositions of the Faint Divinities the characters_ _encounter?_\n\n_Which gods ally themselves with Haven to preserve the_ _endless spring? Which align with Fanewick?_"
+  },
+  {
+    "id": "srd-frames/rules/the-inciting-incident",
+    "type": "rules",
+    "name": "The Inciting Incident",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 189
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 12,
+    "text": "_You can use the prompt below to start your campaign, or create_ _your own._\n\nThe Reaping Eye is stowed in a secure {{term:vault|vault}} beneath the central tower of Haven’s wizarding school, seemingly impossible to recover. A secretive and dangerous rebel group, led by a mysterious figure known only as the **Fanewraith** (she/her), has hatched a plan to end the curse of the Witherwild: find the Great Owl, Nikta, and pluck out the Sowing Eye. While this may solve the immediate problem, the long-term consequences are not being considered, just as they weren’t when Haven invaded.\n\nHaven’s beleaguered spymaster, **Kreil Dirn** (he/him), is not a popular person in Haven. He is responsible for rooting out insurgents, stopping schemes before they have a chance to start, and keeping a close watch on Haven’s internal activities. Kreil has never agreed—at least not openly—with **Archmage**\n\n**Phylax’s** (they/them) decision to steal the Reaping Eye, and the consequences they’ve all paid for that decision have been grimly vindicating.\n\nRecently, Kreil uncovered the Fanewraith’s plot and is horrified by the possibility of her success. Knowing he can’t send a troop of Haven soldiers deep into the woods to hunt down and stop the Fanewraith from stealing the Sowing Eye, Kreil uses his vast network of informants and spies to find a group of adventurers who can bring the Fanewraith to swift justice.\n\nThe party is sent an invitation from Haven to meet with Kreil. But is his information correct? Does he have his own motivation or secret ambition? Whether they come from Fanewick or Haven, the party must extend some trust to a person who is equally as dangerous and mercurial as the “enemy” they pursue. And what will they do when they find the Fanewraith? Bring her to justice? Side with her? Attempt to recover the Reaping Eye?\n\nKreil advises the party to start their hunt for the Fanewraith in the treetop village of Alula, where he suspects she runs her operation."
+  },
+  {
+    "id": "srd-frames/rules/campaign-mechanics",
+    "type": "rules",
+    "name": "Campaign Mechanics",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 189
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 13,
+    "text": "_The following mechanics are unique to this campaign._\n\n### Corruption from the Witherwild\n\nAdversaries and environments in this campaign can gain an additional type called Withered. When an adversary is Withered, describe how the Witherwild changed or impacted how they would normally appear or operate. You also need about 20 Wither tokens (these can be the same as the tokens you use for {{term:fear|Fear}}).\n\nAny time a PC takes {{term:damage-thresholds|Severe damage}} from a Withered adversary or environment, gain a Wither token and place it on that PC’s character sheet. When you do, the PC must roll their {{term:duality-dice|Fear Die}}. If they roll equal to or below the number of Wither tokens on their sheet, they immediately gain a {{term:scar|scar}} and clear all tokens, describing how the Witherwild changes them permanently.\n\nAt the end of each session, clear all Wither tokens from the PCs’ sheets and gain an equal amount of {{term:fear|Fear}}. If a character ever dies with Wither tokens on their sheet, their body is permanently taken over by the Witherwild."
+  },
+  {
+    "id": "srd-frames/rules/session-zero-questions",
+    "type": "rules",
+    "name": "Session Zero Questions",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 189
+    },
+    "parentId": "srd-frames/rules/the-witherwild",
+    "order": 14,
+    "text": "_Ask any of these questions to your players, or make your own._\n\n_What dangerous animal comes out during the week of night_ _that isn’t out during the week of day?_\n\n_What unique trait (such as appearance, smell, or taste)_ _does anything tainted by the Witherwild have?_\n\n_What superstitions does your character or their community_ _have about traversing Fanewick during the long nights?_\n\n_Your character has witnessed something beautiful that_ _came from the Witherwild. What is it and how has it_ _transformed their view of the corruption?_"
+  },
+  {
+    "id": "srd-frames/rules/faction-tracking",
+    "type": "rules",
+    "name": "Faction Tracking",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 190
+    },
+    "parentId": null,
+    "order": 15,
+    "text": "_You can use a campaign sheet to track multiple factions, the_ _relationships between them, and their distinguishing assets,_ _problems, or objectives, as well as their major assets and_ _problems._"
+  },
+  {
+    "id": "srd-frames/rules/relationships",
+    "type": "rules",
+    "name": "Relationships",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 190
+    },
+    "parentId": "srd-frames/rules/faction-tracking",
+    "order": 16,
+    "text": "The relationship between two factions is designated by a number between −3 and +3:\n\n- −3: Nemeses\n- −2: Opposed\n- −1: Unfriendly\n- 0: Neutral, Ambiguous, or Ambivalent\n- +1: Friendly\n- +2: Allied\n- +3: Close Allies\n\nThe more intense their relationship, the more willing one faction is to act on behalf of or against the other, even at risk to itself. A Friendly (+1) faction might render help if it doesn’t require much effort or risk, whereas a faction will go to great effort and expense to see its Nemeses (−3) suffer."
+  },
+  {
+    "id": "srd-frames/rules/faction-cards",
+    "type": "rules",
+    "name": "Faction Cards",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 190
+    },
+    "parentId": "srd-frames/rules/faction-tracking",
+    "order": 17,
+    "text": "Each Faction Card contains the following information:\n\n- Name: What the faction is called\n- Relationships: The faction’s relationship rank with other factions\n- Assets: 1–3 advantages the faction has, such as a large military or access to superior technology\n- Problems: 1–3 disadvantages the faction has, such as a small territory or negative reputation\n- Major Objectives: 1–3 goals the faction would expend significant resources to achieve, such as establishing a new trade route\n- Minor Objectives: 1–3 less critical goals the faction would like to achieve, such as mounting a festival or implementing a civic project"
+  },
+  {
+    "id": "srd-frames/rules/supplemental-campaign-mechanics",
+    "type": "rules",
+    "name": "Supplemental Campaign Mechanics",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 190
+    },
+    "parentId": null,
+    "order": 18,
+    "text": "_You can use following optional mechanics to supplement your campaigns._"
+  },
+  {
+    "id": "srd-frames/rules/objective-countdowns",
+    "type": "rules",
+    "name": "Objective Countdowns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 190
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 19,
+    "text": "You can use long-term {{term:countdown|countdowns}} to track a faction’s efforts to exploit their assets, address their problems, and pursue their major and minor objectives.\n\nEach in-game week, pick one {{term:countdown|countdown}} for each faction to advance (stepping down the {{term:countdown|countdown}} by one tick) as it makes progress toward its goal. These {{term:countdown|countdowns}} can also tick up (or down extra steps) according to the fiction.\n\nWhen a {{term:countdown|countdown}} triggers, the relevant faction acquires an asset, removes a problem, or achieves some other objective. Pick a new goal based on the fiction and start a new {{term:countdown|countdown}}. Each nation can have no more than one major objective {{term:countdown|countdown}} and up to two minor objective {{term:countdown|countdowns}} active at the same time.\n\nAchieving a major objective requires the faction to complete an Objective Countdown (10), whereas achieving a minor objective requires the faction to complete an Objective Countdown (4–6), depending on the scale of the endeavor.\n\nStagger the progression of your factions’ objective {{term:countdown|countdowns}} so that no more than one or two trigger each in-game week. Triggering multiple objective {{term:countdown|countdowns}} at the same time can cause weeks of inactivity afterward and lessen the tension of the various lingering conflicts.\n\nThe party may often be dispatched or mobilized to complete or block these objectives. Meanwhile, completed {{term:countdown|countdowns}} generate major narrative shifts for the party to respond to."
+  },
+  {
+    "id": "srd-frames/rules/everyday-hero-starting-equipment",
+    "type": "rules",
+    "name": "Everyday Hero Starting Equipment",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191,
+      "pageEnd": 192
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 20,
+    "text": "_PCs without access to standard weapons and armor can choose from the following tables._\n\n**Primary Physical Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Cleaver** | {{term:agility|Agility}} | Melee | d8 phy | One-Handed | **_Reliable:_** +1 to attack rolls |\n| **Sharpened** **Rake** | {{term:agility|Agility}} | Melee | d8+3 phy | Two-Handed | **_—_** |\n| **Butcher’s Axe** | {{term:strength|Strength}} | Melee | d12+3 phy | Two-Handed | **_Heavy:_** −1 to {{term:evasion|Evasion}} |\n| **Iron Skillet** | {{term:strength|Strength}} | Melee | d8+1 phy | One-Handed | **_—_** |\n| **Pitchfork** | {{term:strength|Strength}} | Melee | d10+3 phy | Two-Handed | **_—_** |\n| **Sledgehammer** | {{term:strength|Strength}} | Melee | d10+3 phy | Two-Handed | **_Massive:_** −1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result. |\n| **Cooking Knife** | {{term:finesse|Finesse}} | Melee | d8+1 phy | One-Handed | **_—_** |\n| **Walking Staff** | {{term:instinct|Instinct}} | Melee | d10+3 phy | Two-Handed | **_—_** |\n| **Rolling Pin** | {{term:presence|Presence}} | Melee | d8+1 phy | One-Handed | **_—_** |\n| **Sickle** | {{term:presence|Presence}} | Melee | d8 phy | One-Handed | **_Quick:_** When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range. |\n| **Forge Poker** | {{term:strength|Strength}} | Very Close | d8+2 phy | Two-Handed | **_—_** |\n| **Crop Scythe** | {{term:finesse|Finesse}} | Very Close | d8+2 phy | Two-Handed | **_—_** |\n| **Fishing Rod** | {{term:agility|Agility}} | Far | d6+3 phy | Two-Handed | **_—_** |\n| **Slingshot** | {{term:finesse|Finesse}} | Far | d6+3 phy | Two-Handed | **_—_** |\n| **Firework** **Launcher** | {{term:agility|Agility}} | Very Far | d6+3 phy | Two-Handed | **_Cumbersome:_** −1 to {{term:finesse|Finesse}} |\n\n**Primary Magic Weapons**\n\n_All magic weapons require a {{term:spellcast-trait|Spellcast trait}}_\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Enchanted** **Hammer** | {{term:strength|Strength}} | Melee | d10+1 mag | One-Handed | **_—_** |\n| **Enchanted** **Mop** | {{term:strength|Strength}} | Melee | d10+3 mag | Two-Handed | **_—_** |\n| **Enchanted** **Scissors** | {{term:finesse|Finesse}} | Very Close | d10 mag | One-Handed | **_—_** |\n| **Enchanted** **Broomstick** | {{term:instinct|Instinct}} | Very Close | d10+2 mag | Two-Handed | **_—_** |\n| **Exploding** **Potions** | {{term:finesse|Finesse}} | Close | d8 mag | One-Handed |  |\n| **Enchanted** **Forge Lighter** | {{term:instinct|Instinct}} | Close | d8 mag | One-Handed | **_—_** |\n| **Enchanted** **Boomerang** | {{term:instinct|Instinct}} | Far | d6+3 mag | Two-Handed | **_—_** |\n| **Enchanted Kite** | {{term:presence|Presence}} | Far | d6 mag | Two-Handed | **_Versatile:_** This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d10. |\n| **Whisk Wand** | {{term:knowledge|Knowledge}} | Far | d6+1 mag | One-Handed | **_—_** |\n| **Sparkling Staff** | {{term:knowledge|Knowledge}} | Very Far | d6 mag | Two-Handed | **_Powerful:_** On a successful attack, roll an additional damage die and discard the lowest result. |\n\n**Secondary Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Large Fork** | {{term:agility|Agility}} | Melee | d8 phy | One-Handed | **_Paired:_** +2 to primary weapon damage to targets within {{term:melee|Melee range}} |\n| **Barrel Lid** **Shield** | {{term:strength|Strength}} | Melee | d4 phy | One-Handed | **_Protective:_** +1 to {{term:armor-score|Armor Score}} |\n| **Table Shield** | {{term:strength|Strength}} | Melee | d6 phy | One-Handed | **_Barrier:_** +2 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}} |\n| **Paring Knife** | {{term:finesse|Finesse}} | Melee | d8 phy | One-Handed | **_Paired:_** +2 to primary weapon damage to targets within {{term:melee|Melee range}} |\n| **Festival Whip** | {{term:presence|Presence}} | Very Close | d6 phy | One-Handed | **_Startling:_** Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}. |\n| **Towline Hook** | {{term:finesse|Finesse}} | Close | d6 phy | One-Handed | **_Hooked:_** On a successful attack, you can pull the target into {{term:melee|Melee range}} with you. |\n| **Flare Launcher** | {{term:finesse|Finesse}} | Far | d6+1 phy | One-Handed | **_Bright:_** This weapon {{term:temporary|temporarily}} lights up the area the flare lands in. |\n\n**Armor**\n\n### Name\n\n### Base Thresholds\n\n### Base\n\n| Score | Feature |\n| --- | --- |\n| **Quilted Clothing** 5 / 11 3 **Leather Apron** 6 / 13 3 | Flexible: +1 to {{term:evasion|Evasion}} |\n| **Tree Bark Armor** 7 / 15 4 | Heavy: −1 to {{term:evasion|Evasion}} |\n| **Baking Tray Breastplate** 8 / 17 4 | Very Heavy: −2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}} |"
+  },
+  {
+    "id": "srd-frames/rules/feasts",
+    "type": "rules",
+    "name": "Feasts",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 21,
+    "text": "_You can use the following mechanics for campaigns in which the_ _PCs harvest ingredients throughout play and use them to cook_ _meals during {{term:downtime|downtime}}._"
+  },
+  {
+    "id": "srd-frames/rules/ingredients-and-flavors",
+    "type": "rules",
+    "name": "Ingredients & Flavors",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 22,
+    "text": "Every ingredient is denoted by a name and a flavor profile comprising 1–3 flavors with their relative strengths. For example, “Mushroom caps: Bitter (1), Savory (2).”\n\nThere are six flavors, each of which is represented by an associated die size: Sweet (d4), Salty (d6), Bitter (d8), Sour (d10), Savory (d12), and Weird (d20). A flavor’s strength is represented by a value between 1 and 3. The following list provides examples of ingredients and their flavor profiles:\n\n- Mushroom caps: Bitter (1), Savory (2)\n- Wyvern tongue: Sour (1), Savory (1), Weird (1)\n- Ooze marrow: Sweet (1), Bitter (2)\n- Direbear meat: Savory (3)\n- Acid dragon saliva: Sour (2)\n- Cave boar milk: Salty (1), Savory (1)\n- Rileroot: Bitter (1)\n- Ogre kidney stone: Sweet (1), Weird (1)\n\nWhen a PC acquires an ingredient, they add it to their inventory. The maximum number of ingredients a PC can hold in their inventory is equal to their highest trait.\n\nWhen the PCs cook with an ingredient, they roll a number of dice (of the flavor’s associated die size) equal to the strength of the flavor."
+  },
+  {
+    "id": "srd-frames/rules/harvesting-ingredients",
+    "type": "rules",
+    "name": "Harvesting Ingredients",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192,
+      "pageEnd": 193
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 23,
+    "text": "Ingredients can be acquired from defeated adversaries or the party’s surroundings.\n\nWhen an edible animal is defeated, the PCs can harvest ingredients from it. The number of ingredients that can be harvested is determined by the defeated animal’s maximum {{term:hit-points|Hit Points}}, according to the following table:\n\n**{{term:hit-points|Hit Points}} to Ingredients Guide**\n\n| maximum hit points | number of ingredients |\n| --- | --- |\n| **1–4** | 1 |\n| **5–7** | 2 |\n| **8–10** | 3 |\n| **12+** | 4 |\n\nThe GM determines the ingredients gained based on the details of the narrative. Usually, less powerful adversaries have predominantly Sweet, Salty, and Bitter flavor profiles, whereas more powerful adversaries tend to be more Sour, Savory, and Weird.\n\nThe PCs can also obtain ingredients by harvesting edible plants and fungi. Once per rest, each PC can spend a {{term:hope|Hope}} to gather ingredients from their environment. The GM determines what ingredients they acquire based on the fiction or by having them roll their {{term:duality-dice|Hope Die}}, then, based on the result, gain an ingredient with the following flavor profile:\n\n**Environmental Ingredients Guide**\n\n| hope die result | flavor profiles |\n| --- | --- |\n| **1–2** | Sweet (1) |\n| **3–4** | Salty (1) |\n| **5–6** | Bitter (1) |\n| **7–8** | Sour (1) |\n| **9–10** | Savory (1) |\n| **11–12** | Weird (1) |"
+  },
+  {
+    "id": "srd-frames/rules/make-a-feast",
+    "type": "rules",
+    "name": "Make a Feast",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 193
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 24,
+    "text": "In a feast-based campaign, players can’t choose {{term:downtime|downtime moves}} to clear {{term:stress|Stress}}, clear {{term:hit-points|Hit Points}}, or gain {{term:hope|Hope}}. Instead, they have a new {{term:downtime|downtime move}}: Make a Feast. Each PC who chooses this move can remove ingredients from their inventory and contribute them to the party’s collective meal to gain the benefits of the resulting feast.\n\n### Preparing the Dish\n\nTo begin cooking, the party designates one PC to be the chef. The chef combines each contributed ingredient’s flavor dice into a flavor pool. For example, a party might decide to make a steak dinner with the following recipe: 1 serving of direbear meat (3d12), 1 serving of mushroom caps (2d12 and 1d8), and 1 serving of ooze marrow (2d8 and 1d4). This gives the party 5d12, 3d8, and 1d4 altogether.\n\nThe chef makes a Prep Roll by rolling all the dice in the flavor pool and setting aside any matching values. If there are no matching values, the chef instead discards a die of their choice. The chef continues making Cooking Rolls until only one die remains in the flavor pool or all dice have been discarded or set aside.\n\n### Determining a Meal’s Rating\n\nOnce preparation is complete, the chef calculates the resulting Meal Rating. Each matching set of dice is worth a number of points equal to its matched value. For example, a d6 and a d8 that rolled matching 3s would be worth 3 points, a d10 and a d12 that rolled matching 4s would be worth 4 points, and a d8 and a d20 that rolled matching 4s on a different roll would also be worth 4 points. The chef adds the point totals together to determine the meal’s Rating. In this example, the party’s meal would have a Rating of 11 (3 + 4 + 4 = 11).\n\n### Eating the Meal\n\nEach PC who partakes in the meal can clear a number of {{term:hit-points|Hit Points}}, clear a number of {{term:stress|Stress}}, and gain a number of {{term:hope|Hope}} such that the total of all three numbers is equal to or less than the Meal Rating. For example, if the dish has a Meal Rating of 11, a PC could choose to clear 6 {{term:hit-points|Hit Points}}, clear 3 {{term:stress|Stress}}, and gain 2 {{term:hope|Hope}}, and a different PC could choose to clear 5 {{term:hit-points|Hit Points}}, clear 2 {{term:stress|Stress}}, and gain 4 {{term:hope|Hope}}.\n\n### Recording the Recipe\n\nFor a feast-based campaign, the players should choose a small shared notebook, decorated however they like, to be their cookbook and record the recipe for each dish they make in it. A recipe includes the following details:\n\n- The dish’s name name, description, and preparation method as invented by the players\n- The ingredients used to make it\n- The resulting Meal Rating\n\nWhen the party cooks a dish with the same flavor profile as a recipe in their cookbook, add a number of tokens equal to the party’s {{term:tier|tier}} to the dish’s flavor pool. When the chef would be forced to discard a die from the Flavor Pool, they can choose to remove a token instead.\n\nAs a result, the more practice the characters get making meals with the same flavor profile, the easier that combination is to prepare."
+  },
+  {
+    "id": "srd-frames/rules/quick-ingredient-generator",
+    "type": "rules",
+    "name": "Quick Ingredient Generator",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 193,
+      "pageEnd": 194
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 25,
+    "text": "When the PCs harvest an ingredient, roll a d20 for each of the following tables and use the combination to inspire what they gather. If one of the options doesn’t fit the scenario, choose another that does.\n\n**What kind of ingredient is it?**\n\n| result | animal | PLANT/FUNGI |\n| --- | --- | --- |\n| **1** | Feet | Flower |\n| **2** | Powder | Roots |\n| **3** | Limb | Stems |\n| **4** | Belly | Leaves |\n| **5** | Fat | Bulbs |\n| **6** | Eggs | Nuts |\n| result | animal | PLANT/FUNGI |\n\n| 7 | Marrow | Seeds |\n| --- | --- | --- |\n| **8** | Tongue | Bark |\n| **9** | Brain | Berries |\n| **10** | Ribs | Fruit |\n| **11** | Organ | Sap |\n| **12** | Flesh | Pollen |\n| **13** | Stones | Fungi |\n| **14** | Eyes | Nectar |\n| **15** | Jelly | Pods |\n| **16** | Horn | Herbs |\n| **17** | Meat | Algae |\n| **18** | Scales | Moss |\n| **19** | Wings | Grain |\n| **20** | Secretion | Rind |\n\n**What’s interesting about it?**\n\n| result | Detail |\n| --- | --- |\n| **1** | It’s particularly tender. |\n| **2** | It’s still wriggling. |\n| **3** | It looks like something it isn’t |\n| **4** | It has a pungent smell. |\n| **5** | It’s brightly colored. |\n| **6** | It’s completely translucent. |\n| **7** | It’s an odd size or shape. |\n| **8** | It has unique markings. |\n| **9** | It recoils from the light. |\n| **10** | It withers in the dark. |\n| **11** | It smells unbelievably good. |\n| **12** | It has an unexpected texture. |\n| **13** | It’s encased in something. |\n| **14** | It’s filled with something. |\n| **15** | It’s emitting a colorful gas. |\n| **16** | It comes apart in layers. |\n| **17** | It must be prepared in a strange way. |\n| **18** | It’s leathery or cartilaginous. |\n| **19** | It’s brittle. |\n| **20** | It’s deadly when consumed raw. |"
+  },
+  {
+    "id": "srd-frames/rules/advanced-feasting",
+    "type": "rules",
+    "name": "Advanced Feasting",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 194
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 26,
+    "text": "Once your table is comfortable with basic feasting mechanics, you can give the PCs opportunities to locate and acquire specific ingredients based on what they’ve learned about the world. You might also create special ingredients that have features. These are rarer than typical ingredients, and can only harvested from Leader or Solo adversaries.\n\n**Example Special Ingredients**\n\nNAME FLAVOR\n\n### Profile\n\n### Feature\n\n**Diregazelle Skull** **Marrow**\n\nSweet (1), Salty (1), Sour (1)\n\n**_Built for Speed:_** +1 bonus to {{term:agility|Agility}} until your next rest\n\n| Holy Cow’s Milk | Weird (1) | Last Drop: When you prepare |\n| --- | --- | --- |\n| **Ghost Scorpion** | Sour (1), | a dish with this ingredient and there’s only one remaining die in the flavor pool, roll it and add the result to the dish’s Meal Rating. **_Spicy:_** If any matching sets |\n| **Venom** | Savory (1) | from a dish prepared with this ingredient are worth 8 or more points, you can’t clear {{term:stress|Stress}} |\n| **Deathflower** | Bitter (2) | from consuming the resulting dish. **_Risky:_** If you finish preparing a dish with this ingredient and have no matching sets of flavor dice, you clear all {{term:hit-points|Hit Points}} and {{term:stress|Stress}} and gain 3 {{term:hope|Hope}}. Otherwise, the dish’s Meal Rating is 0 and you must make a {{term:death-move|death move}}. |"
+  },
+  {
+    "id": "srd-frames/rules/restaurants",
+    "type": "rules",
+    "name": "Restaurants",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 194
+    },
+    "parentId": "srd-frames/rules/feasts",
+    "order": 27,
+    "text": "A PC can spend up to 2 handfuls of gold during {{term:downtime|downtime}} to order food from a nearby restaurant and choose one of the following {{term:downtime|downtime moves}} for each handful of gold spent: clear {{term:stress|Stress}}, clear {{term:hit-points|Hit Points}}, or gain {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd-frames/rules/grimdark-campaigns",
+    "type": "rules",
+    "name": "Grimdark Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 28,
+    "text": "_You can use the following mechanics when the party explores a_ _vast and grim world of magical corrupting Shadow punctuated_ _by scattered sanctuaries built around Sacred Bonfires that emit_ _a halo of safety-providing light._"
+  },
+  {
+    "id": "srd-frames/rules/shadow-touched",
+    "type": "rules",
+    "name": "Shadow-Touched",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195
+    },
+    "parentId": "srd-frames/rules/grimdark-campaigns",
+    "order": 29,
+    "text": "Adversaries in this campaign can have a feature called Shadow-Touched:\n\n**_Shadow-Touched – Passive._** This Adversary {{term:critical-success|critically succeeds}} on attack rolls of 19–20.\n\nWhen you introduce a Shadow-Touched adversary, describe how magic has warped their essence and form.\n\nPCs can also become _Shadow-Touched_ when corrupted by dark magic. A _Shadow-Touched_ PC gains a damage bonus equal to the number of {{term:scar|scars}} they have marked. When a _Shadow-Touched_ PC marks their last {{term:hope|Hope}} slot with a {{term:scar|scar}}, they succumb to corruption and charge into the darkness instead of making a {{term:death-move|death move}}."
+  },
+  {
+    "id": "srd-frames/rules/sacred-bonfires-and-torches",
+    "type": "rules",
+    "name": "Sacred Bonfires & Torches",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195
+    },
+    "parentId": "srd-frames/rules/grimdark-campaigns",
+    "order": 30,
+    "text": "Sacred Bonfires are vibrant magical pyres lit by the flames of rare and magical Sacred Torches, each of which carries a fragment of divine power. Sacred Bonfires burn out unless continuously provided with a bit of kindling, and can’t be reignited without a Sacred Torch. When a Sacred Bonfire is relit, each PC present gains 3 {{term:hope|Hope}}. A Sacred Bonfire’s light repels all but the most powerful monsters from its immediate vicinity."
+  },
+  {
+    "id": "srd-frames/rules/tech-based-campaigns",
+    "type": "rules",
+    "name": "Tech-Based Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 31,
+    "text": "_You can use the following mechanics for a campaign in which_ _magic has been supplanted by technology._"
+  },
+  {
+    "id": "srd-frames/rules/tech-damage",
+    "type": "rules",
+    "name": "Tech Damage",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195
+    },
+    "parentId": "srd-frames/rules/tech-based-campaigns",
+    "order": 32,
+    "text": "Tech damage is a replacement for magic damage in campaigns where damage is caused by technomancy. You can reflavor magic attacks as sonic blasts, blinding flashes of light, swarming nanobots, plasma beams, or any other product of advanced technology."
+  },
+  {
+    "id": "srd-frames/rules/iconic-weapons-and-other-tools",
+    "type": "rules",
+    "name": "Iconic Weapons & Other Tools",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 195,
+      "pageEnd": 196
+    },
+    "parentId": "srd-frames/rules/tech-based-campaigns",
+    "order": 33,
+    "text": "The following sections detail how weapons, armor, and other items might work in a tech-based campaign.\n\n### Iconic Weapons\n\nCharacters don’t have access to Daggerheart’s normal selection of primary and secondary weapons during a tech-based campaign. Instead, each character receives an Iconic Weapon that begins as a simple rod of metal but can be incrementally modified to suit the wielder’s needs.\n\nA player designs their character’s Iconic Weapon using an Iconic Weapon Sheet. For inspiration, see the Motherboard Module sheet in _Daggerheart Core_ or available online at daggerheart.com/downloads. Each player should take a copy of the module and complete the following steps:\n\n1. Slide the Iconic Weapon Sheet under the right side of their character sheet so only the fillable section is visible\n2. Make selections about trait, range, and damage\n3. Make up a name and description\n4. Record the weapon’s details in the Primary Weapon slot of their character sheet\n\nIconic Weapons are considered two-handed weapons and start with the Bonded feature:\n\n**Bonded:** Gain a bonus to your damage rolls equal to your level.\n\n### Upgrades\n\nA character’s Iconic Weapon starts with two Upgrade slots at Tier 1 to indicate that it has evolved from its most basic form. An Iconic Weapon gains an additional Upgrade slot at each subsequent {{term:tier|tier}}. An Upgrade can be crafted as a {{term:downtime|downtime move}} when a PC has the Parts to do so. See the upcoming “Crafting & Trading” section for more information.\n\nEach Iconic Weapon begins without any installed Upgrades. A character can build as many Upgrades as they wish but can’t install more Upgrades than the number of Upgrade slots their Iconic Weapon has. An installed Upgrade is treated as a weapon feature. During {{term:downtime|downtime}}, a PC can freely swap Upgrades they’ve already crafted or otherwise acquired.\n\nThe Iconic Weapon Sheet includes a selection of basic Upgrades. GMs are encouraged to make more, using the provided options as a template, and offer them to the players as appropriate.\n\n### Tech Link\n\nEach tech-based campaign setting includes a worldwide data and energy network that a PC must connect to in order to perform {{term:downtime|downtime moves}}. The primary way most PCs connect to this network is via a Tech Link, which looks like a data cable with a hook on one end, that each PC gains at character creation."
+  },
+  {
+    "id": "srd-frames/rules/crafting-and-trading",
+    "type": "rules",
+    "name": "Crafting & Trading",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 196
+    },
+    "parentId": "srd-frames/rules/tech-based-campaigns",
+    "order": 34,
+    "text": "Gold is not used as a currency in tech-based campaign frames. Instead, PCs gather Scrap to trade for a currency known as Credits. The Iconic Weapon Sheet includes areas for tracking both Scrap and Credits. All PCs start with 5 Credits.\n\n### Converting Gold to Credits\n\nUse the following conversion for Daggerheart when pricing other goods and services using quantum:\n\n- 10 Credits = 1 handful of gold\n- 100 Credits = 1 bag of gold\n- 1000 Credits = 1 chest of gold\n\n### Gathering Scrap\n\nPCs can collect Scrap from defeated tech-based adversaries outside of combat. Each category of Scrap is represented by a die size. When the PCs collect Scrap, the GM determines how many of each category they find, which in turn determines the total dice pool each player rolls. Compare the results of each player’s roll against your campaign’s Scrap table to determine the number of each type they acquire. PCs can also obtain specific pieces of Scrap by completing NPC contracts, hunting particular adversaries, exploring certain areas, or purchasing them from special merchants.\n\n**Scrap Table**\n\n_The table below lists generic outcomes you can replace as needed to suit your campaign._\n\n| result | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| **Shards** **(d6)** **Metals** **(d8)** **Components** **(d10)** | Gear Aluminum Fuse | Coil | Wire Copper Circuit | Trigger | Lens Cobalt | Crystal Silver Disc | n/a Platinum | n/a Gold Relay | n/a n/a Capacitor | n/a n/a Battery |\n\n**Parts Reward Table**\n\n_Use the following table as general guidance for Scrap rewards after encounters:_\n\n| ADVERSARIES | EASY FIGHT | STANDARD FIGHT | DIFFICULT FIGHT | VERY DIFFICULT FIGHT |\n| --- | --- | --- | --- | --- |\n| **Mostly non-tech-based** | 2 Shards | 2 Shards, 1 Metal | 2 Shards, 1 Metal, 1 Component | 2 Shard, 2 Metals, 1 Component |\n| **Mostly tech-based** | 2 Shards, 1 Metal | 2 Shards, 2 Metals, 1 Component | 3 Shards, 2 Metals, 1 Component | 3 Shards, 3 Metals, 2 Components |\n| **All tech-based** | 2 Shards, 1 Metal, 1 Component | 3 Shards, 2 Metals, 2 Components | 3 Shards, 3 Metals, 2 Components | 4 Shards, 3 Metals, 3 Components |\n\n### Relics\n\nRelics are unique pieces of Scrap only found on specific tech-based adversaries. When the PCs defeat a particularly important or powerful tech-based adversary, the GM can grant them each a Relic in addition to Scrap from the table above. Relics should be customized to reflect the adversary from which they were obtained. Relics are worth 20 Credits and can be used to craft powerful Upgrades.\n\n### Crafting with Scrap\n\nPCs can use a {{term:downtime|downtime move}} and spend the appropriate Scrap or Relics to craft Upgrades for their Iconic Weapons or other items. A PC can’t craft an Upgrade until they satisfy its\n\nPrerequisites. An Upgrade can always be broken back into its constituents to reacquire the Scrap used in its creation.\n\n### Buying and Selling Scrap\n\nBy default, a piece of Scrap is worth a number of Credits equal to the value rolled to acquire it on the table above. This value is unaffected by whether the party intends to buy or sell it.\n\nMerchants have a limited amount and variety of Scrap for sale, usually 1d10 of each Shard, 1d8 of each Metal, and 1d6 of each Component. When a PC wants to buy a specific piece of Scrap from a particular merchant, the GM can roll to determine how many are in stock, subject to the GM’s discretion."
+  },
+  {
+    "id": "srd-frames/rules/western-campaigns",
+    "type": "rules",
+    "name": "Western Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 35,
+    "text": "_You can use the following mechanics in a western-themed campaign._"
+  },
+  {
+    "id": "srd-frames/rules/weapons-and-loot",
+    "type": "rules",
+    "name": "Weapons & Loot",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "parentId": "srd-frames/rules/western-campaigns",
+    "order": 36,
+    "text": "**Primary Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Revolver** | {{term:finesse|Finesse}} | Far | Tier 1: d8+1 phy Tier 2: d8+4 phy Tier 3: d8+7 phy Tier 4: d8+10 phy | One-Handed | **_Six Shot:_** Place 6 Ammo tokens on your character sheet. Spend 1 Ammo token to make an attack. You can mark a {{term:stress|Stress}} to regain spent Ammo tokens. |\n| **Rifle** | {{term:agility|Agility}} | Very Far | Tier 1: d8+2 phy Tier 2: d8+5 phy Tier 3: d8+8 phy Tier 4: d8+11 phy | Two-Handed | **_Sightline:_** Spend 2 {{term:hope|Hope}} to gain {{term:advantage|advantage}} on an attack roll. |\n\n| Shotgun | {{term:strength|Strength}} | Very Close | Tier 1: d6+2 phy |\n| --- | --- | --- | --- |\n|  |  |  | Tier 2: d6+5 phy |\n|  |  |  | Tier 3: d6+8 phy |\n|  |  |  | Tier 4: d6+11 phy |\n\n| Two-Handed | Scattershot: When you make an attack, target all |\n| --- | --- |\n|  | creatures in front of you within range. |\n\n**Secondary Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Lasso** | {{term:agility|Agility}} | Very Close | Tier 1: d4 phy Tier 2: d4+3 phy Tier 3: d4+6 phy Tier 4: d4+9 phy | One-Handed | **_Roped:_** On a successful attack, you can {{term:temporary|temporarily}} _Rope_ the target instead of dealing damage. While _Roped_, the target is _{{term:restrained|Restrained}}_ and _{{term:vulnerable|Vulnerable}}_, but you must remain within {{term:very-close|Very Close range}} of the target. When the target would clear this condition, you can make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. On a success, they remain Roped. |\n| **Small Revolver** | {{term:finesse|Finesse}} | Far | Tier 1: d6 phy Tier 2: d6+3 phy Tier 3: d6+6 phy Tier 4: d6+9 phy | One-Handed | **_Quick Shot:_** Spend 2 {{term:hope|Hope}} to gain a +4 bonus to primary weapon damage. |\n\nYou can also make the following consumable available in a western-themed campaign:\n\n**Dynamite:** _(Consumable)_ You can light this dynamite and toss it within {{term:close|Close range}}. All creatures within {{term:very-close|Very Close range}} of where the dynamite lands must make a {{term:reaction-roll|Reaction Roll}} (14). Targets who fail take **1d20+5** physical damage. Targets who succeed must mark a {{term:stress|Stress}}. Dynamite deals double damage to inanimate objects or structures."
+  },
+  {
+    "id": "srd-frames/rules/colossal-adversaries",
+    "type": "rules",
+    "name": "Colossal Adversaries",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 198
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 37,
+    "text": "“Colossus” is a special adversary type that uses multiple adversary stat blocks called segments to represent the body parts of an extremely large creature. Information and features that apply to the colossus in its entirety are contained in a separate stat block called the framework:\n\n- Name\n- Tier\n- Description\n- Motives & Tactics\n- Size\n- Segments\n- {{term:damage-thresholds|Damage Thresholds}}\n- {{term:stress|Stress}}\n- {{term:experience|Experiences}}\n- Features that apply to all segments\n\nEach segment of a colossus has its own stat block, which lists the following:\n\n- Name of segment\n- Adjacent segments\n- {{term:difficulty|Difficulty}}\n- {{term:hit-points|HP}}\n- Standard attack\n- Features\n\nSome segments can be _Broken_. A _Broken_ segment can’t use actions or reactions until the condition is cleared. When a segment marks its last {{term:hit-points|Hit Point}}, it’s considered _Destroyed_. A _Destroyed_ segment can’t use any of its features. A colossus is defeated when all its segments are _Destroyed_, however a colossus’s stat block often details alternative ways to defeat it. By default, a _Destroyed_ segment is not gone or detached, it’s simply non-working.\n\nFor example Colossus adversaries and Colossus features, see the “Colossus of the Drylands” campaign frame."
+  },
+  {
+    "id": "srd-frames/rules/segment-vs-colossus-effects",
+    "type": "rules",
+    "name": "Segment Vs. Colossus Effects",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 198
+    },
+    "parentId": "srd-frames/rules/colossal-adversaries",
+    "order": 38,
+    "text": "When a feature refers to a segment’s name, such as “the Head,” it refers only to that specific part of the colossus. For example, the Head might be {{term:immunity|immune}} to physical attacks or more difficult to climb. When a feature refers to the colossus’s name, it applies to the adversary as a whole. For example, a reaction feature might trigger an attack after the colossus marks 2 or more {{term:hit-points|Hit Points}} from a single attack. This would mean that when any segment marks 2 or more {{term:hit-points|Hit Points}} from a single attack, the reaction is triggered."
+  },
+  {
+    "id": "srd-frames/rules/adjacent-segments",
+    "type": "rules",
+    "name": "Adjacent Segments",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 198
+    },
+    "parentId": "srd-frames/rules/colossal-adversaries",
+    "order": 39,
+    "text": "A colossus’s stat blocks should indicate which segments are adjacent to one another. By default, a PC can move from one segment to another only if those segments are adjacent (see the upcoming “Moving PCs Around a Colossus” section)."
+  },
+  {
+    "id": "srd-frames/rules/running-colossus-fights",
+    "type": "rules",
+    "name": "Running Colossus Fights",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 198,
+      "pageEnd": 199
+    },
+    "parentId": "srd-frames/rules/colossal-adversaries",
+    "order": 40,
+    "text": "Battles against colossi have unique rules.\n\n### Scale\n\nUnlike normal range in Daggerheart, we use a standard form of measurement when talking about a colossus’s scale. (In our case, we use feet—but you should use whatever you find easiest.) Normal range bands still apply when taking actions and are at GM discretion as usual, but expressing the height or width of a creature through recognizable sizes helps the table to understand the scale of the colossus they’re facing.\n\n### Moving PCs Around a Colossus\n\nDuring an encounter with a colossus, use the following movement mechanics:\n\n- A PC can climb onto a colossus segment unless its stat block indicates otherwise.\n- Once on a segment, a PC can usually move around and within it without making additional rolls.\n- To move to an adjacent segment, a PC must make an appropriate {{term:action-roll|action roll}} (usually {{term:agility|Agility}} or {{term:strength|Strength}}) to leap onto it.\n\n### Teamwork\n\nWhile fighting a colossus, a PC can initiate any number of {{term:tag-team-roll|Tag Team Rolls}} in a single session.\n\n### Using a Colossus in Battle\n\nTreat each segment of a colossus as a separate adversary when moving the {{term:spotlight|spotlight}}. You can {{term:spotlight|spotlight}} a segment as a GM move, then spend a {{term:fear|Fear}} to {{term:spotlight|spotlight}} an additional segment as you would during a fight with regular adversaries. Some colossi also have actions in their colossus framework; you can {{term:spotlight|spotlight}} the framework to use this action as you would {{term:spotlight|spotlight}} a segment, but you should highlight the colossus as a whole in the narrative. You can still {{term:spotlight|spotlight}} additional segments on your turn.\n\nWhile a PC is on a segment of the colossus:\n\n- They have {{term:advantage|advantage}} on attacks targeting that segment.\n- The segment’s standard attack cannot be used on that PC.\n\nAny features that would pull or push normal adversaries can’t move a colossus; instead, the feature pulls or pushes the PC making the attack. For example, using a grappler against a colossus can’t pull it toward you, but instead pulls you toward them.\n\nWhen an effect targets a specific segment, use the {{term:difficulty|Difficulty}} of that segment. If an effect targets a colossus as a whole, use the highest {{term:difficulty|Difficulty}} amongst all the segments. If a PC’s feature targets multiple adversaries, it can target multiple segments.\n\nIf your table uses maps and minis for combat encounters, you can use notecards to represent the basic shape of a colossus and the layout of its segments. When a PC climbs onto a segment of the colossus, place their miniature directly on the notecard."
+  },
+  {
+    "id": "srd-frames/rules/leveling-up",
+    "type": "rules",
+    "name": "Leveling Up",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 199
+    },
+    "parentId": "srd-frames/rules/colossal-adversaries",
+    "order": 41,
+    "text": "By default, the PCs levels up when they defeat a colossus. After defeating nine colossi, the party will be at level 10 and ready to take on a Final Colossus. The power of the final colossus is partially determined by the number of rests the party takes throughout the campaign.\n\nDuring the campaign, track the increasing power of the final colossus with a d10 Siphoning Die that starts at 1 and a d100 Power Die that starts at 0. Tick the Power Die up by one when the PCs take a {{term:short-rest|short rest}} and by two when they take a {{term:long-rest|long rest}}. When the party defeats a colossus, roll a number of d12s equal to the value of the Siphon Die, and tick up the Power Die by the highest rolled result, then reset the Siphon Die to 1.\n\nOnce nine colossi have been defeated or the Power Die reaches 100, the final colossus reveals itself. Build it as a Colossus adversary with a {{term:damage-thresholds|Severe threshold}} equal to the value of Power Die and a {{term:damage-thresholds|Major threshold}} equal to half that value (rounded up)."
+  },
+  {
+    "id": "srd-frames/rules/floating-magic-school-campaigns",
+    "type": "rules",
+    "name": "Floating Magic School Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 199
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 42,
+    "text": "_You can use the following mechanics for a campaign set at a_ _floating magic school._"
+  },
+  {
+    "id": "srd-frames/rules/flight",
+    "type": "rules",
+    "name": "Flight",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 199
+    },
+    "parentId": "srd-frames/rules/floating-magic-school-campaigns",
+    "order": 43,
+    "text": "During character creation, each player creates a magic artifact they can use to fly. Flying PCs use the normal movement rules and can fly within {{term:close|Close range}} as part of an {{term:action-roll|action roll}}, but they must make an appropriate trait roll to move beyond {{term:close|Close range}} or if movement is their primary action. At the GM’s discretion, some threats, such as gaining the _{{term:restrained|Restrained}}_ or _{{term:vulnerable|Vulnerable}}_ conditions, losing their magic artifact, or taking {{term:damage-thresholds|Severe damage}}, can {{term:temporary|temporarily}} interrupt a PC’s ability to fly.\n\n### Using Traits for Flight\n\nA PC can use any appropriate trait (not just {{term:agility|Agility}}) to move while flying. The following are some examples of how each trait might be used:\n\n**{{term:agility|Agility}}:** Swift acrobatics, speed-boosting off an adversary’s wake, maintaining an aerodynamic posture, or angling past a winged threat\n\n**{{term:finesse|Finesse}}:** Focused, subtle, and well-timed adjustments, threading the needle, precision flying, operating finely tuned controls, or deftly weaving between obstacles\n\n**{{term:strength|Strength}}:** Blasting through floating debris, holding fast in shifting weather, or slamming into a racing rival\n\n**{{term:instinct|Instinct}}:** Navigating by sheer intuition, keenly spotting a shortcut, following a migratory current, or sensing hidden danger in the clouds.\n\n**{{term:presence|Presence}}:** Flying with natural grace and effortless style, commanding attention, causing a distraction, creating a spectacle\n\n**{{term:knowledge|Knowledge}}:** Charting efficient flight plans, plotting rotational momentum, or deducing the exact timing of a foe’s wingbeats\n\n### Less Lethal Campaigns\n\nIn a less lethal campaign, any {{term:death-move|death move}} that would normally lead to a character’s demise instead puts them in the infirmary for a few weeks or sends them home for an extended period of time. While they recover, the PC is unplayable but not dead."
+  },
+  {
+    "id": "srd-frames/rules/fairy-tale-campaigns",
+    "type": "rules",
+    "name": "Fairy Tale Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 200
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 44,
+    "text": "_You can use the following mechanics in campaigns that center_ _on curses, queens, and oracles._"
+  },
+  {
+    "id": "srd-frames/rules/curses",
+    "type": "rules",
+    "name": "Curses",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 200
+    },
+    "parentId": "srd-frames/rules/fairy-tale-campaigns",
+    "order": 45,
+    "text": "A creature afflicted with a magical curse gains the _Cursed_ condition. The _Cursed_ condition can only be cleared by magic from a spell, ritual, magic item, location, supernatural occurrence, higher power, or some combination of these options. Discovering how to end a curse often requires research, which might prompt the PCs to undergo a quest for additional information or help from an NPC."
+  },
+  {
+    "id": "srd-frames/rules/transforming-adversaries",
+    "type": "rules",
+    "name": "Transforming Adversaries",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 200
+    },
+    "parentId": "srd-frames/rules/fairy-tale-campaigns",
+    "order": 46,
+    "text": "“Transform” is a special action that enables an adversary to shift between multiple stat blocks. By default, the adversary has a primary stat block that includes stats and features available to the adversary regardless of their active form. While in a particular form, the adversary has access to the stats and features contained in that form’s stat block and their primary stat block. Unless noted otherwise, the adversary tracks {{term:hit-points|HP}} and {{term:stress|Stress}} on their primary stat block regardless of their active form."
+  },
+  {
+    "id": "srd-frames/rules/building-villains-collaboratively",
+    "type": "rules",
+    "name": "Building Villains Collaboratively",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 200
+    },
+    "parentId": "srd-frames/rules/fairy-tale-campaigns",
+    "order": 47,
+    "text": "_You can build a campaign villain collaboratively using the_ _following process._\n\nPrior to your session zero, write approximately 40 prompts, each in the form of a question about the villain. For example, you might ask about the villain’s background, demeanor, motives, or reputation. Write each prompt on an index card or slip of paper. For inspiration, see the Reign of the Weredragon Villain Builder sheet in _{{term:hope|Hope}} & {{term:fear|Fear}}_ or available online at daggerheart.com/downloads.\n\nDuring session zero (and prior to character creation) randomly select about 15 of your prepared prompts and place them in the center of the table so that everyone can reach them but no one can read them.\n\nStarting with the person to your left, each player draws one of the pre-selected prompts and reads it aloud, then chooses one of the following options:\n\n- The active player can answer the prompt. Other players can ask follow-up questions, though the active player can choose not to answer them.\n- The active player can remove the prompt from play and draw a new prompt.\n- The active player can pass the prompt to another player, who likewise chooses to answer, remove, or pass it.\n\nWhen there are no more follow-up questions to a prompt, play passes to the left. Continue in this manner until all prompts at the center of the table have been answered or removed. Then proceed to character creation."
+  },
+  {
+    "id": "srd-frames/rules/monster-hunting-campaigns",
+    "type": "rules",
+    "name": "Monster Hunting Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 48,
+    "text": "_You can use the following mechanics for monster hunting campaigns._"
+  },
+  {
+    "id": "srd-frames/rules/monster-hunting-equipment",
+    "type": "rules",
+    "name": "Monster Hunting Equipment",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "parentId": "srd-frames/rules/monster-hunting-campaigns",
+    "order": 49,
+    "text": "You can make the following weapons and items available to your players.\n\n**Primary Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Blessed Brass** **Knuckles** | {{term:strength|Strength}} | Melee | Tier 1: d8+1 mag Tier 2: d8+4 mag Tier 3: d8+7 mag Tier 4: d8+10 mag | One-Handed | **_—_** |\n\n| Holy Shotgun | {{term:agility|Agility}} | Very Close | Tier 1: d6+2 mag |\n| --- | --- | --- | --- |\n|  |  |  | Tier 2: d6+5 mag |\n|  |  |  | Tier 3: d6+8 mag |\n|  |  |  | Tier 4: d6+11 mag |\n\n| Two-Handed | Scattershot: When you make an attack, target all |\n| --- | --- |\n|  | creatures in front of you within range. |\n\n**Repeating** **Crossbow**\n\n| {{term:finesse|Finesse}} | Far | Tier 1: d6+2 phy |\n| --- | --- | --- |\n|  |  | Tier 2: d6+5 phy |\n|  |  | Tier 3: d6+8 phy |\n|  |  | Tier 4: d6+11 phy |\n\n| Two-Handed | Quick: When you make an attack, you can mark a |\n| --- | --- |\n|  | {{term:stress|Stress}} to target another creature within range. |\n\n**Secondary Weapons**\n\n| Name | Trait | Range | Damage | Burden | Feature |\n| --- | --- | --- | --- | --- | --- |\n| **Wooden Stake** | {{term:strength|Strength}} | Melee | Tier 1: d8 phy Tier 2: d8+2 phy Tier 3: d8+4 phy Tier 4: d8+6 phy | One-Handed | **_Paired:_** Gain a bonus equal to 1 + your {{term:tier|tier}} to primary weapon damage to targets within {{term:melee|Melee range}}. |\n| **Hallowed** **Shield** | {{term:instinct|Instinct}} | Melee | Tier 1: d4 mag Tier 2: d4+2 mag Tier 3: d4+4 mag Tier 4: d4+6 mag | One-Handed | **_Resonant:_** When you critically succeed on a primary weapon attack, you gain an additional {{term:hope|Hope}}. |\n| **Chain Whip** | {{term:presence|Presence}} | Very Close | Tier 1: d6+1 phy Tier 2: d6+3 phy Tier 3: d6+5 phy Tier 4: d6+7 phy | One-Handed | **_Hooked:_** On a successful attack, you can pull the target into {{term:melee|Melee range}}. |\n\n**Armor**\n\n### Name\n\n### Base Thresholds\n\n### Base\n\n| Score | Feature |\n| --- | --- |\n| **Coffinwood Armor** | Tier 1: 4/10 Tier 2: 6/15 Tier 3: 8/22 Tier 4: 10/31 Tier 1: 3 Tier 2: 4 Tier 3: 5 Tier 4: 6 **_Splintering:_** Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your unmarked {{term:armor-slot|Armor Slots}}. |\n\n| Leather Longcoat | Tier 1: 5/12 |\n| --- | --- |\n|  | Tier 2: 8/18 |\n|  | Tier 3: 10/25 |\n|  | Tier 4: 12/34 |\n\nTier 1: 3 Tier 2: 4 Tier 3: 5 Tier 4: 6\n\n**_Quiet:_** Gain a +2 bonus to rolls you make to move silently.\n\n| Silverweave Armor | Tier 1: 5/11 |\n| --- | --- |\n|  | Tier 2: 7/16 |\n|  | Tier 3: 9/23 |\n|  | Tier 4: 11/32 |\n\nTier 1: 3 Tier 2: 4 Tier 3: 5 Tier 4: 6\n\n**_Warded:_** You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+  },
+  {
+    "id": "srd-frames/rules/transformations",
+    "type": "rules",
+    "name": "Transformations",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 202
+    },
+    "parentId": "srd-frames/rules/monster-hunting-campaigns",
+    "order": 50,
+    "text": "_You can use the following mechanics for introducing the_ _Reanimated, Vampire, and Werewolf transformations to your_ _campaign._\n\n### Reanimated\n\nWhen a character gains the Reanimated transformation, their maximum {{term:loadout|loadout}} is reduced to one. During a rest, they can use a {{term:downtime|downtime move}} to raise their maximum {{term:loadout|loadout}} by one until they reach the normal maximum {{term:loadout|loadout}} of five.\n\n### Vampire\n\nYou can add the following feature to a prominent vampire adversary’s stat block:\n\n**_Vampire’s Curse – Action._** Make an attack roll against a target within {{term:melee|Melee range}}. On a success, you can **spend** **a {{term:fear|Fear}}** to have this adversary sink their teeth into the target’s neck and try to turn them into a vampire. Roll a number of **d8s** equal to this adversary’s {{term:tier|tier}} and deal that much physical damage to the target. Then roll a **d6**. If the rolled result matches any of the damage dice results, the target marks all their {{term:stress|Stress}} and gains the Vampire transformation.\n\nIf the player wishes for their character to become a vampire, the attack roll succeeds automatically. The PC takes the damage, marks all their {{term:stress|Stress}}, and gains the transformation.\n\n### Werewolf\n\nYou can add the following feature to a prominent werewolf adversary’s stat block:\n\n**_Wolf’s Curse – Action._** Make an attack roll against a target within {{term:melee|Melee range}}. On a success, you can **spend a {{term:fear|Fear}}** to have this adversary viciously bite the target. Roll a number of **d20s** equal to this adversary’s {{term:tier|tier}} and deal that much physical damage to the target. If the target takes Major or greater damage from this attack, activate a long-term Lycanthropy Countdown (6). It ticks down each time the PC takes a rest without using a {{term:downtime|downtime move}} to halt their lycanthropy’s progression. When it triggers, the PC gains the Werewolf transformation.\n\nIf the player wishes for their character to become a werewolf, the attack roll succeeds automatically. The PC takes the damage and activates a long-term Lycanthropy Countdown (6) regardless of how many {{term:hit-points|HP}} they marked as a result of the attack. When the {{term:countdown|countdown}} triggers, the PC gains the transformation."
+  },
+  {
+    "id": "srd-frames/rules/the-hunt",
+    "type": "rules",
+    "name": "The Hunt",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 202
+    },
+    "parentId": "srd-frames/rules/monster-hunting-campaigns",
+    "order": 51,
+    "text": "The Hunt is a procedure for preparing and running monsters. The basic structure of the Hunt comprises five beats (although you can deviate from this basic structure as appropriate):\n\n1. Arrival: The PCs are hooked into the adventure with a strange event that implies monster activity.\n2. Investigation: The PCs follow leads and gather clues to discover the truth of the monster.\n3. Escalation: The PCs bring together what they’ve discovered about the monster and develop a plan of action for finding and defeating it.\n4. Confrontation: The PCs attempt to banish, bind, or destroy the monster using what they’ve previously learned.\n5. Epilogue: The PCs wrap up loose ends and move on to their next mission.\n\n### Making a Monster\n\nTo create a creature altered by evil energy and driven to destroy, consume, or corrupt, answer four questions:\n\n- What is it?\n- What does it want?\n- Where can you find it?\n- How can you defeat it?\n\nOptionally, you can ask: What else should you worry about? The answer to this question might involve underlings that serve the monster, important bystanders the monster might endanger, or events and location that might highlight the monster’s strengths, weaknesses, and motivations.\n\n### Liminal Clues\n\nA Liminal Clue is a piece of evidence or information that exists in potential until it manifests through the party’s discovery of it. Before a session begins, the GM should devise 4–6 pieces of information that each point the party toward answering at least one of the questions asked in “Making a Monster.”\n\nWrite each Liminal Clue on a notecard and keep them on hand during the session. Whenever the PCs delve into danger or explore the mystery in a way that could reveal the answer to one of the questions, you can refer to your collection of Liminal Clues. If a clue fits the tone and place, it manifests in that moment, and you describe how the clue is revealed.\n\nLiminal Clues indicate _what_ manifests, not how or where; they are not bound to a particular place method of discovery. Once revealed, a Liminal Clue solidifies; record it as an undeniable discovery that’s become part of the world’s reality."
+  },
+  {
+    "id": "srd-frames/rules/hex-crawl-campaigns",
+    "type": "rules",
+    "name": "Hex Crawl Campaigns",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 203
+    },
+    "parentId": "srd-frames/rules/supplemental-campaign-mechanics",
+    "order": 52,
+    "text": "_You can use the following mechanics for a hex crawl campaign._"
+  },
+  {
+    "id": "srd-frames/rules/the-hex-crawl",
+    "type": "rules",
+    "name": "The Hex Crawl",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 203
+    },
+    "parentId": "srd-frames/rules/hex-crawl-campaigns",
+    "order": 53,
+    "text": "Your table can use a map divided into hexagons, or “hex map,” to track the party’s movement across a large area, such as a continent. The party moves one hex at a time in a style of travel called a “hex crawl.” Each hex on the map represents roughly 24 miles of land from one side to another, although narrative always supersedes literal representation in Daggerheart.\n\nBy default, the party travels through the wilderness between sanctuaries or settlements and resolves encounters along the way. A party can take up to three {{term:short-rest|short rests}} while traveling through the wilderness but is restricted from taking {{term:long-rest|long rests}} outside a sanctuary."
+  },
+  {
+    "id": "srd-frames/rules/hex-maps",
+    "type": "rules",
+    "name": "Hex Maps",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 203,
+      "pageEnd": 205
+    },
+    "parentId": "srd-frames/rules/hex-crawl-campaigns",
+    "order": 54,
+    "text": "A Daggerheart hex crawl uses two copies of the same campaign map: a GM’s key map and a player-facing map. The GM fills out the key map beforehand with important information about each hex the party is likely to encounter in the next few sessions. This information includes the hex’s habitat, terrain, and potential points of interest or encounters. Meanwhile, the players fill out their map as the party enters each hex and the GM reveals what it holds, using the key map as a reference.\n\n### Preparing the GM’s Key Map\n\nTo fill out the key map, the GM can choose the contents of each hex, procedurally generate them, or use a combination of both methods. What follows is one potential method, in which the GM rolls a set of polyhedral dice to procedurally generate one multi-hex region at a time.\n\nFILLING WILDERNESS HEXES Start in any hex and fill out the key map one region at a time by doing the following:\n\n- Roll a **d20** to determine the region’s habitat:\n- 1: Blighted by Dark Magic. Roll again to determine which kind of habitat has been blighted. If you roll another 1, the entire region is so corrupted that it’s become nigh impossible to traverse.\n- 2: Underground\n- 3–4: Aquatic\n- 5–6: Wetland\n- 7–8: Grassland\n- 9–10: Tropical\n- 11–12: Forest\n- 13–14: Drylands\n- 15–16: Rolling\n- 17–18: Mountain\n- 19: Frozen\n- 20: Badlands\n- Roll a **d12** to determine the region’s size (how many contiguous hexes the region covers). The region’s shape can be whatever you want, as long as you don’t encircle empty hexes.\n- Roll and add the results of a **d8** and **d6** to determine one type of encounter the party might face while traveling through the region:\n- 2: Roll twice and combine the resulting entries.\n- 3: Fellow travelers\n- 4: Temporary setback\n- 5: Powerful adversaries\n- 6: Extreme weather\n- 7: Potential adversaries\n- 8: Territorial beast or pack of creatures\n- 9: Environmental hazard or obstacle\n- 10: Enemy NPCs\n- 11: Wondrous or dangerous site\n- 12: Lucky break\n- 13: Settlement or outpost\n- 14: Loot or treasure\n- Roll a **d4** to determine the terrain of the region, which determines how many Travel Days it takes the party to travel into the hex:\n- 1: Optimal (1 full day of traveling)\n- 2: Fair (2 full days of traveling)\n- 3: Rough (3 full days of traveling)\n- 4: Extreme (4 full days of traveling)\n- Roll a **d100** to determine a rumor that the party might hear about this region referencing the result against the Rumors table from the \"Journey to Horizon\" campaign frame or a list of 100 rumors you create on your own.. You decide how true the rumor is and whether the PCs learn it.\n\n### Tracking the Party’s Location\n\nThe party tracks its movement with the player-facing map using the following procedure. This procedure assumes the PCs are capable wayfinders and trailblazers, so they know the contents of the hex they are in (their “current hex”) and any hex adjacent to it. If an adjacent hex contains a non-hidden point of interest, such as a tower, the PCs are usually aware of it as well. Together, this gives the players enough information to decide which way to proceed. As always, the GM decides how much information they convey to the players.\n\n### Travel Days\n\nThis system assumes that, on a full day of traveling, the PCs complete the following tasks:\n\n1. Break camp, eat breakfast, and pack up shortly before sunrise\n2. Travel overland for about 6–8 hours\n3. Take a short break at midday to eat and get their bearings\n4. Travel overland for another 6–8 hours until about sundown\n5. Make camp, prepare and eat dinner, set a watch, and bed down for the night\n\nAs needed, various party members scout ahead, forage and hunt, refill waterskins, repair gear, and keep watch. If you like, you can narrate or even roleplay these activities, but you don’t need to spend valuable table time describing or tracking these events if your group doesn’t find them interesting or engaging.\n\n### Resources & Resting\n\nThis procedure doesn’t meticulously track rations or other supplies. Travel moves at the pace of the story, and the party’s resources are tracked via rests. Outside a safe place, such as a sanctuary or permanent settlement, the party can only take {{term:short-rest|short rests}}, each of which represents an entire day spent in one location. Inside a safe place, the party can take a {{term:long-rest|long rest}}, which represents multiple days recovering from hard travel and rough sleeping.\n\nRemember that the term “rest” has a specific mechanical meaning in Daggerheart. Within the fiction, the party still rests (in the colloquial sense) most nights spent in the wilderness, but they don’t gain the mechanical benefits of a {{term:short-rest|short rest}} every time they go to sleep. When the party takes three {{term:short-rest|short rests}} in a row, their next rest must be a {{term:long-rest|long rest}} (see XX).\n\n### Encounter Rolls\n\nWhen the party enters a hex, roll a number of d6s equal to the hex’s terrain rating. If any of the dice show a result of 1, activate an encounter you designed during region creation. Otherwise, you can spend {{term:fear|Fear}} to activate an encounter. You can also change the size of the dice you roll to reflect more dangerous (d4) or safer (d8) areas.\n\nThe party can trigger more than one encounter in a single region. If this happens, either roll on the Encounter table to generate a new encounter in the moment or shift an encounter from a region that the party seems unlikely to pass through, then modify or reflavor it to suit the current situation.\n\n### Endurance Countdowns (optional)\n\nYou can heighten the tension of wilderness travel by giving each PC an Endurance Countdown (6) at the end of a rest. When the party enters a wilderness hex, each player rolls their {{term:duality-dice|Hope Die}}. If the result is equal to or lower than the value of their PC’s Endurance Countdown, they mark a {{term:stress|Stress}}. Otherwise, they tick down their Endurance Countdown. When a PC’s Endurance Countdown triggers, they become _{{term:vulnerable|Vulnerable}}_ until their next rest. At the start of a rest, all PCs’ Endurance Countdowns end.\n\n### Traveling Over Water\n\nFor travel on rivers and oceans, use the standard travel mechanics with the following changes and clarifications:\n\n- Rivers.** The party can travel across overland hexes with navigable rivers if they acquire passage on an appropriate vehicle (usually a boat). Moving downstream reduces the terrain rating of the hex the party enters by 1. For example, entering a hex with rough terrain would take two days instead of three. Traveling upstream increases the terrain rating of the next hex by 1.\n- Ocean.** The party can travel through ocean hexes if they acquire passage on an appropriate vehicle (usually a ship). When the party enters an ocean hex, roll a **d4** to determine the weather they encounter:\n- On a result of 1, the party gets a **tailwind**, and entering the hex takes a day.\n- On a result of 2, the party enjoys **fair weather**, and entering the hex takes two days.\n- On a result of 3, the party encounters **rough waters**, and entering the hex takes three days.\n- On a result of 4, the party encounters **extreme weather**, and entering the hex takes four days.\n\n### Doom Tracks\n\nYou can use a Doom Track to represent the growing disasters that might befall your group’s setting if the party acts too slowly. You can make your own Doom Track using the example track available in _{{term:hope|Hope}} & {{term:fear|Fear}}_ or at daggerheart.com/downloads for inspiration.\n\nTo use a Doom Track, mark a box in the party’s {{term:tier|tier}} or below at the end of each session. You can’t mark a nested box until you mark the box it’s nested under. As your table’s story develops, you can adjust how many boxes you mark at the end of a session.\n\n### Habitat-Based Features\n\nYou can add the following habitat-based features to an adversary:\n\n**_• Blighted – Passive._** This adversary is corrupted by magic. When encountered within a similarly affected area, this adversary {{term:critical-success|critically succeeds}} on attacks with a die roll of 18–20.\n\n**_• Enviromancer – Passive._** This adversary can draw upon the wild magic of their surroundings to fuel magical effects. **Mark a {{term:stress|Stress}}** to activate an effect based on the habitat of their current location (if an effect’s damage roll uses the adversary’s {{term:tier|tier}}, roll the damage die a number of times equal to their {{term:tier|tier}} and total the results):\n\n- **Heat Spell (Desert, Salt Flats, Volcano).** The adversary exudes oppressive supernatural heat. Each target within {{term:very-close|Very Close range}} must succeed on an {{term:instinct|Instinct}} {{term:reaction-roll|Reaction Roll}}. Targets who fail must mark a {{term:stress|Stress}} and take **d6** direct magic damage using this adversary’s {{term:tier|tier}}.\n- **Overgrowth Spell (Forest, Jungle).** This adversary unleashes a burst of branches, brambles, or vines in all directions. Each target within {{term:close|Close range}} must make an {{term:agility|Agility}} {{term:reaction-roll|Reaction Roll}}. Targets who fail take **d8** physical damage using this adversary’s {{term:tier|tier}} and are _{{term:restrained|Restrained}}_ until they break free with a successful {{term:strength|Strength}} Roll.\n- **Wind Spell (Cliffs, Plains, Steppe).** A tornado surrounds this adversary. Each target within {{term:close|Close range}} must make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. Targets who fail take **d8** magic damage using this adversary’s {{term:tier|tier}} and are pushed up to {{term:far|Far range}}. Until this adversary takes damage, attack rolls against them have {{term:disadvantage|disadvantage}}.\n- **Ice Spell (Alpine, Glacier, Tundra).** This adversary unleashes daggers of ice. Make an attack against each PC in front of this adversary within {{term:close|Close range}}. Targets they succeed against take **d10** magic damage using this adversary’s {{term:tier|tier}} and are _Frostbitten_ until they spend a {{term:hope|Hope}} to clear the condition. While _Frostbitten_, a PC gains a −1 penalty to their {{term:proficiency|Proficiency}}.\n- Poison Spell (Moor, Swamp, Wetlands). A cloud of toxic spores explodes from this adversary. Each PC within {{term:close|Close range}} must succeed on a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}} or take **d6** {{term:direct-damage|direct damage}} using this adversary’s {{term:tier|tier}} and become _Nauseated_ until they clear a {{term:hit-points|HP}}. While _Nauseated_, a PC can’t gain {{term:hope|Hope}}.\n- **Stone Spell (Canyon, Mountain, Badlands).** This adversary gains a bonus to their {{term:damage-thresholds|damage thresholds}} equal to their {{term:tier|tier}} until they take {{term:damage-thresholds|Severe damage}} or use this feature again.\n- **Water Spell (Riverlands, Sea).** This adversary unleashes a geyser or tidal wave. Make an attack against all targets within {{term:very-close|Very Close range}}. Targets they succeed against are pushed to {{term:close|Close range}} of where they were and mark a number of {{term:stress|Stress}} equal to this adversary’s {{term:tier|tier}}."
+  }
+]

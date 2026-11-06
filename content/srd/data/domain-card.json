@@ -1,0 +1,3520 @@
+[
+  {
+    "id": "srd/domain-card/rune-ward",
+    "type": "domain-card",
+    "name": "Rune Ward",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "You have a deeply personal trinket that can be infused with protective magic and held as a ward by you or an ally. Describe what it is and why it’s important to you. The ward’s holder can spend a {{term:hope|Hope}} to reduce {{term:incoming-damage|incoming damage}} by **1d8**.\n\nIf the Ward Die result is 8, the ward’s power ends after it reduces damage this turn. It can be recharged for free on your next rest."
+  },
+  {
+    "id": "srd/domain-card/unleash-chaos",
+    "type": "domain-card",
+    "name": "Unleash Chaos",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "At the beginning of a session, place a number of tokens equal to your {{term:spellcast-trait|Spellcast trait}} on this card.\n\nMake a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}} and spend any number of tokens to channel raw energy from within yourself to unleash against them. On a success, roll a number of **d10s** equal to the tokens you spent and deal that much magic damage to the target. **Mark a {{term:stress|Stress}}** to replenish this card with tokens (up to your {{term:spellcast-trait|Spellcast trait}}).\n\nAt the end of each session, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/wall-walk",
+    "type": "domain-card",
+    "name": "Wall Walk",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend a {{term:hope|Hope}}** to allow a creature you can touch to climb on walls and ceilings as easily as walking on the ground. This lasts until the end of the scene or you cast Wall Walk again"
+  },
+  {
+    "id": "srd/domain-card/cinder-grasp",
+    "type": "domain-card",
+    "name": "Cinder Grasp",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:melee|Melee range}}. On a success, the target instantly bursts into flames, takes **1d20+3** magic damage, and is {{term:temporary|temporarily}} lit _On Fire_.\n\nWhen a creature acts while _On Fire_, they must take an extra **2d6** magic damage if they are still _On Fire_ at the end of their action."
+  },
+  {
+    "id": "srd/domain-card/floating-eye",
+    "type": "domain-card",
+    "name": "Floating Eye",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "**Spend a {{term:hope|Hope}}** to create a single, small floating orb that you can move anywhere within {{term:very-far|Very Far range}}. While this spell is active, you can see through the orb as though you’re looking out from its position. You can transition between using your own senses and seeing through the orb freely. If the orb takes damage or moves out of range, the spell ends."
+  },
+  {
+    "id": "srd/domain-card/counterspell",
+    "type": "domain-card",
+    "name": "Counterspell",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "You can interrupt a magical effect taking place by making a {{term:reaction-roll|reaction roll}} using your {{term:spellcast-trait|Spellcast trait}}. On a success, the effect stops and any consequences are avoided, and this card is placed in your {{term:vault|vault}}."
+  },
+  {
+    "id": "srd/domain-card/flight",
+    "type": "domain-card",
+    "name": "Flight",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. On a success, place a number of tokens equal to your {{term:agility|Agility}} on this card (minimum 1). When you make an {{term:action-roll|action roll}} while flying, spend a token from this card. After the action that spends the last token is resolved, you descend to the ground directly below you."
+  },
+  {
+    "id": "srd/domain-card/blink-out",
+    "type": "domain-card",
+    "name": "Blink Out",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (12)**. On a success, **spend a {{term:hope|Hope}}** to teleport to another point you can see within {{term:far|Far range}}. If any willing creatures are within {{term:very-close|Very Close range}}, **spend an** **additional {{term:hope|Hope}}** for each creature to bring them with you."
+  },
+  {
+    "id": "srd/domain-card/preservation-blast",
+    "type": "domain-card",
+    "name": "Preservation Blast",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against all targets within {{term:melee|Melee range}}. Targets you succeed against are forced back to {{term:far|Far range}} and take **d8+3** magic damage using your {{term:spellcast-trait|Spellcast trait}}."
+  },
+  {
+    "id": "srd/domain-card/chain-lightning",
+    "type": "domain-card",
+    "name": "Chain Lightning",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 206
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Mark 2 {{term:stress|Stress}}** to make a **{{term:spellcast-roll|Spellcast Roll}}**, unleashing lightning on all targets within {{term:close|Close range}}. Targets you succeed against must make a {{term:reaction-roll|reaction roll}} with a {{term:difficulty|Difficulty}} equal to the result of your {{term:spellcast-roll|Spellcast Roll}}. Targets who fail take **2d8+4** magic damage. Additional adversaries not already targeted by Chain Lightning and within {{term:close|Close range}} of previous targets who took damage must also make the {{term:reaction-roll|reaction roll}}. Targets who fail take **2d8+4** magic damage. This chain continues until there are no more adversaries within range."
+  },
+  {
+    "id": "srd/domain-card/premonition",
+    "type": "domain-card",
+    "name": "Premonition",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "You can channel arcane energy to have visions of the future. Once per {{term:long-rest|long rest}}, immediately after the GM conveys the consequences of a roll you made, you can rescind the move and consequences like they never happened and make another move instead."
+  },
+  {
+    "id": "srd/domain-card/rift-walker",
+    "type": "domain-card",
+    "name": "Rift Walker",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. On a success, you place an arcane marking on the ground where you currently stand. The next time you successfully cast Rift Walker, a rift in space opens up, providing safe passage back to the exact spot where the marking was placed. This rift stays open until you choose to close it or you cast another spell.\n\nYou can drop the spell at any time to cast Rift Walker again and place the marking somewhere new."
+  },
+  {
+    "id": "srd/domain-card/telekinesis",
+    "type": "domain-card",
+    "name": "Telekinesis",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, you can use your mind to move them anywhere within {{term:far|Far range}} of their original position. You can throw the lifted target as an attack by making an additional {{term:spellcast-roll|Spellcast Roll}} against the second target you’re trying to attack. On a success, deal **d12+4** physical damage to the second target using your {{term:proficiency|Proficiency}}. This spell then ends."
+  },
+  {
+    "id": "srd/domain-card/arcana-touched",
+    "type": "domain-card",
+    "name": "Arcana-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Arcana domain, gain the following benefits:\n\n- +1 bonus to your {{term:spellcast-roll|Spellcast Rolls}}\n- Once per rest, you can switch the results of your {{term:hope|Hope}} and {{term:fear|Fear}} Dice."
+  },
+  {
+    "id": "srd/domain-card/cloaking-blast",
+    "type": "domain-card",
+    "name": "Cloaking Blast",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 7,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "When you make a successful **{{term:spellcast-roll|Spellcast Roll}}** to cast a different spell, you can **spend a {{term:hope|Hope}}** to become _Cloaked_. While _Cloaked_, you remain unseen if you are stationary when an adversary moves to where they would normally see you. When you move into or within an adversary’s line of sight or make an attack, you are no longer _Cloaked_."
+  },
+  {
+    "id": "srd/domain-card/arcane-reflection",
+    "type": "domain-card",
+    "name": "Arcane Reflection",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When you would take magic damage, you can **spend any** **number of {{term:hope|Hope}}** to roll that many **d6s**. If any roll a 6, the attack is reflected back to the caster, dealing the damage to them instead."
+  },
+  {
+    "id": "srd/domain-card/confusing-aura",
+    "type": "domain-card",
+    "name": "Confusing Aura",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (14)**. Once per {{term:long-rest|long rest}} on a success, you create a layer of illusion over your body that makes it hard to tell exactly where you are. **Mark any number of {{term:stress|Stress}}** to make that many additional layers. When an adversary makes an attack against you, roll a number of **d6s** equal to the number of layers currently active. If any roll a 5 or higher, one layer of the aura is destroyed and the attack fails. If all the results are 4 or lower, you take the damage and this spell ends"
+  },
+  {
+    "id": "srd/domain-card/earthquake",
+    "type": "domain-card",
+    "name": "Earthquake",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (16)**. Once per rest on a success, all targets within {{term:very-far|Very Far range}} who aren’t flying must make a {{term:reaction-roll|Reaction Roll}} (18). Targets who fail take **3d10+8** physical damage and are {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_. Targets who succeed take half damage.\n\nAdditionally, when you succeed on the {{term:spellcast-roll|Spellcast Roll}}, all terrain within {{term:very-far|Very Far range}} becomes difficult to move through and structures within this range might sustain damage or crumble."
+  },
+  {
+    "id": "srd/domain-card/sensory-projection",
+    "type": "domain-card",
+    "name": "Sensory Projection",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Once per rest, make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. On a success, drop into a vision that lets you clearly see and hear any place you have been before as though you are standing there in this moment. You can move freely in this vision and are not constrained by the physics or impediments of a physical body. This spell cannot be detected by mundane or magical means. You drop out of this vision upon taking damage or casting another spell."
+  },
+  {
+    "id": "srd/domain-card/adjust-reality",
+    "type": "domain-card",
+    "name": "Adjust Reality",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "After you or a willing ally make any roll, you can **spend 5 {{term:hope|Hope}}** to change the numerical result of that roll to a result of your choice instead. The result must be plausible within the range of the dice."
+  },
+  {
+    "id": "srd/domain-card/falling-sky",
+    "type": "domain-card",
+    "name": "Falling Sky",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 207
+    },
+    "domainId": "srd/domain/arcana",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against all adversaries within {{term:far|Far range}}. **Mark any number of {{term:stress|Stress}}** to make shards of arcana rain down from above. Targets you succeed against take **1d20+2** magic damage for each {{term:stress|Stress}} marked."
+  },
+  {
+    "id": "srd/domain-card/get-back-up",
+    "type": "domain-card",
+    "name": "Get Back Up",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you take {{term:damage-thresholds|Severe damage}}, you can **mark a {{term:stress|Stress}}** to reduce the severity by one threshold."
+  },
+  {
+    "id": "srd/domain-card/not-good-enough",
+    "type": "domain-card",
+    "name": "Not Good Enough",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you roll your damage dice, you can reroll any 1s or 2s."
+  },
+  {
+    "id": "srd/domain-card/whirlwind",
+    "type": "domain-card",
+    "name": "Whirlwind",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you make a successful attack against a target within {{term:very-close|Very Close range}}, you can **spend a {{term:hope|Hope}}** to use the attack against all other targets within {{term:very-close|Very Close range}}. All additional adversaries you succeed against with this ability take half damage."
+  },
+  {
+    "id": "srd/domain-card/a-soldiers-bond",
+    "type": "domain-card",
+    "name": "A Soldier’s Bond",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per {{term:long-rest|long rest}}, when you compliment someone or ask them about something they’re good at, you can both gain 3 {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd/domain-card/reckless",
+    "type": "domain-card",
+    "name": "Reckless",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "**Mark a {{term:stress|Stress}}** to gain {{term:advantage|advantage}} on an attack."
+  },
+  {
+    "id": "srd/domain-card/scramble",
+    "type": "domain-card",
+    "name": "Scramble",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per rest, when a creature within {{term:melee|Melee range}} would deal damage to you, you can avoid the attack and safely move out of {{term:melee|Melee range}} of the enemy."
+  },
+  {
+    "id": "srd/domain-card/versatile-fighter",
+    "type": "domain-card",
+    "name": "Versatile Fighter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "You can use a different character trait for an equipped weapon, rather than the trait the weapon calls for.\n\nWhen you deal damage, you can **mark a {{term:stress|Stress}}** to use the maximum result of one of your damage dice instead of rolling it."
+  },
+  {
+    "id": "srd/domain-card/deadly-focus",
+    "type": "domain-card",
+    "name": "Deadly Focus",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Once per rest, you can apply all your focus toward a target of your choice. Until you attack another creature, you defeat the target, or the battle ends, gain a +1 bonus to your {{term:proficiency|Proficiency}}."
+  },
+  {
+    "id": "srd/domain-card/fortified-armor",
+    "type": "domain-card",
+    "name": "Fortified Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "While you are wearing armor, gain a +2 bonus to your {{term:damage-thresholds|damage thresholds}}."
+  },
+  {
+    "id": "srd/domain-card/champions-edge",
+    "type": "domain-card",
+    "name": "Champion’s Edge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you critically succeed on an attack, you can **spend up to** **3 {{term:hope|Hope}}** and choose one of the following options for each {{term:hope|Hope}} spent:\n\n- You clear a {{term:hit-points|Hit Point}}.\n- You clear an {{term:armor-slot|Armor Slot}}.\n- The target must mark an additional {{term:hit-points|Hit Point}}.\n\nYou can’t choose the same option more than once."
+  },
+  {
+    "id": "srd/domain-card/vitality",
+    "type": "domain-card",
+    "name": "Vitality",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you choose this card, permanently gain two of the following benefits:\n\n- One {{term:stress|Stress}} slot\n- One {{term:hit-points|Hit Point}} slot\n- +2 bonus to your {{term:damage-thresholds|damage thresholds}}\n\nThen place this card in your {{term:vault|vault}} permanently."
+  },
+  {
+    "id": "srd/domain-card/battle-hardened",
+    "type": "domain-card",
+    "name": "Battle-Hardened",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}} when you would make a Death Move, you can **spend a {{term:hope|Hope}}** to clear a {{term:hit-points|Hit Point}} instead."
+  },
+  {
+    "id": "srd/domain-card/rage-up",
+    "type": "domain-card",
+    "name": "Rage Up",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Before you make an attack, you can **mark a {{term:stress|Stress}}** to gain a bonus to your damage roll equal to twice your {{term:strength|Strength}}.\n\nYou can Rage Up twice per attack."
+  },
+  {
+    "id": "srd/domain-card/blade-touched",
+    "type": "domain-card",
+    "name": "Blade-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Blade domain, gain the following benefits:\n\n- +2 bonus to your attack rolls\n- +4 bonus to your {{term:damage-thresholds|Severe damage}} threshold"
+  },
+  {
+    "id": "srd/domain-card/glancing-blow",
+    "type": "domain-card",
+    "name": "Glancing Blow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you fail an attack, you can **mark a {{term:stress|Stress}}** to deal weapon damage using half your {{term:proficiency|Proficiency}}."
+  },
+  {
+    "id": "srd/domain-card/battle-cry",
+    "type": "domain-card",
+    "name": "Battle Cry",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 208
+    },
+    "domainId": "srd/domain/blade",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}}, while you’re charging into danger, you can muster a rousing call that inspires your allies. All allies who can hear you each clear a {{term:stress|Stress}} and gain a {{term:hope|Hope}}. Additionally, your allies gain {{term:advantage|advantage}} on attack rolls until you or an ally rolls a failure with {{term:fear|Fear}}."
+  },
+  {
+    "id": "srd/domain-card/frenzy",
+    "type": "domain-card",
+    "name": "Frenzy",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/blade",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "Once per {{term:long-rest|long rest}}, you can go into a _Frenzy_ until there are no more adversaries within sight.\n\nWhile _Frenzied_, you can’t use {{term:armor-slot|Armor Slots}}, and you gain a +10 bonus to your damage rolls and a +8 bonus to your {{term:damage-thresholds|Severe damage}} threshold."
+  },
+  {
+    "id": "srd/domain-card/gore-and-glory",
+    "type": "domain-card",
+    "name": "Gore and Glory",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/blade",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When you critically succeed on a weapon attack, gain an additional {{term:hope|Hope}} or clear an additional {{term:stress|Stress}}.\n\nAdditionally, when you deal enough damage to defeat an enemy, gain a {{term:hope|Hope}} or clear a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/reapers-strike",
+    "type": "domain-card",
+    "name": "Reaper’s Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/blade",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "Once per {{term:long-rest|long rest}}, **spend a {{term:hope|Hope}}** to make an attack roll. The GM tells you which targets within range it would succeed against. Choose one of these targets and force them to mark 5 {{term:hit-points|Hit Points}}."
+  },
+  {
+    "id": "srd/domain-card/battle-monster",
+    "type": "domain-card",
+    "name": "Battle Monster",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/blade",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you make a successful attack against an adversary, you can **mark 4 {{term:stress|Stress}}** to force the target to mark a number of {{term:hit-points|Hit Points}} equal to the number of {{term:hit-points|Hit Points}} you currently have marked instead of rolling for damage."
+  },
+  {
+    "id": "srd/domain-card/onslaught",
+    "type": "domain-card",
+    "name": "Onslaught",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/blade",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "When you successfully make an attack with your weapon, you never deal damage beneath a target’s {{term:damage-thresholds|Major damage}} threshold (the target always marks a minimum of 2 {{term:hit-points|Hit Points}}).\n\nAdditionally, when a creature within your weapon’s range deals damage to an ally with an attack that doesn’t include you, you can **mark a {{term:stress|Stress}}** to force them to make a {{term:reaction-roll|Reaction Roll}} (15). On a failure, the target must mark a {{term:hit-points|Hit Point}}."
+  },
+  {
+    "id": "srd/domain-card/deft-maneuvers",
+    "type": "domain-card",
+    "name": "Deft Maneuvers",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "Once per rest, **mark a {{term:stress|Stress}}** to sprint anywhere within {{term:far|Far range}} without making an {{term:agility|Agility}} Roll to get there.\n\nIf you end this movement within {{term:melee|Melee range}} of an adversary and immediately make an attack against them, gain a +1 bonus to the attack roll."
+  },
+  {
+    "id": "srd/domain-card/i-see-it-coming",
+    "type": "domain-card",
+    "name": "I See It Coming",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you’re targeted by an attack made from beyond {{term:melee|Melee range}}, you can **mark a {{term:stress|Stress}}** to roll a **d4** and gain a bonus to your {{term:evasion|Evasion}} equal to the result against the attack."
+  },
+  {
+    "id": "srd/domain-card/untouchable",
+    "type": "domain-card",
+    "name": "Untouchable",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Gain a bonus to your {{term:evasion|Evasion}} equal to half your {{term:agility|Agility}}."
+  },
+  {
+    "id": "srd/domain-card/ferocity",
+    "type": "domain-card",
+    "name": "Ferocity",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When you cause an adversary to mark 1 or more {{term:hit-points|Hit Points}}, you can **spend 2 {{term:hope|Hope}}** to increase your {{term:evasion|Evasion}} by the number of {{term:hit-points|Hit Points}} they marked. This bonus lasts until after the next attack made against you."
+  },
+  {
+    "id": "srd/domain-card/strategic-approach",
+    "type": "domain-card",
+    "name": "Strategic Approach",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "After a {{term:long-rest|long rest}}, place a number of tokens equal to your {{term:knowledge|Knowledge}} on this card (minimum 1). The first time you move within {{term:close|Close range}} of an adversary and make an attack against them, you can spend one token to choose one of the following options:\n\n- You make the attack with {{term:advantage|advantage}}.\n- You clear a {{term:stress|Stress}} on an ally within {{term:melee|Melee range}} of the adversary.\n- You add a **d8** to your damage roll.\n\nWhen you take a {{term:long-rest|long rest}}, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/brace",
+    "type": "domain-card",
+    "name": "Brace",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you mark an {{term:armor-slot|Armor Slot}} to reduce {{term:incoming-damage|incoming damage}}, you can **mark a {{term:stress|Stress}}** to mark an additional {{term:armor-slot|Armor Slot}}."
+  },
+  {
+    "id": "srd/domain-card/tactician",
+    "type": "domain-card",
+    "name": "Tactician",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 209
+    },
+    "domainId": "srd/domain/bone",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you {{term:help-an-ally|Help an Ally}}, they can spend a {{term:hope|Hope}} to add one of your {{term:experience|Experiences}} to their roll alongside your {{term:advantage|advantage}} die.\n\nWhen making a {{term:tag-team-roll|Tag Team Roll}}, you can roll a **d20** as your {{term:duality-dice|Hope Die}}."
+  },
+  {
+    "id": "srd/domain-card/boost",
+    "type": "domain-card",
+    "name": "Boost",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "**Mark a {{term:stress|Stress}}** to boost off a willing ally within {{term:close|Close range}}, fling yourself into the air, and perform an aerial attack against a target within {{term:far|Far range}}. You have {{term:advantage|advantage}} on the attack, add a **d10** to the damage roll, and end your move within {{term:melee|Melee range}} of the target."
+  },
+  {
+    "id": "srd/domain-card/redirect",
+    "type": "domain-card",
+    "name": "Redirect",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When an attack made against you from beyond {{term:melee|Melee range}} fails, roll a number of **d6s** equal to your {{term:proficiency|Proficiency}}. If any roll a 6, you can **mark a {{term:stress|Stress}}** to redirect the attack to damage an adversary within {{term:very-close|Very Close range}} instead."
+  },
+  {
+    "id": "srd/domain-card/know-thy-enemy",
+    "type": "domain-card",
+    "name": "Know Thy Enemy",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When observing a creature, you can make an **{{term:instinct|Instinct}} Roll** against them. On a success, **spend a {{term:hope|Hope}}** and ask the GM for one set of information about the target from the following options:\n\n- Their unmarked {{term:hit-points|Hit Points}} and {{term:stress|Stress}}.\n- Their {{term:difficulty|Difficulty}} and {{term:damage-thresholds|damage thresholds}}.\n- Their tactics and standard attack damage dice.\n- Their features and {{term:experience|Experiences}}.\n\nAdditionally on a success, you can **mark a {{term:stress|Stress}}** to remove a {{term:fear|Fear}} from the GM’s {{term:fear|Fear}} Pool."
+  },
+  {
+    "id": "srd/domain-card/signature-move",
+    "type": "domain-card",
+    "name": "Signature Move",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Name and describe your signature combat move. Once per rest, when you perform this signature move as part of an action you’re taking, you can roll a **d20** as your {{term:duality-dice|Hope Die}}. On a success, clear a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/rapid-riposte",
+    "type": "domain-card",
+    "name": "Rapid Riposte",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When an attack made against you from within {{term:melee|Melee range}} fails, you can **mark a {{term:stress|Stress}}** and seize the opportunity to deal the weapon damage of one of your active weapons to the attacker."
+  },
+  {
+    "id": "srd/domain-card/recovery",
+    "type": "domain-card",
+    "name": "Recovery",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "During a {{term:short-rest|short rest}}, you can choose a {{term:long-rest|long rest}} {{term:downtime|downtime move}} instead. You can **spend a {{term:hope|Hope}}** to let an ally do the same."
+  },
+  {
+    "id": "srd/domain-card/bone-touched",
+    "type": "domain-card",
+    "name": "Bone-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Bone domain, gain the following benefits:\n\n- +1 bonus to {{term:agility|Agility}}\n- Once per rest, you can **spend 3 {{term:hope|Hope}}** to cause an attack that succeeded against you to fail instead."
+  },
+  {
+    "id": "srd/domain-card/cruel-precision",
+    "type": "domain-card",
+    "name": "Cruel Precision",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you make a successful attack with a weapon, gain a bonus to your damage roll equal to either your {{term:finesse|Finesse}} or {{term:agility|Agility}}."
+  },
+  {
+    "id": "srd/domain-card/breaking-blow",
+    "type": "domain-card",
+    "name": "Breaking Blow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "When you make a successful attack, you can **mark a {{term:stress|Stress}}** to make the next successful attack against that same target deal an extra **2d12** damage."
+  },
+  {
+    "id": "srd/domain-card/wrangle",
+    "type": "domain-card",
+    "name": "Wrangle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Make an {{term:agility|Agility}} Roll against all targets within {{term:close|Close range}}. **Spend a {{term:hope|Hope}}** to move targets you succeed against, and any willing allies within {{term:close|Close range}}, to another point within {{term:close|Close range}}."
+  },
+  {
+    "id": "srd/domain-card/on-the-brink",
+    "type": "domain-card",
+    "name": "On the Brink",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you have 2 or fewer {{term:hit-points|Hit Points}} unmarked, you don’t take {{term:damage-thresholds|Minor damage}}."
+  },
+  {
+    "id": "srd/domain-card/splintering-strike",
+    "type": "domain-card",
+    "name": "Splintering Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "**Spend a {{term:hope|Hope}}** and make an attack against all adversaries within your weapon’s range. Once per {{term:long-rest|long rest}}, on a success against any targets, roll your weapon's damage and distribute that damage however you wish between the targets you succeeded against. Before you deal damage to each target, roll an additional damage die and add its result to the damage you deal to them."
+  },
+  {
+    "id": "srd/domain-card/deathrun",
+    "type": "domain-card",
+    "name": "Deathrun",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "**Spend 3 {{term:hope|Hope}}** to run a straight path through the battlefield to a point within {{term:far|Far range}}, making an attack against all adversaries within your weapon’s range along that path. Choose the order in which you deal damage to the targets you succeeded against. For the first, roll your weapon damage with a +1 bonus to your {{term:proficiency|Proficiency}}. Then remove a die from your damage roll and deal the remaining damage to the next target. Continue to remove a die for each subsequent target until you have no more damage dice or adversaries.\n\nYou can’t target the same adversary more than once per attack."
+  },
+  {
+    "id": "srd/domain-card/swift-step",
+    "type": "domain-card",
+    "name": "Swift Step",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 210
+    },
+    "domainId": "srd/domain/bone",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When an attack made against you fails, clear a {{term:stress|Stress}}. If you can’t clear a {{term:stress|Stress}}, gain a {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd/domain-card/book-of-ava",
+    "type": "domain-card",
+    "name": "Book of Ava",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 1,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Power Push",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:melee|Melee range}}. On a success, they’re knocked back to {{term:far|Far range}} and take **d10+2** magic damage using your {{term:proficiency|Proficiency}}."
+      },
+      {
+        "name": "Tava’s Armor",
+        "text": "**Spend a {{term:hope|Hope}}** to give a target you can touch a +1 bonus to their {{term:armor-score|Armor Score}} until their next rest or you cast Tava’s Armor again."
+      },
+      {
+        "name": "Ice Spike",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (12)** to summon a large ice spike within {{term:far|Far range}}. If you use it as a weapon, make the {{term:spellcast-roll|Spellcast Roll}} against the target’s {{term:difficulty|Difficulty}} instead. On a success, deal **d6** physical damage using your {{term:proficiency|Proficiency}}."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-illiat",
+    "type": "domain-card",
+    "name": "Book of Illiat",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 1,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Slumber",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-close|Very Close range}}. On a success, they’re _Asleep_ until they take damage or the GM spends a {{term:fear|Fear}} on their turn to clear this condition."
+      },
+      {
+        "name": "Arcane Barrage",
+        "text": "Once per rest, **spend any number of {{term:hope|Hope}}** and shoot magical projectiles that strike a target of your choice within {{term:close|Close range}}. Roll a number of **d6s** equal to the {{term:hope|Hope}} spent and deal that much magic damage to the target."
+      },
+      {
+        "name": "Telepathy",
+        "text": "**Spend a {{term:hope|Hope}}** to open a line of mental communication with one target you can see. This connection lasts until your next rest or you cast Telepathy again."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-tyfar",
+    "type": "domain-card",
+    "name": "Book of Tyfar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 1,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Wild Flame",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against up to three adversaries within {{term:melee|Melee range}}. Targets you succeed against take **2d6** magic damage and must mark a {{term:stress|Stress}} as flames erupt from your hand."
+      },
+      {
+        "name": "Magic Hand",
+        "text": "You conjure a magical hand with the same size and strength as your own within {{term:far|Far range}}."
+      },
+      {
+        "name": "Mysterious Mist",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)** to cast a {{term:temporary|temporary}} thick fog that gathers in a stationary area within {{term:very-close|Very Close range}}. The fog heavily obscures this area and everything in it."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-sitil",
+    "type": "domain-card",
+    "name": "Book of Sitil",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 2,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Adjust Appearance",
+        "text": "You magically shift your appearance and clothing to avoid recognition."
+      },
+      {
+        "name": "Parallela",
+        "text": "**Spend 2 {{term:hope|Hope}}** to cast this spell on yourself or an ally within {{term:close|Close range}}. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time."
+      },
+      {
+        "name": "Illusion",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (14)**. On a success, create a {{term:temporary|temporary}} visual illusion no larger than you within {{term:close|Close range}} that lasts for as long as you look at it. It holds up to scrutiny until an observer is within {{term:melee|Melee range}}."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-vagras",
+    "type": "domain-card",
+    "name": "Book of Vagras",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 2,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Runic Lock",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)** on an object you’re touching that can close (such as a lock, chest, or box). Once per rest on a success, you can lock the object so it can only be opened by creatures of your choice. Someone with access to magic and an hour of time to study the spell can break it."
+      },
+      {
+        "name": "Arcane Door",
+        "text": "When you have no adversaries within {{term:melee|Melee range}}, make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success, **spend a** **{{term:hope|Hope}}** to create a portal from where you are to a point within {{term:far|Far range}} you can see. It closes once a creature has passed through it."
+      },
+      {
+        "name": "Reveal",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}**. If there is anything magically hidden within {{term:close|Close range}}, it is revealed."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-korvax",
+    "type": "domain-card",
+    "name": "Book of Korvax",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 3,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Levitation",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** to {{term:temporary|temporarily}} lift a target you can see up into the air and move them within {{term:close|Close range}} of their original position."
+      },
+      {
+        "name": "Recant",
+        "text": "**Spend a {{term:hope|Hope}}** to force a target within {{term:melee|Melee range}} to make a {{term:reaction-roll|Reaction Roll}} (15). On a failure, they forget the last minute of your conversation."
+      },
+      {
+        "name": "Rune Circle",
+        "text": "**Mark a {{term:stress|Stress}}** to create a {{term:temporary|temporary}} magical circle on the ground where you stand. All adversaries within {{term:melee|Melee range}}, or who enter {{term:melee|Melee range}}, take **2d12+4** magic damage and are knocked back to {{term:very-close|Very Close range}}."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-norai",
+    "type": "domain-card",
+    "name": "Book of Norai",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 3,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Mystic Tether",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, they’re {{term:temporary|temporarily}} _{{term:restrained|Restrained}}_ and must mark a {{term:stress|Stress}}. If you target a flying creature, this spell grounds and {{term:temporary|temporarily}} _Restrains_ them."
+      },
+      {
+        "name": "Fireball",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-far|Very Far range}}. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within {{term:very-close|Very Close range}} of them must make a {{term:reaction-roll|Reaction Roll}} (13). Targets who fail take **d20+5** magic damage using your {{term:proficiency|Proficiency}}. Targets who succeed take half damage."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-exota",
+    "type": "domain-card",
+    "name": "Book of Exota",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 211
+    },
+    "domainId": "srd/domain/codex",
+    "level": 4,
+    "cardType": "grimoire",
+    "recallCost": 3,
+    "text": "",
+    "features": [
+      {
+        "name": "Repudiate",
+        "text": "You can interrupt a magical effect taking place. Make a {{term:reaction-roll|reaction roll}} using your {{term:spellcast-trait|Spellcast trait}}. Once per rest on a success, the effect stops and any consequences are avoided."
+      },
+      {
+        "name": "Create Construct",
+        "text": "**Spend a {{term:hope|Hope}}** to choose a group of objects around you and create an animated construct from them that obeys basic commands. Make a **{{term:spellcast-roll|Spellcast Roll}}** to command them to take action. When necessary, they share your {{term:evasion|Evasion}} and traits and their attacks deal **2d10+3** physical damage. You can only maintain one construct at a time, and they fall apart when they take any amount of damage."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/book-of-grynn",
+    "type": "domain-card",
+    "name": "Book of Grynn",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 4,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Arcane Deflection",
+        "text": "Once per {{term:long-rest|long rest}}, **spend a {{term:hope|Hope}}** to negate the damage of an attack targeting you or an ally within {{term:very-close|Very Close range}}."
+      },
+      {
+        "name": "Time Lock",
+        "text": "Target an object within {{term:far|Far range}}. That object stops in time and space exactly where it is until your next rest. If a creature tries to move it, make a **{{term:spellcast-roll|Spellcast Roll}}** against them to maintain this spell."
+      },
+      {
+        "name": "Wall of Flame",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. On a success, create a {{term:temporary|temporary}} wall of magical flame between two points within {{term:far|Far range}}. All creatures in its path must choose a side to be on, and anything that subsequently passes through the wall takes **4d10+3** magic damage."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/manifest-wall",
+    "type": "domain-card",
+    "name": "Manifest Wall",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. Once per rest on a success, **spend** **a {{term:hope|Hope}}** to create a {{term:temporary|temporary}} magical wall between two points within {{term:far|Far range}}. It can be up to 50 feet high and form at any angle. Creatures or objects in its path are shunted to a side of your choice. The wall stays up until your next rest or you cast Manifest Wall again."
+  },
+  {
+    "id": "srd/domain-card/teleport",
+    "type": "domain-card",
+    "name": "Teleport",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}}, you can instantly teleport yourself and any number of willing targets within {{term:close|Close range}} to a place you’ve been before. Choose one of the following options, then make a **{{term:spellcast-roll|Spellcast Roll}} (16)**:\n\n- If you know the place very well, gain a +3 bonus.\n- If you’ve visited the place frequently, gain a +1 bonus.\n- If you’ve visited the place infrequently, gain no modifier.\n- If you’ve only been there once, gain a −2 penalty.\n\nOn a success, you appear where you were intending to go. On a failure, you appear off course, with the range of failure determining how far off course."
+  },
+  {
+    "id": "srd/domain-card/banish",
+    "type": "domain-card",
+    "name": "Banish",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}}. On a success, roll a number of **d20s** equal to your {{term:spellcast-trait|Spellcast trait}}. The target must make a {{term:reaction-roll|reaction roll}} with a {{term:difficulty|Difficulty}} equal to your highest result. On a success, the target must mark a {{term:stress|Stress}} but isn’t banished. Once per rest on a failure, they are banished from this realm.\n\nWhen the PCs roll with {{term:fear|Fear}}, the {{term:difficulty|Difficulty}} gains a −1 penalty and the target makes another {{term:reaction-roll|reaction roll}}. On a success, they return from banishment."
+  },
+  {
+    "id": "srd/domain-card/sigil-of-retribution",
+    "type": "domain-card",
+    "name": "Sigil of Retribution",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Mark an adversary within {{term:close|Close range}} with a sigil of retribution. The GM gains a {{term:fear|Fear}}. When the marked adversary deals damage to you or your allies, place a **d8** on this card. You can hold a number of **d8s** equal to your level. When you successfully attack the marked adversary, roll the dice on this card and add the total to your damage roll, then clear the dice. This effect ends when the marked adversary is defeated or you cast Sigil of Retribution again."
+  },
+  {
+    "id": "srd/domain-card/book-of-homet",
+    "type": "domain-card",
+    "name": "Book of Homet",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 7,
+    "cardType": "grimoire",
+    "recallCost": 0,
+    "text": "",
+    "features": [
+      {
+        "name": "Pass Through",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. Once per rest on a success, you and all creatures touching you can pass through a wall or door within {{term:close|Close range}}. The effect ends once everyone is on the other side."
+      },
+      {
+        "name": "Plane Gate",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (14)**. Once per {{term:long-rest|long rest}} on a success, open a gateway to a location in another dimension or plane of existence you’ve been to before. This gateway lasts until your next rest."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/codex-touched",
+    "type": "domain-card",
+    "name": "Codex-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Codex domain, gain the following benefits:\n\n- You can **mark a {{term:stress|Stress}}** to add your {{term:proficiency|Proficiency}} to a {{term:spellcast-roll|Spellcast Roll}}.\n- Once per rest, replace this card with any card from your {{term:vault|vault}} without paying its {{term:recall-cost|Recall Cost}}."
+  },
+  {
+    "id": "srd/domain-card/book-of-vyola",
+    "type": "domain-card",
+    "name": "Book of Vyola",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 8,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Memory Delve",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, peer into the target’s mind and ask the GM a question. The GM describes any memories the target has pertaining to the answer."
+      },
+      {
+        "name": "Shared Clarity",
+        "text": "Once per {{term:long-rest|long rest}}, **spend a {{term:hope|Hope}}** to choose two willing creatures. When one of them would mark {{term:stress|Stress}}, they can choose between the two of them who marks it. This spell lasts until their next rest."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/safe-haven",
+    "type": "domain-card",
+    "name": "Safe Haven",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 212
+    },
+    "domainId": "srd/domain/codex",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 3,
+    "text": "When you have a few minutes of calm to focus, you can **spend** **2 {{term:hope|Hope}}** to summon your Safe Haven, a large interdimensional home where you and your allies can take shelter. When you do, a magical door appears somewhere within {{term:close|Close range}}. Only creatures of your choice can enter. Once inside, you can make the entrance invisible. You and anyone else inside can always exit. Once you leave, the doorway must be summoned again.\n\nWhen you take a rest within your own Safe Haven, you can choose an additional {{term:downtime|downtime move}}."
+  },
+  {
+    "id": "srd/domain-card/book-of-ronin",
+    "type": "domain-card",
+    "name": "Book of Ronin",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/codex",
+    "level": 9,
+    "cardType": "grimoire",
+    "recallCost": 4,
+    "text": "",
+    "features": [
+      {
+        "name": "Transform",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. On a success, transform into an inanimate object no larger than twice your normal size. You can remain in this shape until you take damage."
+      },
+      {
+        "name": "Eternal Enervation",
+        "text": "Once per {{term:long-rest|long rest}}, make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}}. On a success, they become permanently _{{term:vulnerable|Vulnerable}}_. They can’t clear this condition by any means."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/disintegration-wave",
+    "type": "domain-card",
+    "name": "Disintegration Wave",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/codex",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 4,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (18)**. Once per {{term:long-rest|long rest}} on a success, the GM tells you which adversaries within {{term:far|Far range}} have a {{term:difficulty|Difficulty}} of 18 or lower. **Mark a {{term:stress|Stress}}** for each one you wish to hit with this spell. They are killed and can’t come back to life by any means."
+  },
+  {
+    "id": "srd/domain-card/book-of-yarrow",
+    "type": "domain-card",
+    "name": "Book of Yarrow",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/codex",
+    "level": 10,
+    "cardType": "grimoire",
+    "recallCost": 2,
+    "text": "",
+    "features": [
+      {
+        "name": "Timejammer",
+        "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (18)**. On a success, time {{term:temporary|temporarily}} slows to a halt for everyone within {{term:far|Far range}} except for you. It resumes the next time you make an {{term:action-roll|action roll}} that targets another creature."
+      },
+      {
+        "name": "Magic Immunity",
+        "text": "**Spend 5 {{term:hope|Hope}}** to become {{term:immunity|immune}} to magic damage until your next rest."
+      }
+    ]
+  },
+  {
+    "id": "srd/domain-card/transcendent-union",
+    "type": "domain-card",
+    "name": "Transcendent Union",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/codex",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Once per {{term:long-rest|long rest}}, **spend 5 {{term:hope|Hope}}** to cast this spell on two or more willing creatures. Until your next rest, when a creature connected by this union would mark {{term:stress|Stress}} or {{term:hit-points|Hit Points}}, the connected creatures can choose who marks it."
+  },
+  {
+    "id": "srd/domain-card/blighting-strike",
+    "type": "domain-card",
+    "name": "Blighting Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success:\n\n- On a roll with {{term:hope|Hope}}, deal **d6+1** magic damage using your {{term:proficiency|Proficiency}}. On a roll with {{term:fear|Fear}}, deal **d10+1** magic damage using your {{term:proficiency|Proficiency}}.\n- The target’s next successful attack deals half damage.\n\nOn a failure, you must spend a {{term:hope|Hope}} or mark a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/umbral-veil",
+    "type": "domain-card",
+    "name": "Umbral Veil",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Once per rest, you can **mark a {{term:stress|Stress}}** to encase yourself in shadowy energy. When you do, place a number of tokens on this card equal to the number of {{term:fear|Fear}} in the GM’s pool. After an attack roll is made against you, you can spend any number of tokens to give the result a −1 penalty per token spent.\n\nAt the end of the scene, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/voice-of-dread",
+    "type": "domain-card",
+    "name": "Voice of Dread",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "You can magically speak to a creature you can see, tormenting them with your words. Make a **{{term:spellcast-roll|Spellcast Roll}}** against them. On a success, they must mark a {{term:stress|Stress}} and are frozen with terror, making them {{term:temporary|temporarily}} _{{term:restrained|Restrained}}_."
+  },
+  {
+    "id": "srd/domain-card/hideous-retribution",
+    "type": "domain-card",
+    "name": "Hideous Retribution",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "When an ally within {{term:close|Close range}} takes damage from a target you can see, you can make a {{term:reaction-roll|reaction roll}} against the target using your {{term:spellcast-trait|Spellcast trait}}. On a success, **mark a {{term:stress|Stress}}** to deal **d6** magic damage using your {{term:proficiency|Proficiency}}."
+  },
+  {
+    "id": "srd/domain-card/siphon-essence",
+    "type": "domain-card",
+    "name": "Siphon Essence",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-close|Very Close range}}. Once per {{term:long-rest|long rest}} on a success, the target takes **d12+4** magic damage using your {{term:proficiency|Proficiency}}. On a success with {{term:fear|Fear}}, you gain a +1 bonus to your {{term:proficiency|Proficiency}} for this attack.\n\nYou clear a number of {{term:hit-points|Hit Points}} equal to the number of {{term:hit-points|Hit Points}} the target marked from this attack."
+  },
+  {
+    "id": "srd/domain-card/shared-trauma",
+    "type": "domain-card",
+    "name": "Shared Trauma",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "You can transfer suffering from one creature to another. Once per rest, mark any number of {{term:hit-points|Hit Points}} on a willing creature within {{term:melee|Melee range}} to clear an equal number of {{term:hit-points|Hit Points}} on another willing creature within {{term:melee|Melee range}}."
+  },
+  {
+    "id": "srd/domain-card/terrify",
+    "type": "domain-card",
+    "name": "Terrify",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}}. On a success, the target marks **1d4** {{term:stress|Stress}}, and you can make the target flee one range away from you (such as Very Close to Close or Close to Far). On a success with {{term:fear|Fear}}, the target also becomes {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_."
+  },
+  {
+    "id": "srd/domain-card/chains-of-affliction",
+    "type": "domain-card",
+    "name": "Chains of Affliction",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 213
+    },
+    "domainId": "srd/domain/dread",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "**Mark 2 {{term:stress|Stress}}** to {{term:temporary|temporarily}} _Chain_ a target within {{term:close|Close range}}. When a _Chained_ creature deals damage, the target of their attack marks one fewer {{term:hit-points|Hit Point}} than they normally would. You can’t have more than one creature _Chained_ at a time."
+  },
+  {
+    "id": "srd/domain-card/summon-horror",
+    "type": "domain-card",
+    "name": "Summon Horror",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per scene, **mark a {{term:stress|Stress}}** to summon an otherworldly creature that deals **d8+1** magic damage using your {{term:spellcast-trait|Spellcast trait}} to a target within {{term:far|Far range}}. If the target marks any {{term:hit-points|Hit Points}} from this attack, they must succeed on a **{{term:reaction-roll|Reaction Roll}}** **(12)** to steel themselves against the horror or mark an equal number of {{term:stress|Stress}}.\n\nAfter making the attack, the creature dissipates."
+  },
+  {
+    "id": "srd/domain-card/dire-strike",
+    "type": "domain-card",
+    "name": "Dire Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "When a target marks any number of {{term:hit-points|Hit Points}} from an attack you make, you can **spend a {{term:hope|Hope}}** to drain power from them. The GM loses a {{term:fear|Fear}}."
+  },
+  {
+    "id": "srd/domain-card/spectral-mist",
+    "type": "domain-card",
+    "name": "Spectral Mist",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "**Spend 2 {{term:hope|Hope}}** to conjure an eerie mist that turns you and allies of your choice within {{term:close|Close range}} momentarily incorporeal. While a creature is incorporeal, they can move through solid objects and are {{term:immunity|immune}} to physical damage. They become corporeal again after they pass through a solid object or make an {{term:action-roll|action roll}}. Otherwise, this effect lasts until the end of the scene."
+  },
+  {
+    "id": "srd/domain-card/darkfire",
+    "type": "domain-card",
+    "name": "Darkfire",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per scene, **spend any number of {{term:hope|Hope}}** to target an equal number of adversaries within {{term:close|Close range}}. Each target makes a **{{term:reaction-roll|Reaction Roll}} (15)**. Targets who fail take **d8+6** magic damage using your {{term:spellcast-trait|Spellcast trait}} as they are engulfed in dark fire. Targets who succeed take half damage."
+  },
+  {
+    "id": "srd/domain-card/jump-scare",
+    "type": "domain-card",
+    "name": "Jump Scare",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When you deal magic damage to a target, you can **mark a** **{{term:stress|Stress}}** to teleport into {{term:melee|Melee range}} with them. When you do, they are _{{term:vulnerable|Vulnerable}}_ until they mark 1 or more {{term:hit-points|Hit Points}}."
+  },
+  {
+    "id": "srd/domain-card/dread-touched",
+    "type": "domain-card",
+    "name": "Dread-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Dread domain, gain the following benefits:\n\n- When you succeed with {{term:fear|Fear}}, you can **mark 2 {{term:stress|Stress}}** to prevent the GM from gaining a {{term:fear|Fear}}.\n- Once per rest when making an {{term:action-roll|action roll}}, you can gain a bonus to the roll equal to the number of {{term:fear|Fear}} in the GM’s pool."
+  },
+  {
+    "id": "srd/domain-card/wall-of-hunger",
+    "type": "domain-card",
+    "name": "Wall of Hunger",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 7,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (10)**. On a success, you can **spend** **a {{term:hope|Hope}}** to create a visible wall of writhing necrotic energy between two points within {{term:far|Far range}}. The wall lasts until you mark a {{term:hit-points|Hit Point}} or cast this spell again. A creature inside the wall when it appears or that passes through it must mark 2 {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/dark-army",
+    "type": "domain-card",
+    "name": "Dark Army",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (14)**. Once per {{term:long-rest|long rest}} on a success, you can summon fiends that surround and move with you. Place 8 tokens on this card. When you deal damage to a target within {{term:very-close|Very Close range}}, you can spend any number of tokens to add **1d8** for each token spent to your damage roll. Additionally, when you take damage, you can spend any number of tokens to reduce the damage by **1d8** for each token spent. Each time you spend a token, a fiend acts on your behalf, then disappears.\n\nWhen you take a rest, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/eldritch-flesh",
+    "type": "domain-card",
+    "name": "Eldritch Flesh",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Gain a +1 bonus to your {{term:damage-thresholds|damage thresholds}} for each {{term:stress|Stress}} you have marked.\n\nAdditionally, when you roll with {{term:fear|Fear}}, you can **spend 2 {{term:hope|Hope}}** to clear an {{term:armor-slot|Armor Slot}}."
+  },
+  {
+    "id": "srd/domain-card/damnation",
+    "type": "domain-card",
+    "name": "Damnation",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, **mark any number of {{term:stress|Stress}}** to roll an equal number of **d20s**, dealing magic damage equal to the total result. If this attack defeats the target, all adversaries within {{term:far|Far range}} of the target must mark a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/savor-the-anguish",
+    "type": "domain-card",
+    "name": "Savor the Anguish",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When an adversary within {{term:close|Close range}} takes {{term:damage-thresholds|Severe damage}}, you can clear a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/avatar-of-terror",
+    "type": "domain-card",
+    "name": "Avatar of Terror",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "**Mark a {{term:stress|Stress}}** to transform into a creature fueled by fear. While in this form, you gain a **1d6** bonus to your damage rolls for each {{term:fear|Fear}} in the GM’s pool. Additionally, you gain a {{term:hope|Hope}} when the GM spends a {{term:fear|Fear}} to {{term:spotlight|spotlight}} an adversary within {{term:very-close|Very Close range}}.\n\nBefore you make an {{term:action-roll|action roll}}, you must spend a {{term:hope|Hope}}. If you can’t, you revert to your normal form."
+  },
+  {
+    "id": "srd/domain-card/invoke-torment",
+    "type": "domain-card",
+    "name": "Invoke Torment",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 214
+    },
+    "domainId": "srd/domain/dread",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "You deal double damage to targets that have all their {{term:stress|Stress}} marked.\n\nAdditionally, when an adversary within {{term:close|Close range}} is defeated with all its {{term:stress|Stress}} marked, you gain a {{term:hope|Hope}}.."
+  },
+  {
+    "id": "srd/domain-card/deft-deceiver",
+    "type": "domain-card",
+    "name": "Deft Deceiver",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "**Spend a {{term:hope|Hope}}** to gain {{term:advantage|advantage}} on a roll to deceive or trick someone into believing a lie you tell them."
+  },
+  {
+    "id": "srd/domain-card/enrapture",
+    "type": "domain-card",
+    "name": "Enrapture",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}}. On a success, they become {{term:temporary|temporarily}} _Enraptured_. While _Enraptured_, a target’s attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. Once per rest on a success, you can **mark a {{term:stress|Stress}}** to force the _Enraptured_ target to mark a {{term:stress|Stress}} as well."
+  },
+  {
+    "id": "srd/domain-card/inspirational-words",
+    "type": "domain-card",
+    "name": "Inspirational Words",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Your speech is imbued with power. After a {{term:long-rest|long rest}}, place a number of tokens on this card equal to your {{term:presence|Presence}}. When you speak with an ally, you can spend a token from this card to give them one benefit from the following options:\n\n- Your ally clears a {{term:stress|Stress}}.\n- Your ally clears a {{term:hit-points|Hit Point}}.\n- Your ally gains a {{term:hope|Hope}}.\n\nWhen you take a {{term:long-rest|long rest}}, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/tell-no-lies",
+    "type": "domain-card",
+    "name": "Tell No Lies",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-close|Very Close range}}. On a success, they can’t lie to you while they remain within {{term:close|Close range}}, but they are not compelled to speak. If you ask them a question and they refuse to answer, they must mark a {{term:stress|Stress}} and the effect ends. The target is typically unaware this spell has been cast on them until it causes them to utter the truth."
+  },
+  {
+    "id": "srd/domain-card/troublemaker",
+    "type": "domain-card",
+    "name": "Troublemaker",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When you taunt or provoke a target within {{term:far|Far range}}, make a **{{term:presence|Presence}} Roll** against them. Once per rest on a success, roll a number of **d4s** equal to your {{term:proficiency|Proficiency}}. The target must mark {{term:stress|Stress}} equal to the highest result rolled."
+  },
+  {
+    "id": "srd/domain-card/hypnotic-shimmer",
+    "type": "domain-card",
+    "name": "Hypnotic Shimmer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against all adversaries in front of you within {{term:close|Close range}}. Once per rest on a success, create an illusion of flashing colors and lights that {{term:temporary|temporarily}} _Stuns_ targets you succeed against and forces them to mark a {{term:stress|Stress}}. While _Stunned_, they can’t use reactions and can’t take any other actions until they clear this condition."
+  },
+  {
+    "id": "srd/domain-card/invisibility",
+    "type": "domain-card",
+    "name": "Invisibility",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (10)**. On a success, **mark a {{term:stress|Stress}}** and choose yourself or an ally within {{term:melee|Melee range}} to become _Invisible_. An _Invisible_ creature can’t be seen except through magical means and attack rolls against them are made with {{term:disadvantage|disadvantage}}. Place a number of tokens on this card equal to your {{term:spellcast-trait|Spellcast trait}}. When the _Invisible_ creature takes an action, spend a token from this card. After the action that spends the last token is resolved, the effect ends.\n\nYou can only hold Invisibility on one creature at a time."
+  },
+  {
+    "id": "srd/domain-card/soothing-speech",
+    "type": "domain-card",
+    "name": "Soothing Speech",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "During a {{term:short-rest|short rest}}, when you take the time to comfort another character while using the Tend to Wounds {{term:downtime|downtime move}} on them, clear an additional {{term:hit-points|Hit Point}} on that character. When you do, you also clear 2 {{term:hit-points|Hit Points}}."
+  },
+  {
+    "id": "srd/domain-card/through-your-eyes",
+    "type": "domain-card",
+    "name": "Through Your Eyes",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Choose a target within {{term:very-far|Very Far range}}. You can see through their eyes and hear through their ears. You can transition between using your own senses or the target’s freely until you cast another spell or until your next rest."
+  },
+  {
+    "id": "srd/domain-card/thought-delver",
+    "type": "domain-card",
+    "name": "Thought Delver",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "You can peek into the minds of others. **Spend a {{term:hope|Hope}}** to read the vague surface thoughts of a target within {{term:far|Far range}}. Make a **{{term:spellcast-roll|Spellcast Roll}}** against the target to delve for deeper, more hidden thoughts.\n\nOn a roll with {{term:fear|Fear}}, the target might, at the GM’s discretion, become aware that you’re reading their thoughts."
+  },
+  {
+    "id": "srd/domain-card/words-of-discord",
+    "type": "domain-card",
+    "name": "Words of Discord",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Whisper words of discord to an adversary within {{term:melee|Melee range}} and make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success, the target must mark a {{term:stress|Stress}} and make an attack against another adversary instead of against you or your allies.\n\nOnce this attack is over, the target realizes what happened. The next time you cast Words of Discord on them, gain a −5 penalty to the {{term:spellcast-roll|Spellcast Roll}}."
+  },
+  {
+    "id": "srd/domain-card/never-upstaged",
+    "type": "domain-card",
+    "name": "Never Upstaged",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 215
+    },
+    "domainId": "srd/domain/grace",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When you mark 1 or more {{term:hit-points|Hit Points}} from an attack, you can **mark a {{term:stress|Stress}}** to place a number of tokens equal to the number of {{term:hit-points|Hit Points}} you marked on this card. On your next successful attack, gain a +5 bonus to your damage roll for each token on this card, then clear all tokens."
+  },
+  {
+    "id": "srd/domain-card/share-the-burden",
+    "type": "domain-card",
+    "name": "Share the Burden",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Once per rest, take on the {{term:stress|Stress}} from a willing creature within {{term:melee|Melee range}}. The target describes what intimate knowledge or emotions telepathically leak from their mind in this moment between you. Transfer any number of their marked {{term:stress|Stress}} to you, then gain a {{term:hope|Hope}} for each {{term:stress|Stress}} transferred."
+  },
+  {
+    "id": "srd/domain-card/endless-charisma",
+    "type": "domain-card",
+    "name": "Endless Charisma",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "After you make an {{term:action-roll|action roll}} to persuade, lie, or garner favor, you can **spend a {{term:hope|Hope}}** to reroll the {{term:hope|Hope}} or {{term:duality-dice|Fear Die}}."
+  },
+  {
+    "id": "srd/domain-card/grace-touched",
+    "type": "domain-card",
+    "name": "Grace-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Grace domain, gain the following benefits:\n\n- You can **mark an {{term:armor-slot|Armor Slot}}** instead of marking a {{term:stress|Stress}}.\n- When you would force a target to mark a number of {{term:hit-points|Hit Points}}, you can choose instead to force them to mark that number of {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/astral-projection",
+    "type": "domain-card",
+    "name": "Astral Projection",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Once per {{term:long-rest|long rest}}, **mark a {{term:stress|Stress}}** to create a projected copy of yourself that can appear anywhere you’ve been before.\n\nYou can see and hear through the projection as though it were you and affect the world as though you were there. A creature investigating the projection can tell it’s of magical origin. This effect lasts until your next rest or your projection takes any damage."
+  },
+  {
+    "id": "srd/domain-card/mass-enrapture",
+    "type": "domain-card",
+    "name": "Mass Enrapture",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 3,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against all targets within {{term:far|Far range}}. Targets you succeed against become {{term:temporary|temporarily}} _Enraptured_. While _Enraptured_, a target’s attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. **Mark a {{term:stress|Stress}}** to force all _Enraptured_ targets to mark a {{term:stress|Stress}}, ending this spell."
+  },
+  {
+    "id": "srd/domain-card/copycat",
+    "type": "domain-card",
+    "name": "Copycat",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 3,
+    "text": "Once per {{term:long-rest|long rest}}, this card can mimic the features of another {{term:domain-card|domain card}} of level 8 or lower in another player’s {{term:loadout|loadout}}. **Spend {{term:hope|Hope}} equal to half the card’s level** to gain access to the feature. It lasts until your next rest or they place the card in their {{term:vault|vault}}."
+  },
+  {
+    "id": "srd/domain-card/master-of-the-craft",
+    "type": "domain-card",
+    "name": "Master of the Craft",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "Gain a permanent +2 bonus to two of your {{term:experience|Experiences}} or a permanent +3 bonus to one of your {{term:experience|Experiences}}. Then place this card in your {{term:vault|vault}} permanently."
+  },
+  {
+    "id": "srd/domain-card/encore",
+    "type": "domain-card",
+    "name": "Encore",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When an ally within {{term:close|Close range}} deals damage to an adversary, you can make a **{{term:spellcast-roll|Spellcast Roll}}** against that same target. On a success, you deal the same damage to the target that your ally dealt. If your {{term:spellcast-roll|Spellcast Roll}} succeeds with {{term:fear|Fear}}, place this card in your {{term:vault|vault}}."
+  },
+  {
+    "id": "srd/domain-card/notorious",
+    "type": "domain-card",
+    "name": "Notorious",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/grace",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "People know who you are and what you’ve done, and they treat you differently because of it. When you leverage your notoriety to get what you want, you can **mark a {{term:stress|Stress}}** before you roll to gain a +10 bonus to the result. Your food and drinks are always free wherever you go, and everything else you buy is reduced in price by one bag of gold (to a minimum of one handful)."
+  },
+  {
+    "id": "srd/domain-card/pick-and-pull",
+    "type": "domain-card",
+    "name": "Pick and Pull",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "You have {{term:advantage|advantage}} on {{term:action-roll|action rolls}} to pick nonmagical locks, disarm nonmagical traps, or steal items from a target (either through stealth or by force)."
+  },
+  {
+    "id": "srd/domain-card/rain-of-blades",
+    "type": "domain-card",
+    "name": "Rain of Blades",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend a {{term:hope|Hope}}** to make a **{{term:spellcast-roll|Spellcast Roll}}** and conjure throwing blades that strike out at all targets within {{term:very-close|Very Close range}}. Targets you succeed against take **d8+2** magic damage using your {{term:proficiency|Proficiency}}.\n\nIf a target you hit is _{{term:vulnerable|Vulnerable}}_, they take an extra **1d8** damage."
+  },
+  {
+    "id": "srd/domain-card/uncanny-disguise",
+    "type": "domain-card",
+    "name": "Uncanny Disguise",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 216
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "When you have a few minutes to prepare, you can **mark a** **{{term:stress|Stress}}** to don the facade of any humanoid you can picture clearly in your mind. While disguised, you have {{term:advantage|advantage}} on {{term:presence|Presence}} Rolls to avoid scrutiny.\n\nPlace a number of tokens equal to your {{term:spellcast-trait|Spellcast trait}} on this card. When you take an action while disguised, spend a token from this card. After the action that spends the last token is resolved, the disguise drops."
+  },
+  {
+    "id": "srd/domain-card/midnight-spirit",
+    "type": "domain-card",
+    "name": "Midnight Spirit",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend a {{term:hope|Hope}}** to summon a humanoid-sized spirit that can move or carry things for you until your next rest.\n\nYou can also send it to attack an adversary. When you do, make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-far|Very Far range}}. On a success, the spirit moves into {{term:melee|Melee range}} with that target. Roll a number of **d6s** equal to your {{term:spellcast-trait|Spellcast trait}} and deal that much magic damage to the target. The spirit then dissipates. You can only have one spirit at a time."
+  },
+  {
+    "id": "srd/domain-card/shadowbind",
+    "type": "domain-card",
+    "name": "Shadowbind",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against all adversaries within {{term:very-close|Very Close range}}. Targets you succeed against are {{term:temporary|temporarily}} _{{term:restrained|Restrained}}_ as their shadow binds them in place."
+  },
+  {
+    "id": "srd/domain-card/chokehold",
+    "type": "domain-card",
+    "name": "Chokehold",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you position yourself behind a creature who’s about your size, you can **mark a {{term:stress|Stress}}** to pull them into a chokehold, making them {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_.\n\nWhen a creature attacks a target who is _{{term:vulnerable|Vulnerable}}_ in this way, they deal an extra **2d6** damage."
+  },
+  {
+    "id": "srd/domain-card/veil-of-night",
+    "type": "domain-card",
+    "name": "Veil of Night",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success, you can create a {{term:temporary|temporary}} curtain of darkness between two points within {{term:far|Far range}}. Only you can see through this darkness. You’re considered _{{term:hidden|Hidden}}_ to adversaries on the other side of the veil, and you have {{term:advantage|advantage}} on attacks you make through the darkness. The veil remains until you cast another spell."
+  },
+  {
+    "id": "srd/domain-card/stealth-expertise",
+    "type": "domain-card",
+    "name": "Stealth Expertise",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you roll with {{term:fear|Fear}} while attempting to move unnoticed through a dangerous area, you can **mark a {{term:stress|Stress}}** to roll with {{term:hope|Hope}} instead.\n\nIf an ally within {{term:close|Close range}} is also attempting to move unnoticed and rolls with {{term:fear|Fear}}, you can **mark a {{term:stress|Stress}}** to change their result to a roll with {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd/domain-card/glyph-of-nightfall",
+    "type": "domain-card",
+    "name": "Glyph of Nightfall",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:very-close|Very Close range}}. On a success, **spend a {{term:hope|Hope}}** to conjure a dark glyph upon their body that exposes their weak points, {{term:temporary|temporarily}} reducing the target’s {{term:difficulty|Difficulty}} by a value equal to your {{term:knowledge|Knowledge}} (minimum 1)."
+  },
+  {
+    "id": "srd/domain-card/hush",
+    "type": "domain-card",
+    "name": "Hush",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}}. On a success, **spend a {{term:hope|Hope}}** to conjure suppressive magic around the target that encompasses everything within {{term:very-close|Very Close range}} of them and follows them as they move.\n\nThe target and anything within the area is _Silenced_ until the GM spends a {{term:fear|Fear}} on their turn to clear this condition, you cast Hush again, or you take {{term:damage-thresholds|Major damage}}. While _Silenced_, they can’t make noise and can’t cast spells."
+  },
+  {
+    "id": "srd/domain-card/phantom-retreat",
+    "type": "domain-card",
+    "name": "Phantom Retreat",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "**Spend a {{term:hope|Hope}}** to activate Phantom Retreat where you’re currently standing. **Spend another {{term:hope|Hope}}** at any time before your next rest to disappear from where you are and reappear where you were standing when you activated Phantom Retreat. This spell ends after you reappear."
+  },
+  {
+    "id": "srd/domain-card/dark-whispers",
+    "type": "domain-card",
+    "name": "Dark Whispers",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "You can speak into the mind of any person with whom you’ve made physical contact. Once you’ve opened a channel with them, they can speak back into your mind. Additionally, you can **mark a {{term:stress|Stress}}** to make a **{{term:spellcast-roll|Spellcast Roll}}** against them. On a success, you can ask the GM one of the following questions and receive an answer:\n\n- Where are they?\n- What are they doing?\n- What are they afraid of?\n- What do they cherish most in the world?"
+  },
+  {
+    "id": "srd/domain-card/mass-disguise",
+    "type": "domain-card",
+    "name": "Mass Disguise",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "When you have a few minutes of silence to focus, you can **mark a {{term:stress|Stress}}** to change the appearance of all willing creatures within {{term:close|Close range}}. Their new forms must share a general body structure and size, and can be somebody or something you’ve seen before or entirely fabricated. A disguised creature has {{term:advantage|advantage}} on {{term:presence|Presence}} Rolls to avoid scrutiny.\n\nActivate a Countdown (8). It ticks down as a consequence the GM chooses. When it triggers, the disguise drops."
+  },
+  {
+    "id": "srd/domain-card/midnight-touched",
+    "type": "domain-card",
+    "name": "Midnight-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 217
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Midnight domain, gain the following benefits:\n\n- Once per rest, when you have 0 {{term:hope|Hope}} and the GM would gain a {{term:fear|Fear}}, you can gain a {{term:hope|Hope}} instead.\n- When you make a successful attack, you can **mark a** **{{term:stress|Stress}}** to add the result of your {{term:duality-dice|Fear Die}} to your damage roll."
+  },
+  {
+    "id": "srd/domain-card/vanishing-dodge",
+    "type": "domain-card",
+    "name": "Vanishing Dodge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 7,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When an attack made against you that would deal physical damage fails, you can **spend a {{term:hope|Hope}}** to envelop yourself in shadow, becoming _{{term:hidden|Hidden}}_ and teleporting to a point within {{term:close|Close range}} of the attacker. You remain _{{term:hidden|Hidden}}_ until the next time you make an {{term:action-roll|action roll}}."
+  },
+  {
+    "id": "srd/domain-card/shadowhunter",
+    "type": "domain-card",
+    "name": "Shadowhunter",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Your prowess is enhanced under the cover of shadow. While you’re shrouded in low light or darkness, you gain a +1 bonus to your {{term:evasion|Evasion}} and make attack rolls with {{term:advantage|advantage}}."
+  },
+  {
+    "id": "srd/domain-card/spellcharge",
+    "type": "domain-card",
+    "name": "Spellcharge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When you take magic damage, place tokens equal to the number of {{term:hit-points|Hit Points}} you marked on this card. You can store a number of tokens equal to your {{term:spellcast-trait|Spellcast trait}}.\n\nWhen you make a successful attack against a target, you can spend any number of tokens to add a **d6** for each token spent to your damage roll."
+  },
+  {
+    "id": "srd/domain-card/night-terror",
+    "type": "domain-card",
+    "name": "Night Terror",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}}, choose any targets within {{term:very-close|Very Close range}} to perceive you as a nightmarish horror. The targets must succeed on a {{term:reaction-roll|Reaction Roll}} (16) or become {{term:temporary|temporarily}} _Horrified_. While _Horrified_, they’re _{{term:vulnerable|Vulnerable}}_. Steal a number of {{term:fear|Fear}} from the GM equal to the number of targets that are _Horrified_ (up to the number of {{term:fear|Fear}} in the GM’s pool). Roll a number of **d6s** equal to the number of stolen {{term:fear|Fear}} and deal the total damage to each _Horrified_ target. Discard the stolen {{term:fear|Fear}}."
+  },
+  {
+    "id": "srd/domain-card/twilight-toll",
+    "type": "domain-card",
+    "name": "Twilight Toll",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Choose a target within {{term:far|Far range}}. When you succeed on an {{term:action-roll|action roll}} against them that doesn’t result in making a damage roll, place a token on this card. When you deal damage to this target, spend any number of tokens to add a **d12** for each token spent to your damage roll. You can only hold Twilight Toll on one creature at a time.\n\nWhen you choose a new target or take a rest, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/eclipse",
+    "type": "domain-card",
+    "name": "Eclipse",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (16)**. Once per {{term:long-rest|long rest}} on a success, plunge the entire area within {{term:far|Far range}} into complete darkness only you and your allies can see through. Attack rolls have {{term:disadvantage|disadvantage}} when targeting you or an ally within this shadow.\n\nAdditionally, when you or an ally succeeds with {{term:hope|Hope}} against an adversary within this shadow, the target must mark a {{term:stress|Stress}}.\n\nThis spell lasts until the GM spends a {{term:fear|Fear}} on their turn to clear this effect or you take {{term:damage-thresholds|Severe damage}}."
+  },
+  {
+    "id": "srd/domain-card/specter-of-the-dark",
+    "type": "domain-card",
+    "name": "Specter of the Dark",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/midnight",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Mark a {{term:stress|Stress}}** to become _Spectral_ until you make an {{term:action-roll|action roll}} targeting another creature. While _Spectral_, you’re {{term:immunity|immune}} to physical damage and can float and pass through solid objects. Other creatures can still see you while you’re in this form."
+  },
+  {
+    "id": "srd/domain-card/gifted-tracker",
+    "type": "domain-card",
+    "name": "Gifted Tracker",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/sage",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you’re tracking a specific creature or group of creatures based on signs of their passage, you can **spend any number of {{term:hope|Hope}}** and ask the GM that many questions from the following list.\n\n- What direction did they go?\n- How long ago did they pass through?\n- What were they doing in this location?\n- How many of them were here?\n\nWhen you encounter creatures you’ve tracked in this way, gain a +1 bonus to your {{term:evasion|Evasion}} against them."
+  },
+  {
+    "id": "srd/domain-card/natures-tongue",
+    "type": "domain-card",
+    "name": "Nature’s Tongue",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/sage",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "You can speak the language of the natural world. When you want to speak to the plants and animals around you, make an **{{term:instinct|Instinct}} Roll (12)**. On a success, they’ll give you the information they know. On a roll with {{term:fear|Fear}}, their knowledge might be limited or come at a cost.\n\nAdditionally, before you make a {{term:spellcast-roll|Spellcast Roll}} while within a natural environment, you can **spend a {{term:hope|Hope}}** to gain a +2 bonus to the roll."
+  },
+  {
+    "id": "srd/domain-card/vicious-entangle",
+    "type": "domain-card",
+    "name": "Vicious Entangle",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 218
+    },
+    "domainId": "srd/domain/sage",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, roots and vines reach out from the ground, dealing **1d8+1** physical damage and {{term:temporary|temporarily}} _Restraining_ the target.\n\nAdditionally on a success, you can **spend a {{term:hope|Hope}}** to {{term:temporary|temporarily}} _{{term:restrained|Restrain}}_ another adversary within {{term:very-close|Very Close range}} of your target."
+  },
+  {
+    "id": "srd/domain-card/conjure-swarm",
+    "type": "domain-card",
+    "name": "Conjure Swarm",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**_Tekaira Armored Beetles:_** **Mark a {{term:stress|Stress}}** to conjure armored beetles that encircle you. When you next take damage, reduce the severity by one threshold. You can **spend a {{term:hope|Hope}}** to keep the beetles conjured after taking damage.\n\n**_Fire Flies:_** Make a **{{term:spellcast-roll|Spellcast Roll}}** against all adversaries within {{term:close|Close range}}. **Spend a {{term:hope|Hope}}** to deal **2d8+3** magic damage to targets you succeeded against."
+  },
+  {
+    "id": "srd/domain-card/natural-familiar",
+    "type": "domain-card",
+    "name": "Natural Familiar",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend a {{term:hope|Hope}}** to summon a small nature spirit or forest critter to your side until your next rest, you cast Natural Familiar again, or the familiar is targeted by an attack. If you **spend an** **additional {{term:hope|Hope}}**, you can summon a familiar that flies. You can communicate with them, make a **{{term:spellcast-roll|Spellcast Roll}}** to command them to perform simple tasks, and **mark a {{term:stress|Stress}}** to see through their eyes.\n\nWhen you deal damage to an adversary within {{term:melee|Melee range}} of your familiar, you add a **d6** to your damage roll."
+  },
+  {
+    "id": "srd/domain-card/corrosive-projectile",
+    "type": "domain-card",
+    "name": "Corrosive Projectile",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, deal **d6+4** magic damage using your {{term:proficiency|Proficiency}}. Additionally, **mark 2 or more {{term:stress|Stress}}** to make them permanently _Corroded_. While a target is _Corroded_, they gain a −1 penalty to their {{term:difficulty|Difficulty}} for every 2 {{term:stress|Stress}} you spent. This condition can stack."
+  },
+  {
+    "id": "srd/domain-card/towering-stalk",
+    "type": "domain-card",
+    "name": "Towering Stalk",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 3,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Once per rest, you can conjure a thick, twisting stalk within {{term:close|Close range}} that can be easily climbed. Its height can grow up to {{term:far|Far range}}.\n\n**Mark a {{term:stress|Stress}}** to use this spell as an attack. Make a **Spellcast** **Roll** against an adversary or group of adversaries within {{term:close|Close range}}. The erupting stalk lifts targets you succeed against into the air and drops them, dealing **d8** physical damage using your {{term:proficiency|Proficiency}}."
+  },
+  {
+    "id": "srd/domain-card/death-grip",
+    "type": "domain-card",
+    "name": "Death Grip",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:close|Close range}} and choose one of the following options:\n\n- You pull the target into {{term:melee|Melee range}} or pull yourself into {{term:melee|Melee range}} of them.\n- You constrict the target and force them to mark 2 {{term:stress|Stress}}.\n- All adversaries between you and the target must succeed on a {{term:reaction-roll|Reaction Roll}} (13) or be hit by vines, taking **3d6+2** physical damage.\n\nOn a success, vines reach out from your hands, causing the chosen effect and {{term:temporary|temporarily}} _Restraining_ the target."
+  },
+  {
+    "id": "srd/domain-card/healing-field",
+    "type": "domain-card",
+    "name": "Healing Field",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}}, you can conjure a field of healing plants around you. Everywhere within {{term:close|Close range}} of you bursts to life with vibrant nature, allowing you and all allies in the area to clear a {{term:hit-points|Hit Point}}.\n\n**Spend 2 {{term:hope|Hope}}** to allow you and all allies to clear 2 {{term:hit-points|Hit Points}} instead."
+  },
+  {
+    "id": "srd/domain-card/thorn-skin",
+    "type": "domain-card",
+    "name": "Thorn Skin",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Once per rest, **spend a {{term:hope|Hope}}** to sprout thorns all over your body. When you do, place a number of tokens equal to your {{term:spellcast-trait|Spellcast trait}} on this card. When you take damage, you can spend any number of tokens to roll that number of **d6s**. Add the results together and reduce the {{term:incoming-damage|incoming damage}} by that amount. If you’re within {{term:melee|Melee range}} of the attacker, deal that amount of damage back to them.\n\nWhen you take a rest, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/wild-fortress",
+    "type": "domain-card",
+    "name": "Wild Fortress",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success, **spend 2 {{term:hope|Hope}}** to grow a natural barricade in the shape of a dome that you and one ally can take cover within. While inside the dome, a creature can’t be targeted by attacks and can’t make attacks. Attacks made against the dome automatically succeed. The dome has the following {{term:damage-thresholds|damage thresholds}} and lasts until it marks 3 {{term:hit-points|Hit Points}}. Place tokens on this card to represent marking {{term:hit-points|Hit Points}}.\n\nThresholds: 15/30"
+  },
+  {
+    "id": "srd/domain-card/conjured-steeds",
+    "type": "domain-card",
+    "name": "Conjured Steeds",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 0,
+    "text": "**Spend any number of {{term:hope|Hope}}** to conjure that many magical steeds (such as horses, camels, or elephants) that you and your allies can ride until your next {{term:long-rest|long rest}} or the steeds take any damage. The steeds double your land speed while traveling and, when in danger, allow you to move within {{term:far|Far range}} without having to roll. Creatures riding a steed gain a −2 penalty to attack rolls and a +2 bonus to damage rolls."
+  },
+  {
+    "id": "srd/domain-card/forager",
+    "type": "domain-card",
+    "name": "Forager",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 219
+    },
+    "domainId": "srd/domain/sage",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "As an additional {{term:downtime|downtime move}} you can choose, roll a d6 to see what you forage. Work with the GM to describe it and add it to your inventory as a consumable. Your party can carry up to five foraged consumables at a time. 1. A unique food (Clear 2 {{term:stress|Stress}}) 2. A beautiful relic (Gain 2 {{term:hope|Hope}}) 3. An arcane rune (+2 to a {{term:spellcast-roll|Spellcast Roll}}) 4. A healing vial (Clear 2 {{term:hit-points|Hit Points}}) 5. A luck charm (Reroll any die) 6. Choose one of the options above."
+  },
+  {
+    "id": "srd/domain-card/sage-touched",
+    "type": "domain-card",
+    "name": "Sage-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Sage domain, gain the following benefits:\n\n- While you’re in a natural environment, you gain a +2 bonus to your {{term:spellcast-roll|Spellcast Rolls}}.\n- Once per rest, you can double your {{term:agility|Agility}} or {{term:instinct|Instinct}} when making a roll that uses that trait. You must choose to do this before you roll."
+  },
+  {
+    "id": "srd/domain-card/wild-surge",
+    "type": "domain-card",
+    "name": "Wild Surge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 7,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per {{term:long-rest|long rest}}, **mark a {{term:stress|Stress}}** to channel the natural world around you and enhance yourself. Describe how your appearance changes, then place a **d6** on this card with the 1 value facing up.\n\nWhile the Wild Surge Die is active, you add its value to every {{term:action-roll|action roll}} you make. After you add its value to a roll, increase the Wild Surge Die’s value by one. When the die’s value would exceed 6 or you take a rest, this form drops and you must **mark an additional {{term:stress|Stress}}**."
+  },
+  {
+    "id": "srd/domain-card/forest-sprites",
+    "type": "domain-card",
+    "name": "Forest Sprites",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success, **spend any number** **of {{term:hope|Hope}}** to create an equal number of small forest sprites who appear at points you choose within {{term:far|Far range}}, providing the following benefits:\n\n- Your allies gain a +3 bonus to attack rolls against adversaries within {{term:melee|Melee range}} of a sprite.\n- An ally who marks an {{term:armor-slot|Armor Slot}} while within {{term:melee|Melee range}} of a sprite can mark an additional {{term:armor-slot|Armor Slot}}.\n\nA sprite vanishes after granting a benefit or taking any damage."
+  },
+  {
+    "id": "srd/domain-card/rejuvenation-barrier",
+    "type": "domain-card",
+    "name": "Rejuvenation Barrier",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)**. Once per rest on a success, create a {{term:temporary|temporary}} barrier of protective energy around you at {{term:very-close|Very Close range}}. You and all allies within the barrier when this spell is cast clear **1d4** {{term:hit-points|Hit Points}}. While the barrier is up, you and all allies within have {{term:resistance|resistance}} to physical damage from outside the barrier.\n\nWhen you move, the barrier follows you."
+  },
+  {
+    "id": "srd/domain-card/fane-of-the-wilds",
+    "type": "domain-card",
+    "name": "Fane of the Wilds",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "After a {{term:long-rest|long rest}}, place a number of tokens equal to the number of Sage {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} and {{term:vault|vault}} on this card.\n\nWhen you would make a {{term:spellcast-roll|Spellcast Roll}}, you can spend any number of tokens after the roll to gain a +1 bonus for each token spent.\n\nWhen you critically succeed on a {{term:spellcast-roll|Spellcast Roll}} for a Sage domain spell, gain a token.\n\nWhen you take a {{term:long-rest|long rest}}, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/plant-dominion",
+    "type": "domain-card",
+    "name": "Plant Dominion",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (18)**. Once per {{term:long-rest|long rest}} on a success, you reshape the natural world, changing the surrounding plant life anywhere within {{term:far|Far range}} of you. For example, you can grow trees instantly, clear a path through dense vines, or create a wall of roots."
+  },
+  {
+    "id": "srd/domain-card/force-of-nature",
+    "type": "domain-card",
+    "name": "Force of Nature",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "**Mark a {{term:stress|Stress}}** to transform into a hulking nature spirit, gaining the following benefits:\n\n- When you succeed on an attack or {{term:spellcast-roll|Spellcast Roll}}, gain a +10 bonus to the damage roll.\n- When you deal enough damage to defeat a creature within {{term:close|Close range}}, you absorb them and clear an {{term:armor-slot|Armor Slot}}.\n- You can’t be _{{term:restrained|Restrained}}_.\n\nBefore you make an {{term:action-roll|action roll}}, you must **spend a {{term:hope|Hope}}**. If you can’t, you revert to your normal form."
+  },
+  {
+    "id": "srd/domain-card/tempest",
+    "type": "domain-card",
+    "name": "Tempest",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 220
+    },
+    "domainId": "srd/domain/sage",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Choose one of the following tempests and make a **Spellcast** **Roll** against all targets within {{term:far|Far range}}. Targets you succeed against experience its effects until the GM spends a {{term:fear|Fear}} on their turn to end this spell.\n\n- **_Blizzard_**: Deal **2d20+8** magic damage and targets are temporararily _{{term:vulnerable|Vulnerable}}._\n- **_Hurricane_**: Deal **3d10+10** magic damage and choose a direction the wind is blowing. Targets can’t move against the wind.\n- **_Sandstorm_**: Deal **5d6+9** magic damage. Attacks made from beyond {{term:melee|Melee range}} have {{term:disadvantage|disadvantage}}."
+  },
+  {
+    "id": "srd/domain-card/bolt-beacon",
+    "type": "domain-card",
+    "name": "Bolt Beacon",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** against a target within {{term:far|Far range}}. On a success, **spend a {{term:hope|Hope}}** to send a bolt of shimmering light toward them, dealing **d8+2** magic damage using your {{term:proficiency|Proficiency}}. The target becomes {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_ and glows brightly until this condition is cleared."
+  },
+  {
+    "id": "srd/domain-card/mending-touch",
+    "type": "domain-card",
+    "name": "Mending Touch",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 1,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "You lay your hands upon a creature and channel healing magic to close their wounds. When you can take a few minutes to focus on the target you’re helping, you can **spend 2 {{term:hope|Hope}}** to clear a {{term:hit-points|Hit Point}} or a {{term:stress|Stress}} on them.\n\nOnce per {{term:long-rest|long rest}}, when you spend this healing time learning something new about them or revealing something about yourself, you can clear 2 {{term:hit-points|Hit Points}} or 2 {{term:stress|Stress}} on them instead."
+  },
+  {
+    "id": "srd/domain-card/reassurance",
+    "type": "domain-card",
+    "name": "Reassurance",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "Once per rest, after an ally attempts an {{term:action-roll|action roll}} but before the consequences take place, you can offer assistance or words of support. When you do, your ally can reroll their dice."
+  },
+  {
+    "id": "srd/domain-card/final-words",
+    "type": "domain-card",
+    "name": "Final Words",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "You can infuse a corpse with a moment of life to speak with it. Make a **{{term:spellcast-roll|Spellcast Roll}} (13)**. On a success with {{term:hope|Hope}}, the corpse answers up to three questions. On a success with {{term:fear|Fear}}, the corpse answers one question. The corpse answers truthfully, but it can’t impart information it didn’t know in life. On a failure, or once the corpse has finished answering your questions, the body turns to dust."
+  },
+  {
+    "id": "srd/domain-card/healing-hands",
+    "type": "domain-card",
+    "name": "Healing Hands",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 2,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (13)** and target a creature other than yourself within {{term:melee|Melee range}}. On a success, **mark a {{term:stress|Stress}}** to clear 2 {{term:hit-points|Hit Points}} or 2 {{term:stress|Stress}} on the target. On a failure, **mark** **a {{term:stress|Stress}}** to clear a {{term:hit-points|Hit Point}} or a {{term:stress|Stress}} on the target. You can’t heal the same target again until your next {{term:long-rest|long rest}}."
+  },
+  {
+    "id": "srd/domain-card/second-wind",
+    "type": "domain-card",
+    "name": "Second Wind",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Once per rest, when you succeed on an attack against an adversary, you can clear 3 {{term:stress|Stress}} or a {{term:hit-points|Hit Point}}. On a success with {{term:hope|Hope}}, you also clear 3 {{term:stress|Stress}} or a {{term:hit-points|Hit Point}} on an ally within {{term:close|Close range}} of you."
+  },
+  {
+    "id": "srd/domain-card/voice-of-reason",
+    "type": "domain-card",
+    "name": "Voice of Reason",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "You speak with an unmatched power and authority. You have {{term:advantage|advantage}} on {{term:action-roll|action rolls}} to de-escalate violent situations or convince someone to follow your lead.\n\nAdditionally, you’re emboldened in moments of duress. When all of your {{term:stress|Stress}} slots are marked, you gain a +1 bonus to your {{term:proficiency|Proficiency}} for damage rolls."
+  },
+  {
+    "id": "srd/domain-card/divination",
+    "type": "domain-card",
+    "name": "Divination",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "Once per {{term:long-rest|long rest}}, **spend 3 {{term:hope|Hope}}** to reach out to the forces beyond and ask one “yes or no” question about an event, person, place, or situation in the near future. For a moment, the present falls away and you see the answer before you."
+  },
+  {
+    "id": "srd/domain-card/life-ward",
+    "type": "domain-card",
+    "name": "Life Ward",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 4,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend 3 {{term:hope|Hope}}** and choose an ally within {{term:close|Close range}}. They are marked with a glowing sigil of protection. When this ally would make a {{term:death-move|death move}}, they clear a {{term:hit-points|Hit Point}} instead.\n\nThis effect ends when it saves the target from a {{term:death-move|death move}}, you cast Life Ward on another target, or you take a {{term:long-rest|long rest}}."
+  },
+  {
+    "id": "srd/domain-card/shape-material",
+    "type": "domain-card",
+    "name": "Shape Material",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "**Spend a {{term:hope|Hope}}** to shape a section of natural material you’re touching (such as stone, ice, or wood) to suit your purpose. The area of the material can be no larger than you. For example, you can form a rudimentary tool or create a door.\n\nYou can only affect the material within {{term:close|Close range}} of where you’re touching it."
+  },
+  {
+    "id": "srd/domain-card/smite",
+    "type": "domain-card",
+    "name": "Smite",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 5,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Once per rest, **spend 3 {{term:hope|Hope}}** to charge your powerful smite. When you next successfully attack with a weapon, double the result of your damage roll. This attack deals magic damage regardless of the weapon’s damage type."
+  },
+  {
+    "id": "srd/domain-card/restoration",
+    "type": "domain-card",
+    "name": "Restoration",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 221
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "After a {{term:long-rest|long rest}}, place a number of tokens equal to your {{term:spellcast-trait|Spellcast trait}} on this card. Touch a creature and spend any number of tokens to clear 2 {{term:hit-points|Hit Points}} or 2 {{term:stress|Stress}} for each token spent.\n\nYou can also spend a token from this card when touching a creature to clear the _{{term:vulnerable|Vulnerable}}_ condition or heal a physical or magical ailment (the GM might require additional tokens depending on the strength of the ailment).\n\nWhen you take a {{term:long-rest|long rest}}, clear all unspent tokens."
+  },
+  {
+    "id": "srd/domain-card/zone-of-protection",
+    "type": "domain-card",
+    "name": "Zone of Protection",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 6,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (16)**. Once per {{term:long-rest|long rest}} on a success, choose a point within {{term:far|Far range}} and create a visible zone of protection there for all allies within {{term:very-close|Very Close range}} of that point. When you do, place a **d6** on this card with the 1 value facing up. When an ally in this zone takes damage, they reduce it by the die’s value. You then increase the die’s value by one. When the die’s value would exceed 6, this effect ends."
+  },
+  {
+    "id": "srd/domain-card/healing-strike",
+    "type": "domain-card",
+    "name": "Healing Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 7,
+    "cardType": "spell",
+    "recallCost": 1,
+    "text": "When you deal damage to an adversary, you can **spend 2 {{term:hope|Hope}}** to clear a {{term:hit-points|Hit Point}} on an ally within {{term:close|Close range}}."
+  },
+  {
+    "id": "srd/domain-card/splendor-touched",
+    "type": "domain-card",
+    "name": "Splendor-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Splendor domain, gain the following benefits:\n\n- +3 bonus to your {{term:damage-thresholds|Severe damage}} threshold\n- Once per {{term:long-rest|long rest}}, when {{term:incoming-damage|incoming damage}} would require you to mark a number of {{term:hit-points|Hit Points}}, you can choose to mark that much {{term:stress|Stress}} or spend that much {{term:hope|Hope}} instead."
+  },
+  {
+    "id": "srd/domain-card/shield-aura",
+    "type": "domain-card",
+    "name": "Shield Aura",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "**Mark a {{term:stress|Stress}}** to cast a protective aura on a target within {{term:very-close|Very Close range}}. When the target marks an {{term:armor-slot|Armor Slot}}, they reduce the severity of the attack by an additional threshold. If this spell causes a creature who would be damaged to instead mark no {{term:hit-points|Hit Points}}, the effect ends.\n\nYou can only hold Shield Aura on one creature at a time."
+  },
+  {
+    "id": "srd/domain-card/stunning-sunlight",
+    "type": "domain-card",
+    "name": "Stunning Sunlight",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 8,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}}** to unleash powerful rays of burning sunlight against all adversaries in front of you within {{term:far|Far range}}. On a success, **spend any number of {{term:hope|Hope}}** and force that many targets you succeeded against to make a {{term:reaction-roll|Reaction Roll}} (14).\n\nTargets who succeed take **3d20+3** magic damage. Targets who fail take **4d20+5** magic damage and are {{term:temporary|temporarily}} _Stunned_. While _Stunned_, they can’t use reactions and can’t take any other actions until they clear this condition."
+  },
+  {
+    "id": "srd/domain-card/overwhelming-aura",
+    "type": "domain-card",
+    "name": "Overwhelming Aura",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (15)** to magically empower your aura. On a success, **spend 2 {{term:hope|Hope}}** to make your {{term:presence|Presence}} equal to your {{term:spellcast-trait|Spellcast trait}} until your next {{term:long-rest|long rest}}.\n\nWhile this spell is active, an adversary must mark a {{term:stress|Stress}} when they target you with an attack."
+  },
+  {
+    "id": "srd/domain-card/salvation-beam",
+    "type": "domain-card",
+    "name": "Salvation Beam",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 9,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (16)**. On a success, **mark any number** **of {{term:stress|Stress}}** to target a line of allies within {{term:far|Far range}}. You can clear {{term:hit-points|Hit Points}} on the targets equal to the number of {{term:stress|Stress}} marked, divided among them however you’d like."
+  },
+  {
+    "id": "srd/domain-card/invigoration",
+    "type": "domain-card",
+    "name": "Invigoration",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 3,
+    "text": "When you or an ally within {{term:close|Close range}} has used a feature that has an exhaustion limit (such as once per rest or once per session), you can **spend any number of {{term:hope|Hope}}** and roll that many **d6s**. If any roll a 6, the feature can be used again."
+  },
+  {
+    "id": "srd/domain-card/resurrection",
+    "type": "domain-card",
+    "name": "Resurrection",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/splendor",
+    "level": 10,
+    "cardType": "spell",
+    "recallCost": 2,
+    "text": "Make a **{{term:spellcast-roll|Spellcast Roll}} (20)**. On a success, restore one creature who has been dead no longer than 100 years to full strength. Then roll a **d6**. On a result of 5 or lower, place this card in your {{term:vault|vault}} permanently.\n\nOn a failure, you can’t cast Resurrection again for a week."
+  },
+  {
+    "id": "srd/domain-card/bare-bones",
+    "type": "domain-card",
+    "name": "Bare Bones",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/valor",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you choose not to equip armor, you have a base {{term:armor-score|Armor Score}} of 3 + your {{term:strength|Strength}} and use the following as your base {{term:damage-thresholds|damage thresholds}}:\n\n- **_Tier 1_**: 9/19\n- **_Tier 2_**: 11/24\n- **_Tier 3_**: 13/31\n- **_Tier 4_**: 15/38"
+  },
+  {
+    "id": "srd/domain-card/forceful-push",
+    "type": "domain-card",
+    "name": "Forceful Push",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 222
+    },
+    "domainId": "srd/domain/valor",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "Make an attack with your primary weapon against a target within {{term:melee|Melee range}}. On a success, you deal damage and knock them back to {{term:close|Close range}}. On a success with {{term:hope|Hope}}, add a **d6** to your damage roll.\n\nAdditionally, you can **spend a {{term:hope|Hope}}** to make them {{term:temporary|temporarily}} _{{term:vulnerable|Vulnerable}}_."
+  },
+  {
+    "id": "srd/domain-card/i-am-your-shield",
+    "type": "domain-card",
+    "name": "I Am Your Shield",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 1,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When an ally within {{term:very-close|Very Close range}} would take damage, you can **mark a {{term:stress|Stress}}** to stand in the way and make yourself the target of the attack instead. When you take damage from this attack, you can mark any number of {{term:armor-slot|Armor Slots}}."
+  },
+  {
+    "id": "srd/domain-card/body-basher",
+    "type": "domain-card",
+    "name": "Body Basher",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "You use the full force of your body in a fight. On a successful attack using a weapon with a {{term:melee|Melee range}}, gain a bonus to your damage roll equal to your {{term:strength|Strength}}."
+  },
+  {
+    "id": "srd/domain-card/bold-presence",
+    "type": "domain-card",
+    "name": "Bold Presence",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 2,
+    "cardType": "ability",
+    "recallCost": 0,
+    "text": "When you make a {{term:presence|Presence}} Roll, you can **spend a {{term:hope|Hope}}** to add your {{term:strength|Strength}} to the roll.\n\nAdditionally, once per rest when you would gain a condition, you can describe how your bold presence aids you in the situation and avoid gaining the condition."
+  },
+  {
+    "id": "srd/domain-card/critical-inspiration",
+    "type": "domain-card",
+    "name": "Critical Inspiration",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per rest, when you critically succeed on an attack, all allies within {{term:very-close|Very Close range}} can clear a {{term:stress|Stress}} or gain a {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd/domain-card/lean-on-me",
+    "type": "domain-card",
+    "name": "Lean on Me",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 3,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per {{term:long-rest|long rest}}, when you console or inspire an ally who failed an {{term:action-roll|action roll}}, you can both clear 2 {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/goad-them-on",
+    "type": "domain-card",
+    "name": "Goad Them on",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Describe how you taunt a target within {{term:close|Close range}}, then make a **{{term:presence|Presence}} Roll** against them. On a success, the target must mark a {{term:stress|Stress}}, and the next time the GM spotlights them, they must target you with an attack, which they make with {{term:disadvantage|disadvantage}}."
+  },
+  {
+    "id": "srd/domain-card/support-tank",
+    "type": "domain-card",
+    "name": "Support Tank",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 4,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "When an ally within {{term:close|Close range}} fails a roll, you can **spend 2** **{{term:hope|Hope}}** to allow them to reroll either their {{term:hope|Hope}} or {{term:duality-dice|Fear Die}}."
+  },
+  {
+    "id": "srd/domain-card/armorer",
+    "type": "domain-card",
+    "name": "Armorer",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "While you’re wearing armor, gain a +1 bonus to your {{term:armor-score|Armor Score}}.\n\nDuring a rest, when you choose to repair your armor as a {{term:downtime|downtime move}}, your allies also clear an {{term:armor-slot|Armor Slot}}."
+  },
+  {
+    "id": "srd/domain-card/rousing-strike",
+    "type": "domain-card",
+    "name": "Rousing Strike",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 5,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per rest, when you critically succeed on an attack, you and all allies who can see or hear you can clear a {{term:hit-points|Hit Point}} or **1d4** {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/inevitable",
+    "type": "domain-card",
+    "name": "Inevitable",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you fail an {{term:action-roll|action roll}}, your next {{term:action-roll|action roll}} has {{term:advantage|advantage}}."
+  },
+  {
+    "id": "srd/domain-card/rise-up",
+    "type": "domain-card",
+    "name": "Rise Up",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 6,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "Gain a bonus to your {{term:damage-thresholds|Severe threshold}} equal to your {{term:proficiency|Proficiency}}.\n\nWhen you mark 1 or more {{term:hit-points|Hit Points}} from an attack, clear a {{term:stress|Stress}}."
+  },
+  {
+    "id": "srd/domain-card/shrug-it-off",
+    "type": "domain-card",
+    "name": "Shrug It Off",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you would take damage, you can **mark a {{term:stress|Stress}}** to reduce the severity of the damage by one threshold. When you do, roll a **d6**. On a result of 3 or lower, place this card in your {{term:vault|vault}}."
+  },
+  {
+    "id": "srd/domain-card/valor-touched",
+    "type": "domain-card",
+    "name": "Valor-Touched",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 7,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When 4 or more of the {{term:domain-card|domain cards}} in your {{term:loadout|loadout}} are from the Valor domain, gain the following benefits:\n\n- +1 bonus to your {{term:armor-score|Armor Score}}\n- When you mark 1 or more {{term:hit-points|Hit Points}} without marking an {{term:armor-slot|Armor Slot}}, clear an {{term:armor-slot|Armor Slot}}."
+  },
+  {
+    "id": "srd/domain-card/full-surge",
+    "type": "domain-card",
+    "name": "Full Surge",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Once per {{term:long-rest|long rest}}, **mark 3 {{term:stress|Stress}}** to push your body to its limits. Gain a +2 bonus to all of your character traits until your next rest."
+  },
+  {
+    "id": "srd/domain-card/ground-pound",
+    "type": "domain-card",
+    "name": "Ground Pound",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 8,
+    "cardType": "ability",
+    "recallCost": 2,
+    "text": "**Spend 2 {{term:hope|Hope}}** to strike the ground where you stand and make a **{{term:strength|Strength}} Roll** against all targets within {{term:very-close|Very Close range}}. Targets you succeed against are thrown back to {{term:far|Far range}} and must make a {{term:reaction-roll|Reaction Roll}} (17). Targets who fail take **4d10+8** damage. Targets who succeed take half damage."
+  },
+  {
+    "id": "srd/domain-card/hold-the-line",
+    "type": "domain-card",
+    "name": "Hold the Line",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 223
+    },
+    "domainId": "srd/domain/valor",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "Describe the defensive stance you take and **spend a {{term:hope|Hope}}**. If an adversary moves within {{term:very-close|Very Close range}}, they’re pulled into {{term:melee|Melee range}} and _{{term:restrained|Restrained}}_.\n\nThis condition lasts until you move or fail a roll with {{term:fear|Fear}}, or the GM spends 2 {{term:fear|Fear}} on their turn to clear it."
+  },
+  {
+    "id": "srd/domain-card/lead-by-example",
+    "type": "domain-card",
+    "name": "Lead by Example",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 224
+    },
+    "domainId": "srd/domain/valor",
+    "level": 9,
+    "cardType": "ability",
+    "recallCost": 3,
+    "text": "When you deal damage to an adversary, you can **mark a {{term:stress|Stress}}** and describe how you encourage your allies. The next PC to make an attack against that adversary can clear a {{term:stress|Stress}} or gain a {{term:hope|Hope}}."
+  },
+  {
+    "id": "srd/domain-card/unbreakable",
+    "type": "domain-card",
+    "name": "Unbreakable",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 224
+    },
+    "domainId": "srd/domain/valor",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 4,
+    "text": "When you mark your last {{term:hit-points|Hit Point}}, instead of making a {{term:death-move|death move}}, you can roll a **d6** and clear a number of {{term:hit-points|Hit Points}} equal to the result. Then place this card in your {{term:vault|vault}}."
+  },
+  {
+    "id": "srd/domain-card/unyielding-armor",
+    "type": "domain-card",
+    "name": "Unyielding Armor",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 224
+    },
+    "domainId": "srd/domain/valor",
+    "level": 10,
+    "cardType": "ability",
+    "recallCost": 1,
+    "text": "When you would mark an {{term:armor-slot|Armor Slot}}, roll a number of **d6s** equal to your {{term:proficiency|Proficiency}}. If any roll a 6, reduce the severity by one threshold without marking an {{term:armor-slot|Armor Slot}}."
+  }
+]

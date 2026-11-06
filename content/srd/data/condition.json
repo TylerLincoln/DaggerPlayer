@@ -1,0 +1,38 @@
+[
+  {
+    "id": "srd/condition/hidden",
+    "type": "condition",
+    "name": "Hidden",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "text": "While you’re out of sight from all enemies and they don’t otherwise know your location, you gain the _{{term:hidden|Hidden}}_ condition. Any rolls against a _{{term:hidden|Hidden}}_ creature have {{term:disadvantage|disadvantage}}. After an adversary moves to where they would see you, you move into their line of sight, or you make an attack, you are no longer _{{term:hidden|Hidden}}_."
+  },
+  {
+    "id": "srd/condition/restrained",
+    "type": "condition",
+    "name": "Restrained",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "text": "_{{term:restrained|Restrained}}_ characters can’t move, but you can still take actions from their current position."
+  },
+  {
+    "id": "srd/condition/vulnerable",
+    "type": "condition",
+    "name": "Vulnerable",
+    "pack": "srd",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 52
+    },
+    "text": "When a creature is _{{term:vulnerable|Vulnerable}},_ all rolls targeting them have {{term:advantage|advantage}}."
+  }
+]

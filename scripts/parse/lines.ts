@@ -66,7 +66,7 @@ export type Block =
   | { kind: "heading"; level: number; text: string; page: number; line: Line }
   | { kind: "para"; text: string; page: number; lines: Line[]; bullet?: string };
 
-const BULLET = /^(?:\*\*)?\s*([•◦])/;
+const BULLET = /^(?:\*\*)?\s*([•◦]|\d{1,2}\.(?=\t))/;
 /**
  * A feature label is the start of the first bold run, up to its first colon:
  *   **Name:** text   |   **_Name:_** text   |   **_Name_: Spend a Hope** text
@@ -90,8 +90,11 @@ export function splitLabel(text: string): { label: string; rest: string } | null
 export const isLabel = (text: string) => splitLabel(text) !== null;
 
 export function headingLevel(l: Line): number | null {
+  // multi-cell lines in the heading face are table headers, not headings
+  if (l.cells.length > 1 && !BULLET.test(l.text)) return null;
   const t = plain(l.text).trim();
-  if (l.heading) return l.size >= 17 ? 1 : l.size >= 12 ? 2 : 3;
+  // 0 = chapter (28pt), 1 = section (17pt), 2 = 12pt, 3 = smaller
+  if (l.heading) return l.size >= 24 ? 0 : l.size >= 17 ? 1 : l.size >= 12 ? 2 : 3;
   // bold all-caps lines with no trailing text act as headings
   if (/^\*\*[^*]+\*\*$/.test(l.text.trim()) && t === t.toUpperCase() && /[A-Z]{3}/.test(t) && !/:$/.test(t)) {
     return l.size >= 17 ? 1 : l.size >= 12 ? 2 : l.size >= 11 ? 3 : 4;
@@ -139,13 +142,19 @@ export function blocks(lines: Line[], opts: { splitLabels?: boolean } = {}): Blo
     }
     const prev = cur[cur.length - 1];
     const b = l.text.match(BULLET);
+    // inside a table (first line has several small cells): same-size lines on the same page continue it
+    const inTable = !!prev && !bullet && cur[0].cells.length > 1 && cur[0].size <= 8.5 && !BULLET.test(cur[0].text);
+    if (inTable && Math.abs(l.size - cur[0].size) <= 1 && l.page === prev.page && l.y < cur[0].y && prev.y - l.y < 30 && !b) {
+      cur.push(l);
+      continue;
+    }
     const newPara =
       !prev ||
       !!b ||
       (splitLabels && isLabel(l.text)) ||
       ((prev.page !== l.page || l.y > prev.y + 1) && !continuesAcrossBreak(prev, l)) || // new column or page
       prev.y - l.y > Math.max(prev.size, l.size) * 1.45 ||
-      l.size !== prev.size;
+      (l.size !== prev.size && (Math.abs(l.size - prev.size) > 1 || /[.!?:”"]$/.test(plain(prev.text).trim())));
     if (newPara) {
       flush();
       if (b) bullet = b[1];
@@ -157,6 +166,9 @@ export function blocks(lines: Line[], opts: { splitLabels?: boolean } = {}): Blo
 }
 
 const ASIDE = /^(Notes?|Tips?|Examples?)$/;
+/** "•"/"◦" -> "-", "2." stays "2." */
+const listMarker = (b: string) => (/^\d/.test(b) ? b : "-");
+const ATTACK_LINE = /^(Melee|Very Close|Close|Far|Very Far) \| \S+ (phy|mag)$/;
 
 /** Turn a paragraph that starts with a bold label into a feature. */
 export function toFeature(text: string): Feature | null {
@@ -164,7 +176,7 @@ export function toFeature(text: string): Feature | null {
   if (!m) return null;
   let name = m.label;
   let kind: Feature["kind"];
-  const k = name.match(/^(.*?)\s+[-–]\s+(Passive|Action|Reaction)$/i);
+  const k = name.match(/^(.*?)\s+[-–]\s+(Passive|Action|Reaction|Evolution)$/i);
   if (k) {
     name = k[1].trim();
     kind = k[2].toLowerCase() as Feature["kind"];
@@ -181,11 +193,14 @@ export function features(paras: Block[]): Feature[] {
   for (const b of paras) {
     if (b.kind !== "para") continue;
     const f = !b.bullet ? toFeature(b.text) : null;
-    // "Note:", "Tip:" and "Example:" asides belong to the feature above them.
-    if (f && !(out.length && ASIDE.test(f.name))) out.push(f);
+    // "Note:", "Tip:" and "Example:" asides, and replacement attack lines ("Claw Swipe: Very Close | 1d10+3 phy"),
+    // belong to the feature above them.
+    const aside = f && out.length && (ASIDE.test(f.name) || ATTACK_LINE.test(plain(f.text)));
+    if (f && !aside) out.push(f);
     else if (out.length) {
       const last = out[out.length - 1];
-      last.text += b.bullet ? (/\n- /.test("\n" + last.text.split("\n\n").pop()) ? "\n" : "\n\n") + "- " + b.text : "\n\n" + b.text;
+      const inList = /\n(- |\d+\. )/.test("\n" + last.text.split("\n\n").pop());
+      last.text += b.bullet ? (inList ? "\n" : "\n\n") + `${listMarker(b.bullet)} ${b.text}` : "\n\n" + (isTable(b) ? tableMd(b.lines) : b.text);
     } else throw new Error(`text before first feature: ${b.text.slice(0, 80)} (p${b.page})`);
   }
   return out;
@@ -211,7 +226,8 @@ export function titleCase(s: string): string {
     .split(/(\s+|-)/)
     .map((w, i) => (i > 0 && small.has(w) ? w : w.replace(/^(\p{L})/u, (c) => c.toUpperCase())))
     .join("")
-    .replace(/’(\p{L})/gu, (_, c) => "’" + c.toLowerCase());
+    .replace(/’(\p{L})/gu, (_, c) => "’" + c.toLowerCase())
+    .replace(/\b(Gm|Npc|Pc|Hp|Vtt)(s?)\b/g, (_, w, pl) => w.toUpperCase() + pl);
 }
 
 export const TRAIT_NAMES: Record<string, string> = {
@@ -235,9 +251,97 @@ export function md(paras: Block[]): string {
   for (const p of paras) {
     if (p.kind !== "para") continue;
     const isBullet = !!p.bullet;
-    const piece = isBullet ? `- ${p.text}` : p.text;
+    const piece = isBullet ? `${listMarker(p.bullet!)} ${p.text}` : isTable(p) ? tableMd(p.lines) : p.text;
     out += out ? (isBullet && prevBullet ? "\n" : "\n\n") + piece : piece;
     prevBullet = isBullet;
+  }
+  return out;
+}
+
+/**
+ * Parse a table. Column positions come from the first data row that fills every column,
+ * otherwise from the header line.
+ * Rows are top-aligned: each cell belongs to the nearest row anchor at or above it, and an
+ * anchor is any line holding the `anchorCol` cell (a column that is never blank or wrapped).
+ * Fragments in the same cell are joined with spaces.
+ */
+export function parseTable(lines: Line[], nCols: number, anchorCol = 1, header?: Line, align: "top" | "nearest" = "top"): string[][] {
+  // prefer a full data row (centred columns start left of their header); fall back to the header
+  const full = lines.find((l) => l.cells.length === nCols) ?? (header?.cells.length === nCols ? header : undefined);
+  if (!full) throw new Error(`table on p${lines[0]?.page}: no row with ${nCols} cells`);
+  const colX = full.cells.map((c) => c[0]);
+  const colOf = (x: number) => {
+    let j = 0;
+    for (let k = 0; k < colX.length; k++) if (colX[k] <= x + 5) j = k;
+    return j;
+  };
+  // a line with one cell per column maps by order (centred columns shift per row); partial lines map by x
+  const cellCols = (l: Line) => (l.cells.length === nCols ? l.cells.map((_, k) => k) : l.cells.map((c) => colOf(c[0])));
+  if (anchorCol < 0) {
+    // auto: the column with the fewest fragments never wraps (lowest index wins a tie)
+    const frags = Array.from({ length: nCols }, (_, k) => lines.reduce((n, l) => n + cellCols(l).filter((j) => j === k).length, 0));
+    const min = Math.min(...frags.filter((n) => n > 0));
+    anchorCol = frags.indexOf(min);
+  }
+  const rows: { y: number; page: number; cells: string[][] }[] = [];
+  const anchors = lines.filter((l) => cellCols(l).includes(anchorCol));
+  for (const a of anchors) rows.push({ y: a.y, page: a.page, cells: Array.from({ length: nCols }, () => []) });
+  for (const l of lines) {
+    const row =
+      align === "top"
+        ? rows.filter((r) => r.page === l.page && r.y >= l.y - 0.5).sort((a, b) => a.y - b.y)[0]
+        : rows.filter((r) => r.page === l.page).sort((a, b) => Math.abs(a.y - l.y) - Math.abs(b.y - l.y))[0];
+    if (!row) throw new Error(`table on p${l.page}: text above first row: ${l.text}`);
+    const cols = cellCols(l);
+    l.cells.forEach(([, t], k) => row.cells[cols[k]].push(t));
+  }
+  return rows.map((r) => r.cells.map((parts) => joinLines(parts)));
+}
+
+/** A paragraph whose first line has several cells and that is set in the small table size. */
+function isTable(p: Extract<Block, { kind: "para" }>): boolean {
+  return p.lines[0].cells.length > 1 && !p.bullet && p.lines.length >= 2 && (p.lines[0].size <= 8.5 || p.lines.filter((l) => l.cells.length > 1).length >= 2);
+}
+
+/** Render table lines as a markdown table, first line as header. Falls back to one row per line. */
+export function tableMd(lines: Line[]): string {
+  const header = lines[0];
+  const n = header.cells.length;
+  let rows: string[][];
+  try {
+    rows = parseTable(lines.slice(1), n, -1, header);
+  } catch {
+    try {
+      // some tables centre the first column against multi-line cells
+      rows = parseTable(lines.slice(1), n, -1, header, "nearest");
+    } catch {
+      rows = lines.slice(1).map((l) => l.cells.map((c) => c[1]));
+    }
+  }
+  const esc = (c: string) => c.replace(/\|/g, "\\|");
+  const head = header.cells.map((c) => esc(plain(c[1]).trim()));
+  return [
+    `| ${head.join(" | ")} |`,
+    `|${head.map(() => " --- |").join("")}`,
+    ...rows.map((r) => `| ${Array.from({ length: n }, (_, k) => esc(r[k] ?? "")).join(" | ")} |`),
+  ].join("\n");
+}
+
+/** Remove the first n lines from a run of paragraphs, re-joining any paragraph that was cut. */
+export function dropLines(paras: Block[], n: number): Extract<Block, { kind: "para" }>[] {
+  const out: Extract<Block, { kind: "para" }>[] = [];
+  let left = n;
+  for (const p of paras) {
+    if (p.kind !== "para") continue;
+    if (left >= p.lines.length) {
+      left -= p.lines.length;
+      continue;
+    }
+    if (left > 0) {
+      const lines = p.lines.slice(left);
+      out.push({ ...p, lines, page: lines[0].page, text: joinLines(lines.map((l) => l.text)), bullet: undefined });
+      left = 0;
+    } else out.push(p);
   }
   return out;
 }

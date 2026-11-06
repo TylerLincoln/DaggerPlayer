@@ -1,6 +1,6 @@
 // Druid Beastform options (SRD pp. 15–17).
 import type { EntryOf } from "../../content/schema/index.ts";
-import { type Block, type Line, blocks, features, md, pages, plain, range, slug, titleCase, trait } from "./lines.ts";
+import { type Block, type Line, blocks, dropLines, features, md, pages, plain, range, slug, titleCase, trait } from "./lines.ts";
 import { src, PACK } from "./common.ts";
 
 type Para = Extract<Block, { kind: "para" }>;
@@ -45,8 +45,7 @@ export function parseBeastforms(lines: Line[]) {
     }
     const used = hm[0].split("\n").length;
     // paragraphs after the header lines are the features
-    let n = 0;
-    const rest = paras.filter((p) => (n += p.lines.length) > used);
+    const rest = dropLines(paras, used);
     const [, examples, tr, tv, ev, rg, atr, dmg, dtype, advs] = hm;
     out.push({
       id: `${PACK}/beastform/${slug(name)}`,
