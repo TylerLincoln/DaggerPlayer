@@ -164,7 +164,38 @@
   - **Service worker** (`public/sw.js`, production builds only): the app shell is network-first with an offline fallback; hashed assets (code, content packs, icons) are cache-first. Supabase calls are never cached. Offline banner in the header.
   - **Tests:** 111 in total (outbox ordering/retry/persistence, version comparison).
   - **Not verified here (no browser):** the service worker in a real browser. See docs/SETUP.md, "Test offline mode".
-- Next: stage 8, PDF export (print stylesheet, D10).
+- **Stage 8: PDF export.** Done (D10: print stylesheet + the browser's Save as PDF).
+  - **`/characters/:id/print`** ("Print / PDF" on the sheet) contains:
+    - identity; core stats; threshold bands; HP/Stress/Hope/Armor boxes as currently marked; traits; Experiences
+    - weapons with damage rolls; armor; inventory; gold; conditions
+    - the full text of every loadout and vault card and every feature
+    - background, connections, notes
+    - the **DPCGL attribution and modification statement** (required on Shared material, §4.1)
+  - **Print CSS:** app chrome hidden, black on white, cards and features kept whole across pages, filled boxes print (with "Background graphics" on). The page title becomes the PDF file name.
+  - **Tests:** 116 in total (sections, tracker marks, attribution, plain-text terms).
+  - **Not verified here (no browser):** the actual print preview and page breaks.
+
+## All build stages are done. Still open across the project
+
+Not built yet:
+- **Homebrew importer.** It's in the brief (content rule 5) but not in the build order. The schemas, validator (`content/validate.ts`), JSON Schema and DB table (`homebrew_packs`) are ready; the upload/manage UI and loading homebrew packs into the registry are not.
+- **Per-character content packs.** Characters record `packs`, but the builder and sheet use the global pack toggle.
+- **Small rules gaps:**
+  - choice-based card effects (e.g. Vitality)
+  - class-feature selections (patron, companion) are free text
+  - class/feature resources (Favor, Prayer Dice, tokens) have no counters yet
+  - Beastform transform on the sheet
+- **`srd-frames` equipment** (Everyday Hero, Western, Tech gear) as selectable items.
+- **Route-level code splitting.** The main bundle is ~600 KB (≈175 KB gzipped).
+- **Phase 2** (designed in PROPOSAL.md, not built): campaigns, GM view, invites, Fear tracker, stat-block tools.
+
+Needs the owner:
+- Google and Discord OAuth apps (keys in the Supabase dashboard).
+- A browser pass of stages 4–8 (builder, level-up, sheet, dice, offline mode, print).
+- Deploying (docs/SETUP.md §6).
+
+Skipped by decision:
+- Automated RLS tests (D9).
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.

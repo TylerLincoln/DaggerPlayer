@@ -10,6 +10,7 @@ import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features
 import { BuilderPage, NewCharacterPage } from "./features/builder/BuilderPage.tsx";
 import { CharactersPage } from "./features/characters/pages.tsx";
 import { SheetPage } from "./features/sheet/SheetPage.tsx";
+import { PrintPage } from "./features/sheet/PrintPage.tsx";
 import { HistoryPage } from "./features/sync/HistoryPage.tsx";
 import { useOnline } from "./data/outbox.ts";
 import { LevelUpPage } from "./features/levelup/LevelUpPage.tsx";
@@ -123,6 +124,7 @@ const router = createBrowserRouter([
       { path: "/characters/:id", element: <SheetPage /> },
       { path: "/characters/:id/level-up", element: <LevelUpPage /> },
       { path: "/characters/:id/history", element: <HistoryPage /> },
+      { path: "/characters/:id/print", element: <PrintPage /> },
       { path: "/build/new", element: <NewCharacterPage /> },
       { path: "/build/:id/:step", element: <BuilderPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },

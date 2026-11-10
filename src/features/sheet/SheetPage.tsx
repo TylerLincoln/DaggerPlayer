@@ -443,6 +443,7 @@ export function SheetPage() {
           {d.level < MAX_LEVEL && <Link className="button" to={`/characters/${c.id}/level-up`}>Level up</Link>}
           <Link className="button" to={`/build/${c.id}/review`}>Edit build</Link>
           <Link className="button" to={`/characters/${c.id}/history`}>History</Link>
+          <Link className="button" to={`/characters/${c.id}/print`}>Print / PDF</Link>
           {c.levelUps.length > 0 && (
             <button type="button" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && act((x) => undoLastLevelUp(x))}>Undo level-up</button>
           )}
