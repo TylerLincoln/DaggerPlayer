@@ -178,7 +178,7 @@
 ## All build stages are done. Still open across the project
 
 Not built yet:
-- **Homebrew importer.** It's in the brief (content rule 5) but not in the build order. The schemas, validator (`content/validate.ts`), JSON Schema and DB table (`homebrew_packs`) are ready; the upload/manage UI and loading homebrew packs into the registry are not.
+- **Homebrew importer: tabled by the owner (2026-11-10).** It's in the brief (content rule 5) but not in the build order. The schemas, validator (`content/validate.ts`), JSON Schema and DB table (`homebrew_packs`) are ready; the upload/manage UI and loading homebrew packs into the registry are not.
 - **Per-character content packs.** Characters record `packs`, but the builder and sheet use the global pack toggle.
 - **Phase 2** (designed in PROPOSAL.md, not built): campaigns, GM view, invites, Fear tracker, stat-block tools.
 
@@ -252,5 +252,5 @@ Skipped by decision:
 5. ~~Starting gear (p. 5)~~ Owner confirmed 2026-11-06: a secondary weapon is optional (warning only), and no weapon is allowed (Brawler).
 6. ~~Recall Cost with partly marked Stress (pp. 8, 50)~~ Owner confirmed 2026-11-10: allow the recall; a shortfall marks 1 HP. Original question: Recalling a card costs Stress equal to its Recall Cost. SRD p. 50 says you can't use a move that requires marking Stress when *all* your Stress is marked, and if you must mark Stress but can't, you mark 1 HP instead. The app allows a recall when at least one Stress is free, and marks 1 HP for any shortfall. Example: Recall Cost 2 with 1 free Stress marks the last Stress plus 1 HP. Should it instead require enough free Stress for the full cost?
 7. ~~Help an Ally against disadvantage (p. 49)~~ Owner confirmed 2026-11-10: each helper cancels a disadvantage. Original question: The SRD says advantage and disadvantage cancel one for one, and that Help an Ally adds extra advantage dice (highest counts). It doesn't say whether an ally's Help cancels a disadvantage. The app treats each helper as an advantage source for cancelling, e.g. disadvantage + one helper = no extra die. Correct?
-8. **Companion starting Stress (p. 21).** Owner wants a default (2026-11-10). **Waiting for the number:** SRD 2.0 doesn't state it (it's on the companion sheet), so it isn't guessed. Until then the player enters it.
+8. ~~Companion starting Stress (p. 21)~~ Owner supplied 2026-11-10: **3 slots**, from the companion sheet (not in SRD 2.0). It's the default (`COMPANION_DEFAULT_STRESS`), and the player can change it.
 9. **Companion level-up options (p. 22).** Owner unsure (2026-11-10). Kept as **once per option**, the stricter reading of "choose one available option … and mark it". It's easy to relax later. To settle it: if the companion sheet shows one checkbox per option, once each is right.

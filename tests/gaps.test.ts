@@ -185,10 +185,10 @@ describe("Ranger companion (Beastbound)", () => {
       c.state.companion = { name: "Ash", kind: "Wolf", experiences: [{ id: "x1", name: "Scout", bonus: 2 }, { id: "x2", name: "Loyal", bonus: 2 }], attack: "Bite", damageType: "phy", baseStress: null, stressMarked: 0 };
     });
 
-  it("starts at Evasion 10 with a d6 Melee attack; Stress waits for the companion sheet value", () => {
+  it("starts at Evasion 10, a d6 Melee attack and 3 Stress (companion sheet default)", () => {
     const d = derive(ranger(), reg).companion!;
-    expect([d.evasion.total, d.die, d.range, d.stressMax]).toEqual([10, "d6", "Melee", null]);
-    expect(validateBuild(ranger(), reg).some((i) => i.severity === "warning" && /starting Stress/.test(i.message))).toBe(true);
+    expect([d.evasion.total, d.die, d.range, d.stressMax?.total]).toEqual([10, "d6", "Melee", 3]);
+    expect(validateBuild(ranger(), reg).some((i) => /starting Stress/.test(i.message))).toBe(false);
   });
 
   it("level-ups need a companion option, each option once; options change the companion", () => {

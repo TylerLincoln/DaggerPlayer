@@ -110,7 +110,6 @@ export function validateBuild(c: CharacterDoc, lookup: Lookup): BuildIssue[] {
     if (!k || !k.name.trim()) err("background", "Name your companion (Beastbound).");
     else {
       if (k.experiences.length !== 2 || k.experiences.some((x) => !x.name.trim())) err("background", "Give your companion two Experiences at +2.");
-      if (k.baseStress === null) warn("background", "Enter your companion's starting Stress slots from the companion sheet.");
     }
   }
 

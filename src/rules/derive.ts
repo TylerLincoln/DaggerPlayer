@@ -34,7 +34,6 @@ export interface DerivedResource {
 export interface DerivedCompanion {
   name: string;
   evasion: Stat;
-  /** null until the player enters the companion's starting Stress (not in SRD 2.0) */
   stressMax: Stat | null;
   die: string;
   range: string;
@@ -117,6 +116,8 @@ export const chosen = (c: CharacterDoc, choiceId: string): string[] => (c.build.
 const DIE_STEPS = ["d4", "d6", "d8", "d10", "d12", "d20"];
 const RANGE_STEPS = ["Melee", "Very Close", "Close", "Far", "Very Far"];
 export const COMPANION_START = { evasion: 10, die: "d6", range: "Melee" }; // SRD p. 21
+/** Companion starting Stress: not in SRD 2.0; owner-supplied from the companion sheet (2026-11-10). */
+export const COMPANION_DEFAULT_STRESS = 3;
 
 /** Ancestry features the character has (two for a single ancestry; top + bottom for a mixed one). */
 export function ancestryFeatures(c: CharacterDoc, lookup: Lookup): { source: string; feature: Feature }[] {
@@ -304,7 +305,7 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     const options = c.levelUps.map((lu) => lu.companionOption).filter((o): o is string => !!o);
     const evasionC = stat("Companion starting Evasion", COMPANION_START.evasion);
     for (const o of options) if (o === "aware") add(evasionC, "Aware", 2);
-    const stressC = k.baseStress === null ? null : stat("Starting Stress (companion sheet)", k.baseStress);
+    const stressC = k.baseStress === null ? stat("Starting Stress (companion sheet default)", COMPANION_DEFAULT_STRESS) : stat("Starting Stress (companion sheet)", k.baseStress);
     for (const o of options) if (o === "resilient" && stressC) add(stressC, "Resilient", 1);
     let die = DIE_STEPS.indexOf(COMPANION_START.die);
     let range = RANGE_STEPS.indexOf(COMPANION_START.range);

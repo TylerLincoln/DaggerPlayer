@@ -8,7 +8,7 @@ export const emptyCompanion = (): Companion => ({
   experiences: [{ id: crypto.randomUUID(), name: "", bonus: 2 }, { id: crypto.randomUUID(), name: "", bonus: 2 }],
   attack: "",
   damageType: "phy",
-  baseStress: null,
+  baseStress: 3, // companion sheet default (owner-supplied; not in SRD 2.0)
   stressMarked: 0,
 });
 
@@ -38,7 +38,7 @@ export function CompanionEditor({ value, onChange }: { value: Companion | null; 
       <div className="field">
         <label htmlFor="comp-stress">Starting Stress slots (from the companion sheet)</label>
         <input id="comp-stress" inputMode="numeric" value={k.baseStress ?? ""} onChange={(e) => set({ baseStress: e.target.value === "" ? null : Math.min(12, Number(e.target.value.replace(/\D/g, ""))) })} />
-        <small className="hint">SRD 2.0 doesn't list this number; it's printed on the companion sheet.</small>
+        <small className="hint">Default 3, from the companion sheet (SRD 2.0 doesn't list it). Leave empty to use the default.</small>
       </div>
     </fieldset>
   );
