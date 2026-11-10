@@ -67,7 +67,7 @@
   - App: sign up, sign in (password, magic link, Google, Discord), email verification, password reset, sign out. Account page: change email, change password, export data as JSON, delete account. Legal/attribution page; attribution footer on every page.
   - docs/SETUP.md: project setup, env vars, OAuth providers, run, deploy.
   - Owner tested 2026-11-06: magic-link sign-in works end to end on the Codespaces URL.
-  - Google sign-in enabled 2026-11-10: OAuth client in Google Cloud (Testing mode, test users only), keys added in the Supabase dashboard; the API check passed (redirects to Google with the correct callback). Waiting on the owner's end-to-end test.
+  - Google sign-in enabled 2026-11-10: OAuth client in Google Cloud (Testing mode, test users only), keys added in the Supabase dashboard; the API check passed (redirects to Google with the correct callback). Owner confirmed end-to-end sign-in works (2026-11-10).
   - **Still needs the owner:** Discord OAuth app (keys go in the dashboard). Until then those two buttons return an error.
 - **Stage 3: compendium.** Done.
   - **Search** (`/compendium`): full-text across enabled packs with MiniSearch (prefix and typo tolerant). Filters: type, tier, domain, class, source. Query and filters live in the URL, so searches can be shared and bookmarked.
@@ -218,7 +218,7 @@ Still partial:
 - Feature effects that depend on conditions (e.g. "while Channeling") stay as text.
 
 Needs the owner:
-- Discord OAuth app (keys in the Supabase dashboard). Google is done; the owner's end-to-end sign-in test is pending.
+- Discord OAuth app (keys in the Supabase dashboard). Google is done and tested by the owner.
 - A browser pass of stages 4–8 (builder, level-up, sheet, dice, offline mode, print).
 - Deploying (docs/SETUP.md §6).
 
