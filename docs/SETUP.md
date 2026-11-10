@@ -79,7 +79,7 @@ npm run build && npm run preview -- --host --port 5173
 |---|---|
 | Build command | `npm run build` |
 | Output directory | `dist` |
-| Environment variables | `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` |
+| Environment variables | Create variables with these names and your real values: `VITE_SUPABASE_URL` (your project URL), `VITE_SUPABASE_ANON_KEY` (the anon/publishable key, never `service_role`), and `NODE_VERSION` = `22`. Vite builds them into the app, so set them before building and redeploy after changing them. |
 
 The app uses client-side routes, so add a single-page-app fallback:
 
