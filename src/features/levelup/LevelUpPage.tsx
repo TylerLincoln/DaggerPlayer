@@ -8,6 +8,8 @@ import type { CharacterDoc, LevelUp } from "../../rules/character.ts";
 import { ACHIEVEMENT_LEVELS, derive, diffDerived, formatChange, tierOf } from "../../rules/derive.ts";
 import { type Advancement, applyLevelUp, cardLevelLimit, emptyLevelUp, markedTraits, MAX_LEVEL, optionStatus, ownedCards, validateLevelUp } from "../../rules/levelup.ts";
 import { Inline } from "../../ui/RichText.tsx";
+import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
+import { COMPANION_OPTIONS } from "../../rules/levelup.ts";
 import { useAuth } from "../auth/AuthProvider.tsx";
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -227,6 +229,64 @@ export function LevelUpPage() {
           )}
         </details>
       </section>
+
+      {/* choices on cards taken this level (Vitality, Master of the Craft) */}
+      {[draft.domainCardId, draft.exchange?.toId, ...draft.advancements.map((a) => a.cardId)].filter((x): x is string => !!x).flatMap((cid) => {
+        const card = reg.get(cid, "domain-card");
+        return (card?.choices ?? []).map((ch) => (
+          <ChoiceInput key={ch.id} choice={ch} label={card!.name} value={draft.choices?.[ch.id]}
+            experiences={[...after.experiences].map((x) => ({ id: x.id, name: x.name }))}
+            onChange={(v) => set((x) => ((x.choices = { ...(x.choices ?? {}), [ch.id]: v }), x))} />
+        ));
+      })}
+
+      {before.companion && (
+        <section aria-labelledby="comp-lu">
+          <h2 id="comp-lu">Companion</h2>
+          <p>Choose one option for {before.companion.name || "your companion"} (SRD p. 22).</p>
+          {(() => {
+            const prog = reg.get("srd/progression/leveling", "progression");
+            const taken = c.levelUps.map((x) => x.companionOption?.split(":")[0]);
+            const cur = draft.companionOption ?? "";
+            const base = cur.split(":")[0];
+            return (
+              <>
+                {COMPANION_OPTIONS.map((id, i) => {
+                  const f = prog?.companionOptions[i];
+                  return (
+                    <label key={id} className="radio">
+                      <input type="radio" name="comp-opt" checked={base === id} disabled={taken.includes(id)} onChange={() => set((x) => ((x.companionOption = id === "vicious" ? "vicious:die" : id), x))} />
+                      <span><strong>{f?.name ?? id}</strong>{f && <>: <Inline text={f.text} links={false} /></>}{taken.includes(id) && <small> (already taken)</small>}</span>
+                    </label>
+                  );
+                })}
+                {base === "vicious" && (
+                  <fieldset>
+                    <legend>Vicious: increase</legend>
+                    <label className="radio"><input type="radio" name="vicious" checked={cur === "vicious:die"} onChange={() => set((x) => ((x.companionOption = "vicious:die"), x))} /> Damage die ({before.companion.die} → next)</label>
+                    <label className="radio"><input type="radio" name="vicious" checked={cur === "vicious:range"} onChange={() => set((x) => ((x.companionOption = "vicious:range"), x))} /> Range ({before.companion.range} → next)</label>
+                  </fieldset>
+                )}
+                {base === "intelligent" && (
+                  <fieldset>
+                    <legend>Intelligent: +1 to a Companion Experience</legend>
+                    {before.companion.experiences.map((x) => (
+                      <label key={x.id} className="radio"><input type="radio" name="intel" checked={cur === `intelligent:${x.id}`} onChange={() => set((y) => ((y.companionOption = `intelligent:${x.id}`), y))} /> {x.name}</label>
+                    ))}
+                  </fieldset>
+                )}
+                {ACHIEVEMENT_LEVELS.includes(level) && (
+                  <div className="field">
+                    <label htmlFor="comp-new-xp">Your companion's new Experience (+2)</label>
+                    <input id="comp-new-xp" value={draft.companionExperience?.name ?? ""} maxLength={80}
+                      onChange={(e) => set((x) => ((x.companionExperience = { id: x.companionExperience?.id ?? crypto.randomUUID(), name: e.target.value, bonus: 2 }), x))} />
+                  </div>
+                )}
+              </>
+            );
+          })()}
+        </section>
+      )}
 
       <section aria-labelledby="sum">
         <h2 id="sum">Summary</h2>

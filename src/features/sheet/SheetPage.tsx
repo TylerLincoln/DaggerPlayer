@@ -17,6 +17,8 @@ import { ConflictPanel } from "../sync/ConflictPanel.tsx";
 import { SaveIndicator } from "../builder/BuilderPage.tsx";
 import { Features } from "../compendium/EntryView.tsx";
 import { DamagePanel, Roller, type RollPreset, RollLog, TapTrack } from "./play.tsx";
+import { BeastformPanel, CompanionPanel, ResourcesPanel, TokenCounter, UsedToggle } from "./extras.tsx";
+import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
 
 const TABS = [
   { id: "play", label: "Play" },
@@ -102,6 +104,9 @@ function PlayTab(ctx: SheetCtx) {
         {(["hp", "stress", "hope", "armor"] as const).map((k) => <TapTrack key={k} kind={k} {...ctx} />)}
       </section>
 
+      <ResourcesPanel {...ctx} />
+      <BeastformPanel {...ctx} onAttack={() => roll({ attack: "beastform" })} />
+      <CompanionPanel {...ctx} onAttack={() => roll({ attack: "companion" })} />
       <DamagePanel {...ctx} />
 
       <section aria-labelledby="xp-h">
@@ -118,6 +123,14 @@ function PlayTab(ctx: SheetCtx) {
 
       <section aria-labelledby="weap-h">
         <h2 id="weap-h">Active weapons</h2>
+        {d.beastform && <p className="msg msg-info">You're in Beastform: you can't use weapons until you drop out.</p>}
+        {!c.state.activePrimaryId && !c.state.activeSecondaryId && d.features.some((f) => f.feature.name === "I Am the Weapon") && (
+          <div className="feature">
+            <h3>Brawler’s Strike <span className="kind">· Primary</span></h3>
+            <p>{c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice"} · Melee · {d.proficiency.total}d8+{d.proficiency.total}d6 phy · +1 Evasion while active</p>
+            <button type="button" className="primary" onClick={() => roll({ attack: "brawler" })}>Attack with Brawler’s Strike</button>
+          </div>
+        )}
         {[c.state.activePrimaryId, c.state.activeSecondaryId].filter(Boolean).length === 0 && <p>No active weapons.</p>}
         {[c.state.activePrimaryId, c.state.activeSecondaryId].map((id) => {
           const w = reg.get(id, "weapon");
@@ -180,7 +193,7 @@ function PlayTab(ctx: SheetCtx) {
   );
 }
 
-function CardsTab({ c, reg, act }: SheetCtx) {
+function CardsTab({ c, d, reg, act }: SheetCtx) {
   const [resting, setResting] = useState(false);
   const [swapOut, setSwapOut] = useState("");
   const full = c.state.loadout.length >= 5;
@@ -192,6 +205,14 @@ function CardsTab({ c, reg, act }: SheetCtx) {
         <h3><Link to={`/compendium/${k.id}`}>{k.name}</Link> <span className="kind">· {reg.get(k.domainId)?.name} {k.level} · {cap(k.cardType)} · <TermLink slug="recall-cost" label="Recall" /> {k.recallCost}</span></h3>
         {k.text && <RichText text={k.text} headingBase={4} />}
         {k.features && <Features features={k.features} />}
+        <div className="card-tools">
+          <UsedToggle text={k.text + " " + (k.features ?? []).map((f) => f.text).join(" ")} name={k.name} c={c} act={act} />
+          {/\btokens?\b/i.test(k.text) && <TokenCounter cardId={k.id} name={k.name} c={c} act={act} />}
+        </div>
+        {k.choices?.map((ch) => (
+          <ChoiceInput key={ch.id} choice={ch} label={k.name} value={c.build.featureChoices[ch.id]} experiences={d.experiences.map((x) => ({ id: x.id, name: x.name }))}
+            onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
+        ))}
         {where === "loadout" ? (
           <button type="button" onClick={() => act((x) => toVault(x, id))}>Move to vault</button>
         ) : (
@@ -323,12 +344,27 @@ function GearTab({ c, d, reg, act }: SheetCtx) {
   );
 }
 
-function FeaturesTab({ c, d }: SheetCtx) {
+function FeaturesTab({ c, d, act }: SheetCtx) {
   const groups = new Map<string, typeof d.features>();
   for (const f of d.features) groups.set(f.source, [...(groups.get(f.source) ?? []), f]);
+  const xps = d.experiences.map((x) => ({ id: x.id, name: x.name }));
   return (
     <>
-      {[...groups].map(([source, fs]) => <Features key={source} title={source} features={fs.map((f) => f.feature)} />)}
+      {[...groups].map(([source, fs]) => (
+        <section key={source}>
+          <h2>{source}</h2>
+          {fs.map(({ feature: f }) => (
+            <div key={f.name}>
+              <Features features={[f]} />
+              <UsedToggle text={f.text} name={`${source}: ${f.name}`} c={c} act={act} />
+              {f.choices?.map((ch) => (
+                <ChoiceInput key={ch.id} choice={ch} label={f.name} value={c.build.featureChoices[ch.id]} experiences={xps}
+                  onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
+              ))}
+            </div>
+          ))}
+        </section>
+      ))}
       {c.build.classNotes && <><h2>Class notes</h2><p>{c.build.classNotes}</p></>}
     </>
   );
@@ -462,7 +498,7 @@ export function SheetPage() {
         {tab === "gear" && <GearTab {...ctx} />}
         {tab === "features" && <FeaturesTab {...ctx} />}
         {tab === "story" && <StoryTab {...ctx} />}
-        {tab === "log" && <RollLog c={c} />}
+        {tab === "log" && <RollLog c={c} d={d} act={act} />}
       </div>
       <RestDialog {...ctx} open={resting} onClose={() => setResting(false)} />
       {preset && <Roller key={JSON.stringify(preset)} {...ctx} preset={preset} onClose={() => setPreset(null)} />}

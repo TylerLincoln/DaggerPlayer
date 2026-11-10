@@ -9,6 +9,8 @@ import { DomainIcon } from "../../ui/DomainIcon.tsx";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { Inline } from "../../ui/RichText.tsx";
 import { EntryView } from "../compendium/EntryView.tsx";
+import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
+import { CompanionEditor } from "../sheet/CompanionEditor.tsx";
 
 interface Ctx {
   c: CharacterDoc;
@@ -384,17 +386,12 @@ export function BackgroundStep() {
       <datalist id="xp-examples">{EXAMPLE_EXPERIENCES.map((x) => <option key={x} value={x} />)}</datalist>
 
       {choices.map(({ feature, ch }) => (
-        <fieldset key={ch.id}>
-          <legend>{feature.name}</legend>
-          <p>{ch.prompt}</p>
-          {typeof ch.options === "object" && !Array.isArray(ch.options) && ch.options.type === "experience" &&
-            c.build.experiences.map((x) => (
-              <label key={x.id} className="radio">
-                <input type="radio" name={ch.id} checked={c.build.featureChoices[ch.id] === x.id} disabled={!x.name.trim()} onChange={() => set((d) => (d.build.featureChoices[ch.id] = x.id))} /> {x.name || "(unnamed Experience)"}
-              </label>
-            ))}
-        </fieldset>
+        <ChoiceInput key={ch.id} choice={ch} label={feature.name} value={c.build.featureChoices[ch.id]} experiences={c.build.experiences}
+          onChange={(v) => set((d) => (d.build.featureChoices[ch.id] = v))} />
       ))}
+      {c.build.subclassId === "srd/subclass/beastbound" && (
+        <CompanionEditor value={c.state.companion} onChange={(k) => set((d) => (d.state.companion = k))} />
+      )}
 
       <h2>Background</h2>
       {c.build.background.length === 0 && <p className="hint">Choose a class to see its background questions.</p>}

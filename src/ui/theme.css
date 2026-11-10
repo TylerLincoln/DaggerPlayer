@@ -367,3 +367,8 @@ label.radio { display: flex; gap: 8px; align-items: center; min-height: 36px; }
   a[href]::after { content: none !important; }
 }
 @media (max-width: 600px) { .p-grid { grid-template-columns: 1fr; } }
+.card-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 6px 0; }
+.resources li { padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.dice-faces.left { justify-content: flex-start; flex-wrap: wrap; margin: 6px 0; }
+button.die { min-height: 44px; padding: 0; background: var(--surface); color: var(--text); }
+.companion-editor { margin-top: 16px; }

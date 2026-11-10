@@ -5,8 +5,8 @@ import { logRoll, startSession, useRollLog } from "../../data/rolls.ts";
 import { useSettings } from "../../data/settings.ts";
 import type { CharacterDoc } from "../../rules/character.ts";
 import type { Derived } from "../../rules/derive.ts";
-import { applyDuality, consequences, describeDuality, type DamageRoll, type DualityResult, type Mod, planDamage, rollDamage, rollDuality, SEVERITY_LABEL, spendForExperiences, takeDamage } from "../../rules/duality.ts";
-import { clearArmor, clearHp, clearStress, markArmor, markHp, markStress, type Result } from "../../rules/sheet.ts";
+import { applyDuality, consequences, describeDuality, type DamageRoll, type DualityResult, type Mod, parseDamage, planDamage, rollDamageDice, rollDuality, SEVERITY_LABEL, spendForExperiences, takeDamage } from "../../rules/duality.ts";
+import { clearArmor, clearHp, clearStress, markArmor, markHp, markStress, newSession, type Result } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { TermLink } from "../../ui/RichText.tsx";
@@ -79,8 +79,37 @@ export function TapTrack({ kind, c, d, act }: PlayCtx & { kind: TrackKind }) {
 export interface RollPreset {
   trait?: Trait;
   weaponId?: string;
+  /** attack with something other than a weapon */
+  attack?: "beastform" | "brawler" | "companion";
   experienceIds?: string[];
   reaction?: boolean;
+}
+
+/** What an attack rolls: trait and damage dice (Proficiency × each die, plus a flat bonus). */
+interface AttackSource {
+  name: string;
+  trait: Trait | "";
+  groups: { count: number; die: number }[];
+  bonus: number;
+  type: string;
+}
+
+function attackOf(preset: RollPreset | null, c: CharacterDoc, d: Derived, reg: Registry): AttackSource | null {
+  const prof = d.proficiency.total;
+  const best = d.spellcastTraits.slice().sort((a, b) => d.traits[b].total - d.traits[a].total)[0] ?? "";
+  const w = reg.get(preset?.weaponId, "weapon");
+  if (w) return { name: w.name, trait: w.trait === "spellcast" ? best : w.trait, groups: [{ count: prof, die: Number(w.damage.dice.slice(1)) }], bonus: w.damage.bonus, type: w.damage.type };
+  if (preset?.attack === "beastform" && d.beastform?.attack) {
+    const { die, bonus } = parseDamage(d.beastform.attack.damage);
+    return { name: d.beastform.name, trait: d.beastform.attack.trait, groups: [{ count: prof, die }], bonus, type: d.beastform.attack.damageType };
+  }
+  if (preset?.attack === "brawler")
+    // I Am the Weapon: d8+d6, both scaling with Proficiency
+    return { name: "Brawler’s Strike", trait: (c.build.featureChoices["brawler-strike-trait"] as Trait) || "", groups: [{ count: prof, die: 8 }, { count: prof, die: 6 }], bonus: 0, type: "phy" };
+  if (preset?.attack === "companion" && d.companion)
+    // commanding the companion is a Spellcast Roll; damage uses your Proficiency and their die (p. 21)
+    return { name: d.companion.name || "Companion", trait: best, groups: [{ count: prof, die: Number(d.companion.die.slice(1)) }], bonus: 0, type: c.state.companion?.damageType ?? "phy" };
+  return null;
 }
 
 function traitValue(d: Derived, t: Trait) {
@@ -90,8 +119,8 @@ function traitValue(d: Derived, t: Trait) {
 export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPreset | null; onClose: () => void }) {
   const { c, d, reg, act, remote } = ctx;
   const settings = useSettings();
-  const weapon = reg.get(preset?.weaponId, "weapon");
-  const defaultTrait: Trait | "" = preset?.trait ?? (weapon ? (weapon.trait === "spellcast" ? d.spellcastTraits[0] ?? "" : weapon.trait) : "");
+  const weapon = attackOf(preset, c, d, reg);
+  const defaultTrait: Trait | "" = preset?.trait ?? weapon?.trait ?? "";
   const [trait, setTrait] = useState<Trait | "">(defaultTrait);
   const [xps, setXps] = useState<string[]>(preset?.experienceIds ?? []);
   const [adv, setAdv] = useState(0);
@@ -127,6 +156,10 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
       });
     }
     if (xps.length) notes.unshift(`Spent ${xps.length} Hope on Experience${xps.length > 1 ? "s" : ""}.`);
+    // Wizard, Strange Patterns: your chosen number on a Duality Die
+    const sp = Number(c.build.featureChoices["strange-patterns"]);
+    if (sp && (r.hope === sp || r.fear === sp) && d.features.some((f) => f.feature.name === "Strange Patterns")) notes.push(`Strange Patterns (${sp}): gain a Hope or clear a Stress.`);
+
     setResult(r);
     setApplied(notes);
     const label = [weapon ? `${weapon.name} attack` : reaction ? "Reaction" : "Action", trait && cap(trait), ...xps.map((id) => d.experiences.find((e) => e.id === id)?.name)].filter(Boolean).join(" · ");
@@ -139,9 +172,9 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
   const rollDmg = () => {
     if (!weapon) return;
     const crit = result?.kind === "crit" && !result.reaction;
-    const r = rollDamage(d.proficiency.total, Number(weapon.damage.dice.slice(1)), weapon.damage.bonus, crit);
+    const r = rollDamageDice(weapon.groups, weapon.bonus, crit);
     setDamage(r);
-    logRoll({ characterId: c.id, kind: "damage", label: `${weapon.name} damage${crit ? " (critical)" : ""}`, summary: `${r.total} ${weapon.damage.type}`, detail: `${r.formula}: [${r.dice.join(", ")}]${r.bonus ? ` ${formatMod(r.bonus)}` : ""}${r.crit ? ` +${r.critBonus} crit` : ""}`, applied: [] }, remote);
+    logRoll({ characterId: c.id, kind: "damage", label: `${weapon.name} damage${crit ? " (critical)" : ""}`, summary: `${r.total} ${weapon.type}`, detail: `${r.formula}: [${r.dice.join(", ")}]${r.bonus ? ` ${formatMod(r.bonus)}` : ""}${r.crit ? ` +${r.critBonus} crit` : ""}`, applied: [] }, remote);
   };
 
   const traits = TRAITS;
@@ -207,7 +240,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
               )}
               {damage && (
                 <p className="roll-damage" aria-live="polite">
-                  <strong>{damage.total}</strong> {weapon?.damage.type} damage <span className="hint">({damage.formula}: {damage.dice.join(" + ")}{damage.bonus ? ` ${formatMod(damage.bonus)}` : ""}{damage.crit ? ` + ${damage.critBonus} crit` : ""})</span>
+                  <strong>{damage.total}</strong> {weapon?.type} damage <span className="hint">({damage.formula}: {damage.dice.join(" + ")}{damage.bonus ? ` ${formatMod(damage.bonus)}` : ""}{damage.crit ? ` + ${damage.critBonus} crit` : ""})</span>
                 </p>
               )}
             </div>
@@ -278,7 +311,7 @@ export function DamagePanel({ c, d, act, remote }: PlayCtx) {
 
 // ---------- roll log ----------
 
-export function RollLog({ c }: { c: CharacterDoc }) {
+export function RollLog({ c, d, act }: { c: CharacterDoc } & Partial<Pick<PlayCtx, "d" | "act">>) {
   const { session, all, sessionStart } = useRollLog(c.id);
   const [showAll, setShowAll] = useState(false);
   const list = showAll ? all : session;
@@ -287,7 +320,7 @@ export function RollLog({ c }: { c: CharacterDoc }) {
       <h2 id="log-h">Roll history</h2>
       <p className="hint">
         {sessionStart ? `This session started ${new Date(sessionStart).toLocaleString()}.` : "Showing all rolls."}{" "}
-        <button type="button" onClick={() => startSession(c.id)}>Start a new session</button>{" "}
+        <button type="button" onClick={() => { startSession(c.id); if (d && act) act((x) => newSession(x, d)); }}>Start a new session</button>{" "}
         <label className="toggle"><input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} /> Show earlier sessions</label>
       </p>
       {list.length === 0 ? <p>No rolls yet.</p> : (
