@@ -180,14 +180,41 @@
 Not built yet:
 - **Homebrew importer.** It's in the brief (content rule 5) but not in the build order. The schemas, validator (`content/validate.ts`), JSON Schema and DB table (`homebrew_packs`) are ready; the upload/manage UI and loading homebrew packs into the registry are not.
 - **Per-character content packs.** Characters record `packs`, but the builder and sheet use the global pack toggle.
-- **Small rules gaps:**
-  - choice-based card effects (e.g. Vitality)
-  - class-feature selections (patron, companion) are free text
-  - class/feature resources (Favor, Prayer Dice, tokens) have no counters yet
-  - Beastform transform on the sheet
-- **`srd-frames` equipment** (Everyday Hero, Western, Tech gear) as selectable items.
-- **Route-level code splitting.** The main bundle is ~600 KB (≈175 KB gzipped).
 - **Phase 2** (designed in PROPOSAL.md, not built): campaigns, GM view, invites, Fear tracker, stat-block tools.
+
+Smaller gaps, closed 2026-11-10:
+- **Choices** (all curated in `content/srd/modifiers.json`, validated at parse time):
+  - Vitality (two benefits, applied from the vault) and Master of the Craft (+2/+2 or +3); both go to the vault permanently and can't be recalled
+  - Warlock patron name and sphere
+  - Wizard Strange Patterns number (the roller flags a match)
+  - Brawler's Strike trait
+  - Elemental Origin element
+  - made in the builder, the level-up wizard or the sheet
+- **Resources** (Play tab):
+  - Warlock Favor (3 → max 6)
+  - Seraph Prayer Dice (roll d4 × Spellcast; tap a die to spend it; clears on a new session)
+  - Guardian Unstoppable Die (d4/d6 counting up)
+  - Rally, Patron and Combo die sizes
+  - a **Used** checkbox on every "once per rest / long rest / session / scene" feature and card, cleared by rests and "Start a new session"
+  - **token counters** on cards that use tokens
+- **Brawler's Strike:** +1 Evasion and a Proficiency × (d8 + d6) attack while no weapons are active.
+- **Beastform** (Druid):
+  - transform within your tier by marking a Stress, or with Evolution (3 Hope, +1 to a trait)
+  - the form's Evasion and trait bonuses apply; attack with the form; weapons are blocked
+  - drop out manually or automatically on your last HP
+- **Ranger companion** (Beastbound):
+  - editor in the builder and on the sheet
+  - Evasion 10, d6 Melee attack, Stress track, Experiences, command-to-attack roll
+  - a companion option at each level-up (Aware, Resilient, Vicious die/range, Intelligent, Light in the Dark (+1 Hope slot), …)
+  - a new companion Experience at levels 2/5/8
+  - companion Stress clears when yours does on a rest
+- **`srd-frames` equipment:** 76 weapons and 16 armor from Everyday Hero (Tier 1), Western and Monster Hunting. Tier-scaled items are one entry per tier ("Revolver (Tier 2)"), selectable once the frames pack is on.
+- **Code splitting:** the main bundle went from ~600 KB to 257 KB (80 KB gzipped). Route chunks are prefetched after start-up so offline still covers every screen.
+- **Tests:** 136 in total.
+
+Still partial:
+- **Legendary/Mythic Beast** (upgrade forms) can be chosen but don't apply their "+6 damage, +1 trait, +2 Evasion" upgrade automatically. Hybrid forms use their listed stats; their borrowed advantages/features are text only.
+- Feature effects that depend on conditions (e.g. "while Channeling") stay as text.
 
 Needs the owner:
 - Google and Discord OAuth apps (keys in the Supabase dashboard).
@@ -225,3 +252,5 @@ Skipped by decision:
 5. ~~Starting gear (p. 5)~~ Owner confirmed 2026-11-06: a secondary weapon is optional (warning only), and no weapon is allowed (Brawler).
 6. ~~Recall Cost with partly marked Stress (pp. 8, 50)~~ Owner confirmed 2026-11-10: allow the recall; a shortfall marks 1 HP. Original question: Recalling a card costs Stress equal to its Recall Cost. SRD p. 50 says you can't use a move that requires marking Stress when *all* your Stress is marked, and if you must mark Stress but can't, you mark 1 HP instead. The app allows a recall when at least one Stress is free, and marks 1 HP for any shortfall. Example: Recall Cost 2 with 1 free Stress marks the last Stress plus 1 HP. Should it instead require enough free Stress for the full cost?
 7. ~~Help an Ally against disadvantage (p. 49)~~ Owner confirmed 2026-11-10: each helper cancels a disadvantage. Original question: The SRD says advantage and disadvantage cancel one for one, and that Help an Ally adds extra advantage dice (highest counts). It doesn't say whether an ally's Help cancels a disadvantage. The app treats each helper as an advantage source for cancelling, e.g. disadvantage + one helper = no extra die. Correct?
+8. **Companion starting Stress (p. 21).** SRD 2.0 doesn't give the companion's starting Stress slots; they're printed on the companion sheet. The app asks the player to enter the number. Do you want a default?
+9. **Companion level-up options (p. 22).** "Choose one available option for your companion from the following list and mark it." The app treats each option as available once. Correct, or can some be taken more than once?

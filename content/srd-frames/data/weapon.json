@@ -1,0 +1,2180 @@
+[
+  {
+    "id": "srd-frames/weapon/cleaver",
+    "type": "weapon",
+    "name": "Cleaver",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Reliable",
+      "text": "+1 to attack rolls"
+    }
+  },
+  {
+    "id": "srd-frames/weapon/sharpened-rake",
+    "type": "weapon",
+    "name": "Sharpened Rake",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/butchers-axe",
+    "type": "weapon",
+    "name": "Butcher’s Axe",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d12",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/weapon/iron-skillet",
+    "type": "weapon",
+    "name": "Iron Skillet",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/pitchfork",
+    "type": "weapon",
+    "name": "Pitchfork",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/sledgehammer",
+    "type": "weapon",
+    "name": "Sledgehammer",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Massive",
+      "text": "−1 to {{term:evasion|Evasion}}; on a successful attack, roll an additional damage die and discard the lowest result.",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/weapon/cooking-knife",
+    "type": "weapon",
+    "name": "Cooking Knife",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/walking-staff",
+    "type": "weapon",
+    "name": "Walking Staff",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/rolling-pin",
+    "type": "weapon",
+    "name": "Rolling Pin",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/sickle",
+    "type": "weapon",
+    "name": "Sickle",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/forge-poker",
+    "type": "weapon",
+    "name": "Forge Poker",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/crop-scythe",
+    "type": "weapon",
+    "name": "Crop Scythe",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/fishing-rod",
+    "type": "weapon",
+    "name": "Fishing Rod",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/slingshot",
+    "type": "weapon",
+    "name": "Slingshot",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/firework-launcher",
+    "type": "weapon",
+    "name": "Firework Launcher",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Cumbersome",
+      "text": "−1 to {{term:finesse|Finesse}}",
+      "modifiers": [
+        {
+          "target": "trait:finesse",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-hammer",
+    "type": "weapon",
+    "name": "Enchanted Hammer",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-mop",
+    "type": "weapon",
+    "name": "Enchanted Mop",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d10",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-scissors",
+    "type": "weapon",
+    "name": "Enchanted Scissors",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-broomstick",
+    "type": "weapon",
+    "name": "Enchanted Broomstick",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "very-close",
+    "damage": {
+      "dice": "d10",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/exploding-potions",
+    "type": "weapon",
+    "name": "Exploding Potions",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-forge-lighter",
+    "type": "weapon",
+    "name": "Enchanted Forge Lighter",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "close",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-boomerang",
+    "type": "weapon",
+    "name": "Enchanted Boomerang",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/enchanted-kite",
+    "type": "weapon",
+    "name": "Enchanted Kite",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "presence",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Versatile",
+      "text": "This weapon can also be used with these statistics—{{term:presence|Presence}}, Melee, d10."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/whisk-wand",
+    "type": "weapon",
+    "name": "Whisk Wand",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/sparkling-staff",
+    "type": "weapon",
+    "name": "Sparkling Staff",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 191
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "knowledge",
+    "range": "very-far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Powerful",
+      "text": "On a successful attack, roll an additional damage die and discard the lowest result."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/large-fork",
+    "type": "weapon",
+    "name": "Large Fork",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+2 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd-frames/weapon/barrel-lid-shield",
+    "type": "weapon",
+    "name": "Barrel Lid Shield",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Protective",
+      "text": "+1 to {{term:armor-score|Armor Score}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/weapon/table-shield",
+    "type": "weapon",
+    "name": "Table Shield",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Barrier",
+      "text": "+2 to {{term:armor-score|Armor Score}}; −1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 2,
+          "when": "equipped"
+        },
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/weapon/paring-knife",
+    "type": "weapon",
+    "name": "Paring Knife",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "+2 to primary weapon damage to targets within {{term:melee|Melee range}}"
+    }
+  },
+  {
+    "id": "srd-frames/weapon/festival-whip",
+    "type": "weapon",
+    "name": "Festival Whip",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Startling",
+      "text": "Mark a {{term:stress|Stress}} to crack the whip and force all adversaries within {{term:melee|Melee range}} back to {{term:close|Close range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/towline-hook",
+    "type": "weapon",
+    "name": "Towline Hook",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}} with you."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/flare-launcher",
+    "type": "weapon",
+    "name": "Flare Launcher",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tags": [
+      "everyday-hero"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Bright",
+      "text": "This weapon {{term:temporary|temporarily}} lights up the area the flare lands in."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/revolver-tier-1",
+    "type": "weapon",
+    "name": "Revolver (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Six Shot",
+      "text": "Place 6 Ammo tokens on your character sheet. Spend 1 Ammo token to make an attack. You can mark a {{term:stress|Stress}} to regain spent Ammo tokens."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/revolver-tier-2",
+    "type": "weapon",
+    "name": "Revolver (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Six Shot",
+      "text": "Place 6 Ammo tokens on your character sheet. Spend 1 Ammo token to make an attack. You can mark a {{term:stress|Stress}} to regain spent Ammo tokens."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/revolver-tier-3",
+    "type": "weapon",
+    "name": "Revolver (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Six Shot",
+      "text": "Place 6 Ammo tokens on your character sheet. Spend 1 Ammo token to make an attack. You can mark a {{term:stress|Stress}} to regain spent Ammo tokens."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/revolver-tier-4",
+    "type": "weapon",
+    "name": "Revolver (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Six Shot",
+      "text": "Place 6 Ammo tokens on your character sheet. Spend 1 Ammo token to make an attack. You can mark a {{term:stress|Stress}} to regain spent Ammo tokens."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/rifle-tier-1",
+    "type": "weapon",
+    "name": "Rifle (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Sightline",
+      "text": "Spend 2 {{term:hope|Hope}} to gain {{term:advantage|advantage}} on an attack roll."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/rifle-tier-2",
+    "type": "weapon",
+    "name": "Rifle (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Sightline",
+      "text": "Spend 2 {{term:hope|Hope}} to gain {{term:advantage|advantage}} on an attack roll."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/rifle-tier-3",
+    "type": "weapon",
+    "name": "Rifle (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Sightline",
+      "text": "Spend 2 {{term:hope|Hope}} to gain {{term:advantage|advantage}} on an attack roll."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/rifle-tier-4",
+    "type": "weapon",
+    "name": "Rifle (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-far",
+    "damage": {
+      "dice": "d8",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Sightline",
+      "text": "Spend 2 {{term:hope|Hope}} to gain {{term:advantage|advantage}} on an attack roll."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/shotgun-tier-1",
+    "type": "weapon",
+    "name": "Shotgun (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/shotgun-tier-2",
+    "type": "weapon",
+    "name": "Shotgun (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/shotgun-tier-3",
+    "type": "weapon",
+    "name": "Shotgun (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/shotgun-tier-4",
+    "type": "weapon",
+    "name": "Shotgun (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/lasso-tier-1",
+    "type": "weapon",
+    "name": "Lasso (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Roped",
+      "text": "On a successful attack, you can {{term:temporary|temporarily}} _Rope_ the target instead of dealing damage. While _Roped_, the target is _{{term:restrained|Restrained}}_ and _{{term:vulnerable|Vulnerable}}_, but you must remain within {{term:very-close|Very Close range}} of the target. When the target would clear this condition, you can make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. On a success, they remain Roped."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/lasso-tier-2",
+    "type": "weapon",
+    "name": "Lasso (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d4",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Roped",
+      "text": "On a successful attack, you can {{term:temporary|temporarily}} _Rope_ the target instead of dealing damage. While _Roped_, the target is _{{term:restrained|Restrained}}_ and _{{term:vulnerable|Vulnerable}}_, but you must remain within {{term:very-close|Very Close range}} of the target. When the target would clear this condition, you can make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. On a success, they remain Roped."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/lasso-tier-3",
+    "type": "weapon",
+    "name": "Lasso (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Roped",
+      "text": "On a successful attack, you can {{term:temporary|temporarily}} _Rope_ the target instead of dealing damage. While _Roped_, the target is _{{term:restrained|Restrained}}_ and _{{term:vulnerable|Vulnerable}}_, but you must remain within {{term:very-close|Very Close range}} of the target. When the target would clear this condition, you can make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. On a success, they remain Roped."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/lasso-tier-4",
+    "type": "weapon",
+    "name": "Lasso (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d4",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Roped",
+      "text": "On a successful attack, you can {{term:temporary|temporarily}} _Rope_ the target instead of dealing damage. While _Roped_, the target is _{{term:restrained|Restrained}}_ and _{{term:vulnerable|Vulnerable}}_, but you must remain within {{term:very-close|Very Close range}} of the target. When the target would clear this condition, you can make a {{term:strength|Strength}} {{term:reaction-roll|Reaction Roll}}. On a success, they remain Roped."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/small-revolver-tier-1",
+    "type": "weapon",
+    "name": "Small Revolver (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick Shot",
+      "text": "Spend 2 {{term:hope|Hope}} to gain a +4 bonus to primary weapon damage."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/small-revolver-tier-2",
+    "type": "weapon",
+    "name": "Small Revolver (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick Shot",
+      "text": "Spend 2 {{term:hope|Hope}} to gain a +4 bonus to primary weapon damage."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/small-revolver-tier-3",
+    "type": "weapon",
+    "name": "Small Revolver (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick Shot",
+      "text": "Spend 2 {{term:hope|Hope}} to gain a +4 bonus to primary weapon damage."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/small-revolver-tier-4",
+    "type": "weapon",
+    "name": "Small Revolver (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 197
+    },
+    "tags": [
+      "western"
+    ],
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 9,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Quick Shot",
+      "text": "Spend 2 {{term:hope|Hope}} to gain a +4 bonus to primary weapon damage."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/blessed-brass-knuckles-tier-1",
+    "type": "weapon",
+    "name": "Blessed Brass Knuckles (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 1,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/blessed-brass-knuckles-tier-2",
+    "type": "weapon",
+    "name": "Blessed Brass Knuckles (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/blessed-brass-knuckles-tier-3",
+    "type": "weapon",
+    "name": "Blessed Brass Knuckles (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 7,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/blessed-brass-knuckles-tier-4",
+    "type": "weapon",
+    "name": "Blessed Brass Knuckles (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 10,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/weapon/holy-shotgun-tier-1",
+    "type": "weapon",
+    "name": "Holy Shotgun (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/holy-shotgun-tier-2",
+    "type": "weapon",
+    "name": "Holy Shotgun (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/holy-shotgun-tier-3",
+    "type": "weapon",
+    "name": "Holy Shotgun (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/holy-shotgun-tier-4",
+    "type": "weapon",
+    "name": "Holy Shotgun (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "magic",
+    "trait": "agility",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "mag"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Scattershot",
+      "text": "When you make an attack, target all creatures in front of you within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/repeating-crossbow-tier-1",
+    "type": "weapon",
+    "name": "Repeating Crossbow (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/repeating-crossbow-tier-2",
+    "type": "weapon",
+    "name": "Repeating Crossbow (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/repeating-crossbow-tier-3",
+    "type": "weapon",
+    "name": "Repeating Crossbow (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 8,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/repeating-crossbow-tier-4",
+    "type": "weapon",
+    "name": "Repeating Crossbow (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "primary",
+    "group": "physical",
+    "trait": "finesse",
+    "range": "far",
+    "damage": {
+      "dice": "d6",
+      "bonus": 11,
+      "type": "phy"
+    },
+    "burden": 2,
+    "feature": {
+      "name": "Quick",
+      "text": "When you make an attack, you can mark a {{term:stress|Stress}} to target another creature within range."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/wooden-stake-tier-1",
+    "type": "weapon",
+    "name": "Wooden Stake (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 0,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "Gain a bonus equal to 1 + your {{term:tier|tier}} to primary weapon damage to targets within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/wooden-stake-tier-2",
+    "type": "weapon",
+    "name": "Wooden Stake (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 2,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "Gain a bonus equal to 1 + your {{term:tier|tier}} to primary weapon damage to targets within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/wooden-stake-tier-3",
+    "type": "weapon",
+    "name": "Wooden Stake (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 4,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "Gain a bonus equal to 1 + your {{term:tier|tier}} to primary weapon damage to targets within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/wooden-stake-tier-4",
+    "type": "weapon",
+    "name": "Wooden Stake (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "strength",
+    "range": "melee",
+    "damage": {
+      "dice": "d8",
+      "bonus": 6,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Paired",
+      "text": "Gain a bonus equal to 1 + your {{term:tier|tier}} to primary weapon damage to targets within {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/hallowed-shield-tier-1",
+    "type": "weapon",
+    "name": "Hallowed Shield (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 0,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Resonant",
+      "text": "When you critically succeed on a primary weapon attack, you gain an additional {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/hallowed-shield-tier-2",
+    "type": "weapon",
+    "name": "Hallowed Shield (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 2,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Resonant",
+      "text": "When you critically succeed on a primary weapon attack, you gain an additional {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/hallowed-shield-tier-3",
+    "type": "weapon",
+    "name": "Hallowed Shield (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 4,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Resonant",
+      "text": "When you critically succeed on a primary weapon attack, you gain an additional {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/hallowed-shield-tier-4",
+    "type": "weapon",
+    "name": "Hallowed Shield (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "secondary",
+    "group": "magic",
+    "trait": "instinct",
+    "range": "melee",
+    "damage": {
+      "dice": "d4",
+      "bonus": 6,
+      "type": "mag"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Resonant",
+      "text": "When you critically succeed on a primary weapon attack, you gain an additional {{term:hope|Hope}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/chain-whip-tier-1",
+    "type": "weapon",
+    "name": "Chain Whip (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 1,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 1,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/chain-whip-tier-2",
+    "type": "weapon",
+    "name": "Chain Whip (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 2,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 3,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/chain-whip-tier-3",
+    "type": "weapon",
+    "name": "Chain Whip (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 3,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 5,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  },
+  {
+    "id": "srd-frames/weapon/chain-whip-tier-4",
+    "type": "weapon",
+    "name": "Chain Whip (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tags": [
+      "monster-hunting"
+    ],
+    "tier": 4,
+    "category": "secondary",
+    "group": "physical",
+    "trait": "presence",
+    "range": "very-close",
+    "damage": {
+      "dice": "d6",
+      "bonus": 7,
+      "type": "phy"
+    },
+    "burden": 1,
+    "feature": {
+      "name": "Hooked",
+      "text": "On a successful attack, you can pull the target into {{term:melee|Melee range}}."
+    }
+  }
+]

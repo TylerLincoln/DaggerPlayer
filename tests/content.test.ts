@@ -217,3 +217,27 @@ describe("rich text", () => {
     expect(stripTags("Mark a {{term:stress|Stress}}.")).toBe("Mark a Stress.");
   });
 });
+
+describe("srd-frames equipment (pp. 191–192, 197, 201)", () => {
+  const frames = packs.find((p) => p.meta.id === "srd-frames")!;
+  const weapons = frames.entries.filter((e) => e.type === "weapon") as EntryOf<"weapon">[];
+  const armor = frames.entries.filter((e) => e.type === "armor") as EntryOf<"armor">[];
+
+  it("has the Everyday Hero, Western and Monster Hunting gear", () => {
+    expect(weapons.length).toBe(76);
+    expect(armor.length).toBe(16);
+    expect(weapons.filter((w) => w.tags?.includes("everyday-hero")).every((w) => w.tier === 1)).toBe(true);
+  });
+
+  it("splits tier-scaled weapons and armor into one entry per tier", () => {
+    const rev = weapons.filter((w) => w.name.startsWith("Revolver (Tier"));
+    expect(rev.map((w) => `${w.tier}:${w.damage.dice}+${w.damage.bonus}`)).toEqual(["1:d8+1", "2:d8+4", "3:d8+7", "4:d8+10"]);
+    const coat = armor.filter((a) => a.name.startsWith("Leather Longcoat"));
+    expect(coat.map((a) => `${a.tier}:${a.baseThresholds.major}/${a.baseThresholds.severe}/${a.baseScore}`)).toEqual(["1:5/12/3", "2:8/18/4", "3:10/25/5", "4:12/34/6"]);
+  });
+
+  it("reads unbolded armor features and their modifiers", () => {
+    const q = armor.find((a) => a.name === "Quilted Clothing")!;
+    expect(q.feature).toMatchObject({ name: "Flexible", modifiers: [{ target: "evasion", value: 1, when: "equipped" }] });
+  });
+});

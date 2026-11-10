@@ -1,22 +1,39 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { createBrowserRouter, Link, NavLink, Outlet, RouterProvider, ScrollRestoration } from "react-router";
 import { bundledPacks, loadEntries } from "./content/packs.ts";
 import { useSettingsSync } from "./data/settings.ts";
 import { supabaseConfigured } from "./data/supabase.ts";
 import { SettingsPanel } from "./features/account/SettingsPanel.tsx";
 import { ContentProvider } from "./content/ContentProvider.tsx";
-import { AccountPage } from "./features/account/AccountPage.tsx";
-import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features/compendium/pages.tsx";
-import { BuilderPage, NewCharacterPage } from "./features/builder/BuilderPage.tsx";
-import { CharactersPage } from "./features/characters/pages.tsx";
-import { SheetPage } from "./features/sheet/SheetPage.tsx";
-import { PrintPage } from "./features/sheet/PrintPage.tsx";
-import { HistoryPage } from "./features/sync/HistoryPage.tsx";
 import { useOnline } from "./data/outbox.ts";
-import { LevelUpPage } from "./features/levelup/LevelUpPage.tsx";
 import { AuthProvider, RequireAuth, useAuth } from "./features/auth/AuthProvider.tsx";
 import { AuthCallbackPage, CheckEmailPage, ForgotPasswordPage, ResetPasswordPage, SignInPage, SignUpPage } from "./features/auth/pages.tsx";
 import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
+
+// Route groups load on demand (smaller first download). After start-up they're prefetched so the
+// service worker has every screen cached for offline play.
+const compendium = () => import("./features/compendium/pages.tsx");
+const builder = () => import("./features/builder/BuilderPage.tsx");
+const characters = () => import("./features/characters/pages.tsx");
+const sheet = () => import("./features/sheet/SheetPage.tsx");
+const print = () => import("./features/sheet/PrintPage.tsx");
+const history = () => import("./features/sync/HistoryPage.tsx");
+const levelup = () => import("./features/levelup/LevelUpPage.tsx");
+const account = () => import("./features/account/AccountPage.tsx");
+export const ROUTE_CHUNKS = [compendium, builder, characters, sheet, print, history, levelup, account];
+
+const CompendiumPage = lazy(() => compendium().then((m) => ({ default: m.CompendiumPage })));
+const EntryPage = lazy(() => compendium().then((m) => ({ default: m.EntryPage })));
+const RulesIndexPage = lazy(() => compendium().then((m) => ({ default: m.RulesIndexPage })));
+const RulesPage = lazy(() => compendium().then((m) => ({ default: m.RulesPage })));
+const BuilderPage = lazy(() => builder().then((m) => ({ default: m.BuilderPage })));
+const NewCharacterPage = lazy(() => builder().then((m) => ({ default: m.NewCharacterPage })));
+const CharactersPage = lazy(() => characters().then((m) => ({ default: m.CharactersPage })));
+const SheetPage = lazy(() => sheet().then((m) => ({ default: m.SheetPage })));
+const PrintPage = lazy(() => print().then((m) => ({ default: m.PrintPage })));
+const HistoryPage = lazy(() => history().then((m) => ({ default: m.HistoryPage })));
+const LevelUpPage = lazy(() => levelup().then((m) => ({ default: m.LevelUpPage })));
+const AccountPage = lazy(() => account().then((m) => ({ default: m.AccountPage })));
 
 function Layout() {
   const { user } = useAuth();
@@ -49,7 +66,9 @@ function Layout() {
         </p>
       )}
       <main id="main" tabIndex={-1}>
-        <Outlet />
+        <Suspense fallback={<p role="status">Loading…</p>}>
+          <Outlet />
+        </Suspense>
       </main>
       <ScrollRestoration />
       <footer className="site-footer">

@@ -15,7 +15,8 @@ import { parseLoot } from "./parse/loot.ts";
 import { parseAdversaries, parseEnvironments } from "./parse/gm.ts";
 import { RulesBuilder, type Segment, bodyMd, parseCompanionOptions, parseConditions, parseProgression, segmentSections } from "./parse/rules.ts";
 import { buildGlossary, autotag } from "./parse/glossary.ts";
-import { applyModifiers } from "./parse/modifiers.ts";
+import { applyModifiers, equipmentModifiers } from "./parse/modifiers.ts";
+import { parseFramesEquipment } from "./parse/frames-equipment.ts";
 import { FRAMES_PACK, PACK } from "./parse/common.ts";
 import { loadErrata } from "./parse/errata.ts";
 
@@ -90,8 +91,11 @@ function main() {
     ...beastforms, ...cards, ...weapons, ...armor, ...items, ...consumables, ...adversaries, ...environments,
     progression, ...conditions, ...glossary, ...rules.entries,
   ];
+  const framesGear = parseFramesEquipment(lines);
+  for (const e of [...framesGear.weapons, ...framesGear.armor]) if (e.feature) { const ms = equipmentModifiers(e.feature); if (ms.length) e.feature.modifiers = ms; }
+  const framesEntries: Entry[] = [...frames.entries, ...framesGear.weapons, ...framesGear.armor];
   const modCount = applyModifiers(srdEntries);
-  const tagStats = autotag([...srdEntries, ...frames.entries], glossary);
+  const tagStats = autotag([...srdEntries, ...framesEntries], glossary);
 
   // ---- write ----
   const errata = loadErrata();
@@ -109,13 +113,13 @@ function main() {
     requires: [PACK], attribution: ATTRIBUTION, modifications: srdMeta.modifications,
   };
   writePack("content/srd", srdMeta, srdEntries);
-  writePack("content/srd-frames", framesMeta, frames.entries);
+  writePack("content/srd-frames", framesMeta, framesEntries);
   writeRawSections("content/srd", srdEntries);
 
   const count: Record<string, number> = {};
   for (const e of srdEntries) count[e.type] = (count[e.type] ?? 0) + 1;
   console.log("srd:", count);
-  console.log("srd-frames:", frames.entries.length, "rules sections");
+  console.log("srd-frames:", frames.entries.length, "rules sections,", framesGear.weapons.length, "weapons,", framesGear.armor.length, "armor");
   console.log("entries with modifiers:", modCount);
   console.log("term tags:", Object.values(tagStats).reduce((a, b) => a + b, 0));
 }

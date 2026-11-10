@@ -1,0 +1,409 @@
+[
+  {
+    "id": "srd-frames/armor/quilted-clothing",
+    "type": "armor",
+    "name": "Quilted Clothing",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tier": 1,
+    "tags": [
+      "everyday-hero"
+    ],
+    "baseThresholds": {
+      "major": 5,
+      "severe": 11
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Flexible",
+      "text": "+1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/armor/leather-apron",
+    "type": "armor",
+    "name": "Leather Apron",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tier": 1,
+    "tags": [
+      "everyday-hero"
+    ],
+    "baseThresholds": {
+      "major": 6,
+      "severe": 13
+    },
+    "baseScore": 3,
+    "feature": null
+  },
+  {
+    "id": "srd-frames/armor/tree-bark-armor",
+    "type": "armor",
+    "name": "Tree Bark Armor",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tier": 1,
+    "tags": [
+      "everyday-hero"
+    ],
+    "baseThresholds": {
+      "major": 7,
+      "severe": 15
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Heavy",
+      "text": "−1 to {{term:evasion|Evasion}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/armor/baking-tray-breastplate",
+    "type": "armor",
+    "name": "Baking Tray Breastplate",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 192
+    },
+    "tier": 1,
+    "tags": [
+      "everyday-hero"
+    ],
+    "baseThresholds": {
+      "major": 8,
+      "severe": 17
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Very Heavy",
+      "text": "−2 to {{term:evasion|Evasion}}; −1 to {{term:agility|Agility}}",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": -2,
+          "when": "equipped"
+        },
+        {
+          "target": "trait:agility",
+          "value": -1,
+          "when": "equipped"
+        }
+      ]
+    }
+  },
+  {
+    "id": "srd-frames/armor/coffinwood-armor-tier-1",
+    "type": "armor",
+    "name": "Coffinwood Armor (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 1,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 4,
+      "severe": 10
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Splintering",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your unmarked {{term:armor-slot|Armor Slots}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/coffinwood-armor-tier-2",
+    "type": "armor",
+    "name": "Coffinwood Armor (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 2,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 6,
+      "severe": 15
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Splintering",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your unmarked {{term:armor-slot|Armor Slots}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/coffinwood-armor-tier-3",
+    "type": "armor",
+    "name": "Coffinwood Armor (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 3,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 8,
+      "severe": 22
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Splintering",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your unmarked {{term:armor-slot|Armor Slots}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/coffinwood-armor-tier-4",
+    "type": "armor",
+    "name": "Coffinwood Armor (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 4,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 10,
+      "severe": 31
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Splintering",
+      "text": "Gain a bonus to your {{term:damage-thresholds|damage thresholds}} equal to your unmarked {{term:armor-slot|Armor Slots}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/leather-longcoat-tier-1",
+    "type": "armor",
+    "name": "Leather Longcoat (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 1,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 5,
+      "severe": 12
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Quiet",
+      "text": "Gain a +2 bonus to rolls you make to move silently."
+    }
+  },
+  {
+    "id": "srd-frames/armor/leather-longcoat-tier-2",
+    "type": "armor",
+    "name": "Leather Longcoat (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 2,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 8,
+      "severe": 18
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Quiet",
+      "text": "Gain a +2 bonus to rolls you make to move silently."
+    }
+  },
+  {
+    "id": "srd-frames/armor/leather-longcoat-tier-3",
+    "type": "armor",
+    "name": "Leather Longcoat (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 3,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 10,
+      "severe": 25
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Quiet",
+      "text": "Gain a +2 bonus to rolls you make to move silently."
+    }
+  },
+  {
+    "id": "srd-frames/armor/leather-longcoat-tier-4",
+    "type": "armor",
+    "name": "Leather Longcoat (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 4,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 12,
+      "severe": 34
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Quiet",
+      "text": "Gain a +2 bonus to rolls you make to move silently."
+    }
+  },
+  {
+    "id": "srd-frames/armor/silverweave-armor-tier-1",
+    "type": "armor",
+    "name": "Silverweave Armor (Tier 1)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 1,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 5,
+      "severe": 11
+    },
+    "baseScore": 3,
+    "feature": {
+      "name": "Warded",
+      "text": "You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/silverweave-armor-tier-2",
+    "type": "armor",
+    "name": "Silverweave Armor (Tier 2)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 2,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 7,
+      "severe": 16
+    },
+    "baseScore": 4,
+    "feature": {
+      "name": "Warded",
+      "text": "You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/silverweave-armor-tier-3",
+    "type": "armor",
+    "name": "Silverweave Armor (Tier 3)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 3,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 9,
+      "severe": 23
+    },
+    "baseScore": 5,
+    "feature": {
+      "name": "Warded",
+      "text": "You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+    }
+  },
+  {
+    "id": "srd-frames/armor/silverweave-armor-tier-4",
+    "type": "armor",
+    "name": "Silverweave Armor (Tier 4)",
+    "pack": "srd-frames",
+    "source": {
+      "kind": "srd",
+      "document": "Daggerheart SRD 2.0",
+      "page": 201
+    },
+    "tier": 4,
+    "tags": [
+      "monster-hunting"
+    ],
+    "baseThresholds": {
+      "major": 11,
+      "severe": 32
+    },
+    "baseScore": 6,
+    "feature": {
+      "name": "Warded",
+      "text": "You reduce incoming magic damage by your {{term:armor-score|Armor Score}} before applying it to your {{term:damage-thresholds|damage thresholds}}."
+    }
+  }
+]

@@ -4,17 +4,22 @@ import { type Line, pages, parseTable, plain, range, slug, toFeature, trait } fr
 import { src, PACK } from "./common.ts";
 
 /** Split the lines of a page range into tables: a header line ("Name …") and the size-8 rows after it. */
-function tables(lines: Line[]) {
+export function tables(lines: Line[]) {
   const out: { context: string[]; rows: Line[]; header: Line }[] = [];
   const context: string[] = [];
   for (let i = 0; i < lines.length; i++) {
     const l = lines[i];
     if (l.heading && /^Name\b/.test(plain(l.cells[0][1]))) {
-      // armor headers wrap ("Base / Thresholds"), so skip any further header lines
-      while (lines[i + 1]?.heading && lines[i + 1].size === l.size) i++;
+      // armor headers wrap ("Base / Thresholds"): merge the extra header lines' cells into one header
+      const header: Line = { ...l, cells: [...l.cells] };
+      while (lines[i + 1]?.heading && lines[i + 1].size === l.size) {
+        i++;
+        for (const cell of lines[i].cells) if (!header.cells.some((h) => Math.abs(h[0] - cell[0]) < 8)) header.cells.push(cell);
+      }
+      header.cells.sort((a, b) => a[0] - b[0]);
       const rows: Line[] = [];
       while (lines[i + 1] && !lines[i + 1].heading && lines[i + 1].size === 8) rows.push(lines[++i]);
-      out.push({ context: [...context], rows, header: l });
+      out.push({ context: [...context], rows, header });
     } else context.push(plain(l.text).trim());
   }
   return out;
