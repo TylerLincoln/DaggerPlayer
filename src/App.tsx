@@ -10,6 +10,8 @@ import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features
 import { BuilderPage, NewCharacterPage } from "./features/builder/BuilderPage.tsx";
 import { CharactersPage } from "./features/characters/pages.tsx";
 import { SheetPage } from "./features/sheet/SheetPage.tsx";
+import { HistoryPage } from "./features/sync/HistoryPage.tsx";
+import { useOnline } from "./data/outbox.ts";
 import { LevelUpPage } from "./features/levelup/LevelUpPage.tsx";
 import { AuthProvider, RequireAuth, useAuth } from "./features/auth/AuthProvider.tsx";
 import { AuthCallbackPage, CheckEmailPage, ForgotPasswordPage, ResetPasswordPage, SignInPage, SignUpPage } from "./features/auth/pages.tsx";
@@ -18,6 +20,7 @@ import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
 function Layout() {
   const { user } = useAuth();
   useSettingsSync(user?.id ?? null);
+  const online = useOnline();
   return (
     <>
       <a className="skip" href="#main">
@@ -37,6 +40,11 @@ function Layout() {
       {!supabaseConfigured && (
         <p className="banner" role="status">
           Accounts are unavailable: VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY aren't set (see docs/SETUP.md).
+        </p>
+      )}
+      {!online && (
+        <p className="banner" role="status">
+          You're offline. Your characters and the rules still work; changes upload when you reconnect.
         </p>
       )}
       <main id="main" tabIndex={-1}>
@@ -114,6 +122,7 @@ const router = createBrowserRouter([
       { path: "/characters", element: <CharactersPage /> },
       { path: "/characters/:id", element: <SheetPage /> },
       { path: "/characters/:id/level-up", element: <LevelUpPage /> },
+      { path: "/characters/:id/history", element: <HistoryPage /> },
       { path: "/build/new", element: <NewCharacterPage /> },
       { path: "/build/:id/:step", element: <BuilderPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },

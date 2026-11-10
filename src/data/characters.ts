@@ -3,7 +3,9 @@
 // changes are pushed with save_character (rev-checked). Stage 7 replaces this with IndexedDB + an outbox.
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { type CharacterDoc, CharacterDoc as CharacterSchema } from "../rules/character.ts";
+import { isNetworkError, isOnline, onReconnect, useOnline } from "./outbox.ts";
 import { type SaveReason, saveCharacter } from "./repo.ts";
+import { supabase } from "./supabase.ts";
 
 export interface LocalRecord {
   doc: CharacterDoc;
@@ -102,15 +104,32 @@ export function useCharacterRecord(id: string | undefined) {
   return [rec, update] as const;
 }
 
-export type SaveStatus = "local-only" | "saving" | "saved" | "unsaved" | "error" | "conflict" | "other-account";
+export type SaveStatus = "local-only" | "saving" | "saved" | "unsaved" | "offline" | "error" | "conflict" | "other-account";
+
+const RETRY_MS = 20_000;
+
+/** Fetch the server copy of one character. */
+async function fetchServerRow(id: string) {
+  const { data, error } = await supabase.from("characters").select("id, rev, data, updated_at, deleted_at").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return data as { id: string; rev: number; data: unknown; updated_at: string; deleted_at: string | null } | null;
+}
+
+/** Keep a copy in the version history (used before a conflict resolution discards it). */
+async function snapshot(characterId: string, rev: number, data: unknown) {
+  const { error } = await supabase.from("character_versions").insert({ character_id: characterId, rev, reason: "conflict", data });
+  if (error) throw error;
+}
 
 /**
- * Pushes dirty changes for one character while signed in, debounced.
- * `reason` lets the caller force a snapshot (builder finish, level-up, …).
+ * Pushes dirty changes for one character while signed in, debounced. Changes are always on this
+ * device first, so being offline only delays the upload: it retries when the connection returns.
+ * `save(reason)` forces a snapshot (builder finish, level-up, restore, …).
  */
 export function useAutosave(id: string | undefined, userId: string | null) {
   const all = useRecords();
   const rec = id ? all[id] : undefined;
+  const online = useOnline();
   const [status, setStatus] = useState<SaveStatus>("saved");
   const [error, setError] = useState<string | null>(null);
   const inFlight = useRef(false);
@@ -120,6 +139,7 @@ export function useAutosave(id: string | undefined, userId: string | null) {
       const cur = id ? records[id] : undefined;
       if (!cur || !userId || inFlight.current) return;
       if (cur.owner && cur.owner !== userId) return setStatus("other-account");
+      if (!isOnline()) return setStatus("offline");
       inFlight.current = true;
       setStatus("saving");
       const sentAt = cur.updatedAt;
@@ -135,12 +155,15 @@ export function useAutosave(id: string | undefined, userId: string | null) {
           putRecord({ ...latest, conflict: { rev: res.rev, data: res.data, updated_at: res.updated_at } });
           setStatus("conflict");
         } else {
-          setError("This character was deleted on the server.");
+          setError("This character was deleted from your account on another device. It's still on this device: export it, or delete it here.");
           setStatus("error");
         }
       } catch (e) {
-        setError(e instanceof Error ? e.message : String(e));
-        setStatus("error");
+        if (isNetworkError(e)) setStatus("offline");
+        else {
+          setError(e instanceof Error ? e.message : String(e));
+          setStatus("error");
+        }
       } finally {
         inFlight.current = false;
       }
@@ -148,16 +171,38 @@ export function useAutosave(id: string | undefined, userId: string | null) {
     [id, userId],
   );
 
+  // pick up a newer server copy when the character opens (only if there are no local edits)
+  useEffect(() => {
+    if (!id || !userId || !online) return;
+    const cur = records[id];
+    if (!cur || (cur.owner && cur.owner !== userId) || cur.rev === 0) return;
+    fetchServerRow(id)
+      .then((row) => {
+        const latest = records[id];
+        if (row && !row.deleted_at && row.rev > latest.rev && !latest.dirty) adoptServer(row, userId, true);
+      })
+      .catch(() => {});
+  }, [id, userId, online]);
+
   useEffect(() => {
     if (!rec) return;
     if (!userId) return setStatus("local-only");
     if (rec.owner && rec.owner !== userId) return setStatus("other-account");
     if (rec.conflict) return setStatus("conflict");
     if (!rec.dirty) return setStatus("saved");
-    setStatus("unsaved");
+    if (!online) return setStatus("offline");
+    setStatus((s) => (s === "error" || s === "offline" ? s : "unsaved"));
     const t = setTimeout(() => save(), 1200);
     return () => clearTimeout(t);
-  }, [rec, userId, save]);
+  }, [rec, userId, online, save]);
+
+  // retry: when the connection returns, and every 20 s while something is waiting
+  useEffect(() => onReconnect(() => records[id ?? ""]?.dirty && save()), [id, save]);
+  useEffect(() => {
+    if (!rec?.dirty || !userId || rec.conflict) return;
+    const t = setInterval(() => isOnline() && save(), RETRY_MS);
+    return () => clearInterval(t);
+  }, [rec?.dirty, rec?.conflict, userId, save]);
 
   // flush when the tab is hidden (closing, switching apps at the table)
   useEffect(() => {
@@ -166,18 +211,31 @@ export function useAutosave(id: string | undefined, userId: string | null) {
     return () => document.removeEventListener("visibilitychange", onHide);
   }, [id, save]);
 
-  /** Resolve a conflict: keep this device's copy (overwrite the server) or take the server's. */
+  /**
+   * Resolve a conflict. The version being discarded is first saved to the version history,
+   * so the choice can be undone from the History page.
+   */
   const resolve = useCallback(
-    (keep: "mine" | "theirs") => {
+    async (keep: "mine" | "theirs") => {
       const cur = id ? records[id] : undefined;
       if (!cur?.conflict) return;
-      if (keep === "mine") putRecord({ ...cur, rev: cur.conflict.rev, conflict: undefined, dirty: true });
-      else {
-        const parsed = CharacterSchema.safeParse(cur.conflict.data);
-        if (parsed.success) putRecord({ ...cur, doc: parsed.data, rev: cur.conflict.rev, conflict: undefined, dirty: false });
+      try {
+        if (keep === "mine") {
+          await snapshot(cur.doc.id, cur.conflict.rev, cur.conflict.data);
+          putRecord({ ...cur, rev: cur.conflict.rev, conflict: undefined, dirty: true });
+          await save("conflict");
+        } else {
+          const parsed = CharacterSchema.safeParse(cur.conflict.data);
+          if (!parsed.success) throw new Error("The other device's copy couldn't be read.");
+          await snapshot(cur.doc.id, cur.rev, cur.doc);
+          putRecord({ ...cur, doc: parsed.data, rev: cur.conflict.rev, conflict: undefined, dirty: false });
+        }
+      } catch (e) {
+        setError(e instanceof Error ? e.message : String(e));
+        setStatus(isNetworkError(e) ? "offline" : "error");
       }
     },
-    [id],
+    [id, save],
   );
 
   return { status, error, save, resolve };

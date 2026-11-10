@@ -60,6 +60,19 @@ npm test                  # content and rules tests
 npm run content           # re-parse and validate the SRD packs (only after changing parsers or errata)
 ```
 
+### Test offline mode
+
+The service worker only runs in production builds:
+
+```bash
+npm run build && npm run preview -- --host
+```
+
+1. Open the preview URL and open a character once while online.
+2. Turn the network off (DevTools → Network → Offline, or airplane mode on a phone).
+3. Reload. The sheet should load and work, showing an "offline" banner and an Offline save status.
+4. Make a change, reconnect, and watch the status return to "Saved".
+
 ## 6. Deploy (Cloudflare Pages, Netlify or Vercel)
 
 | Setting | Value |

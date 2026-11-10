@@ -13,6 +13,7 @@ import { Drawer } from "../../ui/Drawer.tsx";
 import { FormMessage } from "../../ui/forms.tsx";
 import { Inline, RichText, TermLink } from "../../ui/RichText.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
+import { ConflictPanel } from "../sync/ConflictPanel.tsx";
 import { SaveIndicator } from "../builder/BuilderPage.tsx";
 import { Features } from "../compendium/EntryView.tsx";
 import { DamagePanel, Roller, type RollPreset, RollLog, TapTrack } from "./play.tsx";
@@ -392,7 +393,7 @@ export function SheetPage() {
   const { registry: reg } = useContent();
   const { user } = useAuth();
   const [rec, update] = useCharacterRecord(id);
-  const { status, error } = useAutosave(id, user?.id ?? null);
+  const { status, error, resolve } = useAutosave(id, user?.id ?? null);
   const [preset, setPreset] = useState<RollPreset | null>(null);
   const [notes, setNotes] = useState<string[]>([]);
   const [problem, setProblem] = useState<string | null>(null);
@@ -441,11 +442,13 @@ export function SheetPage() {
           <button type="button" onClick={() => setResting(true)}>Rest</button>
           {d.level < MAX_LEVEL && <Link className="button" to={`/characters/${c.id}/level-up`}>Level up</Link>}
           <Link className="button" to={`/build/${c.id}/review`}>Edit build</Link>
+          <Link className="button" to={`/characters/${c.id}/history`}>History</Link>
           {c.levelUps.length > 0 && (
             <button type="button" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && act((x) => undoLastLevelUp(x))}>Undo level-up</button>
           )}
         </div>
       </header>
+      <ConflictPanel rec={rec} reg={reg} resolve={resolve} />
       <FormMessage error={problem} info={notes.length ? notes.join(" ") : null} />
       <nav className="tabs" aria-label="Sheet sections">
         {TABS.map((t) => (

@@ -8,6 +8,7 @@ import { newCharacter } from "../../rules/character.ts";
 import { derive } from "../../rules/derive.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { useAuth } from "../auth/AuthProvider.tsx";
+import { ConflictPanel } from "../sync/ConflictPanel.tsx";
 import { BackgroundStep, BuilderContext, CardsStep, ClassStep, ConnectionsStep, GearStep, HeritageStep, TraitsStep } from "./steps.tsx";
 
 const STEP_COMPONENTS: Record<Exclude<StepId, "review">, () => React.ReactNode> = {
@@ -33,6 +34,7 @@ const STATUS_TEXT: Record<SaveStatus, string> = {
   saving: "Saving…",
   saved: "Saved",
   unsaved: "Unsaved changes…",
+  offline: "Offline: changes are kept on this device and will upload when you reconnect.",
   error: "Couldn't save. Your changes are kept on this device.",
   conflict: "Changed on another device",
   "other-account": "This draft belongs to another account and won't be uploaded.",
@@ -85,13 +87,7 @@ export function BuilderPage() {
           <h1>{c.identity.name || "New character"}{c.finishedAt && <small> (editing)</small>}</h1>
           <SaveIndicator status={status} error={error} />
         </header>
-        {rec.conflict && (
-          <div className="conflict" role="alert">
-            <p>This character was changed on another device ({new Date(rec.conflict.updated_at).toLocaleString()}). Which version do you want to keep?</p>
-            <button type="button" onClick={() => resolve("mine")}>Keep this device's version</button>{" "}
-            <button type="button" onClick={() => resolve("theirs")}>Use the other device's version</button>
-          </div>
-        )}
+        <ConflictPanel rec={rec} reg={registry} resolve={resolve} />
         <nav aria-label="Builder steps" className="steps">
           <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={BUILDER_STEPS.length - 1} aria-valuenow={done} aria-label="Steps complete">
             <div style={{ width: `${(done / (BUILDER_STEPS.length - 1)) * 100}%` }} />

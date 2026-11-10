@@ -1,5 +1,6 @@
 // Roll history per character: kept on the device, mirrored to roll_log when signed in.
 import { useSyncExternalStore } from "react";
+import { isNetworkError, isOnline, onReconnect, Outbox, type OutboxItem } from "./outbox.ts";
 import { supabase } from "./supabase.ts";
 
 export interface RollRecord {
@@ -49,11 +50,27 @@ export function logRoll(rec: Omit<RollRecord, "id" | "at">, remote?: { userId: s
   store = { ...store, rolls: { ...store.rolls, [rec.characterId]: list } };
   save();
   if (remote?.userId && remote.savedOnServer) {
-    // best effort: the local log is the source of truth until stage 7's outbox
-    supabase.from("roll_log").insert({ id: full.id, character_id: full.characterId, rolled_at: full.at, payload: full }).then(() => {});
+    rollOutbox.add("roll", full.id, full);
+    flushRolls();
   }
   return full;
 }
+
+/** Roll-log uploads wait here while offline and are retried on reconnect. */
+export const rollOutbox = new Outbox("dp.outbox.rolls.v1");
+
+const sendRoll = async (item: OutboxItem) => {
+  const r = item.payload as RollRecord;
+  const { error } = await supabase.from("roll_log").upsert({ id: r.id, character_id: r.characterId, rolled_at: r.at, payload: r }, { onConflict: "id", ignoreDuplicates: true });
+  // a permanent error (e.g. the character was deleted) drops the item instead of blocking the queue
+  if (error && isNetworkError(error)) throw error;
+};
+
+export function flushRolls() {
+  if (isOnline()) rollOutbox.flush(sendRoll).catch(() => {});
+}
+
+if (typeof window !== "undefined") onReconnect(flushRolls);
 
 export function startSession(characterId: string) {
   store = { ...store, sessions: { ...store.sessions, [characterId]: new Date().toISOString() } };

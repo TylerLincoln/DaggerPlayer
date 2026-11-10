@@ -316,3 +316,7 @@ label.radio { display: flex; gap: 8px; align-items: center; min-height: 36px; }
 .roll-log { list-style: none; padding: 0; }
 .roll-log li { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .damage { border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; margin: 12px 0; }
+.history { list-style: none; padding: 0; }
+.history li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.history-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center; }
+.save-offline { color: var(--muted); }
