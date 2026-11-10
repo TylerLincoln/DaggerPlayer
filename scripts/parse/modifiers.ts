@@ -7,6 +7,9 @@ interface ModifierFile {
   features: { id: string; feature: string; modifiers: Modifier[] }[];
   cards: { id: string; modifiers: Modifier[] }[];
   choices: { id: string; feature: string; choice: NonNullable<Feature["choices"]>[number] }[];
+  cardChoices: { id: string; choice: NonNullable<Feature["choices"]>[number] }[];
+  vaultOnAcquire: string[];
+  resources: { id: string; feature: string; resource: NonNullable<Feature["resources"]>[number] }[];
 }
 
 const TARGETS: Record<string, Modifier["target"][]> = {
@@ -74,6 +77,23 @@ export function applyModifiers(entries: Entry[], file = "content/srd/modifiers.j
     const f = find(c.id, c.feature);
     f.choices = [...(f.choices ?? []), c.choice];
   }
+  for (const r of data.resources) {
+    const f = find(r.id, r.feature);
+    f.resources = [...(f.resources ?? []), r.resource];
+  }
+  const card = (id: string) => {
+    const e = byId.get(id);
+    if (e?.type !== "domain-card") throw new Error(`modifiers.json: ${id} is not a domain card`);
+    return e;
+  };
+  for (const c of data.cardChoices) {
+    const e = card(c.id);
+    const choice = Array.isArray(c.choice.options)
+      ? { ...c.choice, options: (c.choice.options as unknown[]).map((o) => (typeof o === "object" && o && "modifiers" in o ? { ...o, modifiers: withDefaults((o as { modifiers: Modifier[] }).modifiers) } : o)) }
+      : c.choice;
+    e.choices = [...(e.choices ?? []), choice as typeof c.choice];
+  }
+  for (const id of data.vaultOnAcquire) card(id).vaultOnAcquire = true;
   for (const c of data.cards) {
     const e = byId.get(c.id);
     if (e?.type !== "domain-card") throw new Error(`modifiers.json: ${c.id} is not a domain card`);

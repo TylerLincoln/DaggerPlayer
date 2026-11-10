@@ -19,6 +19,29 @@ export interface Stat {
   capped?: boolean;
 }
 
+export interface DerivedResource {
+  id: string;
+  name: string;
+  kind: "counter" | "die" | "die-value" | "dice-pool";
+  /** counter max; dice-pool size; die-value: the die's highest face */
+  max: number;
+  start?: number;
+  die?: string;
+  resetOn?: "short-rest" | "long-rest" | "session" | "never";
+  source: string;
+}
+
+export interface DerivedCompanion {
+  name: string;
+  evasion: Stat;
+  /** null until the player enters the companion's starting Stress (not in SRD 2.0) */
+  stressMax: Stat | null;
+  die: string;
+  range: string;
+  experiences: { id: string; name: string; bonus: number }[];
+  options: string[];
+}
+
 export interface Derived {
   level: number;
   tier: number;
@@ -36,6 +59,11 @@ export interface Derived {
   domainIds: string[];
   /** features the character has, with where each came from */
   features: { source: string; feature: Feature }[];
+  /** counters and dice the sheet tracks (Favor, Prayer Dice, …) */
+  resources: DerivedResource[];
+  /** the Beastform the character is in, if any */
+  beastform: EntryOf<"beastform"> | null;
+  companion: DerivedCompanion | null;
 }
 
 export const HP_MAX = 12; // SRD p. 50
@@ -71,6 +99,24 @@ export function equipped(c: CharacterDoc) {
 export function activeCards(c: CharacterDoc): string[] {
   return c.finishedAt ? c.state.loadout : c.build.domainCardIds;
 }
+
+/** Every domain card the character holds (starting cards, level-up cards, advancement cards, after exchanges). */
+export function ownedCards(c: CharacterDoc): string[] {
+  let cards = [...c.build.domainCardIds];
+  for (const lu of c.levelUps) {
+    for (const a of lu.advancements) if (a.optionId === "domain-card" && a.cardId) cards.push(a.cardId);
+    if (lu.domainCardId) cards.push(lu.domainCardId);
+    if (lu.exchange) cards = cards.map((x) => (x === lu.exchange!.fromId ? lu.exchange!.toId : x));
+  }
+  return cards;
+}
+
+/** Selected option ids for a choice (stored comma-separated in build.featureChoices). */
+export const chosen = (c: CharacterDoc, choiceId: string): string[] => (c.build.featureChoices[choiceId] ?? "").split(",").filter(Boolean);
+
+const DIE_STEPS = ["d4", "d6", "d8", "d10", "d12", "d20"];
+const RANGE_STEPS = ["Melee", "Very Close", "Close", "Far", "Very Far"];
+export const COMPANION_START = { evasion: 10, die: "d6", range: "Melee" }; // SRD p. 21
 
 /** Ancestry features the character has (two for a single ancestry; top + bottom for a mixed one). */
 export function ancestryFeatures(c: CharacterDoc, lookup: Lookup): { source: string; feature: Feature }[] {
@@ -146,11 +192,16 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     add(severe, "Level", level);
   }
 
+  // ---- Beastform (Druid): active only on a finished sheet ----
+  const bf = c.finishedAt ? lookup.get(c.state.beastformId) : undefined;
+  const beastform = bf?.type === "beastform" ? bf : null;
+
   // ---- modifiers ----
   const apply = (source: string, mods: Modifier[] | undefined) => {
     for (const m of mods ?? []) {
       if (m.when === "armored" && !armored) continue;
-      if (m.when === "beastform") continue; // Beastform bonuses are applied by the sheet while transformed
+      if (m.when === "unarmed" && (gear.primaryId || gear.secondaryId)) continue;
+      if (m.when === "beastform" && !beastform) continue;
       switch (m.target) {
         case "evasion": add(evasion, source, m.value); break;
         case "hp": add(hpMax, source, m.value); break;
@@ -173,6 +224,25 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     const e = lookup.get(id);
     if (e?.type === "domain-card") apply(e.name, e.modifiers);
   }
+  // choices with their own effects: on features, and on cards held anywhere (e.g. Vitality stays in the vault)
+  const optionMods = (source: string, choices: Feature["choices"]) => {
+    for (const ch of choices ?? []) {
+      if (!Array.isArray(ch.options)) continue;
+      const picked = chosen(c, ch.id);
+      for (const o of ch.options) if (typeof o === "object" && picked.includes(o.id)) apply(`${source}: ${o.label}`, o.modifiers);
+    }
+  };
+  for (const { source, feature } of features) optionMods(`${source}: ${feature.name}`, feature.choices);
+  const owned = c.finishedAt ? ownedCards(c) : c.build.domainCardIds;
+  for (const id of owned) {
+    const e = lookup.get(id);
+    if (e?.type === "domain-card") optionMods(e.name, e.choices);
+  }
+  if (beastform) {
+    if (beastform.traitBonus) add(traits[beastform.traitBonus.trait], `Beastform: ${beastform.name}`, beastform.traitBonus.value);
+    if (beastform.evasionBonus) add(evasion, `Beastform: ${beastform.name}`, beastform.evasionBonus);
+    if (c.state.beastformEvolutionTrait) add(traits[c.state.beastformEvolutionTrait], "Evolution", 1);
+  }
 
   // ---- experiences ----
   const experiences = [...c.build.experiences, ...c.levelUps.flatMap((lu) => (lu.newExperience ? [lu.newExperience] : []))].map((x) => ({
@@ -185,6 +255,15 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
   if (clank && features.some((f) => f.feature.choices?.some((ch) => ch.id === "clank-purpose"))) {
     const x = exp(clank);
     if (x) add(x.bonus, "Clank: Purposeful Design", 1);
+  }
+
+  // Master of the Craft: "+2 to two Experiences" or "+3 to one", stored as "two:<id>,<id>" / "one:<id>"
+  if (owned.includes("srd/domain-card/master-of-the-craft")) {
+    const [mode, ids = ""] = (c.build.featureChoices["master-of-the-craft"] ?? "").split(":");
+    for (const id of ids.split(",").filter(Boolean)) {
+      const x = exp(id);
+      if (x) add(x.bonus, "Master of the Craft", mode === "one" ? 3 : 2);
+    }
   }
 
   // ---- level-ups (SRD pp. 53–54) ----
@@ -207,6 +286,38 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
   cap(stressMax, STRESS_MAX);
   cap(armorScore, ARMOR_SCORE_MAX);
 
+  // ---- resources ----
+  const spell = Math.max(0, ...subclasses.map((s) => (s.spellcastTrait ? traits[s.spellcastTrait].total : 0)));
+  const resources: DerivedResource[] = [];
+  for (const { source, feature } of features)
+    for (const r of feature.resources ?? []) {
+      const die = level >= 5 && r.dieAtLevel5 ? r.dieAtLevel5 : r.die;
+      const max = typeof r.max === "number" ? r.max : r.max === "spellcast" ? spell : r.max === "tier" ? tier : r.max === "level" ? level : proficiency.total;
+      resources.push({ id: r.id, name: r.name, kind: r.kind, max: r.kind === "die-value" ? Number(die?.slice(1) ?? 0) : max, start: r.start, die, resetOn: r.resetOn, source: `${source}: ${feature.name}` });
+    }
+
+  // ---- companion (Beastbound, SRD pp. 21–22) ----
+  let companion: DerivedCompanion | null = null;
+  const beastbound = subclasses.some((s) => s.id === "srd/subclass/beastbound");
+  if (beastbound && c.state.companion) {
+    const k = c.state.companion;
+    const options = c.levelUps.map((lu) => lu.companionOption).filter((o): o is string => !!o);
+    const evasionC = stat("Companion starting Evasion", COMPANION_START.evasion);
+    for (const o of options) if (o === "aware") add(evasionC, "Aware", 2);
+    const stressC = k.baseStress === null ? null : stat("Starting Stress (companion sheet)", k.baseStress);
+    for (const o of options) if (o === "resilient" && stressC) add(stressC, "Resilient", 1);
+    let die = DIE_STEPS.indexOf(COMPANION_START.die);
+    let range = RANGE_STEPS.indexOf(COMPANION_START.range);
+    for (const o of options) {
+      if (o === "vicious:die") die = Math.min(die + 1, DIE_STEPS.length - 1);
+      if (o === "vicious:range") range = Math.min(range + 1, RANGE_STEPS.length - 1);
+    }
+    const xps = [...k.experiences, ...c.levelUps.flatMap((lu) => (lu.companionExperience ? [lu.companionExperience] : []))].map((x) => ({ ...x }));
+    for (const o of options) if (o.startsWith("intelligent:")) { const x = xps.find((e) => e.id === o.slice(12)); if (x) x.bonus += 1; }
+    companion = { name: k.name, evasion: evasionC, stressMax: stressC, die: DIE_STEPS[die], range: RANGE_STEPS[range], experiences: xps, options };
+  }
+  const lightInTheDark = companion?.options.filter((o) => o === "light-in-the-dark").length ?? 0;
+
   const domainIds = [...(cls?.type === "class" ? cls.domainIds : [])];
   for (const lu of c.levelUps) for (const a of lu.advancements) if (a.optionId === "multiclass" && a.domainId) domainIds.push(a.domainId);
 
@@ -218,7 +329,8 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     evasion,
     hpMax,
     stressMax,
-    hopeMax: Math.max(0, HOPE_MAX - c.state.scars),
+    // "Light in the Dark": an additional Hope slot (companion option, SRD p. 22)
+    hopeMax: Math.max(0, HOPE_MAX + lightInTheDark - c.state.scars),
     armorScore,
     thresholds: { major, severe },
     armored,
@@ -226,6 +338,9 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     spellcastTraits: [...new Set(subclasses.map((s) => s.spellcastTrait).filter((t): t is Trait => !!t))],
     domainIds,
     features,
+    resources,
+    beastform,
+    companion,
   };
 }
 

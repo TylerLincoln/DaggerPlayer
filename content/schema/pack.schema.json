@@ -149,6 +149,15 @@
                 "items": {
                   "$ref": "#/$defs/__schema8"
                 }
+              },
+              "choices": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/__schema9"
+                }
+              },
+              "vaultOnAcquire": {
+                "type": "boolean"
               }
             },
             "required": [
@@ -217,7 +226,7 @@
                 "minItems": 1,
                 "type": "array",
                 "items": {
-                  "$ref": "#/$defs/__schema9"
+                  "$ref": "#/$defs/__schema10"
                 }
               },
               "hopeFeature": {
@@ -321,7 +330,7 @@
               "spellcastTrait": {
                 "anyOf": [
                   {
-                    "$ref": "#/$defs/__schema10"
+                    "$ref": "#/$defs/__schema11"
                   },
                   {
                     "type": "null"
@@ -533,7 +542,7 @@
                 "const": "beastform"
               },
               "tier": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "examples": {
                 "type": "string"
@@ -544,7 +553,7 @@
                     "type": "object",
                     "properties": {
                       "trait": {
-                        "$ref": "#/$defs/__schema10"
+                        "$ref": "#/$defs/__schema11"
                       },
                       "value": {
                         "type": "integer",
@@ -580,16 +589,16 @@
                     "type": "object",
                     "properties": {
                       "range": {
-                        "$ref": "#/$defs/__schema12"
+                        "$ref": "#/$defs/__schema13"
                       },
                       "trait": {
-                        "$ref": "#/$defs/__schema10"
+                        "$ref": "#/$defs/__schema11"
                       },
                       "damage": {
                         "type": "string"
                       },
                       "damageType": {
-                        "$ref": "#/$defs/__schema13"
+                        "$ref": "#/$defs/__schema14"
                       }
                     },
                     "required": [
@@ -656,7 +665,7 @@
                 "const": "weapon"
               },
               "tier": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "category": {
                 "type": "string",
@@ -676,7 +685,7 @@
               "trait": {
                 "anyOf": [
                   {
-                    "$ref": "#/$defs/__schema10"
+                    "$ref": "#/$defs/__schema11"
                   },
                   {
                     "type": "string",
@@ -685,7 +694,7 @@
                 ]
               },
               "range": {
-                "$ref": "#/$defs/__schema12"
+                "$ref": "#/$defs/__schema13"
               },
               "damage": {
                 "type": "object",
@@ -700,7 +709,7 @@
                     "maximum": 9007199254740991
                   },
                   "type": {
-                    "$ref": "#/$defs/__schema13"
+                    "$ref": "#/$defs/__schema14"
                   }
                 },
                 "required": [
@@ -771,7 +780,7 @@
                 "const": "armor"
               },
               "tier": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "baseThresholds": {
                 "type": "object",
@@ -839,10 +848,10 @@
                 "$ref": "#/$defs/__schema4"
               },
               "roll": {
-                "$ref": "#/$defs/__schema14"
+                "$ref": "#/$defs/__schema15"
               },
               "table": {
-                "$ref": "#/$defs/__schema15"
+                "$ref": "#/$defs/__schema16"
               },
               "text": {
                 "$ref": "#/$defs/__schema5"
@@ -882,10 +891,10 @@
                 "$ref": "#/$defs/__schema4"
               },
               "roll": {
-                "$ref": "#/$defs/__schema14"
+                "$ref": "#/$defs/__schema15"
               },
               "table": {
-                "$ref": "#/$defs/__schema15"
+                "$ref": "#/$defs/__schema16"
               },
               "text": {
                 "$ref": "#/$defs/__schema5"
@@ -929,7 +938,7 @@
                 "const": "adversary"
               },
               "tier": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "role": {
                 "type": "string",
@@ -1037,7 +1046,7 @@
                     "type": "string"
                   },
                   "range": {
-                    "$ref": "#/$defs/__schema12"
+                    "$ref": "#/$defs/__schema13"
                   },
                   "damage": {
                     "type": "string"
@@ -1119,7 +1128,7 @@
                 "const": "environment"
               },
               "tier": {
-                "$ref": "#/$defs/__schema11"
+                "$ref": "#/$defs/__schema12"
               },
               "envType": {
                 "type": "string",
@@ -1204,7 +1213,7 @@
                   "type": "object",
                   "properties": {
                     "tier": {
-                      "$ref": "#/$defs/__schema11"
+                      "$ref": "#/$defs/__schema12"
                     },
                     "levels": {
                       "type": "array",
@@ -1541,6 +1550,19 @@
               "name": {
                 "type": "string"
               },
+              "kind": {
+                "default": "counter",
+                "type": "string",
+                "enum": [
+                  "counter",
+                  "die",
+                  "die-value",
+                  "dice-pool"
+                ]
+              },
+              "dieAtLevel5": {
+                "type": "string"
+              },
               "max": {
                 "anyOf": [
                   {
@@ -1587,58 +1609,7 @@
         "choices": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "prompt": {
-                "type": "string"
-              },
-              "count": {
-                "default": 1,
-                "type": "integer",
-                "exclusiveMinimum": 0,
-                "maximum": 9007199254740991
-              },
-              "options": {
-                "anyOf": [
-                  {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  },
-                  {
-                    "type": "string",
-                    "const": "free-text"
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string"
-                      },
-                      "filter": {
-                        "type": "object",
-                        "propertyNames": {
-                          "type": "string"
-                        },
-                        "additionalProperties": {}
-                      }
-                    },
-                    "required": [
-                      "type"
-                    ]
-                  }
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "prompt",
-              "options"
-            ]
+            "$ref": "#/$defs/__schema9"
           }
         },
         "questions": {
@@ -1691,7 +1662,8 @@
             "always",
             "equipped",
             "beastform",
-            "armored"
+            "armored",
+            "unarmed"
           ]
         }
       },
@@ -1701,9 +1673,87 @@
       ]
     },
     "__schema9": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "count": {
+          "default": 1,
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "options": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "string",
+              "const": "free-text"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "modifiers": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/__schema8"
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "label"
+                ]
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "filter": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string"
+                  },
+                  "additionalProperties": {}
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "prompt",
+        "options"
+      ]
     },
     "__schema10": {
+      "type": "string"
+    },
+    "__schema11": {
       "type": "string",
       "enum": [
         "agility",
@@ -1714,12 +1764,12 @@
         "knowledge"
       ]
     },
-    "__schema11": {
+    "__schema12": {
       "type": "integer",
       "minimum": 1,
       "maximum": 4
     },
-    "__schema12": {
+    "__schema13": {
       "type": "string",
       "enum": [
         "melee",
@@ -1729,7 +1779,7 @@
         "very-far"
       ]
     },
-    "__schema13": {
+    "__schema14": {
       "type": "string",
       "enum": [
         "phy",
@@ -1737,12 +1787,12 @@
         "phy/mag"
       ]
     },
-    "__schema14": {
+    "__schema15": {
       "type": "integer",
       "exclusiveMinimum": 0,
       "maximum": 9007199254740991
     },
-    "__schema15": {
+    "__schema16": {
       "type": "string"
     }
   }

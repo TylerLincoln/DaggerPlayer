@@ -118,6 +118,25 @@ export interface DamageRoll {
   formula: string;
 }
 
+/** Damage with several dice sizes, each rolled `count` times (Brawler's Strike: Proficiency × (d8 + d6)). */
+export function rollDamageDice(groups: { count: number; die: number }[], bonus: number, crit = false, rng: Rng = cryptoRng): DamageRoll {
+  const dice: number[] = [];
+  let critBonus = 0;
+  for (const g of groups) for (let i = 0; i < Math.max(0, g.count); i++) {
+    dice.push(rollDie(g.die, rng));
+    if (crit) critBonus += g.die;
+  }
+  const formula = groups.map((g) => `${g.count}d${g.die}`).join("+") + (bonus ? `${bonus > 0 ? "+" : "−"}${Math.abs(bonus)}` : "") + (crit ? `+${critBonus}` : "");
+  return { count: dice.length, die: groups[0]?.die ?? 0, bonus, dice, crit, critBonus, total: dice.reduce((a, b) => a + b, 0) + bonus + critBonus, formula };
+}
+
+/** Parse "d8+2" / "d12+10" / "1d6+2" into a die and bonus. */
+export function parseDamage(expr: string): { die: number; bonus: number } {
+  const m = expr.replace(/\s+/g, "").match(/^\d*d(\d+)([+-]\d+)?$/);
+  if (!m) throw new Error(`can't read damage "${expr}"`);
+  return { die: Number(m[1]), bonus: Number(m[2] ?? 0) };
+}
+
 export function rollDamage(count: number, die: number, bonus: number, crit = false, rng: Rng = cryptoRng): DamageRoll {
   const n = Math.max(0, count);
   const dice = Array.from({ length: n }, () => rollDie(die, rng));

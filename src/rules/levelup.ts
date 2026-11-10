@@ -2,7 +2,9 @@
 // Where the class sheet and the SRD disagree, the SRD wins (owner ruling 2026-11-06).
 import { TRAITS, type EntryOf, type Trait } from "../../content/schema/index.ts";
 import type { CharacterDoc, LevelUp } from "./character.ts";
-import { ACHIEVEMENT_LEVELS, derive, HP_MAX, type Lookup, STRESS_MAX, tierOf } from "./derive.ts";
+import { ACHIEVEMENT_LEVELS, derive, HP_MAX, type Lookup, ownedCards, STRESS_MAX, tierOf } from "./derive.ts";
+
+export { ownedCards };
 
 export type Advancement = LevelUp["advancements"][number];
 type Progression = EntryOf<"progression">;
@@ -55,17 +57,6 @@ export function markedTraits(levelUps: LevelUp[], atLevel: number): Set<Trait> {
   const out = new Set<Trait>();
   for (const lu of levelUps) if (lu.level >= lastClear && lu.level < atLevel) for (const a of lu.advancements) if (a.optionId === "traits") a.traits?.forEach((t) => out.add(t));
   return out;
-}
-
-/** Every domain card the character holds (starting cards, level-up cards, advancement cards, after exchanges). */
-export function ownedCards(c: CharacterDoc): string[] {
-  let cards = [...c.build.domainCardIds];
-  for (const lu of c.levelUps) {
-    for (const a of lu.advancements) if (a.optionId === "domain-card" && a.cardId) cards.push(a.cardId);
-    if (lu.domainCardId) cards.push(lu.domainCardId);
-    if (lu.exchange) cards = cards.map((x) => (x === lu.exchange!.fromId ? lu.exchange!.toId : x));
-  }
-  return cards;
 }
 
 function multiclassOf(c: CharacterDoc): Advancement | undefined {
@@ -184,6 +175,27 @@ export function validateLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): s
     }
   }
 
+  // choices on cards taken this level (Vitality: two benefits; Master of the Craft: +2/+2 or +3)
+  const newCardIds = [lu.domainCardId, lu.exchange?.toId, ...lu.advancements.map((a) => a.cardId)].filter((x): x is string => !!x);
+  for (const id of newCardIds) {
+    const card = lookup.get(id);
+    if (card?.type !== "domain-card") continue;
+    for (const ch of card.choices ?? []) errs.push(...checkChoice(ch, lu.choices?.[ch.id], c, lu, card.name));
+  }
+
+  // companion (Beastbound, p. 22): one option per level-up, each option once; a new Experience at 2, 5, 8
+  if (c.state.companion && derive(c, lookup).companion) {
+    const taken = c.levelUps.map((x) => x.companionOption?.split(":")[0]).filter(Boolean);
+    const opt = lu.companionOption;
+    const base = opt?.split(":")[0];
+    if (!opt) errs.push("Choose a level-up option for your companion.");
+    else if (!COMPANION_OPTIONS.includes(base!)) errs.push("Unknown companion option.");
+    else if (taken.includes(base)) errs.push("Your companion already has that option.");
+    else if (base === "vicious" && !/^vicious:(die|range)$/.test(opt)) errs.push("Vicious: choose damage die or range.");
+    else if (base === "intelligent" && !opt.slice(12)) errs.push("Intelligent: choose a Companion Experience.");
+    if (ACHIEVEMENT_LEVELS.includes(level) && !lu.companionExperience?.name.trim()) errs.push("Your companion also gains a new Experience at +2: name it.");
+  }
+
   // step four
   const mc = lu.advancements.find((a) => a.optionId === "multiclass");
   const advCards = lu.advancements.filter((a) => a.optionId === "domain-card").map((a) => a.cardId ?? "");
@@ -198,6 +210,26 @@ export function validateLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): s
     } else errs.push("Choose the card to exchange it for.");
   }
   return errs;
+}
+
+export const COMPANION_OPTIONS = ["intelligent", "light-in-the-dark", "creature-comfort", "armored", "vicious", "resilient", "bonded", "aware"];
+
+function checkChoice(ch: NonNullable<EntryOf<"domain-card">["choices"]>[number], value: string | undefined, c: CharacterDoc, lu: LevelUp, label: string): string[] {
+  if (!value) return [`${label}: ${ch.prompt}`];
+  if (Array.isArray(ch.options)) {
+    const picked = value.split(",").filter(Boolean);
+    const ids = ch.options.map((o) => (typeof o === "string" ? o : o.id));
+    if (picked.length !== ch.count || new Set(picked).size !== picked.length || picked.some((p) => !ids.includes(p))) return [`${label}: choose ${ch.count}.`];
+    return [];
+  }
+  if (typeof ch.options === "object" && ch.options.type === "experience-bonus") {
+    const xpIds = [...c.build.experiences, ...c.levelUps.flatMap((x) => (x.newExperience ? [x.newExperience] : [])), ...(lu.newExperience ? [lu.newExperience] : [])].map((x) => x.id);
+    const [mode, ids = ""] = value.split(":");
+    const picked = ids.split(",").filter(Boolean);
+    const need = mode === "one" ? 1 : mode === "two" ? 2 : 0;
+    if (!need || picked.length !== need || new Set(picked).size !== need || picked.some((p) => !xpIds.includes(p))) return [`${label}: pick ${need === 1 ? "one Experience for +3" : "two Experiences for +2"}.`];
+  }
+  return [];
 }
 
 function checkCard(c: CharacterDoc, lookup: Lookup, level: number, id: string | undefined, owned: string[], label: string, pendingMc?: Advancement): string[] {
@@ -223,7 +255,13 @@ export function applyLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): Char
     s.vault = s.vault.map((x) => (x === lu.exchange!.fromId ? lu.exchange!.toId : x));
   }
   const newCards = [...lu.advancements.filter((a) => a.optionId === "domain-card").map((a) => a.cardId!), lu.domainCardId!];
-  for (const id of newCards) (s.loadout.length < LOADOUT_MAX ? s.loadout : s.vault).push(id);
+  for (const id of newCards) {
+    const card = lookup.get(id);
+    // "place this card in your vault permanently" (Vitality, Master of the Craft)
+    const toVault = (card?.type === "domain-card" && card.vaultOnAcquire) || s.loadout.length >= LOADOUT_MAX;
+    (toVault ? s.vault : s.loadout).push(id);
+  }
+  Object.assign(next.build.featureChoices, lu.choices ?? {});
   return next;
 }
 
@@ -233,6 +271,7 @@ export function undoLastLevelUp(c: CharacterDoc): CharacterDoc {
   if (!lu) return c;
   const next: CharacterDoc = structuredClone(c);
   next.levelUps.pop();
+  for (const k of Object.keys(lu.choices ?? {})) delete next.build.featureChoices[k];
   const s = next.state;
   const added = new Set([...lu.advancements.filter((a) => a.optionId === "domain-card").map((a) => a.cardId), lu.domainCardId]);
   s.loadout = s.loadout.filter((x) => !added.has(x));

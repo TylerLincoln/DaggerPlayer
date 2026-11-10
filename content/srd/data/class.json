@@ -79,7 +79,17 @@
     "classFeatures": [
       {
         "name": "Rally",
-        "text": "Once per session, describe how you rally the party and give yourself and each of your allies a Rally Die. At level 1, your Rally Die is a **d6**. A PC can spend their Rally Die to roll it, adding the result to their {{term:action-roll|action roll}}, {{term:reaction-roll|reaction roll}}, damage roll, or to clear a number of {{term:stress|Stress}} equal to the result. At the end of each session, clear all unspent Rally Dice. At level 5, your Rally Die increases to a **d8**."
+        "text": "Once per session, describe how you rally the party and give yourself and each of your allies a Rally Die. At level 1, your Rally Die is a **d6**. A PC can spend their Rally Die to roll it, adding the result to their {{term:action-roll|action roll}}, {{term:reaction-roll|reaction roll}}, damage roll, or to clear a number of {{term:stress|Stress}} equal to the result. At the end of each session, clear all unspent Rally Dice. At level 5, your Rally Die increases to a **d8**.",
+        "resources": [
+          {
+            "id": "rally-die",
+            "name": "Rally Die",
+            "kind": "die",
+            "max": 1,
+            "die": "d6",
+            "dieAtLevel5": "d8"
+          }
+        ]
       }
     ],
     "subclassIds": [
@@ -126,11 +136,42 @@
     "classFeatures": [
       {
         "name": "I Am the Weapon",
-        "text": "Your barehanded attacks are as strong as any blade. You have a primary weapon called Brawler’s Strike equipped while you have no other Active Weapons. It uses a trait of your choice, has {{term:melee|Melee range}}, and deals **d8+d6** physical damage using your {{term:proficiency|Proficiency}} (both the d8 and d6 scale off your {{term:proficiency|Proficiency}}). While this weapon is active, you gain a +1 bonus to your {{term:evasion|Evasion}}."
+        "text": "Your barehanded attacks are as strong as any blade. You have a primary weapon called Brawler’s Strike equipped while you have no other Active Weapons. It uses a trait of your choice, has {{term:melee|Melee range}}, and deals **d8+d6** physical damage using your {{term:proficiency|Proficiency}} (both the d8 and d6 scale off your {{term:proficiency|Proficiency}}). While this weapon is active, you gain a +1 bonus to your {{term:evasion|Evasion}}.",
+        "modifiers": [
+          {
+            "target": "evasion",
+            "value": 1,
+            "when": "unarmed"
+          }
+        ],
+        "choices": [
+          {
+            "id": "brawler-strike-trait",
+            "prompt": "Trait for Brawler's Strike.",
+            "count": 1,
+            "options": [
+              "agility",
+              "strength",
+              "finesse",
+              "instinct",
+              "presence",
+              "knowledge"
+            ]
+          }
+        ]
       },
       {
         "name": "Combo Strike",
-        "text": "After rolling damage on a successful attack with a Melee weapon, you can **mark a {{term:stress|Stress}}** to start a combo strike. When you do, roll your Combo Die and note the result, then continue rolling your Combo Die until the result of your latest roll is lower than the roll that preceded it. You deal extra damage equal to the total of all rolled Combo Die results on this attack. The results can’t be modified by any means.\n\nYour Combo Die starts as a **d4**. Once per {{term:tier|tier}}, you can increase your Combo Die by one step as a level advancement option."
+        "text": "After rolling damage on a successful attack with a Melee weapon, you can **mark a {{term:stress|Stress}}** to start a combo strike. When you do, roll your Combo Die and note the result, then continue rolling your Combo Die until the result of your latest roll is lower than the roll that preceded it. You deal extra damage equal to the total of all rolled Combo Die results on this attack. The results can’t be modified by any means.\n\nYour Combo Die starts as a **d4**. Once per {{term:tier|tier}}, you can increase your Combo Die by one step as a level advancement option.",
+        "resources": [
+          {
+            "id": "combo-die",
+            "name": "Combo Die",
+            "kind": "die",
+            "max": 1,
+            "die": "d4"
+          }
+        ]
       }
     ],
     "subclassIds": [
@@ -228,7 +269,18 @@
     "classFeatures": [
       {
         "name": "Unstoppable",
-        "text": "Once per {{term:long-rest|long rest}}, you can become _Unstoppable._ You gain an Unstoppable Die. At level 1, your Unstoppable Die is a **d4.** Place it on your character sheet in the space provided, starting with the 1 value facing up. After you make a damage roll that deals 1 or more {{term:hit-points|Hit Points}} to a target, increase the Unstoppable Die value by one. When the die’s value would exceed its maximum value or when the scene ends, remove the die and drop out of _Unstoppable_. At level 5, your Unstoppable Die increases to a **d6.**\n\nWhile _Unstoppable_, you gain the following benefits:\n\n- You reduce the severity of physical damage by one threshold (Severe to Major, Major to Minor, Minor to None).\n- You add the current value of the Unstoppable Die to your damage roll.\n- You can’t be _{{term:restrained|Restrained}}_ or _{{term:vulnerable|Vulnerable}}_.\n\n**_Tip:_** _If your Unstoppable Die is a d4 and the 4 is_ _currently facing up, you remove the die the next time_ _you would increase it. However, if your Unstoppable Die_ _has increased to a d6 and the 4 is currently facing up,_ _you’ll turn it to 5 the next time you would increase it. In_ _this case, you’ll remove the die after you would need to_ _increase it higher than 6._"
+        "text": "Once per {{term:long-rest|long rest}}, you can become _Unstoppable._ You gain an Unstoppable Die. At level 1, your Unstoppable Die is a **d4.** Place it on your character sheet in the space provided, starting with the 1 value facing up. After you make a damage roll that deals 1 or more {{term:hit-points|Hit Points}} to a target, increase the Unstoppable Die value by one. When the die’s value would exceed its maximum value or when the scene ends, remove the die and drop out of _Unstoppable_. At level 5, your Unstoppable Die increases to a **d6.**\n\nWhile _Unstoppable_, you gain the following benefits:\n\n- You reduce the severity of physical damage by one threshold (Severe to Major, Major to Minor, Minor to None).\n- You add the current value of the Unstoppable Die to your damage roll.\n- You can’t be _{{term:restrained|Restrained}}_ or _{{term:vulnerable|Vulnerable}}_.\n\n**_Tip:_** _If your Unstoppable Die is a d4 and the 4 is_ _currently facing up, you remove the die the next time_ _you would increase it. However, if your Unstoppable Die_ _has increased to a d6 and the 4 is currently facing up,_ _you’ll turn it to 5 the next time you would increase it. In_ _this case, you’ll remove the die after you would need to_ _increase it higher than 6._",
+        "resources": [
+          {
+            "id": "unstoppable",
+            "name": "Unstoppable Die",
+            "kind": "die-value",
+            "max": 1,
+            "die": "d4",
+            "dieAtLevel5": "d6",
+            "resetOn": "long-rest"
+          }
+        ]
       }
     ],
     "subclassIds": [
@@ -373,7 +425,17 @@
     "classFeatures": [
       {
         "name": "Prayer Dice",
-        "text": "At the beginning of each session, roll a number of **d4s** equal to your subclass’s {{term:spellcast-trait|Spellcast trait}} and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within {{term:far|Far range}}. You can use a spent die’s value to reduce {{term:incoming-damage|incoming damage}}, add to a roll’s result after the roll is made, or gain {{term:hope|Hope}} equal to the result. At the end of each session, clear all unspent Prayer Dice."
+        "text": "At the beginning of each session, roll a number of **d4s** equal to your subclass’s {{term:spellcast-trait|Spellcast trait}} and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within {{term:far|Far range}}. You can use a spent die’s value to reduce {{term:incoming-damage|incoming damage}}, add to a roll’s result after the roll is made, or gain {{term:hope|Hope}} equal to the result. At the end of each session, clear all unspent Prayer Dice.",
+        "resources": [
+          {
+            "id": "prayer-dice",
+            "name": "Prayer Dice",
+            "kind": "dice-pool",
+            "max": "spellcast",
+            "die": "d4",
+            "resetOn": "session"
+          }
+        ]
       }
     ],
     "subclassIds": [
@@ -475,11 +537,45 @@
     "classFeatures": [
       {
         "name": "Patron’s Pact",
-        "text": "You have committed yourself to a supernatural entity—such as a god, fae, or demon—in exchange for power. Write their name on your character sheet, then work with your GM to determine their sphere of influence (such as Nature, Chaos, Wisdom, Mischief, Love, War, Justice, or Death). Before making an {{term:action-roll|action roll}} that relates to your patron’s sphere of influence, you can **spend** **a Favor** to call upon their aid, rolling your Patron Die and adding its result to the total. Your Patron Die starts at a **d6** and increases to a **d8** at level 5."
+        "text": "You have committed yourself to a supernatural entity—such as a god, fae, or demon—in exchange for power. Write their name on your character sheet, then work with your GM to determine their sphere of influence (such as Nature, Chaos, Wisdom, Mischief, Love, War, Justice, or Death). Before making an {{term:action-roll|action roll}} that relates to your patron’s sphere of influence, you can **spend** **a Favor** to call upon their aid, rolling your Patron Die and adding its result to the total. Your Patron Die starts at a **d6** and increases to a **d8** at level 5.",
+        "choices": [
+          {
+            "id": "patron-name",
+            "prompt": "Your patron's name.",
+            "count": 1,
+            "options": "free-text"
+          },
+          {
+            "id": "patron-sphere",
+            "prompt": "Your patron's sphere of influence (from the examples, or one you make with your GM).",
+            "count": 1,
+            "options": "free-text"
+          }
+        ],
+        "resources": [
+          {
+            "id": "patron-die",
+            "name": "Patron Die",
+            "kind": "die",
+            "max": 1,
+            "die": "d6",
+            "dieAtLevel5": "d8"
+          }
+        ]
       },
       {
         "name": "Favor",
-        "text": "You start with 3 Favor. You can use a {{term:downtime|downtime move}} to show tribute to your patron. Describe how and gain Favor equal to your {{term:spellcast-trait|Spellcast trait}}. Additionally, when you succeed on an {{term:action-roll|action roll}} with {{term:hope|Hope}}, you can choose to gain a Favor instead of a {{term:hope|Hope}}.\n\n**_Note:_** _The maximum Favor you can hold at one time is 6._\n\nWhen building a warlock, choose their patron’s sphere of influence from the list below or work with the GM to make your own."
+        "text": "You start with 3 Favor. You can use a {{term:downtime|downtime move}} to show tribute to your patron. Describe how and gain Favor equal to your {{term:spellcast-trait|Spellcast trait}}. Additionally, when you succeed on an {{term:action-roll|action roll}} with {{term:hope|Hope}}, you can choose to gain a Favor instead of a {{term:hope|Hope}}.\n\n**_Note:_** _The maximum Favor you can hold at one time is 6._\n\nWhen building a warlock, choose their patron’s sphere of influence from the list below or work with the GM to make your own.",
+        "resources": [
+          {
+            "id": "favor",
+            "name": "Favor",
+            "kind": "counter",
+            "max": 6,
+            "start": 3,
+            "resetOn": "never"
+          }
+        ]
       }
     ],
     "subclassIds": [
@@ -663,7 +759,28 @@
       },
       {
         "name": "Strange Patterns",
-        "text": "Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a {{term:hope|Hope}} or clear a {{term:stress|Stress}}.\n\nYou can change this number when you take a {{term:long-rest|long rest}}."
+        "text": "Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a {{term:hope|Hope}} or clear a {{term:stress|Stress}}.\n\nYou can change this number when you take a {{term:long-rest|long rest}}.",
+        "choices": [
+          {
+            "id": "strange-patterns",
+            "prompt": "Choose a number between 1 and 12 (you can change it on a long rest).",
+            "count": 1,
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ]
+          }
+        ]
       }
     ],
     "subclassIds": [

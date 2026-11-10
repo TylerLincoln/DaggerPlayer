@@ -521,7 +521,55 @@
     "level": 5,
     "cardType": "ability",
     "recallCost": 0,
-    "text": "When you choose this card, permanently gain two of the following benefits:\n\n- One {{term:stress|Stress}} slot\n- One {{term:hit-points|Hit Point}} slot\n- +2 bonus to your {{term:damage-thresholds|damage thresholds}}\n\nThen place this card in your {{term:vault|vault}} permanently."
+    "text": "When you choose this card, permanently gain two of the following benefits:\n\n- One {{term:stress|Stress}} slot\n- One {{term:hit-points|Hit Point}} slot\n- +2 bonus to your {{term:damage-thresholds|damage thresholds}}\n\nThen place this card in your {{term:vault|vault}} permanently.",
+    "choices": [
+      {
+        "id": "vitality",
+        "prompt": "Permanently gain two of these benefits.",
+        "count": 2,
+        "options": [
+          {
+            "id": "stress",
+            "label": "One Stress slot",
+            "modifiers": [
+              {
+                "target": "stress",
+                "value": 1,
+                "when": "always"
+              }
+            ]
+          },
+          {
+            "id": "hp",
+            "label": "One Hit Point slot",
+            "modifiers": [
+              {
+                "target": "hp",
+                "value": 1,
+                "when": "always"
+              }
+            ]
+          },
+          {
+            "id": "thresholds",
+            "label": "+2 bonus to your damage thresholds",
+            "modifiers": [
+              {
+                "target": "majorThreshold",
+                "value": 2,
+                "when": "always"
+              },
+              {
+                "target": "severeThreshold",
+                "value": 2,
+                "when": "always"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "vaultOnAcquire": true
   },
   {
     "id": "srd/domain-card/battle-hardened",
@@ -2151,7 +2199,18 @@
     "level": 9,
     "cardType": "ability",
     "recallCost": 0,
-    "text": "Gain a permanent +2 bonus to two of your {{term:experience|Experiences}} or a permanent +3 bonus to one of your {{term:experience|Experiences}}. Then place this card in your {{term:vault|vault}} permanently."
+    "text": "Gain a permanent +2 bonus to two of your {{term:experience|Experiences}} or a permanent +3 bonus to one of your {{term:experience|Experiences}}. Then place this card in your {{term:vault|vault}} permanently.",
+    "choices": [
+      {
+        "id": "master-of-the-craft",
+        "prompt": "A permanent +2 to two of your Experiences, or +3 to one.",
+        "count": 1,
+        "options": {
+          "type": "experience-bonus"
+        }
+      }
+    ],
+    "vaultOnAcquire": true
   },
   {
     "id": "srd/domain-card/encore",

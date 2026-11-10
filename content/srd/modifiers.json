@@ -1,24 +1,408 @@
 {
-  "note": "Machine-readable versions of permanent, unconditional stat changes stated in SRD feature text. Only effects that apply without a trigger are listed; everything else stays as text. Weapon and armor feature modifiers are derived automatically by the parser from clauses like '−1 to Evasion'. Each entry must match an existing entry id and feature name, or the parse fails.",
+  "note": "Machine-readable versions of permanent, unconditional stat changes stated in SRD feature text. Only effects that apply without a trigger are listed; everything else stays as text. Weapon and armor feature modifiers are derived automatically by the parser from clauses like '−1 to Evasion'. Each entry must match an existing entry id and feature name, or the parse fails. 'choices' adds selections a feature asks for; 'cardChoices' adds them to domain cards (option modifiers apply while the card is owned); 'resources' adds counters and dice the sheet tracks; 'vaultOnAcquire' lists cards that go to the vault permanently when taken.",
   "features": [
-    { "id": "srd/ancestry/earthkin", "feature": "Stoneskin", "modifiers": [{ "target": "armorScore", "value": 1 }, { "target": "majorThreshold", "value": 1 }, { "target": "severeThreshold", "value": 1 }] },
-    { "id": "srd/ancestry/giant", "feature": "Endurance", "modifiers": [{ "target": "hp", "value": 1 }] },
-    { "id": "srd/ancestry/human", "feature": "High Stamina", "modifiers": [{ "target": "stress", "value": 1 }] },
-    { "id": "srd/ancestry/simiah", "feature": "Nimble", "modifiers": [{ "target": "evasion", "value": 1 }] },
-    { "id": "srd/subclass/juggernaut", "feature": "Rugged", "modifiers": [{ "target": "severeThreshold", "value": 3 }] },
-    { "id": "srd/subclass/stalwart", "feature": "Unwavering", "modifiers": [{ "target": "majorThreshold", "value": 1 }, { "target": "severeThreshold", "value": 1 }] },
-    { "id": "srd/subclass/stalwart", "feature": "Unrelenting", "modifiers": [{ "target": "majorThreshold", "value": 2 }, { "target": "severeThreshold", "value": 2 }] },
-    { "id": "srd/subclass/stalwart", "feature": "Undaunted", "modifiers": [{ "target": "majorThreshold", "value": 3 }, { "target": "severeThreshold", "value": 3 }] },
-    { "id": "srd/subclass/vengeance", "feature": "At Ease", "modifiers": [{ "target": "stress", "value": 1 }] },
-    { "id": "srd/subclass/nightwalker", "feature": "Fleeting Shadow", "modifiers": [{ "target": "evasion", "value": 1 }] },
-    { "id": "srd/subclass/winged-sentinel", "feature": "Ascendant", "modifiers": [{ "target": "severeThreshold", "value": 4 }] },
-    { "id": "srd/subclass/school-of-war", "feature": "Battlemage", "modifiers": [{ "target": "hp", "value": 1 }] }
+    {
+      "id": "srd/ancestry/earthkin",
+      "feature": "Stoneskin",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1
+        },
+        {
+          "target": "majorThreshold",
+          "value": 1
+        },
+        {
+          "target": "severeThreshold",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/ancestry/giant",
+      "feature": "Endurance",
+      "modifiers": [
+        {
+          "target": "hp",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/ancestry/human",
+      "feature": "High Stamina",
+      "modifiers": [
+        {
+          "target": "stress",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/ancestry/simiah",
+      "feature": "Nimble",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/juggernaut",
+      "feature": "Rugged",
+      "modifiers": [
+        {
+          "target": "severeThreshold",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/stalwart",
+      "feature": "Unwavering",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 1
+        },
+        {
+          "target": "severeThreshold",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/stalwart",
+      "feature": "Unrelenting",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 2
+        },
+        {
+          "target": "severeThreshold",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/stalwart",
+      "feature": "Undaunted",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 3
+        },
+        {
+          "target": "severeThreshold",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/vengeance",
+      "feature": "At Ease",
+      "modifiers": [
+        {
+          "target": "stress",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/nightwalker",
+      "feature": "Fleeting Shadow",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/winged-sentinel",
+      "feature": "Ascendant",
+      "modifiers": [
+        {
+          "target": "severeThreshold",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "srd/subclass/school-of-war",
+      "feature": "Battlemage",
+      "modifiers": [
+        {
+          "target": "hp",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "srd/class/brawler",
+      "feature": "I Am the Weapon",
+      "modifiers": [
+        {
+          "target": "evasion",
+          "value": 1,
+          "when": "unarmed"
+        }
+      ]
+    }
   ],
   "cards": [
-    { "id": "srd/domain-card/fortified-armor", "modifiers": [{ "target": "majorThreshold", "value": 2, "when": "armored" }, { "target": "severeThreshold", "value": 2, "when": "armored" }] },
-    { "id": "srd/domain-card/armorer", "modifiers": [{ "target": "armorScore", "value": 1, "when": "armored" }] }
+    {
+      "id": "srd/domain-card/fortified-armor",
+      "modifiers": [
+        {
+          "target": "majorThreshold",
+          "value": 2,
+          "when": "armored"
+        },
+        {
+          "target": "severeThreshold",
+          "value": 2,
+          "when": "armored"
+        }
+      ]
+    },
+    {
+      "id": "srd/domain-card/armorer",
+      "modifiers": [
+        {
+          "target": "armorScore",
+          "value": 1,
+          "when": "armored"
+        }
+      ]
+    }
   ],
   "choices": [
-    { "id": "srd/ancestry/clank", "feature": "Purposeful Design", "choice": { "id": "clank-purpose", "prompt": "Choose the Experience that best aligns with your purpose (+1 permanent bonus).", "count": 1, "options": { "type": "experience" } } }
+    {
+      "id": "srd/ancestry/clank",
+      "feature": "Purposeful Design",
+      "choice": {
+        "id": "clank-purpose",
+        "prompt": "Choose the Experience that best aligns with your purpose (+1 permanent bonus).",
+        "count": 1,
+        "options": {
+          "type": "experience"
+        }
+      }
+    },
+    {
+      "id": "srd/class/warlock",
+      "feature": "Patron’s Pact",
+      "choice": {
+        "id": "patron-name",
+        "prompt": "Your patron's name.",
+        "count": 1,
+        "options": "free-text"
+      }
+    },
+    {
+      "id": "srd/class/warlock",
+      "feature": "Patron’s Pact",
+      "choice": {
+        "id": "patron-sphere",
+        "prompt": "Your patron's sphere of influence (from the examples, or one you make with your GM).",
+        "count": 1,
+        "options": "free-text"
+      }
+    },
+    {
+      "id": "srd/class/wizard",
+      "feature": "Strange Patterns",
+      "choice": {
+        "id": "strange-patterns",
+        "prompt": "Choose a number between 1 and 12 (you can change it on a long rest).",
+        "count": 1,
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ]
+      }
+    },
+    {
+      "id": "srd/class/brawler",
+      "feature": "I Am the Weapon",
+      "choice": {
+        "id": "brawler-strike-trait",
+        "prompt": "Trait for Brawler's Strike.",
+        "count": 1,
+        "options": [
+          "agility",
+          "strength",
+          "finesse",
+          "instinct",
+          "presence",
+          "knowledge"
+        ]
+      }
+    },
+    {
+      "id": "srd/subclass/elemental-origin",
+      "feature": "Elementalist",
+      "choice": {
+        "id": "elementalist-element",
+        "prompt": "Choose your element.",
+        "count": 1,
+        "options": [
+          "Air",
+          "Earth",
+          "Fire",
+          "Lightning",
+          "Water"
+        ]
+      }
+    }
+  ],
+  "cardChoices": [
+    {
+      "id": "srd/domain-card/vitality",
+      "choice": {
+        "id": "vitality",
+        "prompt": "Permanently gain two of these benefits.",
+        "count": 2,
+        "options": [
+          {
+            "id": "stress",
+            "label": "One Stress slot",
+            "modifiers": [
+              {
+                "target": "stress",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "id": "hp",
+            "label": "One Hit Point slot",
+            "modifiers": [
+              {
+                "target": "hp",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "id": "thresholds",
+            "label": "+2 bonus to your damage thresholds",
+            "modifiers": [
+              {
+                "target": "majorThreshold",
+                "value": 2
+              },
+              {
+                "target": "severeThreshold",
+                "value": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "srd/domain-card/master-of-the-craft",
+      "choice": {
+        "id": "master-of-the-craft",
+        "prompt": "A permanent +2 to two of your Experiences, or +3 to one.",
+        "count": 1,
+        "options": {
+          "type": "experience-bonus"
+        }
+      }
+    }
+  ],
+  "vaultOnAcquire": [
+    "srd/domain-card/vitality",
+    "srd/domain-card/master-of-the-craft"
+  ],
+  "resources": [
+    {
+      "id": "srd/class/warlock",
+      "feature": "Favor",
+      "resource": {
+        "id": "favor",
+        "name": "Favor",
+        "kind": "counter",
+        "max": 6,
+        "start": 3,
+        "resetOn": "never"
+      }
+    },
+    {
+      "id": "srd/class/warlock",
+      "feature": "Patron’s Pact",
+      "resource": {
+        "id": "patron-die",
+        "name": "Patron Die",
+        "kind": "die",
+        "max": 1,
+        "die": "d6",
+        "dieAtLevel5": "d8"
+      }
+    },
+    {
+      "id": "srd/class/seraph",
+      "feature": "Prayer Dice",
+      "resource": {
+        "id": "prayer-dice",
+        "name": "Prayer Dice",
+        "kind": "dice-pool",
+        "max": "spellcast",
+        "die": "d4",
+        "resetOn": "session"
+      }
+    },
+    {
+      "id": "srd/class/guardian",
+      "feature": "Unstoppable",
+      "resource": {
+        "id": "unstoppable",
+        "name": "Unstoppable Die",
+        "kind": "die-value",
+        "max": 1,
+        "die": "d4",
+        "dieAtLevel5": "d6",
+        "resetOn": "long-rest"
+      }
+    },
+    {
+      "id": "srd/class/bard",
+      "feature": "Rally",
+      "resource": {
+        "id": "rally-die",
+        "name": "Rally Die",
+        "kind": "die",
+        "max": 1,
+        "die": "d6",
+        "dieAtLevel5": "d8"
+      }
+    },
+    {
+      "id": "srd/class/brawler",
+      "feature": "Combo Strike",
+      "resource": {
+        "id": "combo-die",
+        "name": "Combo Die",
+        "kind": "die",
+        "max": 1,
+        "die": "d4"
+      }
+    }
   ]
 }

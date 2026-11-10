@@ -40,14 +40,18 @@ export const Modifier = z.object({
     z.templateLiteral(["trait:", Trait]),
   ]),
   value: z.number().int(),
-  /** always | while this item is equipped | while in Beastform | while wearing any armor */
-  when: z.enum(["always", "equipped", "beastform", "armored"]).default("always"),
+  /** always | while this item is equipped | while in Beastform | while wearing any armor | with no active weapons */
+  when: z.enum(["always", "equipped", "beastform", "armored", "unarmed"]).default("always"),
 });
 export type Modifier = z.infer<typeof Modifier>;
 
 export const Resource = z.object({
   id: z.string(),
   name: z.string(),
+  /** counter: a number from 0 to max · die: a die size to show · die-value: a die whose face is tracked (0 = not in use) · dice-pool: rolled dice to spend */
+  kind: z.enum(["counter", "die", "die-value", "dice-pool"]).default("counter"),
+  /** die size from level 5 on (Rally, Patron, Unstoppable) */
+  dieAtLevel5: z.string().optional(),
   /** a number, or a stat the max follows */
   max: z.union([z.number().int().positive(), z.enum(["spellcast", "tier", "level", "proficiency"])]),
   start: z.number().int().optional(),
@@ -59,7 +63,14 @@ export const Choice = z.object({
   id: z.string(),
   prompt: z.string(),
   count: z.number().int().positive().default(1),
-  options: z.union([z.array(z.string()), z.literal("free-text"), z.object({ type: z.string(), filter: z.record(z.string(), z.unknown()).optional() })]),
+  options: z.union([
+    z.array(z.string()),
+    z.literal("free-text"),
+    /** options with their own effects, e.g. Vitality's "two of the following" */
+    z.array(z.object({ id: z.string(), label: z.string(), modifiers: z.array(Modifier).optional() })),
+    /** pick from something the character has: { type: "experience" } or { type: "experience-bonus" } */
+    z.object({ type: z.string(), filter: z.record(z.string(), z.unknown()).optional() }),
+  ]),
 });
 
 export const Feature = z.object({
@@ -103,6 +114,10 @@ export const DomainCard = z.object({
   features: z.array(Feature).optional(), // grimoires list several named spells
   /** permanent stat changes while the card is in the loadout */
   modifiers: z.array(Modifier).optional(),
+  /** selections the card asks for when taken; option modifiers apply while the card is owned */
+  choices: z.array(Choice).optional(),
+  /** "place this card in your vault permanently" */
+  vaultOnAcquire: z.boolean().optional(),
 });
 
 export const Class = z.object({

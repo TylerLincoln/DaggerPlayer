@@ -99,9 +99,20 @@ export function validateBuild(c: CharacterDoc, lookup: Lookup): BuildIssue[] {
   if (!b.background.some((q) => q.answer.trim())) warn("background", "No background questions answered yet (optional).");
   for (const { feature } of derived.features)
     for (const ch of feature.choices ?? [])
-      if (!b.featureChoices[ch.id]) err("background", `${feature.name}: ${ch.prompt}`);
+      if (!b.featureChoices[ch.id]?.trim()) err("background", `${feature.name}: ${ch.prompt}`);
+      else if (Array.isArray(ch.options) && ch.count > 1 && b.featureChoices[ch.id].split(",").filter(Boolean).length !== ch.count) err("background", `${feature.name}: choose ${ch.count}.`);
       else if (typeof ch.options === "object" && !Array.isArray(ch.options) && ch.options.type === "experience" && !xps.some((x) => x.id === b.featureChoices[ch.id]))
         err("background", `${feature.name}: pick one of your Experiences.`);
+
+  // ---- Beastbound companion (SRD p. 21) ----
+  if (b.subclassId === "srd/subclass/beastbound") {
+    const k = c.state.companion;
+    if (!k || !k.name.trim()) err("background", "Name your companion (Beastbound).");
+    else {
+      if (k.experiences.length !== 2 || k.experiences.some((x) => !x.name.trim())) err("background", "Give your companion two Experiences at +2.");
+      if (k.baseStress === null) warn("background", "Enter your companion's starting Stress slots from the companion sheet.");
+    }
+  }
 
   // ---- domain cards ----
   const domains: string[] = cls?.type === "class" ? cls.domainIds : [];

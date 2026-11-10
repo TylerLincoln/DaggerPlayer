@@ -687,7 +687,21 @@
     "foundation": [
       {
         "name": "Elementalist",
-        "text": "Choose one of the following elements at character creation: air, earth, fire, lightning, water.\n\nYou can shape this element into harmless effects. Additionally, **spend a {{term:hope|Hope}}** and describe how your control over this element helps an {{term:action-roll|action roll}} you’re about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll’s damage."
+        "text": "Choose one of the following elements at character creation: air, earth, fire, lightning, water.\n\nYou can shape this element into harmless effects. Additionally, **spend a {{term:hope|Hope}}** and describe how your control over this element helps an {{term:action-roll|action roll}} you’re about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll’s damage.",
+        "choices": [
+          {
+            "id": "elementalist-element",
+            "prompt": "Choose your element.",
+            "count": 1,
+            "options": [
+              "Air",
+              "Earth",
+              "Fire",
+              "Lightning",
+              "Water"
+            ]
+          }
+        ]
       }
     ],
     "specialization": [

@@ -64,6 +64,12 @@ export const LevelUp = z.object({
   domainCardId: z.string().nullable(),
   /** optional exchange of a previously acquired card for one of the same level or lower */
   exchange: z.object({ fromId: z.string(), toId: z.string() }).nullable().default(null),
+  /** answers for choices on cards taken this level (e.g. Vitality), merged into build.featureChoices */
+  choices: z.record(z.string(), z.string()).optional(),
+  /** Beastbound: the companion level-up option taken (option id; "vicious:die" or "vicious:range"; "intelligent:<experience id>") */
+  companionOption: z.string().optional(),
+  /** Beastbound: the companion's new +2 Experience when the PC gains one (levels 2, 5, 8) */
+  companionExperience: Experience.optional(),
 });
 export type LevelUp = z.infer<typeof LevelUp>;
 
@@ -81,11 +87,28 @@ export const SheetState = z.object({
   armorId: z.string().nullable(),
   inventory: z.array(z.object({ id: z.string(), name: z.string(), entryId: z.string().optional(), qty: z.number().int().min(0), notes: z.string().default("") })),
   gold: z.object({ handfuls: z.number().int().min(0).max(9), bags: z.number().int().min(0).max(9), chests: z.number().int().min(0).max(1) }),
-  resources: z.record(z.string(), z.number().int()),
+  /** class resources and per-use marks: numbers, or rolled dice for pools (Prayer Dice). Keys: resource ids, "use:<freq>:<feature>", "tokens:<cardId>" */
+  resources: z.record(z.string(), z.union([z.number().int(), z.array(z.number().int())])),
   conditions: z.array(z.string()),
   /** temporary effects; `until` makes them expire at the next rest or long rest */
   effects: z.array(z.object({ id: z.string(), label: z.string(), on: z.boolean(), until: z.enum(["rest", "long-rest"]).nullable().default(null) })),
   beastformId: z.string().nullable(),
+  /** Druid Evolution: the trait raised by +1 until the Beastform drops */
+  beastformEvolutionTrait: Trait.nullable().default(null),
+  /** Beastbound Ranger companion (SRD p. 21) */
+  companion: z
+    .object({
+      name: z.string().max(80),
+      kind: z.string().max(120),
+      experiences: z.array(Experience),
+      attack: z.string().max(200),
+      damageType: z.enum(["phy", "mag"]),
+      /** starting Stress slots: printed on the companion sheet, not in SRD 2.0, so entered by the player */
+      baseStress: z.number().int().min(0).max(12).nullable(),
+      stressMarked: z.number().int().min(0),
+    })
+    .nullable()
+    .default(null),
   /** short rests taken in a row; three force a long rest (SRD p. 52) */
   rests: z.object({ shortInARow: z.number().int().min(0) }).default({ shortInARow: 0 }),
 });
@@ -155,6 +178,8 @@ export function newCharacter(packs: string[] = ["srd"]): CharacterDoc {
       conditions: [],
       effects: [],
       beastformId: null,
+      beastformEvolutionTrait: null,
+      companion: null,
       rests: { shortInARow: 0 },
     },
     notes: { session: "", background: "", connections: "" },
