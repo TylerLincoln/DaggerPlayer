@@ -133,7 +133,25 @@
     - Rules terms on the sheet are links with tooltips. Rule refusals and their reasons are shown as messages.
   - **Tests (90 total):** sheet rules, and every sheet tab rendered for the import template character.
   - **Not yet (stage 6):** tap-to-mark trackers, damage input against thresholds with the Armor Slot offer, the duality dice roller, rolling from traits/weapons/Experiences, roll history.
-- Next: stage 6, dice and trackers.
+- **Stage 6: dice and trackers.** Done.
+  - **Rules** (`src/rules/duality.ts`):
+    - Duality Dice: Hope/Fear/crit; outcome with or without a Difficulty; a crit always succeeds.
+    - Advantage and disadvantage cancel one for one, with at most one die. Help an Ally: the highest advantage die counts.
+    - Experiences cost 1 Hope each.
+    - Reaction rolls generate no Hope or Fear, and a crit on one doesn't clear Stress.
+    - Applying a result: with Hope → +1 Hope; crit → +1 Hope and clear 1 Stress.
+    - Damage rolls: Proficiency × die + bonus; crit adds the dice maximum.
+    - Damage taken: resistance halves (rounded up, p. 53) → thresholds → one Armor Slot drops severity a step (not for direct damage) → mark HP. Optional Massive Damage. Immunity.
+    - The tests reproduce the SRD's own examples ("13 with Fear", Anne's 18 with Hope, 2d8+1+16).
+  - **UI:**
+    - Tap-to-mark HP / Stress / Hope / Armor Slot boxes. Each box is a labelled button with aria-pressed, plus −/+ buttons. Overflow and Vulnerable rules still apply.
+    - Roll from any trait, from an Experience (spends a Hope) or from a weapon (attack, then damage; critical damage on a crit).
+    - Floating Roll / Reaction buttons.
+    - Damage input with a live preview.
+    - Log tab: session roll history with "start a new session", mirrored to `roll_log` when signed in.
+    - Settings (theme, auto-apply results, Massive Damage) on the Account page and at `/settings`; synced to `user_settings`.
+  - **Tests:** 103 in total.
+- Next: stage 7, sync and offline cache.
 - Deferred from stage 1:
   - **Domain icons (D12).** In the PDF they are vector drawings with soft masks, not plain images, so extracting them means rendering and cropping page 7. Planned for stage 3 (compendium), where they're first shown.
   - **`srd-frames` equipment.** Everyday Hero / Western / Tech gear exists only as tables in the rules pages, not yet as selectable weapon/armor entries. Do this before the builder stage if frames are enabled for a character.
@@ -162,3 +180,4 @@
 4. ~~Unarmored thresholds with bonuses (p. 72)~~ Owner confirmed 2026-11-06: permanent threshold bonuses still apply when unarmored.
 5. ~~Starting gear (p. 5)~~ Owner confirmed 2026-11-06: a secondary weapon is optional (warning only), and no weapon is allowed (Brawler).
 6. **Recall Cost with partly marked Stress (pp. 8, 50).** Recalling a card costs Stress equal to its Recall Cost. SRD p. 50 says you can't use a move that requires marking Stress when *all* your Stress is marked, and if you must mark Stress but can't, you mark 1 HP instead. The app allows a recall when at least one Stress is free, and marks 1 HP for any shortfall. Example: Recall Cost 2 with 1 free Stress marks the last Stress plus 1 HP. Should it instead require enough free Stress for the full cost?
+7. **Help an Ally against disadvantage (p. 49).** The SRD says advantage and disadvantage cancel one for one, and that Help an Ally adds extra advantage dice (highest counts). It doesn't say whether an ally's Help cancels a disadvantage. The app treats each helper as an advantage source for cancelling, e.g. disadvantage + one helper = no extra die. Correct?

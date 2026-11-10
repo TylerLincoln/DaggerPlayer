@@ -9,6 +9,9 @@ import { Registry } from "../src/content/registry.ts";
 import { SearchIndex } from "../src/content/search.ts";
 import { createLocal } from "../src/data/characters.ts";
 import { SheetPage } from "../src/features/sheet/SheetPage.tsx";
+import { Roller } from "../src/features/sheet/play.tsx";
+import { logRoll } from "../src/data/rolls.ts";
+import { derive } from "../src/rules/derive.ts";
 import { CharacterDoc } from "../src/rules/character.ts";
 
 const packs = bundledPacks();
@@ -49,5 +52,34 @@ describe("sheet (import template character)", () => {
     expect(sheet("cards")).toContain("Nature’s Tongue");
     expect(sheet("gear")).toContain("Whetstone");
     expect(sheet("features")).toContain("Wayfinder (foundation)");
+  });
+
+  it("has tap-to-mark trackers, roll buttons and the damage panel", () => {
+    const html = sheet("play");
+    expect(html).toMatch(/aria-label="Hit Point 1 of 7"[^>]*>|aria-pressed="true"[^>]*aria-label="Hit Point 1 of 7"/);
+    expect(html).toContain('aria-label="Roll Agility +3"'); // +2 start, +1 level-2 advancement
+    expect(html).toContain("Attack with Shortbow");
+    expect(html).toContain("Take damage");
+    expect(html).toContain('aria-label="Roll with Tracker (spend a Hope)"');
+  });
+
+  it("opens the roller preset for a weapon", () => {
+    const d = derive(template, registry);
+    const html = renderToString(
+      <ContentContext.Provider value={{ registry, search, enabledPacks: ["srd"], setPackEnabled: () => {} }}>
+        <MemoryRouter>
+          <Roller c={template} d={d} reg={registry} act={() => {}} remote={{ userId: null, savedOnServer: false }} preset={{ weaponId: "srd/weapon/shortbow" }} onClose={() => {}} />
+        </MemoryRouter>
+      </ContentContext.Provider>,
+    ).replace(/<!-- -->/g, "");
+    expect(html).toContain("Attack with Shortbow");
+    expect(html).toMatch(/<option value="agility" selected="">Agility \+3/);
+  });
+
+  it("shows logged rolls in the Log tab", () => {
+    logRoll({ characterId: template.id, kind: "action", label: "Agility", summary: "17 with Hope", detail: "Hope 9, Fear 5, Agility +3 = 17", applied: ["Gained a Hope."] });
+    const html = sheet("log");
+    expect(html).toContain("17 with Hope");
+    expect(html).toContain("Gained a Hope.");
   });
 });

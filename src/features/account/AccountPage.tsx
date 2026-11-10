@@ -4,6 +4,7 @@ import { deleteMyAccount, exportAllData } from "../../data/repo.ts";
 import { authRedirect, supabase } from "../../data/supabase.ts";
 import { Field, FormMessage, errorText } from "../../ui/forms.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
+import { SettingsPanel } from "./SettingsPanel.tsx";
 
 function useAction() {
   const [busy, setBusy] = useState(false);
@@ -148,6 +149,7 @@ export function AccountPage() {
           Sign out
         </button>
       </p>
+      <SettingsPanel />
       <ChangeEmail />
       <ChangePassword />
       <ExportData />

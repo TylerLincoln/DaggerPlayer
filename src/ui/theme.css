@@ -289,3 +289,30 @@ label.radio { display: flex; gap: 8px; align-items: center; min-height: 36px; }
 .counter button { min-width: 44px; }
 .inventory li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
 .gold { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* ---------- dice & trackers ---------- */
+.track-row { display: flex; align-items: center; gap: 6px; }
+.track-row .step { min-width: 44px; padding: 4px; }
+.boxes button.box { min-height: 0; padding: 0; width: 30px; height: 30px; background: var(--surface); cursor: pointer; }
+.boxes button.box.on { background: var(--text); border-color: var(--text); }
+.boxes button.box.hope.on { background: var(--accent); border-color: var(--accent); }
+.trait-cell { display: grid; gap: 4px; }
+.roll-btn { min-height: 36px; padding: 4px 8px; font-size: 0.9rem; }
+.xp-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 4px 0; }
+.fab { position: fixed; right: 16px; bottom: 16px; display: flex; gap: 8px; z-index: 30; }
+.fab button { box-shadow: 0 4px 12px rgb(0 0 0 / 0.25); }
+.sheet { padding-bottom: 72px; }
+.steppers { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.steppers output { min-width: 2ch; text-align: center; font-weight: 700; }
+.roll-result { margin-top: 12px; padding: 12px; border-radius: 10px; border: 2px solid var(--border); text-align: center; }
+.roll-result.hope, .roll-result.crit { border-color: var(--accent); }
+.roll-result.fear { border-color: var(--danger); }
+.roll-headline { font-size: 1.4rem; font-weight: 700; margin: 0; }
+.roll-total { font-size: 2.4rem; font-weight: 800; margin: 0; }
+.dice-faces { display: flex; justify-content: center; gap: 8px; }
+.die { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; font-weight: 700; border: 2px solid var(--border); }
+.die.hope { border-color: var(--accent); }
+.die.fear { border-color: var(--danger); }
+.roll-log { list-style: none; padding: 0; }
+.roll-log li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.damage { border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; margin: 12px 0; }

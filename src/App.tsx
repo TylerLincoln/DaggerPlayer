@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { createBrowserRouter, Link, NavLink, Outlet, RouterProvider, ScrollRestoration } from "react-router";
 import { bundledPacks, loadEntries } from "./content/packs.ts";
+import { useSettingsSync } from "./data/settings.ts";
 import { supabaseConfigured } from "./data/supabase.ts";
+import { SettingsPanel } from "./features/account/SettingsPanel.tsx";
 import { ContentProvider } from "./content/ContentProvider.tsx";
 import { AccountPage } from "./features/account/AccountPage.tsx";
 import { CompendiumPage, EntryPage, RulesIndexPage, RulesPage } from "./features/compendium/pages.tsx";
@@ -15,6 +17,7 @@ import { LegalPage, ShortAttribution } from "./features/legal/LegalPage.tsx";
 
 function Layout() {
   const { user } = useAuth();
+  useSettingsSync(user?.id ?? null);
   return (
     <>
       <a className="skip" href="#main">
@@ -28,7 +31,7 @@ function Layout() {
           <NavLink to="/characters">Characters</NavLink>
           <NavLink to="/compendium">Compendium</NavLink>
           <NavLink to="/rules">Rules</NavLink>
-          {user ? <NavLink to="/account">Account</NavLink> : <NavLink to="/auth/sign-in">Sign in</NavLink>}
+          {user ? <NavLink to="/account">Account</NavLink> : <><NavLink to="/settings">Settings</NavLink> <NavLink to="/auth/sign-in">Sign in</NavLink></>}
         </nav>
       </header>
       {!supabaseConfigured && (
@@ -115,6 +118,7 @@ const router = createBrowserRouter([
       { path: "/build/:id/:step", element: <BuilderPage /> },
       { path: "/account", element: <RequireAuth><AccountPage /></RequireAuth> },
       { path: "/legal", element: <LegalPage /> },
+      { path: "/settings", element: <><h1>Settings</h1><SettingsPanel /></> },
       { path: "*", element: <NotFound /> },
     ],
   },

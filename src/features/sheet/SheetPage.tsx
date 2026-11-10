@@ -15,6 +15,7 @@ import { Inline, RichText, TermLink } from "../../ui/RichText.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
 import { SaveIndicator } from "../builder/BuilderPage.tsx";
 import { Features } from "../compendium/EntryView.tsx";
+import { DamagePanel, Roller, type RollPreset, RollLog, TapTrack } from "./play.tsx";
 
 const TABS = [
   { id: "play", label: "Play" },
@@ -22,6 +23,7 @@ const TABS = [
   { id: "gear", label: "Gear" },
   { id: "features", label: "Features" },
   { id: "story", label: "Story" },
+  { id: "log", label: "Log" },
 ] as const;
 type Tab = (typeof TABS)[number]["id"];
 
@@ -34,6 +36,8 @@ interface SheetCtx {
   reg: Registry;
   /** apply a rules function; RuleErrors and notes are shown to the player */
   act: (fn: (c: CharacterDoc) => CharacterDoc | Result) => void;
+  remote: { userId: string | null; savedOnServer: boolean };
+  roll: (p: RollPreset) => void;
 }
 
 /** A number with a tap-to-open breakdown of where it comes from. */
@@ -52,24 +56,13 @@ function StatBox({ label, term, stat, value }: { label: string; term?: string; s
   );
 }
 
-/** Read-only box track; stage 6 makes these tappable. */
-function Track({ label, term, marked, max, kind }: { label: string; term: string; marked: number; max: number; kind: string }) {
-  return (
-    <div className="track">
-      <div className="track-label"><TermLink slug={term} label={label} /> <span className="hint">{kind === "hope" ? `${marked} of ${max}` : `${marked} of ${max} marked`}</span></div>
-      <div className="boxes" role="img" aria-label={`${label}: ${marked} of ${max}${kind === "hope" ? "" : " marked"}`}>
-        {Array.from({ length: max }, (_, i) => <span key={i} className={`box ${kind}${i < marked ? " on" : ""}`} />)}
-      </div>
-    </div>
-  );
-}
-
 function weaponLine(w: EntryOf<"weapon">, d: Derived) {
   const dice = `${d.proficiency.total}${w.damage.dice}${w.damage.bonus ? `+${w.damage.bonus}` : ""}`;
   return `${w.trait === "spellcast" ? "Spellcast" : cap(w.trait)} ${formatMod(w.trait === "spellcast" ? Math.max(...d.spellcastTraits.map((t) => d.traits[t].total), 0) : d.traits[w.trait].total)} · ${RANGE[w.range]} · ${dice} ${w.damage.type} · ${w.burden === 1 ? "One-Handed" : "Two-Handed"}`;
 }
 
-function PlayTab({ c, d, reg, act }: SheetCtx) {
+function PlayTab(ctx: SheetCtx) {
+  const { c, d, reg, act, roll } = ctx;
   const armor = reg.get(c.state.armorId, "armor");
   const [effect, setEffect] = useState("");
   const [until, setUntil] = useState<"" | "rest" | "long-rest">("");
@@ -93,23 +86,33 @@ function PlayTab({ c, d, reg, act }: SheetCtx) {
       <section aria-labelledby="traits-h">
         <h2 id="traits-h">Traits</h2>
         <div className="traitgrid">
-          {TRAITS.map((t) => <StatBox key={t} label={cap(t)} term={t} stat={d.traits[t]} value={formatMod(d.traits[t].total)} />)}
+          {TRAITS.map((t) => (
+            <div key={t} className="trait-cell">
+              <StatBox label={cap(t)} term={t} stat={d.traits[t]} value={formatMod(d.traits[t].total)} />
+              <button type="button" className="roll-btn" onClick={() => roll({ trait: t })} aria-label={`Roll ${cap(t)} ${formatMod(d.traits[t].total)}`}>Roll</button>
+            </div>
+          ))}
         </div>
         {d.spellcastTraits.length > 0 && <p className="hint">Spellcast trait: {d.spellcastTraits.map(cap).join(" or ")}</p>}
       </section>
 
       <section aria-labelledby="track-h">
         <h2 id="track-h">Trackers</h2>
-        <Track label="Hit Points" term="hit-points" marked={c.state.hpMarked} max={d.hpMax.total} kind="hp" />
-        <Track label="Stress" term="stress" marked={c.state.stressMarked} max={d.stressMax.total} kind="stress" />
-        <Track label="Hope" term="hope" marked={c.state.hope} max={d.hopeMax} kind="hope" />
-        <Track label="Armor Slots" term="armor-slot" marked={c.state.armorMarked} max={d.armorScore.total} kind="armor" />
-        <p className="hint">Tap-to-mark trackers, damage and dice arrive in stage 6.</p>
+        {(["hp", "stress", "hope", "armor"] as const).map((k) => <TapTrack key={k} kind={k} {...ctx} />)}
       </section>
+
+      <DamagePanel {...ctx} />
 
       <section aria-labelledby="xp-h">
         <h2 id="xp-h"><TermLink slug="experience" label="Experiences" /></h2>
-        <ul className="plain">{d.experiences.map((x) => <li key={x.id}>{x.name} <strong>{formatMod(x.bonus.total)}</strong></li>)}</ul>
+        <ul className="plain">
+          {d.experiences.map((x) => (
+            <li key={x.id} className="xp-row">
+              <span>{x.name} <strong>{formatMod(x.bonus.total)}</strong></span>
+              <button type="button" className="roll-btn" disabled={c.state.hope < 1} onClick={() => roll({ experienceIds: [x.id] })} aria-label={`Roll with ${x.name} (spend a Hope)`}>Roll with</button>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section aria-labelledby="weap-h">
@@ -122,6 +125,7 @@ function PlayTab({ c, d, reg, act }: SheetCtx) {
             <div className="feature" key={w.id}>
               <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">· {cap(w.category)}</span></h3>
               <p>{weaponLine(w, d)}</p>
+              <button type="button" className="primary" onClick={() => roll({ weaponId: w.id })}>Attack with {w.name}</button>
               {w.feature && <p><strong>{w.feature.name}:</strong> <Inline text={w.feature.text} /></p>}
             </div>
           );
@@ -389,6 +393,7 @@ export function SheetPage() {
   const { user } = useAuth();
   const [rec, update] = useCharacterRecord(id);
   const { status, error } = useAutosave(id, user?.id ?? null);
+  const [preset, setPreset] = useState<RollPreset | null>(null);
   const [notes, setNotes] = useState<string[]>([]);
   const [problem, setProblem] = useState<string | null>(null);
   const [resting, setResting] = useState(false);
@@ -419,7 +424,7 @@ export function SheetPage() {
       } else throw e;
     }
   };
-  const ctx: SheetCtx = { c, d, reg, act };
+  const ctx: SheetCtx = { c, d, reg, act, remote: { userId: user?.id ?? null, savedOnServer: rec.rev > 0 }, roll: setPreset };
   const name = (x: string | null) => (x ? reg.byId.get(x)?.name ?? x : "");
   const a = c.build.ancestry;
   const heritage = !a ? "" : a.kind === "single" ? name(a.id) : a.label || `${name(a.topFrom)}/${name(a.bottomFrom)}`;
@@ -453,8 +458,14 @@ export function SheetPage() {
         {tab === "gear" && <GearTab {...ctx} />}
         {tab === "features" && <FeaturesTab {...ctx} />}
         {tab === "story" && <StoryTab {...ctx} />}
+        {tab === "log" && <RollLog c={c} />}
       </div>
       <RestDialog {...ctx} open={resting} onClose={() => setResting(false)} />
+      {preset && <Roller key={JSON.stringify(preset)} {...ctx} preset={preset} onClose={() => setPreset(null)} />}
+      <div className="fab">
+        <button type="button" className="primary" onClick={() => setPreset({})}>Roll</button>
+        <button type="button" onClick={() => setPreset({ reaction: true })}>Reaction</button>
+      </div>
     </div>
   );
 }
