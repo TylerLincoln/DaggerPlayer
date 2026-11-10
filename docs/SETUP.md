@@ -62,10 +62,10 @@ npm run content           # re-parse and validate the SRD packs (only after chan
 
 ### Test offline mode
 
-The service worker only runs in production builds:
+The service worker only runs in production builds. Stop the dev server first, then serve the build on the same port, so you keep the same sign-in and local characters (and the Supabase redirect URLs still match):
 
 ```bash
-npm run build && npm run preview -- --host
+npm run build && npm run preview -- --host --port 5173
 ```
 
 1. Open the preview URL and open a character once while online.
