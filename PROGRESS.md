@@ -220,7 +220,7 @@ Still partial:
 Needs the owner:
 - Discord OAuth app (keys in the Supabase dashboard). Google is done and tested by the owner.
 - A browser pass of stages 4–8 (builder, level-up, sheet, dice, offline mode, print).
-- Deploying (docs/SETUP.md §6).
+- ~~Deploying~~ Deployed 2026-11-10 to https://daggerplayer.tylerwlincoln.workers.dev (Cloudflare Workers static assets, `wrangler.jsonc`). Supabase Site URL now points at it, and its redirects allow the live site, Codespaces and localhost. The live check passed: pages, deep links, service worker, Supabase config built in.
 
 Skipped by decision:
 - Automated RLS tests (D9).
