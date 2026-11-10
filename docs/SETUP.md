@@ -73,7 +73,7 @@ npm run build && npm run preview -- --host --port 5173
 3. Reload. The sheet should load and work, showing an "offline" banner and an Offline save status.
 4. Make a change, reconnect, and watch the status return to "Saved".
 
-## 6. Deploy (Cloudflare Pages, Netlify or Vercel)
+## 6. Deploy (Cloudflare Workers, Netlify or Vercel)
 
 | Setting | Value |
 |---|---|
@@ -81,12 +81,12 @@ npm run build && npm run preview -- --host --port 5173
 | Output directory | `dist` |
 | Environment variables | Create variables with these names and your real values: `VITE_SUPABASE_URL` (your project URL), `VITE_SUPABASE_ANON_KEY` (the anon/publishable key, never `service_role`), and `NODE_VERSION` = `22`. Vite builds them into the app, so set them before building and redeploy after changing them. |
 
-The app uses client-side routes, so add a single-page-app fallback:
+The app uses client-side routes, so every path that isn't a file must serve `index.html`:
 
-| Host | Fallback |
+| Host | How |
 |---|---|
-| Netlify | `public/_redirects` with `/* /index.html 200` |
-| Cloudflare Pages | `public/_redirects`, same contents |
-| Vercel | a `vercel.json` rewrite of `/(.*)` to `/index.html` |
+| **Cloudflare Workers** (current "Workers & Pages" setup, deploy command `npx wrangler deploy`) | Already configured in `wrangler.jsonc` (`not_found_handling: "single-page-application"`). Put the `VITE_` variables under **Settings → Build → Variables and secrets** (build-time), not the runtime variables. Don't add a `public/_redirects` file: Workers rejects that rule as a redirect loop. |
+| Netlify | Add `public/_redirects` containing `/* /index.html 200` |
+| Vercel | A `vercel.json` rewrite of `/(.*)` to `/index.html` |
 
 After deploying, add the deployed URL to the Supabase **Site URL** and **Redirect URLs**.

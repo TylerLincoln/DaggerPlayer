@@ -1,0 +1,12 @@
+// Cloudflare Workers static-assets deploy (Workers & Pages → this repo → `npx wrangler deploy`).
+// The app is a static single-page app: any path that isn't a file serves index.html, so client-side
+// routes like /characters/<id> work on refresh. (Don't add a public/_redirects file here: Workers rejects
+// the "/* /index.html 200" rule as a redirect loop; this setting replaces it.)
+{
+  "name": "daggerplayer",
+  "compatibility_date": "2026-11-10",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
