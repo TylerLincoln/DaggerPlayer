@@ -114,7 +114,7 @@ function PlayTab(ctx: SheetCtx) {
               <h3>Brawler’s Strike <span className="kind">(primary)</span></h3>
               <p><Meta items={[c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice", "Melee", `${d.proficiency.total}d8+${d.proficiency.total}d6 phy`, "+1 Evasion while active"]} /></p>
             </div>
-            <button type="button" onClick={() => roll({ attack: "brawler" })}>Attack with Brawler’s Strike</button>
+            <button type="button" onClick={() => roll({ attack: "brawler" })} aria-label="Attack with Brawler’s Strike">Attack</button>
           </div>
         )}
         {weapons.length === 0 && !d.features.some((f) => f.feature.name === "I Am the Weapon") && <p>No active weapons.</p>}
@@ -124,7 +124,7 @@ function PlayTab(ctx: SheetCtx) {
               <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">({w.category})</span></h3>
               <p>{weaponLine(w, d)}</p>
             </div>
-            <button type="button" onClick={() => roll({ weaponId: w.id })}>Attack with {w.name}</button>
+            <button type="button" onClick={() => roll({ weaponId: w.id })} aria-label={`Attack with ${w.name}`}>Attack</button>
             {w.feature && <p className="attack-note"><strong>{w.feature.name}:</strong> <Inline text={w.feature.text} /></p>}
           </div>
         ))}
