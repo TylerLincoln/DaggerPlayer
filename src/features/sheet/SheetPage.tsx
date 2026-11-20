@@ -239,7 +239,7 @@ function LoadoutQuick({ c, d, reg, act }: SheetCtx) {
   const open = openId ? reg.get(openId, "domain-card") : undefined;
   return (
     <section aria-labelledby="loadout-h">
-      <h2 id="loadout-h"><TermLink slug="loadout" label="Loadout" /> ({c.state.loadout.length} of 5)</h2>
+      <h2 id="loadout-h"><TermLink slug="loadout" label="Loadout" /> ({c.state.loadout.length} of {d.loadoutMax})</h2>
       {c.state.loadout.length === 0 ? (
         <p className="hint">No cards in your loadout. <Link to="?tab=cards">Open the Cards tab</Link> to add some.</p>
       ) : (
@@ -274,7 +274,7 @@ function LoadoutQuick({ c, d, reg, act }: SheetCtx) {
 function CardsTab({ c, d, reg, act }: SheetCtx) {
   const [resting, setResting] = useState(false);
   const [swapOut, setSwapOut] = useState("");
-  const full = c.state.loadout.length >= 5;
+  const full = c.state.loadout.length >= d.loadoutMax;
   const card = (id: string, where: "loadout" | "vault") => {
     const k = reg.get(id, "domain-card");
     if (!k) return <li key={id}>{id} (not available: is its pack on?)</li>;
@@ -295,7 +295,7 @@ function CardsTab({ c, d, reg, act }: SheetCtx) {
   return (
     <>
       <label className="toggle"><input type="checkbox" checked={resting} onChange={(e) => setResting(e.target.checked)} /> Resting: swap cards for free (SRD p. 8)</label>
-      <h2><TermLink slug="loadout" label="Loadout" /> ({c.state.loadout.length} of 5)</h2>
+      <h2><TermLink slug="loadout" label="Loadout" /> ({c.state.loadout.length} of {d.loadoutMax})</h2>
       <ul className="plain">{c.state.loadout.map((id) => card(id, "loadout"))}</ul>
       <h2><TermLink slug="vault" label="Vault" /> ({c.state.vault.length})</h2>
       {full && c.state.vault.length > 0 && (

@@ -4,6 +4,7 @@
 import { TRAITS, type Entry, type EntryOf, type Feature, type Modifier, type Trait } from "../../content/schema/index.ts";
 import { stripTags } from "../../content/richtext.ts";
 import type { CharacterDoc } from "./character.ts";
+import { loadoutMax as gearLoadoutMax } from "./gear.ts";
 
 export interface Lookup {
   get(id: string | null | undefined): Entry | undefined;
@@ -66,6 +67,8 @@ export interface Derived {
   /** Warrior "Combat Training: You ignore burden when equipping weapons" (also via multiclass) */
   ignoresBurden: boolean;
   companion: DerivedCompanion | null;
+  /** domain cards the loadout holds (5; 4 with Attuned armor) */
+  loadoutMax: number;
 }
 
 export const HP_MAX = 12; // SRD p. 50
@@ -344,9 +347,41 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     }
   }
 
+  // ---- armor features the modifier parser can't express (SRD armor tables, pp. 72–74) ----
+  if (armored && armor.feature) {
+    const src = `${armor.name}: ${armor.feature.name}`;
+    switch (armor.feature.name) {
+      case "Difficult": // −1 to all character traits and Evasion
+        for (const t of TRAITS) add(traits[t], src, -1);
+        add(evasion, src, -1);
+        break;
+      case "Enchanted": { // bonus to damage thresholds equal to your Spellcast trait
+        const casts = subclasses.map((s) => s.spellcastTrait).filter((t): t is Trait => !!t);
+        if (casts.length) {
+          const v = Math.max(...casts.map((t) => traits[t].total));
+          add(major, src, v);
+          add(severe, src, v);
+        }
+        break;
+      }
+      case "Magnificent": // bonus to Armor Score equal to your Presence
+        add(armorScore, src, traits.presence.total);
+        break;
+      case "Attuned": // bonus to damage thresholds equal to your tier (the loadout limit drops by one: loadoutMax)
+        add(major, src, tier);
+        add(severe, src, tier);
+        break;
+    }
+  }
+
   cap(hpMax, HP_MAX);
   cap(stressMax, STRESS_MAX);
   cap(armorScore, ARMOR_SCORE_MAX);
+  // Reinforced: "When you mark your last Armor Slot, increase your damage thresholds by +2 until you clear at least 1 Armor Slot"
+  if (armored && armor.feature?.name === "Reinforced" && armorScore.total > 0 && c.state.armorMarked >= armorScore.total) {
+    add(major, `${armor.name}: Reinforced (last Armor Slot marked)`, 2);
+    add(severe, `${armor.name}: Reinforced (last Armor Slot marked)`, 2);
+  }
 
   // ---- resources ----
   const spell = Math.max(0, ...subclasses.map((s) => (s.spellcastTrait ? traits[s.spellcastTrait].total : 0)));
@@ -403,6 +438,7 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     resources,
     beastform,
     companion,
+    loadoutMax: gearLoadoutMax(c, lookup),
     ignoresBurden: features.some((f) => f.feature.name === "Combat Training" && /ignore burden/i.test(stripTags(f.feature.text))),
   };
 }

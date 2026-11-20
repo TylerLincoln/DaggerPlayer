@@ -3,7 +3,7 @@
 import type { CharacterDoc } from "./character.ts";
 import { derive, type Derived, type Lookup } from "./derive.ts";
 import { type Rng, roll } from "./dice.ts";
-import { LOADOUT_MAX } from "./levelup.ts";
+import { armorFeature, loadoutMax } from "./gear.ts";
 
 export { RuleError } from "./errors.ts";
 import { RuleError } from "./errors.ts";
@@ -88,6 +88,25 @@ export function markArmor(c: CharacterDoc, d: Derived, n = 1): CharacterDoc {
   return doc;
 }
 
+/**
+ * Mark Armor Slots and apply what the equipped armor does when you do:
+ * Painful ("Each time you mark an Armor Slot, you must mark a Stress") and Divine ("When you mark an Armor Slot, gain a Hope").
+ */
+export function markArmorWithEffects(c: CharacterDoc, d: Derived, feature: string | null, n = 1): Result {
+  let doc = markArmor(c, d, n);
+  const notes: string[] = [];
+  if (feature === "Painful") {
+    const r = markStress(doc, d, n);
+    doc = r.doc;
+    notes.push(`Painful armor: marked ${n} Stress.`, ...r.notes);
+  }
+  if (feature === "Divine") {
+    doc = gainHope(doc, d, n);
+    notes.push(`Divine armor: gained ${n} Hope.`);
+  }
+  return { doc, notes };
+}
+
 export function clearArmor(c: CharacterDoc, n = 1): CharacterDoc {
   const doc = clone(c);
   doc.state.armorMarked = Math.max(0, doc.state.armorMarked - n);
@@ -114,8 +133,9 @@ export function fromVault(c: CharacterDoc, lookup: Lookup, cardId: string, opts:
   const picked = lookup.get(cardId);
   if (picked?.type === "domain-card" && picked.vaultOnAcquire) throw new RuleError(`${picked.name} stays in your vault permanently.`);
   let doc = clone(c);
-  if (doc.state.loadout.length >= LOADOUT_MAX) {
-    if (!opts.swapOutId) throw new RuleError(`Your loadout holds ${LOADOUT_MAX} cards: choose one to move to the vault.`);
+  const max = loadoutMax(c, lookup);
+  if (doc.state.loadout.length >= max) {
+    if (!opts.swapOutId) throw new RuleError(`Your loadout holds ${max} cards: choose one to move to the vault.`);
     doc = toVault(doc, opts.swapOutId);
   }
   doc.state.vault = doc.state.vault.filter((x) => x !== cardId);
@@ -302,6 +322,11 @@ export function takeRest(c: CharacterDoc, lookup: Lookup, kind: RestKind, moves:
     const cleared = c.state.stressMarked - doc.state.stressMarked;
     const comp = doc.state.companion;
     comp.stressMarked = Math.max(0, comp.stressMarked - Math.max(0, cleared) - (kind === "long" && cleared === 0 ? 1 : 0));
+  }
+  // Self-Healing armor: "When you take a rest, clear an Armor Slot."
+  if (armorFeature(doc, lookup) === "Self-Healing" && doc.state.armorMarked > 0) {
+    doc = clearArmor(doc, 1);
+    notes.push("Self-Healing armor: cleared an Armor Slot.");
   }
   doc = resetUses(doc, kind === "short" ? ["rest"] : ["rest", "long-rest"]);
   doc.state.rests = { shortInARow: kind === "short" ? (c.state.rests?.shortInARow ?? 0) + 1 : 0 };

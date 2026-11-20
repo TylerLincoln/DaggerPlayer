@@ -93,6 +93,17 @@
 
 - **Cards from the play tab** (2026-11-20): a Loadout list under the traits shows one line per card (name, domain and level, type). Tapping a card opens it in a drawer with the full text, the used toggle, tokens and choices (the same `CardBody` the Cards tab uses), plus a "Manage cards" link. Escape or the backdrop closes it, and focus returns to the card.
 
+- **Equipment effects apply automatically** (2026-11-20). Rules are in `src/rules/gear.ts` and are wired into `derive`, the trackers, Take damage, rests and the roller. Tests are in `tests/gear.test.ts`.
+  - Armor when you mark an Armor Slot (tracker or damage): Painful (mark a Stress; with all Stress marked, a Hit Point instead), Divine (gain a Hope).
+  - Armor when you take damage: Bulky (Severe damage marks a Stress), Fortified (a slot drops two thresholds), and, using a "Magic damage" checkbox shown only for this armor, Warded (magic damage reduced by Armor Score), Physical and Magic (no slot against the other damage type).
+  - Armor bonuses: Reinforced (+2 thresholds while the last slot is marked), Enchanted (thresholds + Spellcast trait), Magnificent (Armor Score + Presence), Attuned (thresholds + tier, and a loadout of 4), Difficult (−1 to every trait and to Evasion).
+  - Armor on rest: Self-Healing clears a slot.
+  - Weapon damage rolls: Powerful and Massive (an extra die, lowest dropped), Brutal (a maximum roll adds a die), Serrated (1s deal 8), Sharpwing (+Agility), Bonded (+level), and Sharp armor (+d4 to Melee weapons).
+  - Weapon hits (applied once per attack when you roll damage): Painful (mark a Stress), Invigorating (d4; on a 4, clear a Stress), Lifestealing (d6; on a 6, clear a Hit Point, or a Stress if no HP is marked), Bloodthirsty armor (a critical Melee hit clears a Hit Point).
+  - Reloading: rolls a d6 after each attack and says when to mark a Stress to reload.
+  - Optional effects ("you can…", e.g. Hopeful, Shifting, Resilient, Impenetrable) and effects on enemies stay as text, because those are the player's call.
+- Rules question: Lifestealing says "clear a Hit Point or clear a Stress". The app clears a Hit Point when one is marked, otherwise a Stress. Confirm this is the preferred default.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:

@@ -3,6 +3,7 @@
 import { TRAITS, type EntryOf, type Trait } from "../../content/schema/index.ts";
 import type { CharacterDoc, LevelUp } from "./character.ts";
 import { RuleError } from "./errors.ts";
+import { loadoutMax } from "./gear.ts";
 import { ACHIEVEMENT_LEVELS, derive, HP_MAX, type Lookup, ownedCards, STRESS_MAX, tierOf } from "./derive.ts";
 
 export { ownedCards };
@@ -300,7 +301,7 @@ export function applyLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): Char
   for (const id of newCards) {
     const card = lookup.get(id);
     // "place this card in your vault permanently" (Vitality, Master of the Craft)
-    const toVault = (card?.type === "domain-card" && card.vaultOnAcquire) || s.loadout.length >= LOADOUT_MAX;
+    const toVault = (card?.type === "domain-card" && card.vaultOnAcquire) || s.loadout.length >= loadoutMax(next, lookup);
     (toVault ? s.vault : s.loadout).push(id);
   }
   Object.assign(next.build.featureChoices, lu.choices ?? {});

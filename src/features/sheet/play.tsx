@@ -5,8 +5,10 @@ import { logRoll, startSession, useRollLog } from "../../data/rolls.ts";
 import { useSettings } from "../../data/settings.ts";
 import type { CharacterDoc } from "../../rules/character.ts";
 import type { Derived } from "../../rules/derive.ts";
-import { applyDuality, consequences, describeDuality, type DamageRoll, type DualityResult, type Mod, parseDamage, planDamage, rollDamageDice, rollDuality, SEVERITY_LABEL, spendForExperiences, takeDamage } from "../../rules/duality.ts";
-import { clearArmor, clearHp, clearStress, markArmor, markHp, markStress, newSession, type Result } from "../../rules/sheet.ts";
+import { applyDuality, consequences, describeDuality, type DamageRoll, type DualityResult, type Mod, parseDamage, planDamage, rollDamageDice, rollDuality, rollGearDamage, SEVERITY_LABEL, spendForExperiences, takeDamage } from "../../rules/duality.ts";
+import { cryptoRng, rollDie } from "../../rules/dice.ts";
+import { afterAttack, armorFeature, damageRules, onHit } from "../../rules/gear.ts";
+import { clearArmor, clearHp, clearStress, markArmorWithEffects, markHp, markStress, newSession, type Result } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { TermLink } from "../../ui/RichText.tsx";
@@ -32,14 +34,15 @@ const TRACKS: Record<TrackKind, { label: string; term: string; unit: string }> =
 };
 
 /** Change a track to `target` marked boxes through the rules functions (so overflow/Vulnerable rules apply). */
-function setTrack(kind: TrackKind, target: number, c: CharacterDoc, d: Derived): CharacterDoc | Result {
+function setTrack(kind: TrackKind, target: number, c: CharacterDoc, d: Derived, feature: string | null = null): CharacterDoc | Result {
   const cur = kind === "hp" ? c.state.hpMarked : kind === "stress" ? c.state.stressMarked : kind === "hope" ? c.state.hope : c.state.armorMarked;
   const delta = target - cur;
   if (delta === 0) return c;
   switch (kind) {
     case "hp": return delta > 0 ? markHp(c, d, delta) : clearHp(c, -delta);
     case "stress": return delta > 0 ? markStress(c, d, delta) : clearStress(c, -delta);
-    case "armor": return delta > 0 ? markArmor(c, d, delta) : clearArmor(c, -delta);
+    // marking slots also triggers what the armor does (Painful: mark a Stress; Divine: gain a Hope)
+    case "armor": return delta > 0 ? markArmorWithEffects(c, d, feature, delta) : clearArmor(c, -delta);
     case "hope": {
       const doc = structuredClone(c);
       doc.state.hope = Math.max(0, Math.min(d.hopeMax, target));
@@ -48,12 +51,12 @@ function setTrack(kind: TrackKind, target: number, c: CharacterDoc, d: Derived):
   }
 }
 
-export function TapTrack({ kind, c, d, act }: PlayCtx & { kind: TrackKind }) {
+export function TapTrack({ kind, c, d, reg, act }: PlayCtx & { kind: TrackKind }) {
   const t = TRACKS[kind];
   const marked = kind === "hp" ? c.state.hpMarked : kind === "stress" ? c.state.stressMarked : kind === "hope" ? c.state.hope : c.state.armorMarked;
   const max = kind === "hp" ? d.hpMax.total : kind === "stress" ? d.stressMax.total : kind === "hope" ? d.hopeMax : d.armorScore.total;
   const verb = kind === "hope" ? "" : " marked";
-  const go = (target: number) => act((x) => setTrack(kind, Math.max(0, Math.min(max, target)), x, d));
+  const go = (target: number) => act((x) => setTrack(kind, Math.max(0, Math.min(max, target)), x, d, kind === "armor" ? armorFeature(x, reg) : null));
   return (
     <div className="track" role="group" aria-label={`${t.label}: ${marked} of ${max}${verb}`}>
       <div className="track-label">
@@ -133,10 +136,16 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
   const [damage, setDamage] = useState<DamageRoll | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [applied, setApplied] = useState<string[]>([]);
+  const [hitNotes, setHitNotes] = useState<string[]>([]);
+  const [hitApplied, setHitApplied] = useState(false);
+  const weaponEntry = reg.get(preset?.weaponId, "weapon");
+  const d6 = (sides: number) => rollDie(sides, cryptoRng);
 
   const roll = () => {
     setError(null);
     setDamage(null);
+    setHitNotes([]);
+    setHitApplied(false);
     const helpDice = help.split(/[\s,]+/).map(Number).filter((n) => n >= 1 && n <= 6);
     const mods: Mod[] = [
       ...(trait ? [{ label: cap(trait), value: traitValue(d, trait) }] : []),
@@ -159,6 +168,8 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
     // Wizard, Strange Patterns: your chosen number on a Duality Die
     const sp = Number(c.build.featureChoices["strange-patterns"]);
     if (sp && (r.hope === sp || r.fear === sp) && d.features.some((f) => f.feature.name === "Strange Patterns")) notes.push(`Strange Patterns (${sp}): gain a Hope or clear a Stress.`);
+    // Reloading: roll a d6 after every attack with the weapon
+    if (weaponEntry && !reaction) notes.push(...afterAttack(weaponEntry, d6));
 
     setResult(r);
     setApplied(notes);
@@ -172,7 +183,30 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
   const rollDmg = () => {
     if (!weapon) return;
     const crit = result?.kind === "crit" && !result.reaction;
-    const r = rollDamageDice(weapon.groups, weapon.bonus, crit);
+    let r: DamageRoll;
+    const notes: string[] = [];
+    if (weaponEntry) {
+      const g = rollGearDamage(weapon.groups, weapon.bonus, crit, damageRules(weaponEntry, c, reg, { level: d.level, agility: d.traits.agility.total }));
+      r = g;
+      notes.push(...g.notes);
+      // a damage roll means the attack hit: apply the weapon's on-hit effects once per attack (Painful, Invigorating, Lifestealing; Bloodthirsty armor)
+      if (!hitApplied) {
+        const h = onHit(weaponEntry, c, reg, crit, d6);
+        if (h.stress || h.clearStress || h.clearHp) {
+          act((x) => {
+            let doc = x;
+            const extra: string[] = [];
+            if (h.stress) { const s = markStress(doc, d, h.stress); doc = s.doc; extra.push(...s.notes); }
+            if (h.clearStress) doc = clearStress(doc, h.clearStress);
+            if (h.clearHp) doc = clearHp(doc, h.clearHp);
+            return { doc, notes: extra };
+          });
+        }
+        notes.push(...h.notes);
+        setHitApplied(true);
+      }
+    } else r = rollDamageDice(weapon.groups, weapon.bonus, crit);
+    setHitNotes(notes);
     setDamage(r);
     logRoll({ characterId: c.id, kind: "damage", label: `${weapon.name} damage${crit ? " (critical)" : ""}`, summary: `${r.total} ${weapon.type}`, detail: `${r.formula}: [${r.dice.join(", ")}]${r.bonus ? ` ${formatMod(r.bonus)}` : ""}${r.crit ? ` +${r.critBonus} crit` : ""}`, applied: [] }, remote);
   };
@@ -243,6 +277,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
                   <strong>{damage.total}</strong> {weapon?.type} damage <span className="hint">({damage.formula}: {damage.dice.join(" + ")}{damage.bonus ? ` ${formatMod(damage.bonus)}` : ""}{damage.crit ? ` + ${damage.critBonus} crit` : ""})</span>
                 </p>
               )}
+              {hitNotes.length > 0 && <ul className="plain gear-notes">{hitNotes.map((n, i) => <li key={i}>{n}</li>)}</ul>}
             </div>
           )}
         </div>
@@ -272,15 +307,18 @@ function Stepper({ id, label, value, set, min = 0 }: { id: string; label: string
 
 // ---------- damage taken ----------
 
-export function DamagePanel({ c, d, act, remote }: PlayCtx) {
+export function DamagePanel({ c, d, reg, act, remote }: PlayCtx) {
   const settings = useSettings();
   const [amount, setAmount] = useState("");
   const [useArmor, setUseArmor] = useState(true);
   const [resistant, setResistant] = useState(false);
   const [immune, setImmune] = useState(false);
   const [direct, setDirect] = useState(false);
+  const [magic, setMagic] = useState(false);
+  const feature = armorFeature(c, reg);
+  const typed = feature === "Warded" || feature === "Physical" || feature === "Magic";
   const n = Number(amount);
-  const opts = { useArmor, resistant, immune, direct, massive: settings.dice.massiveDamage };
+  const opts = { useArmor, resistant, immune, direct, massive: settings.dice.massiveDamage, armorFeature: feature, damageType: (magic ? "mag" : "phy") as "phy" | "mag" };
   const plan = amount ? planDamage(n, d, c, opts) : null;
   const armorFree = d.armorScore.total - c.state.armorMarked;
   return (
@@ -303,6 +341,7 @@ export function DamagePanel({ c, d, act, remote }: PlayCtx) {
         <label className="toggle"><input type="checkbox" checked={resistant} onChange={(e) => setResistant(e.target.checked)} /> <TermLink slug="resistance" label="Resistant" /></label>
         <label className="toggle"><input type="checkbox" checked={immune} onChange={(e) => setImmune(e.target.checked)} /> <TermLink slug="immunity" label="Immune" /></label>
         <label className="toggle"><input type="checkbox" checked={direct} onChange={(e) => setDirect(e.target.checked)} /> <TermLink slug="direct-damage" label="Direct damage" /></label>
+        {typed && <label className="toggle"><input type="checkbox" checked={magic} onChange={(e) => setMagic(e.target.checked)} /> Magic damage <small className="hint">({feature} armor)</small></label>}
       </div>
       {plan && <p className="hint" aria-live="polite">{plan.steps.join(" ")} → mark {plan.hp} HP.</p>}
     </section>
