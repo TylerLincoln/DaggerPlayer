@@ -100,5 +100,20 @@ lines.push(
   }),
   "",
 );
+lines.push(
+  "## Ranger companion (Beastbound)",
+  "",
+  "`state.companion`: `{ name, kind, experiences: [{ id, name, bonus: 2 }, …two], attack, damageType: \"phy\" | \"mag\", baseStress: 3, stressMarked }`.",
+  "Each level-up then records `companionOption` (one per level, each option once) and, at levels 2, 5 and 8, `companionExperience: { id, name, bonus: 2 }`.",
+  "",
+  "| companionOption | meaning |",
+  "| --- | --- |",
+  ...p.companionOptions.map((f, i) => {
+    const id = ["intelligent", "light-in-the-dark", "creature-comfort", "armored", "vicious", "resilient", "bonded", "aware"][i];
+    const value = id === "vicious" ? "`vicious:die` or `vicious:range`" : id === "intelligent" ? "`intelligent:<companion experience id>`" : `\`${id}\``;
+    return `| ${value} | ${f.name} |`;
+  }),
+  "",
+);
 fs.writeFileSync(`${OUT}/ids.md`, lines.join("\n"));
 console.log(`Wrote ${OUT}/character.schema.json, character-template.json, ids.md`);

@@ -6,6 +6,8 @@ import { formatMod } from "../../rules/traits.ts";
 import { Inline, TermLink } from "../../ui/RichText.tsx";
 import type { PlayCtx } from "./play.tsx";
 import { CompanionEditor } from "./CompanionEditor.tsx";
+import { CompanionOptionPicker } from "./CompanionOptionPicker.tsx";
+import { COMPANION_OPTIONS, companionGaps, setCompanionLevelUp } from "../../rules/levelup.ts";
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const FREQ_LABEL: Record<Frequency, string> = { scene: "this scene", rest: "this rest", "long-rest": "this long rest", session: "this session" };
@@ -174,6 +176,62 @@ export function CompanionPanel(ctx: PlayCtx & { onAttack: () => void }) {
       )}
       <button type="button" className="primary" onClick={onAttack}>Command {k.name} to attack</button>{" "}
       <button type="button" onClick={() => setEditing(true)}>Edit companion</button>
+      <CompanionLevelUps {...ctx} />
     </section>
+  );
+}
+
+/** Label for a stored companion option ("vicious:die" → "Vicious (damage die)"). */
+function optionLabel(reg: PlayCtx["reg"], c: PlayCtx["c"], opt: string | undefined): string {
+  if (!opt) return "not chosen";
+  const [base, detail] = opt.split(":");
+  const prog = reg.get("srd/progression/leveling", "progression");
+  const name = prog?.companionOptions[COMPANION_OPTIONS.indexOf(base)]?.name ?? base;
+  if (base === "vicious") return `${name} (${detail === "range" ? "range" : "damage die"})`;
+  if (base === "intelligent") {
+    const xp = [...(c.state.companion?.experiences ?? []), ...c.levelUps.flatMap((x) => (x.companionExperience ? [x.companionExperience] : []))].find((x) => x.id === detail);
+    return `${name} (${xp?.name ?? "?"} +1)`;
+  }
+  return name;
+}
+
+/** Companion choices for every level already gained: fill in missing ones (e.g. imported characters) or correct them. */
+function CompanionLevelUps(ctx: PlayCtx) {
+  const { c, d, reg, act } = ctx;
+  const gaps = companionGaps(c, reg);
+  const [editing, setEditing] = useState<number | null>(null);
+  const [opt, setOpt] = useState<string | undefined>(undefined);
+  const [xp, setXp] = useState("");
+  if (c.levelUps.length === 0) return null;
+  const start = (level: number) => {
+    const lu = c.levelUps.find((x) => x.level === level);
+    setEditing(level);
+    setOpt(lu?.companionOption);
+    setXp(lu?.companionExperience?.name ?? "");
+  };
+  return (
+    <details className="companion-levels" open={gaps.length > 0}>
+      <summary>
+        Level-up options{gaps.length > 0 && <strong className="needs"> · {gaps.length} level{gaps.length > 1 ? "s" : ""} need a choice</strong>}
+      </summary>
+      <ul className="plain">
+        {c.levelUps.map((lu) => (
+          <li key={lu.level} className={gaps.includes(lu.level) ? "gap" : ""}>
+            <span>
+              <strong>Level {lu.level}:</strong> {optionLabel(reg, c, lu.companionOption)}
+              {lu.companionExperience && <> · new Experience: {lu.companionExperience.name} +2</>}
+            </span>{" "}
+            <button type="button" className="link" onClick={() => start(lu.level)}>{lu.companionOption ? "Change" : "Choose"}</button>
+            {editing === lu.level && (
+              <form onSubmit={(e) => { e.preventDefault(); if (opt) act((x) => setCompanionLevelUp(x, reg, lu.level, opt, xp.trim() ? { name: xp.trim() } : undefined)); setEditing(null); }}>
+                <CompanionOptionPicker c={c} d={d} reg={reg} level={lu.level} idPrefix={`cl-${lu.level}`} option={opt} experienceName={xp} onOption={setOpt} onExperience={setXp} />
+                <button type="submit" className="primary" disabled={!opt}>Save level {lu.level}</button>{" "}
+                <button type="button" onClick={() => setEditing(null)}>Cancel</button>
+              </form>
+            )}
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }

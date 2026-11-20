@@ -5,7 +5,8 @@ import { derive, type Derived, type Lookup } from "./derive.ts";
 import { type Rng, roll } from "./dice.ts";
 import { LOADOUT_MAX } from "./levelup.ts";
 
-export class RuleError extends Error {}
+export { RuleError } from "./errors.ts";
+import { RuleError } from "./errors.ts";
 
 export interface Result {
   doc: CharacterDoc;

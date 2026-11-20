@@ -170,7 +170,12 @@
     "resources": {},
     "conditions": [],
     "effects": [],
-    "beastformId": null
+    "beastformId": null,
+    "beastformEvolutionTrait": null,
+    "companion": null,
+    "rests": {
+      "shortInARow": 0
+    }
   },
   "notes": {
     "session": "Owe Kaz a favor.",

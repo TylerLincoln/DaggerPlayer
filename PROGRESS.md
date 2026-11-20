@@ -210,6 +210,11 @@ Smaller gaps, closed 2026-11-10:
   - a new companion Experience at levels 2/5/8
   - companion Stress clears when yours does on a rest
 - **`srd-frames` equipment:** 76 weapons and 16 armor from Everyday Hero (Tier 1), Western and Monster Hunting. Tier-scaled items are one entry per tier ("Revolver (Tier 2)"), selectable once the frames pack is on.
+- **Companion level-ups** (2026-11-20):
+  - The wizard always asks for a Beastbound Ranger's companion option (setting the companion up inline if missing).
+  - The sheet's companion panel lists every level's choice, flags missing ones (e.g. imported characters), and lets you fill in or change them. The same rules apply: each option once, Vicious die/range, Intelligent on a real Companion Experience, a new +2 Experience at levels 2/5/8.
+  - The import kit documents the companion fields.
+- **Secondary weapons** (2026-11-20): Primary/Secondary weapon slots on the Gear tab. Equip directly from the list or from inventory; burden is enforced, except for Warriors (Combat Training ignores burden, also via multiclass).
 - **Code splitting:** the main bundle went from ~600 KB to 257 KB (80 KB gzipped). Route chunks are prefetched after start-up so offline still covers every screen.
 - **Tests:** 136 in total.
 

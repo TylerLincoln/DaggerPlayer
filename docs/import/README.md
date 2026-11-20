@@ -29,6 +29,7 @@ Attach `character-template.json`, `character.schema.json`, `ids.md` and your she
 >     - `exchange: null` unless a card was swapped
 >   - Advancement option ids, extra fields and slots per tier are at the end of `ids.md`. Respect the slot counts.
 > - **Missing history.** If my sheet doesn't show which advancements I took at which level, reconstruct a plausible history that reproduces my current HP slots, Stress slots, Evasion, Proficiency, trait totals and Experience bonuses. Remember the starting values come from the class and from ancestry/subclass features. **List every guess you made** after the JSON.
+> - **Ranger companion (Beastbound only).** Put the companion in `state.companion` (format at the end of `ids.md`). For each level-up, set `companionOption` to the option I took that level (each option once), and at levels 2, 5 and 8 also set `companionExperience`. If my sheet doesn't say which option came at which level, spread the marked options across my levels in any order and list that as a guess.
 > - **Cards.** `build.domainCardIds` is the two level-1 cards chosen at creation. Every card I hold must be either a starting card or a level-up card. `state.loadout` holds up to 5 active cards; the rest go in `state.vault`.
 > - **Current state.** `state` holds the current table state:
 >   - marked HP, Stress and Armor Slots

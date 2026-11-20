@@ -647,6 +647,82 @@ Slug rule: lower-case the name, drop apostrophes, `&` → `and`, any other run o
 | `srd/weapon/improved-arcane-frame-wheelchair` | Improved Arcane-Frame Wheelchair | tier 2 primary |
 | `srd/weapon/advanced-arcane-frame-wheelchair` | Advanced Arcane-Frame Wheelchair | tier 3 primary |
 | `srd/weapon/legendary-arcane-frame-wheelchair` | Legendary Arcane-Frame Wheelchair | tier 4 primary |
+| `srd-frames/weapon/cleaver` | Cleaver | tier 1 primary |
+| `srd-frames/weapon/sharpened-rake` | Sharpened Rake | tier 1 primary, two-handed |
+| `srd-frames/weapon/butchers-axe` | Butcher’s Axe | tier 1 primary, two-handed |
+| `srd-frames/weapon/iron-skillet` | Iron Skillet | tier 1 primary |
+| `srd-frames/weapon/pitchfork` | Pitchfork | tier 1 primary, two-handed |
+| `srd-frames/weapon/sledgehammer` | Sledgehammer | tier 1 primary, two-handed |
+| `srd-frames/weapon/cooking-knife` | Cooking Knife | tier 1 primary |
+| `srd-frames/weapon/walking-staff` | Walking Staff | tier 1 primary, two-handed |
+| `srd-frames/weapon/rolling-pin` | Rolling Pin | tier 1 primary |
+| `srd-frames/weapon/sickle` | Sickle | tier 1 primary |
+| `srd-frames/weapon/forge-poker` | Forge Poker | tier 1 primary, two-handed |
+| `srd-frames/weapon/crop-scythe` | Crop Scythe | tier 1 primary, two-handed |
+| `srd-frames/weapon/fishing-rod` | Fishing Rod | tier 1 primary, two-handed |
+| `srd-frames/weapon/slingshot` | Slingshot | tier 1 primary, two-handed |
+| `srd-frames/weapon/firework-launcher` | Firework Launcher | tier 1 primary, two-handed |
+| `srd-frames/weapon/enchanted-hammer` | Enchanted Hammer | tier 1 primary |
+| `srd-frames/weapon/enchanted-mop` | Enchanted Mop | tier 1 primary, two-handed |
+| `srd-frames/weapon/enchanted-scissors` | Enchanted Scissors | tier 1 primary |
+| `srd-frames/weapon/enchanted-broomstick` | Enchanted Broomstick | tier 1 primary, two-handed |
+| `srd-frames/weapon/exploding-potions` | Exploding Potions | tier 1 primary |
+| `srd-frames/weapon/enchanted-forge-lighter` | Enchanted Forge Lighter | tier 1 primary |
+| `srd-frames/weapon/enchanted-boomerang` | Enchanted Boomerang | tier 1 primary, two-handed |
+| `srd-frames/weapon/enchanted-kite` | Enchanted Kite | tier 1 primary, two-handed |
+| `srd-frames/weapon/whisk-wand` | Whisk Wand | tier 1 primary |
+| `srd-frames/weapon/sparkling-staff` | Sparkling Staff | tier 1 primary, two-handed |
+| `srd-frames/weapon/large-fork` | Large Fork | tier 1 secondary |
+| `srd-frames/weapon/barrel-lid-shield` | Barrel Lid Shield | tier 1 secondary |
+| `srd-frames/weapon/table-shield` | Table Shield | tier 1 secondary |
+| `srd-frames/weapon/paring-knife` | Paring Knife | tier 1 secondary |
+| `srd-frames/weapon/festival-whip` | Festival Whip | tier 1 secondary |
+| `srd-frames/weapon/towline-hook` | Towline Hook | tier 1 secondary |
+| `srd-frames/weapon/flare-launcher` | Flare Launcher | tier 1 secondary |
+| `srd-frames/weapon/revolver-tier-1` | Revolver (Tier 1) | tier 1 primary |
+| `srd-frames/weapon/revolver-tier-2` | Revolver (Tier 2) | tier 2 primary |
+| `srd-frames/weapon/revolver-tier-3` | Revolver (Tier 3) | tier 3 primary |
+| `srd-frames/weapon/revolver-tier-4` | Revolver (Tier 4) | tier 4 primary |
+| `srd-frames/weapon/rifle-tier-1` | Rifle (Tier 1) | tier 1 primary, two-handed |
+| `srd-frames/weapon/rifle-tier-2` | Rifle (Tier 2) | tier 2 primary, two-handed |
+| `srd-frames/weapon/rifle-tier-3` | Rifle (Tier 3) | tier 3 primary, two-handed |
+| `srd-frames/weapon/rifle-tier-4` | Rifle (Tier 4) | tier 4 primary, two-handed |
+| `srd-frames/weapon/shotgun-tier-1` | Shotgun (Tier 1) | tier 1 primary, two-handed |
+| `srd-frames/weapon/shotgun-tier-2` | Shotgun (Tier 2) | tier 2 primary, two-handed |
+| `srd-frames/weapon/shotgun-tier-3` | Shotgun (Tier 3) | tier 3 primary, two-handed |
+| `srd-frames/weapon/shotgun-tier-4` | Shotgun (Tier 4) | tier 4 primary, two-handed |
+| `srd-frames/weapon/lasso-tier-1` | Lasso (Tier 1) | tier 1 secondary |
+| `srd-frames/weapon/lasso-tier-2` | Lasso (Tier 2) | tier 2 secondary |
+| `srd-frames/weapon/lasso-tier-3` | Lasso (Tier 3) | tier 3 secondary |
+| `srd-frames/weapon/lasso-tier-4` | Lasso (Tier 4) | tier 4 secondary |
+| `srd-frames/weapon/small-revolver-tier-1` | Small Revolver (Tier 1) | tier 1 secondary |
+| `srd-frames/weapon/small-revolver-tier-2` | Small Revolver (Tier 2) | tier 2 secondary |
+| `srd-frames/weapon/small-revolver-tier-3` | Small Revolver (Tier 3) | tier 3 secondary |
+| `srd-frames/weapon/small-revolver-tier-4` | Small Revolver (Tier 4) | tier 4 secondary |
+| `srd-frames/weapon/blessed-brass-knuckles-tier-1` | Blessed Brass Knuckles (Tier 1) | tier 1 primary |
+| `srd-frames/weapon/blessed-brass-knuckles-tier-2` | Blessed Brass Knuckles (Tier 2) | tier 2 primary |
+| `srd-frames/weapon/blessed-brass-knuckles-tier-3` | Blessed Brass Knuckles (Tier 3) | tier 3 primary |
+| `srd-frames/weapon/blessed-brass-knuckles-tier-4` | Blessed Brass Knuckles (Tier 4) | tier 4 primary |
+| `srd-frames/weapon/holy-shotgun-tier-1` | Holy Shotgun (Tier 1) | tier 1 primary, two-handed |
+| `srd-frames/weapon/holy-shotgun-tier-2` | Holy Shotgun (Tier 2) | tier 2 primary, two-handed |
+| `srd-frames/weapon/holy-shotgun-tier-3` | Holy Shotgun (Tier 3) | tier 3 primary, two-handed |
+| `srd-frames/weapon/holy-shotgun-tier-4` | Holy Shotgun (Tier 4) | tier 4 primary, two-handed |
+| `srd-frames/weapon/repeating-crossbow-tier-1` | Repeating Crossbow (Tier 1) | tier 1 primary, two-handed |
+| `srd-frames/weapon/repeating-crossbow-tier-2` | Repeating Crossbow (Tier 2) | tier 2 primary, two-handed |
+| `srd-frames/weapon/repeating-crossbow-tier-3` | Repeating Crossbow (Tier 3) | tier 3 primary, two-handed |
+| `srd-frames/weapon/repeating-crossbow-tier-4` | Repeating Crossbow (Tier 4) | tier 4 primary, two-handed |
+| `srd-frames/weapon/wooden-stake-tier-1` | Wooden Stake (Tier 1) | tier 1 secondary |
+| `srd-frames/weapon/wooden-stake-tier-2` | Wooden Stake (Tier 2) | tier 2 secondary |
+| `srd-frames/weapon/wooden-stake-tier-3` | Wooden Stake (Tier 3) | tier 3 secondary |
+| `srd-frames/weapon/wooden-stake-tier-4` | Wooden Stake (Tier 4) | tier 4 secondary |
+| `srd-frames/weapon/hallowed-shield-tier-1` | Hallowed Shield (Tier 1) | tier 1 secondary |
+| `srd-frames/weapon/hallowed-shield-tier-2` | Hallowed Shield (Tier 2) | tier 2 secondary |
+| `srd-frames/weapon/hallowed-shield-tier-3` | Hallowed Shield (Tier 3) | tier 3 secondary |
+| `srd-frames/weapon/hallowed-shield-tier-4` | Hallowed Shield (Tier 4) | tier 4 secondary |
+| `srd-frames/weapon/chain-whip-tier-1` | Chain Whip (Tier 1) | tier 1 secondary |
+| `srd-frames/weapon/chain-whip-tier-2` | Chain Whip (Tier 2) | tier 2 secondary |
+| `srd-frames/weapon/chain-whip-tier-3` | Chain Whip (Tier 3) | tier 3 secondary |
+| `srd-frames/weapon/chain-whip-tier-4` | Chain Whip (Tier 4) | tier 4 secondary |
 
 ## Armor
 
@@ -721,6 +797,22 @@ Slug rule: lower-case the name, drop apostrophes, `&` → `and`, any other run o
 | `srd/armor/hallowed-heroplate` | Hallowed Heroplate | tier 4 |
 | `srd/armor/resonant-harness` | Resonant Harness | tier 4 |
 | `srd/armor/savior-chainmail` | Savior Chainmail | tier 4 |
+| `srd-frames/armor/quilted-clothing` | Quilted Clothing | tier 1 |
+| `srd-frames/armor/leather-apron` | Leather Apron | tier 1 |
+| `srd-frames/armor/tree-bark-armor` | Tree Bark Armor | tier 1 |
+| `srd-frames/armor/baking-tray-breastplate` | Baking Tray Breastplate | tier 1 |
+| `srd-frames/armor/coffinwood-armor-tier-1` | Coffinwood Armor (Tier 1) | tier 1 |
+| `srd-frames/armor/coffinwood-armor-tier-2` | Coffinwood Armor (Tier 2) | tier 2 |
+| `srd-frames/armor/coffinwood-armor-tier-3` | Coffinwood Armor (Tier 3) | tier 3 |
+| `srd-frames/armor/coffinwood-armor-tier-4` | Coffinwood Armor (Tier 4) | tier 4 |
+| `srd-frames/armor/leather-longcoat-tier-1` | Leather Longcoat (Tier 1) | tier 1 |
+| `srd-frames/armor/leather-longcoat-tier-2` | Leather Longcoat (Tier 2) | tier 2 |
+| `srd-frames/armor/leather-longcoat-tier-3` | Leather Longcoat (Tier 3) | tier 3 |
+| `srd-frames/armor/leather-longcoat-tier-4` | Leather Longcoat (Tier 4) | tier 4 |
+| `srd-frames/armor/silverweave-armor-tier-1` | Silverweave Armor (Tier 1) | tier 1 |
+| `srd-frames/armor/silverweave-armor-tier-2` | Silverweave Armor (Tier 2) | tier 2 |
+| `srd-frames/armor/silverweave-armor-tier-3` | Silverweave Armor (Tier 3) | tier 3 |
+| `srd-frames/armor/silverweave-armor-tier-4` | Silverweave Armor (Tier 4) | tier 4 |
 
 ## Consumables
 
@@ -1014,3 +1106,19 @@ Slug rule: lower-case the name, drop apostrophes, `&` → `and`, any other run o
 | `subclass` | `subclassId`: your subclass id | — / 1 / 1 | 1 |
 | `proficiency` |  | — / 2 / 2 | 2 |
 | `multiclass` | `classId`, `domainId`, `subclassId` | — / 2 / 2 | 2 |
+
+## Ranger companion (Beastbound)
+
+`state.companion`: `{ name, kind, experiences: [{ id, name, bonus: 2 }, …two], attack, damageType: "phy" | "mag", baseStress: 3, stressMarked }`.
+Each level-up then records `companionOption` (one per level, each option once) and, at levels 2, 5 and 8, `companionExperience: { id, name, bonus: 2 }`.
+
+| companionOption | meaning |
+| --- | --- |
+| `intelligent:<companion experience id>` | Intelligent |
+| `light-in-the-dark` | Light in the Dark |
+| `creature-comfort` | Creature Comfort |
+| `armored` | Armored |
+| `vicious:die` or `vicious:range` | Vicious |
+| `resilient` | Resilient |
+| `bonded` | Bonded |
+| `aware` | Aware |

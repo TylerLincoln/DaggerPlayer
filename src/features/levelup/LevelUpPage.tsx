@@ -9,7 +9,9 @@ import { ACHIEVEMENT_LEVELS, derive, diffDerived, formatChange, tierOf } from ".
 import { type Advancement, applyLevelUp, cardLevelLimit, emptyLevelUp, markedTraits, MAX_LEVEL, optionStatus, ownedCards, validateLevelUp } from "../../rules/levelup.ts";
 import { Inline } from "../../ui/RichText.tsx";
 import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
-import { COMPANION_OPTIONS } from "../../rules/levelup.ts";
+import { isBeastbound } from "../../rules/levelup.ts";
+import { CompanionEditor } from "../sheet/CompanionEditor.tsx";
+import { CompanionOptionPicker } from "../sheet/CompanionOptionPicker.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -240,51 +242,22 @@ export function LevelUpPage() {
         ));
       })}
 
-      {before.companion && (
+      {isBeastbound(c, reg) && (
         <section aria-labelledby="comp-lu">
           <h2 id="comp-lu">Companion</h2>
-          <p>Choose one option for {before.companion.name || "your companion"} (SRD p. 22).</p>
-          {(() => {
-            const prog = reg.get("srd/progression/leveling", "progression");
-            const taken = c.levelUps.map((x) => x.companionOption?.split(":")[0]);
-            const cur = draft.companionOption ?? "";
-            const base = cur.split(":")[0];
-            return (
-              <>
-                {COMPANION_OPTIONS.map((id, i) => {
-                  const f = prog?.companionOptions[i];
-                  return (
-                    <label key={id} className="radio">
-                      <input type="radio" name="comp-opt" checked={base === id} disabled={taken.includes(id)} onChange={() => set((x) => ((x.companionOption = id === "vicious" ? "vicious:die" : id), x))} />
-                      <span><strong>{f?.name ?? id}</strong>{f && <>: <Inline text={f.text} links={false} /></>}{taken.includes(id) && <small> (already taken)</small>}</span>
-                    </label>
-                  );
-                })}
-                {base === "vicious" && (
-                  <fieldset>
-                    <legend>Vicious: increase</legend>
-                    <label className="radio"><input type="radio" name="vicious" checked={cur === "vicious:die"} onChange={() => set((x) => ((x.companionOption = "vicious:die"), x))} /> Damage die ({before.companion.die} → next)</label>
-                    <label className="radio"><input type="radio" name="vicious" checked={cur === "vicious:range"} onChange={() => set((x) => ((x.companionOption = "vicious:range"), x))} /> Range ({before.companion.range} → next)</label>
-                  </fieldset>
-                )}
-                {base === "intelligent" && (
-                  <fieldset>
-                    <legend>Intelligent: +1 to a Companion Experience</legend>
-                    {before.companion.experiences.map((x) => (
-                      <label key={x.id} className="radio"><input type="radio" name="intel" checked={cur === `intelligent:${x.id}`} onChange={() => set((y) => ((y.companionOption = `intelligent:${x.id}`), y))} /> {x.name}</label>
-                    ))}
-                  </fieldset>
-                )}
-                {ACHIEVEMENT_LEVELS.includes(level) && (
-                  <div className="field">
-                    <label htmlFor="comp-new-xp">Your companion's new Experience (+2)</label>
-                    <input id="comp-new-xp" value={draft.companionExperience?.name ?? ""} maxLength={80}
-                      onChange={(e) => set((x) => ((x.companionExperience = { id: x.companionExperience?.id ?? crypto.randomUUID(), name: e.target.value, bonus: 2 }), x))} />
-                  </div>
-                )}
-              </>
-            );
-          })()}
+          {!c.state.companion ? (
+            <>
+              <p>Your Beastbound subclass gives you an animal companion, but it hasn't been set up yet. Set it up to choose its level-up option (SRD pp. 21–22).</p>
+              <CompanionEditor value={null} onChange={(k) => update((x) => ((x.state.companion = k), x))} />
+            </>
+          ) : (
+            <>
+              <p>When you level up, choose one option for {before.companion?.name || "your companion"} and mark it (SRD p. 22).</p>
+              <CompanionOptionPicker c={c} d={before} reg={reg} level={level} idPrefix="lu" option={draft.companionOption} experienceName={draft.companionExperience?.name ?? ""}
+                onOption={(v) => set((x) => ((x.companionOption = v), x))}
+                onExperience={(name) => set((x) => ((x.companionExperience = { id: x.companionExperience?.id ?? crypto.randomUUID(), name, bonus: 2 }), x))} />
+            </>
+          )}
         </section>
       )}
 

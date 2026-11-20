@@ -345,6 +345,21 @@
                 "type": "null"
               }
             ]
+          },
+          "choices": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "companionOption": {
+            "type": "string"
+          },
+          "companionExperience": {
+            "$ref": "#/$defs/__schema2"
           }
         },
         "required": [
@@ -480,9 +495,21 @@
             "type": "string"
           },
           "additionalProperties": {
-            "type": "integer",
-            "minimum": -9007199254740991,
-            "maximum": 9007199254740991
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                }
+              }
+            ]
           }
         },
         "conditions": {
@@ -504,6 +531,21 @@
               },
               "on": {
                 "type": "boolean"
+              },
+              "until": {
+                "default": null,
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "rest",
+                      "long-rest"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             },
             "required": [
@@ -517,6 +559,97 @@
           "type": [
             "string",
             "null"
+          ]
+        },
+        "beastformEvolutionTrait": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "companion": {
+          "default": null,
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "maxLength": 80
+                },
+                "kind": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "experiences": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/__schema2"
+                  }
+                },
+                "attack": {
+                  "type": "string",
+                  "maxLength": 200
+                },
+                "damageType": {
+                  "type": "string",
+                  "enum": [
+                    "phy",
+                    "mag"
+                  ]
+                },
+                "baseStress": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 12
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "stressMarked": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "name",
+                "kind",
+                "experiences",
+                "attack",
+                "damageType",
+                "baseStress",
+                "stressMarked"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rests": {
+          "default": {
+            "shortInARow": 0
+          },
+          "type": "object",
+          "properties": {
+            "shortInARow": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": [
+            "shortInARow"
           ]
         }
       },

@@ -372,3 +372,8 @@ label.radio { display: flex; gap: 8px; align-items: center; min-height: 36px; }
 .dice-faces.left { justify-content: flex-start; flex-wrap: wrap; margin: 6px 0; }
 button.die { min-height: 44px; padding: 0; background: var(--surface); color: var(--text); }
 .companion-editor { margin-top: 16px; }
+.companion-levels { margin-top: 12px; }
+.companion-levels summary { cursor: pointer; padding: 6px 0; }
+.companion-levels .needs { color: var(--danger); }
+.companion-levels li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.companion-levels li.gap > span { color: var(--danger); }

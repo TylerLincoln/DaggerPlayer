@@ -2,6 +2,7 @@
 // Where the class sheet and the SRD disagree, the SRD wins (owner ruling 2026-11-06).
 import { TRAITS, type EntryOf, type Trait } from "../../content/schema/index.ts";
 import type { CharacterDoc, LevelUp } from "./character.ts";
+import { RuleError } from "./errors.ts";
 import { ACHIEVEMENT_LEVELS, derive, HP_MAX, type Lookup, ownedCards, STRESS_MAX, tierOf } from "./derive.ts";
 
 export { ownedCards };
@@ -184,16 +185,9 @@ export function validateLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): s
   }
 
   // companion (Beastbound, p. 22): one option per level-up, each option once; a new Experience at 2, 5, 8
-  if (c.state.companion && derive(c, lookup).companion) {
-    const taken = c.levelUps.map((x) => x.companionOption?.split(":")[0]).filter(Boolean);
-    const opt = lu.companionOption;
-    const base = opt?.split(":")[0];
-    if (!opt) errs.push("Choose a level-up option for your companion.");
-    else if (!COMPANION_OPTIONS.includes(base!)) errs.push("Unknown companion option.");
-    else if (taken.includes(base)) errs.push("Your companion already has that option.");
-    else if (base === "vicious" && !/^vicious:(die|range)$/.test(opt)) errs.push("Vicious: choose damage die or range.");
-    else if (base === "intelligent" && !opt.slice(12)) errs.push("Intelligent: choose a Companion Experience.");
-    if (ACHIEVEMENT_LEVELS.includes(level) && !lu.companionExperience?.name.trim()) errs.push("Your companion also gains a new Experience at +2: name it.");
+  if (isBeastbound(c, lookup)) {
+    if (!c.state.companion) errs.push("Set up your companion (Beastbound) before leveling up.");
+    else errs.push(...companionErrors(c, level, lu.companionOption, lu.companionExperience));
   }
 
   // step four
@@ -213,6 +207,54 @@ export function validateLevelUp(c: CharacterDoc, lu: LevelUp, lookup: Lookup): s
 }
 
 export const COMPANION_OPTIONS = ["intelligent", "light-in-the-dark", "creature-comfort", "armored", "vicious", "resilient", "bonded", "aware"];
+
+/** The character has a Beastbound subclass (primary or multiclass) and so a companion. */
+export function isBeastbound(c: CharacterDoc, lookup: Lookup): boolean {
+  return derive(c, lookup).features.some((f) => f.source.startsWith("Beastbound"));
+}
+
+/**
+ * Problems with a companion level-up choice at `level` (p. 22): each option once across all levels
+ * (the level being edited doesn't count against itself), Vicious needs die/range, Intelligent needs a
+ * Companion Experience, and levels 2, 5 and 8 also give the companion a new +2 Experience.
+ */
+export function companionErrors(c: CharacterDoc, level: number, option: string | undefined, experience?: { name: string }): string[] {
+  const errs: string[] = [];
+  const taken = c.levelUps.filter((x) => x.level !== level).map((x) => x.companionOption?.split(":")[0]).filter(Boolean);
+  const base = option?.split(":")[0];
+  if (!option) errs.push("Choose a level-up option for your companion.");
+  else if (!COMPANION_OPTIONS.includes(base!)) errs.push("Unknown companion option.");
+  else if (taken.includes(base)) errs.push("Your companion already has that option.");
+  else if (base === "vicious" && !/^vicious:(die|range)$/.test(option)) errs.push("Vicious: choose damage die or range.");
+  else if (base === "intelligent") {
+    const id = option.slice(12);
+    const xps = [...(c.state.companion?.experiences ?? []), ...c.levelUps.filter((x) => x.level < level).flatMap((x) => (x.companionExperience ? [x.companionExperience] : []))];
+    if (!xps.some((x) => x.id === id)) errs.push("Intelligent: choose a Companion Experience.");
+  }
+  if (ACHIEVEMENT_LEVELS.includes(level) && !experience?.name.trim()) errs.push("Your companion also gains a new Experience at +2: name it.");
+  return errs;
+}
+
+/** Levels already gained whose companion choice is missing (e.g. imported characters). */
+export function companionGaps(c: CharacterDoc, lookup: Lookup): number[] {
+  if (!c.state.companion || !isBeastbound(c, lookup)) return [];
+  return c.levelUps.filter((lu) => companionErrors(c, lu.level, lu.companionOption, lu.companionExperience).length > 0).map((lu) => lu.level);
+}
+
+/** Set or correct the companion choice for a level already gained. */
+export function setCompanionLevelUp(c: CharacterDoc, lookup: Lookup, level: number, option: string, experience?: { id?: string; name: string }): CharacterDoc {
+  if (!isBeastbound(c, lookup) || !c.state.companion) throw new RuleError("Set up your companion first.");
+  const lu = c.levelUps.find((x) => x.level === level);
+  if (!lu) throw new RuleError(`Level ${level} hasn't been gained yet.`);
+  const xp = experience && ACHIEVEMENT_LEVELS.includes(level) ? { id: experience.id ?? lu.companionExperience?.id ?? crypto.randomUUID(), name: experience.name, bonus: 2 } : undefined;
+  const errs = companionErrors(c, level, option, xp);
+  if (errs.length) throw new RuleError(errs.join(" "));
+  const next = structuredClone(c);
+  const target = next.levelUps.find((x) => x.level === level)!;
+  target.companionOption = option;
+  if (xp) target.companionExperience = xp;
+  return next;
+}
 
 function checkChoice(ch: NonNullable<EntryOf<"domain-card">["choices"]>[number], value: string | undefined, c: CharacterDoc, lu: LevelUp, label: string): string[] {
   if (!value) return [`${label}: ${ch.prompt}`];
