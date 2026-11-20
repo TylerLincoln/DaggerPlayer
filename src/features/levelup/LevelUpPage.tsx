@@ -33,7 +33,7 @@ function CardSelect({ id, label, value, cards, reg, onChange }: { id: string; la
       <select id={id} value={value ?? ""} onChange={(e) => onChange(e.target.value || null)}>
         <option value="">Choose a card…</option>
         {cards.sort((a, b) => a.domainId.localeCompare(b.domainId) || a.level - b.level).map((x) => (
-          <option key={x.id} value={x.id}>{reg.get(x.domainId)?.name} {x.level} · {x.name} ({x.cardType})</option>
+          <option key={x.id} value={x.id}>{x.name} ({reg.get(x.domainId)?.name} {x.level}, {x.cardType})</option>
         ))}
       </select>
     </div>
@@ -146,7 +146,7 @@ export function LevelUpPage() {
   if (!c || !draft) return <><h1>Character not found</h1><Link to="/characters">Your characters</Link></>;
   if (!c.finishedAt) return <Navigate to={`/build/${c.id}/review`} replace />;
   if (!reg) return <p role="status">Loading content…</p>;
-  if (c.levelUps.length + 1 >= MAX_LEVEL) return <><h1>{c.identity.name} is level {MAX_LEVEL}</h1><p>That's the highest level.</p><Link to={`/characters/${c.id}`}>Back</Link></>;
+  if (c.levelUps.length + 1 >= MAX_LEVEL) return <><h1>{c.identity.name} is level {MAX_LEVEL}</h1><p>That’s the highest level.</p><Link to={`/characters/${c.id}`}>Back</Link></>;
 
   const set = (fn: (x: LevelUp) => LevelUp) => setLu(fn(structuredClone(draft)));
   const level = draft.level;
@@ -168,7 +168,7 @@ export function LevelUpPage() {
   return (
     <div className="levelup">
       <h1>Level up {c.identity.name} to level {level}</h1>
-      <p className="hint">Tier {tierOf(level)}. SRD pp. 53–54.</p>
+      <p className="hint">Tier {tierOf(level)}. SRD pp. 53 to 54.</p>
 
       <section aria-labelledby="s1">
         <h2 id="s1">1. Tier achievements</h2>
@@ -195,7 +195,7 @@ export function LevelUpPage() {
               <li key={s.id} className={picks.length ? "selected" : ""}>
                 <div>
                   <Inline text={s.text} />
-                  <p className="hint">{s.slotsLeft} slot{s.slotsLeft === 1 ? "" : "s"} left{s.cost === 2 ? " · uses both picks" : ""}{!s.available && s.reason ? ` · ${s.reason}` : ""}</p>
+                  <p className="hint">{s.slotsLeft} slot{s.slotsLeft === 1 ? "" : "s"} left{s.cost === 2 ? "; uses both picks" : ""}{!s.available && s.reason ? `. ${s.reason}` : ""}</p>
                 </div>
                 <button type="button" disabled={!s.available}
                   onClick={() => set((x) => ((x.advancements = [...x.advancements, { optionId: s.id, ...(s.id === "subclass" ? { subclassId: c.build.subclassId! } : {}) }]), x))}>
@@ -254,7 +254,7 @@ export function LevelUpPage() {
           <h2 id="comp-lu">Companion</h2>
           {!c.state.companion ? (
             <>
-              <p>Your Beastbound subclass gives you an animal companion, but it hasn't been set up yet. Set it up to choose its level-up option (SRD pp. 21–22).</p>
+              <p>Your Beastbound subclass gives you an animal companion, but it hasn't been set up yet. Set it up to choose its level-up option (SRD pp. 21 to 22).</p>
               <CompanionEditor value={null} onChange={(k) => update((x) => ((x.state.companion = k), x))} />
             </>
           ) : (

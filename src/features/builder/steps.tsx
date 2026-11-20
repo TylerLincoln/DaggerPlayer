@@ -8,6 +8,7 @@ import { assignTrait, clearTrait, formatMod, isValidSpread, remainingValues } fr
 import { DomainIcon } from "../../ui/DomainIcon.tsx";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { Inline } from "../../ui/RichText.tsx";
+import { Meta } from "../../ui/Meta.tsx";
 import { EntryView } from "../compendium/EntryView.tsx";
 import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
 import { CompanionEditor } from "../sheet/CompanionEditor.tsx";
@@ -128,8 +129,8 @@ export function ClassStep() {
             summary={
               <>
                 <p className="domains">{k.domainIds.map((id) => { const dm = reg.get(id, "domain"); return <span key={id}><DomainIcon pack={dm?.pack ?? "srd"} icon={dm?.icon} size={16} /> {dm?.name} </span>; })}</p>
-                <p>Evasion {k.startingEvasion} · HP {k.startingHp}</p>
-                <p className="hint">Hope: {k.hopeFeature.name} · Class: {k.classFeatures.map((f) => f.name).join(", ")}</p>
+                <p><Meta items={[`Evasion ${k.startingEvasion}`, `HP ${k.startingHp}`]} /></p>
+                <p className="hint">Hope: {k.hopeFeature.name}. Class: {k.classFeatures.map((f) => f.name).join(", ")}.</p>
               </>
             }
           />
@@ -150,7 +151,7 @@ export function ClassStep() {
                   <>
                     <p>Spellcast trait: {s.spellcastTrait ? cap(s.spellcastTrait) : "none"}</p>
                     <p className="hint">Foundation: {s.foundation.map((f) => f.name).join(", ")}</p>
-                    <p className="hint">Later: Specialization ({s.specialization.map((f) => f.name).join(", ")}) · Mastery ({s.mastery.map((f) => f.name).join(", ")})</p>
+                    <p className="hint">Later: Specialization ({s.specialization.map((f) => f.name).join(", ")}), Mastery ({s.mastery.map((f) => f.name).join(", ")})</p>
                   </>
                 }
               />
@@ -185,7 +186,7 @@ export function HeritageStep() {
               selected={a?.kind === "single" && a.id === x.id}
               onChoose={() => update((d) => ((d.build.ancestry = { kind: "single", id: x.id }), d))}
               apply={(d) => (d.build.ancestry = { kind: "single", id: x.id })}
-              summary={<p className="hint">{x.features.map((f) => f.name).join(" · ")}</p>}
+              summary={<p className="hint">{x.features.map((f) => f.name).join(", ")}</p>}
             />
           ))}
         </ul>
@@ -211,7 +212,7 @@ export function HeritageStep() {
       <ul className="options">
         {reg.all("community").map((x) => (
           <Option key={x.id} entry={x} selected={x.id === c.build.communityId} onChoose={() => update((d) => ((d.build.communityId = x.id), d))} apply={(d) => (d.build.communityId = x.id)}
-            summary={<p className="hint">{x.feature.name} · often {x.adjectives.join(", ")}</p>} />
+            summary={<p className="hint">{x.feature.name}; often {x.adjectives.join(", ")}</p>} />
         ))}
       </ul>
       <details className="optional">
@@ -221,7 +222,7 @@ export function HeritageStep() {
           {reg.all("transformation").map((x) => (
             <Option key={x.id} entry={x} selected={x.id === c.build.transformationId}
               onChoose={() => update((d) => ((d.build.transformationId = d.build.transformationId === x.id ? null : x.id), d))}
-              apply={(d) => (d.build.transformationId = x.id)} summary={<p className="hint">{x.features.map((f) => f.name).join(" · ")}</p>} />
+              apply={(d) => (d.build.transformationId = x.id)} summary={<p className="hint">{x.features.map((f) => f.name).join(", ")}</p>} />
           ))}
         </ul>
       </details>
@@ -265,7 +266,7 @@ export function TraitsStep() {
               <button type="button" className={`trait${picked && "trait" in picked && picked.trait === tr ? " active" : ""}`} onClick={() => onTrait(tr)}
                 aria-label={`${cap(tr)}: ${t[tr] === null ? "unassigned" : formatMod(t[tr]!)}`}>
                 <span className="trait-name">{cap(tr)}</span>
-                <span className="trait-value">{t[tr] === null ? "—" : formatMod(t[tr]!)}</span>
+                <span className="trait-value">{t[tr] === null ? "?" : formatMod(t[tr]!)}</span>
               </button>
               {t[tr] !== null && <button type="button" className="link" onClick={() => update((d) => ((d.build.traits = clearTrait(d.build.traits, tr)), d))}>Clear</button>}
               {other.length > 0 && <span className="hint">Total {formatMod(total.total)} ({other.map((p) => `${p.source} ${formatMod(p.value)}`).join(", ")})</span>}
@@ -305,7 +306,7 @@ export function GearStep() {
         apply={(d) => { d.build.gear[slot] = w.id; if (clearsSecondary) d.build.gear.secondaryId = null; }}
         disabled={blockedMagic || blockedTwoHanded}
         disabledReason={blockedMagic ? "Magic weapons need a Spellcast trait (from your subclass)." : blockedTwoHanded ? "Your primary weapon is two-handed." : undefined}
-        summary={<p>{cap(w.trait)} · {RANGE[w.range]} · {dmg(w)} · {w.burden === 1 ? "One-Handed" : "Two-Handed"}{w.feature ? <> · <em>{w.feature.name}</em></> : null}</p>}
+        summary={<p><Meta items={[cap(w.trait), RANGE[w.range], dmg(w), w.burden === 1 ? "One-Handed" : "Two-Handed", w.feature && <em>{w.feature.name}</em>]} /></p>}
       />
     );
   };
@@ -328,7 +329,7 @@ export function GearStep() {
       <ul className="options">
         {reg.all("armor").filter((a) => a.tier === 1).map((a) => (
           <Option key={a.id} entry={a} selected={g.armorId === a.id} onChoose={() => update((d) => ((d.build.gear.armorId = a.id), d))} apply={(d) => (d.build.gear.armorId = a.id)}
-            summary={<p>Thresholds {a.baseThresholds.major}/{a.baseThresholds.severe} · Armor Score {a.baseScore}{a.feature ? <> · <em>{a.feature.name}</em></> : null}</p>} />
+            summary={<p><Meta items={[`Thresholds ${a.baseThresholds.major}/${a.baseThresholds.severe}`, `Armor Score ${a.baseScore}`, a.feature && <em>{a.feature.name}</em>]} /></p>} />
         ))}
       </ul>
       <h2>Starting items</h2>
@@ -443,7 +444,7 @@ export function CardsStep() {
                 <Option key={card.id} entry={card} multi selected={chosen.includes(card.id)} onChoose={() => toggle(card.id)}
                   apply={(d) => (d.build.domainCardIds = [...d.build.domainCardIds.filter((x) => x !== card.id), card.id].slice(-2))}
                   disabled={chosen.length >= 2 && !chosen.includes(card.id)} disabledReason={chosen.length >= 2 && !chosen.includes(card.id) ? "Remove a card to choose this one." : undefined}
-                  summary={<p>{cap(card.cardType)} · Recall cost {card.recallCost}</p>} />
+                  summary={<p><Meta items={[cap(card.cardType), `Recall cost ${card.recallCost}`]} /></p>} />
               ))}
             </ul>
           </section>

@@ -43,7 +43,7 @@ describe("sheet (import template character)", () => {
     expect(html).toContain("Level 2 Wayfinder Ranger");
     expect(html).toMatch(/Hit Points: 2 of 7 marked/); // Ranger 6 + 1 HP advancement
     expect(html).toMatch(/Hope: 3 of 6/);
-    expect(html).toMatch(/Major<\/small> 8–14/); // Leather 6/13 + level 2: Major 8, Severe 15
+    expect(html).toMatch(/Major<\/small> 8 to 14/); // Leather 6/13 + level 2: Major 8, Severe 15
     expect(html).toMatch(/Severe<\/small> 15\+/);
     expect(html).toContain("2d6+3 phy"); // Shortbow d6+3 at Proficiency 2 (level 2 achievement)
   });

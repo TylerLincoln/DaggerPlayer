@@ -34,7 +34,7 @@ export function Features({ features, title }: { features: Feature[]; title?: str
         <div className="feature" key={i}>
           <h3>
             {f.name}
-            {f.kind && <span className="kind"> · {cap(f.kind)}</span>}
+            {f.kind && <span className="kind"> ({f.kind})</span>}
           </h3>
           <RichText text={f.text} headingBase={4} />
           {f.questions?.length ? (
@@ -83,7 +83,7 @@ function ClassView({ e }: { e: EntryOf<"class"> }) {
             return (
               <li key={id}>
                 <EntryLink id={id} />
-                {s?.spellcastTrait && <> · Spellcast trait: {cap(s.spellcastTrait)}</>}
+                {s?.spellcastTrait && <>, spellcast trait: {cap(s.spellcastTrait)}</>}
               </li>
             );
           })}
@@ -174,7 +174,7 @@ function WeaponView({ e }: { e: EntryOf<"weapon"> }) {
       <Stats
         items={[
           ["Tier", e.tier],
-          ["Category", `${cap(e.category)} · ${e.group === "combat-wheelchair" ? "Combat wheelchair" : cap(e.group)}`],
+          ["Category", `${cap(e.category)}, ${e.group === "combat-wheelchair" ? "combat wheelchair" : e.group}`],
           ["Trait", e.trait === "spellcast" ? "Spellcast" : cap(e.trait)],
           ["Range", RANGE[e.range]],
           ["Damage", dmg],
@@ -204,7 +204,7 @@ function BeastformView({ e }: { e: EntryOf<"beastform"> }) {
           ["Examples", e.examples],
           ["Trait", e.traitBonus ? `${cap(e.traitBonus.trait)} ${signed(e.traitBonus.value)}` : null],
           ["Evasion", e.evasionBonus !== null ? signed(e.evasionBonus) : null],
-          ["Attack", e.attack ? `${RANGE[e.attack.range]} · ${cap(e.attack.trait)} · ${e.attack.damage} ${e.attack.damageType}` : null],
+          ["Attack", e.attack ? `${RANGE[e.attack.range]}, ${cap(e.attack.trait)}, ${e.attack.damage} ${e.attack.damageType}` : null],
           ["Advantage on", e.advantages.join(", ")],
         ]}
       />
@@ -226,7 +226,7 @@ function AdversaryView({ e }: { e: EntryOf<"adversary"> }) {
           ["Thresholds", th],
           ["HP", e.hp ?? "None"],
           ["Stress", e.stress ?? "None"],
-          ["Attack", `${e.attack.modifier} · ${e.attack.name}: ${RANGE[e.attack.range]} · ${e.attack.damage}`],
+          ["Attack", `${e.attack.modifier} ${e.attack.name}: ${RANGE[e.attack.range]}, ${e.attack.damage}`],
           ["Experience", e.experiences.map((x) => `${x.name} ${signed(x.bonus)}`).join(", ")],
         ]}
       />
@@ -260,7 +260,7 @@ function ProgressionView({ e }: { e: EntryOf<"progression"> }) {
             {e.advancements.map((a) => (
               <tr key={a.id}>
                 <td><Inline text={a.text} />{a.cost === 2 && <> <strong>(uses 2 slots)</strong></>}</td>
-                {(["2", "3", "4"] as const).map((t) => <td key={t}>{a.slotsByTier[t] ?? "—"}</td>)}
+                {(["2", "3", "4"] as const).map((t) => <td key={t}>{a.slotsByTier[t] ?? "None"}</td>)}
               </tr>
             ))}
           </tbody>
@@ -315,14 +315,10 @@ export function EntryView({ e }: { e: Entry }) {
   return (
     <article className="entry" aria-labelledby="entry-title">
       <header>
-        <p className="eyebrow">
-          {TYPE_LABELS[e.type]}
-          {e.source.kind === "homebrew" && <span className="badge-homebrew">Homebrew</span>}
-        </p>
         <h1 id="entry-title">
           {e.type === "domain" && <DomainIcon pack={e.pack} icon={e.icon} size={32} />} {e.name}
         </h1>
-        <p className="source">Source: {sourceLabel(e)}</p>
+        <p className="source">{TYPE_LABELS[e.type]}{e.source.kind === "homebrew" ? "" : ","} from {sourceLabel(e)}</p>
       </header>
       <Body e={e} />
     </article>

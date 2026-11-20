@@ -76,8 +76,8 @@ describe("subclass visibility on screen", () => {
     const c = wayfinder();
     createLocal(c, null);
     const html = render(`/characters/${c.id}?tab=features`, "/characters/:id", <SheetPage />);
-    expect(html).toContain("Wayfinder: Foundation ✓ · Specialization · Mastery");
-    expect(html).toMatch(/○<\/span> Specialization<span class="kind"> · not yet/);
+    expect(html).toContain("Wayfinder: <span class=\"meta\"><span>Foundation ✓</span> <span>Specialization</span> <span>Mastery</span></span>");
+    expect(html).toMatch(/○<\/span> Specialization<span class="kind"> \(not yet\)/);
     expect(html).toContain("From level 5, choose “Take an upgraded subclass card”");
     expect(html).toMatch(/Preview: Elusive Predator/);
   });

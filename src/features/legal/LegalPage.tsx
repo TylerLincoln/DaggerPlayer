@@ -39,7 +39,7 @@ export function LegalPage() {
         sponsored by or endorsed by Darrington Press or Critical Role.
       </p>
       <h2>Homebrew</h2>
-      <p>Homebrew content is created by users, is marked "Homebrew", and is not part of the SRD. Only import content you have the right to use.</p>
+      <p>Homebrew content is created by users, is marked “Homebrew”, and is not part of the SRD. Only import content you have the right to use.</p>
     </article>
   );
 }

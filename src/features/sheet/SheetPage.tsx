@@ -11,6 +11,7 @@ import { addGold, CONSUMABLE_MAX, DOWNTIME_MOVES, type DowntimeMove, fromVault, 
 import { formatMod } from "../../rules/traits.ts";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { MoreMenu } from "../../ui/MoreMenu.tsx";
+import { Meta } from "../../ui/Meta.tsx";
 import { FormMessage } from "../../ui/forms.tsx";
 import { Inline, RichText, TermLink } from "../../ui/RichText.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
@@ -62,7 +63,8 @@ function StatBox({ label, term, stat, value }: { label: string; term?: string; s
 
 function weaponLine(w: EntryOf<"weapon">, d: Derived) {
   const dice = `${d.proficiency.total}${w.damage.dice}${w.damage.bonus ? `+${w.damage.bonus}` : ""}`;
-  return `${w.trait === "spellcast" ? "Spellcast" : cap(w.trait)} ${formatMod(w.trait === "spellcast" ? Math.max(...d.spellcastTraits.map((t) => d.traits[t].total), 0) : d.traits[w.trait].total)} · ${RANGE[w.range]} · ${dice} ${w.damage.type} · ${w.burden === 1 ? "One-Handed" : "Two-Handed"}`;
+  const trait = `${w.trait === "spellcast" ? "Spellcast" : cap(w.trait)} ${formatMod(w.trait === "spellcast" ? Math.max(...d.spellcastTraits.map((t) => d.traits[t].total), 0) : d.traits[w.trait].total)}`;
+  return <Meta items={[trait, RANGE[w.range], `${dice} ${w.damage.type}`, w.burden === 1 ? "One-Handed" : "Two-Handed"]} />;
 }
 
 function PlayTab(ctx: SheetCtx) {
@@ -80,8 +82,8 @@ function PlayTab(ctx: SheetCtx) {
         <div className="statbox thresholds">
           <div className="statbox-label"><TermLink slug="damage-thresholds" label="Damage thresholds" /></div>
           <div className="threshold-row">
-            <span><small>Minor</small> 1–{d.thresholds.major.total - 1}</span>
-            <span><small>Major</small> {d.thresholds.major.total}–{d.thresholds.severe.total - 1}</span>
+            <span><small>Minor</small> 1 to {d.thresholds.major.total - 1}</span>
+            <span><small>Major</small> {d.thresholds.major.total} to {d.thresholds.severe.total - 1}</span>
             <span><small>Severe</small> {d.thresholds.severe.total}+</span>
           </div>
         </div>
@@ -124,11 +126,11 @@ function PlayTab(ctx: SheetCtx) {
 
       <section aria-labelledby="weap-h">
         <h2 id="weap-h">Active weapons</h2>
-        {d.beastform && <p className="msg msg-info">You're in Beastform: you can't use weapons until you drop out.</p>}
+        {d.beastform && <p className="msg msg-info">You’re in Beastform: you can’t use weapons until you drop out.</p>}
         {!c.state.activePrimaryId && !c.state.activeSecondaryId && d.features.some((f) => f.feature.name === "I Am the Weapon") && (
           <div className="feature">
-            <h3>Brawler’s Strike <span className="kind">· Primary</span></h3>
-            <p>{c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice"} · Melee · {d.proficiency.total}d8+{d.proficiency.total}d6 phy · +1 Evasion while active</p>
+            <h3>Brawler’s Strike <span className="kind">(primary)</span></h3>
+            <p><Meta items={[c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice", "Melee", `${d.proficiency.total}d8+${d.proficiency.total}d6 phy`, "+1 Evasion while active"]} /></p>
             <button type="button" className="primary" onClick={() => roll({ attack: "brawler" })}>Attack with Brawler’s Strike</button>
           </div>
         )}
@@ -138,7 +140,7 @@ function PlayTab(ctx: SheetCtx) {
           if (!w) return null;
           return (
             <div className="feature" key={w.id}>
-              <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">· {cap(w.category)}</span></h3>
+              <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">({w.category})</span></h3>
               <p>{weaponLine(w, d)}</p>
               <button type="button" className="primary" onClick={() => roll({ weaponId: w.id })}>Attack with {w.name}</button>
               {w.feature && <p><strong>{w.feature.name}:</strong> <Inline text={w.feature.text} /></p>}
@@ -149,7 +151,7 @@ function PlayTab(ctx: SheetCtx) {
         {armor ? (
           <div className="feature">
             <h3><Link to={`/compendium/${armor.id}`}>{armor.name}</Link></h3>
-            <p>Base thresholds {armor.baseThresholds.major}/{armor.baseThresholds.severe} · Base score {armor.baseScore}</p>
+            <p><Meta items={[`Base thresholds ${armor.baseThresholds.major}/${armor.baseThresholds.severe}`, `Base score ${armor.baseScore}`]} /></p>
             {armor.feature && <p><strong>{armor.feature.name}:</strong> <Inline text={armor.feature.text} /></p>}
           </div>
         ) : <p>Unarmored.</p>}
@@ -203,7 +205,7 @@ function CardsTab({ c, d, reg, act }: SheetCtx) {
     if (!k) return <li key={id}>{id} (not available: is its pack on?)</li>;
     return (
       <li key={id} className="feature">
-        <h3><Link to={`/compendium/${k.id}`}>{k.name}</Link> <span className="kind">· {reg.get(k.domainId)?.name} {k.level} · {cap(k.cardType)} · <TermLink slug="recall-cost" label="Recall" /> {k.recallCost}</span></h3>
+        <h3><Link to={`/compendium/${k.id}`}>{k.name}</Link> <Meta className="kind" items={[`${reg.get(k.domainId)?.name} ${k.level}`, cap(k.cardType), <><TermLink slug="recall-cost" label="Recall" /> {k.recallCost}</>]} /></h3>
         {k.text && <RichText text={k.text} headingBase={4} />}
         {k.features && <Features features={k.features} />}
         <div className="card-tools">
@@ -315,7 +317,7 @@ function GearTab({ c, d, reg, act }: SheetCtx) {
           const w = reg.get(id, "weapon");
           return (
             <li key={id} className="feature">
-              <strong>{w?.name ?? id}</strong> <span className="kind">· {w ? cap(w.category) : ""}</span> {w && <span className="hint">{weaponLine(w, d)}</span>}{" "}
+              <strong>{w?.name ?? id}</strong> {w && <span className="kind">({w.category})</span>} {w && <span className="hint">{weaponLine(w, d)}</span>}{" "}
               <button type="button" onClick={() => act((x) => swapWeapon(x, reg, id, calm))}>Equip as {w?.category ?? "weapon"}{calm ? "" : " (mark 1 Stress)"}</button>{" "}
               <button type="button" className="link" onClick={() => act((x) => ((x.state.inventoryWeaponIds = x.state.inventoryWeaponIds.filter((y) => y !== id)), x))}>Drop</button>
             </li>
@@ -332,7 +334,7 @@ function GearTab({ c, d, reg, act }: SheetCtx) {
       </form>
 
       <h2>Armor</h2>
-      <p>{reg.get(c.state.armorId)?.name ?? "Unarmored"} · {c.state.armorMarked} of {d.armorScore.total} Armor Slots marked</p>
+      <p>{reg.get(c.state.armorId)?.name ?? "Unarmored"}: {c.state.armorMarked} of {d.armorScore.total} Armor Slots marked</p>
       <form className="inline-form" onSubmit={(e) => { e.preventDefault(); act((x) => { if (!calm) throw new RuleError("You can't change armor while in danger or under pressure (SRD p. 55)."); x.state.armorId = newArmor || null; x.state.armorMarked = 0; return x; }); }}>
         <label htmlFor="armor-sel" className="visually-hidden">Change armor</label>
         <select id="armor-sel" value={newArmor} onChange={(e) => setNewArmor(e.target.value)}>
@@ -403,14 +405,14 @@ function SubclassTrack({ c, d, reg, act }: SheetCtx) {
       {subclassProgress(c, reg).map((p) => (
         <section key={p.subclass.id} className="subclass-track" aria-labelledby={`sc-${p.subclass.id}`}>
           <h2 id={`sc-${p.subclass.id}`}>
-            <Link to={`/compendium/${p.subclass.id}`}>{p.subclass.name}</Link> <span className="kind">· {p.multiclass ? "multiclass subclass" : "subclass"}</span>
+            <Link to={`/compendium/${p.subclass.id}`}>{p.subclass.name}</Link> <span className="kind">({p.multiclass ? "multiclass subclass" : "subclass"})</span>
           </h2>
           <ol className="stages">
             {p.cards.map((card) => (
               <li key={card.stage} className={card.acquired ? "acquired" : "locked"}>
                 <h3>
                   <span aria-hidden="true">{card.acquired ? "✓" : "○"}</span> {STAGE_LABEL[card.stage]}
-                  <span className="kind"> · {card.acquired ? (card.level ? `level ${card.level}` : "acquired") : "not yet"}</span>
+                  <span className="kind"> ({card.acquired ? (card.level ? `level ${card.level}` : "acquired") : "not yet"})</span>
                 </h3>
                 {card.acquired ? (
                   card.features.map((f) => <FeatureItem key={f.name} f={f} source={`${p.subclass.name} (${card.stage})`} c={c} d={d} act={act} />)
@@ -492,7 +494,7 @@ function RestDialog({ open, onClose, c, reg, act }: SheetCtx & { open: boolean; 
         <legend>Rest</legend>
         <label className="radio"><input type="radio" name="rest" checked={k === "short"} disabled={forced} onChange={() => setKind("short")} /> <TermLink slug="short-rest" label="Short rest" /> (about an hour)</label>
         <label className="radio"><input type="radio" name="rest" checked={k === "long"} onChange={() => setKind("long")} /> <TermLink slug="long-rest" label="Long rest" /> (several hours)</label>
-        {forced && <p className="hint">You've taken three short rests in a row, so this one must be a long rest.</p>}
+        {forced && <p className="hint">You’ve taken three short rests in a row, so this one must be a long rest.</p>}
         <p className="hint">Short rests in a row: {c.state.rests?.shortInARow ?? 0}</p>
       </fieldset>
       {[0, 1].map((i) => (
@@ -558,12 +560,12 @@ export function SheetPage() {
       <header className="sheet-head">
         <div>
           <h1>{c.identity.name}</h1>
-          <p className="hint">Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)} · {heritage} · {name(c.build.communityId)}{c.identity.pronouns ? ` · ${c.identity.pronouns}` : ""}</p>
+          <p className="hint"><Meta items={[`Level ${d.level} ${name(c.build.subclassId)} ${name(c.build.classId)}`, heritage, name(c.build.communityId), c.identity.pronouns]} /></p>
         </div>
         <p className="subclass-summary">
           {subclassProgress(c, reg).map((p) => (
             <span key={p.subclass.id}>
-              {p.subclass.name}: {p.cards.map((card) => `${STAGE_LABEL[card.stage]}${card.acquired ? " ✓" : ""}`).join(" · ")}{" "}
+              {p.subclass.name}: <Meta items={p.cards.map((card) => `${STAGE_LABEL[card.stage]}${card.acquired ? " ✓" : ""}`)} />{" "}
               <button type="button" className="link" onClick={() => setParams({ tab: "features" }, { replace: true })}>Details</button>
             </span>
           ))}

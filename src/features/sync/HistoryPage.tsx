@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Meta } from "../../ui/Meta.tsx";
 import { Link, useNavigate, useParams } from "react-router";
 import { useContent } from "../../content/ContentProvider.tsx";
 import { putRecord, useAutosave, useCharacterRecord } from "../../data/characters.ts";
@@ -42,8 +43,8 @@ export function HistoryPage() {
   if (!rec) return <><h1>Character not found</h1><Link to="/characters">Your characters</Link></>;
   const c = rec.doc;
   if (!user) return <><h1>History</h1><p>Version history is kept in your account. <Link to={`/auth/sign-in?next=/characters/${c.id}/history`}>Sign in</Link> to use it.</p></>;
-  if (!online) return <><h1>History</h1><p>You're offline. Version history is stored in your account and needs a connection.</p><Link to={`/characters/${c.id}`}>Back to the sheet</Link></>;
-  if (rec.rev === 0) return <><h1>History</h1><p>This character hasn't been saved to your account yet.</p></>;
+  if (!online) return <><h1>History</h1><p>You’re offline. Version history is stored in your account and needs a connection.</p><Link to={`/characters/${c.id}`}>Back to the sheet</Link></>;
+  if (rec.rev === 0) return <><h1>History</h1><p>This character hasn’t been saved to your account yet.</p></>;
 
   const restore = async (v: Version) => {
     if (!confirm(`Restore the version from ${new Date(v.created_at).toLocaleString()}? Your current version is kept in the history.`)) return;
@@ -74,7 +75,7 @@ export function HistoryPage() {
             return (
               <li key={v.id}>
                 <div className="history-row">
-                  <span><strong>{REASON[v.reason] ?? v.reason}</strong> · {new Date(v.created_at).toLocaleString()} · level {parsed.success ? 1 + parsed.data.levelUps.length : "?"}</span>
+                  <Meta items={[<strong>{REASON[v.reason] ?? v.reason}</strong>, new Date(v.created_at).toLocaleString(), `level ${parsed.success ? 1 + parsed.data.levelUps.length : "?"}`]} />
                   <span>
                     <button type="button" aria-expanded={open === v.id} onClick={() => setOpen(open === v.id ? null : v.id)}>Compare</button>{" "}
                     <button type="button" onClick={() => restore(v)} disabled={!parsed.success}>Restore</button>

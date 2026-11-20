@@ -98,8 +98,8 @@ export function SignInPage() {
         <FormMessage error={error} info={info} />
       </form>
       <OAuthButtons next={next} />
-      <p>
-        <Link to="/auth/forgot">Forgot your password?</Link> · <Link to={`/auth/sign-up?next=${encodeURIComponent(next)}`}>Create an account</Link>
+      <p className="link-row">
+        <Link to="/auth/forgot">Forgot your password?</Link> <Link to={`/auth/sign-up?next=${encodeURIComponent(next)}`}>Create an account</Link>
       </p>
     </section>
   );

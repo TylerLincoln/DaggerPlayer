@@ -162,7 +162,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
 
     setResult(r);
     setApplied(notes);
-    const label = [weapon ? `${weapon.name} attack` : reaction ? "Reaction" : "Action", trait && cap(trait), ...xps.map((id) => d.experiences.find((e) => e.id === id)?.name)].filter(Boolean).join(" · ");
+    const label = [weapon ? `${weapon.name} attack` : reaction ? "Reaction" : "Action", trait && cap(trait), ...xps.map((id) => d.experiences.find((e) => e.id === id)?.name)].filter(Boolean).join(", ");
     logRoll(
       { characterId: c.id, kind: reaction ? "reaction" : "action", label, summary: describeDuality(r), detail: diceLine(r), applied: settings.dice.autoApply ? notes : [] },
       remote,

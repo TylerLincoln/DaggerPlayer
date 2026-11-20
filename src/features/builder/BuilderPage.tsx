@@ -60,7 +60,7 @@ export function BuilderPage() {
   if (!rec) return (
     <>
       <h1>Character not found</h1>
-      <p>This draft isn't on this device. <Link to="/characters">Your characters</Link></p>
+      <p>This draft isn’t on this device. <Link to="/characters">Your characters</Link></p>
     </>
   );
   if (!registry) return <p role="status">Loading content…</p>;
@@ -90,7 +90,7 @@ export function BuilderPage() {
         <ConflictPanel rec={rec} reg={registry} resolve={resolve} />
         <nav aria-label="Builder steps" className="steps">
           <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={BUILDER_STEPS.length - 1} aria-valuenow={done} aria-label="Steps complete">
-            <div style={{ width: `${(done / (BUILDER_STEPS.length - 1)) * 100}%` }} />
+            <div style={{ transform: `scaleX(${done / (BUILDER_STEPS.length - 1)})` }} />
           </div>
           <ol>
             {BUILDER_STEPS.map((s, i) => (
@@ -108,8 +108,8 @@ export function BuilderPage() {
           {step !== "review" && <StepIssues issues={issues.filter((i) => i.step === step)} />}
         </section>
         <nav className="prevnext" aria-label="Previous and next step">
-          {idx > 0 ? <Link to={`/build/${c.id}/${BUILDER_STEPS[idx - 1].id}`}>← {BUILDER_STEPS[idx - 1].label}</Link> : <span />}
-          {idx < BUILDER_STEPS.length - 1 ? <Link className="button primary" to={`/build/${c.id}/${BUILDER_STEPS[idx + 1].id}`}>{BUILDER_STEPS[idx + 1].label} →</Link> : <span />}
+          {idx > 0 ? <Link to={`/build/${c.id}/${BUILDER_STEPS[idx - 1].id}`}>Back to {BUILDER_STEPS[idx - 1].label.toLowerCase()}</Link> : <span />}
+          {idx < BUILDER_STEPS.length - 1 ? <Link className="button primary" to={`/build/${c.id}/${BUILDER_STEPS[idx + 1].id}`}>Next: {BUILDER_STEPS[idx + 1].label}</Link> : <span />}
         </nav>
       </div>
     </BuilderContext.Provider>
@@ -130,20 +130,20 @@ function Review({ issues, onFinish }: { issues: BuildIssue[]; onFinish: () => vo
   return (
     <BuilderContext.Consumer>
       {({ c, reg, derived }) => {
-        const name = (id: string | null) => (id ? reg.byId.get(id)?.name ?? id : "—");
+        const name = (id: string | null) => (id ? reg.byId.get(id)?.name ?? id : "Not chosen");
         const a = c.build.ancestry;
-        const heritage = !a ? "—" : a.kind === "single" ? name(a.id) : `${a.label || "Mixed"} (top: ${name(a.topFrom)}, bottom: ${name(a.bottomFrom)})`;
+        const heritage = !a ? "Not chosen" : a.kind === "single" ? name(a.id) : `${a.label || "Mixed"} (top: ${name(a.topFrom)}, bottom: ${name(a.bottomFrom)})`;
         const errors = issues.filter((i) => i.severity === "error");
         const warnings = issues.filter((i) => i.severity === "warning");
         const rows: [string, React.ReactNode, StepId][] = [
-          ["Class", `${name(c.build.classId)} · ${name(c.build.subclassId)}`, "class"],
-          ["Heritage", `${heritage} · ${name(c.build.communityId)}${c.build.transformationId ? ` · ${name(c.build.transformationId)}` : ""}`, "heritage"],
+          ["Class", `${name(c.build.classId)}, ${name(c.build.subclassId)}`, "class"],
+          ["Heritage", `${heritage}, ${name(c.build.communityId)}${c.build.transformationId ? `, ${name(c.build.transformationId)}` : ""}`, "heritage"],
           ["Traits", TRAITS.map((t) => `${t.slice(0, 3).toUpperCase()} ${formatMod(derived.traits[t].total)}`).join("  "), "traits"],
-          ["Weapons", [c.build.gear.primaryId, c.build.gear.secondaryId].filter(Boolean).map(name).join(" + ") || "—", "gear"],
+          ["Weapons", [c.build.gear.primaryId, c.build.gear.secondaryId].filter(Boolean).map(name).join(" + ") || "None", "gear"],
           ["Armor", name(c.build.gear.armorId), "gear"],
-          ["Items", [c.build.gear.potion ? (c.build.gear.potion === "health" ? "Minor Health Potion" : "Minor Stamina Potion") : null, c.build.gear.classItem].filter(Boolean).join(", ") || "—", "gear"],
+          ["Items", [c.build.gear.potion ? (c.build.gear.potion === "health" ? "Minor Health Potion" : "Minor Stamina Potion") : null, c.build.gear.classItem].filter(Boolean).join(", ") || "None", "gear"],
           ["Experiences", c.build.experiences.map((x) => `${x.name || "?"} +${x.bonus}`).join(", "), "background"],
-          ["Domain cards", c.build.domainCardIds.map(name).join(", ") || "—", "cards"],
+          ["Domain cards", c.build.domainCardIds.map(name).join(", ") || "None", "cards"],
         ];
         return (
           <>
@@ -176,7 +176,7 @@ function Review({ issues, onFinish }: { issues: BuildIssue[]; onFinish: () => vo
             ) : (
               <p><Link to={`/characters/${c.id}`}>Back to the character</Link></p>
             )}
-            {!user && <p className="hint">You're not signed in: this character is saved on this device only. <Link to={`/auth/sign-in?next=/build/${c.id}/review`}>Sign in</Link> to save it to your account.</p>}
+            {!user && <p className="hint">You’re not signed in: this character is saved on this device only. <Link to={`/auth/sign-in?next=/build/${c.id}/review`}>Sign in</Link> to save it to your account.</p>}
           </>
         );
       }}

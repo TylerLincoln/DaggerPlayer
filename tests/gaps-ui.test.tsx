@@ -60,7 +60,7 @@ describe("sheet extras", () => {
     createLocal(inForm, null);
     const html = sheet(inForm);
     expect(html).toContain("Attack as Agile Scout");
-    expect(html).toContain("you can&#x27;t use weapons until you drop out");
+    expect(html).toContain("you can’t use weapons until you drop out");
   });
 
   it("Brawler with no weapons gets Brawler's Strike", () => {

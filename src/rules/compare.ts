@@ -11,14 +11,14 @@ export interface Difference {
 export function compareCharacters(mine: CharacterDoc, theirs: CharacterDoc, lookup: Lookup): Difference[] {
   const a = derive(mine, lookup);
   const b = derive(theirs, lookup);
-  const name = (id: string | null) => (id ? lookup.get(id)?.name ?? id : "—");
+  const name = (id: string | null) => (id ? lookup.get(id)?.name ?? id : "None");
   const out: Difference[] = [];
   const cmp = (label: string, x: unknown, y: unknown, fmt: (v: never) => string = String) => {
     const [sx, sy] = [fmt(x as never), fmt(y as never)];
     if (sx !== sy) out.push({ label, mine: sx, theirs: sy });
   };
-  const list = (ids: string[]) => ids.map(name).join(", ") || "—";
-  const items = (c: CharacterDoc) => c.state.inventory.map((i) => `${i.name}${i.qty !== 1 ? ` ×${i.qty}` : ""}`).join(", ") || "—";
+  const list = (ids: string[]) => ids.map(name).join(", ") || "None";
+  const items = (c: CharacterDoc) => c.state.inventory.map((i) => `${i.name}${i.qty !== 1 ? ` ×${i.qty}` : ""}`).join(", ") || "None";
   const gold = (c: CharacterDoc) => `${c.state.gold.handfuls} handfuls, ${c.state.gold.bags} bags, ${c.state.gold.chests} chests`;
 
   cmp("Name", mine.identity.name, theirs.identity.name);

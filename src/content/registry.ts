@@ -139,7 +139,7 @@ export function entryPath(e: Pick<Entry, "id" | "type">): string {
 }
 
 export function sourceLabel(e: Entry): string {
-  if (e.source.kind === "homebrew") return `Homebrew · ${e.source.document}`;
-  const pages = e.source.page ? (e.source.pageEnd ? `pp. ${e.source.page}–${e.source.pageEnd}` : `p. ${e.source.page}`) : "";
-  return [e.source.document, pages].filter(Boolean).join(" · ");
+  if (e.source.kind === "homebrew") return `Homebrew: ${e.source.document}`;
+  const pages = e.source.page ? (e.source.pageEnd ? `pp. ${e.source.page} to ${e.source.pageEnd}` : `p. ${e.source.page}`) : "";
+  return [e.source.document, pages].filter(Boolean).join(", ");
 }

@@ -6,3 +6,6 @@ dist
 *.local
 .supabase
 scratch
+
+# Hallmark design tooling records and screenshots
+.hallmark/

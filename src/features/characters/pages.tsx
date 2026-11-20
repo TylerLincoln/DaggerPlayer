@@ -1,4 +1,5 @@
 import { type ChangeEvent, useEffect, useState } from "react";
+import { Meta } from "../../ui/Meta.tsx";
 import { Link, useNavigate } from "react-router";
 import { adoptServer, createLocal, removeRecord, useRecords } from "../../data/characters.ts";
 import { type CharacterRow, listCharacters } from "../../data/repo.ts";
@@ -88,18 +89,14 @@ export function CharactersPage() {
           {mine.map(({ doc, dirty, rev }) => (
             <li key={doc.id}>
               <Link to={doc.finishedAt ? `/characters/${doc.id}` : `/build/${doc.id}/review`}>{doc.identity.name || "Unnamed character"}</Link>{" "}
-              <span className="hint">
-                Level {1 + doc.levelUps.length}
-                {!doc.finishedAt && " · draft"}
-                {user && (rev === 0 ? " · not uploaded yet" : dirty ? " · unsaved changes" : "")}
-              </span>{" "}
+              <Meta className="hint" items={[`Level ${1 + doc.levelUps.length}`, !doc.finishedAt && "draft", user && (rev === 0 ? "not uploaded yet" : dirty ? "unsaved changes" : "")]} />{" "}
               <button type="button" onClick={() => download(fileName(doc), doc)}>Export</button>{" "}
               <button type="button" onClick={() => remove(doc.id, doc.identity.name)}>Delete</button>
             </li>
           ))}
         </ul>
       )}
-      {user && server.length > mine.length && <p className="hint">Some saved characters couldn't be read on this device.</p>}
+      {user && server.length > mine.length && <p className="hint">Some saved characters couldn’t be read on this device.</p>}
     </>
   );
 }

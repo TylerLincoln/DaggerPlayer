@@ -33,7 +33,7 @@ export function PrintPage() {
   useEffect(() => {
     if (!rec) return;
     const prev = document.title;
-    document.title = `${rec.doc.identity.name || "Character"} – DaggerPlayer`; // becomes the PDF file name
+    document.title = `${rec.doc.identity.name || "Character"}, DaggerPlayer`; // becomes the PDF file name
     return () => void (document.title = prev);
   }, [rec]);
 
@@ -41,9 +41,9 @@ export function PrintPage() {
   if (!reg) return <p role="status">Loading content…</p>;
   const c = rec.doc;
   const d = derive(c, reg);
-  const name = (x: string | null) => (x ? reg.byId.get(x)?.name ?? x : "—");
+  const name = (x: string | null) => (x ? reg.byId.get(x)?.name ?? x : "None");
   const a = c.build.ancestry;
-  const heritage = !a ? "—" : a.kind === "single" ? name(a.id) : `${a.label || "Mixed"} (${name(a.topFrom)} / ${name(a.bottomFrom)})`;
+  const heritage = !a ? "None" : a.kind === "single" ? name(a.id) : `${a.label || "Mixed"} (${name(a.topFrom)} / ${name(a.bottomFrom)})`;
   const srd = bundledPacks.find((p) => p.id === "srd");
   const weapons = [c.state.activePrimaryId, c.state.activeSecondaryId].map((x) => reg.get(x, "weapon")).filter((w) => !!w);
   const armor = reg.get(c.state.armorId, "armor");
@@ -63,10 +63,10 @@ export function PrintPage() {
         <header className="p-head">
           <div>
             <h1>{c.identity.name || "Unnamed character"}</h1>
-            <p>{c.identity.pronouns && `${c.identity.pronouns} · `}Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)}</p>
-            <p>{heritage} · {name(c.build.communityId)}{c.build.transformationId ? ` · ${name(c.build.transformationId)}` : ""}</p>
+            <p>Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)}{c.identity.pronouns && ` (${c.identity.pronouns})`}</p>
+            <p>{heritage}, {name(c.build.communityId)}{c.build.transformationId ? `, ${name(c.build.transformationId)}` : ""}</p>
             {subclassProgress(c, reg).map((p) => (
-              <p key={p.subclass.id}>{p.subclass.name}: {p.cards.map((card) => `${card.stage.charAt(0).toUpperCase() + card.stage.slice(1)}${card.acquired ? " ✓" : " (not yet)"}`).join(" · ")}</p>
+              <p key={p.subclass.id}>{p.subclass.name}: {p.cards.map((card) => `${card.stage.charAt(0).toUpperCase() + card.stage.slice(1)}${card.acquired ? " ✓" : " (not yet)"}`).join(", ")}</p>
             ))}
           </div>
           <dl className="p-core">
@@ -80,7 +80,7 @@ export function PrintPage() {
         <section className="p-grid">
           <div>
             <h2>Damage thresholds</h2>
-            <p className="p-thresholds"><span>Minor 1–{d.thresholds.major.total - 1}</span> <span>Major {d.thresholds.major.total}–{d.thresholds.severe.total - 1}</span> <span>Severe {d.thresholds.severe.total}+</span></p>
+            <p className="p-thresholds"><span>Minor 1 to {d.thresholds.major.total - 1}</span> <span>Major {d.thresholds.major.total} to {d.thresholds.severe.total - 1}</span> <span>Severe {d.thresholds.severe.total}+</span></p>
             <Boxes label="Hit Points" marked={c.state.hpMarked} max={d.hpMax.total} />
             <Boxes label="Stress" marked={c.state.stressMarked} max={d.stressMax.total} />
             <Boxes label="Hope" marked={c.state.hope} max={d.hopeMax} round />
@@ -108,14 +108,14 @@ export function PrintPage() {
                   <td>{w!.trait === "spellcast" ? "Spellcast" : cap(w!.trait)}</td>
                   <td>{RANGE[w!.range]}</td>
                   <td>{d.proficiency.total}{w!.damage.dice}{w!.damage.bonus ? `+${w!.damage.bonus}` : ""} {w!.damage.type}</td>
-                  <td>{w!.feature ? <><strong>{w!.feature.name}:</strong> <Inline text={w!.feature.text} links={false} /></> : "—"}</td>
+                  <td>{w!.feature ? <><strong>{w!.feature.name}:</strong> <Inline text={w!.feature.text} links={false} /></> : "None"}</td>
                 </tr>
               ))}
               {weapons.length === 0 && <tr><td colSpan={5}>No active weapons.</td></tr>}
             </tbody>
           </table>
           <p>
-            <strong>Armor:</strong> {armor ? <>{armor.name} (base thresholds {armor.baseThresholds.major}/{armor.baseThresholds.severe}, base score {armor.baseScore}){armor.feature && <> · <strong>{armor.feature.name}:</strong> <Inline text={armor.feature.text} links={false} /></>}</> : "Unarmored"}
+            <strong>Armor:</strong> {armor ? <>{armor.name} (base thresholds {armor.baseThresholds.major}/{armor.baseThresholds.severe}, base score {armor.baseScore}){armor.feature && <>. <strong>{armor.feature.name}:</strong> <Inline text={armor.feature.text} links={false} /></>}</> : "Unarmored"}
           </p>
           {c.state.inventoryWeaponIds.length > 0 && <p><strong>Inventory weapons:</strong> {c.state.inventoryWeaponIds.map(name).join(", ")}</p>}
         </section>
@@ -127,7 +127,7 @@ export function PrintPage() {
           </div>
           <div>
             <h2>Gold</h2>
-            <p>{c.state.gold.handfuls} handfuls · {c.state.gold.bags} bags · {c.state.gold.chests} chests</p>
+            <p>{c.state.gold.handfuls} handfuls, {c.state.gold.bags} bags, {c.state.gold.chests} chests</p>
             {(c.state.conditions.length > 0 || c.state.effects.length > 0) && (
               <>
                 <h2>Conditions and effects</h2>
@@ -148,7 +148,7 @@ export function PrintPage() {
                   if (!k) return <p key={cid}>{cid}</p>;
                   return (
                     <div className="p-card" key={cid}>
-                      <h4>{k.name} <small>{name(k.domainId)} {k.level} · {cap(k.cardType)} · Recall {k.recallCost}</small></h4>
+                      <h4>{k.name} <small>{name(k.domainId)} {k.level}, {k.cardType}, recall {k.recallCost}</small></h4>
                       {k.text && <PrintText text={k.text} />}
                       {k.features?.map((f) => <p key={f.name}><strong>{f.name}:</strong> <Inline text={f.text} links={false} /></p>)}
                     </div>
@@ -160,7 +160,7 @@ export function PrintPage() {
         </section>
 
         <section>
-          <h2>Features</h2>
+          <h2>Class, subclass and heritage features</h2>
           {[...groups].map(([source, fs]) => (
             <div key={source} className="p-card">
               <h4>{stageTitle(source, c, reg)}</h4>

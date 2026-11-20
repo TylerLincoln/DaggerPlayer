@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Meta } from "../../ui/Meta.tsx";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { EntryOf, EntryType } from "../../../content/schema/index.ts";
 import { useContent } from "../../content/ContentProvider.tsx";
 import { bundledPacks } from "../../content/packs.ts";
-import { entryPath, TYPE_LABELS } from "../../content/registry.ts";
+import { entryPath, sourceLabel, TYPE_LABELS } from "../../content/registry.ts";
 import { DomainIcon } from "../../ui/DomainIcon.tsx";
 import { RichText } from "../../ui/RichText.tsx";
 import { EntryView } from "./EntryView.tsx";
@@ -94,12 +95,7 @@ export function CompendiumPage() {
             <Link to={entryPath(e)}>
               {e.type === "domain" && <DomainIcon pack={e.pack} icon={e.icon} size={18} />} {e.name}
             </Link>{" "}
-            <span className="hint">
-              {TYPE_LABELS[e.type]}
-              {facets.tier ? ` · Tier ${facets.tier}` : ""}
-              {e.type === "domain-card" ? ` · Level ${e.level} ${registry.get(e.domainId)?.name ?? ""}` : ""}
-              {e.pack !== "srd" ? ` · ${registry.pack(e.pack)?.name ?? e.pack}` : ""}
-            </span>
+            <Meta className="hint" items={[TYPE_LABELS[e.type], facets.tier && `Tier ${facets.tier}`, e.type === "domain-card" && `Level ${e.level} ${registry.get(e.domainId)?.name ?? ""}`, e.pack !== "srd" && (registry.pack(e.pack)?.name ?? e.pack)]} />
           </li>
         ))}
       </ul>
@@ -133,7 +129,7 @@ export function EntryPage() {
   const e = registry?.byId.get(id);
   useEffect(() => {
     titleRef.current = document.title;
-    if (e) document.title = `${e.name} · DaggerPlayer`;
+    if (e) document.title = `${e.name} | DaggerPlayer`;
     return () => {
       document.title = titleRef.current || "DaggerPlayer";
     };
@@ -157,7 +153,7 @@ function NotFoundEntry({ id, packOff }: { id: string; packOff: boolean }) {
       <p>Nothing matches <code>{id}</code>.</p>
       {packOff && (
         <>
-          <p>This entry belongs to a content pack that's turned off.</p>
+          <p>This entry belongs to a content pack that’s turned off.</p>
           <PackToggles />
         </>
       )}
@@ -176,7 +172,7 @@ function Toc({ pack, current }: { pack: string; current?: string }) {
     const kids = registry.childrenOf(r.id) as EntryOf<"rules">[];
     return (
       <li key={r.id}>
-        <Link to={entryPath(r)} aria-current={r.id === current ? "page" : undefined}>
+        <Link to={entryPath(r)} title={r.name} aria-current={r.id === current ? "page" : undefined}>
           {r.name}
         </Link>
         {kids.length > 0 && <ul>{kids.map(node)}</ul>}
@@ -235,7 +231,7 @@ export function RulesPage() {
           {parent && <> › <Link to={entryPath(parent)}>{parent.name}</Link></>}
         </nav>
         <h1 id="rules-title">{e.name}</h1>
-        <p className="source">Source: {e.source.document} · p. {e.source.page}{e.source.pageEnd ? `–${e.source.pageEnd}` : ""}</p>
+        <p className="source">Source: {sourceLabel(e)}</p>
         <RichText text={e.text} />
         {kids.length > 0 && (
           <section aria-label="In this section">
@@ -244,8 +240,8 @@ export function RulesPage() {
           </section>
         )}
         <nav aria-label="Previous and next" className="prevnext">
-          {prev ? <Link to={entryPath(prev)}>← {prev.name}</Link> : <span />}
-          {next ? <Link to={entryPath(next)}>{next.name} →</Link> : <span />}
+          {prev ? <Link to={entryPath(prev)} title={prev.name}>Previous: {prev.name}</Link> : <span />}
+          {next ? <Link to={entryPath(next)} title={next.name}>Next: {next.name}</Link> : <span />}
         </nav>
       </article>
     </div>

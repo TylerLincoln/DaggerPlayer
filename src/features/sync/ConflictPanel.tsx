@@ -32,8 +32,8 @@ export function ConflictPanel({ rec, reg, resolve }: { rec: LocalRecord; reg: Re
       ) : (
         <p className="hint">No visible differences on the sheet (only small details differ).</p>
       )}
-      <button type="button" className="primary" disabled={busy} onClick={() => pick("mine")}>Keep this device's version</button>{" "}
-      <button type="button" disabled={busy || !parsed.success} onClick={() => pick("theirs")}>Use the other device's version</button>
+      <button type="button" className="primary" disabled={busy} onClick={() => pick("mine")}>Keep this device’s version</button>{" "}
+      <button type="button" disabled={busy || !parsed.success} onClick={() => pick("theirs")}>Use the other device’s version</button>
     </section>
   );
 }

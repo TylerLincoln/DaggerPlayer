@@ -59,6 +59,20 @@
   - Builder: "Choose" is styled as the primary action. Level-up "Add" buttons no longer stretch. Selects stay inside their cards.
   - Shared card radius and shadow, and a fluid h1 size.
 
+- **Hallmark restyle: Carnival theme** (2026-11-20):
+  - New look: tinted paper, warm ink, Big Shoulders Display capitals over Golos Text, a mustard primary on a hard ink shadow, oxblood rules and fields.
+  - Light and dark modes both kept. The fonts are self-hosted (`@fontsource`), so they work offline.
+  - Tokens are in `src/ui/tokens.css` and `src/ui/base.css`. `src/ui/theme.css` maps the app's roles onto them and carries the Hallmark stamp.
+  - Layouts and wiring are unchanged.
+  - Copy changes the gates required:
+    - Middle-dot meta strings became hairline rows (`src/ui/Meta.tsx`) or commas.
+    - Number ranges use "to" instead of dashes ("8 to 14").
+    - The "←/→" links became "Previous:"/"Next:".
+    - The compendium type label moved into the source line.
+    - Apostrophes and quotes are now curly.
+  - Fixed along the way: the builder progress bar was squeezed to a sliver; the rules page on phones was wider than the screen.
+  - Hallmark linter: 31 Floor failures before, 0 after. Every link, field and handler is kept.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:

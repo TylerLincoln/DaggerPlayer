@@ -29,7 +29,7 @@ const sheet = html.slice(html.indexOf('<article class="print-sheet"'));
 
 describe("printable sheet", () => {
   it("has every section", () => {
-    for (const h of ["Damage thresholds", "Traits", "Experiences", "Weapons and armor", "Inventory", "Gold", "Domain cards", "Features", "Background", "Connections", "Notes"]) expect(sheet, h).toContain(`<h2>${h}</h2>`);
+    for (const h of ["Damage thresholds", "Traits", "Experiences", "Weapons and armor", "Inventory", "Gold", "Domain cards", "Class, subclass and heritage features", "Background", "Connections", "Notes"]) expect(sheet, h).toContain(`<h2>${h}</h2>`);
     expect(sheet).toContain("Wren Ashdown");
     expect(sheet).toContain("Level 2 Wayfinder Ranger");
   });
@@ -51,7 +51,7 @@ describe("printable sheet", () => {
   it("prints full card and feature text with rules terms as plain words", () => {
     expect(sheet).toContain("Nature’s Tongue");
     expect(sheet).toContain("Wayfinder: Foundation (level 1)");
-    expect(sheet).toContain("Wayfinder: Foundation ✓ · Specialization (not yet) · Mastery (not yet)");
+    expect(sheet).toContain("Wayfinder: Foundation ✓, Specialization (not yet), Mastery (not yet)");
     expect(sheet).not.toMatch(/\{\{(term|ref):/);
     expect(sheet).not.toContain('class="term"');
     expect(sheet).toContain("2d6+3 phy"); // shortbow at Proficiency 2

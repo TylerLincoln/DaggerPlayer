@@ -104,7 +104,7 @@ function HomePage() {
         <li><Link to="/rules"><strong>Rules</strong><span>Read the SRD with linked terms.</span></Link></li>
       </ul>
       <details className="included">
-        <summary>What's included</summary>
+        <summary>What’s included</summary>
         {bundledPacks.map((p) => (
           <section key={p.id}>
             <h3>

@@ -123,7 +123,7 @@ function DeleteAccount() {
   return (
     <form onSubmit={submit} aria-labelledby="delete-h" className="danger-zone">
       <h2 id="delete-h">Delete account</h2>
-      <p>This permanently deletes your account and all its data: characters, history, homebrew and settings. It can't be undone. Export first if you want a copy.</p>
+      <p>This permanently deletes your account and all its data: characters, history, homebrew and settings. It can’t be undone. Export first if you want a copy.</p>
       <Field label='Type "DELETE" to confirm' autoComplete="off" value={confirm} onChange={(e) => setConfirm(e.target.value)} />
       <button className="danger" disabled={a.busy || confirm !== "DELETE"}>
         Delete my account

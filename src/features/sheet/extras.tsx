@@ -4,6 +4,7 @@ import type { DerivedResource } from "../../rules/derive.ts";
 import { dropBeastform, type Frequency, frequencyOf, markCompanionStress, resourceValue, rollPool, setResource, spendPoolDie, toggleUsed, transform, useKey } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Inline, TermLink } from "../../ui/RichText.tsx";
+import { Meta } from "../../ui/Meta.tsx";
 import type { PlayCtx } from "./play.tsx";
 import { CompanionEditor } from "./CompanionEditor.tsx";
 import { CompanionOptionPicker } from "./CompanionOptionPicker.tsx";
@@ -109,11 +110,11 @@ export function BeastformPanel(ctx: PlayCtx & { onAttack: () => void }) {
       <h2 id="bf-h">Beastform</h2>
       {bf ? (
         <div className="feature">
-          <h3>{bf.name} <span className="kind">· Tier {bf.tier}</span></h3>
-          {bf.attack && <p>{cap(bf.attack.trait)} · {bf.attack.range} · {d.proficiency.total}{bf.attack.damage} {bf.attack.damageType} · Advantage on {bf.advantages.join(", ")}</p>}
+          <h3>{bf.name} <span className="kind">(tier {bf.tier})</span></h3>
+          {bf.attack && <p><Meta items={[cap(bf.attack.trait), bf.attack.range, `${d.proficiency.total}${bf.attack.damage} ${bf.attack.damageType}`, `Advantage on ${bf.advantages.join(", ")}`]} /></p>}
           {bf.features.map((f) => <p key={f.name}><strong>{f.name}:</strong> <Inline text={f.text} /></p>)}
           {c.state.beastformEvolutionTrait && <p>Evolution: +1 {cap(c.state.beastformEvolutionTrait)}</p>}
-          <p className="hint">You can't use weapons or cast spells from domain cards while transformed.</p>
+          <p className="hint">You can’t use weapons or cast spells from domain cards while transformed.</p>
           {bf.attack && <button type="button" className="primary" onClick={onAttack}>Attack as {bf.name}</button>}{" "}
           <button type="button" onClick={() => act((x) => dropBeastform(x))}>Drop out of Beastform</button>
         </div>
@@ -158,7 +159,7 @@ export function CompanionPanel(ctx: PlayCtx & { onAttack: () => void }) {
   return (
     <section aria-labelledby="comp-h">
       <h2 id="comp-h">Companion: {k.name} <small className="hint">{c.state.companion!.kind}</small></h2>
-      <p><TermLink slug="evasion" label="Evasion" /> {k.evasion.total} · Attack: {c.state.companion!.attack || "standard attack"}, {k.range}, {d.proficiency.total}{k.die} {c.state.companion!.damageType}</p>
+      <p><Meta items={[<><TermLink slug="evasion" label="Evasion" /> {k.evasion.total}</>, `Attack: ${c.state.companion!.attack || "standard attack"}, ${k.range}, ${d.proficiency.total}${k.die} ${c.state.companion!.damageType}`]} /></p>
       <p>Experiences: {k.experiences.map((x) => `${x.name} ${formatMod(x.bonus)}`).join(", ")}</p>
       {k.options.length > 0 && <p className="hint">Options: {k.options.map((o) => o.split(":")[0]).join(", ")}</p>}
       {k.stressMax ? (
@@ -169,7 +170,7 @@ export function CompanionPanel(ctx: PlayCtx & { onAttack: () => void }) {
             <div className="boxes">{Array.from({ length: max }, (_, i) => <span key={i} className={`box stress${i < marked ? " on" : ""}`} />)}</div>
             <button type="button" className="step" aria-label="Mark one companion Stress" disabled={marked >= max} onClick={() => act((x) => markCompanionStress(x, d, 1))}>+</button>
           </div>
-          <p className="hint">Your companion marks a Stress whenever they'd take damage.</p>
+          <p className="hint">Your companion marks a Stress whenever they’d take damage.</p>
         </div>
       ) : (
         <p className="hint">Enter your companion's starting Stress (from the companion sheet) to track it.</p>
@@ -212,14 +213,14 @@ function CompanionLevelUps(ctx: PlayCtx) {
   return (
     <details className="companion-levels" open={gaps.length > 0}>
       <summary>
-        Level-up options{gaps.length > 0 && <strong className="needs"> · {gaps.length} level{gaps.length > 1 ? "s" : ""} need a choice</strong>}
+        Level-up options{gaps.length > 0 && <strong className="needs"> ({gaps.length} level{gaps.length > 1 ? "s" : ""} need a choice)</strong>}
       </summary>
       <ul className="plain">
         {c.levelUps.map((lu) => (
           <li key={lu.level} className={gaps.includes(lu.level) ? "gap" : ""}>
             <span>
               <strong>Level {lu.level}:</strong> {optionLabel(reg, c, lu.companionOption)}
-              {lu.companionExperience && <> · new Experience: {lu.companionExperience.name} +2</>}
+              {lu.companionExperience && <>, new Experience: {lu.companionExperience.name} +2</>}
             </span>{" "}
             <button type="button" className="link" onClick={() => start(lu.level)}>{lu.companionOption ? "Change" : "Choose"}</button>
             {editing === lu.level && (
