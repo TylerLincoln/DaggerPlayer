@@ -207,10 +207,67 @@ function PlayTab(ctx: SheetCtx) {
         </div>
         {d.spellcastTraits.length > 0 && <p className="hint">Spellcast trait: {d.spellcastTraits.map(cap).join(" or ")}</p>}
       </section>
+      <LoadoutQuick {...ctx} />
 
 
       </div>
     </div>
+  );
+}
+
+/** A domain card's rules text and its table tools (used toggle, tokens, choices). Shared by the Cards tab and the play-tab pop-out. */
+function CardBody({ k, c, d, act }: { k: EntryOf<"domain-card"> } & Pick<SheetCtx, "c" | "d" | "act">) {
+  return (
+    <>
+      {k.text && <RichText text={k.text} headingBase={4} />}
+      {k.features && <Features features={k.features} />}
+      <div className="card-tools">
+        <UsedToggle text={k.text + " " + (k.features ?? []).map((f) => f.text).join(" ")} name={k.name} c={c} act={act} />
+        {/\btokens?\b/i.test(k.text) && <TokenCounter cardId={k.id} name={k.name} c={c} act={act} />}
+      </div>
+      {k.choices?.map((ch) => (
+        <ChoiceInput key={ch.id} choice={ch} label={k.name} value={c.build.featureChoices[ch.id]} experiences={d.experiences.map((x) => ({ id: x.id, name: x.name }))}
+          onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
+      ))}
+    </>
+  );
+}
+
+/** The loadout on the play tab: one line per card; tapping a card opens it in a drawer without leaving the tab. */
+function LoadoutQuick({ c, d, reg, act }: SheetCtx) {
+  const [openId, setOpenId] = useState<string | null>(null);
+  const open = openId ? reg.get(openId, "domain-card") : undefined;
+  return (
+    <section aria-labelledby="loadout-h">
+      <h2 id="loadout-h"><TermLink slug="loadout" label="Loadout" /> ({c.state.loadout.length} of 5)</h2>
+      {c.state.loadout.length === 0 ? (
+        <p className="hint">No cards in your loadout. <Link to="?tab=cards">Open the Cards tab</Link> to add some.</p>
+      ) : (
+        <ul className="plain card-list">
+          {c.state.loadout.map((id) => {
+            const k = reg.get(id, "domain-card");
+            if (!k) return <li key={id}>{id} (not available: is its pack on?)</li>;
+            return (
+              <li key={id}>
+                <button type="button" className="card-open" onClick={() => setOpenId(id)} aria-haspopup="dialog">
+                  <span className="card-title">{k.name}</span>
+                  <Meta className="kind" items={[`${reg.get(k.domainId)?.name} ${k.level}`, cap(k.cardType)]} />
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <Drawer open={!!open} onClose={() => setOpenId(null)} title={open?.name ?? ""}
+        footer={<Link className="button" to="?tab=cards" onClick={() => setOpenId(null)}>Manage cards</Link>}>
+        {open && (
+          <>
+            <p className="hint"><Meta items={[`${reg.get(open.domainId)?.name} ${open.level}`, cap(open.cardType), <><TermLink slug="recall-cost" label="Recall" /> {open.recallCost}</>]} /></p>
+            <CardBody k={open} c={c} d={d} act={act} />
+          </>
+        )}
+      </Drawer>
+    </section>
   );
 }
 
@@ -224,16 +281,7 @@ function CardsTab({ c, d, reg, act }: SheetCtx) {
     return (
       <li key={id} className="feature">
         <h3><Link to={`/compendium/${k.id}`}>{k.name}</Link> <Meta className="kind" items={[`${reg.get(k.domainId)?.name} ${k.level}`, cap(k.cardType), <><TermLink slug="recall-cost" label="Recall" /> {k.recallCost}</>]} /></h3>
-        {k.text && <RichText text={k.text} headingBase={4} />}
-        {k.features && <Features features={k.features} />}
-        <div className="card-tools">
-          <UsedToggle text={k.text + " " + (k.features ?? []).map((f) => f.text).join(" ")} name={k.name} c={c} act={act} />
-          {/\btokens?\b/i.test(k.text) && <TokenCounter cardId={k.id} name={k.name} c={c} act={act} />}
-        </div>
-        {k.choices?.map((ch) => (
-          <ChoiceInput key={ch.id} choice={ch} label={k.name} value={c.build.featureChoices[ch.id]} experiences={d.experiences.map((x) => ({ id: x.id, name: x.name }))}
-            onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
-        ))}
+        <CardBody k={k} c={c} d={d} act={act} />
         {where === "loadout" ? (
           <button type="button" onClick={() => act((x) => toVault(x, id))}>Move to vault</button>
         ) : (

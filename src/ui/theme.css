@@ -537,6 +537,7 @@ button.die { min-height: 44px; padding: 0; box-shadow: none; }
   .play-col-b > * { order: 5; }
   .play section[aria-labelledby="weap-h"] { order: 3; }
   .play section[aria-labelledby="traits-h"] { order: 4; }
+  .play section[aria-labelledby="loadout-h"] { order: 4; }
   .play section[aria-labelledby="xp-h"] { order: 6; }
   .play section[aria-labelledby="armor-h"] { order: 7; }
   .play section[aria-labelledby="cond-h"] { order: 8; }
@@ -641,6 +642,21 @@ section > h2 + .attack, section > .msg + .attack { border-top: var(--rule-bar) s
 
 /* reading and form pages keep a readable width inside the wide container */
 .entry, .levelup, .account, .print-page { max-width: 1000px; }
+
+/* play tab loadout: one ruled line per card; each opens the card in a drawer */
+.card-list { border-top: var(--rule-bar) solid var(--color-rule); }
+.card-list li { border-bottom: var(--rule-hair) solid var(--color-line-soft); }
+.card-open {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-2xs) var(--space-sm);
+  width: 100%; min-height: 44px; padding: var(--space-xs) var(--space-2xs); border: none; border-radius: 0; box-shadow: none; background: none;
+  color: var(--color-ink); text-align: left; white-space: normal;
+}
+.card-open:hover:not(:disabled) { background: var(--color-accent); color: var(--color-accent-ink); }
+.card-open:hover:not(:disabled) .kind { color: var(--color-accent-ink); }
+.card-open:active:not(:disabled) { transform: none; }
+.card-title { font-family: var(--font-display); font-weight: 800; font-size: var(--text-xl); line-height: 1.05; text-transform: uppercase; letter-spacing: var(--tracking-display); }
+.drawer-body > .hint:first-child { margin-top: var(--space-sm); }
+.drawer-foot .button { justify-self: start; }
 
 /* phones: the head stays short so Hit Points clears the roll bar */
 @media (max-width: 40rem) {

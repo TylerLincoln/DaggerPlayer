@@ -91,6 +91,8 @@
   - Compendium: filters in a sticky left column; results in two columns from 110rem.
   - Builder: three option columns from 90rem.
 
+- **Cards from the play tab** (2026-11-20): a Loadout list under the traits shows one line per card (name, domain and level, type). Tapping a card opens it in a drawer with the full text, the used toggle, tokens and choices (the same `CardBody` the Cards tab uses), plus a "Manage cards" link. Escape or the backdrop closes it, and focus returns to the card.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:
