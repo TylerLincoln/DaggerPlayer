@@ -73,12 +73,15 @@ function PlayTab(ctx: SheetCtx) {
   const [effect, setEffect] = useState("");
   const [until, setUntil] = useState<"" | "rest" | "long-rest">("");
   const vulnerable = stressVulnerable(c, d);
+  const weapons = [c.state.activePrimaryId, c.state.activeSecondaryId].map((id) => reg.get(id, "weapon")).filter((x): x is NonNullable<typeof x> => !!x);
   return (
-    <>
-      <section aria-label="Core stats" className="statgrid">
-        <StatBox label="Evasion" term="evasion" stat={d.evasion} />
-        <StatBox label="Armor Score" term="armor-score" stat={d.armorScore} />
-        <StatBox label="Proficiency" term="proficiency" stat={d.proficiency} />
+    <div className="play">
+      <section aria-label="Defense" className="defense">
+        <div className="statgrid">
+          <StatBox label="Evasion" term="evasion" stat={d.evasion} />
+          <StatBox label="Armor Score" term="armor-score" stat={d.armorScore} />
+          <StatBox label="Proficiency" term="proficiency" stat={d.proficiency} />
+        </div>
         <div className="statbox thresholds">
           <div className="statbox-label"><TermLink slug="damage-thresholds" label="Damage thresholds" /></div>
           <div className="threshold-row">
@@ -87,6 +90,44 @@ function PlayTab(ctx: SheetCtx) {
             <span><small>Severe</small> {d.thresholds.severe.total}+</span>
           </div>
         </div>
+      </section>
+
+      <div className="play-rail">
+        <div className="rail-dice">
+          <button type="button" className="primary" onClick={() => roll({})}>Roll</button>
+          <button type="button" onClick={() => roll({ reaction: true })}>Reaction</button>
+        </div>
+        <section aria-labelledby="track-h" className="trackers">
+          <h2 id="track-h">Trackers</h2>
+          {(["hp", "stress", "hope", "armor"] as const).map((k) => <TapTrack key={k} kind={k} {...ctx} />)}
+        </section>
+        <DamagePanel {...ctx} />
+      </div>
+
+      <div className="play-main">
+      <section aria-labelledby="weap-h">
+        <h2 id="weap-h">Active weapons</h2>
+        {d.beastform && <p className="msg msg-info">You’re in Beastform: you can’t use weapons until you drop out.</p>}
+        {!c.state.activePrimaryId && !c.state.activeSecondaryId && d.features.some((f) => f.feature.name === "I Am the Weapon") && (
+          <div className="attack">
+            <div className="attack-head">
+              <h3>Brawler’s Strike <span className="kind">(primary)</span></h3>
+              <p><Meta items={[c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice", "Melee", `${d.proficiency.total}d8+${d.proficiency.total}d6 phy`, "+1 Evasion while active"]} /></p>
+            </div>
+            <button type="button" onClick={() => roll({ attack: "brawler" })}>Attack with Brawler’s Strike</button>
+          </div>
+        )}
+        {weapons.length === 0 && !d.features.some((f) => f.feature.name === "I Am the Weapon") && <p>No active weapons.</p>}
+        {weapons.map((w) => (
+          <div className="attack" key={w.id}>
+            <div className="attack-head">
+              <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">({w.category})</span></h3>
+              <p>{weaponLine(w, d)}</p>
+            </div>
+            <button type="button" onClick={() => roll({ weaponId: w.id })}>Attack with {w.name}</button>
+            {w.feature && <p className="attack-note"><strong>{w.feature.name}:</strong> <Inline text={w.feature.text} /></p>}
+          </div>
+        ))}
       </section>
 
       <section aria-labelledby="traits-h">
@@ -102,57 +143,31 @@ function PlayTab(ctx: SheetCtx) {
         {d.spellcastTraits.length > 0 && <p className="hint">Spellcast trait: {d.spellcastTraits.map(cap).join(" or ")}</p>}
       </section>
 
-      <section aria-labelledby="track-h">
-        <h2 id="track-h">Trackers</h2>
-        {(["hp", "stress", "hope", "armor"] as const).map((k) => <TapTrack key={k} kind={k} {...ctx} />)}
-      </section>
-
       <ResourcesPanel {...ctx} />
       <BeastformPanel {...ctx} onAttack={() => roll({ attack: "beastform" })} />
       <CompanionPanel {...ctx} onAttack={() => roll({ attack: "companion" })} />
-      <DamagePanel {...ctx} />
 
       <section aria-labelledby="xp-h">
         <h2 id="xp-h"><TermLink slug="experience" label="Experiences" /></h2>
-        <ul className="plain">
+        <ul className="plain xp-list">
           {d.experiences.map((x) => (
             <li key={x.id} className="xp-row">
-              <span>{x.name} <strong>{formatMod(x.bonus.total)}</strong></span>
+              <span className="xp-name">{x.name}</span> <strong className="xp-bonus">{formatMod(x.bonus.total)}</strong>
               <button type="button" className="roll-btn" disabled={c.state.hope < 1} onClick={() => roll({ experienceIds: [x.id] })} aria-label={`Roll with ${x.name} (spend a Hope)`}>Roll with</button>
             </li>
           ))}
         </ul>
       </section>
 
-      <section aria-labelledby="weap-h">
-        <h2 id="weap-h">Active weapons</h2>
-        {d.beastform && <p className="msg msg-info">You’re in Beastform: you can’t use weapons until you drop out.</p>}
-        {!c.state.activePrimaryId && !c.state.activeSecondaryId && d.features.some((f) => f.feature.name === "I Am the Weapon") && (
-          <div className="feature">
-            <h3>Brawler’s Strike <span className="kind">(primary)</span></h3>
-            <p><Meta items={[c.build.featureChoices["brawler-strike-trait"] ? cap(c.build.featureChoices["brawler-strike-trait"]) : "Trait of your choice", "Melee", `${d.proficiency.total}d8+${d.proficiency.total}d6 phy`, "+1 Evasion while active"]} /></p>
-            <button type="button" className="primary" onClick={() => roll({ attack: "brawler" })}>Attack with Brawler’s Strike</button>
-          </div>
-        )}
-        {[c.state.activePrimaryId, c.state.activeSecondaryId].filter(Boolean).length === 0 && <p>No active weapons.</p>}
-        {[c.state.activePrimaryId, c.state.activeSecondaryId].map((id) => {
-          const w = reg.get(id, "weapon");
-          if (!w) return null;
-          return (
-            <div className="feature" key={w.id}>
-              <h3><Link to={`/compendium/${w.id}`}>{w.name}</Link> <span className="kind">({w.category})</span></h3>
-              <p>{weaponLine(w, d)}</p>
-              <button type="button" className="primary" onClick={() => roll({ weaponId: w.id })}>Attack with {w.name}</button>
-              {w.feature && <p><strong>{w.feature.name}:</strong> <Inline text={w.feature.text} /></p>}
-            </div>
-          );
-        })}
-        <h2>Armor</h2>
+      <section aria-labelledby="armor-h">
+        <h2 id="armor-h">Armor</h2>
         {armor ? (
-          <div className="feature">
-            <h3><Link to={`/compendium/${armor.id}`}>{armor.name}</Link></h3>
-            <p><Meta items={[`Base thresholds ${armor.baseThresholds.major}/${armor.baseThresholds.severe}`, `Base score ${armor.baseScore}`]} /></p>
-            {armor.feature && <p><strong>{armor.feature.name}:</strong> <Inline text={armor.feature.text} /></p>}
+          <div className="attack">
+            <div className="attack-head">
+              <h3><Link to={`/compendium/${armor.id}`}>{armor.name}</Link></h3>
+              <p><Meta items={[`Base thresholds ${armor.baseThresholds.major}/${armor.baseThresholds.severe}`, `Base score ${armor.baseScore}`]} /></p>
+            </div>
+            {armor.feature && <p className="attack-note"><strong>{armor.feature.name}:</strong> <Inline text={armor.feature.text} /></p>}
           </div>
         ) : <p>Unarmored.</p>}
       </section>
@@ -192,7 +207,8 @@ function PlayTab(ctx: SheetCtx) {
           <button type="submit">Add</button>
         </form>
       </section>
-    </>
+      </div>
+    </div>
   );
 }
 
@@ -558,10 +574,9 @@ export function SheetPage() {
   return (
     <div className="sheet">
       <header className="sheet-head">
-        <div>
+        <div className="sheet-id">
           <h1>{c.identity.name}</h1>
-          <p className="hint"><Meta items={[`Level ${d.level} ${name(c.build.subclassId)} ${name(c.build.classId)}`, heritage, name(c.build.communityId), c.identity.pronouns]} /></p>
-        </div>
+          <p className="sheet-meta"><Meta items={[`Level ${d.level} ${name(c.build.subclassId)} ${name(c.build.classId)}`, heritage, name(c.build.communityId), c.identity.pronouns]} /></p>
         <p className="subclass-summary">
           {subclassProgress(c, reg).map((p) => (
             <span key={p.subclass.id}>
@@ -571,6 +586,7 @@ export function SheetPage() {
           ))}
         </p>
         <SaveIndicator status={status} error={error} />
+        </div>
         <div className="sheet-actions">
           <button type="button" onClick={() => setResting(true)}>Rest</button>
           {d.level < MAX_LEVEL && <Link className="button" to={`/characters/${c.id}/level-up`}>Level up</Link>}

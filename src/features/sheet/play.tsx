@@ -57,7 +57,7 @@ export function TapTrack({ kind, c, d, act }: PlayCtx & { kind: TrackKind }) {
   return (
     <div className="track" role="group" aria-label={`${t.label}: ${marked} of ${max}${verb}`}>
       <div className="track-label">
-        <TermLink slug={t.term} label={t.label} /> <span className="hint" aria-hidden="true">{marked} / {max}</span>
+        <TermLink slug={t.term} label={t.label} /> <span className="track-count" aria-hidden="true">{marked}<small>/{max}</small></span>
       </div>
       <div className="track-row">
         <button type="button" className="step" aria-label={`${kind === "hope" ? "Spend" : "Clear"} one ${t.unit}`} disabled={marked === 0} onClick={() => go(marked - 1)}>−</button>

@@ -73,6 +73,18 @@
   - Fixed along the way: the builder progress bar was squeezed to a sliver; the rules page on phones was wider than the screen.
   - Hallmark linter: 31 Floor failures before, 0 after. Every link, field and handler is kept.
 
+- **Layout redesign** (Hallmark full depth, 2026-11-20). Every screen now uses one 1160px container. Wording, routes and logic are unchanged.
+  - Sheet (play tab):
+    - A header band: identity on the left; Rest, Level up and More on the right.
+    - A defense well: Evasion, Armor Score and Proficiency as poster figures over a mustard thresholds band.
+    - On desktop, a sticky right rail with Roll and Reaction, the trackers, and Take damage. It scrolls inside itself on short screens.
+    - Active weapons are ruled attack rows. Traits are one ruled strip.
+    - On phones the order is defense, trackers, damage, then the rest. Hit Points sits above the roll bar at 390 × 844.
+  - Home: a split hero with the SRD counts (classes, subclasses, domain cards, adversaries) as figures.
+  - Characters: ruled rows, with actions on one line.
+  - Builder: a sticky vertical step rail on desktop.
+  - Compendium: a two-column results ledger.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:

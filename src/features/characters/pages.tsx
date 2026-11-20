@@ -74,7 +74,7 @@ export function CharactersPage() {
   return (
     <>
       <h1>Your characters</h1>
-      <p>
+      <p className="page-actions">
         <Link className="button primary" to="/build/new">New character</Link>{" "}
         <label className="button">
           Import JSON <input type="file" accept="application/json,.json" className="visually-hidden" onChange={importFile} />
@@ -88,10 +88,14 @@ export function CharactersPage() {
         <ul className="character-list">
           {mine.map(({ doc, dirty, rev }) => (
             <li key={doc.id}>
-              <Link to={doc.finishedAt ? `/characters/${doc.id}` : `/build/${doc.id}/review`}>{doc.identity.name || "Unnamed character"}</Link>{" "}
-              <Meta className="hint" items={[`Level ${1 + doc.levelUps.length}`, !doc.finishedAt && "draft", user && (rev === 0 ? "not uploaded yet" : dirty ? "unsaved changes" : "")]} />{" "}
-              <button type="button" onClick={() => download(fileName(doc), doc)}>Export</button>{" "}
-              <button type="button" onClick={() => remove(doc.id, doc.identity.name)}>Delete</button>
+              <div className="character-id">
+                <Link to={doc.finishedAt ? `/characters/${doc.id}` : `/build/${doc.id}/review`}>{doc.identity.name || "Unnamed character"}</Link>{" "}
+                <Meta className="hint" items={[`Level ${1 + doc.levelUps.length}`, !doc.finishedAt && "draft", user && (rev === 0 ? "not uploaded yet" : dirty ? "unsaved changes" : "")]} />
+              </div>
+              <div className="character-actions">
+                <button type="button" onClick={() => download(fileName(doc), doc)}>Export</button>{" "}
+                <button type="button" onClick={() => remove(doc.id, doc.identity.name)}>Delete</button>
+              </div>
             </li>
           ))}
         </ul>

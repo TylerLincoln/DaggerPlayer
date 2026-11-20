@@ -80,6 +80,8 @@ function Layout() {
   );
 }
 
+const HOME_FIGURES = [["class", "Classes"], ["subclass", "Subclasses"], ["domain-card", "Domain cards"], ["adversary", "Adversaries"]] as const;
+
 function HomePage() {
   const [counts, setCounts] = useState<Record<string, Record<string, number>>>({});
   useEffect(() => {
@@ -94,9 +96,19 @@ function HomePage() {
   return (
     <>
       <section className="hero">
-        <h1>DaggerPlayer</h1>
-        <p className="lede">Build Daggerheart™ characters step by step, then play them at the table: trackers, dice, cards and rules in one place.</p>
-        <Link className="button primary hero-cta" to="/build/new">Build a character</Link>
+        <div className="hero-text">
+          <h1>DaggerPlayer</h1>
+          <p className="lede">Build Daggerheart™ characters step by step, then play them at the table: trackers, dice, cards and rules in one place.</p>
+          <Link className="button primary hero-cta" to="/build/new">Build a character</Link>
+        </div>
+        <dl className="hero-figures" aria-label="In the SRD">
+          {HOME_FIGURES.map(([type, label]) => (
+            <div key={type}>
+              <dt>{label}</dt>
+              <dd>{counts.srd?.[type] ?? "\u00a0"}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
       <ul className="home-cards">
         <li><Link to="/characters"><strong>Your characters</strong><span>Open a sheet, level up, rest, print.</span></Link></li>

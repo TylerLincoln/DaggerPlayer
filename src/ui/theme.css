@@ -1,6 +1,7 @@
-/* Hallmark · shape: app screen · genre: editorial · theme: Carnival (deal 1/3, seed character-builder-table-side-sheet-1bbf·57cd106e·2026-11-20·r0) · redesign: restyle
- * nav: kept (wordmark, three sections, account links) · signature: the character sheet's figures and trackers set in poster capitals · states: loading, empty, error, offline (as the screens have them) · carnival: cold-snap
+/* Hallmark · shape: app screen · genre: editorial · theme: Carnival (deal 1/3, seed character-builder-table-side-sheet-1bbf·57cd106e·2026-11-20·r0) · redesign: full (after a restyle)
+ * nav: kept (wordmark, three sections, account links) · signature: the sheet's defense well (poster figures over a mustard thresholds band) beside a sticky rail of dice, trackers and damage · screens: sheet rail, home split hero with SRD figures, builder step rail, compendium ledger, character rows · states: loading, empty, error, offline (as the screens have them) · carnival: cold-snap
  * axes: light/display-heavy/chromatic-yellow · posture: full-palette · modes: light+dark · contrast: pass · v2.0.0 */
+/* Hallmark · waive 23 · posture: full-palette declared in the stamp; the mustard field holds only the home figures and the thresholds band · the SRD counts and the damage thresholds sit on a whole mustard field, the theme's Figures range */
 /* Hallmark · dismissed 40 · the static tier pairs the light paper with the dark ink-on-oxblood block; computed per mode every pair passes (light 6.89:1, dark 5.86:1 on the second accent, ink on field 16.8 and 14.5) */
 /* Hallmark · dismissed 23 · the offline and setup banner is the second accent as a band under the declared full-palette posture */
 /* Hallmark · dismissed F4 · tracker boxes and the danger button are counted as primaries; one mustard primary per screen */
@@ -8,8 +9,9 @@
 /* Hallmark · dismissed 70 · "Sent again." follows a real Supabase magic-link request */
 /* Hallmark · answered F7 · fieldset, packs, messages and tracker boxes share the 2px ink edge on purpose: the theme's one rule for a bounded thing */
 /* Hallmark · reworded 51 middle-dot meta strings into hairline rows (Meta) and plain commas · 63 names them; en dashes in ranges to "to" · 19 names them; arrows on prev/next links to "Previous:" and "Next:" · 63; print "Features" heading to "Class, subclass and heritage features" · 54 */
-/* Hallmark · finish-review: subagent · 6 findings · 6 resolved (poster figures, wells on the hard shadow, option titles in capitals, character names underlined, thresholds stepped down at 4-up, oxblood fills the current step and open menu) · notes for a deeper run: home column, h1 repeats wordmark, character row actions wrap */
-/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, a restyle keeps the layouts; the sheet's numbers carry the theme instead (Evasion, thresholds and traits in the display capitals, trackers as hard ink boxes) */
+/* Hallmark · finish-review (layout): subagent · 7 findings · 6 resolved, 1 kept by choice (weapons stay above traits: the attack is the commonest roll) */
+/* Hallmark · finish-review (restyle): subagent · 6 findings · 6 resolved (poster figures, wells on the hard shadow, option titles in capitals, character names underlined, thresholds stepped down at 4-up, oxblood fills the current step and open menu) · notes for a deeper run: home column, h1 repeats wordmark, character row actions wrap */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: E, the phone sheet head ran tall; tightened so Hit Points clears the roll bar at 390 x 844 */
 @import url("./tokens.css");
 @import url("./base.css");
 @import "@fontsource/big-shoulders-display/800";
@@ -105,10 +107,10 @@ nav { display: flex; gap: var(--space-md); }
   .nav-main::-webkit-scrollbar { display: none; }
 }
 
-main { max-width: 860px; margin: 0 auto; padding: var(--space-lg) var(--space-md) var(--space-2xl); }
+main { max-width: 1160px; margin: 0 auto; padding: var(--space-lg) var(--space-md) var(--space-2xl); }
 main:focus { outline: none; }
 .site-footer { border-top: var(--rule-bar) solid var(--color-rule); background: var(--color-paper-2); padding: var(--space-md); color: var(--color-muted); font-size: var(--text-sm); }
-.site-footer p { max-width: 860px; margin: 0 auto; }
+.site-footer p { max-width: calc(1160px - 2 * var(--space-md)); margin: 0 auto; }
 .banner { margin: 0; padding: var(--space-xs) var(--space-md); background: var(--color-accent-2); color: var(--color-accent-2-ink); font-weight: 500; }
 
 /* ---------- controls: the pair, in the display capitals on a hard shadow ---------- */
@@ -180,7 +182,7 @@ h3 .meta.kind { margin-left: 0; }
 .home-cards { list-style: none; padding: 0; margin: var(--space-xl) 0; border-top: var(--rule-bar) solid var(--color-rule); }
 .home-cards li { border-bottom: var(--rule-bar) solid var(--color-rule); }
 .home-cards a {
-  display: grid; gap: var(--space-2xs) var(--space-lg); align-items: baseline; padding: var(--space-md) var(--space-xs);
+  display: grid; gap: var(--space-2xs) var(--space-lg); align-items: baseline; padding: var(--space-md) 0;
   text-decoration: none; color: var(--color-ink); transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
 }
 @media (min-width: 40rem) { .home-cards a { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
@@ -191,7 +193,6 @@ h3 .meta.kind { margin-left: 0; }
 .included h3 { margin-top: var(--space-md); }
 
 /* ---------- compendium and entries ---------- */
-main { max-width: 860px; }
 .entry h1 { display: flex; align-items: center; gap: var(--space-sm); }
 .crumbs { font-size: var(--text-sm); margin-bottom: var(--space-xs); gap: var(--space-xs); flex-wrap: wrap; }
 .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-xs) var(--space-md); margin: var(--space-md) 0; }
@@ -351,6 +352,7 @@ nav.steps { display: block; }
 .sheet-head h1 { margin: 0; }
 .sheet-head p { margin: 0; }
 .subclass-summary { margin: 0; font-size: var(--text-sm); }
+.subclass-summary button.link { white-space: nowrap; }
 .subclass-summary > span + span { margin-left: var(--space-sm); }
 .sheet-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs); margin-top: var(--space-2xs); }
 
@@ -485,6 +487,142 @@ button.die { min-height: 44px; padding: 0; box-shadow: none; }
 .stages > li.locked h3 { color: var(--color-muted); }
 .stages h3 { margin: 0 0 var(--space-2xs); }
 .stages .preview { color: var(--color-ink-2); }
+
+/* ---------- layout: full redesign compositions ---------- */
+:root { --text-name: var(--text-h1); --rail: 392px; }
+@media (min-width: 60rem) { :root { --text-name: 3.583rem; } }
+
+/* home: split hero, the SRD's own counts as poster figures on a mustard field */
+.hero { display: grid; gap: var(--space-xl); align-items: center; padding: var(--space-xl) 0 var(--space-lg); }
+@media (min-width: 60rem) {
+  main:has(.hero) { max-width: 1160px; }
+  .hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); padding: var(--space-2xl) 0 var(--space-xl); }
+}
+.hero-figures {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--rule-bar); margin: 0;
+  background: var(--color-line); border: var(--rule-bar) solid var(--color-line); box-shadow: var(--shadow-card);
+}
+.hero-figures > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: var(--space-2xs); padding: var(--space-md) var(--space-lg); background: var(--color-accent); color: var(--color-accent-ink); }
+.hero-figures dt { font-weight: 500; }
+.hero-figures dd { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: var(--text-hero); line-height: 1; font-variant-numeric: tabular-nums; min-height: 1em; }
+@media (min-width: 60rem) { .hero-figures dd { font-size: 4.3rem; } }
+
+/* characters: ruled rows, name as a title, actions on one line */
+.page-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin: var(--space-md) 0; }
+.character-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-xs) var(--space-md); padding: var(--space-md) 0; }
+.character-id { display: grid; gap: var(--space-2xs); min-width: 0; }
+.character-id > a { font-family: var(--font-display); font-weight: 800; font-size: var(--text-2xl); line-height: 1.05; text-transform: uppercase; letter-spacing: var(--tracking-display); text-decoration-color: var(--color-accent-2); text-decoration-thickness: 3px; text-underline-offset: 0.12em; overflow-wrap: break-word; }
+.character-id > a:hover { color: var(--color-accent-2); }
+.character-actions { display: flex; gap: var(--space-xs); }
+.character-actions button { min-height: 36px; padding: var(--space-2xs) var(--space-sm); font-size: var(--text-md); box-shadow: none; }
+
+/* sheet: header band, then defense, a sticky rail for what changes mid-fight, and the rest */
+main:has(.sheet) { max-width: 1160px; }
+.sheet-head { display: grid; gap: var(--space-md); align-items: end; padding-bottom: var(--space-md); border-bottom: var(--rule-bar) solid var(--color-rule); }
+.sheet-id { display: grid; gap: var(--space-2xs); min-width: 0; }
+.sheet-head h1 { font-size: var(--text-name); }
+.sheet-meta { font-size: var(--text-md); }
+.sheet-actions { margin: 0; }
+@media (min-width: 60rem) { .sheet-head { grid-template-columns: minmax(0, 1fr) auto; } .sheet-actions { justify-content: flex-end; } }
+.tabs { margin-top: 0; }
+
+.play { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); margin-top: var(--space-md); }
+.play-main > section:first-child > h2 { margin-top: var(--space-xs); }
+.play-main h2 { margin-top: var(--space-xl); }
+.play-rail { display: grid; gap: var(--space-lg); align-content: start; }
+@media (min-width: 60rem) {
+  .play { grid-template-columns: minmax(0, 1fr) var(--rail); grid-template-areas: "defense rail" "main rail"; grid-template-rows: auto 1fr; column-gap: var(--space-xl); align-items: start; }
+  .defense { grid-area: defense; }
+  .play-main { grid-area: main; }
+  .play-rail { grid-area: rail; position: sticky; top: 64px; max-height: calc(100dvh - 64px - var(--space-md)); overflow-y: auto; overscroll-behavior: contain; padding: 0 var(--space-2xs) var(--space-2xs) 0; }
+}
+
+.defense { display: grid; border: var(--rule-bar) solid var(--color-line); background: var(--color-paper-2); box-shadow: var(--shadow-card); }
+.defense .statgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+.defense .statbox { border: none; border-radius: 0; box-shadow: none; background: none; padding: var(--space-sm) var(--space-xs); }
+.defense .statgrid .statbox + .statbox { border-left: var(--rule-bar) solid var(--color-line); }
+.defense .statbox-value { font-size: var(--text-hero); }
+.defense .thresholds { border-top: var(--rule-bar) solid var(--color-line); background: var(--color-accent); color: var(--color-accent-ink); padding: var(--space-sm) var(--space-md); }
+.defense .thresholds .term-link, .defense .thresholds small { color: var(--color-accent-ink); }
+.defense .threshold-row { font-size: var(--text-2xl); justify-content: space-between; }
+@media (min-width: 45rem) { .defense .threshold-row { font-size: var(--text-3xl); } }
+.defense .threshold-row > span + span { padding-left: var(--space-md); border-left: var(--rule-bar) solid var(--color-accent-ink); }
+.defense .threshold-row > span { flex: 1; }
+
+.traitgrid { gap: var(--rule-bar); background: var(--color-line); border: var(--rule-bar) solid var(--color-line); box-shadow: var(--shadow-card); }
+.trait-cell { background: var(--color-paper-2); gap: 0; }
+.trait-cell .statbox { border: none; border-radius: 0; box-shadow: none; background: none; }
+.trait-cell .roll-btn { width: 100%; border: none; border-top: var(--rule-bar) solid var(--color-line); border-radius: 0; box-shadow: none; background: var(--color-paper); }
+.trait-cell .roll-btn:hover:not(:disabled) { background: var(--color-accent); }
+
+.trackers { border: var(--rule-bar) solid var(--color-line); background: var(--color-paper); box-shadow: var(--shadow-card); padding: var(--space-sm) var(--space-md); }
+.trackers h2 { margin: 0 0 var(--space-2xs); font-size: var(--text-xl); }
+.trackers .track { margin: 0; padding: var(--space-xs) 0; }
+.trackers .track + .track { border-top: var(--rule-hair) solid var(--color-line-soft); }
+.track-label { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-xs); font-weight: 500; }
+.track-count { font-family: var(--font-display); font-weight: 800; font-size: var(--text-2xl); line-height: 1; font-variant-numeric: tabular-nums; }
+.track-count small { font-size: var(--text-md); color: var(--color-muted); }
+.track-row { margin-top: var(--space-2xs); }
+.track-row .step { min-height: 36px; min-width: 40px; box-shadow: none; }
+.trackers .boxes button.box { width: 30px; height: 30px; }
+.play-rail .damage { margin: 0; border: var(--rule-bar) solid var(--color-line); background: var(--color-paper); padding: var(--space-sm) var(--space-md); }
+.play-rail .damage h2 { margin: 0 0 var(--space-xs); font-size: var(--text-xl); }
+.play-rail .damage .inline-form input { flex: 1 1 120px; }
+
+.attack { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-xs) var(--space-md); padding: var(--space-sm) 0; border-bottom: var(--rule-bar) solid var(--color-rule); }
+section > h2 + .attack, section > .msg + .attack { border-top: var(--rule-bar) solid var(--color-rule); }
+.attack-head { min-width: 0; }
+.attack-head h3 { margin: 0; font-size: var(--text-xl); }
+.attack-head p { margin: var(--space-2xs) 0 0; }
+.attack-note { grid-column: 1 / -1; margin: 0; }
+@media (max-width: 40rem) { .attack { grid-template-columns: minmax(0, 1fr); } }
+
+.xp-list { border-top: var(--rule-bar) solid var(--color-rule); }
+.xp-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--space-sm); padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-line-soft); }
+.xp-bonus { font-family: var(--font-display); font-weight: 800; font-size: var(--text-xl); line-height: 1; font-variant-numeric: tabular-nums; }
+
+.rail-dice { display: none; }
+@media (min-width: 60rem) {
+  .rail-dice { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-xs); }
+  .rail-dice button { font-size: var(--text-xl); min-height: 52px; }
+  .sheet:has(.play-rail) .fab { display: none; }
+}
+
+/* phones: the head stays short so Hit Points clears the roll bar */
+@media (max-width: 40rem) {
+  .sheet-head { gap: var(--space-xs); padding-bottom: var(--space-xs); }
+  .sheet-id { gap: 0; }
+  .sheet-meta, .subclass-summary, .sheet-head .save-status { font-size: var(--text-sm); line-height: 1.4; }
+  .sheet-actions button, .sheet-actions .button { min-height: 40px; padding: var(--space-2xs) var(--space-sm); }
+  .tabs { margin-bottom: var(--space-xs); }
+  .play { gap: var(--space-md); margin-top: var(--space-xs); }
+  .defense .statbox { padding: var(--space-xs) var(--space-2xs); }
+  .defense .statbox-value { font-size: var(--text-3xl); }
+  .defense .thresholds { padding: var(--space-xs) var(--space-sm); }
+  .defense .threshold-row { font-size: var(--text-xl); }
+  .trackers .track { padding: var(--space-2xs) 0; }
+  .trackers .boxes button.box { width: 28px; height: 28px; }
+  .trackers { padding: var(--space-xs) var(--space-sm); }
+}
+/* take damage: options in one wrapping row */
+.damage .toggles { gap: var(--space-2xs) var(--space-md); }
+.damage .toggle { min-height: 32px; }
+
+/* builder: a step rail beside the step on wide screens */
+@media (min-width: 60rem) {
+  main:has(.builder) { max-width: 1160px; }
+  .builder { display: grid; grid-template-columns: 240px minmax(0, 1fr); column-gap: var(--space-xl); align-items: start; }
+  .builder > * { grid-column: 2; }
+  .builder > .builder-head { grid-column: 1 / -1; }
+  .builder > nav.steps { grid-column: 1; grid-row: 2 / span 3; position: sticky; top: var(--space-md); margin-top: var(--space-md); }
+  .steps ol { flex-direction: column; overflow: visible; }
+  .steps li a { white-space: normal; }
+}
+
+/* compendium: results read as a two-column ledger on wide screens */
+@media (min-width: 45rem) {
+  .results li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: baseline; }
+}
 
 /* ---------- printable sheet: paper, not screen ---------- */
 .print-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-md); margin-bottom: var(--space-md); }
