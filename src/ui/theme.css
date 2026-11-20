@@ -658,6 +658,8 @@ section > h2 + .attack, section > .msg + .attack { border-top: var(--rule-bar) s
 .drawer-body > .hint:first-child { margin-top: var(--space-sm); }
 .drawer-foot .button { justify-self: start; }
 
+.choice-row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); margin-top: var(--space-xs); }
+
 /* phones: the head stays short so Hit Points clears the roll bar */
 @media (max-width: 40rem) {
   .sheet-head { gap: var(--space-xs); padding-bottom: var(--space-xs); }

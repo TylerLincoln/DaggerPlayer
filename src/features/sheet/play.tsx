@@ -138,6 +138,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
   const [applied, setApplied] = useState<string[]>([]);
   const [hitNotes, setHitNotes] = useState<string[]>([]);
   const [hitApplied, setHitApplied] = useState(false);
+  const [ask, setAsk] = useState<"hp-or-stress" | null>(null);
   const weaponEntry = reg.get(preset?.weaponId, "weapon");
   const d6 = (sides: number) => rollDie(sides, cryptoRng);
 
@@ -146,6 +147,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
     setDamage(null);
     setHitNotes([]);
     setHitApplied(false);
+    setAsk(null);
     const helpDice = help.split(/[\s,]+/).map(Number).filter((n) => n >= 1 && n <= 6);
     const mods: Mod[] = [
       ...(trait ? [{ label: cap(trait), value: traitValue(d, trait) }] : []),
@@ -203,6 +205,7 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
           });
         }
         notes.push(...h.notes);
+        setAsk(h.ask);
         setHitApplied(true);
       }
     } else r = rollDamageDice(weapon.groups, weapon.bonus, crit);
@@ -278,6 +281,13 @@ export function Roller({ preset, onClose, ...ctx }: PlayCtx & { preset: RollPres
                 </p>
               )}
               {hitNotes.length > 0 && <ul className="plain gear-notes">{hitNotes.map((n, i) => <li key={i}>{n}</li>)}</ul>}
+              {ask === "hp-or-stress" && (
+                <div className="choice-row" role="group" aria-label="Lifestealing: choose what to clear">
+                  <button type="button" disabled={c.state.hpMarked === 0} onClick={() => { act((x) => clearHp(x, 1)); setAsk(null); setHitNotes((n) => [...n, "Cleared a Hit Point."]); }}>Clear a Hit Point</button>
+                  <button type="button" disabled={c.state.stressMarked === 0} onClick={() => { act((x) => clearStress(x, 1)); setAsk(null); setHitNotes((n) => [...n, "Cleared a Stress."]); }}>Clear a Stress</button>
+                  {c.state.hpMarked === 0 && c.state.stressMarked === 0 && <p className="hint">Nothing is marked to clear.</p>}
+                </div>
+              )}
             </div>
           )}
         </div>

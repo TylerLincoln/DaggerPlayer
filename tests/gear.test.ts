@@ -162,14 +162,15 @@ describe("weapons", () => {
     expect(h.stress).toBe(1);
   });
 
-  it("Invigorating on a 4 clears a Stress; Lifestealing on a 6 clears HP when marked, else Stress", () => {
+  it("Invigorating on a 4 clears a Stress; Lifestealing on a 6 asks", () => {
     const c = hero("srd/armor/leather-armor");
     expect(onHit(reg.get("srd/weapon/enchanted-lute", "weapon"), c, reg, false, roller(4)).clearStress).toBe(1);
     expect(onHit(reg.get("srd/weapon/enchanted-lute", "weapon"), c, reg, false, roller(3)).clearStress).toBe(0);
-    c.state.hpMarked = 2;
-    expect(onHit(reg.get("srd/weapon/siphoning-gauntlets", "weapon"), c, reg, false, roller(6)).clearHp).toBe(1);
-    c.state.hpMarked = 0;
-    expect(onHit(reg.get("srd/weapon/siphoning-gauntlets", "weapon"), c, reg, false, roller(6)).clearStress).toBe(1);
+    // Lifestealing asks the player which to clear, and clears nothing by itself
+    const six = onHit(reg.get("srd/weapon/siphoning-gauntlets", "weapon"), c, reg, false, roller(6));
+    expect(six.ask).toBe("hp-or-stress");
+    expect(six.clearHp + six.clearStress).toBe(0);
+    expect(onHit(reg.get("srd/weapon/siphoning-gauntlets", "weapon"), c, reg, false, roller(5)).ask).toBeNull();
   });
 
   it("Bloodthirsty armor: a critical Melee weapon hit clears a Hit Point", () => {

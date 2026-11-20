@@ -99,10 +99,10 @@
   - Armor bonuses: Reinforced (+2 thresholds while the last slot is marked), Enchanted (thresholds + Spellcast trait), Magnificent (Armor Score + Presence), Attuned (thresholds + tier, and a loadout of 4), Difficult (−1 to every trait and to Evasion).
   - Armor on rest: Self-Healing clears a slot.
   - Weapon damage rolls: Powerful and Massive (an extra die, lowest dropped), Brutal (a maximum roll adds a die), Serrated (1s deal 8), Sharpwing (+Agility), Bonded (+level), and Sharp armor (+d4 to Melee weapons).
-  - Weapon hits (applied once per attack when you roll damage): Painful (mark a Stress), Invigorating (d4; on a 4, clear a Stress), Lifestealing (d6; on a 6, clear a Hit Point, or a Stress if no HP is marked), Bloodthirsty armor (a critical Melee hit clears a Hit Point).
+  - Weapon hits (applied once per attack when you roll damage): Painful (mark a Stress), Invigorating (d4; on a 4, clear a Stress), Lifestealing (d6; on a 6, the roller asks whether to clear a Hit Point or a Stress), Bloodthirsty armor (a critical Melee hit clears a Hit Point).
   - Reloading: rolls a d6 after each attack and says when to mark a Stress to reload.
   - Optional effects ("you can…", e.g. Hopeful, Shifting, Resilient, Impenetrable) and effects on enemies stay as text, because those are the player's call.
-- Rules question: Lifestealing says "clear a Hit Point or clear a Stress". The app clears a Hit Point when one is marked, otherwise a Stress. Confirm this is the preferred default.
+- Owner ruling (2026-11-20): Lifestealing asks the player whether to clear a Hit Point or a Stress.
 
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).

@@ -63,8 +63,8 @@ export function damageRules(w: Weapon | null | undefined, c: CharacterDoc, looku
 }
 
 /** What happens on your own sheet after a successful attack with this weapon (rolled automatically where the text says to roll). */
-export function onHit(w: Weapon | null | undefined, c: CharacterDoc, lookup: Lookup, crit: boolean, roll: (sides: number) => number): { stress: number; clearStress: number; clearHp: number; notes: string[] } {
-  const out = { stress: 0, clearStress: 0, clearHp: 0, notes: [] as string[] };
+export function onHit(w: Weapon | null | undefined, c: CharacterDoc, lookup: Lookup, crit: boolean, roll: (sides: number) => number): { stress: number; clearStress: number; clearHp: number; notes: string[]; ask: "hp-or-stress" | null } {
+  const out = { stress: 0, clearStress: 0, clearHp: 0, notes: [] as string[], ask: null as "hp-or-stress" | null };
   const f = weaponFeature(w);
   if (f === "Painful") {
     out.stress += 1;
@@ -77,11 +77,9 @@ export function onHit(w: Weapon | null | undefined, c: CharacterDoc, lookup: Loo
   }
   if (f === "Lifestealing") {
     const n = roll(6);
-    // "clear a Hit Point or clear a Stress": take the HP when one is marked, otherwise the Stress
-    if (n === 6) {
-      if (c.state.hpMarked > 0) { out.clearHp += 1; out.notes.push("Lifestealing: rolled 6, cleared a Hit Point."); }
-      else { out.clearStress += 1; out.notes.push("Lifestealing: rolled 6, cleared a Stress."); }
-    } else out.notes.push(`Lifestealing: rolled ${n}, no effect.`);
+    // "clear a Hit Point or clear a Stress": the player chooses (owner ruling 2026-11-20)
+    if (n === 6) { out.ask = "hp-or-stress"; out.notes.push("Lifestealing: rolled 6, clear a Hit Point or a Stress."); }
+    else out.notes.push(`Lifestealing: rolled ${n}, no effect.`);
   }
   if (crit && w?.range === "melee" && hasArmorFeature(c, lookup, "Bloodthirsty")) {
     out.clearHp += 1;
