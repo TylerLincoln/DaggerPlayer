@@ -10,6 +10,7 @@ import { MAX_LEVEL, undoLastLevelUp } from "../../rules/levelup.ts";
 import { addGold, CONSUMABLE_MAX, DOWNTIME_MOVES, type DowntimeMove, fromVault, INVENTORY_WEAPONS_MAX, mustLongRest, type RestKind, type Result, RuleError, setItemQty, stressVulnerable, swapWeapon, takeRest, toVault, equipWeapon, unequipWeapon } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Drawer } from "../../ui/Drawer.tsx";
+import { MoreMenu } from "../../ui/MoreMenu.tsx";
 import { FormMessage } from "../../ui/forms.tsx";
 import { Inline, RichText, TermLink } from "../../ui/RichText.tsx";
 import { useAuth } from "../auth/AuthProvider.tsx";
@@ -571,12 +572,14 @@ export function SheetPage() {
         <div className="sheet-actions">
           <button type="button" onClick={() => setResting(true)}>Rest</button>
           {d.level < MAX_LEVEL && <Link className="button" to={`/characters/${c.id}/level-up`}>Level up</Link>}
-          <Link className="button" to={`/build/${c.id}/review`}>Edit build</Link>
-          <Link className="button" to={`/characters/${c.id}/history`}>History</Link>
-          <Link className="button" to={`/characters/${c.id}/print`}>Print / PDF</Link>
-          {c.levelUps.length > 0 && (
-            <button type="button" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && act((x) => undoLastLevelUp(x))}>Undo level-up</button>
-          )}
+          <MoreMenu>
+            <Link to={`/build/${c.id}/review`}>Edit build</Link>
+            <Link to={`/characters/${c.id}/history`}>History</Link>
+            <Link to={`/characters/${c.id}/print`}>Print / PDF</Link>
+            {c.levelUps.length > 0 && (
+              <button type="button" className="menu-danger" onClick={() => confirm(`Undo the level ${d.level} level-up?`) && act((x) => undoLastLevelUp(x))}>Undo level {d.level}</button>
+            )}
+          </MoreMenu>
         </div>
       </header>
       <ConflictPanel rec={rec} reg={reg} resolve={resolve} />

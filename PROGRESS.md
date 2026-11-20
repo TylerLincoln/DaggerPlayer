@@ -51,6 +51,14 @@
     - the validator rejecting broken homebrew
   - **Placeholder page** (`npm run dev -- --host`): lists the bundled packs, to show they load. `npm run build` passes.
 
+- **Layout and UX polish** (design critique, 2026-11-20):
+  - Mobile header: account links share the brand row, and the main nav gets its own row, so no link is cut off.
+  - Sheet header: Rest and Level up stay visible. Edit build, History, Print and Undo moved into a "More" menu (`src/ui/MoreMenu.tsx`), with Undo styled as danger.
+  - Sheet tabs fit at 390px. Trait boxes are equal height. On phones, Roll and Reaction form a full-width bottom bar.
+  - Home: a hero with the main call to action, three task cards, and pack counts collapsed under "What's included".
+  - Builder: "Choose" is styled as the primary action. Level-up "Add" buttons no longer stretch. Selects stay inside their cards.
+  - Shared card radius and shadow, and a fluid h1 size.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:

@@ -74,7 +74,7 @@ function Option({ entry, selected, onChoose, apply, summary, disabled, disabledR
         <button type="button" onClick={() => setOpen(true)} aria-label={`Details: ${entry.name}`}>
           Details
         </button>
-        <button type="button" className={selected ? "primary" : ""} aria-pressed={selected} disabled={disabled && !selected} onClick={onChoose}>
+        <button type="button" className={selected ? "primary" : "choose"} aria-pressed={selected} disabled={disabled && !selected} onClick={onChoose}>
           {label}
         </button>
       </div>

@@ -48,10 +48,12 @@ function Layout() {
         <Link to="/" className="brand">
           DaggerPlayer
         </Link>
-        <nav aria-label="Main">
+        <nav aria-label="Main" className="nav-main">
           <NavLink to="/characters">Characters</NavLink>
           <NavLink to="/compendium">Compendium</NavLink>
           <NavLink to="/rules">Rules</NavLink>
+        </nav>
+        <nav aria-label="Account" className="nav-account">
           {user ? <NavLink to="/account">Account</NavLink> : <><NavLink to="/settings">Settings</NavLink> <NavLink to="/auth/sign-in">Sign in</NavLink></>}
         </nav>
       </header>
@@ -91,26 +93,33 @@ function HomePage() {
   }, []);
   return (
     <>
-      <h1>DaggerPlayer</h1>
-      <p>A Daggerheart™ Compatible character companion.</p>
-      <p>
-        <Link className="button primary" to="/build/new">Build a character</Link> <Link to="/characters">Your characters</Link> · <Link to="/compendium">Compendium</Link> · <Link to="/rules">Rules</Link>
-      </p>
-      <h2>Bundled content</h2>
-      {bundledPacks.map((p) => (
-        <section key={p.id}>
-          <h3>
-            {p.name} <small>({p.defaultEnabled ? "on" : "off"} by default)</small>
-          </h3>
-          <ul className="counts">
-            {Object.entries(counts[p.id] ?? {}).map(([t, n]) => (
-              <li key={t}>
-                {t}: {n}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
+      <section className="hero">
+        <h1>DaggerPlayer</h1>
+        <p className="lede">Build Daggerheart™ characters step by step, then play them at the table: trackers, dice, cards and rules in one place.</p>
+        <Link className="button primary hero-cta" to="/build/new">Build a character</Link>
+      </section>
+      <ul className="home-cards">
+        <li><Link to="/characters"><strong>Your characters</strong><span>Open a sheet, level up, rest, print.</span></Link></li>
+        <li><Link to="/compendium"><strong>Compendium</strong><span>Search classes, cards, gear and adversaries.</span></Link></li>
+        <li><Link to="/rules"><strong>Rules</strong><span>Read the SRD with linked terms.</span></Link></li>
+      </ul>
+      <details className="included">
+        <summary>What's included</summary>
+        {bundledPacks.map((p) => (
+          <section key={p.id}>
+            <h3>
+              {p.name} <small>({p.defaultEnabled ? "on" : "off"} by default)</small>
+            </h3>
+            <ul className="counts">
+              {Object.entries(counts[p.id] ?? {}).map(([t, n]) => (
+                <li key={t}>
+                  {t}: {n}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </details>
     </>
   );
 }
