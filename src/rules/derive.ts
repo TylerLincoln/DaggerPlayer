@@ -2,6 +2,7 @@
 // Pure: no React, no storage. Each stat keeps a list of contributions so the UI can explain it
 // ("Evasion 11 = Ranger 12 − Chainmail Armor 1"), and the builder can preview "+1 Evasion".
 import { TRAITS, type Entry, type EntryOf, type Feature, type Modifier, type Trait } from "../../content/schema/index.ts";
+import { stripTags } from "../../content/richtext.ts";
 import type { CharacterDoc } from "./character.ts";
 
 export interface Lookup {
@@ -62,6 +63,8 @@ export interface Derived {
   resources: DerivedResource[];
   /** the Beastform the character is in, if any */
   beastform: EntryOf<"beastform"> | null;
+  /** Warrior "Combat Training: You ignore burden when equipping weapons" (also via multiclass) */
+  ignoresBurden: boolean;
   companion: DerivedCompanion | null;
 }
 
@@ -342,6 +345,7 @@ export function derive(c: CharacterDoc, lookup: Lookup): Derived {
     resources,
     beastform,
     companion,
+    ignoresBurden: features.some((f) => f.feature.name === "Combat Training" && /ignore burden/i.test(stripTags(f.feature.text))),
   };
 }
 

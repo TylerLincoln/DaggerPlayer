@@ -7,7 +7,7 @@ import { useAutosave, useCharacterRecord } from "../../data/characters.ts";
 import type { CharacterDoc } from "../../rules/character.ts";
 import { type Derived, derive, type Stat } from "../../rules/derive.ts";
 import { MAX_LEVEL, undoLastLevelUp } from "../../rules/levelup.ts";
-import { addGold, CONSUMABLE_MAX, DOWNTIME_MOVES, type DowntimeMove, fromVault, INVENTORY_WEAPONS_MAX, mustLongRest, type RestKind, type Result, RuleError, setItemQty, stressVulnerable, swapWeapon, takeRest, toVault } from "../../rules/sheet.ts";
+import { addGold, CONSUMABLE_MAX, DOWNTIME_MOVES, type DowntimeMove, fromVault, INVENTORY_WEAPONS_MAX, mustLongRest, type RestKind, type Result, RuleError, setItemQty, stressVulnerable, swapWeapon, takeRest, toVault, equipWeapon, unequipWeapon } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Drawer } from "../../ui/Drawer.tsx";
 import { FormMessage } from "../../ui/forms.tsx";
@@ -243,6 +243,42 @@ function CardsTab({ c, d, reg, act }: SheetCtx) {
   );
 }
 
+/** One active-weapon slot: what's equipped, put it away, or equip another weapon of this category. */
+function WeaponSlot({ slot, c, d, reg, act, calm }: Pick<SheetCtx, "c" | "d" | "reg" | "act"> & { slot: "primary" | "secondary"; calm: boolean }) {
+  const [pick, setPick] = useState("");
+  const id = slot === "primary" ? c.state.activePrimaryId : c.state.activeSecondaryId;
+  const w = reg.get(id, "weapon");
+  const other = reg.get(slot === "primary" ? c.state.activeSecondaryId : c.state.activePrimaryId, "weapon");
+  const choice = reg.get(pick, "weapon");
+  const owned = new Set(c.state.inventoryWeaponIds);
+  const options = reg.all("weapon").filter((x) => x.category === slot && x.tier <= d.tier && x.id !== id).sort((a, b) => Number(owned.has(b.id)) - Number(owned.has(a.id)) || b.tier - a.tier || a.name.localeCompare(b.name));
+  // warn when equipping would push the other weapon out (burden 2, p. 55)
+  const pushesOut = !d.ignoresBurden && choice && other && ((slot === "primary" && choice.burden === 2) || (slot === "secondary" && other.burden === 2));
+  const label = slot === "primary" ? "Primary" : "Secondary";
+  return (
+    <div className="feature weapon-slot">
+      <h3>{label} weapon</h3>
+      {w ? (
+        <p>
+          <strong>{w.name}</strong> <span className="hint">{weaponLine(w, d)}</span>{" "}
+          <button type="button" className="link" disabled={c.state.inventoryWeaponIds.length >= INVENTORY_WEAPONS_MAX} onClick={() => act((x) => unequipWeapon(x, slot))}>Put away</button>
+        </p>
+      ) : (
+        <p className="hint">None equipped.</p>
+      )}
+      <form className="inline-form" onSubmit={(e) => { e.preventDefault(); if (!pick) return; act((x) => equipWeapon(x, reg, pick, calm)); setPick(""); }}>
+        <label htmlFor={`equip-${slot}`} className="visually-hidden">Equip a {slot} weapon</label>
+        <select id={`equip-${slot}`} value={pick} onChange={(e) => setPick(e.target.value)}>
+          <option value="">{w ? `Change ${slot} weapon…` : `Equip a ${slot} weapon…`}</option>
+          {options.map((x) => <option key={x.id} value={x.id}>{owned.has(x.id) ? "★ " : ""}T{x.tier} {x.name}{x.burden === 2 ? " (two-handed)" : ""}{owned.has(x.id) ? " (in inventory)" : ""}</option>)}
+        </select>
+        <button type="submit" disabled={!pick}>Equip{calm ? "" : " (mark 1 Stress)"}</button>
+      </form>
+      {pushesOut && <p className="hint">Equipping {choice.name} moves {other.name} to your inventory: you only have two hands.</p>}
+    </div>
+  );
+}
+
 function GearTab({ c, d, reg, act }: SheetCtx) {
   const [calm, setCalm] = useState(true);
   const [newWeapon, setNewWeapon] = useState("");
@@ -262,37 +298,36 @@ function GearTab({ c, d, reg, act }: SheetCtx) {
     <>
       <label className="toggle"><input type="checkbox" checked={calm} onChange={(e) => setCalm(e.target.checked)} /> Resting or a moment of calm (weapon swaps are free; armor can be changed)</label>
 
+      <h2>Active weapons</h2>
+      <p className="hint">
+        {d.ignoresBurden
+          ? "Combat Training: you ignore burden, so a two-handed primary and a secondary can both be active."
+          : `Hands in use: ${[c.state.activePrimaryId, c.state.activeSecondaryId].reduce((n, id) => n + (reg.get(id, "weapon")?.burden ?? 0), 0)} of 2 (SRD p. 55).`}
+      </p>
+      <WeaponSlot slot="primary" c={c} d={d} reg={reg} act={act} calm={calm} />
+      <WeaponSlot slot="secondary" c={c} d={d} reg={reg} act={act} calm={calm} />
+
       <h2>Inventory weapons ({c.state.inventoryWeaponIds.length} of {INVENTORY_WEAPONS_MAX})</h2>
+      {c.state.inventoryWeaponIds.length === 0 && <p className="hint">No spare weapons.</p>}
       <ul className="plain">
         {c.state.inventoryWeaponIds.map((id) => {
           const w = reg.get(id, "weapon");
           return (
             <li key={id} className="feature">
-              <strong>{w?.name ?? id}</strong> {w && <span className="hint">{weaponLine(w, d)}</span>}{" "}
-              <button type="button" onClick={() => act((x) => swapWeapon(x, reg, id, calm))}>Equip{calm ? "" : " (mark 1 Stress)"}</button>{" "}
+              <strong>{w?.name ?? id}</strong> <span className="kind">· {w ? cap(w.category) : ""}</span> {w && <span className="hint">{weaponLine(w, d)}</span>}{" "}
+              <button type="button" onClick={() => act((x) => swapWeapon(x, reg, id, calm))}>Equip as {w?.category ?? "weapon"}{calm ? "" : " (mark 1 Stress)"}</button>{" "}
               <button type="button" className="link" onClick={() => act((x) => ((x.state.inventoryWeaponIds = x.state.inventoryWeaponIds.filter((y) => y !== id)), x))}>Drop</button>
             </li>
           );
         })}
       </ul>
-      {[c.state.activePrimaryId, c.state.activeSecondaryId].map((id, i) =>
-        id ? (
-          <p key={i}>
-            Active: {reg.get(id)?.name}{" "}
-            <button type="button" disabled={c.state.inventoryWeaponIds.length >= INVENTORY_WEAPONS_MAX}
-              onClick={() => act((x) => { const s = x.state; s.inventoryWeaponIds.push(id); if (i === 0) s.activePrimaryId = null; else s.activeSecondaryId = null; return x; })}>
-              Put away
-            </button>
-          </p>
-        ) : null,
-      )}
       <form className="inline-form" onSubmit={(e) => { e.preventDefault(); if (!newWeapon) return; act((x) => { if (x.state.inventoryWeaponIds.length >= INVENTORY_WEAPONS_MAX) throw new RuleError(`You can carry only ${INVENTORY_WEAPONS_MAX} inventory weapons.`); x.state.inventoryWeaponIds.push(newWeapon); return x; }); setNewWeapon(""); }}>
-        <label htmlFor="add-weapon" className="visually-hidden">Add a weapon</label>
+        <label htmlFor="add-weapon" className="visually-hidden">Carry a spare weapon</label>
         <select id="add-weapon" value={newWeapon} onChange={(e) => setNewWeapon(e.target.value)}>
-          <option value="">Add a weapon…</option>
+          <option value="">Carry a spare weapon…</option>
           {reg.all("weapon").filter((w) => w.tier <= d.tier).map((w) => <option key={w.id} value={w.id}>T{w.tier} {w.name} ({w.category})</option>)}
         </select>
-        <button type="submit">Add</button>
+        <button type="submit">Add to inventory</button>
       </form>
 
       <h2>Armor</h2>

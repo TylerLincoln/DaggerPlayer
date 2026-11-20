@@ -291,15 +291,17 @@ export function GearStep() {
   const tier1 = reg.all("weapon").filter((w) => w.tier === 1);
   const weaponOption = (w: EntryOf<"weapon">, slot: "primaryId" | "secondaryId") => {
     const blockedMagic = w.damage.type === "mag" && !canCast;
-    const blockedTwoHanded = slot === "secondaryId" && primary?.burden === 2;
+    // burden (p. 55): two hands at most, unless the character ignores burden (Warrior: Combat Training)
+    const blockedTwoHanded = slot === "secondaryId" && primary?.burden === 2 && !derived.ignoresBurden;
+    const clearsSecondary = slot === "primaryId" && w.burden === 2 && !derived.ignoresBurden;
     return (
       <Option key={w.id} entry={w} selected={g[slot] === w.id}
         onChoose={() => update((d) => {
           d.build.gear[slot] = d.build.gear[slot] === w.id ? null : w.id;
-          if (slot === "primaryId" && w.burden === 2) d.build.gear.secondaryId = null;
+          if (clearsSecondary) d.build.gear.secondaryId = null;
           return d;
         })}
-        apply={(d) => { d.build.gear[slot] = w.id; if (slot === "primaryId" && w.burden === 2) d.build.gear.secondaryId = null; }}
+        apply={(d) => { d.build.gear[slot] = w.id; if (clearsSecondary) d.build.gear.secondaryId = null; }}
         disabled={blockedMagic || blockedTwoHanded}
         disabledReason={blockedMagic ? "Magic weapons need a Spellcast trait (from your subclass)." : blockedTwoHanded ? "Your primary weapon is two-handed." : undefined}
         summary={<p>{cap(w.trait)} · {RANGE[w.range]} · {dmg(w)} · {w.burden === 1 ? "One-Handed" : "Two-Handed"}{w.feature ? <> · <em>{w.feature.name}</em></> : null}</p>}
@@ -311,6 +313,7 @@ export function GearStep() {
     <>
       <h2>Weapons</h2>
       <p>Choose a two-handed primary weapon, or a one-handed primary weapon and a one-handed secondary weapon, from Tier 1 (SRD p. 5).</p>
+      {derived.ignoresBurden && <p className="msg msg-info">Combat Training: you ignore burden, so you can carry a secondary weapon even with a two-handed primary.</p>}
       <div role="radiogroup" aria-label="Weapon list" className="segmented">
         <button type="button" role="radio" aria-checked={weaponGroup === "physical"} onClick={() => setWeaponGroup("physical")}>Physical</button>
         <button type="button" role="radio" aria-checked={weaponGroup === "magic"} onClick={() => setWeaponGroup("magic")}>Magic</button>
@@ -318,6 +321,7 @@ export function GearStep() {
       <h3>Primary weapon</h3>
       <ul className="options">{tier1.filter((w) => w.category === "primary" && w.group === weaponGroup).map((w) => weaponOption(w, "primaryId"))}</ul>
       <h3>Secondary weapon (optional)</h3>
+      {primary && <p className="hint">Primary: {primary.name} ({primary.burden === 1 ? "one-handed" : "two-handed"}). {primary.burden === 2 && !derived.ignoresBurden ? "Choose a one-handed primary to free a hand for a secondary weapon." : "Pick a secondary to carry alongside it."}</p>}
       <ul className="options">{tier1.filter((w) => w.category === "secondary").map((w) => weaponOption(w, "secondaryId"))}</ul>
       <h2>Armor</h2>
       <ul className="options">

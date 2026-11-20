@@ -132,36 +132,67 @@ export function fromVault(c: CharacterDoc, lookup: Lookup, cardId: string, opts:
 
 export const INVENTORY_WEAPONS_MAX = 2;
 
-/** Swap an inventory weapon into an active slot: free during a rest or moment of calm, otherwise 1 Stress. */
-export function swapWeapon(c: CharacterDoc, lookup: Lookup, inventoryWeaponId: string, calm: boolean): Result {
-  const w = lookup.get(inventoryWeaponId);
+/**
+ * Equip a weapon in its slot (primary or secondary), from inventory or newly acquired.
+ * Whatever it replaces goes to the inventory (max 2). Free during a rest or moment of calm,
+ * otherwise mark 1 Stress (p. 55). Burden: two hands at most, so a two-handed primary and a
+ * secondary can't both be active, unless the character ignores burden (Warrior: Combat Training).
+ */
+export function equipWeapon(c: CharacterDoc, lookup: Lookup, weaponId: string, calm: boolean): Result {
+  const w = lookup.get(weaponId);
   if (w?.type !== "weapon") throw new RuleError("That's not a weapon.");
-  if (!c.state.inventoryWeaponIds.includes(inventoryWeaponId)) throw new RuleError("That weapon isn't in your inventory.");
   const d = derive(c, lookup);
   if (w.tier > d.tier) throw new RuleError(`You can't equip a Tier ${w.tier} weapon at tier ${d.tier}.`);
+  if (d.beastform) throw new RuleError("You can't use weapons while in Beastform.");
   const doc = clone(c);
   const s = doc.state;
-  s.inventoryWeaponIds = s.inventoryWeaponIds.filter((x) => x !== inventoryWeaponId);
   const slot = w.category === "primary" ? "activePrimaryId" : "activeSecondaryId";
-  const displaced = [s[slot]];
+  if (s[slot] === w.id) return { doc: c, notes: [] };
+  const fromInventory = s.inventoryWeaponIds.indexOf(weaponId);
+  if (fromInventory !== -1) s.inventoryWeaponIds.splice(fromInventory, 1);
+  const displaced: string[] = [];
+  if (s[slot]) displaced.push(s[slot]!);
   s[slot] = w.id;
-  // a two-handed primary leaves no hand for a secondary (burden 2, p. 55)
-  if (w.category === "primary" && w.burden === 2 && s.activeSecondaryId) {
-    displaced.push(s.activeSecondaryId);
-    s.activeSecondaryId = null;
-  }
-  if (w.category === "secondary") {
-    const p = lookup.get(s.activePrimaryId);
-    if (p?.type === "weapon" && p.burden === 2) {
-      displaced.push(s.activePrimaryId);
-      s.activePrimaryId = null;
+  const notes: string[] = [];
+  if (!d.ignoresBurden) {
+    if (w.category === "primary" && w.burden === 2 && s.activeSecondaryId) {
+      displaced.push(s.activeSecondaryId);
+      s.activeSecondaryId = null;
+      notes.push("A two-handed primary weapon leaves no hand free, so your secondary weapon went to your inventory.");
+    }
+    if (w.category === "secondary") {
+      const p = lookup.get(s.activePrimaryId);
+      if (p?.type === "weapon" && p.burden === 2) {
+        displaced.push(s.activePrimaryId!);
+        s.activePrimaryId = null;
+        notes.push(`${p.name} is two-handed, so it went to your inventory to free a hand.`);
+      }
     }
   }
-  for (const id of displaced) if (id) s.inventoryWeaponIds.push(id);
-  if (s.inventoryWeaponIds.length > INVENTORY_WEAPONS_MAX) throw new RuleError(`You can carry only ${INVENTORY_WEAPONS_MAX} inventory weapons.`);
-  if (calm) return { doc, notes: [] };
+  s.inventoryWeaponIds.push(...displaced);
+  if (s.inventoryWeaponIds.length > INVENTORY_WEAPONS_MAX)
+    throw new RuleError(`You can carry only ${INVENTORY_WEAPONS_MAX} inventory weapons. Drop one first to make room for the weapon you're replacing.`);
+  if (calm) return { doc, notes };
   const r = markStress(doc, derive(doc, lookup), 1);
-  return { doc: r.doc, notes: ["Marked 1 Stress to swap weapons in danger.", ...r.notes] };
+  return { doc: r.doc, notes: ["Marked 1 Stress to change weapons in danger.", ...notes, ...r.notes] };
+}
+
+/** Swap an inventory weapon into its active slot (see equipWeapon). */
+export function swapWeapon(c: CharacterDoc, lookup: Lookup, inventoryWeaponId: string, calm: boolean): Result {
+  if (!c.state.inventoryWeaponIds.includes(inventoryWeaponId)) throw new RuleError("That weapon isn't in your inventory.");
+  return equipWeapon(c, lookup, inventoryWeaponId, calm);
+}
+
+/** Move an active weapon to the inventory (no cost). */
+export function unequipWeapon(c: CharacterDoc, slot: "primary" | "secondary"): CharacterDoc {
+  const key = slot === "primary" ? "activePrimaryId" : "activeSecondaryId";
+  const id = c.state[key];
+  if (!id) return c;
+  if (c.state.inventoryWeaponIds.length >= INVENTORY_WEAPONS_MAX) throw new RuleError(`You can carry only ${INVENTORY_WEAPONS_MAX} inventory weapons.`);
+  const doc = clone(c);
+  doc.state.inventoryWeaponIds.push(id);
+  doc.state[key] = null;
+  return doc;
 }
 
 // ---------- gold (p. 84) ----------

@@ -75,7 +75,8 @@ export function validateBuild(c: CharacterDoc, lookup: Lookup): BuildIssue[] {
   checkWeapon(primary, g.primaryId, "primary");
   checkWeapon(secondary, g.secondaryId, "secondary");
   if (!g.primaryId) warn("gear", "No primary weapon chosen.");
-  if (primary?.type === "weapon" && primary.burden === 2 && g.secondaryId) err("gear", `${primary.name} is two-handed, so you can't also carry a secondary weapon.`);
+  // burden: two hands at most (p. 55), unless the character ignores burden (Warrior: Combat Training)
+  if (primary?.type === "weapon" && primary.burden === 2 && g.secondaryId && !derived.ignoresBurden) err("gear", `${primary.name} is two-handed, so you can't also carry a secondary weapon.`);
   if (secondary?.type === "weapon" && secondary.burden === 2) err("gear", `${secondary.name} is two-handed; a secondary weapon must be one-handed.`);
   if (primary?.type === "weapon" && primary.burden === 1 && !g.secondaryId) warn("gear", "With a one-handed primary weapon you can also take a one-handed secondary weapon.");
   if (!g.armorId) err("gear", "Choose a set of Tier 1 armor.");
