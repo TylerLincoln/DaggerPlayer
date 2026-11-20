@@ -4,7 +4,8 @@ import { TRAITS } from "../../../content/schema/index.ts";
 import { useContent } from "../../content/ContentProvider.tsx";
 import { bundledPacks } from "../../content/packs.ts";
 import { useCharacterRecord } from "../../data/characters.ts";
-import { derive } from "../../rules/derive.ts";
+import { derive, type Lookup, subclassProgress } from "../../rules/derive.ts";
+import type { CharacterDoc } from "../../rules/character.ts";
 import { formatMod } from "../../rules/traits.ts";
 import { Inline, RichText } from "../../ui/RichText.tsx";
 
@@ -64,6 +65,9 @@ export function PrintPage() {
             <h1>{c.identity.name || "Unnamed character"}</h1>
             <p>{c.identity.pronouns && `${c.identity.pronouns} · `}Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)}</p>
             <p>{heritage} · {name(c.build.communityId)}{c.build.transformationId ? ` · ${name(c.build.transformationId)}` : ""}</p>
+            {subclassProgress(c, reg).map((p) => (
+              <p key={p.subclass.id}>{p.subclass.name}: {p.cards.map((card) => `${card.stage.charAt(0).toUpperCase() + card.stage.slice(1)}${card.acquired ? " ✓" : " (not yet)"}`).join(" · ")}</p>
+            ))}
           </div>
           <dl className="p-core">
             <div><dt>Evasion</dt><dd>{d.evasion.total}</dd></div>
@@ -159,7 +163,7 @@ export function PrintPage() {
           <h2>Features</h2>
           {[...groups].map(([source, fs]) => (
             <div key={source} className="p-card">
-              <h4>{source}</h4>
+              <h4>{stageTitle(source, c, reg)}</h4>
               {fs.map(({ feature: f }) => (
                 <div key={f.name}>
                   <p><strong>{f.name}{f.kind ? ` (${f.kind})` : ""}:</strong></p>
@@ -195,4 +199,12 @@ export function PrintPage() {
 /** Rich text for paper: same layout, rules terms as plain words (no links or tooltips). */
 function PrintText({ text }: { text: string }) {
   return <div className="p-text"><RichText text={text.replace(/\{\{(?:term|ref):[^|}]+\|([^}]+)\}\}/g, "$1").replace(/\{\{(?:term|ref):([^|}]+)\}\}/g, "$1")} headingBase={5} /></div>;
+}
+
+/** "Wayfinder (specialization)" → "Wayfinder: Specialization (level 5)" for printed subclass cards. */
+function stageTitle(source: string, c: CharacterDoc, reg: Lookup): string {
+  const m = source.match(/^(.*) \((foundation|specialization|mastery)\)$/);
+  if (!m) return source;
+  const card = subclassProgress(c, reg).find((p) => p.subclass.name === m[1])?.cards.find((x) => x.stage === m[2]);
+  return `${m[1]}: ${m[2].charAt(0).toUpperCase() + m[2].slice(1)}${card?.level ? ` (level ${card.level})` : ""}`;
 }

@@ -8,6 +8,7 @@ import type { CharacterDoc, LevelUp } from "../../rules/character.ts";
 import { ACHIEVEMENT_LEVELS, derive, diffDerived, formatChange, tierOf } from "../../rules/derive.ts";
 import { type Advancement, applyLevelUp, cardLevelLimit, emptyLevelUp, markedTraits, MAX_LEVEL, optionStatus, ownedCards, validateLevelUp } from "../../rules/levelup.ts";
 import { Inline } from "../../ui/RichText.tsx";
+import { Features } from "../compendium/EntryView.tsx";
 import { ChoiceInput } from "../../ui/ChoiceInput.tsx";
 import { isBeastbound } from "../../rules/levelup.ts";
 import { CompanionEditor } from "../sheet/CompanionEditor.tsx";
@@ -85,7 +86,13 @@ function PickDetails({ a, set, c, reg, lu }: { a: Advancement; set: (a: Advancem
     case "subclass": {
       const sub = reg.get(c.build.subclassId, "subclass");
       const have = c.levelUps.flatMap((x) => x.advancements).filter((x) => x.optionId === "subclass").length;
-      return <p>You gain the <strong>{have === 0 ? "specialization" : "mastery"}</strong> card for {sub?.name}: {(have === 0 ? sub?.specialization : sub?.mastery)?.map((f) => f.name).join(", ")}.</p>;
+      const card = have === 0 ? sub?.specialization : sub?.mastery;
+      return (
+        <div>
+          <p>You gain the <strong>{have === 0 ? "Specialization" : "Mastery"}</strong> card for {sub?.name}{have === 0 ? " (the Mastery comes with a later upgrade)" : ""}:</p>
+          {card && <Features features={card} />}
+        </div>
+      );
     }
     case "multiclass": {
       const mc = reg.get(a.classId, "class");

@@ -150,6 +150,7 @@ export function ClassStep() {
                   <>
                     <p>Spellcast trait: {s.spellcastTrait ? cap(s.spellcastTrait) : "none"}</p>
                     <p className="hint">Foundation: {s.foundation.map((f) => f.name).join(", ")}</p>
+                    <p className="hint">Later: Specialization ({s.specialization.map((f) => f.name).join(", ")}) · Mastery ({s.mastery.map((f) => f.name).join(", ")})</p>
                   </>
                 }
               />

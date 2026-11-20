@@ -5,7 +5,7 @@ import { useContent } from "../../content/ContentProvider.tsx";
 import type { Registry } from "../../content/registry.ts";
 import { useAutosave, useCharacterRecord } from "../../data/characters.ts";
 import type { CharacterDoc } from "../../rules/character.ts";
-import { type Derived, derive, type Stat } from "../../rules/derive.ts";
+import { type Derived, derive, type Stat, subclassProgress } from "../../rules/derive.ts";
 import { MAX_LEVEL, undoLastLevelUp } from "../../rules/levelup.ts";
 import { addGold, CONSUMABLE_MAX, DOWNTIME_MOVES, type DowntimeMove, fromVault, INVENTORY_WEAPONS_MAX, mustLongRest, type RestKind, type Result, RuleError, setItemQty, stressVulnerable, swapWeapon, takeRest, toVault, equipWeapon, unequipWeapon } from "../../rules/sheet.ts";
 import { formatMod } from "../../rules/traits.ts";
@@ -379,25 +379,76 @@ function GearTab({ c, d, reg, act }: SheetCtx) {
   );
 }
 
-function FeaturesTab({ c, d, act }: SheetCtx) {
-  const groups = new Map<string, typeof d.features>();
-  for (const f of d.features) groups.set(f.source, [...(groups.get(f.source) ?? []), f]);
-  const xps = d.experiences.map((x) => ({ id: x.id, name: x.name }));
+const STAGE_LABEL = { foundation: "Foundation", specialization: "Specialization", mastery: "Mastery" } as const;
+
+/** One feature with its "Used" checkbox and any choices it asks for. */
+function FeatureItem({ f, source, c, d, act }: { f: import("../../../content/schema/index.ts").Feature; source: string } & Pick<SheetCtx, "c" | "d" | "act">) {
+  return (
+    <div>
+      <Features features={[f]} />
+      <UsedToggle text={f.text} name={`${source}: ${f.name}`} c={c} act={act} />
+      {f.choices?.map((ch) => (
+        <ChoiceInput key={ch.id} choice={ch} label={f.name} value={c.build.featureChoices[ch.id]} experiences={d.experiences.map((x) => ({ id: x.id, name: x.name }))}
+          onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
+      ))}
+    </div>
+  );
+}
+
+/** Foundation → Specialization → Mastery, with what's unlocked, when, and what's next (SRD p. 9, 54). */
+function SubclassTrack({ c, d, reg, act }: SheetCtx) {
   return (
     <>
+      {subclassProgress(c, reg).map((p) => (
+        <section key={p.subclass.id} className="subclass-track" aria-labelledby={`sc-${p.subclass.id}`}>
+          <h2 id={`sc-${p.subclass.id}`}>
+            <Link to={`/compendium/${p.subclass.id}`}>{p.subclass.name}</Link> <span className="kind">· {p.multiclass ? "multiclass subclass" : "subclass"}</span>
+          </h2>
+          <ol className="stages">
+            {p.cards.map((card) => (
+              <li key={card.stage} className={card.acquired ? "acquired" : "locked"}>
+                <h3>
+                  <span aria-hidden="true">{card.acquired ? "✓" : "○"}</span> {STAGE_LABEL[card.stage]}
+                  <span className="kind"> · {card.acquired ? (card.level ? `level ${card.level}` : "acquired") : "not yet"}</span>
+                </h3>
+                {card.acquired ? (
+                  card.features.map((f) => <FeatureItem key={f.name} f={f} source={`${p.subclass.name} (${card.stage})`} c={c} d={d} act={act} />)
+                ) : (
+                  <>
+                    <p className="hint">
+                      {p.multiclass
+                        ? "Only your main subclass takes upgraded cards (SRD p. 54)."
+                        : p.next?.stage === card.stage
+                          ? p.next.hint
+                          : `Comes after the ${STAGE_LABEL[p.next?.stage ?? "specialization"].toLowerCase()}.`}
+                    </p>
+                    <details>
+                      <summary>Preview: {card.features.map((f) => f.name).join(", ")}</summary>
+                      <div className="preview"><Features features={card.features} /></div>
+                    </details>
+                  </>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </>
+  );
+}
+
+function FeaturesTab(ctx: SheetCtx) {
+  const { c, d, act } = ctx;
+  const groups = new Map<string, typeof d.features>();
+  // subclass features are shown in the track above, in order
+  for (const f of d.features) if (!/ \((foundation|specialization|mastery)\)$/.test(f.source)) groups.set(f.source, [...(groups.get(f.source) ?? []), f]);
+  return (
+    <>
+      <SubclassTrack {...ctx} />
       {[...groups].map(([source, fs]) => (
         <section key={source}>
           <h2>{source}</h2>
-          {fs.map(({ feature: f }) => (
-            <div key={f.name}>
-              <Features features={[f]} />
-              <UsedToggle text={f.text} name={`${source}: ${f.name}`} c={c} act={act} />
-              {f.choices?.map((ch) => (
-                <ChoiceInput key={ch.id} choice={ch} label={f.name} value={c.build.featureChoices[ch.id]} experiences={xps}
-                  onChange={(v) => act((x) => ((x.build.featureChoices[ch.id] = v), x))} />
-              ))}
-            </div>
-          ))}
+          {fs.map(({ feature: f }) => <FeatureItem key={f.name} f={f} source={source} c={c} d={d} act={act} />)}
         </section>
       ))}
       {c.build.classNotes && <><h2>Class notes</h2><p>{c.build.classNotes}</p></>}
@@ -508,6 +559,14 @@ export function SheetPage() {
           <h1>{c.identity.name}</h1>
           <p className="hint">Level {d.level} {name(c.build.subclassId)} {name(c.build.classId)} · {heritage} · {name(c.build.communityId)}{c.identity.pronouns ? ` · ${c.identity.pronouns}` : ""}</p>
         </div>
+        <p className="subclass-summary">
+          {subclassProgress(c, reg).map((p) => (
+            <span key={p.subclass.id}>
+              {p.subclass.name}: {p.cards.map((card) => `${STAGE_LABEL[card.stage]}${card.acquired ? " ✓" : ""}`).join(" · ")}{" "}
+              <button type="button" className="link" onClick={() => setParams({ tab: "features" }, { replace: true })}>Details</button>
+            </span>
+          ))}
+        </p>
         <SaveIndicator status={status} error={error} />
         <div className="sheet-actions">
           <button type="button" onClick={() => setResting(true)}>Rest</button>

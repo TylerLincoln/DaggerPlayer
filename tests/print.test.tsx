@@ -50,7 +50,8 @@ describe("printable sheet", () => {
 
   it("prints full card and feature text with rules terms as plain words", () => {
     expect(sheet).toContain("Nature’s Tongue");
-    expect(sheet).toContain("Wayfinder (foundation)");
+    expect(sheet).toContain("Wayfinder: Foundation (level 1)");
+    expect(sheet).toContain("Wayfinder: Foundation ✓ · Specialization (not yet) · Mastery (not yet)");
     expect(sheet).not.toMatch(/\{\{(term|ref):/);
     expect(sheet).not.toContain('class="term"');
     expect(sheet).toContain("2d6+3 phy"); // shortbow at Proficiency 2

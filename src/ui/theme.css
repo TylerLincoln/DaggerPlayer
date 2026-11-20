@@ -377,3 +377,11 @@ button.die { min-height: 44px; padding: 0; background: var(--surface); color: va
 .companion-levels .needs { color: var(--danger); }
 .companion-levels li { padding: 6px 0; border-bottom: 1px solid var(--border); }
 .companion-levels li.gap > span { color: var(--danger); }
+.subclass-summary { margin: 0; font-size: 0.9rem; }
+.subclass-summary span + span::before { content: " · "; }
+.stages { list-style: none; padding: 0; display: grid; gap: 8px; }
+.stages > li { border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; background: var(--surface); }
+.stages > li.acquired { border-left: 4px solid var(--accent); }
+.stages > li.locked h3 { color: var(--muted); }
+.stages h3 { margin: 0 0 4px; font-size: 1rem; }
+.stages .preview { opacity: 0.85; }

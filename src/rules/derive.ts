@@ -142,8 +142,66 @@ export function ancestryFeatures(c: CharacterDoc, lookup: Lookup): { source: str
 function subclassUpgrades(c: CharacterDoc): Map<string, number> {
   const m = new Map<string, number>();
   for (const lu of c.levelUps)
-    for (const a of lu.advancements) if (a.optionId === "subclass" && a.subclassId) m.set(a.subclassId, (m.get(a.subclassId) ?? 0) + 1);
+    for (const a of lu.advancements)
+      if (a.optionId === "subclass") {
+        // an upgrade recorded without a subclass (e.g. an imported sheet) is for the main subclass
+        const id = a.subclassId ?? c.build.subclassId;
+        if (id) m.set(id, (m.get(id) ?? 0) + 1);
+      }
   return m;
+}
+
+export type SubclassStage = "foundation" | "specialization" | "mastery";
+export const SUBCLASS_STAGES: SubclassStage[] = ["foundation", "specialization", "mastery"];
+
+export interface SubclassProgress {
+  subclass: EntryOf<"subclass">;
+  /** main subclass, or one gained by multiclassing (foundation only, p. 54) */
+  multiclass: boolean;
+  cards: { stage: SubclassStage; features: Feature[]; acquired: boolean; level: number | null }[];
+  /** what the next card needs; null when the subclass is complete */
+  next: { stage: SubclassStage; hint: string } | null;
+}
+
+/** Foundation → Specialization → Mastery for each of the character's subclasses (SRD p. 9, 54). */
+export function subclassProgress(c: CharacterDoc, lookup: Lookup): SubclassProgress[] {
+  const level = 1 + c.levelUps.length;
+  const out: SubclassProgress[] = [];
+  const main = lookup.get(c.build.subclassId);
+  // levels at which each upgrade was taken, in order
+  const upgradeLevels = new Map<string, number[]>();
+  for (const lu of c.levelUps)
+    for (const a of lu.advancements)
+      if (a.optionId === "subclass") {
+        const id = a.subclassId ?? c.build.subclassId;
+        if (id) upgradeLevels.set(id, [...(upgradeLevels.get(id) ?? []), lu.level]);
+      }
+  const describe = (s: EntryOf<"subclass">, multiclass: boolean, gainedAt: number | null) => {
+    const ups = upgradeLevels.get(s.id) ?? [];
+    const cards = SUBCLASS_STAGES.map((stage, i) => ({
+      stage,
+      features: s[stage],
+      acquired: i === 0 || ups.length >= i,
+      level: i === 0 ? gainedAt : (ups[i - 1] ?? null),
+    }));
+    const n = ups.length;
+    let next: SubclassProgress["next"] = null;
+    if (multiclass && n === 0) next = null; // only the main subclass takes upgraded cards (p. 54: "the next card for your subclass")
+    else if (n < 2) {
+      const stage = SUBCLASS_STAGES[n + 1];
+      // upgraded subclass cards are a tier 3+ advancement (slots from tier 3, owner-supplied)
+      next = { stage, hint: level + 1 >= 5 ? "Choose “Take an upgraded subclass card” as an advancement when you level up." : `From level 5, choose “Take an upgraded subclass card” as an advancement when you level up.` };
+    }
+    out.push({ subclass: s, multiclass, cards, next });
+  };
+  if (main?.type === "subclass") describe(main, false, 1);
+  for (const lu of c.levelUps)
+    for (const a of lu.advancements)
+      if (a.optionId === "multiclass") {
+        const s = lookup.get(a.subclassId);
+        if (s?.type === "subclass") describe(s, true, lu.level);
+      }
+  return out;
 }
 
 export function derive(c: CharacterDoc, lookup: Lookup): Derived {

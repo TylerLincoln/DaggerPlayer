@@ -51,7 +51,7 @@ describe("sheet (import template character)", () => {
   it("lists loadout cards and inventory", () => {
     expect(sheet("cards")).toContain("Nature’s Tongue");
     expect(sheet("gear")).toContain("Whetstone");
-    expect(sheet("features")).toContain("Wayfinder (foundation)");
+    expect(sheet("features")).toMatch(/✓<\/span> Foundation/);
   });
 
   it("has tap-to-mark trackers, roll buttons and the damage panel", () => {

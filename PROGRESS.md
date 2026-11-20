@@ -214,6 +214,10 @@ Smaller gaps, closed 2026-11-10:
   - The wizard always asks for a Beastbound Ranger's companion option (setting the companion up inline if missing).
   - The sheet's companion panel lists every level's choice, flags missing ones (e.g. imported characters), and lets you fill in or change them. The same rules apply: each option once, Vicious die/range, Intelligent on a real Companion Experience, a new +2 Experience at levels 2/5/8.
   - The import kit documents the companion fields.
+- **Subclass visibility** (2026-11-20):
+  - Features tab: a Foundation → Specialization → Mastery track per subclass. Each stage shows its status, the level it was gained, what unlocks the next one, and a preview of locked cards.
+  - Elsewhere: a summary line in the sheet header, all three stages on builder subclass cards, the next card's full text in the level-up wizard, and stage lines on the print sheet.
+  - Fix: an "upgraded subclass" level-up without a subclass id (e.g. imported) now counts for the main subclass.
 - **Secondary weapons** (2026-11-20): Primary/Secondary weapon slots on the Gear tab. Equip directly from the list or from inventory; burden is enforced, except for Warriors (Combat Training ignores burden, also via multiclass).
 - **Code splitting:** the main bundle went from ~600 KB to 257 KB (80 KB gzipped). Route chunks are prefetched after start-up so offline still covers every screen.
 - **Tests:** 136 in total.
