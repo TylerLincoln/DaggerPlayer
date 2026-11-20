@@ -104,7 +104,7 @@ function PlayTab(ctx: SheetCtx) {
         <DamagePanel {...ctx} />
       </div>
 
-      <div className="play-main">
+      <div className="play-col play-col-b">
       <section aria-labelledby="weap-h">
         <h2 id="weap-h">Active weapons</h2>
         {d.beastform && <p className="msg msg-info">You’re in Beastform: you can’t use weapons until you drop out.</p>}
@@ -130,23 +130,6 @@ function PlayTab(ctx: SheetCtx) {
         ))}
       </section>
 
-      <section aria-labelledby="traits-h">
-        <h2 id="traits-h">Traits</h2>
-        <div className="traitgrid">
-          {TRAITS.map((t) => (
-            <div key={t} className="trait-cell">
-              <StatBox label={cap(t)} term={t} stat={d.traits[t]} value={formatMod(d.traits[t].total)} />
-              <button type="button" className="roll-btn" onClick={() => roll({ trait: t })} aria-label={`Roll ${cap(t)} ${formatMod(d.traits[t].total)}`}>Roll</button>
-            </div>
-          ))}
-        </div>
-        {d.spellcastTraits.length > 0 && <p className="hint">Spellcast trait: {d.spellcastTraits.map(cap).join(" or ")}</p>}
-      </section>
-
-      <ResourcesPanel {...ctx} />
-      <BeastformPanel {...ctx} onAttack={() => roll({ attack: "beastform" })} />
-      <CompanionPanel {...ctx} onAttack={() => roll({ attack: "companion" })} />
-
       <section aria-labelledby="xp-h">
         <h2 id="xp-h"><TermLink slug="experience" label="Experiences" /></h2>
         <ul className="plain xp-list">
@@ -158,6 +141,9 @@ function PlayTab(ctx: SheetCtx) {
           ))}
         </ul>
       </section>
+      <ResourcesPanel {...ctx} />
+      <BeastformPanel {...ctx} onAttack={() => roll({ attack: "beastform" })} />
+      <CompanionPanel {...ctx} onAttack={() => roll({ attack: "companion" })} />
 
       <section aria-labelledby="armor-h">
         <h2 id="armor-h">Armor</h2>
@@ -207,6 +193,22 @@ function PlayTab(ctx: SheetCtx) {
           <button type="submit">Add</button>
         </form>
       </section>
+      </div>
+      <div className="play-col play-col-a">
+      <section aria-labelledby="traits-h">
+        <h2 id="traits-h">Traits</h2>
+        <div className="traitgrid">
+          {TRAITS.map((t) => (
+            <div key={t} className="trait-cell">
+              <StatBox label={cap(t)} term={t} stat={d.traits[t]} value={formatMod(d.traits[t].total)} />
+              <button type="button" className="roll-btn" onClick={() => roll({ trait: t })} aria-label={`Roll ${cap(t)} ${formatMod(d.traits[t].total)}`}>Roll</button>
+            </div>
+          ))}
+        </div>
+        {d.spellcastTraits.length > 0 && <p className="hint">Spellcast trait: {d.spellcastTraits.map(cap).join(" or ")}</p>}
+      </section>
+
+
       </div>
     </div>
   );

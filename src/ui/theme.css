@@ -21,6 +21,7 @@
 /* ---------- tokens: the app's own roles, on Carnival (cold-snap) ---------- */
 :root {
   color-scheme: light;
+  --page-max: 1760px; --page-gutter: var(--space-md);
   --color-field: oklch(96% 0.020 50);
   --color-line: var(--color-ink);
   --color-line-soft: oklch(78% 0.050 40);
@@ -37,6 +38,8 @@
   --text-stat: 2.25rem;
   --text-hero: 3.5rem;
 }
+@media (min-width: 60rem) { :root { --page-gutter: var(--space-lg); } }
+@media (min-width: 90rem) { :root { --page-gutter: var(--space-xl); } }
 @media (min-width: 48rem) { :root { --text-h1: 2.986rem; --text-hero: 5.16rem; --text-stat: 3.25rem; } }
 
 @media (prefers-color-scheme: dark) {
@@ -107,10 +110,11 @@ nav { display: flex; gap: var(--space-md); }
   .nav-main::-webkit-scrollbar { display: none; }
 }
 
-main { max-width: 1160px; margin: 0 auto; padding: var(--space-lg) var(--space-md) var(--space-2xl); }
+main { max-width: var(--page-max); margin: 0 auto; padding: var(--space-lg) var(--page-gutter) var(--space-2xl); }
 main:focus { outline: none; }
 .site-footer { border-top: var(--rule-bar) solid var(--color-rule); background: var(--color-paper-2); padding: var(--space-md); color: var(--color-muted); font-size: var(--text-sm); }
-.site-footer p { max-width: calc(1160px - 2 * var(--space-md)); margin: 0 auto; }
+.site-footer { padding-inline: var(--page-gutter); }
+.site-footer p { max-width: calc(var(--page-max) - 2 * var(--page-gutter)); margin: 0 auto; }
 .banner { margin: 0; padding: var(--space-xs) var(--space-md); background: var(--color-accent-2); color: var(--color-accent-2-ink); font-weight: 500; }
 
 /* ---------- controls: the pair, in the display capitals on a hard shadow ---------- */
@@ -253,7 +257,6 @@ th { border-bottom: var(--rule-bar) solid var(--color-line); white-space: nowrap
 @media (max-width: 40rem) { .prevnext { flex-direction: column; } .prevnext > a.button { align-self: flex-start; } }
 .prevnext { display: flex; justify-content: space-between; gap: var(--space-md); margin-top: var(--space-xl); padding-top: var(--space-sm); border-top: var(--rule-bar) solid var(--color-rule); }
 @media (min-width: 60rem) {
-  main:has(.rules-layout) { max-width: 1160px; }
   .rules-layout { grid-template-columns: 300px minmax(0, 1fr); }
   .rules-layout aside { position: sticky; top: var(--space-md); align-self: start; max-height: calc(100dvh - var(--space-xl)); overflow: auto; }
   .rules-layout details > summary { display: none; }
@@ -489,13 +492,12 @@ button.die { min-height: 44px; padding: 0; box-shadow: none; }
 .stages .preview { color: var(--color-ink-2); }
 
 /* ---------- layout: full redesign compositions ---------- */
-:root { --text-name: var(--text-h1); --rail: 392px; }
-@media (min-width: 60rem) { :root { --text-name: 3.583rem; } }
+:root { --text-name: var(--text-h1); --rail: 380px; }
+@media (min-width: 60rem) { :root { --text-name: 2.986rem; } }
 
 /* home: split hero, the SRD's own counts as poster figures on a mustard field */
 .hero { display: grid; gap: var(--space-xl); align-items: center; padding: var(--space-xl) 0 var(--space-lg); }
 @media (min-width: 60rem) {
-  main:has(.hero) { max-width: 1160px; }
   .hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); padding: var(--space-2xl) 0 var(--space-xl); }
 }
 .hero-figures {
@@ -517,7 +519,6 @@ button.die { min-height: 44px; padding: 0; box-shadow: none; }
 .character-actions button { min-height: 36px; padding: var(--space-2xs) var(--space-sm); font-size: var(--text-md); box-shadow: none; }
 
 /* sheet: header band, then defense, a sticky rail for what changes mid-fight, and the rest */
-main:has(.sheet) { max-width: 1160px; }
 .sheet-head { display: grid; gap: var(--space-md); align-items: end; padding-bottom: var(--space-md); border-bottom: var(--rule-bar) solid var(--color-rule); }
 .sheet-id { display: grid; gap: var(--space-2xs); min-width: 0; }
 .sheet-head h1 { font-size: var(--text-name); }
@@ -526,17 +527,41 @@ main:has(.sheet) { max-width: 1160px; }
 @media (min-width: 60rem) { .sheet-head { grid-template-columns: minmax(0, 1fr) auto; } .sheet-actions { justify-content: flex-end; } }
 .tabs { margin-top: 0; }
 
-.play { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); margin-top: var(--space-md); }
-.play-main > section:first-child > h2 { margin-top: var(--space-xs); }
-.play-main h2 { margin-top: var(--space-xl); }
+.play { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); margin-top: var(--space-md); align-items: start; }
+.play-col { display: grid; gap: var(--space-lg); align-content: start; min-width: 0; }
+.play-col > section > h2 { margin-top: 0; }
 .play-rail { display: grid; gap: var(--space-lg); align-content: start; }
+/* phones: one column in table order (defense, trackers, damage, weapons, traits, the rest) */
+@media (max-width: 59.99rem) {
+  .play-col { display: contents; }
+  .play-col-b > * { order: 5; }
+  .play section[aria-labelledby="weap-h"] { order: 3; }
+  .play section[aria-labelledby="traits-h"] { order: 4; }
+  .play section[aria-labelledby="xp-h"] { order: 6; }
+  .play section[aria-labelledby="armor-h"] { order: 7; }
+  .play section[aria-labelledby="cond-h"] { order: 8; }
+  .defense { order: 1; } .play-rail { order: 2; }
+}
+/* laptops: the content beside a sticky rail */
 @media (min-width: 60rem) {
-  .play { grid-template-columns: minmax(0, 1fr) var(--rail); grid-template-areas: "defense rail" "main rail"; grid-template-rows: auto 1fr; column-gap: var(--space-xl); align-items: start; }
+  .play { grid-template-columns: minmax(0, 1fr) var(--rail); grid-template-areas: "defense rail" "b rail" "a rail"; grid-template-rows: auto auto 1fr; column-gap: var(--space-xl); row-gap: var(--space-lg); }
   .defense { grid-area: defense; }
-  .play-main { grid-area: main; }
+  .play-col-b { grid-area: b; }
+  .play-col-a { grid-area: a; }
   .play-rail { grid-area: rail; position: sticky; top: 64px; max-height: calc(100dvh - 64px - var(--space-md)); overflow-y: auto; overscroll-behavior: contain; padding: 0 var(--space-2xs) var(--space-2xs) 0; }
 }
-
+/* wide screens: three columns, so defense, traits, weapons and trackers share one screen */
+@media (min-width: 75rem) {
+  .play { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) var(--rail); grid-template-areas: "defense b rail" "a b rail"; grid-template-rows: auto 1fr; column-gap: var(--space-lg); }
+  .play-col-a .traitgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .defense .statbox-value { font-size: 3.25rem; }
+  .defense .threshold-row { font-size: var(--text-2xl); }
+  .play-col-a .trait-cell .statbox { padding: var(--space-2xs) var(--space-xs); }
+  .play-col-a .trait-cell .statbox-value { font-size: var(--text-3xl); margin: 0; }
+}
+@media (min-width: 110rem) {
+  .play-col-a .traitgrid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
 .defense { display: grid; border: var(--rule-bar) solid var(--color-line); background: var(--color-paper-2); box-shadow: var(--shadow-card); }
 .defense .statgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
 .defense .statbox { border: none; border-radius: 0; box-shadow: none; background: none; padding: var(--space-sm) var(--space-xs); }
@@ -588,6 +613,35 @@ section > h2 + .attack, section > .msg + .attack { border-top: var(--rule-bar) s
   .sheet:has(.play-rail) .fab { display: none; }
 }
 
+/* desktop: a compact head (name and facts on one line) so the play area starts higher */
+@media (min-width: 60rem) {
+  .sheet-head { padding-bottom: var(--space-sm); gap: var(--space-sm); }
+  .sheet-id { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-lg); row-gap: var(--space-3xs); }
+  .sheet-id .subclass-summary { flex-basis: auto; }
+  .sheet-head .save-status { font-size: var(--text-sm); }
+  .tabs { margin-bottom: var(--space-xs); }
+  .play { margin-top: var(--space-sm); }
+  .trackers .track { padding: var(--space-2xs) 0; }
+  .trackers h2 { margin-bottom: 0; }
+}
+
+/* compendium: filters in a sticky column beside the results on wide screens */
+@media (min-width: 75rem) {
+  .compendium { display: grid; grid-template-columns: 300px minmax(0, 1fr); column-gap: var(--space-xl); align-items: start; }
+  .compendium > * { grid-column: 2; }
+  .compendium > h1 { grid-column: 1 / -1; }
+  .compendium > .search-form { grid-column: 1; grid-row: 2 / span 4; position: sticky; top: var(--space-md); }
+  .compendium .filters { grid-template-columns: minmax(0, 1fr); }
+  .compendium > .hint[role="status"] { margin-top: 0; }
+}
+@media (min-width: 110rem) { .compendium .results { columns: 2; column-gap: var(--space-xl); } .compendium .results li { break-inside: avoid; } }
+
+/* builder: three option columns when there is room */
+@media (min-width: 90rem) { .options { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* reading and form pages keep a readable width inside the wide container */
+.entry, .levelup, .account, .print-page { max-width: 1000px; }
+
 /* phones: the head stays short so Hit Points clears the roll bar */
 @media (max-width: 40rem) {
   .sheet-head { gap: var(--space-xs); padding-bottom: var(--space-xs); }
@@ -610,7 +664,6 @@ section > h2 + .attack, section > .msg + .attack { border-top: var(--rule-bar) s
 
 /* builder: a step rail beside the step on wide screens */
 @media (min-width: 60rem) {
-  main:has(.builder) { max-width: 1160px; }
   .builder { display: grid; grid-template-columns: 240px minmax(0, 1fr); column-gap: var(--space-xl); align-items: start; }
   .builder > * { grid-column: 2; }
   .builder > .builder-head { grid-column: 1 / -1; }

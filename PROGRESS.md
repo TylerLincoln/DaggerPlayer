@@ -85,6 +85,12 @@
   - Builder: a sticky vertical step rail on desktop.
   - Compendium: a two-column results ledger.
 
+- **Wide desktop layout** (2026-11-20):
+  - The container is now up to 1760px wide, with gutters that grow with the screen. Entry, level-up, account and print pages stay at a readable 1000px.
+  - The sheet uses three columns from 75rem (1200px): defense and traits; weapons, Experiences, armor and conditions; then the dice, trackers and damage rail. The header is compact (name and facts on one line). At 1440 × 900 the whole play tab fits above the fold except the conditions form and the damage options. On phones the order is unchanged.
+  - Compendium: filters in a sticky left column; results in two columns from 110rem.
+  - Builder: three option columns from 90rem.
+
 ## Next
 - **Stage 2: auth and database schema.** Done, and live on the hosted project (`DaggerPlayer`).
   - `supabase/migrations/…_init.sql`, pushed 2026-11-06 with the owner's OK:
